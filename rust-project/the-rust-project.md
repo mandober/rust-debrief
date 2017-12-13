@@ -2,15 +2,13 @@
 
 Perhaps a way to classify the whole of the Rust ecosystem would be a separation to the language itself and its libraries, the tools and the third-party packages.
 
-
 * Language
-  - The compiler  
-    implements primitives, type safety, language items
+  - The compiler (primitives, lang items, type safety, borrowck, etc.)
   - Base Libraries
-    * The Rust core library, `core`
-    * The Rust core allocation and collections library, `alloc`
+    * The Rust Core Library, `core`
+    * The Rust Core Allocation and Collections Library, `alloc`
     * The Unicode library, `std_unicode`
-    * Procedural macros support library, `proc_macro`
+    * Procedural Macros Support Library, `proc_macro`
     * The Rust Standard Library, `std`
       - Methods on primitives
       - Modules: own modules and reexported modules from base libraries
@@ -20,8 +18,7 @@ Perhaps a way to classify the whole of the Rust ecosystem would be a separation 
   - [cargo](https://github.com/rust-lang/cargo) package manager, test runner, etc.
   - [rustup](https://github.com/rust-lang-nursery/rustup.rs) managing rust installations and toolchains
   - [rustdoc](https://github.com/rust-lang/rust/blob/master/src/doc/rustdoc/src/what-is-rustdoc.md) generating docs from source comments
-  - [RLS](https://github.com/rust-lang-nursery/rls) Rust Language Server
-  - other tools
+  - etc.
 * Third-party crates
   - crate repository at [crates.io](https://crates.io/)
 
@@ -33,8 +30,6 @@ Rust is a systems programming language that is fast, memory safe and multithread
 The Rust language is implemented by the compiler and the base packages (Rust's source code packages are called "crates"). Rust's compiler is written in Rust and also organized in several crates, enforces type safety rules and defines primitive types of the laguage.
 
 The base crates `core`, `alloc`, `std_unicode` and `proc_macro` provide other necessary functionality made accessible through the `std` crate, also known as *The Rust Standard Library*. The `std` crate/library defines methods on the primitive types and by reexporting all the functionality from the other base crates, it becomes the only base crate that needs to be referred to (e.g. in `use` statements), when and if needed.
-
-
 
 
 ## Tools

@@ -17,6 +17,9 @@ Sometimes a limit on types which can be used in generics (for example, in generi
 
 Generic programming is a style of computer programming in which algorithms are written in terms of types to-be-specified-later that are then instantiated when needed for specific types provided as parameters. This approach permits writing common functions that differ only in the set of types on which they operate when used, thus reducing duplication.
 
+
+
+
 algebraic data type is a kind of composite type, i.e. a type formed by combining other types. Two common classes of algebraic types are product types (tuples, records) and sum types, also called tagged or disjoint unions or variant types.
 The values of a product type typically contain several values, called fields. All values of that type have the same combination of field types. The set of all possible values of a product type is the set-theoretic product, i.e., the Cartesian product, of the sets of all possible values of its field types. The values of a sum type are typically grouped into several classes, called variants. A value of a variant type is usually created with a quasi-functional entity called a constructor. Each variant has its own constructor, which takes a specified number of arguments with specified types. The set of all possible values of a sum type is the set-theoretic sum, i.e., the disjoint union, of the sets of all possible values of its variants. Enumerated types are a special case of sum types in which the constructors take no arguments, as exactly one value is defined for each constructor. Values of algebraic types are analyzed with pattern matching, which identifies a value by its constructor or field names and extracts the data it contains. Pattern matching on algebraic data types matches on the structural properties of an object rather than on the character sequence of strings.
 

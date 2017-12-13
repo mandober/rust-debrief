@@ -2,7 +2,6 @@
 
 - The Rust core library, `core`
 - The Rust core allocation and collections library, `alloc`
-- The collections library, `collections` (deprecated)
 - Procedural macros support library, `proc_macro`
 - The Unicode library, `std_unicode` (experimental)
 - The Rust Standard Library, `std`:

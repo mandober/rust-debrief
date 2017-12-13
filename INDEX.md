@@ -4,65 +4,82 @@
 * Type Systems
 * Type Classes
 * Programming Paradigms
+* Alignment
 * The Stack and the Heap
-* Call Stack
 * Algebraic Data Types
 
+## The Rust Project
+* Language
+  - compiler
+    * Lang Item Attributes
+    * Feature Gates
+  - base crates
+    * core
+    * alloc
+    * std_unicode
+    * proc_macro
+    * std
+* Tools
+  - cargo
+  - rustup
+  - rustdoc
+* Third-party crates
 
-
-## Rust
-
-
-Type Systems
-Type Classes
-Programming paradigms
-Rust:
-Types
-  - Primitives
-  - Composites
-Crates (Libraries)
-The Standard Library
-The Rust Prelude
-Modules
-Items
-Attributes
-Macros
-
-
+## Language
+* The Standard Library
+  - The Rust Prelude
+  - Types
+  - Items
+  - Methods
+  - Modules
+  - Macros
+* Syntax
 * Grammer
 * Keywords
-* Language Items
-* Feature Flags
 * Attributes
-* Macros
-* Crates
-* Standard Library
+* Unsafe
 
+## Types
+- Primitives
+  * Scalars
+  * Compounds
+  * Pointer types
+  * Other types
+- Composite types
+- Dinamically Sized Types (DST)
+- Zero Sized Types (ZST)
+- Empty Types
 
-## Rust Types
-* Alignment
-* Exotically Sized Types
-  - Dinamically Sized Types (DST)
-  - Zero Sized Types (ZST)
-  - Empty Types
+## Items
+- modules
+- function definitions
+- type definitions
+- struct definitions
+- enum definitions
+- union definitions
+- trait definitions
+- implementations
+- constant items
+- static items
+- use declarations
+- extern crate declarations
+- extern blocks
 
+## Modules
+- primitive methods
+- composite types and methods
+- containers and collections
+- traits
+- env and IO
+- other
 
-## Primitives
-* Scalars
-* Compounds
-* Pointer types
-* Other types
-
-
-## Ownership
-* Value
-* Variable
+## Models
 * Binding
 * Move Semantics
 * Copy Semantics
 * Borrowing
 * Mutability
-
+* Pattern matching
 
 ## Appendix
 * Terminology

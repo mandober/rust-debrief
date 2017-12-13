@@ -1,12 +1,12 @@
-# Language Items
+# Language Item Attributes
 
-Lang items are a way for the std (and core) to define types, traits, functions, and other items which the compiler needs to know about.
-Lang items are denoted with attribute `#[lang = "item"]`
+Language item attributes are a way for the standard library to mark types, traits, functions, and other items that the compiler needs to know about. These attributes are denoted as `#[lang = "value"]`.
 
-Primitive types are not defined in any crate, but are implemented by the compiler. The standard library defines methods on primitives, even though coherence rules only allow for implementing methods on types defined in own crate, with the help of lang attributes whose value is the name of the primitive, e.g. `#[lang = "f64"]`. There can be only one such attribute.
+Primitive types are not defined in any crate (they are implemented by the compiler), yet the standard library needs to define methods on them without breaking the coherence rule, which forbids implementing methods on types that are not defined in the local (own) crate. To get around this restriction language attributes are used, naming the primitive type as if it was defined there. For example, after declaring the attribute `#[lang = "f64"]` the std proceeds to define methods on double precision floating-point numbers.
+There can be only one such attribute accross crates - the one in std crate.
 
 
-Lang items [source](https://github.com/rust-lang/rust/blob/1ca100d0428985f916eea153886762bed3909771/src/librustc/middle/lang_items.rs#L252-L363).
+Lang items attributes table [source](https://github.com/rust-lang/rust/blob/1ca100d0428985f916eea153886762bed3909771/src/librustc/middle/lang_items.rs#L252-L363).
 
 ```rust
 // Variant name             Name                     Method name

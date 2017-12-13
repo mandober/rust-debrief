@@ -1,13 +1,8 @@
 # terms
 
-inference
 coercion
 deref coercion
 casting
-monomorphizam
-polymorphism
-dispatch
-static dispatch
 dynamic dispatch
 trait object
 trait bounds
@@ -26,13 +21,9 @@ generic lifetime
 associated type
 associated function
 discriminant
-foreign function interface (FFI)
-application binary interface (ABI)
-inline, inlining
 Interior mutability
 vtable
 Pointer
-Inference
 Dynamic Dispatch
 Trait Orphan Rule
 Trait Bounds

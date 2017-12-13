@@ -26,6 +26,7 @@
     - [Literal](#literal)
     - [Marker interfaces](#marker-interfaces)
     - [Monomorphism](#monomorphism)
+    - [Opaque data type](#opaque-data-type)
     - [Parametric polymorphism](#parametric-polymorphism)
     - [Phantom data](#phantom-data)
     - [Phantom types](#phantom-types)
@@ -127,6 +128,9 @@ Marker interfaces contain no methods at all and serve to provide run-time inform
 
 ## Monomorphism
 Monomorphization is the process of turning generic code into concrete code with the concrete types filled in, in the place of generic types, resulting in concretization of code. It is a form of *static dispatch*.
+
+## Opaque data type
+An opaque data type is a data type whose concrete data structure is not defined in an interface. This enforces information hiding, since its values can only be manipulated by calling subroutines. Typical examples of opaque data types include handles for miscellaneous resources.
 
 ## Parametric polymorphism
 Using parametric polymorphism, a function or a data type can be written 
