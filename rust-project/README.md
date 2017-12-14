@@ -1,5 +1,8 @@
 # The Rust Project
 
+Rust is a compiled, statically and strongly typed language with type inference that relieves programmer from annotating a fair amount of code.
+
+
 * Language
   - The compiler (primitives, lang items, type safety, borrowck, etc.)
   - Base Libraries
