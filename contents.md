@@ -1,12 +1,12 @@
-# Index
+# Content
 
 ## Programming Concepts
 * Type Systems
-* Type Classes
+* Data Types
+* Algebraic Data Types
 * Programming Paradigms
 * Alignment
 * The Stack and the Heap
-* Algebraic Data Types
 
 ## The Rust Project
 * Language
@@ -26,16 +26,15 @@
 * Third-party crates
 
 ## Language
-* The Standard Library
-  - The Rust Prelude
-  - Types
-  - Items
-  - Methods
-  - Modules
-  - Macros
+* The Rust Prelude
+* Types
+* Items
+* Methods
+* Modules
+* Macros
 * Syntax
-* Grammer
 * Keywords
+* Grammer
 * Attributes
 * Unsafe
 

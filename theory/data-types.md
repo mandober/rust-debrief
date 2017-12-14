@@ -1,4 +1,4 @@
-# Types Classes
+# Data Types
 
 * data type
 * variable
