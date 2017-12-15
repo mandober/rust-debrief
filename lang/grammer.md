@@ -1,7 +1,7 @@
 # Rust Grammer
 
 - token
-- literal
+- literal expression
 - symbol
 - unary operators
 - binary operators
@@ -9,7 +9,9 @@
 - item
 - path
 
-**Tokens** are primitive productions in the grammar defined by regular, non-recursive, languages. A **literal** is an expression consisting of a single token, rather than a sequence of tokens, that immediately and directly denotes the value it evaluates to, rather than referring to it by name or some other evaluation rule. A literal is a form of constant expression, so is evaluated (primarily) at compile time. **Symbols** are a general class of printable tokens that play structural roles in a variety of grammar productions. They are a set of remaining miscellaneous printable tokens that do not otherwise appear as *unary operators*, *binary operators*, or *keywords*.
+
+
+**Tokens** are primitive productions in the grammar defined by regular, non-recursive, languages. A **literal** is an expression consisting of a single token, rather than a sequence of tokens, that immediately and directly denotes the value it evaluates to, rather than referring to it by name or some other evaluation rule. A literal is a form of constant expression, so is evaluated (primarily) at compile time. **Symbols** are a general class of printable tokens that play structural roles in a variety of grammar productions. They are a set of remaining miscellaneous printable tokens that do not otherwise appear as **unary operators**, **binary operators**, or **keywords**.
 
 An **item** is a component of a crate. Items are organized within a crate by a nested set of modules. Every crate has a single "outermost" anonymous module; all further items within the crate have paths within the module tree of the crate. Items are entirely determined at compile-time, generally remain fixed during execution, and may reside in read-only memory. There are several kinds of items: modules, extern crate declarations, use declarations, function definitions, type definitions, struct definitions, enumeration definitions, union definitions, constant items, static items, trait definitions, implementations, extern blocks.
 

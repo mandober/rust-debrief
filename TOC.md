@@ -1,0 +1,85 @@
+# TOC
+
+- Programming Concepts
+  - Type Systems
+  - Data Types
+  - Algebraic Data Types
+  - Programming Paradigms
+  - Alignment
+  - The Stack and the Heap
+- The Rust Project
+  - Language
+  - Tools
+    - cargo
+    - rustup
+    - rustdoc
+  - Third-party crates
+- Rust Language
+  - compiler
+    - Lang Item Attributes
+    - Feature Gates
+  - grammer
+  - Syntax
+    - tokens
+    - symbols
+    - keywords
+    - operators
+    - literals
+    - comments
+    - attributes
+    - definitions
+    - declarations
+    - statements
+    - expressions
+  - semantics
+    - Binding
+    - Move Semantics
+    - Copy Semantics
+    - Borrowing
+    - Mutability
+    - Pattern matching
+  - data types
+    - Primitives
+      - Scalars
+      - Compounds
+      - Pointer types
+      - Other types
+    - Composite types
+    - Dinamically Sized Types
+    - Zero Sized Types
+    - Empty Types
+  - Items
+    - function definitions
+    - type definitions
+    - struct definitions
+    - enum definitions
+    - union definitions
+    - trait definitions
+    - modules
+    - implementations
+    - constant items
+    - static items
+    - use declarations
+    - extern crate declarations
+    - extern blocks
+  - libraries
+    - core
+    - alloc
+    - std_unicode
+    - proc_macro
+    - std
+      - The Rust Prelude
+      - Macros
+      - Modules
+        - methods on primitives
+        - composite types and methods
+        - containers and collections
+        - traits
+        - env and IO
+        - other
+- Appendix
+  - Terminology
+  - Links
+  - Glossary
+  - Bibliography
+  - Index

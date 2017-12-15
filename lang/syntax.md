@@ -5,6 +5,13 @@
 - symbols
 
 
+
+## Symbols
+
+```
+::  ->  #  [  ]  (  )  {  }  ,  ;
+```
+
 ## Operators and Symbols
 
 * `!` (`ident!(…)`, `ident!{…}`, `ident![…]`): denotes macro expansion.  See [Macros].
@@ -64,10 +71,8 @@
 * `_`: "ignored" pattern binding (see [Patterns (Ignoring bindings)]). Also used to make integer-literals readable (see [Reference (Integer literals)]).
 * `?` (`expr?`): Error propagation. Returns early when `Err(_)` is encountered, unwraps otherwise. Similar to the [`try!` macro].
 
+
 ## Other Syntax
-
-<!-- Various bits of standalone stuff. -->
-
 * `'ident`: named lifetime or loop label.  See [Lifetimes], [Loops (Loops Labels)].
 * `…u8`, `…i32`, `…f64`, `…usize`, …: numeric literal of specific type.
 * `"…"`: string literal.  See [Strings].
@@ -78,8 +83,8 @@
 * `b'…'`: ASCII byte literal.
 * `|…| expr`: closure.  See [Closures].
 
-<!-- Path-related syntax -->
 
+## Path-related syntax
 * `ident::ident`: path.  See [Crates and Modules (Defining Modules)].
 * `::path`: path relative to the crate root (*i.e.* an explicitly absolute path).  See [Crates and Modules (Re-exporting with `pub use`)].
 * `self::path`: path relative to the current module (*i.e.* an explicitly relative path).  See [Crates and Modules (Re-exporting with `pub use`)].
@@ -90,8 +95,8 @@
 * `type::method(…)`: disambiguating a method call by naming the type for which it's defined. See [Universal Function Call Syntax].
 * `<type as trait>::method(…)`: disambiguating a method call by naming the trait _and_ type. See [Universal Function Call Syntax (Angle-bracket Form)].
 
-<!-- Generics -->
 
+## Generics
 * `path<…>` (*e.g.* `Vec<u8>`): specifies parameters to generic type *in a type*.  See [Generics].
 * `path::<…>`, `method::<…>` (*e.g.* `"42".parse::<i32>()`): specifies parameters to generic type, function, or method *in an expression*.  See [Generics § Resolving ambiguities](generics.html#resolving-ambiguities).
 * `fn ident<…> …`: define generic function.  See [Generics].
@@ -101,8 +106,8 @@
 * `for<…> type`: higher-ranked lifetime bounds.
 * `type<ident=type>` (*e.g.* `Iterator<Item=T>`): a generic type where one or more associated types have specific assignments.  See [Associated Types].
 
-<!-- Constraints -->
 
+## Constraints
 * `T: U`: generic parameter `T` constrained to types that implement `U`.  See [Traits].
 * `T: 'a`: generic type `T` must outlive lifetime `'a`. When we say that a type 'outlives' the lifetime, we mean that it cannot transitively contain any references with lifetimes shorter than `'a`.
 * `T : 'static`: The generic type `T` contains no borrowed references other than `'static` ones.
@@ -110,16 +115,16 @@
 * `T: ?Sized`: allow generic type parameter to be a dynamically-sized type.  See [Unsized Types (`?Sized`)].
 * `'a + trait`, `trait + trait`: compound type constraint.  See [Traits (Multiple Trait Bounds)].
 
-<!-- Macros and attributes -->
 
+## Macros and attributes
 * `#[meta]`: outer attribute.  See [Attributes].
 * `#![meta]`: inner attribute.  See [Attributes].
 * `$ident`: macro substitution.  See [Macros].
 * `$ident:kind`: macro capture.  See [Macros].
 * `$(…)…`: macro repetition.  See [Macros].
 
-<!-- Comments -->
 
+## Comments
 * `//`: line comment.  See [Comments].
 * `//!`: inner line doc comment.  See [Comments].
 * `///`: outer line doc comment.  See [Comments].
@@ -127,12 +132,12 @@
 * `/*!…*/`: inner block doc comment.  See [Comments].
 * `/**…*/`: outer block doc comment.  See [Comments].
 
-<!-- Special types -->
+## Special types
 
 * `!`: always empty Never type.  See [Diverging Functions].
 
-<!-- Various things involving parens and tuples -->
 
+##  Various things involving parens and tuples
 * `()`: empty tuple (*a.k.a.* unit), both literal and type.
 * `(expr)`: parenthesized expression.
 * `(expr,)`: single-element tuple expression.  See [Primitive Types (Tuples)].
@@ -143,13 +148,10 @@
 * `ident!(…)`, `ident!{…}`, `ident![…]`: macro invocation.  See [Macros].
 * `expr.0`, `expr.1`, …: tuple indexing.  See [Primitive Types (Tuple Indexing)].
 
-<!-- Bracey things -->
 
+## Symbols
 * `{…}`: block expression.
 * `Type {…}`: `struct` literal.  See [Structs].
-
-<!-- Brackety things -->
-
 * `[…]`: array literal.  See [Primitive Types (Arrays)].
 * `[expr; len]`: array literal containing `len` copies of `expr`.  See [Primitive Types (Arrays)].
 * `[type; len]`: array type containing `len` instances of `type`.  See [Primitive Types (Arrays)].

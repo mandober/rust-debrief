@@ -1,5 +1,13 @@
 # Keywords
 
+- strict
+- weak
+- reserved
+  * unstable
+  * future use
+  * deprecated
+
+
 The keywords are reserved by the Rust language and may not be used as identifiers such as names of functions, variables, parameters, struct fields, modules, crates, constants, macros, static values, attributes, types, traits, or lifetimes.
 
 Majority of keywords are strict - they can only be used in their correct contexts. For example, it is not allowed to declare a variable named "struct".
@@ -58,7 +66,7 @@ Language also reserves a set of keywords, either for future use or because they 
 - `default`  [weak] use of default in front of impl block is deprecated.
 - `'static`  [weak] keyword; static lifetime annotation.
 - `dyn`      [weak] keyword
-- `catch`    [weak, unstable] creates a new scope; use of `?` with `#![feature(catch_expr)]`
+- `catch` [weak, unstable] create new scope; `?` with `#![feature(catch_expr)]`
 - `priv`     [reserved] visibility
 - `alignof`  [reserved]
 - `offsetof` [reserved]
