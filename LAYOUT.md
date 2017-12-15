@@ -1,12 +1,14 @@
 # TOC
 
-- Programming Concepts
+- Programming Languages
   - Type Systems
   - Data Types
+  - pointers
   - Algebraic Data Types
   - Programming Paradigms
   - Alignment
   - The Stack and the Heap
+  - partial equality and partial ordering
 - The Rust Project
   - Language
   - Tools
@@ -14,11 +16,11 @@
     - rustup
     - rustdoc
   - Third-party crates
-- Rust Language
+- The Rust Language
   - compiler
     - Lang Item Attributes
     - Feature Gates
-  - grammer
+  - Grammer
   - Syntax
     - tokens
     - symbols
@@ -38,11 +40,18 @@
     - Borrowing
     - Mutability
     - Pattern matching
-  - data types
+  - **Rust Types**
     - Primitives
-      - Scalars
-      - Compounds
-      - Pointer types
+      - Scalars (5)
+        - booleans
+        - integers
+        - machine dependent integers
+        - floats
+        - characters
+      - Aggregate types (2)
+        - Array
+        - Tuple
+      - Pointer types (3)
       - Other types
     - Composite types
     - Dinamically Sized Types

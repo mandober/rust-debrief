@@ -1,20 +1,22 @@
 # Primitive types
 
 * Scalar types
-  - Booleans
+  - Boolean
   - Numbers
-    * Integers: signed and unsigned
-    * Machine-architecture dependent integers
-    * Floating-point numbers
-  - Characters
+    * Integers signed and unsigned
+    * Machine-architecture dependent integer
+    * Floating-point number
+  - Character
 * Compound types
-  - Tuples
-  - Arrays
-* Unit type (empty tuple)
+  - Array
+  - Tuple
 * Dynamically-sized types
-  - Slices
-  - String slices
+  - Slice
+  - String slice
 * Pointer types
-  - References
-  - Raw pointers
-  - Function pointers
+  - Reference
+  - Raw pointer
+  - Function pointer
+* Unit type
+
+

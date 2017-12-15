@@ -1,57 +1,62 @@
 # Terminology
 
-- [Terminology](#terminology)
-    - [Abstract data types](#abstract-data-types)
-    - [Algebraic data type](#algebraic-data-type)
-    - [Application Binary Interface](#application-binary-interface)
-    - [Assembly](#assembly)
-    - [Blanket implementations](#blanket-implementations)
-    - [Bounded parametric polymorphism](#bounded-parametric-polymorphism)
-    - [Compiler](#compiler)
-    - [Data structure](#data-structure)
-    - [Data type](#data-type)
-    - [Data typing](#data-typing)
-    - [Discriminant](#discriminant)
-    - [Dispatch](#dispatch)
-    - [Duck typing](#duck-typing)
-    - [Dynamically typed language](#dynamically-typed-language)
-    - [Dynamically Sized Type](#dynamically-sized-type)
-    - [Fat pointer](#fat-pointer)
-    - [Foreign Function Interface (FFI)](#foreign-function-interface-ffi)
-    - [Generic programming](#generic-programming)
-    - [Inlining](#inlining)
-    - [Interface](#interface)
-    - [Interior mutability](#interior-mutability)
-    - [Invariant](#invariant)
-    - [Literal](#literal)
-    - [Marker interfaces](#marker-interfaces)
-    - [Monomorphism](#monomorphism)
-    - [Opaque data type](#opaque-data-type)
-    - [Parametric polymorphism](#parametric-polymorphism)
-    - [Phantom data](#phantom-data)
-    - [Phantom types](#phantom-types)
-    - [Pointer](#pointer)
-    - [Polymorphic type](#polymorphic-type)
-    - [Polymorphism](#polymorphism)
-    - [Reentrant](#reentrant)
-    - [Reflection](#reflection)
-    - [Slice](#slice)
-    - [Statically typed language](#statically-typed-language)
-    - [Static dispatch](#static-dispatch)
-    - [Token](#token)
-    - [Trait object](#trait-object)
-    - [Transmute](#transmute)
-    - [Type annotation](#type-annotation)
-    - [Type checking](#type-checking)
-    - [Type erasure](#type-erasure)
-    - [Type identifier](#type-identifier)
-    - [Type inference](#type-inference)
-    - [Type safety](#type-safety)
-    - [Type system](#type-system)
-    - [Value](#value)
-    - [Variable](#variable)
-    - [Zero Sized Type](#zero-sized-type)
+<!-- TOC depthFrom:2 orderedList:false -->
 
+- [Abstract data types](#abstract-data-types)
+- [Algebraic data type](#algebraic-data-type)
+- [Application Binary Interface](#application-binary-interface)
+- [Assembly](#assembly)
+- [Big Endianness](#big-endianness)
+- [Blanket implementations](#blanket-implementations)
+- [Bounded parametric polymorphism](#bounded-parametric-polymorphism)
+- [Compiler](#compiler)
+- [Data structure](#data-structure)
+- [Data type](#data-type)
+- [Data typing](#data-typing)
+- [Discriminant](#discriminant)
+- [Dispatch](#dispatch)
+- [Duck typing](#duck-typing)
+- [Dynamically typed language](#dynamically-typed-language)
+- [Dynamically Sized Type](#dynamically-sized-type)
+- [Endianness](#endianness)
+- [Fat pointer](#fat-pointer)
+- [Foreign Function Interface (FFI)](#foreign-function-interface-ffi)
+- [Generic programming](#generic-programming)
+- [Inlining](#inlining)
+- [Interface](#interface)
+- [Interior mutability](#interior-mutability)
+- [Invariant](#invariant)
+- [Literal](#literal)
+- [Little Endianness](#little-endianness)
+- [Marker interfaces](#marker-interfaces)
+- [Monomorphism](#monomorphism)
+- [Opaque data type](#opaque-data-type)
+- [Parametric polymorphism](#parametric-polymorphism)
+- [Phantom data](#phantom-data)
+- [Phantom types](#phantom-types)
+- [Pointer](#pointer)
+- [Polymorphic type](#polymorphic-type)
+- [Polymorphism](#polymorphism)
+- [Reentrant](#reentrant)
+- [Reflection](#reflection)
+- [Slice](#slice)
+- [Statically typed language](#statically-typed-language)
+- [Static dispatch](#static-dispatch)
+- [Token](#token)
+- [Trait object](#trait-object)
+- [Transmute](#transmute)
+- [Type annotation](#type-annotation)
+- [Type checking](#type-checking)
+- [Type erasure](#type-erasure)
+- [Type identifier](#type-identifier)
+- [Type inference](#type-inference)
+- [Type safety](#type-safety)
+- [Type system](#type-system)
+- [Value](#value)
+- [Variable](#variable)
+- [Zero Sized Type](#zero-sized-type)
+
+<!-- /TOC -->
 
 
 ## Abstract data types
@@ -65,6 +70,9 @@ ABI defines how to call a function at the assembly level. Languages define which
 
 ## Assembly
 An assembler language (asm), is a low-level programming language in which there is a very strong, but often not one-to-one, correspondence between the language and the architecture's machine code instructions. Assembly language may also be called symbolic machine code.
+
+## Big Endianness
+Big endian architectures order bytes in memory with the most significant byte (MSB) of a multi-byte value in the lowest-numbered memory location.
 
 ## Blanket implementations
 Conditionally implenting a trait for a type that implements some other specific trait. Implementation of a trait on any type that satisfies the trait bounds are called blanket implementations. For example, the standard library implements `ToString` trait on any type that implements `Display` trait.
@@ -99,6 +107,9 @@ In dynamic languages variables don't carry the type: a variable can change its b
 ## Dynamically Sized Type
 Dynamically Sized Type (DST) is a type without a statically known size or alignment. Becasue of this, these types can only exist behind some kind of fat pointer. A pointer to a DST is a fat pointer consisting of the pointer and the information that "completes" them. Two major DSTs exposed by the language are trait objects and slices.
 
+## Endianness
+Endianness only applies to processors that allow individual addressing of units of data (such as bytes) that are smaller than the basic addressable machine word. An architecture may use *big* or *little endianness*, or both, or be configurable to use either. The x86 architecture is little endian. Most RISC architectures (SPARC, Power, PowerPC, MIPS) were originally big endian (ARM was little endian), but many (including ARM) are now configurable.
+
 ## Fat pointer
 A pointer with accompanying extra information. It comprises a pointer and one or more associated fields that "complete" the pointer. For example, a string is a fat pointer made up of pointer to some data on the heap, a length (number of characters it points to) and a capacity (additional space for characters reserved).
 
@@ -122,6 +133,9 @@ An invariant is a condition that can be relied upon to be true during execution 
 
 ## Literal
 A literal is an expression consisting of a single token, rather than a sequence of tokens, that immediately and directly denotes the value it evaluates to, rather than referring to it by name or some other evaluation rule.
+
+## Little Endianness
+Little endian processors order bytes in memory with the least significant byte (LSB) of a multi-byte value in the lowest-numbered memory location.
 
 ## Marker interfaces
 Marker interfaces contain no methods at all and serve to provide run-time information to generic processing using reflection. In Rust, marker interface is realized through marker traits: Copy, Sized, Send, Sync.
