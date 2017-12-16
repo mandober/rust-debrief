@@ -1,8 +1,8 @@
 # Macros
 
 - `assert`          ensure that a boolean expression is true at runtime.
-- `assert_eq`       asserts 2 expr are equal to each other, with `PartialEq`.
-- `assert_ne`       asserts 2 expr are not equal to each other, with `PartialEq`.
+- `assert_eq`       asserts 2 expr are equal to each other, with `PartialEq`
+- `assert_ne`       asserts 2 expr are not equal to each other, with `PartialEq`
 - `debug_assert`    ensure that a boolean expression is true at runtime.
 - `debug_assert_eq` asserts 2 expressions are equal to each other.
 - `debug_assert_ne` asserts 2 expressions are not equal to each other.

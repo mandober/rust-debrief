@@ -22,6 +22,4 @@ Available data structures:
 - `vec_deque` A double-ended queue implemented with a growable ring buffer.
 - `vec` a contiguous growable array type with heap-allocated contents, `Vec<T>`.
 - `range` [LAB] Range syntax.
-
-
 - `string` an UTF-8 encoded, growable string.

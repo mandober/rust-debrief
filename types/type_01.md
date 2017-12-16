@@ -215,11 +215,11 @@
   kind: primitive, generic, fixed, sequence
   elements: homogeneric
   sized: yes
-  size: size of `T` * n
+  subtypes: `T × N`
   storage: stack
   std: primitive
   sample: `let arr: [i32; 32] = [1; 32]`
-  traits: `Copy`
+  traits: `Copy` (if elements are Copy)
   all traits: only for arrays of up to 32 elements, if element type allows it: 
   `Debug`, `Default`, `Clone` (only if `T: Copy`)
   `IntoIterator` (implemented for `&[T; N]` and `&mut [T; N]`)
