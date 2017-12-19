@@ -1,9 +1,5 @@
 # Rust Data Types
 
-
-
-
-
 **Primitive types**
 * Scalar types
   - Booleans

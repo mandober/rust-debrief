@@ -1,16 +1,8 @@
 // ! ARRAYS
 /**
-
-- Arrays are generically of type `[T; N]`, N is size of array.
-- Arrays cannot be resized.
-- Array access is bounds-checked at runtime.
-- Arrays are indexed with []
-
 An example is an array holding more than 32 elements of a type that is `Clone`;
 the standard library only implements `Clone` up until arrays of size 32.
 In this case, implementation of `Clone` cannot be derived, but can be impl as:
-
-
 */
 let arr1 = [1, 2, 3]; // (array of 3 elements)
 let arr2 = [2; 32];   // (array of 32 elements of 2s)

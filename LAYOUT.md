@@ -1,14 +1,20 @@
 # TOC
 
-- Programming Languages
+- Programming Languages and Type Theory
   - Type Systems
-  - Data Types
-  - pointers
-  - Algebraic Data Types
+    - Data Types
+    - Pointers
+    - Algebraic Data Types
+  - Memory menagement
+    - Address space
+    - Alignment
+    - The Stack
+    - The Heap
+  - Binary relations
+    - Partial equality
+    - Partial ordering
   - Programming Paradigms
-  - Alignment
-  - The Stack and the Heap
-  - partial equality and partial ordering
+    - Polymorphism
 - The Rust Project
   - Language
   - Tools

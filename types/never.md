@@ -2,7 +2,7 @@
 
 Never is the bottom type i.e. the type that has no values. In type theory it is also called the zero or empty type, and is sometimes denoted with falsum, `⊥`.
 
-A function whose return type is bottom cannot return any value.
+A function whose return type is bottom type cannot return any value.
 
 In subtyping systems, the bottom type is the subtype of all types. However, the converse is not true - a subtype of all types is not necessarily the bottom type. It is used to represent the return type of a function that does not return a value: for instance, one which loops forever, signals an exception, or exits.
 

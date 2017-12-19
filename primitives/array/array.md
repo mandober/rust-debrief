@@ -3,16 +3,24 @@
 - name: array
 - [std doc](https://doc.rust-lang.org/std/primitive.array.html)
 - primitive, compound, generic type
-- no accompanying module
-- contiguous, fixed-size, sequence of homogenous elements
-- structural type, denoted `[T; N]`, for a constant size, N>=0.  
-  N is the length of the array, a part of its type.  
+- no accompanying module in std; array doesn't have any methods, slice does
+- array is contiguous, fixed-size, sequence of homogenous elements
+- structural type, has a literal expression
+- type annotation: `[T; N]`, for a constant size N, where N>=0   
+  N is the length of the array and a part of its type.  
   N is non-negative compile-time constant.  
   N (like all numbers for index, size and length) is `usize`.
 - subtypes: the number of all array types is a product of all available Rust types and all sizes: `T × usize`
 - shared reference to array: `&[T; N]`
 - mutable reference to array: `&mut [T; N]`
-- can be coerced to slice `[T]`
+- arrays of any size are Copy if the element type is Copy
+- trait implementations are statically generated up to size 32
+- array cannot be resized
+- no way to move elements out of an array (alt: `mem::replace`)
+- indexed with `[]`
+- access is bounds-checked at run-time, out of bounds indexing causes panic
+- can coerced to slice `[T]`
+- array itself is not iterable, the slice is
 
 
 
@@ -48,18 +56,17 @@ There are two syntactic forms for creating an array:
 
 Arrays of sizes 0-32 implement these traits if the element type allows it:
 
-- `Clone` (only if `T:Copy`)
+- `Clone` (only if `T: Copy`)
 - `Debug`
 - `IntoIterator` (implemented for `&[T; N]` and `&mut [T; N]`)
-- `PartialEq`, `PartialOrd`, `Eq`, `Ord`
+- `PartialEq`, `Eq`, `PartialOrd`, `Ord`
 - `Hash`
 - `AsRef`, `AsMut`
 - `Borrow`, `BorrowMut`
 - `Default`
 
 
-This limitation on the size N exists because
-*Rust doesn't yet support code that is generic over the size of an array type*.
+This limitation on the size N exists because Rust doesn't yet support code that is generic over the size of an array type.
 
 `[Foo; 3]` and `[Bar; 3]` are instances of same generic type `[T; 3]`,
 but `[Foo; 3]` and `[Foo; 5]` are *entirely different types*.
@@ -111,4 +118,38 @@ the array reference's `IntoIterator` implementation:
 
 ```rust
 for x in &array { }
+```
+
+
+## Trait Implementations
+
+```rust
+impl<'a, 'b, A, B> PartialEq<[B; 4]> for [A; 4]
+  where A: PartialEq<B>
+{
+  fn eq(&self, other: &[B; 4]) -> bool;
+  fn ne(&self, other: &[B; 4]) -> bool;
+}
+
+impl<'a, 'b, A, B> PartialEq<[B]> for [A; 4]
+  where A: PartialEq<B>
+{
+  fn eq(&self, other: &[B]) -> bool;
+  fn ne(&self, other: &[B]) -> bool;
+}
+
+
+impl<'a, 'b, A, B> PartialEq<&'b [B]> for [A; 4]
+  where A: PartialEq<B>
+{
+  fn eq(&self, other: &&'b [B]) -> bool {};
+  fn ne(&self, other: &&'b [B]) -> bool {};
+}
+
+impl<'a, 'b, A, B> PartialEq<&'b mut [B]> for [A; 4]
+  where A: PartialEq<B>
+{
+  fn eq(&self, other: &&'b mut [B]) -> bool;
+  fn ne(&self, other: &&'b mut [B]) -> bool;
+}
 ```

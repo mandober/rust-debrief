@@ -1,13 +1,21 @@
 # Integers
 
-Integers are primitive scalar types.
+- Categories:
+  - signedness:
+    - signed:   `i8`, `i16`, `i32`, `i64`, `i128`, `isize`
+    - unsigned: `u8`, `u16`, `u32`, `u64`, `u128`, `usize`
+  - bit-width: 8, 16, 32, 64, 128
+  - dependency: independent and machine-architecture dependent
+- Integers are primitive scalar types.
+- The type of an unsuffixed integer literal is determined by type inference:
+  - if an integer type can be uniquely determined from the surrounding program
+    context, the unsuffixed integer literal has that type.
+  - if the program context under-constrains the type, it defaults to i32
+  - If the program context over-constrains the type, 
+    it is considered a static type error.
 
-The type of an unsuffixed integer literal is determined by type inference:
-- if an integer type can be uniquely determined from the surrounding program
-  context, the unsuffixed integer literal has that type.
-- if the program context under-constrains the type, it defaults to i32
-- If the program context over-constrains the type, 
-  it is considered a static type error.
+
+
 
 ```rust
 ‭// 65424‬ dec in bin:
@@ -86,7 +94,7 @@ int128= 2^128= 2^(2^7) = 3.4028236692093846346337460743177e+38
 
 
 
-## Unsigned +
+## Unsigned
 The unsigned types are positive integers (and zero), ranging from 0 to
 2 to the power of their signum, minus one: `from 0 to 2^s - 1` or
 mathematically ascribed as: `[0 - 2^s)`, where first set member (zero) 

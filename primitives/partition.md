@@ -10,6 +10,13 @@ These are some of the ways to partition primitive types into categories.
 - Dynamically-sized types
 
 
+Numeric types:
+- integers
+- address integers
+- floating-points
+- boolean
+- character
+
 
 
 name         | type          | sample | size    |s|p| trait|m| spec
@@ -22,6 +29,7 @@ mach int     | `isize`       | -100   | 32b/64b |s|y| Copy |y|
 mach uint    | `usize`       | 100    | 32b/64b |s|y| Copy |y|
 int          | `i8-64`       | -42    |   8-64b |s|y| Copy |y|
 uint         | `u8-64`       | 42     |   8-64b |s|y| Copy |y|
+
 
 
 

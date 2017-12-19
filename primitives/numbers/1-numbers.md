@@ -1,44 +1,12 @@
 # Numbers
 
-Number types:
-- integers
-- address integers
-- floating-points
-
-Numeric types: 
-- integers
-- address integers
-- floating-points
-- boolean
-- character
-
-
-There is no minus sign, no negative number literal, only negation operator.
-Signed integer types and floating-point types support negation.
-It is an error to apply negation to unsigned types.
-
-
-
-## Numbers:
-- Integers
-  - Signed:   `i8`, `i16`, `i32`, `i64`, `i128`
-  - Unsigned: `u8`, `u16`, `u32`, `u64`, `u128`
-- Machine-dependent integers: `isize`, `usize`
-- Floats: `f32`, `f64`
-
-
-       | 2^3 | 2^4 |  2^5  |  2^6  | 2^7
--------|-----|-----|-------|-------|-------
-int    |`i8` |`i16`|`i32`  |`i64`  |`i128`
-uint   |`u8` |`u16`|`u32`  |`u64`  |`u128`
-float  |     |     |`f32`  |`f64`  |
-isize  |     |     | x32   | x64   |
-usize  |     |     | x32   | x64   |
+- There is no minus sign, no negative number literal, only negation operator.
+  Signed integer types and floating-point types support negation.
+  It is an error to apply negation to unsigned types.
 
 
 
 ## Numeric cast
-
 
 1. `int <=> int`: between two integers of the same size (u8 -> i8) 
     is a no-op. In computation is noop, representation differs.

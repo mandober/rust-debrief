@@ -1,8 +1,20 @@
 # Syntax
 
-- keywords
-- operators
-- symbols
+<!-- TOC -->
+
+- [Symbols](#symbols)
+- [Operators and Symbols](#operators-and-symbols)
+- [Other Syntax](#other-syntax)
+- [Path-related syntax](#path-related-syntax)
+- [Generics](#generics)
+- [Constraints](#constraints)
+- [Macros and attributes](#macros-and-attributes)
+- [Comments](#comments)
+- [Special types](#special-types)
+- [Various things involving parens and tuples](#various-things-involving-parens-and-tuples)
+- [Symbols](#symbols-1)
+
+<!-- /TOC -->
 
 
 
@@ -14,62 +26,62 @@
 
 ## Operators and Symbols
 
-* `!` (`ident!(…)`, `ident!{…}`, `ident![…]`): denotes macro expansion.  See [Macros].
-* `!` (`!expr`): bitwise or logical complement.  Overloadable (`Not`).
-* `!=` (`var != expr`): nonequality comparison.  Overloadable (`PartialEq`).
-* `%` (`expr % expr`): arithmetic remainder.  Overloadable (`Rem`).
+* `!` (`ident!(…)`, `ident!{…}`, `ident![…]`): denotes macro expansion.
+* `!` (`!expr`): bitwise or logical complement. Overloadable (`Not`).
+* `!=` (`var != expr`): nonequality comparison. Overloadable (`PartialEq`).
+* `%` (`expr % expr`): arithmetic remainder. Overloadable (`Rem`).
 * `%=` (`var %= expr`): arithmetic remainder & assignment. Overloadable (`RemAssign`).
-* `&` (`expr & expr`): bitwise and.  Overloadable (`BitAnd`).
-* `&` (`&expr`, `&mut expr`): borrow.  See [References and Borrowing].
-* `&` (`&type`, `&mut type`, `&'a type`, `&'a mut type`): borrowed pointer type.  See [References and Borrowing].
+* `&` (`expr & expr`): bitwise and. Overloadable (`BitAnd`).
+* `&` (`&expr`, `&mut expr`): borrow.
+* `&` (`&type`, `&mut type`, `&'a type`, `&'a mut type`): borrowed pointer type.
 * `&=` (`var &= expr`): bitwise and & assignment. Overloadable (`BitAndAssign`).
 * `&&` (`expr && expr`): logical and.
-* `*` (`expr * expr`): arithmetic multiplication.  Overloadable (`Mul`).
+* `*` (`expr * expr`): arithmetic multiplication. Overloadable (`Mul`).
 * `*` (`*expr`): dereference.
-* `*` (`*const type`, `*mut type`): raw pointer.  See [Raw Pointers].
+* `*` (`*const type`, `*mut type`): raw pointer.
 * `*=` (`var *= expr`): arithmetic multiplication & assignment. Overloadable (`MulAssign`).
-* `+` (`expr + expr`): arithmetic addition.  Overloadable (`Add`).
-* `+` (`trait + trait`, `'a + trait`): compound type constraint.  See [Traits (Multiple Trait Bounds)].
+* `+` (`expr + expr`): arithmetic addition. Overloadable (`Add`).
+* `+` (`trait + trait`, `'a + trait`): compound type constraint.
 * `+=` (`var += expr`): arithmetic addition & assignment. Overloadable (`AddAssign`).
-* `,`: argument and element separator.  See [Attributes], [Functions], [Structs], [Generics], [Match], [Closures], [Crates and Modules (Importing Modules with `use`)].
-* `-` (`expr - expr`): arithmetic subtraction.  Overloadable (`Sub`).
-* `-` (`- expr`): arithmetic negation.  Overloadable (`Neg`).
+* `,`: argument and element separator.
+* `-` (`expr - expr`): arithmetic subtraction. Overloadable (`Sub`).
+* `-` (`- expr`): arithmetic negation. Overloadable (`Neg`).
 * `-=` (`var -= expr`): arithmetic subtraction & assignment. Overloadable (`SubAssign`).
-* `->` (`fn(…) -> type`, `|…| -> type`): function and closure return type.  See [Functions], [Closures].
-* `.` (`expr.ident`): member access.  See [Structs], [Method Syntax].
+* `->` (`fn(…) -> type`, `|…| -> type`): function and closure return type.
+* `.` (`expr.ident`): member access.
 * `..` (`..`, `expr..`, `..expr`, `expr..expr`): right-exclusive range literal.
-* `..` (`..expr`): struct literal update syntax.  See [Structs (Update syntax)].
-* `..` (`variant(x, ..)`, `struct_type { x, .. }`): "and the rest" pattern binding.  See [Patterns (Ignoring bindings)].
-* `...` (`...expr`, `expr...expr`) *in an expression*: inclusive range expression. See [Iterators].
-* `...` (`expr...expr`) *in a pattern*: inclusive range pattern.  See [Patterns (Ranges)].
+* `..` (`..expr`): struct literal update syntax.
+* `..` (`variant(x, ..)`, `struct_type { x, .. }`): "and the rest" pattern binding.
+* `...` (`...expr`, `expr...expr`) *in an expression*: inclusive range expression.
+* `...` (`expr...expr`) *in a pattern*: inclusive range pattern.
 * `/` (`expr / expr`): arithmetic division.  Overloadable (`Div`).
 * `/=` (`var /= expr`): arithmetic division & assignment. Overloadable (`DivAssign`).
-* `:` (`pat: type`, `ident: type`): constraints.  See [Variable Bindings], [Functions], [Structs], [Traits].
-* `:` (`ident: expr`): struct field initializer.  See [Structs].
+* `:` (`pat: type`, `ident: type`): constraints.
+* `:` (`ident: expr`): struct field initializer.
 * `:` (`'a: loop {…}`): loop label.  See [Loops (Loops Labels)].
 * `;`: statement and item terminator.
-* `;` (`[…; len]`): part of fixed-size array syntax.  See [Primitive Types (Arrays)].
+* `;` (`[…; len]`): part of fixed-size array syntax.
 * `<<` (`expr << expr`): left-shift.  Overloadable (`Shl`).
 * `<<=` (`var <<= expr`): left-shift & assignment. Overloadable (`ShlAssign`).
 * `<` (`expr < expr`): less-than comparison.  Overloadable (`PartialOrd`).
-* `<=` (`var <= expr`): less-than or equal-to comparison.  Overloadable (`PartialOrd`).
-* `=` (`var = expr`, `ident = type`): assignment/equivalence.  See [Variable Bindings], [`type` Aliases], generic parameter defaults.
-* `==` (`var == expr`): equality comparison.  Overloadable (`PartialEq`).
-* `=>` (`pat => expr`): part of match arm syntax.  See [Match].
-* `>` (`expr > expr`): greater-than comparison.  Overloadable (`PartialOrd`).
-* `>=` (`var >= expr`): greater-than or equal-to comparison.  Overloadable (`PartialOrd`).
-* `>>` (`expr >> expr`): right-shift.  Overloadable (`Shr`).
+* `<=` (`var <= expr`): less-than or equal-to comparison. Overloadable (`PartialOrd`).
+* `=` (`var = expr`, `ident = type`): assignment/equivalence.
+* `==` (`var == expr`): equality comparison. Overloadable (`PartialEq`).
+* `=>` (`pat => expr`): part of match arm syntax.
+* `>` (`expr > expr`): greater-than comparison. Overloadable (`PartialOrd`).
+* `>=` (`var >= expr`): greater-than or equal-to comparison. Overloadable (`PartialOrd`).
+* `>>` (`expr >> expr`): right-shift. Overloadable (`Shr`).
 * `>>=` (`var >>= expr`): right-shift & assignment. Overloadable (`ShrAssign`).
-* `@` (`ident @ pat`): pattern binding.  See [Patterns (Bindings)].
+* `@` (`ident @ pat`): pattern binding.
 * `^` (`expr ^ expr`): bitwise exclusive or.  Overloadable (`BitXor`).
 * `^=` (`var ^= expr`): bitwise exclusive or & assignment. Overloadable (`BitXorAssign`).
-* `|` (`expr | expr`): bitwise or.  Overloadable (`BitOr`).
-* `|` (`pat | pat`): pattern alternatives.  See [Patterns (Multiple patterns)].
+* `|` (`expr | expr`): bitwise or. Overloadable (`BitOr`).
+* `|` (`pat | pat`): pattern alternatives.
 * `|` (`|…| expr`): closures.  See [Closures].
 * `|=` (`var |= expr`): bitwise or & assignment. Overloadable (`BitOrAssign`).
 * `||` (`expr || expr`): logical or.
-* `_`: "ignored" pattern binding (see [Patterns (Ignoring bindings)]). Also used to make integer-literals readable (see [Reference (Integer literals)]).
-* `?` (`expr?`): Error propagation. Returns early when `Err(_)` is encountered, unwraps otherwise. Similar to the [`try!` macro].
+* `_`: "ignored" pattern binding. Also used to make integer-literals readable.
+* `?` (`expr?`): Error propagation. Returns early when `Err(_)` is encountered, unwraps otherwise.
 
 
 ## Other Syntax
