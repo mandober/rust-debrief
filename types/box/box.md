@@ -1,14 +1,13 @@
-# box
+# Box
 
-name: box
-anot: `Box<T>`
-type: composite type, generic type, reference types group
-mod: `std::boxed`
-sized: yes
-store: ptr on stack to data on heap
+- name: box
+- annotation: `Box<T>`
+- type: composite type, generic type, reference types group
+- module: [`std::boxed::Box`](https://doc.rust-lang.org/std/boxed/)
+- store: pointer on stack to data on heap
+
+
 code: `let b = Box::new(5)`
-
-Box is a struct defined in `std::boxed::Box`.
 
 Box is somewhat of a primitive, it is a special type in the compiler.
 

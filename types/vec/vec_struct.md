@@ -1,5 +1,5 @@
 # struct `Vec`
-https://doc.rust-lang.org/stable/std/vec/struct.Vec.html
+https://doc.rust-lang.org/std/vec/struct.Vec.html
 
 Struct `std::vec::Vec` 1.0.0
 

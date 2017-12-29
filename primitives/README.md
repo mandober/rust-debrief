@@ -10,6 +10,7 @@
 * Compound types
   - Array
   - Tuple
+* Unit type
 * Dynamically-sized types
   - Slice
   - String slice
@@ -17,6 +18,3 @@
   - Reference
   - Raw pointer
   - Function pointer
-* Unit type
-
-

@@ -2,115 +2,115 @@
 
 
 - Grammar
-    - Unicode productions
-    - String table productions
+  - Unicode productions
+  - String table productions
 - Lexical structure
-    - Input format
-    - Special Unicode Productions
-        - Identifiers
-        - Delimiter-restricted productions
-        - Literals
-            - Character and string literals
-            - Byte and byte string literals
-            - Number literals
-            - Boolean literals
-        - Symbols
-    - Paths
+  - Input format
+  - Special Unicode Productions
+    - Identifiers
+    - Delimiter-restricted productions
+    - Literals
+      - Character and string literals
+      - Byte and byte string literals
+      - Number literals
+      - Boolean literals
+    - Symbols
+  - Paths
 - Syntax extensions
-    - Macros
+  - Macros
 - Crates and source files
 - Items and attributes
-    - Items
-        - Type Parameters
-        - Modules
-            - View items
-                - Extern crate declarations
-                - Use declarations
-        - Functions
-            - Generic functions
-            - Unsafety
-                - Unsafe functions
-                - Unsafe blocks
-            - Diverging functions
-        - Type definitions
-        - Structures
-        - Enumerations
-        - Constant items
-        - Static items
-            - Mutable statics
-        - Traits
-        - Implementations
-        - External blocks
-    - Visibility and Privacy
-        - Re-exporting and Visibility
-    - Attributes
+  - Items
+    - Type Parameters
+    - Modules
+      - View items
+        - Extern crate declarations
+        - Use declarations
+    - Functions
+      - Generic functions
+      - Unsafety
+        - Unsafe functions
+        - Unsafe blocks
+      - Diverging functions
+    - Type definitions
+    - Structures
+    - Enumerations
+    - Constant items
+    - Static items
+      - Mutable statics
+    - Traits
+    - Implementations
+    - External blocks
+  - Visibility and Privacy
+    - Re-exporting and Visibility
+  - Attributes
 - Statements and expressions
-    - Statements
-        - Declaration statements
-            - Item declarations
-            - Variable declarations
-        - Expression statements
-    - Expressions
-            - Lvalues, rvalues and temporaries
-            - Moved and copied types
-        - Literal expressions
-        - Path expressions
-        - Tuple expressions
-        - Unit expressions
-        - Structure expressions
-        - Block expressions
-        - Method-call expressions
-        - Field expressions
-        - Array expressions
-        - Index expressions
-        - Range expressions
-        - Unary operator expressions
-        - Binary operator expressions
-            - Arithmetic operators
-            - Bitwise operators
-            - Lazy boolean operators
-            - Comparison operators
-            - Type cast expressions
-            - Assignment expressions
-            - Compound assignment expressions
-        - Grouped expressions
-        - Call expressions
-        - Lambda expressions
-        - While loops
-        - Infinite loops
-        - Break expressions
-        - Continue expressions
-        - For expressions
-        - If expressions
-        - Match expressions
-        - If let expressions
-        - While let loops
-        - Return expressions
+  - Statements
+    - Declaration statements
+      - Item declarations
+      - Variable declarations
+    - Expression statements
+  - Expressions
+      - Lvalues, rvalues and temporaries
+      - Moved and copied types
+    - Literal expressions
+    - Path expressions
+    - Tuple expressions
+    - Unit expressions
+    - Structure expressions
+    - Block expressions
+    - Method-call expressions
+    - Field expressions
+    - Array expressions
+    - Index expressions
+    - Range expressions
+    - Unary operator expressions
+    - Binary operator expressions
+      - Arithmetic operators
+      - Bitwise operators
+      - Lazy boolean operators
+      - Comparison operators
+      - Type cast expressions
+      - Assignment expressions
+      - Compound assignment expressions
+    - Grouped expressions
+    - Call expressions
+    - Lambda expressions
+    - While loops
+    - Infinite loops
+    - Break expressions
+    - Continue expressions
+    - For expressions
+    - If expressions
+    - Match expressions
+    - If let expressions
+    - While let loops
+    - Return expressions
 - Type system
-    - Types
-        - Primitive types
-            - Machine types
-            - Machine-dependent integer types
-        - Textual types
-        - Tuple types
-        - Array, and Slice types
-        - Structure types
-        - Enumerated types
-        - Pointer types
-        - Function types
-        - Closure types
-        - Never type
-        - Object types
-        - Type parameters
-        - Type parameter bounds
-        - Self types
-    - Type kinds
+  - Types
+    - Primitive types
+      - Machine types
+      - Machine-dependent integer types
+    - Textual types
+    - Tuple types
+    - Array, and Slice types
+    - Structure types
+    - Enumerated types
+    - Pointer types
+    - Function types
+    - Closure types
+    - Never type
+    - Object types
+    - Type parameters
+    - Type parameter bounds
+    - Self types
+  - Type kinds
 - Memory and concurrency models
-    - Memory model
-        - Memory allocation and lifetime
-        - Memory ownership
-        - Variables
-        - Boxes
-    - Threads
-        - Communication between threads
-        - Thread lifecycle
+  - Memory model
+    - Memory allocation and lifetime
+    - Memory ownership
+    - Variables
+    - Boxes
+  - Threads
+    - Communication between threads
+    - Thread lifecycle

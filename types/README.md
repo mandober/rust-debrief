@@ -1,6 +1,7 @@
 # Rust Data Types
 
-**Primitive types**
+
+## Primitive types
 * Scalar types
   - Booleans
   - Numbers
@@ -20,7 +21,7 @@
     - Raw pointers
     - Function pointers
 
-**Composite types**
+## Composite types
 - struct (product type)
   * named-fields struct
   * tuple struct
