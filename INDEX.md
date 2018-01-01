@@ -51,7 +51,6 @@
 - unsafe
 - use declarations
 - zero sized types
-
 - casting
 - coercing
 - feature flag
@@ -102,25 +101,25 @@
 - generic parameter
 - match arm
 - pattern binding
-pattern alternatives
-ignored pattern binding
-the rest pattern binding
-Error propagation
-loop label
-loop
-branch
-raw string literal
-byte string literal
-raw byte string literal
-ASCII byte literal
-paths
-associated constants
-associated functions
-turbofish
-generic type
-Never type
-Diverging Functions
-move closures
-Mutability
-Overloading
-Unsized Types
+- pattern alternatives
+- ignored pattern binding
+- the rest pattern binding
+- Error propagation
+- loop label
+- loop
+- branch
+- raw string literal
+- byte string literal
+- raw byte string literal
+- ASCII byte literal
+- paths
+- associated constants
+- associated functions
+- turbofish
+- generic type
+- Never type
+- Diverging Functions
+- move closures
+- Mutability
+- Overloading
+- Unsized Types

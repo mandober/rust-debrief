@@ -1,7 +1,5 @@
 # Semantics
 
-- [Naming conventions](naming-conventions.md)
-
 
 * Binding
 * Move Semantics

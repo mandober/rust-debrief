@@ -1,7 +1,7 @@
 # Summary
 
 * [Rust Debrief](README.md)
-* [Programming](theory/README.md)
+* [Programming theory](theory/README.md)
   - [Type Systems](theory/type-systems.md)
   - [Data Types](theory/data-types.md)
 * [The Rust Project](rust-project/README.md)

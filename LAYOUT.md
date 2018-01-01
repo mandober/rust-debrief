@@ -1,79 +1,89 @@
 # TOC
 
-## Programming Languages and Type Theory
-- Type Systems
-  - Data Types
-  - Pointers
-  - Algebraic Data Types
-- Memory menagement
-  - Address space
-  - Alignment
-  - The Stack
-  - The Heap
-- Binary relations
-  - Partial equality
-  - Partial ordering
-- Programming Paradigms
-  - Polymorphism
+1. __Type Theory__
+  - Type Systems
+    - Data Types
+    - Pointers
+    - Algebraic Data Types
+  - Memory menagement
+    - Address space
+    - Alignment
+    - The Stack
+    - The Heap
+  - Binary relations
+    - Partial equality
+    - Partial ordering
+  - Programming Paradigms
+    - Polymorphism
+
+2. __The Rust Project__
+  2.1 The Rust Language
+    - The Compiler
+    - Libraries
+  2.2 The Tools
+    - cargo
+    - rustup
+    - rustdoc
+  2.3 Third Party Crates
 
 
-# The Rust Project
-- The Rust Language
-- The Tools
-  - cargo
-  - rustup
-  - rustdoc
-- The Crates
-  - Libraries
-  - Third-party crates
 
-## The Rust Crates/Libraries
-  - core
-  - alloc
-  - std_unicode
-  - proc_macro
-  - std
-
-## The Standard Library
-  - The Rust Prelude
-  - Methods on primitives
-  - Modules
-  - Macros
-
-
-# The Rust Language
-- The Standard Library
-- The Compiler
+The Rust Language
+- Internals
+  - The Compiler
   - Lang Item Attributes
   - Feature Gates
-- Grammer
 - Syntax
+- Types
+  - Primitives
+  - Non-primitives
 - Semantics
-* Crates
-* Attributes
-* Macros
-* Items
-* Types
-* Methods
-* Keywords
-* Unsafe
+
+
+  - Crates (Libraries)
+    - core
+    - alloc
+    - std_unicode
+    - proc_macro
+    - The Standard Library (std)
+      - The Rust Prelude
+      - Methods on primitives
+      - Macros
+      - Modules
+  - Third-party crates
+
 
 
 ## Syntax
-- Tokens
-- Symbols
-- Keywords
-- Operators
-- Literals
-- Comments
-- Attributes
-- Definitions
-- Declarations
-- Statements
-- Expressions
+* Attributes
+* Comments
+* Grammer
+* Keywords
+* Literals
+* Macros
+* Naming conventions
+* Operators
+* Expression
+* Statement
+* All Syntax
+* Items
+  - modules
+  - extern crate declarations
+  - use declarations
+  - function definitions
+  - type definitions
+  - struct definitions
+  - enumeration definitions
+  - union definitions
+  - constant items
+  - static items
+  - trait definitions
+  - implementations
+  - extern blocks
 
 
-## Semantics
+
+# Semantics
 - Binding
 - Move Semantics
 - Copy Semantics
@@ -81,7 +91,6 @@
 - Mutability
 - Pattern matching
 - Lifetimes
-
 
 
 ## Primitive Types

@@ -1,13 +1,15 @@
 # Attributes
 
-- An attribute is a general, free-form metadata that is interpreted according to name, convention, language and compiler version.
+- An attribute is a metadata that is interpreted according to name, convention, language and compiler version.
 - Any item declaration may have an attribute applied to it.
-- An attribute beginning with a `#` applies to the item following it; an attribute beginning with a `#!` applies to the outer, enclosing, item.
+- An attribute beginning with a `#` applies to the item following it; 
+  an attribute beginning with a `#!` applies to the outer, enclosing, item.
 - Attributes may appear as any of:
   * single identifier i.e. the attribute's name: `#[test]`
   * key/value pair: `#![crate_type = "lib"]`
   * identifier, with list of args in parens: `#[inline(always)]`
 - Attributes grouping: `[allow(dead_code, unused_variables)]`
+
 
 
 ## Attributes index
