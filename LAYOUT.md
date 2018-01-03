@@ -1,57 +1,61 @@
 # TOC
 
-1. __Type Theory__
-  - Type Systems
-    - Data Types
-    - Pointers
-    - Algebraic Data Types
-  - Memory menagement
-    - Address space
-    - Alignment
-    - The Stack
-    - The Heap
-  - Binary relations
-    - Partial equality
-    - Partial ordering
-  - Programming Paradigms
-    - Polymorphism
+<!-- TOC -->
 
-2. __The Rust Project__
-  2.1 The Rust Language
+- [Programming Theory](#programming-theory)
+- [The Rust Project](#the-rust-project)
+- [Syntax](#syntax)
+- [Primitive Types](#primitive-types)
+- [Non-primitive Types](#non-primitive-types)
+- [Language Items](#language-items)
+- [Semantics](#semantics)
+- [Modules](#modules)
+- [Appendix](#appendix)
+
+<!-- /TOC -->
+
+
+## Programming Theory
+- Type Systems
+  - Data Types
+  - Pointers
+  - Algebraic Data Types
+- Memory menagement
+  - Address space
+  - Alignment
+  - The Stack
+  - The Heap
+- Binary relations
+  - Partial equality
+  - Partial ordering
+- Programming Paradigms
+  - Polymorphism
+
+
+## The Rust Project
+- The Rust Language
+  - Internals
     - The Compiler
-    - Libraries
-  2.2 The Tools
-    - cargo
-    - rustup
-    - rustdoc
-  2.3 Third Party Crates
-
-
-
-The Rust Language
-- Internals
-  - The Compiler
-  - Lang Item Attributes
-  - Feature Gates
-- Syntax
-- Types
-  - Primitives
-  - Non-primitives
-- Semantics
-
-
-  - Crates (Libraries)
+    - Feature Gates
+  - Libraries
     - core
     - alloc
     - std_unicode
     - proc_macro
-    - The Standard Library (std)
+    - The Standard Library
       - The Rust Prelude
       - Methods on primitives
       - Macros
-      - Modules
-  - Third-party crates
-
+      * Modules
+  * Syntax
+  * Data Types
+  * Language Items
+  * Semantics
+- The Tools
+  - cargo
+  - rustup
+  - rustdoc
+- Third Party Crates
 
 
 ## Syntax
@@ -65,32 +69,6 @@ The Rust Language
 * Operators
 * Expression
 * Statement
-* All Syntax
-* Items
-  - modules
-  - extern crate declarations
-  - use declarations
-  - function definitions
-  - type definitions
-  - struct definitions
-  - enumeration definitions
-  - union definitions
-  - constant items
-  - static items
-  - trait definitions
-  - implementations
-  - extern blocks
-
-
-
-# Semantics
-- Binding
-- Move Semantics
-- Copy Semantics
-- Borrowing
-- Mutability
-- Pattern matching
-- Lifetimes
 
 
 ## Primitive Types
@@ -112,8 +90,7 @@ The Rust Language
   - function pointers
 
 
-
-## Types
+## Non-primitive Types
 - Unit type
 - Never type
 - Composite types
@@ -122,12 +99,7 @@ The Rust Language
 - Empty Types
 
 
-## Crate
-- Attributes
-- Lang items
-
-
-## Lang Items
+## Language Items
 - extern crate declarations
 - extern blocks
 - use declarations
@@ -141,6 +113,17 @@ The Rust Language
 - union definitions
 - trait definitions
 - implementations
+
+
+## Semantics
+- Binding
+- Move
+- Copy
+- Borrowing
+- Mutability
+- [Functions](semantics/functions/README.md)
+- Pattern matching
+- Lifetimes
 
 
 ## Modules

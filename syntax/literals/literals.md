@@ -1,56 +1,95 @@
 # Literals
 
-**Tokens** are primitive productions in the grammar 
-defined by regular (non-recursive) languages.
+<!-- TOC -->
 
-"Simple" tokens are given in string table production form, and occur in the rest 
-of the grammar as double-quoted strings. Other tokens have exact rules given.
+- [Escapes](#escapes)
+  - [ASCII escapes](#ascii-escapes)
+  - [Byte escapes](#byte-escapes)
+  - [Unicode escapes](#unicode-escapes)
+  - [Quote escapes](#quote-escapes)
+- [Boolean literals](#boolean-literals)
+- [Symbols](#symbols)
+- [Number literals](#number-literals)
+- [Number suffixes](#number-suffixes)
+- [Character literals](#character-literals)
+- [String literals](#string-literals)
+- [Character escapes](#character-escapes)
+- [Raw string literals](#raw-string-literals)
+- [Byte literals](#byte-literals)
+- [Byte string literals](#byte-string-literals)
+- [Raw byte string literals](#raw-byte-string-literals)
+- [Number literals](#number-literals-1)
+- [Integer literals](#integer-literals)
+- [Floating-point literals](#floating-point-literals)
 
-> A **literal** is an expression consisting of a single token,
-> that immediately and directly denotes the value it evaluates to.
-
-A literal is an expression consisting of a single token, rather than a sequence 
-of tokens, that immediately and directly denotes the value it evaluates to,
-rather than referring to it by name or some other evaluation rule.
-
-A literal is a form of **constant expression**,
-so is evaluated (primarily) at compile time.
+<!-- /TOC -->
 
 
 
-#### Character and string literals
+**Characters and strings**
 
 name           |example    |# sets|characters  |escapes
 ---------------|-----------|------|------------|------------------
 char           |'H'        |      |All Unicode |Quote, Byte, Unicode
 string literal |"hello"    |      |All Unicode |Quote, Byte, Unicode
 raw string     |r#"hello"# |0...  |All Unicode |
+---------------|-----------|------|------------|------------------
 byte           |b'H'       |      |All ASCII   |Quote, Byte
 byte string    |b"hello"   |      |All ASCII   |Quote, Byte
 raw byte string|br#"hello"#|0...  |All ASCII   |
 
 
-__Byte escapes__
+
+
+## Escapes
+
+### ASCII escapes
+
 ```
-\x7F   8-bit character code (exactly 2 digits)
 \n     newline
 \r     carriage return
 \t     tab
 \\     backslash
 \0     null
+\x41   7-bit character code (exactly 2 digits, up to 0x7F)
 ```
 
-__Unicode escapes__
+### Byte escapes
+
+```
+\n     newline
+\r     carriage return
+\t     tab
+\\     backslash
+\0     null
+\x7F   8-bit character code (exactly 2 digits)
+```
+
+### Unicode escapes
+
+```
 \u{7FFF}   24-bit Unicode character code (up to 6 digits)
+```
+
+### Quote escapes
+
+```
+\'    Single quote; backslash: U+005C, single quote: U+0027
+\"    Double quote: 
+```
 
 
-__Quote escapes__
-\'    Single quote
-\"    Double quote
+
+## Boolean literals
+The two values of the boolean type are written as `true` and `false` literals.
+
+
+## Symbols
+Symbols are a general class of printable tokens that play structural roles in a variety of grammar productions. They are a set of remaining miscellaneous printable tokens that do not otherwise appear as literals, operators or keywords.
 
 
 
-### Number literals
+## Number literals
 
 Number literals  | Example    | Suffixes  | Exponentiation
 -----------------|------------|-----------|---------------
@@ -63,7 +102,7 @@ Floating-point   |123.0E+77   |Float suff.| optional
 All number literals allow `_` as a visual separator: 1_234.0E+18f64
 
 
-### Number suffixes
+## Number suffixes
 
 Floats: f32, f64
 Integer: u8, i8, u16, i16, u32, i32, u64, i64, isize, usize
@@ -71,12 +110,13 @@ Integer: u8, i8, u16, i16, u32, i32, u64, i64, isize, usize
 e.g.: let len = 2020_usize;
 
 
-### Character literals
+## Character literals
 A character literal is a single Unicode character enclosed within two U+0027 
 (single-quote) characters, with the exception of U+0027 itself, which must be 
 escaped by a preceding U+005C character (\). 
 
-### String literals
+
+## String literals
 A string literal is a sequence of any Unicode characters enclosed within two 
 U+0022 (double-quote) characters, with the exception of U+0022 itself, which 
 must be escaped by a preceding U+005C character (\).
@@ -95,7 +135,7 @@ let b = "foo\
 assert_eq!(a,b);
 ```
 
-#### Character escapes
+## Character escapes
 Some additional escapes are available in either character or non-raw string 
 literals. An escape starts with a U+005C (\) and continues with one of the 
 following forms:
@@ -113,7 +153,7 @@ following forms:
   order to denote itself.
 
 
-#### Raw string literals
+## Raw string literals
 Raw string literals do not process any escapes.
 They start with the character U+0072 (r), followed by zero or more of the char
 U+0023 (#) and a U+0022 (double-quote) character. The raw string body can contain
@@ -140,7 +180,7 @@ r##"foo #"# bar"##;                // foo #"# bar
 ```
 
 
-### Byte literals
+## Byte literals
 A byte literal is:
 - a single ASCII character (in the U+0000 to U+007F range) or 
 - a single escape
@@ -158,7 +198,7 @@ let byte_literal = b'w';
 ```
 
 
-#### Byte string literals
+## Byte string literals
 A non-raw byte string literal is:
 - a sequence of ASCII characters and escapes
 preceded by the characters U+0062 (b) and U+0022 (double-quote), and 
@@ -191,7 +231,7 @@ An escape starts with a U+005C (\) and continues with one of the following forms
 
 
 
-#### Raw byte string literals
+## Raw byte string literals
 Raw byte string literals do not process any escapes.
 They start with the characters U+0062 (b) and U+0072 (r),
     followed by zero or more of the opening U+0023 (#) characters,
@@ -239,7 +279,9 @@ br"\x52";                  // \x52
 ## Number literals
 
 A number literal is either an integer literal or a floating-point literal. The grammar for recognizing the two kinds of literals is mixed.
-3.5.1.4.1 Integer literals
+
+
+## Integer literals
 
 An integer literal has one of four forms:
 
@@ -270,7 +312,8 @@ Examples of integer literals of various forms:
 Run
 
 Note that the Rust syntax considers -1i8 as an application of the unary minus operator to an integer literal 1i8, rather than a single integer literal.
-3.5.1.4.2 Floating-point literals
+
+## Floating-point literals
 
 A floating-point literal has one of two forms:
 
@@ -299,10 +342,4 @@ let x: f64 = 2.; // type f64
 This last example is different because it is not possible to use the suffix syntax with a floating point literal ending in a period. 2.f64 would attempt to call a method named f64 on 2.
 
 The representation semantics of floating-point numbers are described in "Machine Types".
-3.5.1.5 Boolean literals
 
-The two values of the boolean type are written true and false.
-
-3.5.2 Symbols
-
-Symbols are a general class of printable tokens that play structural roles in a variety of grammar productions. They are a set of remaining miscellaneous printable tokens that do not otherwise appear as unary operators, binary operators, or keywords. They are catalogued in the Symbols section of the Grammar document.

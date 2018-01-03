@@ -1,4 +1,5 @@
 # Primitive: `fn` function pointer
+
 https://doc.rust-lang.org/std/primitive.fn.html
 
 Primitive Type `fn` 1.0.0
@@ -81,7 +82,6 @@ Non-extern functions have an ABI of `"Rust"`, and `extern` functions
 without an explicit ABI have an ABI of `"C"`.
 
 [ffi](https://doc.rust-lang.org/nomicon/ffi.html#foreign-calling-conventions)
-
 
 
 ```rust

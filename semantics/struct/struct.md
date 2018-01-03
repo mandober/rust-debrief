@@ -1,4 +1,4 @@
-# struct
+# Structs
 https://doc.rust-lang.org/book/second-edition/ch05-00-structs.html
 
 A struct, is a custom data type that lets us name and package together multiple 
@@ -12,6 +12,58 @@ Kinds of structs:
 - C-like struct
 - Tuple-like struct
 - Unit-like structs
+
+
+
+```rust
+struct F();           // tuple struct
+let _f1: F = F();     // type: F
+let _f2: fn()->F = F; // type: fn() -> F
+                      //       fn() -> F { F::{{constructor}} }
+
+struct G;      // unit struct
+let _g1 = G;
+let _g2 = G(); // error[E0618]: expected function, found `G`
+
+struct H(G);   // tuple struct
+
+
+// tuple-like structs:
+struct Rgb(u8, u8, u8);
+let _black = Rgb(0, 0, 0);
+
+struct Byte(u8);  // or
+struct Byte (u8); // or
+struct Byte (
+  u8
+);
+
+
+// C-like struct
+struct User {
+    id: i32,
+    name: (String, String)
+}
+```
+
+
+```rust
+struct P();
+fn main() {
+    let b = P;
+    println!("{:?}", b);
+    // error[E0277]: the trait bound 
+    //  `fn() -> P {P::{{constructor}}}: std::fmt::Debug`
+    //  is not satisfied
+}
+
+struct P();
+fn main() {
+    let b: fn()->P = P;
+    println!("{:?}", b); // 0x56096605df70
+}
+```
+
 
 
 To use a struct after we’ve defined it, we create an instance of
@@ -61,11 +113,9 @@ let mut joe = User {
 ```
 
 ### Tuple-like struct
-Structs that look similar to tuples, that have the added meaning the struct name 
-provides, but don't have names associated with their fields, just field types.
+Structs that look similar to tuples, that have the added meaning the struct name provides, but don't have names associated with their fields, just field types.
 
-The definition of a tuple struct still starts with the `struct` keyword and the 
-struct name, which are followed by the types in the tuple.
+The definition of a tuple struct still starts with the `struct` keyword and the struct name, which are followed by the types in the tuple.
 
 Each struct we define is its own type, even though the fields within the struct 
 have the same types. Otherwise, tuple struct instances behave like tuples:
