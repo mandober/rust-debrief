@@ -1,15 +1,36 @@
 # Unit type
 
-- name: unit
-- type annotation: `()`
-- structural type, has a literal expression
-- cardinality: 1
-- value: `()`
-- can be regarded as empty tuple
-- no accompanying module in std
+- type: unit
+- name: The Unit Type
+- desc: Empty type (regarded as empty tuple)
+- type annotation: `()` (annotation is the same as the value)
+- value: `()` (cardinality: 1)
+- module: no accompanying module in std
 
 
-Unit is a type that allows only one value, therefore it cannot hold information. It may also be regarded as the empty tuple, i.e. the product of no types. When it specifies the return type of a function that returns nothing, it is left out.
+## About 
+- Unit is a type that allows only one value, so it cannot hold information.
+- Unit is a structural type, it has no nominal representation, only a literal expression
+- It may be regarded as the empty tuple, i.e. the product of no types.
+- It may be omitted when it is the only or the last type parameter.
+
+
+
+## Unit type
+Unit type can be omitted when it is the only or the last type parameter.
+
+For example when it specifies the return type of a function that returns nothing:
+
+```rust
+fn show() {}
+// instead of annotating the unit:
+fn show() -> () {}
+```
+
+The unit can be omited when it is the last type parameter, like with the Option enum, `Option<T>`, instead of `Option<T, ()>`.
+
+However, when the unit is not the last type parameter it has to be written; for example, a Result enum with `Err` variant, but with nothing of interest in its `Ok` variant: `Result<(), E>`.
+
 
 
 

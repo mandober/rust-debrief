@@ -1,12 +1,11 @@
 # Type Systems
 
-* data
 * data type
 * data typing
 * type system
 * type checking
 * static languages
-* dinamic languages
+* dynamic languages
 * type safety
 * type error
 * weakly typed languages
@@ -22,7 +21,7 @@ At the lowest level, **data** is just collection of bits without inherent struct
 
 **Type system** is a set of rules that assigns a type to the value-carrying expressions of a language (variables, constants, objects, functions, etc.). The type system uses data type information to verify and enforce the constraints of data types through **type checking** process. Based on the time this process occurs, type systems can be divided into static and dynamic. **Statically typed** languages perform type checking at *compile-time*, as opposed to *run-time* checks that **dynamically typed** languages implement. 
 
-In static languages, variables are classified into types: once a variable aquires a type, it is type-locked. It cannot change its type and it accepts bindings only to the values of the matching type. Moreover, in some languages, a variable cannot even be rebound to a different value, after its initial binding, although some languages permit this by declaring a variable mutable. In dynamic languages variables don't carry the type: a variable can change its binding and type freely, throughout program's execution, i.e. values of different types can be (re)assigned to a variable, and interpreter will manage all the typing. Type systems can also sit anywhere between the static and dynamic extremes; e.g. they can perform different type safety checks at both compile and run time.
+In static languages, variables are classified into types: once a variable acquires a type, it is type-locked. It cannot change its type and it accepts bindings only to the values of the matching type. Moreover, in some languages, a variable cannot even be rebound to a different value, after its initial binding, although some languages permit this by declaring a variable mutable. In dynamic languages variables don't carry the type: a variable can change its binding and type freely, throughout program's execution, i.e. values of different types can be (re)assigned to a variable, and interpreter will manage all the typing. Type systems can also sit anywhere between the static and dynamic extremes; e.g. they can perform different type safety checks at both compile and run time.
 
 **Type safety** is the extent to which a language discourages **type errors**, which result when operating on values that are not of the appropriate type. For example, if an integer is treated as a boolean, **weakly** (loosely) typed languages will try to deal with this discrepancy (possibly by performing implicit type conversion), while **strongly** typed languages will decisively emit a error and quit. Type errors caught at compile-time will prevent program from compiling, while those found at run-time will have unforeseen effects on the, already running, program.
 

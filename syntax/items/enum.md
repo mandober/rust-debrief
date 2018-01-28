@@ -9,7 +9,7 @@ An example of an `enum` item and its use:
 ```rust
 enum Animal {
     Dog,
-    Cat,
+    Cat
 }
 
 let mut a: Animal = Animal::Dog;
@@ -21,7 +21,7 @@ Enumeration constructors can have either named or unnamed fields:
 ```rust
 enum Animal {
     Dog (String, f64),
-    Cat { name: String, weight: f64 },
+    Cat { name: String, weight: f64 }
 }
 
 let mut a: Animal = Animal::Dog("Cocoa".to_string(), 37.2);

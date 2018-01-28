@@ -1,4 +1,25 @@
-# Primitive: boolean
+# Boolean
+
+- [Boolean](boolean.md)
+
+
+- name: The Boolean type
+- type group: numeric
+- type: `bool`
+- cardinality: 2
+- values: `true`, `false`
+- literals: ✔  
+- ref: `&bool` (&true)
+- mut ref: `&mut bool` (&mut true)
+- kind: primitive, scalar, concrete, fixed  
+- sized: ✔    
+- size: 1b  
+- storage: stack (`Copy` type)  
+- std::module: ✗  
+- sample: `let b: bool = true`  
+- traits: `Copy`, BitAnd, BitAndAssign, BitOr, BitOrAssign, BitXor, BitXorAssign, Not, Debug, Display, Default, Hash, Eq, PartialEq, Ord, PartialOrd, FromStr  
+
+
 https://doc.rust-lang.org/std/primitive.bool.html
 
 Primitive Type `bool` 1.0.0

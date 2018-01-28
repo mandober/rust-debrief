@@ -1,7 +1,7 @@
-// ! Pointers
+// raw_pointers
+
 /**
 Pointer types
-
 
 All pointers in Rust are explicit first-class values.
 They can be copied, stored into data structs, and returned from functions.

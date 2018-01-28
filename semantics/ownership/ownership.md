@@ -9,11 +9,20 @@ Ingredients:
 
 
 
+Ownership
+- ownership
+- shared read access
+- exclusive read/write access
+
+Giving access
+- take ownership of self, consume self: `self`
+- borrow self immutably, read self: `&self`
+- borrow self mutably, write (to) self, mutate it: `&mut self`
 
 
+A mutable reference represents temporary exclusive access to a value that you don't own. You're allowed to do absolutely anything you want to a value you have a mutable reference to as long as when your loan expires, wherever you loaned it from still sees a valid value. This means you can actually completely overwrite the value. A really useful special case of this is swapping a value out for another, which we'll be using a lot. The only thing you can't do with an &mut is move the value out with no replacement. &mut self is great for methods that want to mutate self.
 
-
-
+A shared reference represents temporary shared access to a value that you don't own. Because you have shared access, you're generally not allowed to mutate anything. Think of & as putting the value out on display in a museum. & is great for methods that only want to observe self.
 
 
 

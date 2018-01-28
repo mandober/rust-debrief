@@ -1,11 +1,4 @@
-// * References
-
-// Reference types are written with an &: &i32
-// References can be taken with & (like C/C++).
-// References can be dereferenced with * (like C/C++).
-// References are guaranteed to be valid.
-// Validity is enforced through compile-time checks!
-// They are not the same as pointers!
+// References
 
 let x = 12;
 let ref_x = &x;

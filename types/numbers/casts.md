@@ -1,14 +1,4 @@
-# Numbers
-
-
-
-- There is no minus sign, no negative number literal, only negation operator.
-  Signed integer types and floating-point types support negation.
-  It is an error to apply negation to unsigned types.
-
-
-
-## Numeric cast
+# Casts
 
 1. `int <=> int`: between two integers of the same size (u8 -> i8) 
     is a no-op. In computation is noop, representation differs.
@@ -18,6 +8,17 @@
 3. `int => INT`: from smaller to larger integer will
     - *zero-extend* if the source is unsigned
     - *sign-extend* if the source is signed
+
+
+- `f2i`: from a float to an integer will *round* the float towards zero
+  NOTE: currently this will cause Undefined Behavior if the rounded value cannot be represented by the target integer type. This includes Inf and NaN. This is a bug and will be fixed.
+- Casting from an integer to float will produce the floating point 
+  representation of the integer, rounded if necessary (rounding strategy unspecified)
+- Casting from an f32 to an f64 is perfect and lossless
+- Casting from an f64 to an f32 will produce the closest possible value
+  (rounding strategy unspecified)
+  NOTE: currently this will cause Undefined Behavior if the value is finite but larger or smaller than the largest or smallest finite value representable by f32. This is a bug and will be fixed.
+
 
 ```rust
 // i <=> u
@@ -52,14 +53,3 @@ let t =  256_i16 as i8;  //   0
 let t = -256_i16 as i8;  //   0
 let t = -255_i16 as i8;  //   1
 ```
-
-
-- `f2i`: from a float to an integer will *round* the float towards zero
-  NOTE: currently this will cause Undefined Behavior if the rounded value cannot be represented by the target integer type. This includes Inf and NaN. This is a bug and will be fixed.
-- Casting from an integer to float will produce the floating point 
-  representation of the integer, rounded if necessary (rounding strategy unspecified)
-- Casting from an f32 to an f64 is perfect and lossless
-- Casting from an f64 to an f32 will produce the closest possible value
-  (rounding strategy unspecified)
-  NOTE: currently this will cause Undefined Behavior if the value is finite but larger or smaller than the largest or smallest finite value representable by f32. This is a bug and will be fixed.
-

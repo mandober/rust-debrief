@@ -8,36 +8,29 @@ as_ref
 */
 
 
-// Returns true if the option is a Some value.
+// is_some
 fn is_some(&self) -> bool;
-// example:
+// returns true if the option is present.
 let x: Option<u32> = Some(2);
 assert_eq!(x.is_some(), true);
-// example:
-let x: Option<u32> = None;
-assert_eq!(x.is_some(), false);
+let y: Option<u32> = None;
+assert_eq!(y.is_some(), false);
 
 
-
-// Returns true if the option is a None value.
+// is_none
 fn is_none(&self) -> bool
-// example:
+// returns true if the option is absent.
 let x: Option<u32> = Some(2);
-assert_eq!(x.is_none(), false);
-// example:
-let x: Option<u32> = None;
-assert_eq!(x.is_none(), true);
+let y: Option<u32> = None;
+assert_eq!(y.is_none(), true);
 
 
-
-// Converts from Option<T> to Option<&T>
+// as_ref
+// Converts from Option<T> to Option<&T>. Weakens the type.
 fn as_ref(&self) -> Option<&T>;
-/**
-Convert an Option<String> into an Option<usize>, preserving the original.
-The map method takes the self argument by value, consuming the original,
-so this technique uses as_ref to first take an Option
-to a reference to the value inside the original.
-*/
+// Convert Option<String> into Option<usize>, preserving the original.
+// Since map takes self by value, as_ref is used to make an Option containing
+// a ref to the value inside self.
 let num_as_str: Option<String> = Some("10".to_string());
 // First, cast Option<String> to Option<&String> with as_ref,
 // then consume that with map, leaving num_as_str on the stack.
@@ -45,10 +38,9 @@ let num_as_int: Option<usize> = num_as_str.as_ref().map(|n| n.len());
 println!("still can print num_as_str: {:?}", num_as_str);
 
 
-
+// as_mut
+fn as_mut(&mut self) -> Option<&mut T>;
 // Converts from Option<T> to Option<&mut T>
-fn as_mut(&mut self) -> Option<&mut T>
-// Examples
 let mut x = Some(2);
 match x.as_mut() {
     Some(v) => *v = 42,
@@ -57,86 +49,62 @@ match x.as_mut() {
 assert_eq!(x, Some(42));
 
 
-
-// Unwraps an option, yielding the content of a Some.
-fn expect(self, msg: &str) -> T
-// Panics
-// Panics if the value is a None with a custom panic message provided by msg.
-// example
+// expect
+fn expect(self, msg: &str) -> T;
+// Unwraps an option, yielding the content of a Some. Panics if None.
 let x = Some("value");
 assert_eq!(x.expect("the world is ending"), "value");
-// example
 let x: Option<&str> = None;
-x.expect("the world is ending"); // panics with `the world is ending`Run
+x.expect("the world is ending"); // panic
 
 
-
-// Moves the value v out of the Option<T> if it is Some(v).
+// unwrap
 fn unwrap(self) -> T;
-/**
-In general, because this function may panic, its use is discouraged.
-Instead, prefer to use pattern matching and handle the None case explicitly.
-
-Panics
-Panics if the self value equals None.
-*/
-// example
+// Moves the value out of Option<T>. Panics if None.
 let x = Some("air");
 assert_eq!(x.unwrap(), "air");
-// example
 let x: Option<&str> = None;
-assert_eq!(x.unwrap(), "air"); // failsRun
+assert_eq!(x.unwrap(), "air"); // panic
 
 
-
+// unwrap_or
+fn unwrap_or(self, def: T) -> T;
 // Returns the contained value or a default.
-fn unwrap_or(self, def: T) -> T
-// Examples
 assert_eq!(Some("car").unwrap_or("bike"), "car");
 assert_eq!(None.unwrap_or("bike"), "bike");
 
 
-
+// unwrap_or_else
+fn unwrap_or_else<F>(self, f: F) -> T where F: FnOnce() -> T;
 // Returns the contained value or computes it from a closure.
-fn unwrap_or_else<F>(self, f: F) -> T
-where F: FnOnce() -> T,
-// Examples
 let k = 10;
 assert_eq!(Some(4).unwrap_or_else(|| 2 * k), 4);
 assert_eq!(None.unwrap_or_else(|| 2 * k), 20);
 
 
-
+// map
 // Maps an Option<T> to Option<U> by applying a function to a contained value.
-fn map<U, F>(self, f: F) -> Option<U>
-where F: FnOnce(T) -> U,
-// Examples
+fn map<U, F>(self, f: F) -> Option<U> where F: FnOnce(T) -> U;
 // Convert an Option<String> into an Option<usize>, consuming the original:
 let maybe_some_string = Some(String::from("Hello, World!"));
-// `Option::map` takes self *by value*, consuming `maybe_some_string`
+// `Option::map` takes self by value, consuming `maybe_some_string`
 let maybe_some_len = maybe_some_string.map(|s| s.len());
 assert_eq!(maybe_some_len, Some(13));
 
 
-
-// Applies a function to the contained value (if any), or returns a default (if not).
-fn map_or<U, F>(self, default: U, f: F) -> U
-where F: FnOnce(T) -> U,
-// Examples
+// map_or
+fn map_or<U, F>(self, default: U, f: F) -> U where F: FnOnce(T) -> U;
+// Applies a function to the contained value (if any), or returns a default.
 let x = Some("foo");
 assert_eq!(x.map_or(42, |v| v.len()), 3);
-// Examples
 let x: Option<&str> = None;
 assert_eq!(x.map_or(42, |v| v.len()), 42);
 
 
-
-// Applies a function to the contained value (if any), or computes a default (if not).
+// map_or_else
 fn map_or_else<U, D, F>(self, default: D, f: F) -> U
-where
-    D: FnOnce() -> U,
-    F: FnOnce(T) -> U,
-// Examples
+  where D: FnOnce() -> U, F: FnOnce(T) -> U;
+// Applies a function to the contained value, or computes a default.
 let k = 21;
 let x = Some("foo");
 assert_eq!(x.map_or_else(|| 2 * k, |v| v.len()), 3);
@@ -144,42 +112,37 @@ let x: Option<&str> = None;
 assert_eq!(x.map_or_else(|| 2 * k, |v| v.len()), 42);
 
 
-
-
-// Transforms the Option<T> into a Result<T, E>, mapping Some(v) to Ok(v) and None to Err(err).
-fn ok_or<E>(self, err: E) -> Result<T, E>
-// Examples
+// ok_or
+fn ok_or<E>(self, err: E) -> Result<T, E>;
+// Transforms the Option<T> into a Result<T, E>
+// mapping Some(v) to Ok(v) and None to Err(err).
 let x = Some("foo");
 assert_eq!(x.ok_or(0), Ok("foo"));
 let x: Option<&str> = None;
 assert_eq!(x.ok_or(0), Err(0));
 
 
-
-// Transforms the Option<T> into a Result<T, E>, mapping Some(v) to Ok(v) and None to Err(err()).
-fn ok_or_else<E, F>(self, err: F) -> Result<T, E>
-where F: FnOnce() -> E,
-// Examples
+// ok_or_else
+fn ok_or_else<E, F>(self, err: F) -> Result<T, E> where F: FnOnce() -> E;
+// Transforms the Option<T> into a Result<T, E> (Some to Ok, None to Err)
 let x = Some("foo");
 assert_eq!(x.ok_or_else(|| 0), Ok("foo"));
 let x: Option<&str> = None;
 assert_eq!(x.ok_or_else(|| 0), Err(0));
 
 
-
+// iter
+fn iter(&self) -> Iter<T>;
 // Returns an iterator over the possibly contained value.
-fn iter(&self) -> Iter<T>
-// Examples
 let x = Some(4);
 assert_eq!(x.iter().next(), Some(&4));
 let x: Option<u32> = None;
 assert_eq!(x.iter().next(), None);
 
 
-
+// iter_mut
+fn iter_mut(&mut self) -> IterMut<T>;
 // Returns a mutable iterator over the possibly contained value.
-fn iter_mut(&mut self) -> IterMut<T>
-// Examples
 let mut x = Some(4);
 match x.iter_mut().next() {
     Some(v) => *v = 42,
@@ -190,71 +153,45 @@ let mut x: Option<u32> = None;
 assert_eq!(x.iter_mut().next(), None);
 
 
-
-
+// and
+fn and<U>(self, optb: Option<U>) -> Option<U>;
 // Returns None if the option is None, otherwise returns optb.
-fn and<U>(self, optb: Option<U>) -> Option<U>
-// Examples
 let x = Some(2);
 let y: Option<&str> = None;
 assert_eq!(x.and(y), None);
-//
-let x: Option<u32> = None;
-let y = Some("foo");
-assert_eq!(x.and(y), None);
-//
-let x = Some(2);
-let y = Some("foo");
-assert_eq!(x.and(y), Some("foo"));
-//
-let x: Option<u32> = None;
-let y: Option<&str> = None;
-assert_eq!(x.and(y), None);
 
 
-
-
-
-// Returns None if the option is None, otherwise calls f with the wrapped value and returns the result.
-// Some languages call this operation flatmap.
-fn and_then<U, F>(self, f: F) -> Option<U>
-where    F: FnOnce(T) -> Option<U>,
-// Examples
+// and_then (flatmap)
+fn and_then<U, F>(self, f: F) -> Option<U> where F: FnOnce(T) -> Option<U>;
+// Returns None if the option is None, otherwise calls
+// fn with the wrapped value and returns the result
 fn sq(x: u32) -> Option<u32> { Some(x * x) }
 fn nope(_: u32) -> Option<u32> { None }
-//
 assert_eq!(Some(2).and_then(sq).and_then(sq), Some(16));
 assert_eq!(Some(2).and_then(sq).and_then(nope), None);
 assert_eq!(Some(2).and_then(nope).and_then(sq), None);
 assert_eq!(None.and_then(sq).and_then(sq), None);
 
 
-
+// or
+fn or(self, optb: Option<T>) -> Option<T>;
 // Returns the option if it contains a value, otherwise returns optb.
-fn or(self, optb: Option<T>) -> Option<T>
-// Examples
 let x = Some(2);
 let y = None;
 assert_eq!(x.or(y), Some(2));
-//
 let x = None;
 let y = Some(100);
 assert_eq!(x.or(y), Some(100));
-//
 let x = Some(2);
 let y = Some(100);
 assert_eq!(x.or(y), Some(2));
-//
 let x: Option<u32> = None;
 let y = None;
 assert_eq!(x.or(y), None);
 
 
-
-
-
-fn or_else<F>(self, f: F) -> Option<T>
-where    F: FnOnce() -> Option<T>,
+// or_else
+fn or_else<F>(self, f: F) -> Option<T> where F: FnOnce() -> Option<T>;
 // Returns the option if it contains a value, otherwise calls f and returns the result.
 fn nobody() -> Option<&'static str> { None }
 fn vikings() -> Option<&'static str> { Some("vikings") }
@@ -263,47 +200,40 @@ assert_eq!(None.or_else(vikings), Some("vikings"));
 assert_eq!(None.or_else(nobody), None);
 
 
-
-fn get_or_insert(&mut self, v: T) -> &mut T // 1.20.0
-// Inserts v into the option if it is None, then returns a mutable reference to
-// the contained value.
+// get_or_insert
+fn get_or_insert(&mut self, v: T) -> &mut T // 1.20
+// Inserts v into the option if it is None,
+// then returns a mutable reference to the contained value.
 let mut x = None;
-{
-    let y: &mut u32 = x.get_or_insert(5);
+{   let y: &mut u32 = x.get_or_insert(5);
     assert_eq!(y, &5);
-
     *y = 7;
 }
 assert_eq!(x, Some(7));
 
 
-
-fn get_or_insert_with<F>(&mut self, f: F) -> &mut T
-where    F: FnOnce() -> T // 1.20.0
+// get_or_insert_with
+fn get_or_insert_with<F>(&mut self, f: F) -> &mut T where F: FnOnce()->T //1.20
 // Inserts a value computed from f into the option if it is None, then returns
 // a mutable reference to the contained value.
 let mut x = None;
-{
-    let y: &mut u32 = x.get_or_insert_with(|| 5);
+{   let y: &mut u32 = x.get_or_insert_with(|| 5);
     assert_eq!(y, &5);
     *y = 7;
 }
 assert_eq!(x, Some(7));
 
 
-
-
+// take
 fn take(&mut self) -> Option<T>;
 // Takes the Some variant out of the option, leaving a None variant in its place.
 let mut x: Option<u32> = Some(2);
-let     z: Option<u32> = x.take();
+let z: Option<u32> = x.take();
 assert_eq!(x, None);
 assert_eq!(z, Some(2));
-
 let mut x: Option<u32> = None;
 x.take();
 assert_eq!(x, None);
-
 
 
 

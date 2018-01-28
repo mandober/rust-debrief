@@ -1,5 +1,39 @@
-# References
+# Reference types
 
+
+Reference types are written with an &: &i32
+References can be taken with & (like C/C++).
+References can be dereferenced with * (like C/C++).
+References are guaranteed to be valid.
+Validity is enforced through compile-time checks!
+They are not the same as pointers!
+---
+
+Pointer types
+
+All pointers in Rust are explicit first-class values.
+They can be copied, stored into data structs, and returned from functions.
+
+There are 2 varieties of pointer in Rust:
+
+References (&T)
+  These point to memory owned by some other value. A reference type is written `&T`,
+  or `&'a type` when you need to specify an explicit lifetime. Copying a reference is
+  a "shallow" operation: it involves only copying the pointer itself. Releasing a
+  reference has no effect on the value it points to, but a reference of a temporary
+  value will keep it alive during the scope of the reference itself.
+
+Raw pointers (*const T or *mut T)
+  Raw pointers are pointers without safety or liveness guarantees. Raw pointers are
+  written as `*const T` or `*mut T`, for example `*const i32` means a raw pointer to
+  a 32-bit integer. Copying or dropping a raw pointer has no effect on the lifecycle
+  of any other value. Dereferencing a raw pointer or converting it to any other pointer
+  type is an unsafe operation. Raw pointers are generally discouraged in Rust code;
+  they exist to support interoperability with foreign code, and writing performance
+  critical or low-level functions.
+
+
+---
 There are two kinds of reference:
 - Shared reference: `&`
 - Mutable reference: `&mut`

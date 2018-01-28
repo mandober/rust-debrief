@@ -1,24 +1,13 @@
 # Integers
 
-- integers are primitive scalar types
-- Categories:
-  - signedness:
-    - signed:   `i8`, `i16`, `i32`, `i64`, `i128`, `isize`
-    - unsigned: `u8`, `u16`, `u32`, `u64`, `u128`, `usize`
-  - bit-width: 8, 16, 32, 64, 128
-  - dependency: independent and machine-architecture dependent
 - The type of an unsuffixed integer literal is determined by type inference:
   - if an integer type can be uniquely determined from the surrounding program
     context, the unsuffixed integer literal has that type.
   - if the program context under-constrains the type, it defaults to i32
   - If the program context over-constrains the type, 
     it is considered a static type error.
-
 - little-endian
 - two's compliment
-
-
-
 
 
 ```rust
@@ -50,12 +39,6 @@ Note that the Rust syntax considers `-1i8` as an application of the unary minus 
 
 
 # Signedness and bit-width
-Integers can be divided by signedness into signed and unsigned,
-and by bit-width into: 8, 16, 32, 64 and 128 bit-width.
-(128-wide subtype is still experimental as of Nov-2017)
-
-The signedness of each type is the letter in their type signature (i or u)
-The bit-width of each type is the number in their type signature (8,16,32,64,128).
 
 These types can represent 2 to the power of signum *different values*
 `2^s`, where s is the bit-width stated in signum (8, 16, 32, 64, 128) i.e.
