@@ -1,31 +1,10 @@
 // ! Module std::iter
-/**
-https://doc.rust-lang.org/stable/std/iter/index.html
 
-This module is largely organized by type:
-
-|>Traits
-  are the core portion: these traits define what kind of iterators exist
-  and what you can do with them. The methods of these traits are worth putting
-  some extra study time into.
-
-|>Functions
-  provide some helpful ways to create some basic iterators.
-
-|>Structs
-  are often the return types of the various methods on this module's traits.
-  You'll usually want to look at the method that creates the struct,
-  rather than the struct itself.
-
-
-|> Iterator
-The heart and soul of this module is the Iterator trait.
-The core of Iterator looks like this:
-*/
 trait Iterator {
     type Item;
     fn next(&mut self) -> Option<Self::Item>;
 }
+
 /**
 An iterator has a `next` method, which when called, returns an `Option<Item>`.
 next will return Some(Item) as long as there are elements, and once they've all
@@ -218,59 +197,4 @@ let five_numbers = numbers.take(5);
 for number in five_numbers {
     println!("{}", number);
 }
-
-/**
-This will print the numbers 0 through 4, each on their own line.
-
-
-|> Structs
-            An iterator that...
-Filter      ...filters the elements of iter with predicate.
-Map         ...maps the values of iter with f.
-FilterMap   ...uses f to both filter and map elements from iter.
-FlatMap     ...maps each element to an iterator, and yields the elements of the produced iterators.
-
-Chain       ...strings two iterators together.
-Cloned      ...clones the elements of an underlying iterator.
-Cycle       ...repeats endlessly.
-Empty       ...yields nothing.
-Enumerate   ...yields the current count and the element during iteration.
-
-Fuse        ...yields None forever after the underlying iterator yields None once.
-Inspect     ...calls a function with a reference to each element before yielding it.
-Once        ...yields an element exactly once.
-Peekable    ...has peek() method that returns an optional reference to the next element.
-Repeat      ...repeats an element endlessly.
-Rev         A double-ended iterator with the direction inverted.
-Scan        ...maintains state while iterating another iterator.
-
-Skip        ...skips over n elements of iter.
-SkipWhile   ...rejects elements while predicate is true.
-Take        ...only iterates over the first n iterations of iter.
-TakeWhile   ...only accepts elements while predicate is true.
-
-Zip         ...iterates two other iterators simultaneously.
-StepBy      [LAB] An adapter for stepping iterators by a custom amount.
-
-
-
-|> Traits
-DoubleEndedIterator An iterator able to yield elements from both ends.
-ExactSizeIterator   An iterator that knows its exact length.
-Extend              Extend a collection with the contents of an iterator.
-FromIterator        Conversion from an Iterator.
-IntoIterator        Conversion into an Iterator.
-Iterator            An interface for dealing with iterators.
-Product             Trait to represent types that can be created by multiplying elements of an iterator.
-Sum                 Trait to represent types that can be created by summing up an iterator.
-FusedIterator       [LAB] An iterator that always continues to yield None when exhausted.
-Step                [LAB] Objects that can be stepped over in both directions.
-TrustedLen          [LAB] An iterator that reports an accurate length using size_hint.
-
-
-|> Functions
-empty   Creates an iterator that yields nothing.
-once    Creates an iterator that yields an element exactly once.
-repeat  Creates a new iterator that endlessly repeats a single element.
-
-*/
+// This will print the numbers 0 through 4, each on their own line.

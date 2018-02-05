@@ -1,23 +1,5 @@
-# Module `std::result` 1.0.0
+# result
 
-Error handling with the Result type.
-
-`Result<T, E>` is the type used for returning and propagating errors.
-It is an enum with the variants, Ok(T), representing success and containing a 
-value, and Err(E), representing error and containing an error value.
-
-```rust
-enum Result<T, E> {
-   Ok(T),
-   Err(E),
-}
-```
-
-Functions return Result whenever errors are expected and recoverable.
-In the std crate, Result is most prominently used for I/O.
-
-
-A simple function returning Result might be defined and used like so:
 
 ```rust
 #[derive(Debug)]
@@ -207,15 +189,4 @@ function.
 
 `?` can only be used in functions that return Result because of the early return
 of Err that it provides.
-
-
-
-## Enums
-`Result`   type that represents either success (Ok) or failure (Err).
-
-
-## Structs
-`IntoIter` iterator over the value in a Ok variant of a Result.
-`Iter`     iterator over a reference to the Ok variant of a Result.
-`IterMut`  iterator over a mutable reference to the Ok variant of a Result.
 

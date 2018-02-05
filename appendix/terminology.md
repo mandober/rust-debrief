@@ -1,6 +1,5 @@
 # Terminology
 
-<!-- TOC depthFrom:2 orderedList:false -->
 
 - [Abstract data types](#abstract-data-types)
 - [Algebraic data type](#algebraic-data-type)

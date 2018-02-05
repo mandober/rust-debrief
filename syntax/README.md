@@ -1,17 +1,15 @@
 # Syntax
 
 
-- [Grammer](grammer.md)
 - [Attributes](attributes.md)
 - [Comments](comments.md)
-- [Macros](macros.md)
-- [Naming conventions](naming-conventions.md)
+- [Naming conventions](conventions.md)
+- [Expressions](expressions.md)
+- [Grammar](grammar.md)
 - [Keywords](keywords.md)
+- [Literals](literals.md)
+- [Macros](macros.md)
 - [Operators](operators.md)
-
-* Syntax
-* Expression
-* Literals
-* Statement
-* Items
+- [Statements](statements.md)
+- [Syntax](syntax.md)
 

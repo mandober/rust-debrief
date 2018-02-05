@@ -13,19 +13,11 @@ pub trait Deref {
 }
 ```
 
-In addition to being used for explicit dereferencing operations with the (unary) 
-`*` operator in immutable contexts, `Deref` is also used implicitly by the 
-compiler in many circumstances. This mechanism is called *Deref coercion*. 
-In mutable contexts, `DerefMut` is used.
+In addition to being used for explicit dereferencing operations with the (unary)`*` operator in immutable contexts, `Deref` is also used implicitly by the compiler in many circumstances. This mechanism is called _Deref coercion_. In mutable contexts, `DerefMut` is used.
 
-Implementing `Deref` for smart pointers makes accessing the data behind them 
-convenient, which is why they implement `Deref`. On the other hand, the rules 
-regarding `Deref` and `DerefMut` were designed specifically to accomodate smart 
-pointers. Because of this, `Deref` should only be implemented for smart pointers 
-to avoid confusion.
+Implementing `Deref` for smart pointers makes accessing the data behind them convenient, which is why they implement `Deref`. On the other hand, the rules regarding `Deref` and `DerefMut` were designed specifically to accommodate smart pointers. Because of this, `Deref` should only be implemented for smart pointers to avoid confusion.
 
-For similar reasons, this trait should never fail. Failure during dereferencing 
-can be extremely confusing when `Deref` is invoked implicitly.
+For similar reasons, this trait should never fail. Failure during dereferencing can be extremely confusing when `Deref` is invoked implicitly.
 
 
 ## Deref coercion

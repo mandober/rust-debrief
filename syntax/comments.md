@@ -1,6 +1,5 @@
 # Comments
 
-
 - line comments: `//`
 - block `/* ... */` comment
 - nested block comments are supported
@@ -15,7 +14,6 @@
   around the body of the comment
 - `//!` comments are usually used to document modules that occupy a source file
 - Non-doc comments are interpreted as a form of whitespace
-
 
 
 ```rust

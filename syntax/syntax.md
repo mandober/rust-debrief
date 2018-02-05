@@ -28,13 +28,10 @@
 ## Operators and Symbols
 
 ```
-! != % %=  
+! != % %=
 ```
 
 - `!` denotes macro expansion
-
-
-
 
 
 
@@ -51,15 +48,13 @@
 * `/=` (`var /= expr`): arithmetic division & assignment. trait:`DivAssign`
 * `%` (`expr % expr`): remainder. trait:`Rem`
 * `%=` (`var %= expr`): remainder and assignment. trait:`RemAssign`
-
 * `=` (`var = expr`, `ident = type`): assignment/equivalence.
-* `!=` (`var != expr`): nonequality comparison. trait: `PartialEq`
+* `!=` (`var != expr`): non-equality comparison. trait: `PartialEq`
 * `<` (`expr < expr`): less-than comparison. trait:`PartialOrd`
 * `<=` (`var <= expr`): less-than or equal-to comparison. trait:`PartialOrd`
 * `==` (`var == expr`): equality comparison. trait:`PartialEq`
 * `>` (`expr > expr`): greater-than comparison. trait:`PartialOrd`
 * `>=` (`var >= expr`): greater-than or equal-to comparison. trait:`PartialOrd`
-
 * `^` (`expr ^ expr`): bitwise exclusive or. trait:`BitXor`
 * `^=` (`var ^= expr`): bitwise exclusive or & assignment. trait:`BitXorAssign`
 * `|` (`expr | expr`): bitwise or. trait:`BitOr`
@@ -71,21 +66,14 @@
 * `<<=` (`var <<= expr`): left-shift & assignment. trait:`ShlAssign`
 * `>>` (`expr >> expr`): right-shift. trait:`Shr`
 * `>>=` (`var >>= expr`): right-shift & assignment. trait:`ShrAssign`
-
 * `&&` (`expr && expr`): logical and.
 * `||` (`expr || expr`): logical or.
-
-
-
-
 * `..` (`variant(x, ..)`, `struct_type { x, .. }`): rest pattern binding
 * `...` (`expr...expr`) inclusive range in a match pattern.
 * `=>` (`pat => expr`): part of match arm syntax.
 * `|` (`pat | pat`): pattern alternatives.
 * `@` (`ident @ pat`): pattern binding.
 * `_`: "ignored" pattern binding. numbers separator.
-
-
 * `!` (`ident!(…)`, `ident!{…}`, `ident![…]`): denotes macro expansion
 * `&` (`&expr`, `&mut expr`): borrow.
 * `&` (`&type`, `&mut type`, `&'a type`, `&'a mut type`): borrowed pointer type.
@@ -109,6 +97,7 @@
 
 
 ## Other Syntax
+
 * `'ident`: named lifetime or loop label.
 * `…u8`, `…i32`, `…f64`, `…usize`, …: numeric literal of specific type.
 * `"…"`: string literal.
@@ -121,6 +110,7 @@
 
 
 ## Path-related syntax
+
 * `ident::ident`: path
 * `::path`: absolute path
 * `self::path`: path relative to the current module
@@ -133,6 +123,7 @@
 
 
 ## Generics
+
 * `path<…>`: type parameter, `Vec<u8>`
 * `path::<…>`, `method::<…>`: specifies parameters to generic type, function, or method in an expression, `"42".parse::<i32>()`
 * `fn ident<…> …`: define generic function.
@@ -144,6 +135,7 @@
 
 
 ## Constraints
+
 * `T: U`: generic parameter `T` constrained to types that implement `U`.
 * `T: 'a`: `T` must outlive `'a`, it cannot transitively contain any references with lifetimes shorter than `'a`.
 * `T : 'static`: `T` contains no borrowed references other than `'static`
@@ -153,6 +145,7 @@
 
 
 ## Macros and attributes
+
 * `#[meta]`: outer attribute.
 * `#![meta]`: inner attribute.
 * `$ident`: macro substitution.
@@ -161,6 +154,7 @@
 
 
 ## Comments
+
 * `//`: line comment.
 * `//!`: inner line doc comment.
 * `///`: outer line doc comment.
@@ -173,7 +167,8 @@
 * `!`: never type (diverging functions)
 
 
-## Various things involving parens and tuples
+## Various things involving parenthesis and tuples
+
 * `()`: empty tuple, unit type; both literal and type.
 * `(expr)`: parenthesized expression.
 * `(expr,)`: single-element tuple expression.
@@ -186,6 +181,7 @@
 
 
 ## Symbols
+
 * `{…}`: block expression.
 * `Type {…}`: `struct` literal.
 * `[…]`: array literal.

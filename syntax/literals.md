@@ -7,7 +7,7 @@
 * String literals
   - supported characters: all unicode
   - supported escapes: Whitespace, Null, Backslash, Quote, ASCII, Unicode
-  - special escape: line continuination
+  - special escape: line continuation
 * Raw string literals
 
 
@@ -72,7 +72,7 @@ It directly describes a number, character, string, or boolean value.
 - double-quote must be escaped with a backslash to represent itself
 - line-break characters are allowed
   - they represent themselves, except for
-  - line continuination: when a backslash occurs immediately before the newline, then the line is continued; the backslash, the newline, and all whitespace at the beginning of the next line is ignored.
+  - line continuation: when a backslash occurs immediately before the newline, then the line is continued; the backslash, the newline, and all whitespace at the beginning of the next line is ignored.
 - supported characters: all unicode
 - supported escapes: Whitespace, Null, Backslash, Quote, ASCII, Unicode
 - examples:
@@ -89,7 +89,7 @@ It directly describes a number, character, string, or boolean value.
 ## Raw string literals
 
 - raw string literals do not process any escapes.
-- they are introducted by `r` letter and delimited with zero or more `#` characters and double-quotes; `r(#*)".*?"\1`
+- they are introduced with `r` letter and delimited with zero or more `#` characters and double-quotes; `r(#*)".*?"\1`
 - supported characters: all unicode
 - supported escapes: none
 - examples of string literals vs raw string literals:

@@ -15,7 +15,6 @@
   - Compound assignment: `+=, -=, *=, /=, %=, &=, |=, ^=, <<=, >>=`
 
 
-
 <!-- TOC -->
 
 - [Unary operators](#unary-operators)
@@ -35,7 +34,7 @@
 
 ## Unary operators
 
-* written as prefix
+* prefix position
 * Negation: `-`
   - Signed integers and floats support negation. 
   - There's no minus sign.
@@ -56,7 +55,8 @@
 
 
 ## Binary operators
-in order of operator precedence
+
+In order of operator precedence:
 
 
 ### Arithmetic operators
@@ -70,8 +70,7 @@ in order of operator precedence
   - Remainder: `rem` of `std::ops::Rem` trait
 
 ### Bitwise operators
-- sugar for calls to methods of built-in traits
-- overridable
+- overridable; sugar for calls to methods of built-in traits
 - Bitwise `&`, `|`, `^` applied to booleans are equivalent to logical  
   `&&`, `||` and `!=` evaluated eagerly.
 - Defaults:
@@ -82,13 +81,12 @@ in order of operator precedence
   - RSHIFT: `shr` of `std::ops::Shr` trait
 
 ### Lazy boolean operators
+- short-circuited
 - `||` and `&&` may be applied to booleans
 - `||` denotes logical OR, `&&` denotes logical AND
-- short-circuted
 
 ### Comparison operators
-- sugar for calls to built-in traits
-- overridable
+- overridable; sugar for calls to built-in traits
 - Defaults:
   - `==`: Equal to. `eq` on `std::cmp::PartialEq` trait.
   - `!=`: Unequal to. `ne` on `std::cmp::PartialEq` trait.
