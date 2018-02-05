@@ -1,8 +1,13 @@
 # PAGES
 
+Theory
 - [Type Systems](theory/type-systems.md)
 - [Data Types](theory/data-types.md)
+
+Core
 - [The compiler](core/compiler.md)
+
+Syntax
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
 - [Naming conventions](syntax/conventions.md)
@@ -14,6 +19,8 @@
 - [Operators](syntax/operators.md)
 - [Statements](syntax/statements.md)
 - [Syntax](syntax/syntax.md)
+
+Appendix
 - [Terminology](appendix/terminology.md)
 - [Abbreviations](appendix/abbreviations.md)
 - [Links](appendix/links.md)
@@ -22,67 +29,64 @@
 
 
 
+---
+
+Sections:
+- Theory
+- Types
+- Primitives
+- Modules
+- Items
+- Syntax
+- Semantics
+- Core
+- Appendix
+
 
 ---
 
-
-## Programming Theory
+Theory
 - Type Systems
   - Data Types
-  - Pointers
   - Algebraic Data Types
 - Memory management
   - Address space
+  - Pointers
   - Alignment
   - The Stack
   - The Heap
 - Binary relations
   - Partial equality
   - Partial ordering
-- Programming Paradigms
+- Paradigms
   - Polymorphism
 
 
-## The Rust Project
+Core
 - The Rust Language
-  - Internals
-    - The Compiler
-    - Feature Gates
-  - Libraries
-    - core
-    - alloc
-    - std_unicode
-    - proc_macro
-    - The Standard Library
-      - The Rust Prelude
-      - Methods on primitives
-      - Macros
-      * Modules
-  * Syntax
-  * Data Types
-  * Language Items
-  * Semantics
+- Internals
+- Feature Gates
+- Libraries
+  - core
+  - alloc
+  - std_unicode
+  - proc_macro
 - The Tools
   - cargo
   - rustup
   - rustdoc
 - Third Party Crates
 
-
-## Syntax
-* Attributes
-* Comments
-* Grammar
-* Keywords
-* Literals
-* Macros
-* Naming conventions
-* Operators
-* Expression
-* Statement
+Types
+- Unit type
+- Never type
+- Composite types
+- Dynamically Sized Types
+- Zero Sized Types
+- Empty Types
 
 
-## Primitive Types
+Primitives
 - Scalars
   - booleans
   - integers
@@ -100,17 +104,31 @@
   - raw pointers
   - function pointers
 
+Semantics
+- Ownership
+- Binding
+- Move
+- Copy
+- Borrowing
+- Mutability
+- Functions
+- Pattern matching
+- Lifetimes
 
-## Non-primitive Types
-- Unit type
-- Never type
-- Composite types
-- Dynamically Sized Types
-- Zero Sized Types
-- Empty Types
+Modules
+- methods on primitives
+- composite types and methods
+  - Option
+  - Result
+  - Vec
+  - Box
+- containers and collections
+- traits
+- env and IO
+- other modules
 
 
-## Language Items
+Items
 - extern crate declarations
 - extern blocks
 - use declarations
@@ -126,27 +144,8 @@
 - implementations
 
 
-## Semantics
-- Binding
-- Move
-- Copy
-- Borrowing
-- Mutability
-- [Functions](semantics/functions/README.md)
-- Pattern matching
-- Lifetimes
 
-
-## Modules
-- methods on primitives
-- composite types and methods
-- containers and collections
-- traits
-- env and IO
-- other modules
-
-
-## Appendix
+Appendix
 - Terminology
 - Links
 - Glossary
