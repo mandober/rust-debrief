@@ -18,7 +18,7 @@ Syntax
 - [Macros](syntax/macros.md)
 - [Operators](syntax/operators.md)
 - [Statements](syntax/statements.md)
-- [Syntax](syntax/syntax.md)
+- [Syntactic notations](syntax/syntax.md)
 
 Appendix
 - [Terminology](appendix/terminology.md)

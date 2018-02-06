@@ -1,4 +1,4 @@
-# Erros
+# Errors
 
 - Error handling: exceptions don't exist, instead `Result<T, E>` for handling recoverable errors and `panic!` macro for unrecoverable.
 - Clean exit: `panic!` prints a failure message, unwinds the stack, quits.
@@ -15,7 +15,7 @@ When called `panic!` macro can start the exit sequence properly or just quit abr
 - quit
 
 To quit abruptly
-When unwinding is not wanted (one wants to quit immediatelly without cleanup)
+When unwinding is not wanted (one wants to quit immediately without cleanup)
 
 To abort on panic instead of unwinding, add
 `panic = 'abort'` to the `[profile]` section of `Cargo.toml`

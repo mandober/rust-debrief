@@ -1,19 +1,19 @@
-# Syntax
+# Syntactic notations
 
 <!-- TOC -->
 
 - [Symbols](#symbols)
 - [Operators and Symbols](#operators-and-symbols)
 - [List](#list)
-- [Other Syntax](#other-syntax)
-- [Path-related syntax](#path-related-syntax)
+- [Misc](#misc)
+- [Paths](#paths)
 - [Generics](#generics)
 - [Constraints](#constraints)
 - [Macros and attributes](#macros-and-attributes)
-- [Comments](#comments)
 - [Special types](#special-types)
-- [Various things involving parens and tuples](#various-things-involving-parens-and-tuples)
-- [Symbols](#symbols-1)
+- [Parenthesis and tuples](#parenthesis-and-tuples)
+- [Notations](#notations)
+- [Comments](#comments)
 
 <!-- /TOC -->
 
@@ -36,7 +36,6 @@
 
 
 ## List
-
 * `-` (`- expr`): negation. unary. overloadable:`Neg`
 * `+` (`expr + expr`): arithmetic addition. trait:`Add`
 * `+=` (`var += expr`): addition and assignment. trait:`AddAssign`
@@ -95,9 +94,7 @@
 * `?` (`expr?`): Error propagation. early return on `Err(_)`, otherwise unwraps
 
 
-
-## Other Syntax
-
+## Misc
 * `'ident`: named lifetime or loop label.
 * `…u8`, `…i32`, `…f64`, `…usize`, …: numeric literal of specific type.
 * `"…"`: string literal.
@@ -109,8 +106,7 @@
 * `|…| expr`: closure.
 
 
-## Path-related syntax
-
+## Paths
 * `ident::ident`: path
 * `::path`: absolute path
 * `self::path`: path relative to the current module
@@ -123,7 +119,6 @@
 
 
 ## Generics
-
 * `path<…>`: type parameter, `Vec<u8>`
 * `path::<…>`, `method::<…>`: specifies parameters to generic type, function, or method in an expression, `"42".parse::<i32>()`
 * `fn ident<…> …`: define generic function.
@@ -135,7 +130,6 @@
 
 
 ## Constraints
-
 * `T: U`: generic parameter `T` constrained to types that implement `U`.
 * `T: 'a`: `T` must outlive `'a`, it cannot transitively contain any references with lifetimes shorter than `'a`.
 * `T : 'static`: `T` contains no borrowed references other than `'static`
@@ -145,7 +139,6 @@
 
 
 ## Macros and attributes
-
 * `#[meta]`: outer attribute.
 * `#![meta]`: inner attribute.
 * `$ident`: macro substitution.
@@ -153,22 +146,11 @@
 * `$(…)…`: macro repetition.
 
 
-## Comments
-
-* `//`: line comment.
-* `//!`: inner line doc comment.
-* `///`: outer line doc comment.
-* `/*…*/`: block comment.
-* `/*!…*/`: inner block doc comment.
-* `/**…*/`: outer block doc comment.
-
 ## Special types
-
 * `!`: never type (diverging functions)
 
 
-## Various things involving parenthesis and tuples
-
+## Parenthesis and tuples
 * `()`: empty tuple, unit type; both literal and type.
 * `(expr)`: parenthesized expression.
 * `(expr,)`: single-element tuple expression.
@@ -180,8 +162,7 @@
 * `expr.0`, `expr.1`, …: tuple indexing..
 
 
-## Symbols
-
+## Notations
 * `{…}`: block expression.
 * `Type {…}`: `struct` literal.
 * `[…]`: array literal.
@@ -189,3 +170,12 @@
 * `[type; len]`: array type containing `len` instances of `type`.
 * `expr[expr]`: collection indexing. trait:`Index`, `IndexMut`
 * `expr[..]`, `expr[a..]`, `expr[..b]`, `expr[a..b]`: collection indexing pretending to be collection slicing, using `Range`, `RangeFrom`, `RangeTo`, `RangeFull` as the "index".
+
+
+## Comments
+* `//`: line comment.
+* `//!`: inner line doc comment.
+* `///`: outer line doc comment.
+* `/*…*/`: block comment.
+* `/*!…*/`: inner block doc comment.
+* `/**…*/`: outer block doc comment.

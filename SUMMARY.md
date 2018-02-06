@@ -11,6 +11,7 @@
 - [The compiler](core/compiler.md)
 
 ## Syntax
+- [Constraints](syntax/constraints.md)
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
 - [Naming conventions](syntax/conventions.md)
@@ -21,7 +22,25 @@
 - [Macros](syntax/macros.md)
 - [Operators](syntax/operators.md)
 - [Statements](syntax/statements.md)
-- [Syntax](syntax/syntax.md)
+- [Syntactic notations](syntax/syntax.md)
+
+## Semantics
+- [Visibility](semantics/visibility.md)
+
+## Primitives
+- [Scalars](primitives/scalars.md)
+
+
+## Modules
+- [Scalars](modules/option/README.md)
+
+
+## Items
+- [Lang Items](items/README.md)
+
+## Traits
+- [Index](traits/README.md)
+
 
 ## Appendix
 - [Terminology](appendix/terminology.md)

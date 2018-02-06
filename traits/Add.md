@@ -1,9 +1,10 @@
 # Add trait
-https://doc.rust-lang.org/std/ops/trait.Add.html
 
-Trait `std::ops::Add` 1.0.0
 
-The addition operator `+`
+- `std::ops::Add`, since: 1.0.0
+- online [doc](https://doc.rust-lang.org/std/ops/trait.Add.html)
+- the addition operator: `+`
+
 
 ```rust
 #[lang = "add"]

@@ -1,9 +1,7 @@
-# Syntax
+# Syntactic elements
 
 
 - [Attributes](attributes.md)
-- [Comments](comments.md)
-- [Naming conventions](conventions.md)
 - [Expressions](expressions.md)
 - [Grammar](grammar.md)
 - [Keywords](keywords.md)
@@ -11,5 +9,7 @@
 - [Macros](macros.md)
 - [Operators](operators.md)
 - [Statements](statements.md)
-- [Syntax](syntax.md)
+- [Syntactic notations](syntax.md)
+- [Naming conventions](conventions.md)
+- [Comments](comments.md)
 
