@@ -33,7 +33,7 @@
 
 
 ## Primitives
-- [Scalars](primitives/scalars.md)
+- [Slices](primitives/slices/slices.md)
 
 
 ## Types

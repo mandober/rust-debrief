@@ -24,9 +24,10 @@ Semantics
 - [Visibility](semantics/visibility.md)
 
 Primitives
-- [Scalars](primitives/scalars.md)
+- [Slices](primitives/slices/slices.md)
 
 Types
+- [Scalars](types/scalars.md)
 - [Unit](types/type_unit.md)
 - [Never](types/type_never.md)
 - [Top](types/type_top.md)
