@@ -1,5 +1,6 @@
 # Reference primitive
 
+
 - Primitive Type reference, since 1.0.0
 - docs: https://doc.rust-lang.org/std/primitive.reference.html
 - References: shared, `&` and mutable, `&mut`

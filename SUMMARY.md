@@ -30,6 +30,7 @@
 
 ## Semantics
 - [Visibility](semantics/visibility.md)
+- [Iterators](semantics/iterators.md)
 
 
 ## Primitives
@@ -43,8 +44,12 @@
 
 
 ## Modules
-- [Option](modules/option/README.md)
 - [Box](modules/boxed/box.md)
+- [Option](modules/option/README.md)
+  - [Option module](modules/option/module.md)
+  - [Option enum](modules/option/option.md)
+  - [Option methods](modules/option/option_methods.md)
+  - [Option traits](modules/option/option_traits.md)
 
 
 ## Items

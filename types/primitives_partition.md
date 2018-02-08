@@ -1,4 +1,4 @@
-# Partitioning primitive types
+# Categories of primitive types
 
 * Scalar types
   - Boolean
@@ -14,7 +14,7 @@
 * Dynamically-sized types
   - Slice
   - String slice
-* Pointer types
+* Primitive pointer types
   - Reference
   - Raw pointer
   - Function pointer

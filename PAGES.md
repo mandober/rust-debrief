@@ -21,6 +21,7 @@ Syntax
 - [Syntactic notations](syntax/syntax.md)
 
 Semantics
+- [Iterators](semantics/iterators.md)
 - [Visibility](semantics/visibility.md)
 
 Primitives
@@ -33,9 +34,12 @@ Types
 - [Top](types/type_top.md)
 
 Modules
-- [Option](modules/option/README.md)
 - [Box](modules/boxed/box.md)
-
+- [Option](modules/option/README.md)
+  - [Option module](modules/option/module.md)
+  - [Option enum](modules/option/option.md)
+  - [Option methods](modules/option/option_methods.md)
+  - [Option traits](modules/option/option_traits.md)
 
 Items
 - [Lang Items](items/README.md)

@@ -1,8 +1,8 @@
 # iter module
 
-- `std::iter` module, since: 1.0.0
-- doc: https://doc.rust-lang.org/stable/std/iter/
-- Contents:
+- module `std::iter`, since: 1.0.0
+- online [doc](https://doc.rust-lang.org/stable/std/iter/)
+- Module contents:
   - Traits: define what kind of iterators exist and what you can do with them.
   - Functions: helpful ways to create basic iterators.
   - Structs: return types of trait's methods.

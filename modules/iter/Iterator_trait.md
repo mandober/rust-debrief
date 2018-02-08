@@ -1,32 +1,45 @@
-// ! Iterator trait
+# `Iterator` trait
 
-/**
-Trait std::iter::Iterator
-https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html
 
-An interface for dealing with iterators.
-This is the main iterator trait.
+- trait `std::iter::Iterator`
+- online [doc](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html)
+- An interface for dealing with iterators. This is the main iterator trait.
 
-Module-level docs:
-https://doc.rust-lang.org/stable/std/iter/index.html
 
-How to implement Iterator:
-https://doc.rust-lang.org/stable/std/iter/index.html#implementing-iterator
+The heart and soul of this module is the `Iterator` trait.
 
-*/
+```rust
+trait Iterator {
+  type Item;
+  fn next(&mut self) -> Option<Self::Item>;
+}
+```
 
+
+## Iteration methods:
+
+- `iter` iterates over `&T`.
+- `iter_mut` iterates over `&mut T`.
+- `into_iter`iterates over `T`.
+
+
+
+
+## Iterator
+
+```rust
 pub trait Iterator {
 
-    // * Associated Types:
+  // * Associated Types:
     // type Item - The type of the elements being iterated over.
     type Item;
+ 
 
-
-    // * Required Methods:
+  // * Required Methods:
     fn next(&mut self) -> Option<Self::Item>;
 
 
-    // * Provided Methods:
+  // * Provided Methods:
     fn size_hint(&self) -> (usize, Option<usize>) { ... }
 
     fn count(self) -> usize { ... }
@@ -262,3 +275,4 @@ pub trait Iterator {
         Self::Item: PartialOrd<<I as IntoIterator>::Item>,
     { ... }
 }
+```
