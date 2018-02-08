@@ -1,32 +1,39 @@
 # Array
 
-- name: array
-- [std doc](https://doc.rust-lang.org/std/primitive.array.html)
-- primitive, compound, generic type
-- no accompanying module in std; array doesn't have any methods, slice does
-- array is contiguous, fixed-size, sequence of homogenous elements
-- structural type, has a literal expression
-- type annotation: `[T; N]`, for a constant size N, where N>=0   
-  N is the length of the array and a part of its type.  
-  N is non-negative compile-time constant.  
-  N (like all numbers for index, size and length) is `usize`.
-- subtypes: the number of all array types is a product of all available Rust types and all sizes: `T × usize`
-- shared reference to array: `&[T; N]`
-- mutable reference to array: `&mut [T; N]`
+- online [std doc](https://doc.rust-lang.org/std/primitive.array.html)
+- no accompanying module in std
+- array is a primitive, compound, generic type; it is a contiguous, fixed-size, sequence of homogenous elements. As a structural type, it only has a literal expression (there's no name `array`).
+- type annotation: `[T; N]`, for a constant size N, where N>=0
+  - N is the length of the array and a part of its type.
+  - N is non-negative compile-time constant.
+  - N (like all numbers for index, size and length) is `usize`
+- shared reference to array: `&[T; N]`; mut ref: `&mut [T; N]`; but since array coerces to slice, slice is also a (mut) ref to array: `&[T]` or `&mut [T]`
+
+
+- subtypes: the number of all array types is a product of all available Rust types times `usize`: `T × usize`
+
+
 - arrays of any size are Copy if the element type is Copy
 - trait implementations are statically generated up to size 32
 - array cannot be resized
 - no way to move elements out of an array (alt: `mem::replace`)
 - indexed with `[]`
 - access is bounds-checked at run-time, out of bounds indexing causes panic
-- can coerced to slice `[T]`
+
+- array doesn't have any methods, slice does
 - array itself is not iterable, the slice is
+- can coerced to slice `[T]`
 
 
+## Types of array
+
+- type annotation: `[T; N]`, for a constant size N, where N>=0
+  - N is the length of the array and a part of its type.
+  - N is non-negative compile-time constant.
+  - N (like all numbers for index, size and length) is `usize`
 
 
-
-Array is one big generic type: `[T; N]`.
+Array is one big generic supertype, `[T; N]`,
 If N is a fixed size constant, for example 3,
 then, for example, `[i32; 3]` and `[&str; 3]`
 are *instances of same generic type* `[T; 3]`,

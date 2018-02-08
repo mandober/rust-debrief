@@ -1,44 +1,19 @@
 # Box
 
-- `struct Box<T>`
-- path: `std::boxed::Box`
-- Box is somewhat of a primitive, it is a special type in the compiler.
-- box is an owned reference: a fat pointer to data on the heap
+- box struct `Box<T>`, `std::boxed::Box`
+- box is a smart pointer, a smart type of reference that owns its data; it has a fat pointer on the stack to its owned data on the heap.
+- box provides the simplest form of heap allocation; box provides ownership for this allocation, and drops its contents when it goes out of scope.
+- since box has a known, defined, size it is frequently used "to box" a recursive type or a type of unknown size.
+- box is somewhat of a primitive, it is a special type - the compiler has intimate knowledge about it; due to this the box can move out of a borrow.
 
 
-
-## `boxed` module
-
-- Module `std::boxed`, since 1.0.0
-- [doc](https://doc.rust-lang.org/std/boxed "external link:std docs")
-- Structs:
-  - `Box` pointer type for heap allocation.
-  - `ExchangeHeapSingleton`[LAB] This the singleton type for `boxed::HEAP`.
-  - `IntermediateBox`[LAB] uninitialized backing storage for Box.
-- Constants:
-  - `HEAP` [LAB] A value that represents the heap.
-- Traits:
-  - `FnBox` [LAB] version of the FnOnce for use with boxed closure objects.
+## Boxes are most often used:
+- When you have a type whose size can't be known at compile time, and you want to use a value of that type in a context that needs to know an exact size.
+- When you have a large amount of data and you want to transfer ownership but ensure the data won’t be copied when you do so.
+- When you want to own a value and only care that it's a type that implements a particular trait rather than knowing the concrete type itself.
 
 
-**Structs**
-- `Box` - A pointer type for heap allocation.
-- `ExchangeHeapSingleton` - [LAB] This the singleton type used solely for `boxed::HEAP`.
-- `IntermediateBox` - [LAB] IntermediateBox represents uninitialized backing storage for Box.
-
-**Constants**
-- `HEAP` - [LAB] A value that represents the heap. This is the default place that the box keyword allocates into when no place is supplied.
-
-**Traits**
-- `FnBox` - [LAB] `FnBox` is a version of the `FnOnce` intended for use with boxed closure objects. The idea is that where one would normally store `Box<FnOnce()>` in a data structure, you should use `Box<FnBox()>`. The two traits behave essentially the same, except that a `FnBox` closure can only be called if it is boxed. Note that `FnBox` may be deprecated in the future if `Box<FnOnce()>` closures become directly usable.
-
-
-## Box struct
-
-The main feature of `boxed` module is `Box<T>` struct, a "box" that provides the simplest form of heap allocation. Box provides ownership for this allocation, and drops its contents when it goes out of scope.
-
-Since box has a known, defined, size it is frequently used "to box" a recursive type or a type of unknown size.
-
+## Box definition in std:
 
 ```rust
 #[lang = "owned_box"]
@@ -46,14 +21,25 @@ Since box has a known, defined, size it is frequently used "to box" a recursive 
 pub struct Box<T: ?Sized>(_);
 ```
 
-Creating a box:
+## Creating a box:
 
 ```rust
-let x = Box::new(5);
-// or in nightly with `box_syntax` feature flag
-#![feature(box_syntax, box_patterns)]
+fn main() {
+    let x = Box::new(5);
+
+} // boxed is dropped here:
+// The deallocation happens for both the box (stored on the stack) 
+// and the data it points to (stored on the heap).
+```
+
+More convenient way to create a boxed value - available only in nightly Rust releases with `box_syntax` feature flag enabled:
+
+```rust
+#![feature(box_syntax)]
 let x = box 5;
 ```
+
+
 
 
 ## Box is special
@@ -76,13 +62,19 @@ let m = *v;
 // ERROR: cannot move out of borrowed content
 ```
 
-For a regular type, `*x` will produce a temporary that must be immediately borrowed or copied. You cannot do `let x = *y` for a non-Copy type, such an operation will produce a "cannot move out of a borrow" error. This dereference operation will call `DerefMut::deref_mut` or `Deref::deref` based on how it gets borrowed.
+For a regular type, `*x` will produce a temporary value that must be immediately borrowed or copied. You cannot do `let x = *y` for a non-Copy type, such an operation will produce a "cannot move out of a borrow" error. This dereference operation will call `DerefMut::deref_mut` or `Deref::deref` based on how it gets borrowed.
 
 
 
 ### Deref and DerefMut
 
-`Deref::deref` trait is for defining how a type should be derefrenced. Since box is special, its deref implementation is:
+Implementing `Deref` for smart pointers makes accessing the data behind them convenient, which is why they implement `Deref`. Along with `Drop`, it is the distinguishing characteristics of smart pointer from ordinary structs. 
+
+In fact, the rules regarding `Deref` and `DerefMut` were designed specifically to accommodate smart pointers, and because of this, `Deref` should only be implemented for them in order to avoid confusion.
+
+Box implements the `Deref` trait, which allows `Box<T>` values to be treated like references. When a `Box<T>` value goes out of scope, the heap data that the box is pointing to is cleaned up as well because of the `Box<T>` type's `Drop` trait implementation. 
+
+Box's impl of deref:
 
 ```rust
 impl<T: ?Sized> Deref for Box<T> {
@@ -102,5 +94,3 @@ impl<T: ?Sized> DerefMut for Box<T> {
 
 `deref` returns `&**self` - since `self` is a `&Box<T>`, dereferencing it once will provide a `Box<T>`, and the second dereference will dereference the box to provide a `T`. We then wrap it in a reference and return it.
 
-
-Implementing `Deref` for smart pointers makes accessing the data behind them convenient, which is why they implement `Deref`. On the other hand, the rules regarding `Deref` and `DerefMut` were designed specifically to accommodate smart pointers. Because of this, `Deref` should only be implemented for smart pointers to avoid confusion.

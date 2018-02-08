@@ -20,6 +20,28 @@ Syntax
 - [Statements](syntax/statements.md)
 - [Syntactic notations](syntax/syntax.md)
 
+Semantics
+- [Visibility](semantics/visibility.md)
+
+Primitives
+- [Scalars](primitives/scalars.md)
+
+Types
+- [Unit](types/type_unit.md)
+- [Never](types/type_never.md)
+- [Top](types/type_top.md)
+
+Modules
+- [Option](modules/option/README.md)
+- [Box](modules/boxed/box.md)
+
+
+Items
+- [Lang Items](items/README.md)
+
+Traits
+- [Index](traits/README.md)
+
 Appendix
 - [Terminology](appendix/terminology.md)
 - [Abbreviations](appendix/abbreviations.md)

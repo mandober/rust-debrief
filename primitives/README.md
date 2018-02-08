@@ -1,4 +1,2 @@
-# Rust Data Types
+# Primitives
 
-- [Primitives](primitives/README.md)
-- [Non-Primitives](non-primitives.md)
