@@ -1,7 +1,10 @@
-# Type descriptions
+# Types debrief
 
-- [Unit](#unit)
-- [Booleans](#booleans)
+<!-- TOC -->
+
+- [Never type](#never-type)
+- [Unit type](#unit-type)
+- [Boolean](#boolean)
 - [Integers](#integers)
 - [Address Integers](#address-integers)
 - [Floats](#floats)
@@ -18,132 +21,92 @@
 - [Contiguous sequence](#contiguous-sequence)
 - [Box](#box)
 
+<!-- /TOC -->
 
-## Unit
-  name: unit type  
-  desc: empty tuple  
-  type: `()`  
-  cardinality: 1
-  value: `()`  
-  literal: ✔  
-  std::module: ✗  
-  sample: `fn empty(is: bool) -> ()`  
 
-## Booleans
-  name: boolean  
-  type group: numeric  
-  type: `bool`  
-  cardinality: 2
-  values: `true`, `false`
-  literals: ✔  
-  ref: `&bool` (&true)
-  mut ref: `&mut bool` (&mut true)
-  kind: primitive, scalar, concrete, fixed  
-  sized: ✔    
-  size: 1b  
-  storage: stack (`Copy` type)  
-  std::module: ✗  
-  sample: `let b: bool = true`  
-  traits: `Copy`, BitAnd, BitAndAssign, BitOr, BitOrAssign, BitXor, BitXorAssign  
-  Not, Debug, Display, Default, Hash, Eq, PartialEq, Ord, PartialOrd, FromStr  
+## Never type
+- desc: never type
+- annotation: `!`
+- value: no value
+- module: no std module
+- sample: `fn non_returning() -> !`
+
+## Unit type
+- desc: one value - no information, empty tuple
+- annotation: `()`
+- value: `()`
+- module: no std module
+- sample: `Result<(), E>`
+
+## Boolean
+- desc: boolean type for true and false boolean values
+- annotation: `bool`   e.g. `let t: bool = true`
+- values: true, false
+- module: no std module
+- ref: `&bool`         e.g. `let t: &bool = &true`
+- mut ref: `&mut bool` e.g. `let t: &mut bool = &mut true`
+- groups: primitive, scalar, numeric, sized, concrete
+- size: sized, 1b
+- traits: Copy, Not, Debug, Display, Default, Hash, Eq, PartialEq, Ord, FromStr, PartialOrd, BitAnd, BitAndAssign, BitOr, BitOrAssign, BitXorAssign, BitXor
 
 ## Integers
-  name: integers  
-  class: numeric  
-  types: `i8`, `i16`, `i32`, `i64`, `i128`, `u8`, `u16`, `u32`, `u64`, `u128`
-  type variants: 10 (5 signed + 5 unsigned)
-  val variants: i8(256), i16(65536), i32(131072), etc.
-  literals: yes
-  ref: `&i8`  
-  mut ref: `&mut i8`  
-  kind: primitive, scalar, concrete, fixed, numeric  
-  sized: yes  
-  size: 8b-64b  
-  storage: stack  
-  std: primitive, module  
-  sample: `let n: i32 = 42`  
-  traits: `Copy`  
-  all traits: `Debug`, `Display`  
+- annotation: `i8`, `u8`, `i64`, `u64`, etc. Or as suffix.
+- type variants: 10 (5 signed + 5 unsigned)
+- ref: `&u8`
+- mut ref: `&mut i64`
+- size: sized, 1-12 Bytes (8-128 bits)
+- modules: `std::i8`, `std::i16`, etc.
+- sample: `let n: i32 = 42`
+- groups: primitive, scalar, numeric, sized, concrete
+- character `_` has no meaning with numbers, useful for visual splitting
+- traits: Copy, Debug, Display, etc.
 
 ## Address Integers
-  name: machine architecture-dependent integers  
-  desc: address-wide (pointer sized) integers  
-  class: numeric  
-  type: `isize`, `usize`  
-  ref: `&usize`  
-  mut ref: `&mut usize`  
-  kind: primitive, concrete, fixed, numeric  
-  sized: yes  
-  size: 64bits@x64 (32b@x86)  
-  storage: stack  
-  std: primitive types, module  
-  sample: `let len: usize = 42`  
-  traits: `Copy`  
-  all traits: `Debug`, `Display`  
+- annotation: `isize`, `usize`. Or as suffix.
+- desc: machine architecture-dependent, pointer sized integers
+- ref: `&usize`
+- mut ref: `&mut usize`
+- size: sized, 64bits@x64 (32b@x86)
+- note: used for sizes, lengths, etc.
+- groups: primitive, scalar, numeric, sized, concrete
+- character `_` has no meaning with numbers, useful for visual splitting
 
 ## Floats
-  name: floats
-  desc: IEEE 754-2008 binary32 and binary64  
-  type group: numeric  
-  class: numeric  
-  type: `f32`, `f64`
-  ref: `&f32`, `&f64`
-  mut ref: `&mut f32`, `&mut f64`
-  kind: primitive, concrete, fixed
-  sized: yes
-  size: 32b-64b
-  storage: stack
-  std: primitive, module
-  sample: `let f: f32 = 3.142`
-  traits: `Copy`
-  all traits: `Debug`, `Display`
+- annotation: `f32`, `f64`
+- desc: IEEE 754-2008 binary32 and binary64
+- ref: `&f32`, `&f64`
+- mut ref: `&mut f32`, `&mut f64`
+- size: sized, 4-8 Bytes (32-64 bits)
+- groups: primitive, scalar, numeric, sized, concrete
+- sample: `let f: f32 = 3.142`
 
-## Character
-  name: character  
-  desc: u32 word, range: 0x0000-0xD7FF, 0xE000-0x10FFFF
-  type group: numeric  
-  type: `char`
-  ref: `&char`
-  mut ref: `&mut char`
-  kind: primitive, concrete, fixed
-  sized: yes
-  size: 4b
-  storage: stack
-  std: primitive, module
-  sample: `let c: char = 'ß'`
-  traits: `Copy`
-  all traits: `Debug`, `Display`
+## Characters
+- annotation: `char`
+- desc: u32 word, range: 0x0000-0xD7FF, 0xE000-0x10FFFF
+- type group: numeric  
+- ref: `&char`
+- mut ref: `&mut char`
+- size: 1 Byte (4 bits)
+- groups: primitive, scalar, numeric, sized, concrete
+- module: no
+- sample: `let c: char = 'ß'`
 
 ## Tuples
-  name: tuple
-  type: `(T, U,...)`
-  ref: `&(T, U,...)`
-  ref mut: `&mut (T, U,...)`
-  kind: primitive, generic, fixed, sequence
-  sequence: heterogeneous
-  sized: yes
-  size: size of `T` * n
-  storage: stack
-  std: 
-  sample: `let t: (u8, char) = (42, 'ß')`
-  traits: `Copy`
-  all traits:
+- annotation: `(T, U,...)`
+- desc: tuple, heterogeneous sequence
+- ref: `&(T, U,...)`
+- ref mut: `&mut (T, U,...)`
+- groups: primitive, generic, fixed, sequence, compound
+- size: size of `T` * n
+- module: no
+- sample: `let t: (u8, char) = (42, 'ß')`
 
 ## Function pointers
-  name: Function pointer. 
-  type: `fn(T) -> T`, more generally: `[extern] ["Language"] [unsafe] fn(T) -> T`
-  Function pointers vary by signature, ABI, or safety.
-  type eg: `fn(usize) -> bool`, `extern "C" fn(u8) -> u8`
-  ref: 
-  ref mut: 
-  kind: primitive, generic, fixed
-  sized: 
-  size: 
-  storage: 
-  module: 
-  sample: `let fp: fn(usize) -> usize = |x| x + 5`
-  traits: `Copy`
-  all traits:
+- annotation: `fn(T) -> T`
+- more generally: `[extern] ["Language"] [unsafe] fn(T) -> T`
+- function pointers vary by signature, ABI, or safety.
+- e.g. `fn(usize) -> bool`, `extern "C" fn(u8) -> u8`
+- sample: `let fp: fn(usize) -> usize = |x| x + 5`
 
 ## References
   name: reference

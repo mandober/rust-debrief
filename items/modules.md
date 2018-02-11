@@ -1,26 +1,35 @@
 # Modules
 
-- module is a container for items; modules can nest arbitrarily.
-- _module item_ is a module, surrounded in braces, named, prefixed with`mod`.
-- module item introduces a new named module into the tree of modules making up a crate.
-- topmost module of every crate is _anonymous module_; all other items within the crate have paths within the module tree of the crate.
-- module resolution:
-  - `use` resolves paths relative to the top module:   
-    `use foo::bar::baz` resolves foo relative to the **top** mod, main.rs    
-  - in code, paths are resolved relative to the current module:   
-    `foo::bar::baz` resolves relative to the **current** mod   
+- a crate contains a tree of nested module scopes whose
+- topmost module is _anonymous_ mod (from POV of paths within the module)
+- an item within a crate has a canonical module path denoting its location within the crate's module tree.
+- every source file is a module, although modules can nest in a single file.
+- module is a container for items
+- _module item_ is a module, surrounded in braces, named, prefixed with`mod`. It introduces a new named module into the tree of modules that make up a crate.
+
+
+
+## Module resolution
+- in `use` statements modules are resolved from the root module.
+- in code blocks modules are resolved relative to root module (main.rs).
+
+Resolution
+- `use` resolves paths relative to the top module:   
+  `use foo::bar::baz` resolves foo relative to the top module, main.rs    
+- in code, paths are resolved relative to the current module:   
+  `foo::bar::baz` resolves relative to the **current** mod   
 - Imports
   - `extern crate` and `use` act as if they were defining the imported item in the current module, like a symbolic link.
   - `use foo::bar::baz` resolves the path relative to the root module
   - path `foo::bar::baz` resolves relative to the current module
-Path overrides
+- Path overrides
   - path `::foo::bar::baz` always resolves relative to the root module
   - path `self::foo::bar::baz` always resolves relative to the current module
   - path `super::foo::bar::baz` always resolves relative to the parent module
 
 
 
-An example of a module:
+## An example of a module:
 
 ```rust
 mod math {

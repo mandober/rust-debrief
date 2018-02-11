@@ -10,52 +10,51 @@
 
 
 ## Traits
-define what kind of iterators exist and what can be done with them.
+Define what kind of iterators exist and what can be done with them.
 
-- `Iterator` interface for dealing with iterators.
-- `IntoIterator` conversion into an Iterator.
-- `FromIterator` conversion from an Iterator.
-- `DoubleEndedIterator` iterator able to yield elements from both ends.
-- `ExactSizeIterator` iterator that knows its exact length.
-- `Extend` Extend a collection with the contents of an iterator.
-- `Sum` represents types that can be created by summing up an iterator.
-- `Product` represent types created by multiplying elements of an iterator.
-- `FusedIterator` iterator that keeps yielding None once exhausted. _LAB_
-- `Step` objects that can be stepped over in both directions. _LAB_
-- `TrustedLen` iterator that reports an accurate length using size_hint. _LAB_
+- `Iterator` main trait
+- `IntoIterator` conversion into an Iterator
+- `FromIterator` conversion from an Iterator
+- `DoubleEndedIterator` yields elements from both ends
+- `ExactSizeIterator` knows its exact length
+- `Extend` extend collection with iterator
+- `Sum` sum elements of iterator
+- `Product` multiplying elements of iterator
+- `FusedIterator` yields None once exhausted. _LAB_
+- `Step` stepped over in both directions. _LAB_
+- `TrustedLen` reports accurate length using `size_hint`. _LAB_
 
 
 ## Functions
-provide some helpful ways to create some basic iterators.
+Provide some helpful ways to create some basic iterators.
 
-- `empty`  Creates an iterator that yields nothing.
-- `once`   Creates an iterator that yields an element exactly once.
-- `repeat` Creates a new iterator that endlessly repeats a single element.
+- `empty`  iterator that yields nothing.
+- `once`   iterator that yields an element once.
+- `repeat` iterator that endlessly repeats a single element.
 
 
 ## Structs
-They are often the return type of various methods on this module's traits. Inspect the method that creates the struct, rather than the struct itself.
+Return types of various methods of traits.
 
-- `Filter` filters the elements of iterator with predicate.
-- `Map` maps the values of iterator with f.
-- `FilterMap` uses f to both filter and map elements from iterator.
+- `Filter` filters the elements with predicate.
+- `Map` maps the values with fn.
+- `FilterMap` filter and map elements with fn.
 - `FlatMap` maps each element and yields the elements of produced iterators.
 - `Chain` strings two iterators together.
 - `Cloned` clones the elements of an underlying iterator.
 - `Cycle` repeats endlessly.
 - `Empty` yields nothing.
-- `Enumerate` yields the current count and the element during iteration.
-- `Fuse` yields None forever after the underlying iterator yields None once.
-- `Inspect` calls fn with a reference to each element before yielding it.
+- `Enumerate` current count along with element.
+- `Fuse` once None is encountered, it yields None forever.
+- `Inspect` calls fn with a ref to each element before yielding it.
 - `Once` yields an element exactly once.
-- `Peekable` has peek method that returns an optional ref to next element.
+- `Peekable` returns an optional ref to next element.
 - `Repeat` repeats an element endlessly.
-- `Rev` double-ended iterator with the direction inverted.
+- `Rev` double-ended with the direction inverted.
 - `Scan` maintains state while iterating another iterator.
-- `Skip` skips over n elements of iter.
+- `Skip` skips over elements.
 - `SkipWhile` rejects elements while predicate is true.
 - `Take` only iterates over the first n iterations of iter.
 - `TakeWhile` only accepts elements while predicate is true.
-- `Zip` iterates two other iterators simultaneously.
-- `StepBy` An adapter for stepping iterators by a custom amount. _LAB_
-
+- `Zip` iterates over 2 iterators simultaneously.
+- `StepBy` adapter for stepping by a custom amount. _LAB_

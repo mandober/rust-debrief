@@ -13,6 +13,8 @@ pub trait IntoIterator where
     fn into_iter(self) -> Self::IntoIter;
 }
 
+type Link = Option<Box<Rc<T>>>
+
 /**
 |> Conversion into an Iterator
 

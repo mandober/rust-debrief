@@ -8,6 +8,13 @@ There are 2 kinds of slices:
 
 Both slices are solution to the problem of referring to a part of sequential types (not to type as a whole - that’s what references are for).
 
+
+## Iteration
+
+Slices implement two of the three `IntoIterator` variants; since they don't own their elements, there is no "by value" case. Instead, `into_iter` for `&[T]` and `&mut [T]` returns an iterator that produces shared and mutable references to the elements.
+
+
+
 ## Sequential types
 
 Commonly used sequential types are array and vector. They are compound types and they are both able to hold homogenous elements of type `T`. Vector is a growable type whose size might not be known at compile-time; it always allocates on the heap. Array is a fixed type; once declared, its size,  which is a part of its type, cannot be changed. Assuming its elements are scalar primitives, array uses only the stack.

@@ -1,3 +1,4 @@
-# iter module
+# Iter module
 
-- [module](module.md)
+- [iter module](module.md)
+- [iterator trait](iterator_trait.md)

@@ -1,9 +1,9 @@
-# `Iterator` trait
-
+# Iterator trait
 
 - trait `std::iter::Iterator`
 - online [doc](https://doc.rust-lang.org/stable/std/iter/trait.Iterator.html)
 - An interface for dealing with iterators. This is the main iterator trait.
+
 
 
 The heart and soul of this module is the `Iterator` trait.
@@ -23,23 +23,16 @@ trait Iterator {
 - `into_iter`iterates over `T`.
 
 
-
-
 ## Iterator
+
+- Associated Types:   
+  `type Item` - The type of the elements being iterated over.
+- Required Methods:   
+  `fn next(&mut self) -> Option<Self::Item>;`
+- Provided Methods:   
 
 ```rust
 pub trait Iterator {
-
-  // * Associated Types:
-    // type Item - The type of the elements being iterated over.
-    type Item;
- 
-
-  // * Required Methods:
-    fn next(&mut self) -> Option<Self::Item>;
-
-
-  // * Provided Methods:
     fn size_hint(&self) -> (usize, Option<usize>) { ... }
 
     fn count(self) -> usize { ... }

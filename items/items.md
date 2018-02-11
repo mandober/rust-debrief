@@ -4,6 +4,10 @@
 - items are organized within a crate by (arbitrarily nested) set of modules.
 - every crate has a single topmost anonymous module; all further items within the crate have paths within the module tree of the crate.
 - items are entirely determined at compile-time; generally, they remain fixed during execution and reside in ROM.
+- Each source file contains a sequence of zero or more item definitions, and may optionally begin with any number of attributes that apply to the containing module, most of which influence the behavior of the compiler. The anonymous crate module can have additional attributes that apply to the crate as a whole.
+- An item is a component of a crate. Items are organized within a crate by a nested set of modules. Every crate has a single "outermost" anonymous module; all further items within the crate have paths within the module tree of the crate.
+- Items are entirely determined at compile-time, generally remain fixed during execution, and may reside in ROM.
+- Functions, type aliases, structs, enumerations, unions, traits and implementations may be parameterized by type. Type parameters are given as a comma-separated list of identifiers enclosed in angle brackets (<...>), after the name of the item (except for implementations, where they come directly after `impl`) and before its definition. The type parameters of an item are considered "part of the name", not part of the type of the item. 
 
 
 ## Items:

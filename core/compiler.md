@@ -3,6 +3,9 @@
 - Stages: Parsing > Resolution > HIR > Type-checking > MIR > LLVM > Linking
 - The compiler is written in Rust
 - Crate is the smallest compiling unit
+- each compilation processes a single crate with source code and produces a single crate in binary form (executable or library).
+- Rust has a phase distinction between compile-time and run-time; Statically interpreted semantic rules govern the success of compilation. Dynamically interpreted semantic rules govern the program's run-time behavior.
+
 
 
 ## General stages of compilation:

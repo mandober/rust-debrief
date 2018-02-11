@@ -1,5 +1,6 @@
 # About types
 
+
 Primitives: scalar types
 - integers, machine dependent integers
 - floats

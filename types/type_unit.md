@@ -1,10 +1,10 @@
 # Unit type
 
-- Unit type
-- empty type (empty tuple)
-- type annotation: `()` the only type whose annotation is the same as the value
-- value: `()`
-- Unit is a type that allows only one value, so it cannot hold information.
+- online [docs](https://doc.rust-lang.org/nightly/std/primitive.unit.html)
+- primitive type
+- unit type (empty tuple)
+- type annotation, `()`, is the same as the value, `()`
+- unit allows only one value, it cannot hold information
 
 
 ## About 
