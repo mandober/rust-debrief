@@ -1,18 +1,21 @@
 # Iterators
 
-- iterators are lazy: no effect until consumed.
-- iterators implement `Iterator` trait, which requires defining `next` method and associated type `Item`, used as return type of the `next` method. `next` method returns one item at a time, wrapped in `Some`, unless the iteration is over, in which case it returns `None`.
-- xxx
-- an iterator is any type that implements `Iterator`.
-- iterators automatically implement `IntoIterator`, with an `into_iter` method that simply returns the iterator.
-- an iterable is any type that implements `IntoIterator`; call its `into_iter` method to get an iterator over it.
-- an iterator produces items i.e. values.
-- consumer is the code that receives the items an iterator produces.
-- xxx
+- Iterators are lazy: nothing is calculated until the consumer calls
+- Iterators implement `Iterator` trait,   
+  which requires defining `next` method and    
+  associated type `Item`, used as return type of the `next` method.   
+  `next` method returns one item at a time, wrapped in `Some`,    
+  unless the iteration is over, when it returns `None`.
+- Iterable is any type that implements `IntoIterator` trait;    
+  calling its `into_iter` method returns an iterator over its elements.   
+  Iterators automatically implement `IntoIterator`.
 - `IntoIterator` and its `into_iter` method:
-  - Given a _shared_ reference to the collection, `into_iter` returns an iterator that produces shared references to its items.
-  - Given a _mutable_ reference to the collection, `into_iter` returns an iterator that produces mutable references to the items.
-  - Given a collection by _value_, `into_iter` returns an iterator that takes ownership of the collection and returns items by value.
+  - given a _shared ref_ of iterable, `into_iter` returns the iterator that produces shared references to its elements.
+  - given a _mutable ref_ of iterable, `into_iter` returns the iterator that produces mutable references to its elements.
+  - given an iterable by _value_, `into_iter` returns the iterator that takes ownership of the iterable and returns its elements by value.
+- Iterator adaptors produce other iterators; they can be chained.
+- Consuming adaptors are methods that consume the iterator by calling its `next` method, thereby using the iterator up.
+
 
 
 
@@ -31,13 +34,15 @@ pub trait Iterator {
 }
 ```
 
+
+
 ```rust
 let mut iter = vec![1,2,3].iter();
-println!("{:?}", iter.next());
-
+println!("{:?}", iter.next()); // error (ownership)
+// correction:
 let v = vec![1,2,3];
 let mut iter = v.iter();
-println!("{:?}", iter.next());
+println!("{:?}", iter.next()); // ok
 ```
 
 
@@ -52,6 +57,12 @@ consuming adaptor methods in order to collect results.
 
 Producing an iterator doesn't do anything until it is consumed, either with a `for` loop or with a consumer method.
 
+```rust
+vec1.par_iter()
+    .zip(vec2.par_iter())
+    .map(|(i, j)| i * j)
+    .sum()
+```
 
 
 
@@ -114,15 +125,12 @@ println!("{}", x);
 
 <summary>IntoIterator ...</summary>
 
-There's a trait in the standard library for converting something into an iterator: `IntoIterator`. This trait has one method, `into_iter`, which converts the thing implementing `IntoIterator` into an iterator.
-
-std contains this implementation of `IntoIterator`:
+`IntoIterator` trait in std converts something into an iterator. It has one method, `into_iter`, which converts the thing impl `IntoIterator` into an iterator:   
 `impl<I: Iterator> IntoIterator for I`
 
-In other words, all `Iterators` implement `IntoIterator`, by just returning themselves. This means 2 things:
-1. If you're writing an `Iterator`, you can use it with a `for` loop.
-2. If you're creating a collection, implementing `IntoIterator` for it will allow your collection to be used with the `for` loop.
-
+SO, all `Iterators` implement `IntoIterator`, by just returning themselves, meaning:
+- If you're writing an `Iterator`, you can use it with a `for` loop.
+- If you're creating a collection, implementing `IntoIterator` for it will allow your collection to be used with the `for` loop.
 
 When a type implements `IntoIterator`, you can call its `into_iter` method, just like `for` loop would. Collections provide several implementations of `IntoIterator`: for shared references, mutable references, and moves.
 
@@ -136,17 +144,17 @@ When passed the collection by _value_, `into_iter` returns an iterator that take
   For example, the call `favorites.into_iter()` returns an iterator that produces each string by value; the consumer receives ownership of each string. When the iterator is dropped, any elements remaining are dropped too.
 
 
-The `for` loop calls `IntoIterator::into_iter` on its operand (the given collection) resulting in these 3 iteration idioms: 
+The `for` loop calls `IntoIterator::into_iter` on its operand 
+(the given collection) resulting in these 3 iteration idioms: 
 - iterating over shared references
 - iterating over mutable references
-- consuming the collection by iterating over its elements and taking their ownership.
+- consuming the collection by iterating over its elements, taking their ownership
 
 ```rust
 for element in &collection { ... }
 for element in &mut collection { ... }
 for element in collection { ... }
 ```
-
 
 </details>
 
@@ -157,3 +165,26 @@ for element in collection { ... }
 We can call `v.iter()` on something like a vector or slice. This creates an `Iter<'a, T>` type and it is this `Iter<'a, T>` type that implements the `Iterator` trait and allows us to call functions like map. 
 
 It is important to note that this `Iter<'a, T>` type only has a reference to `T`. This means that calling `v.iter()` will create a struct that borrows from `v`. Use the `iter()` function if you want to iterate over the values by reference.
+
+
+## Examining slice iteration
+
+The `iter` method, and the iterator it returns, is defined generically for slices of any type `T`. Its impl in std is similar to this:
+
+```rust
+impl<T> [T] {
+    fn iter(&self) -> SliceIter<T> {
+        SliceIter { slice: self }
+    }
+}
+```
+
+It creates and returns an iterator whose type is `SliceIter` (in std this type is actually `std::slice::Iter`). The `SliceIter` looks similar to this:
+
+```rust
+pub struct SliceIter<'it, T: 'it> {
+    slice: &'it [T],
+}
+```
+
+`SliceIter` type has a single field that stores the slice being iterated over. Each time a new item is produced, this field is updated to contain a subslice with the remaining items.

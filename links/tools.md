@@ -18,12 +18,15 @@
 - [Rust Repository status](http://ruststat.youknowone.org/)
 
 
-## Compiler
+## Online tools
 
 - [GDB GUI](https://gdbgui.com/)
 Browser-based debugger for Rust, C, C++, Go, R and more. ([repo](https://github.com/cs01/gdbgui))
 - [Compiler Explorer](https://godbolt.org/) 
   Run compilers in browser and interact with the assembly (freq. updated)
+- [Web Assembly Studio](http://webassembly.studio) 
+  Learn, Teach, Work and Play with Web Assembly.
+
 
 
 ## Iterators

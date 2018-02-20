@@ -179,6 +179,9 @@ In static languages, variables are classified into types: once a variable aquire
 ## Static dispatch
 Static dispatch usually resolves polymorphic calls using *monomorphization*. It allows *inlining* of function calls.
 
+## Static Single Assignment (SSA)
+SSA is a property of an intermediate representation (IR), which requires that each variable is assigned exactly once, and every variable is defined before it is used. Existing variables in the original IR are split into versions, new variables typically indicated by the original name with a subscript in textbooks, so that every definition gets its own version. In SSA form, use-def chains are explicit and each contains a single element.
+
 ## Token
 Tokens are primitive productions in the grammar defined by regular, non-recursive, language.
 

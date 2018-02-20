@@ -1,15 +1,19 @@
 # Resources
 
+- [Rust Learning][rlea]
+- [Awesome Rust](https://github.com/rust-unofficial/awesome-rust)
+  Curated list of Rust code and resources.
 - [Read Rust](https://readrust.net/)
-  Collects interesting posts about Rust. (freq. updated)
+  Collects interesting posts about Rust (freq. updated)
 - [Are We Web Yet?](http://www.arewewebyet.org/)
   List of resources for web development in Rust
 - [Are We Learning Yet?](http://www.arewelearningyet.com/)
   List of resources for machine learning in Rust
-- [Rust learning project](https://github.com/ctjhoa/rust-learning)
   Links to blog posts, articles, videos, for learning Rust.
-- [Awesome Rust](https://github.com/rust-unofficial/awesome-rust)
-  Curated list of Rust code and resources.
+
+
+[rlea]: https://github.com/ctjhoa/rust-learning
+
 
 
 ## Learning

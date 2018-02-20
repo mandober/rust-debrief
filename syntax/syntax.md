@@ -2,9 +2,12 @@
 
 <!-- TOC -->
 
-- [Symbols](#symbols)
-- [Operators and Symbols](#operators-and-symbols)
-- [List](#list)
+- [Arithmetic](#arithmetic)
+- [Comparison](#comparison)
+- [Bitwise](#bitwise)
+- [Logical](#logical)
+- [Patterns](#patterns)
+- [Operators](#operators)
 - [Misc](#misc)
 - [Paths](#paths)
 - [Generics](#generics)
@@ -14,84 +17,83 @@
 - [Parenthesis and tuples](#parenthesis-and-tuples)
 - [Notations](#notations)
 - [Comments](#comments)
+- [Symbols](#symbols)
+- [Operators and remaining symbols](#operators-and-remaining-symbols)
 
 <!-- /TOC -->
 
 
+## Arithmetic
+- `-`  negation: `- expr`. Trait `Neg`
+- `+`  addition: `expr + expr`. Trait `Add`
+- `/`  division: `expr / expr`. Trait `Div`
+- `%`  remainder: `expr % expr`. Trait `Rem`
+- `-`  subtraction: `expr - expr`. Trait `Sub`
+- `*`  multiplication: `expr * expr`. Trait `Mul`
+- `+=` addition and assignment: `var += expr`. Trait `AddAssign`
+- `/=` division and assignment: `var /= expr`. Trait `DivAssign`
+- `%=` remainder and assignment: `var %= expr`. Trait `RemAssign`
+- `-=` subtraction and assignment: `var -= expr`. Trait `SubAssign`
+- `*=` multiplication and assignment: `var *= expr`. Trait `MulAssign`
+- `=`  assignment: `var = expr`
 
-## Symbols
+## Comparison
+- `=` equality: `ident = type`
+- `!=` (`var != expr`): non-equality comparison, `PartialEq`
+- `<` (`expr < expr`): less-than comparison, `PartialOrd`
+- `<=` (`var <= expr`): less-than or equal-to, `PartialOrd`
+- `==` (`var == expr`): equality comparison, `PartialEq`
+- `>` (`expr > expr`): greater-than comparison, `PartialOrd`
+- `>=` (`var >= expr`): greater-than or equal-to, `PartialOrd`
 
-```
-::  ->  #  [  ]  (  )  {  }  ,  ;
-```
+## Bitwise
+* `^` (`expr ^ expr`): bitwise exclusive or, `BitXor`
+* `^=` (`var ^= expr`): bitwise exclusive or & assignment, `BitXorAssign`
+* `|` (`expr | expr`): bitwise or, `BitOr`
+* `|=` (`var |= expr`): bitwise or & assignment, `BitOrAssign`
+* `!` (`!expr`): bitwise or logical complement,  `Not`
+* `&` (`expr & expr`): bitwise and, `BitAnd`
+* `&=` (`var &= expr`): bitwise and & assignment, `BitAndAssign`
+* `<<` (`expr << expr`): left-shift, `Shl`
+* `<<=` (`var <<= expr`): left-shift & assignment, `ShlAssign`
+* `>>` (`expr >> expr`): right-shift, `Shr`
+* `>>=` (`var >>= expr`): right-shift & assignment, `ShrAssign`
 
-## Operators and Symbols
-
-```
-! != % %=
-```
-
-- `!` denotes macro expansion
-
-
-
-## List
-* `-` (`- expr`): negation. unary. overloadable:`Neg`
-* `+` (`expr + expr`): arithmetic addition. trait:`Add`
-* `+=` (`var += expr`): addition and assignment. trait:`AddAssign`
-* `-` (`expr - expr`): arithmetic subtraction. trait:`Sub`
-* `-=` (`var -= expr`): subtraction and assignment. trait:`SubAssign`
-* `*` (`expr * expr`): multiplication. trait:`Mul`
-* `*=` (`var *= expr`): multiplication and assignment. trait:`MulAssign`
-* `/` (`expr / expr`): arithmetic division. trait:`Div`
-* `/=` (`var /= expr`): arithmetic division & assignment. trait:`DivAssign`
-* `%` (`expr % expr`): remainder. trait:`Rem`
-* `%=` (`var %= expr`): remainder and assignment. trait:`RemAssign`
-* `=` (`var = expr`, `ident = type`): assignment/equivalence.
-* `!=` (`var != expr`): non-equality comparison. trait: `PartialEq`
-* `<` (`expr < expr`): less-than comparison. trait:`PartialOrd`
-* `<=` (`var <= expr`): less-than or equal-to comparison. trait:`PartialOrd`
-* `==` (`var == expr`): equality comparison. trait:`PartialEq`
-* `>` (`expr > expr`): greater-than comparison. trait:`PartialOrd`
-* `>=` (`var >= expr`): greater-than or equal-to comparison. trait:`PartialOrd`
-* `^` (`expr ^ expr`): bitwise exclusive or. trait:`BitXor`
-* `^=` (`var ^= expr`): bitwise exclusive or & assignment. trait:`BitXorAssign`
-* `|` (`expr | expr`): bitwise or. trait:`BitOr`
-* `|=` (`var |= expr`): bitwise or & assignment. trait:`BitOrAssign`
-* `!` (`!expr`): bitwise or logical complement. trait: `Not`
-* `&` (`expr & expr`): bitwise and. trait:`BitAnd`
-* `&=` (`var &= expr`): bitwise and & assignment. trait:`BitAndAssign`
-* `<<` (`expr << expr`): left-shift. trait:`Shl`
-* `<<=` (`var <<= expr`): left-shift & assignment. trait:`ShlAssign`
-* `>>` (`expr >> expr`): right-shift. trait:`Shr`
-* `>>=` (`var >>= expr`): right-shift & assignment. trait:`ShrAssign`
+## Logical
 * `&&` (`expr && expr`): logical and.
 * `||` (`expr || expr`): logical or.
-* `..` (`variant(x, ..)`, `struct_type { x, .. }`): rest pattern binding
-* `...` (`expr...expr`) inclusive range in a match pattern.
+
+
+## Patterns
+* `..` (`variant(x, ..)`, `struct_type { x, .. }`): "the rest" pattern
+* `...` (`expr...expr`) inclusive range (in match).
 * `=>` (`pat => expr`): part of match arm syntax.
 * `|` (`pat | pat`): pattern alternatives.
 * `@` (`ident @ pat`): pattern binding.
-* `_`: "ignored" pattern binding. numbers separator.
-* `!` (`ident!(…)`, `ident!{…}`, `ident![…]`): denotes macro expansion
-* `&` (`&expr`, `&mut expr`): borrow.
-* `&` (`&type`, `&mut type`, `&'a type`, `&'a mut type`): borrowed pointer type.
-* `*` (`*expr`): dereference.
-* `*` (`*const type`, `*mut type`): raw pointer.
-* `+` (`trait + trait`, `'a + trait`): compound type constraint.
-* `,`: argument and element separator.
-* `->` (`fn(…) -> type`, `|…| -> type`): function and closure return type.
-* `.` (`expr.ident`): member access.
-* `..` (`..`, `expr..`, `..expr`, `expr..expr`): right-exclusive range literal.
-* `..` (`..expr`): struct literal update syntax.
-* `...` (`...expr`, `expr...expr`) in an expression: inclusive range
-* `:` (`pat: type`, `ident: type`): constraints.
-* `:` (`ident: expr`): struct field initializer.
-* `:` (`'a: loop {…}`): loop label.
-* `;`: statement and item terminator.
-* `;` (`[…; len]`): part of fixed-size array syntax.
-* `|` (`|…| expr`): closures.
-* `?` (`expr?`): Error propagation. early return on `Err(_)`, otherwise unwraps
+* `_`: "ignored" pattern (no actual binding). Number separator.
+
+
+## Operators
+- `!` macro expansion: `ident!(…)`, `ident!{…}`, `ident![…]`
+- `&` borrow: `&expr`, `&mut expr`
+- `&` borrowed pointer: `&T`, `&mut T`
+- `&` borrowed pointer with a lifetime: `&'a T`, `&'a mut T`
+- `*` dereference: `*expr`
+- `*` raw pointer: `*const T`, `*mut T`
+- `+` compound type constraint: `trait + trait`, `'a + trait`
+- `,` arg and element separator.
+- `->` return type: `fn(…) -> T`, `|…| -> T`
+- `.` member access: `expr.ident`
+- `..` right-exclusive range literal: `..`, `expr..`, `..expr`, `expr..expr`
+- `..` struct literal update syntax: `..expr`
+- `...` inclusive range: `...expr`, `expr...expr`
+- `:` constraints: `pat: T`, `ident: T`
+- `:` struct field initializer: `ident: expr`
+- `:` loop label: `'a: loop {…}`
+- `;` statement and item terminator
+- `;` part of fixed-size array syntax: `[…; len]`
+- `|` closures: `|…| expr`
+- `?` Error propagation, `expr?`, early return on `Err(_)`, or unwraps
 
 
 ## Misc
@@ -179,3 +181,19 @@
 * `/*…*/`: block comment.
 * `/*!…*/`: inner block doc comment.
 * `/**…*/`: outer block doc comment.
+
+
+## Symbols
+
+```
+::  ->  #  [  ]  (  )  {  }  ,  ;
+```
+
+## Operators and remaining symbols
+
+```
+! != % %=
+```
+
+- `!` denotes macro expansion
+

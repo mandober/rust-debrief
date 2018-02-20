@@ -1,29 +1,46 @@
-# Option type
-
-- `std::option::Option` enum, since 1.0.0
-- online: [docs](https://doc.rust-lang.org/stable/std/option/enum.Option.html)
-- stands for optional value: `Option<T>`is either `Some(T)` or `None`
-- null-pointer optimized, suitable for representation of nullable pointers
-
-
+# Option
 
 <!-- TOC -->
 
+- [Debrief](#debrief)
 - [Option enum](#option-enum)
 - [Option and NULL](#option-and-null)
 - [Optional values](#optional-values)
-- [Options and pointers ("nullable" pointers)](#options-and-pointers-nullable-pointers)
+- [Nullable pointers](#nullable-pointers)
 - [Option methods by semantics](#option-methods-by-semantics)
 - [Option methods by ownership](#option-methods-by-ownership)
 
 <!-- /TOC -->
 
+## Debrief
+- Option enum is the star of `std::option` module
+- Online docs: [std::option][mods], [std::option::Option][enum]
+- This module also contains structs, used for iteration:
+  - `IntoIter` iterator over the value in Some
+  - `Iter` iterator over a ref to the Some
+  - `IterMut` iterator over a mut ref to the Some
+  - These iterators produce one value at most.
+- Option represents optional value, either present or absent.  
+  As such it replaces the concept of `null` from other langs.
+- Option is generic wrapper over a type `T`: `Option<T>`
+- `Option<T>` has 2 variants:
+  - `Some(T)` if the value of type `T` is present
+  - `None` if the value, __of that same type `T`__, is absent
+  - each optional type has its own None, `Option::None::<T>`.
+- Option is null-pointer optimized
+  - the size of `T` and `Option<T>` is the same.
+  - suitable for representing nullable pointers: `Option<&T>` has the same memory representation as a nullable pointer, and can be passed across FFI boundaries as such.
+
+
+
+[mods]: https://doc.rust-lang.org/nightly/std/option/
+[enum]: https://doc.rust-lang.org/nightly/std/option/enum.Option.html
+
+
+
+
 
 ## Option enum
-
-Option enum represents an optional value: `Option<T>`is either `Some(T)` or `None: `a value that is either present or absent; as such it is similar to the concept of `null` in other languages.
-
-It has 2 variants: variant `Some(T)` signifies presence of value `T`, variant `None` its absence.
 
 ```rust
 // Option enum definition in std::option::Option:
@@ -33,16 +50,33 @@ pub enum Option<T> {
 }
 ```
 
-mostly used to represent optional values, but also initial values, return values for partial functions, as a stand-in for simple errors, optional struct fields, optional function args, nullable pointers, etc.
+Both of Option's variants are tuples: `Some(T)` is a named tuple with one element of type `T`. `None` variant is an empty tuple, `None()`.
 
-Option is null-pointer optimized enum which means there is no memory overhead for putting any type into the Option; the size of `T` and the size of `Option<T>` is the same.
+Option represents an optional value; if it is possible that the value of some type could be missing or not be known, then Option is used to encode such situation. It is similar to the concept of `null` from other languages; Even though in such languages `null` represents the absence of some particular value, it also represents the absence of __any__ value, meaning that `null` is the separate type from the type whose absence it represents; therein null is equal to null. In Rust however, each optional type has its own `None` variant; any time a `None` is seen in the code, it is a `None` of some particular type, and because of this, occasionally its type must be annotated:
 
-suitable for representation of nullable pointers; `Option<&T>` has the same memory representation as a nullable pointer, it can be passed across FFI boundaries as such.
+```rust
+// the conservative way
+let opt: Option<u8> = None;
+
+// turbofish
+let opt = None::<u8>;
+
+// swordfishtrombone
+let opt: Option<u8> = Option::None::<u8>;
+```
+
+Option is mostly used to represent optional values, but also initial values, return values for partial functions, as a stand-in for simple errors, optional struct fields, optional function args, nullable pointers, etc.
+
+Option is null-pointer optimized which means there is no memory overhead for putting any type into the Option; the size of `T` and the size of `Option<T>` is the same.
+
+Option is suitable for representation of nullable pointers; `Option<&T>` has the same memory representation as a nullable pointer, it can be passed across FFI boundaries as such.
+
 
 
 ## Option and NULL
 
-Option enum is ideal for representing an optional value, a value that is either present or possibly absent; as such it is similar to a `null` value in other languages. Option encodes this with two variants: variant `Some(T)` signifies presence of value `T` and variant `None` its absence. However, this means there is a multitude of `None` variants, which are not mutually equal; each Option type has its own `None` variant (of that type). Both of this variants are tuples; `Some(T)` holds a tuple with a single value and `None()` has an empty tuple, which is left out as is commonly the case when it is the only or the last value.
+Option enum is ideal for representing an optional value, a value that is either present or possibly absent; as such it is similar to a `null` value in other languages. Option encodes this with two variants: variant `Some(T)` signifies presence of value `T` and variant `None` its absence. 
+
 
 ```rust
 // None variants sometimes need annotatation
@@ -51,8 +85,6 @@ let y: Option<&str> = None;
 ```
 
 ## Optional values
-Type `Option` represents an optional value: every `Option` is either `Some` and 
-contains a value, or `None`, and does not. 
 
 `Option` types are very common in Rust code, as they have a number of uses:
 - Initial values
@@ -65,7 +97,7 @@ contains a value, or `None`, and does not.
 
 
 
-## Options and pointers ("nullable" pointers)
+## Nullable pointers
 
 Rust's pointer types must always point to a valid location, there are no null pointers. Instead, Rust has optional pointers, like the optionally owned box, `Option<Box<T>>`
 
@@ -107,7 +139,7 @@ fn is_none(&self) -> bool;
 fn as_ref(&self) -> Option<&T>;
 fn as_mut(&mut self) -> Option<&mut T>;
 
-// unwrap. get T: Option<T> => T
+// unwrap to get T
 fn expect(self, msg: &str) -> T;
 fn unwrap(self) -> T;
 fn unwrap_or(self, def: T) -> T;
@@ -178,8 +210,7 @@ fn cloned(self) -> Option<T>;    // impl<'a, T: Clone> Option<&'a T>
 fn cloned(self) -> Option<T>;    // impl<'a, T: Clone> Option<&'a mut T>
 fn map<U, F>(self, f: F) -> Option<U>;
 fn map_or<U, F>(self, default: U, f: F) -> U;
-fn map_or_else<U, D, F>(self, default: D, f: F) -> U
-  where D: FnOnce() -> U, F: FnOnce(T) -> U;
+fn map_or_else<U, D: FnOnce()->U, F: FnOnce(T)->U>(self, gx: D, fx: F) -> U;
 fn ok_or<E>(self, err: E) -> Result<T, E>;
 fn ok_or_else<E, F>(self, err: F) -> Result<T, E>;
 fn and<U>(self, optb: Option<U>) -> Option<U>;

@@ -1,31 +1,35 @@
 # Slices
 
-Slice and string slice are two primitive data types, usually seen in their borrowed form. They are a view into a block of memory represented as a two-part fat pointer stored on the stack: a pointer to the data and the length. 
+- slices are primitive data types, usually seen in their borrowed form
+- they are a view into a block of memory
+- fat pointer (2words): a pointer to the data and the length
 
 There are 2 kinds of slices:
-- **sequential slice**, `&[T]` is a dynamically-sized view into a contiguous sequence. 
-- **string slice**, `&str`, is a dynamically-sized view into a string.
+- sliconseq (i.e. SLice Into CONtiguous SEQuence), `&[T]`, is a dynamically-sized view into a contiguous sequence, `[T]`. 
+- string slice, `&str`, is a dynamically-sized view into a string.
 
 Both slices are solution to the problem of referring to a part of sequential types (not to type as a whole - that’s what references are for).
 
 
 ## Iteration
-
 Slices implement two of the three `IntoIterator` variants; since they don't own their elements, there is no "by value" case. Instead, `into_iter` for `&[T]` and `&mut [T]` returns an iterator that produces shared and mutable references to the elements.
 
 
+## Sliconseq
+Commonly used sequential types are array and vector. They are compound types and they are both able to hold homogenous elements of type `T`.
 
-## Sequential types
+__Array__ is a fixed type; once declared, its size, which is a part of its type, cannot be changed. If its elements are scalar primitives, array is stored completely on the stack.
 
-Commonly used sequential types are array and vector. They are compound types and they are both able to hold homogenous elements of type `T`. Vector is a growable type whose size might not be known at compile-time; it always allocates on the heap. Array is a fixed type; once declared, its size,  which is a part of its type, cannot be changed. Assuming its elements are scalar primitives, array uses only the stack.
+- array: `[T; size]`
+- reference to an array: `&[T; size]`
+- reference to a part of an array: `&[T]`
 
-**Array**: fixed sequence, `[T; size]`
-reference to an array: `&[T; size]`
-reference to a part of an array: `&[T]`
+__Vector__ is a growable type whose size might not be known at compile-time; it always allocates on the heap.
 
-**Vector**: growable sequence, `Vec<T>`
-reference to a vector: `&Vec<T>`
-reference to a part of a vector: `&[T]`
+- vector: `Vec<T>`
+- reference to a vector: `&Vec<T>`
+- reference to a part of a vector: `&[T]`
+
 
 ```rust
 // array: fixed, owned sequence
@@ -43,7 +47,7 @@ let r1: &Vec<char> = &vector;
 let ref r2: Vec<char> = vector;
 ```
 
-Since array and vector are contiguous sequences and a reference to a part of a contiguous sequence is `&[T]`, then a contiguous sequence is `[T]`. 
+Since array and vector are contiguous sequences and a reference to a part of a contiguous sequence is `&[T]`, then a contiguous sequence is `[T]`?
 
 ```rust
 let seq: [i32; 3] = [1, 2, 3];     // array

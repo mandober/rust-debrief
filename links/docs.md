@@ -1,27 +1,90 @@
-# Documentation
+# Docs
+
+## Language
+- [Rust Homepage][rust]
+- [GitHub Issues][rlgi]
+- Rust API: [stable][sapi], [nightly][napi], [repo][rapi]
+- Rust Reference: [stable][sref], [nightly][nref], [repo][rref]
+- Rustonomicon: [stable][snom], [nightly][nnom], [repo][rnom]
+- Unstable Book: [stable][suns], [nightly][nuns], [repo][runs]
+- Rust by Example: [stable][suns], [nightly][nuns], [repo][runs]
 
 
-- [API](https://doc.rust-lang.org/std/)
-- [API: nightly](https://doc.rust-lang.org/nightly/std/)
-- [Reference](https://doc.rust-lang.org/reference)
-- [Reference: nightly](https://doc.rust-lang.org/nightly/reference)
-- [Reference: repo](https://github.com/rust-lang-nursery/reference)
-- [Reference: contribute](https://github.com/rust-lang-nursery/reference/issues/9)
-- [Rustonomicon](https://doc.rust-lang.org/stable/nomicon)
-- [Rustonomicon: nightly](https://doc.rust-lang.org/nightly/nomicon)
-- [Rustonomicon: repo](https://github.com/rust-lang-nursery/nomicon)
-- [Unstable Book: nightly](https://doc.rust-lang.org/nightly/unstable-book/)
-- [Unstable Book: repo](https://github.com/rust-lang/rust/tree/master/src/doc/unstable-book)
+
+
+- [Rust by Example](https://rustbyexample.com), 
+  RBE is a collection of runnable examples to illustrate various concepts. (freq. updated)
+- [Rust by Example: nightly](https://doc.rust-lang.org/nightly/rust-by-example/)
+- [Rust by Example: repo](https://github.com/rust-lang/rust-by-example)
+
+
+# Documenting
+- [Rustdoc Book][sdoc] Rust's documentation tool guide
+- [Rustdoc guide][ndoc] rust's documentation tool guide
+- [mdbook guide](https://rust-lang-nursery.github.io/mdBook/)
+- [mdbook repo](https://github.com/rust-lang-nursery/mdBook)
+- [termbook guide](https://byron.github.io/termbook/)
+- [termbook repo](https://github.com/Byron/termbook)
+
+
+## Stable
+- [Rust Documentation Index](https://www.rust-lang.org/en-US/documentation.html)
 - [Compiler Error Index: nightly](https://doc.rust-lang.org/nightly/error-index.html)
-- [Rustdoc Book](https://doc.rust-lang.org/stable/rustdoc/)
-  Describes rustdoc, a documentation tool
-- [Rustdoc Book: nightly](https://doc.rust-lang.org/nightly/rustdoc/)
-- [Rust Grammar: nightly](https://doc.rust-lang.org/nightly/grammar.html)
-- [Docs index](https://doc.rust-lang.org/nightly/)
+- [Rust FAQ](https://www.rust-lang.org/en-US/faq.html)
+
+
+## Nightly
+- [Rust Documentation Index](https://doc.rust-lang.org/nightly/)
+- [Rust Grammar](https://doc.rust-lang.org/nightly/grammar.html)
+
+
+[rust]: https://www.rust-lang.org
+[sapi]: https://doc.rust-lang.org/std/
+[napi]: https://doc.rust-lang.org/nightly/std/
+[rapi]: https://github.com/rust-lang/rust
+
+[sref]: https://doc.rust-lang.org/reference
+[nref]: https://doc.rust-lang.org/nightly/reference
+[rref]: https://github.com/rust-lang-nursery/reference
+
+[snom]: https://doc.rust-lang.org/nomicon
+[nnom]: https://doc.rust-lang.org/nightly/nomicon
+[gnom]: https://github.com/rust-lang-nursery/nomicon
+
+[suns]: https://doc.rust-lang.org/unstable-book/
+[nuns]: https://doc.rust-lang.org/nightly/unstable-book/
+[guns]: https://github.com/rust-lang/rust/tree/master/src/doc/unstable-book
+
+
+[rlgi]: https://github.com/rust-lang/rust/issues/
+
+[sdoc]: https://doc.rust-lang.org/rustdoc/
+[ndoc]: https://doc.rust-lang.org/nightly/rustdoc/
+
+[orrp]: https://www.rust-lang.org/en-US/friends.html
+[sfaq]: https://www.rust-lang.org/en-US/faq.html
+
+
+
+- [The Rust Project](https://www.rust-lang.org)
+- [rust-lang](https://github.com/rust-lang)
+- [Rust](https://github.com/rust-lang/rust)
+- [Rust: RFC](https://rust-lang.github.io/rfcs/)
+- [Rust: FAQ](https://www.rust-lang.org/en-US/faq.html)
+- [Rust: Issues](https://github.com/rust-lang/rust/issues)
+- [Rust: Releases](https://github.com/rust-lang/rust/blob/master/RELEASES.md)
+- [Style Guidelines](https://doc.rust-lang.org/1.0.0/style/README.html)
+- [Rust Forge](https://forge.rust-lang.org/)
+
+
+- [Reference: contribute](https://github.com/rust-lang-nursery/reference/issues/9)
+
 - [Rust on DevDocs](http://devdocs.io./rust/)
 
 
-## Guides
+
+
+## Guidelines
 - [Rust API guidelines](https://rust-lang-nursery.github.io/api-guidelines/)
   Set of recommendations on how to design and present APIs for Rust. 
   ([repo](https://github.com/rust-lang-nursery/api-guidelines))
