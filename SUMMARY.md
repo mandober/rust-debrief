@@ -14,21 +14,23 @@
 
 
 ## Syntax
-- [Constraints](syntax/constraints.md)
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
-- [Naming conventions](syntax/conventions.md)
+- [Constraints](syntax/syntax/constraints.md)
+- [Conventions](syntax/conventions.md)
 - [Expressions](syntax/expressions.md)
+- [Control flow](syntax/flow.md)
+- [Fully Qualified Syntax](syntax/fully-qualified-syntax.md)
 - [Grammar](syntax/grammar.md)
 - [Keywords](syntax/keywords.md)
 - [Literals](syntax/literals.md)
 - [Macros](syntax/macros.md)
 - [Operators](syntax/operators.md)
-- [Statements](syntax/statements.md)
-- [Syntactic notations](syntax/syntax.md)
+- [Syntactic elements and notations](syntax/syntax.md)
 
 
 ## Semantics
+- [Lifetimes](semantics/lifetimes/1_lifetimes.md)
 - [Visibility](semantics/visibility.md)
 - [Iterators](semantics/iterators.md)
 
@@ -38,6 +40,7 @@
 
 
 ## Types
+- [Type categories](types/1_type-categories.md)
 - [Unit](types/type_unit.md)
 - [Never](types/type_never.md)
 - [Top](types/type_top.md)
@@ -46,10 +49,6 @@
 ## Modules
 - [Box](modules/boxed/box.md)
 - [Option](modules/option/README.md)
-  - [Option module](modules/option/module.md)
-  - [Option enum](modules/option/option.md)
-  - [Option methods](modules/option/option_methods.md)
-  - [Option traits](modules/option/option_traits.md)
 
 
 ## Items

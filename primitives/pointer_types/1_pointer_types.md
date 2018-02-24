@@ -1,17 +1,17 @@
-# Reference types
+# Pointer types
+
+Pointer (or reference) types are types that allows indirect access to data. Rust has 5 pointer types that are primitives:
+- Reference (shared and mutable)
+- Slice
+- String slice
+- Function pointer
+- Raw pointer (shared and mutable)
+
+Other, non-primitive, pointer types are called **smart pointers** and they include types such as `Vec`, `String`, `Box`, `Cell`, `RefCell`, `Rc`, etc.
 
 
-- Reference types are written with an &: &i32
-- References can be taken with & (like C/C++).
-- References can be dereferenced with * (like C/C++).
-- References are guaranteed to be valid.
-- Validity is enforced through compile-time checks!
-- They are not the same as pointers!
 
-
-## Pointer types
-
-- All pointers in Rust are explicit first-class values.
+- All pointer types in Rust are explicit first-class values.
 - They can be copied, stored into data structs, and returned from functions.
 
 There are 2 varieties of pointer in Rust:

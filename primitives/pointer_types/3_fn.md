@@ -1,19 +1,17 @@
-# Primitive: Function pointer
-https://doc.rust-lang.org/std/primitive.fn.html
+# Function pointer
 
-Primitive Type `fn` 1.0.0
-
-Function pointer, like `fn(usize) -> bool`.
-
-See also the traits `Fn`, `FnMut`, and `FnOnce`.
-
-Function pointers vary by signature, ABI, or safety:
-- fp vary based on their signature
-- whether they point to safe or unsafe functions
-- based on what ABI they use
+- https://doc.rust-lang.org/std/primitive.fn.html
+- Primitive Type `fn` 1.0.0
+- Function pointer, like `fn(usize) -> bool`.
+- See also the traits `Fn`, `FnMut`, and `FnOnce`.
+- Function pointers vary by signature, ABI, or safety
+- Function pointers vary based on
+  - their signature
+  - whether they point to safe or unsafe functions
+  - what ABI they use
 
 
-# Acquiring function pointers
+## Acquiring function pointers
 
 Plain function pointers are obtained by *casting* either plain
 functions, or closures that don't capture an environment:
@@ -31,7 +29,7 @@ assert_eq!(clos(5), 10);
 ```
 
 
-# Safe and `unsafe` function pointers
+## Safe and `unsafe` function pointers
 
 In addition to varying based on their signature,
 function pointers come in two flavors:
@@ -105,15 +103,13 @@ Normal rust functions, even those with an extern "ABI", cannot be variadic.
 For more information, see the nomicon's section on variadic functions:
 [variadic](https://doc.rust-lang.org/nomicon/ffi.html#variadic-functions)
 
-These markers can be combined, so unsafe extern "stdcall" fn() is a valid type.
+These markers can be combined: `unsafe extern "stdcall" fn()` is a valid type.
 
-Like references in rust, function pointers are assumed to not be null, so if you
-want to pass a function pointer over FFI and be able to accommodate null pointers,
-make your type `Option<fn()>` with your required signature.
+Like references in rust, function pointers are assumed to not be null, so if you want to pass a function pointer over FFI and be able to accommodate null pointers, make your type `Option<fn()>` with your required signature.
+
 
 
 ## Traits
-
 Function pointers implement the following traits:
 - `Clone`
 - `PartialEq`, `Eq`, `PartialOrd`, `Ord`
@@ -121,11 +117,4 @@ Function pointers implement the following traits:
 - `Pointer`
 - `Debug`
 
-Due to a temporary restriction in Rust's type system, these traits are only
-implemented on functions that take *12 arguments or less*, with the `"Rust"`
-and `"C"` ABIs. In the future, this may change.
-
-In addition, function pointers of any signature, ABI, or safety are `Copy`,
-and all safe function pointers implement `Fn`, `FnMut`, and `FnOnce`.
-
-This works because these traits are specially known to the compiler.
+Due to a temporary restriction in Rust's type system, these traits are only implemented on functions that take *12 arguments or less*, with the `"Rust"`and `"C"` ABIs. In the future, this may change. In addition, function pointers of any signature, ABI, or safety are `Copy`, and all safe function pointers implement `Fn`, `FnMut`, and `FnOnce`. This works because these traits are specially known to the compiler.

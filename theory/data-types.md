@@ -1,9 +1,7 @@
 # Data Types
 
-* data type
-* variable
-* identifier
-* value
+- data, data type, variable, identifier, value
+
 * built-in types
 * custom types
 * primitive types
@@ -28,11 +26,16 @@
 * abstract data types
 
 
-A **data type** represents a constraint placed upon the interpretation of data in a type system, describing representation, interpretation and structure of values stored in memory. A **variable** is a storage location paired with an associated symbolic name (an **identifier**) that contains some quantity of information referred to as a value. A **value** is a sequence of bits together with its interpretation.
 
-All data types that a language makes available are **built-in types**. Types can be classified in various ways; a common division is into primitives and non-primitives i.e. compound, composite or exotic types. Most languages also allow users to define additional types, usually by combining multiple elements of other types and defining the valid operations of the new data type, thereby creating user-defined **custom types**.
+At the lowest level, **data** is just collection of bits without inherent structure, leaving it open to arbitrary interpretation; For instance, in an unconstrained access to data, a bit pattern representing an integer can be reinterpreted (transmuted) as a floating point number.
 
-**Primitive types** (or just primitives) are the basic building blocks of data provided by a language. Usually these basic types are defined by the language, rather than as part of the standard library. The most basic primitives are **scalars** i.e. numeric values like integer, floating-point, boolean and character. Operations on scalar primitive types are the fastest language constructs there are. Integer addition, for example, can be performed as a single machine instruction. Depending on the language and its implementation, primitive data types may or may not have a 1:1 correspondence with objects in the computer's memory.
+**Data type** represents a constraint placed upon the interpretation of data in a type system, describing representation, interpretation and structure of values stored in memory.
+
+A **variable** is a storage location paired with an associated symbolic name, an **identifier**, that contains some quantity of information referred to as a value. A **value** is a sequence of bits together with its interpretation.
+
+All data types that a language makes available are **built-in types**. Types can be classified into many categories: primitive, compound, composite, exotic types. Most languages also allow users to define additional types, usually by combining multiple elements of other types and defining the valid operations of the new data type, thereby creating user-defined **custom types**.
+
+**Primitives** are the basic building blocks of data provided by a language. Usually these basic types are defined by the language, rather than as part of the standard library. The most basic primitives are **scalars** e.g. integers, floating-points, booleans and characters. They are atimic values that cannot be divided further and they do not depend on other types. Operations on scalar primitive types are the fastest language constructs there are. Integer addition, for example, can be performed as a single machine instruction.
 
 More complicated types are constructed starting from basic types: **compound types** are made by homogeneous grouping of other types, **composite** or **aggregate** types are derived from heterogeneous grouping of other types. The ways other types are combined to form a combined type are called **data structures**. Some of these general types include: arrays, records, unions, enums, sets, objects.
 

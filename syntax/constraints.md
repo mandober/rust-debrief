@@ -1,5 +1,6 @@
 # Constraints
 
+
 - `T: Debug` generic type T constrained to types that implement `Debug` trait.
 - `T: 'a` type T must outlive `'a`, it cannot transitively contain any refs with lifetimes shorter than `'a`.
 - `T: 'static` T contains no borrowed references other than `'static`

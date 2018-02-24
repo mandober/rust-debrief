@@ -1,4 +1,4 @@
-# Option: implemented traits
+# Option: Trait Implementations
 
 - Clone, Copy, Hash, Debug, Default, From,
 - Eq, PartialEq, Ord, PartialOrd,
@@ -6,56 +6,92 @@
 - Try (LAB)
 
 
-# Implemented traits
-
 <!-- TOC -->
 
+- [Derived traits](#derived-traits)
+- [from_iter](#from_iter)
 - [Default: default](#default-default)
 - [From: from](#from-from)
 - [Debug: fmt](#debug-fmt)
 - [Clone](#clone)
-  - [clone](#clone)
-  - [clone_from](#clone_from)
+    - [clone](#clone)
+    - [clone_from](#clone_from)
 - [Hash](#hash)
-  - [hash](#hash)
-  - [hash_slice](#hash_slice)
+    - [hash](#hash)
+    - [hash_slice](#hash_slice)
 - [PartialEq](#partialeq)
-  - [eq](#eq)
-  - [ne](#ne)
+    - [eq](#eq)
+    - [ne](#ne)
 - [Ord](#ord)
-  - [cmp](#cmp)
-  - [max](#max)
-  - [min](#min)
+    - [cmp](#cmp)
+    - [max](#max)
+    - [min](#min)
 - [PartialOrd](#partialord)
-  - [partial_cmp](#partial_cmp)
-  - [lt](#lt)
-  - [le](#le)
-  - [gt](#gt)
-  - [ge](#ge)
+    - [partial_cmp](#partial_cmp)
+    - [lt](#lt)
+    - [le](#le)
+    - [gt](#gt)
+    - [ge](#ge)
 - [IntoIterator: into_iter](#intoiterator-into_iter)
-  - [impl1: into_iter](#impl1-into_iter)
-  - [impl2: into_iter](#impl2-into_iter)
-  - [impl3: into_iter](#impl3-into_iter)
-- [FromIterator: from_iter](#fromiterator-from_iter)
+    - [impl1: into_iter](#impl1-into_iter)
+    - [impl2: into_iter](#impl2-into_iter)
+    - [impl3: into_iter](#impl3-into_iter)
 - [Try](#try)
-  - [into_result](#into_result)
-  - [from_ok](#from_ok)
-  - [from_error](#from_error)
+    - [into_result](#into_result)
+    - [from_ok](#from_ok)
+    - [from_error](#from_error)
 
 <!-- /TOC -->
 
 
-
-The `Option` type ([src](https://doc.rust-lang.org/stable/src/core/option.rs.html)):
+## Derived traits
 
 ```rust
 #[derive(Clone, Copy, PartialEq, PartialOrd, Eq, Ord, Debug, Hash)]
-pub enum Option<T> {
-    None,    // No value
-    Some(T), // Some value T
+pub enum Option<T> { None, Some(T) }
+```
+
+
+## from_iter
+- `FromIterator::from_iter`
+- Takes each element in the `Iterator`:
+  - if `None`, no further elements are taken, and `None` is returned.
+  - if no `None` occurs, a container with values of each `Option` is returned.
+
+```rust
+impl<A, V> FromIterator<Option<A>> for Option<V>
+where V: FromIterator<A>
+{
+  fn from_iter<I>(iter: I) -> Option<V> 
+    where I: IntoIterator<Item = Option<A>>;
+  }
 }
 ```
 
+By implementing `FromIterator` for a type, you define how it will be created from an iterator. This is common for types which describe a collection of some kind. `FromIterator`'s `from_iter` is rarely called explicitly, and is instead used through `Iterator`'s `collect` method:
+
+```rust
+fn collect<B>(self) -> B
+where B: FromIterator<Self::Item>
+```
+
+
+Example: increment every integer in a vector, checking for overflow
+
+```rust
+use std::u16;
+
+let v = vec![1, 2];
+
+let res: Option<Vec<u16>> = 
+  v.iter()
+   .map(|&x: &u16|
+      if x == u16::MAX { None }
+      else { Some(x + 1) })
+   .collect();
+
+assert!(res == Some(vec![2, 3]));
+```
 
 
 ## Default: default
@@ -86,7 +122,6 @@ impl<T> Debug for Option<T> where T: Debug {
   fn fmt(&self, __arg_0: &mut Formatter) -> Result<(), Error>;
 }
 ```
-
 
 
 ## Clone
@@ -279,33 +314,6 @@ impl<'a, T> IntoIterator for &'a mut Option<T> { // 1.4.0
 ```
 
 
-## FromIterator: from_iter
-
-Takes each element in the `Iterator`: 
-- if it is `None`, no further elements are taken, and `None` is returned.
-- if no `None` occurs, a container with the values of each `Option` is returned.
-
-```rust
-impl<A, V> FromIterator<Option<A>> for Option<V> 
- where V: FromIterator<A>
-{
-  fn from_iter<I>(iter: I) -> Option<V> 
-    where I: IntoIterator<Item = Option<A>>;
- }
-```
-
-Example: increment every integer in a vector, checking for overflow
-
-```rust
-use std::u16;
-let v = vec![1, 2];
-let res: Option<Vec<u16>> = v.iter()
-                             .map(|&x: &u16|
-                                  if x == u16::MAX { None }
-                                  else { Some(x + 1) }
-                            ).collect();
-assert!(res == Some(vec![2, 3]));
-```
 
 
 

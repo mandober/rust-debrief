@@ -34,7 +34,7 @@ Since `str` is of unknown size, it is *not a first-class type*, but can only be
 instantiated through a reference type, such as `&str`
 
 
-## Tuple types: tuple and unt type
+## Tuple types: tuple and unit type
 
 ## Tuple
 A tuple type is a heterogeneous product of other types, called the elements of the tuple. 

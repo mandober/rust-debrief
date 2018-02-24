@@ -1,7 +1,9 @@
-## Tuple types
+# Tuple
 
-A tuple *type* is a heterogeneous product of other types, called the *elements*
-of the tuple. It has no nominal name and is instead structurally typed.
+- tuple is a heterogeneous product of other types, its elements
+- it has no nominal name and is instead structurally typed, `(bool, u8)`
+
+Tuples are types but they are dependent on their length as well as the types of their components, so there is theoretically an infinite number of tuple types
 
 Tuple types and values are denoted by listing the types or values of their
 elements, respectively, in a parenthesized, comma-separated list.

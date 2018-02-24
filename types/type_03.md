@@ -25,10 +25,10 @@ There are also some *primitive constructs for generic types* built in to the lan
 - Pointers
 
 
-Numeric types
+## Numeric types
 
 
-Machine types
+## Machine types
 
 The machine types are the following:
 
@@ -38,13 +38,13 @@ The signed two's complement word types i8, i16, i32 and i64, with values drawn f
 
 The IEEE 754-2008 binary32 and binary64 floating-point types: f32 and f64, respectively.
 
-Machine-dependent integer types
+## Machine-dependent integer types
 
 The usize type is an unsigned integer type with the same number of bits as the platform's pointer type. It can represent every memory address in the process.
 
 The isize type is a signed integer type with the same number of bits as the platform's pointer type. The theoretical upper bound on object and array size is the maximum isize value. This ensures that isize can be used to calculate differences between pointers into an object or array and can address every byte within an object along with one byte past the end.
 
-Textual types
+## Textual types
 
 The types char and str hold textual data.
 
@@ -52,7 +52,7 @@ A value of type char is a Unicode scalar value (i.e. a code point that is not a 
 
 A value of type str is a Unicode string, represented as an array of 8-bit unsigned bytes holding a sequence of UTF-8 code points. Since str is a dynamically sized type, it is not a first-class type, but can only be instantiated through a pointer type, such as &str.
 
-Tuple types
+## Tuple types
 
 A tuple type is a heterogeneous product of other types, called the elements of the tuple. It has no nominal name and is instead structurally typed.
 
@@ -73,7 +73,7 @@ assert_eq!(p.0, 10);
 assert_eq!(p.1, "ten");
 For historical reasons and convenience, the tuple type with no elements (()) is often called ‘unit’ or ‘the unit type’.
 
-Array, and Slice types
+## Array, and Slice types
 
 Rust has two different types for a list of items:
 
@@ -101,7 +101,7 @@ All elements of arrays and slices are always initialized, and access to an array
 
 The Vec<T> standard library type provides a heap allocated resizable array type.
 
-Struct types
+## Struct types
 
 A struct type is a heterogeneous product of other types, called the fields of the type.1
 
@@ -118,7 +118,7 @@ A unit-like struct type is like a struct type, except that it has no fields. The
 1
 struct types are analogous to struct types in C, the record types of the ML family, or the struct types of the Lisp family.
 
-Enumerated types
+## Enumerated types
 
 An enumerated type is a nominal, heterogeneous disjoint union type, denoted by the name of an enum item. 2
 
@@ -133,7 +133,7 @@ Enum types cannot be denoted structurally as types, but must be denoted by named
 2
 The enum type is analogous to a data constructor declaration in ML, or a pick ADT in Limbo.
 
-Union types
+## Union types
 
 A union type is a nominal, heterogeneous C-like union, denoted by the name of a union item.
 
@@ -141,7 +141,7 @@ A union contains the value of any one of its fields. Since the accessing the wro
 
 The memory layout of a union is undefined by default, but the #[repr(...)] attribute can be used to fix a layout.
 
-Recursive types
+## Recursive types
 
 Nominal types — structs, enumerations and unions — may be recursive. That is, each enum variant or struct or union field may refer, directly or indirectly, to the enclosing enum or struct type itself. Such recursion has restrictions:
 
@@ -161,25 +161,25 @@ Pointer types
 
 All pointers in Rust are explicit first-class values. They can be moved or copied, stored into data structs, and returned from functions.
 
-Shared references (&)
+## Shared references (&)
 
 These point to memory owned by some other value. When a shared reference to a value is created it prevents direct mutation of the value. Interior mutability provides an exception for this in certain circumstances. As the name suggests, any number of shared references to a value may exit. A shared reference type is written &type, or &'a type when you need to specify an explicit lifetime. Copying a reference is a "shallow" operation: it involves only copying the pointer itself, that is, pointers are Copy. Releasing a reference has no effect on the value it points to, but referencing of a temporary value will keep it alive during the scope of the reference itself.
 
-Mutable references (&mut)
+## Mutable references (&mut)
 
 These also point to memory owned by some other value. A mutable reference type is written &mut type or &'a mut type. A mutable reference (that hasn't been borrowed) is the only way to access the value it points to, so is not Copy.
 
-Raw pointers (*const and *mut)
+## Raw pointers
 
-Raw pointers are pointers without safety or liveness guarantees. Raw pointers are written as *const T or *mut T, for example *const i32 means a raw pointer to a 32-bit integer. Copying or dropping a raw pointer has no effect on the lifecycle of any other value. Dereferencing a raw pointer is an unsafe operation, this can also be used to convert a raw pointer to a reference by reborrowing it (&* or &mut *). Raw pointers are generally discouraged in Rust code; they exist to support interoperability with foreign code, and writing performance-critical or low-level functions.
+Raw pointers are pointers without safety or liveness guarantees. Raw pointers are written as `*const T` or `*mut T`, for example `*const i32` means a raw pointer to a 32-bit integer. Copying or dropping a raw pointer has no effect on the lifecycle of any other value. Dereferencing a raw pointer is an unsafe operation, this can also be used to convert a raw pointer to a reference by reborrowing it (&* or &mut *). Raw pointers are generally discouraged in Rust code; they exist to support interoperability with foreign code, and writing performance-critical or low-level functions.
 
 When comparing pointers they are compared by their address, rather than by what they point to. When comparing pointers to dynamically sized types they also have their addition data compared.
 
-Smart Pointers
+## Smart Pointers
 
 The standard library contains additional 'smart pointer' types beyond references and raw pointers.
 
-Function item types
+## Function item types
 
 When referred to, a function item, or the constructor of a tuple-like struct or enum variant, yields a zero-sized value of its function item type. That type explicitly identifies the function - its name, its type arguments, and its early-bound lifetime arguments (but not its late-bound lifetime arguments, which are only assigned when the function is called) - so the value does not need to contain an actual function pointer, and no indirection is needed when the function is called.
 
@@ -204,7 +204,9 @@ let foo_ptr_2 = if want_i32 {
 } else {
     foo::<u32>
 };
-Function pointer types
+
+
+## Function pointer types
 
 Function pointer types, written using the fn keyword, refer to a function whose identity is not necessarily known at compile-time. They can be created via a coercion from both function items and non-capturing closures.
 
@@ -222,7 +224,9 @@ let mut x = add(5,7);
 type Binop = fn(i32, i32) -> i32;
 let bo: Binop = add;
 x = bo(5,7);
-Closure types
+
+
+## Closure types
 
 A closure expression produces a closure value with a unique, anonymous type that cannot be written out.
 
@@ -244,7 +248,8 @@ let mut x = add(5,7);
 type Binop = fn(i32, i32) -> i32;
 let bo: Binop = add;
 x = bo(5,7);
-Trait objects
+
+## Trait objects
 
 In Rust, trait names also refer to dynamically sized types called trait objects. Like all DSTs, trait objects are used behind some kind of pointer: &SomeTrait or Box<SomeTrait>. Each instance of a pointer to a trait object includes:
 
@@ -330,7 +335,8 @@ impl<'a> Foo<'a> + 'a {}
 // This is still an error:
 struct TwoBounds<'a, 'b, T: ?Sized + 'a + 'b>
 TwoBounds<'a, 'b, Foo<'c>>
-Type parameters
+
+## Type parameters
 
 Within the body of an item that has type parameter declarations, the names of its type parameters are types:
 

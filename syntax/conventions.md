@@ -1,11 +1,41 @@
 # Naming conventions
 
-* snake_case: identifier, function/method name, primitives, lifetimes
-* SCREAMING_SNAKE_CASE: constants, statics
-* CamelCase: types (enum, struct, newtypes), generic type parameters, traits
-* kebab-case: cargo crate names; auto translated in/from snake_case in `use` or `extern` statements
+
+## Styles
+- single word in lowercase:
+  - primitives: `bool`, `u8`, `char`
+- snake_case: lowercase with underscore instead of space:
+  - identifiers, function and method names, modules, etc.
+  - lifetime parameters (usually only a single letter): `'a`, `'static`
+- SCREAMING_SNAKE_CASE: uppercase with underscores instead of spaces:
+  - constants, statics
+- CamelCase (PascalCase): title case without spaces (camelCase is not used):
+  - Non-primitives: `String`, `RefCell`, `BTreeMap` 
+  - Generic type parameters (usually only a single letter): `T`
+  - Traits
+- kebab-case: lowercase with dash instead of space:
+  - crates; auto translated in/from snake_case in `use` or `extern`
 
 
+## Methods
+Method names follow certain conventions
+
+Suffix
+- `_or` may return supplied argument
+- `_or_else` may calculate return value from supplied param-less closure
+- `_or_default` may return type's default value
+- `_mut` gives mutable ref
+
+Prefix
+- `as_` Cheap conversion without consummation of original value
+- `to_` Expensive conversion without consummation
+- `into_` Variable cost with consummation
+
+
+
+
+
+## Examples
 
 ```rust
 // variable

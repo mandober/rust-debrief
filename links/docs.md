@@ -1,6 +1,8 @@
 # Docs
 
+
 ## Language
+
 - [Rust Homepage][rust]
 - [GitHub Issues][rlgi]
 - Rust API: [stable][sapi], [nightly][napi], [repo][rapi]
@@ -10,6 +12,7 @@
 - Rust by Example: [stable][suns], [nightly][nuns], [repo][runs]
 
 
+https://doc.rust-lang.org/1.9.0/book/
 
 
 - [Rust by Example](https://rustbyexample.com), 

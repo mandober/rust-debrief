@@ -2,19 +2,32 @@
 
 - An attribute is a metadata that is interpreted according to name, convention, language and compiler version.
 - Any item declaration may have an attribute applied to it.
-- An attribute beginning with a `#` applies to the item following it; 
-  an attribute beginning with a `#!` applies to the outer, enclosing, item.
+- An attribute beginning with a `#` applies to the item following it.
+- An attribute beginning with a `#!` applies to the outer, enclosing, item.
 - Attributes may appear as any of:
-  * single identifier i.e. the attribute's name: `#[test]`
-  * key/value pair: `#![crate_type = "lib"]`
-  * identifier, with list of args in parens: `#[inline(always)]`
-- Attributes grouping: `[allow(dead_code, unused_variables)]`
+  - single identifier i.e. the attribute's name: `#[test]`
+  - key/value pair: `#![crate_type = "lib"]`
+  - identifier, with list of args in parenthesis: `#[inline(always)]`
+- Grouping: `[allow(dead_code, unused_variables)]`
+
+
+## Categories
+
+- Crate-only
+- Module-only
+- Function-only
+- Static-only
+- FFI
+- Macro-related
+- Miscellaneous
+- Conditional compilation
+- Language items
 
 
 
-## Attributes index
+## Index
 
-* Crate-only
+- Crate-only
   - crate_name: `#![crate_name = "std"]`
   - crate_type: `#![crate_type = "lib"]`
   - feature: `#![feature(inclusive_range_syntax)]`
@@ -25,10 +38,10 @@
   - plugin
   - recursion_limit
   - windows_subsystem
-* Module-only
+- Module-only
   - no_implicit_prelude
   - path
-* Function-only
+- Function-only
   - main
   - plugin_registrar
   - start
@@ -36,21 +49,21 @@
   - should_panic
   - cold
   - naked
-* Static-only
+- Static-only
   - thread_local
-* FFI
+- FFI
   - repr
   - link
   - link_args
   - linked_from
   - link_name
   - linkage
-* Macro-related
+- Macro-related
   - macro_use
   - macro_reexport
   - macro_export
   - no_link
-* Miscellaneous
+- Miscellaneous
   - doc
   - must_use
   - deprecated
@@ -60,16 +73,16 @@
   - simd
   - unsafe_destructor_blind_to_params
   - rustc_on_unimplemented
-* Conditional compilation
+- Conditional compilation
   - cfg: `#[cfg(target_os = "linux")]`
   - cfg_attr
-* Language items
+- Language items
   - lang: `#[lang = "f64"]`
   - inline: `#[inline(always)]`
   - derive: `#[derive(Debug, Copy, Clone)]`
 
 
-## Linting
+## Linting attributes
 
 Command to see lint checks supported by the compiler: `rustc -W help`.
 Run `rustc -W help foo.rs` to see a list of lints known to rustc, including those provided by plugins loaded by foo.rs file.
@@ -91,8 +104,17 @@ Run `rustc -W help foo.rs` to see a list of lints known to rustc, including thos
 
 ## Links
 
-- [Rust reference: Attributes](https://doc.rust-lang.org/reference/attributes.html)
-- [Rust reference: Linkage](https://doc.rust-lang.org/reference/linkage.html)
-- [LLVM](http://llvm.org/docs/LangRef.html)
-- [About linting plugins](https://doc.rust-lang.org/unstable-book/language-features/plugin.html#lint-plugins)
-- [Code: rustc's built-in lints](https://github.com/rust-lang/rust/blob/master/src/librustc/lint/builtin.rs)
+- Rust Reference: [Attributes][arr01]
+- Rust Reference: [Linkage][arl02]
+- Rust Unstable Book: [About linting plugins][alp01]
+- Rust source: [Built-in lints][rsrcl]
+- Rust nightly: [Compiler plugins][rnrcp]
+- [LLVM][llvm1]
+
+
+[arr01]: https://doc.rust-lang.org/reference/attributes.html
+[arl02]: https://doc.rust-lang.org/reference/linkage.html
+[alp01]: https://doc.rust-lang.org/unstable-book/language-features/plugin.html
+[llvm1]: http://llvm.org/docs/LangRef.html
+[rnrcp]: https://doc.rust-lang.org/1.9.0/book/compiler-plugins.html
+[rsrcl]: https://github.com/rust-lang/rust/blob/master/src/librustc/lint/builtin.rs

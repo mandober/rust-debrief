@@ -1,15 +1,15 @@
-# Syntactic elements
-
+# Syntax
 
 - [Attributes](attributes.md)
+- [Comments](comments.md)
+- [Constraints](constraints.md)
+- [Conventions](conventions.md)
 - [Expressions](expressions.md)
+- [Control flow](flow.md)
+- [Fully Qualified Syntax](fully-qualified-syntax.md)
 - [Grammar](grammar.md)
 - [Keywords](keywords.md)
 - [Literals](literals.md)
 - [Macros](macros.md)
 - [Operators](operators.md)
-- [Statements](statements.md)
-- [Syntactic notations](syntax.md)
-- [Naming conventions](conventions.md)
-- [Comments](comments.md)
-
+- [Syntactic elements and notations](syntax.md)

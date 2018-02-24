@@ -1,4 +1,4 @@
-# Syntactic notations
+# Syntactic elements and notations
 
 <!-- TOC -->
 
@@ -35,42 +35,45 @@
 - `%=` remainder and assignment: `var %= expr`. Trait `RemAssign`
 - `-=` subtraction and assignment: `var -= expr`. Trait `SubAssign`
 - `*=` multiplication and assignment: `var *= expr`. Trait `MulAssign`
-- `=`  assignment: `var = expr`
+- `=`  assignment/eq.: `var = expr`
 
 ## Comparison
-- `=` equality: `ident = type`
-- `!=` (`var != expr`): non-equality comparison, `PartialEq`
-- `<` (`expr < expr`): less-than comparison, `PartialOrd`
-- `<=` (`var <= expr`): less-than or equal-to, `PartialOrd`
-- `==` (`var == expr`): equality comparison, `PartialEq`
-- `>` (`expr > expr`): greater-than comparison, `PartialOrd`
-- `>=` (`var >= expr`): greater-than or equal-to, `PartialOrd`
+- `==` equality: `var == expr`. Trait `PartialEq`
+- `!=` inequality: `var != expr`. Trait `PartialEq`
+- `<`  less-than: `expr < expr`. Trait `PartialOrd`
+- `>`  greater-than: `expr > expr`. Trait `PartialOrd`
+- `<=` less-than or equal-to:`var <= expr` . Trait `PartialOrd`
+- `>=` greater-than or equal-to: `var >= expr`. Trait `PartialOrd`
+
 
 ## Bitwise
-* `^` (`expr ^ expr`): bitwise exclusive or, `BitXor`
-* `^=` (`var ^= expr`): bitwise exclusive or & assignment, `BitXorAssign`
-* `|` (`expr | expr`): bitwise or, `BitOr`
-* `|=` (`var |= expr`): bitwise or & assignment, `BitOrAssign`
-* `!` (`!expr`): bitwise or logical complement,  `Not`
-* `&` (`expr & expr`): bitwise and, `BitAnd`
-* `&=` (`var &= expr`): bitwise and & assignment, `BitAndAssign`
-* `<<` (`expr << expr`): left-shift, `Shl`
-* `<<=` (`var <<= expr`): left-shift & assignment, `ShlAssign`
-* `>>` (`expr >> expr`): right-shift, `Shr`
-* `>>=` (`var >>= expr`): right-shift & assignment, `ShrAssign`
+* `|`   OR: `expr | expr`. Trait `BitOr`
+* `^`   XOR: `expr ^ expr`. Trait `BitXor`
+* `&`   AND: `expr & expr`. Trait `BitAnd`
+* `!`   NOT (or logical complement): `!expr`. Trait `Not`
+* `|=`  OR with assignment: `var |= expr`. Trait `BitOrAssign`
+* `^=`  XOR with assignment: `var ^= expr`. Trait `BitXorAssign`
+* `&=`  AND with assignment: `var &= expr`. Trait `BitAndAssign`
+* `<<`  left-shift: `expr << expr`. Trait `Shl`
+* `>>`  right-shift: `expr >> expr`. Trait `Shr`
+* `<<=` left-shift with assignment: `var <<= expr`. Trait `ShlAssign`
+* `>>=` right-shift with assignment: `var >>= expr`. Trait `ShrAssign`
 
 ## Logical
-* `&&` (`expr && expr`): logical and.
-* `||` (`expr || expr`): logical or.
+* `&&` logical and: `expr && expr`
+* `||` logical or: `expr || expr`
+* `!`  logical complement: `!expr`. Trait `Not`
 
 
 ## Patterns
-* `..` (`variant(x, ..)`, `struct_type { x, .. }`): "the rest" pattern
-* `...` (`expr...expr`) inclusive range (in match).
-* `=>` (`pat => expr`): part of match arm syntax.
-* `|` (`pat | pat`): pattern alternatives.
-* `@` (`ident @ pat`): pattern binding.
-* `_`: "ignored" pattern (no actual binding). Number separator.
+* `..`  "and the rest": `variant(x, ..)`, `struct_type { x, .. }`
+* `...` inclusive range: `expr...expr`
+* `=>`  part of match arm syntax: `pat => expr`
+* `|`   pattern alternatives: `pat | pat`
+* `@`   pattern binding: `ident @ pat`
+* `_`   "ignored" pattern (no actual binding), catch-all: `Some(_)`
+* `_`   decorative number separator: `1_000_usize`
+* `_`   inferable part of type annotation: `Vec<_>`
 
 
 ## Operators
@@ -97,15 +100,16 @@
 
 
 ## Misc
-* `'ident`: named lifetime or loop label.
-* `…u8`, `…i32`, `…f64`, `…usize`, …: numeric literal of specific type.
-* `"…"`: string literal.
-* `r"…"`, `r#"…"#`, `r##"…"##`, …: raw string literal, escapes not processed.
-* `b"…"`: byte string literal, constructs a `[u8]` instead of a string.
-* `br"…"`, `br#"…"#`, `br##"…"##`, …: raw byte string literal
-* `'…'`: character literal.
-* `b'…'`: ASCII byte literal.
-* `|…| expr`: closure.
+- named lifetime: `'ident` (`'a`)
+- loop label: `'ident` (`'loop`)
+- numeric literal of specific type: `…u8`, `…i32`, `…f64`, `…usize`, …
+- string literal: `"…"`
+- raw string literal: `r"…"`, `r#"…"#`, `r##"…"##`, …
+- byte string literal, constructs a `[u8]` instead of a string: `b"…"`
+- raw byte string literal: `br"…"`, `br#"…"#`, `br##"…"##`, …
+- character literal: `'…'`
+- ASCII byte literal: `b'…'`
+- closure: `|…| expr`
 
 
 ## Paths
@@ -117,26 +121,26 @@
 * `<type>::…`: associated item for a type which cannot be directly named
 * `trait::method(…)`: disambiguating a method call by naming the trait
 * `type::method(…)`: disambiguating a method call by naming the type
-* `<type as trait>::method(…)`:disambiguating a method by naming trait and type
+* `<type as trait>::method(…)`: disambiguating a method call
 
 
 ## Generics
 * `path<…>`: type parameter, `Vec<u8>`
-* `path::<…>`, `method::<…>`: specifies parameters to generic type, function, or method in an expression, `"42".parse::<i32>()`
+* `path::<…>`, `method::<…>`: generic type params, fn, or method in an expr: `"42".parse::<i32>()`
 * `fn ident<…> …`: define generic function.
 * `struct ident<…> …`: define generic structure.
 * `enum ident<…> …`: define generic enumeration.
 * `impl<…> …`: define generic implementation.
 * `for<…> type`: higher-ranked lifetime bounds.
-* `type<ident=type>`: a generic type where one or more associated types have specific assignments, `Iterator<Item=T>`
+* `type<ident=type>`: generic type where one or more associated types have specific assignments, `Iterator<Item=T>`
 
 
 ## Constraints
-* `T: U`: generic parameter `T` constrained to types that implement `U`.
-* `T: 'a`: `T` must outlive `'a`, it cannot transitively contain any references with lifetimes shorter than `'a`.
-* `T : 'static`: `T` contains no borrowed references other than `'static`
+* `T: U`: generic `T` constrained to types that implement `U`.
+* `T: 'a`: generic `T` must outlive `'a`, it cannot transitively contain any references with lifetimes shorter than `'a`.
+* `T : 'static`: generic `T` contains no borrowed refs other than `'static`
 * `'b: 'a`: generic lifetime `'b` must outlive lifetime `'a`.
-* `T: ?Sized`: allow generic type parameter to be a dynamically-sized type.
+* `T: ?Sized`: allow generic type param to be dynamically-sized type.
 * `'a + trait`, `trait + trait`: compound type constraint.
 
 
@@ -153,15 +157,15 @@
 
 
 ## Parenthesis and tuples
-* `()`: empty tuple, unit type; both literal and type.
-* `(expr)`: parenthesized expression.
-* `(expr,)`: single-element tuple expression.
-* `(type,)`: single-element tuple type.
-* `(expr, …)`: tuple expression.
-* `(type, …)`: tuple type.
-* `expr(expr, …)`: function call expression. Also used to initialize tuple `struct`s and tuple `enum` variants.
-* `ident!(…)`, `ident!{…}`, `ident![…]`: macro invocation.
-* `expr.0`, `expr.1`, …: tuple indexing..
+* `()`: empty tuple, unit type; both literal and type
+* `(expr)`: parenthesized expression: : `let t = (5 + 3) * 8`
+* `(expr,)`: single-element tuple expression: `let t = (5,)`
+* `(type,)`: single-element tuple type: `(usize,)`
+* `(expr, …)`: tuple expression
+* `(type, …)`: tuple type
+* `expr(expr, …)`: fn call expr. Also used to initialize tuple structs and tuple enum variants
+* `ident!(…)`, `ident!{…}`, `ident![…]`: macro invocation
+* `expr.0`, `expr.1`, …: tuple indexing
 
 
 ## Notations

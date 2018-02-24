@@ -32,81 +32,6 @@
 
 <!-- /TOC -->
 
----
-
-`Option<T> `=> `T`
-- `unwrap` moves `T` out of `Some(T)` returning it, or panics.
-- `expect` unwraps, or panics with a message.
-- `unwrap_or` unwraps, or returns `param: T`.
-- `unwrap_or_else` unwraps, or calls `FnOnce()->T`
-- `unwrap_or_default` unwraps, or returns default for `T` type.
-
-`Option<T>` => `Option<&T>`
-- `as_ref` returns `Some(&T)`, or `None::<&T>`.
-- `as_mut` returns `Some(&mut T)`, or `None::<&mut T>`.
-
-
-`Option<T>` => `Option<U>`
-- `map` maps `Option<T>` to `Option<U>` via fn `FnOnce(T)->U`
-- `and` returns supplied param of type `Option<U>`, or None::<U>
-- `and_then` returns result of `FnOnce(T)->Option<U>` on `T`, or None.
-
-`Option<T>` => `U`
-- `map_or` maps `T` with `FnOnce(T)->U`, or returns supplied param.
-- `map_or_else` maps, or returns output of `FnOnce()->U`.
-
-`Option<T>` => `Option<T>`
-- `or` returns `Some(T)`, or param of type `Option<T>`.
-- `or_else` returns `Some(T)`, or result of fn `FnOnce()->Option<T>`
-- `filter` calls `FnOnce(&T)->bool` on `T` and returns `Some(T)` if true.
-
-
-`Option<T>` => `bool`
-- `is_some` returns true if `Some`, else false.
-- `is_none` returns true if `None`, else false.
-
-`Option<T>` => `Iter<T>`
-- `iter` returns iterator over T, or empty iterator.
-- `iter_mut` returns mut iterator over T, or empty iterator.
-
-`Option<T>` => `Result<T, E>`
-- `ok_or` transform `Option<T>` into `Result<T, E>`, E type of param.
-- `ok_or_else` like ok_or, but E is computed from `FnOnce()->E`.
-
-`Option<Result<T, E>>` => `Result<Option<T>, E>`
-- `transpose` optional result into result of option
-
-
-Conventions:
-- `*_or` may return supplied parameter
-- `*_or_else` may calculate return from supplied parameterless closure
-- `*_or_default` may return type's default value
-
-
-
----
-
-```rust
-from Option<T> to:
-
-T
-U
-Option<&T>, Option<&mut T>
-Option<U>
-Iter<T>, IterMut<T>
-Result<T, E>
-bool
-```
-
-
-
-Comparison
-- map:      Some(in) => FnOnce(in)->out       => Some(out), None => None
-- and_then: Some(in) => FnOnce(in)->Some(out) => Some(out), None => None
-- or:       Some(in) => Some(in), None => FnOnce(in)->Some(in) => Some(in)
-
-
----
 
 The following methods are implemented for:
 
@@ -115,10 +40,10 @@ impl<T> Option<T>
 ```
 
 ## is_some
-- Option<T> => bool
-- Returns `true` if `Some`, else `false`.
-- Some(T) => true
-- None => false
+- Checks if Option holds a value
+- `Option<T> => bool`
+- if `Some` returns `true`, else `false`
+- takes self by ref: `&self`
 
 ```rust
 fn is_some(&self) -> bool;
@@ -129,13 +54,11 @@ assert_eq!(x.is_some(), true);
 assert_eq!(y.is_some(), false);
 ```
 
-
 ## is_none
-- Option<T> => bool
-- Returns `true` if `None`, else `false`.
-- Some(T) => false
-- None => true
-
+- Checks if Option holds a value
+- `Option<T> => bool`
+- Returns `true` if `None`, else `false`
+- takes self by ref: `&self`
 
 ```rust
 fn is_none(&self) -> bool;
@@ -144,17 +67,20 @@ let y: Option<u32> = None;
 assert_eq!(y.is_some(), false);
 ```
 
-
 ## as_ref
-- Option<T> => Option<&T>
-- Converts from `Option<T>` to `Option<&T>`.
-- Weakens the inner type, T => &T
-- if Some(T) => Some(&T)
-- if None => None
+- Returns an optional ref to the inner value
+- `Option<T> => Option<&T>`
+  - if `Option::Some::<T>(v)` then `Option::Some::<&T>(&v)`
+  - if `Option::None::<T>`    then `Option::None::<&T>`
+- takes self by ref: `&self`
 
 ```rust
 fn as_ref(&self) -> Option<&T>;
 
+// examples
+let joe = Some("name");
+assert_eq!(joe.as_ref(), Some(&"name"));
+//
 // To convert Option<String> into Option<usize>, preserving the original:
 // since map takes self by value, as_ref is used to make an Option containing
 // a ref to the value inside.
@@ -165,13 +91,12 @@ let num_as_int: Option<usize> = num_as_str.as_ref().map(|n| n.len());
 println!("still can print num_as_str: {:?}", num_as_str);
 ```
 
-
 ## as_mut
-- Option<T> => Option<&mut T>
-- Converts from `Option<T>` to `Option<&mut T>`.
-- Weakens the inner type, T => &mut T
-- if Some(T) => Some(&mut T)
-- if None => None
+- Returns an optional mut ref to the inner value
+- `Option<T> => Option<&mut T>`
+  - if `Option::Some::<T>(v)` then `Option::Some::<&mut T>(&mut v)`
+  - if `Option::None::<T>`    then `Option::None::<&mut T>`
+- takes self by mut ref: `&mut self`
 
 ```rust
 fn as_mut(&mut self) -> Option<&mut T>;
@@ -509,7 +434,7 @@ assert_eq!(x, Some(7));
 
 
 ## get_or_insert_with
-Inserts a value computed from f into the option if it is None, then returns a mutable reference to the contained value.
+If None, inserts a value computed from f into the Option, then returns a mutable reference to the contained value.
 
 ```rust
 fn get_or_insert_with<F>(&mut self, f: F) -> &mut T

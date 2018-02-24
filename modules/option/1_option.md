@@ -1,5 +1,29 @@
 # Option
 
+
+## Debrief
+- Option represents optional value: either present or absent (akin to `null`).
+- Option enum lives in`std::option` module
+- Online docs: [std::option][mods], [std::option::Option][enum]
+- This module also contains structs, used for iteration over Option:
+  - `IntoIter` iterator over the value in Some
+  - `Iter` iterator over a ref to the Some
+  - `IterMut` iterator over a mut ref to the Some
+  - These iterators produce one value (Some) at most.
+- `Option<T>` is a generic type, a wrapper over some type `T`
+- `Option<T>` has 2 variants:
+  - `Some(T)` if the value of type `T` is present, `Option::Some::<T>(T)`
+  - `None` if the value, __of that same type `T`__, is absent.
+  - This means every optional value has its own None: `Option::None::<T>`
+- Option is null-pointer optimized
+  - the size of `T` and `Option<T>` is the same.
+  - `Option<&T>` has the same memory representation as a nullable pointer, and can be passed across FFI boundaries as such.
+
+
+[mods]: https://doc.rust-lang.org/nightly/std/option/
+[enum]: https://doc.rust-lang.org/nightly/std/option/enum.Option.html
+
+
 <!-- TOC -->
 
 - [Debrief](#debrief)
@@ -7,43 +31,18 @@
 - [Option and NULL](#option-and-null)
 - [Optional values](#optional-values)
 - [Nullable pointers](#nullable-pointers)
-- [Option methods by semantics](#option-methods-by-semantics)
+- [Methods by purpose](#methods-by-purpose)
 - [Option methods by ownership](#option-methods-by-ownership)
 
 <!-- /TOC -->
 
-## Debrief
-- Option enum is the star of `std::option` module
-- Online docs: [std::option][mods], [std::option::Option][enum]
-- This module also contains structs, used for iteration:
-  - `IntoIter` iterator over the value in Some
-  - `Iter` iterator over a ref to the Some
-  - `IterMut` iterator over a mut ref to the Some
-  - These iterators produce one value at most.
-- Option represents optional value, either present or absent.  
-  As such it replaces the concept of `null` from other langs.
-- Option is generic wrapper over a type `T`: `Option<T>`
-- `Option<T>` has 2 variants:
-  - `Some(T)` if the value of type `T` is present
-  - `None` if the value, __of that same type `T`__, is absent
-  - each optional type has its own None, `Option::None::<T>`.
-- Option is null-pointer optimized
-  - the size of `T` and `Option<T>` is the same.
-  - suitable for representing nullable pointers: `Option<&T>` has the same memory representation as a nullable pointer, and can be passed across FFI boundaries as such.
-
-
-
-[mods]: https://doc.rust-lang.org/nightly/std/option/
-[enum]: https://doc.rust-lang.org/nightly/std/option/enum.Option.html
-
-
-
-
 
 ## Option enum
 
+Option is not a special language item, if it didn't exist it would be easy to implement it in safe Rust.
+
 ```rust
-// Option enum definition in std::option::Option:
+// Option definition in std::option::Option
 pub enum Option<T> {
     Some(T),
     None
@@ -125,61 +124,6 @@ This usage of `Option` to create safe nullable pointers is so common that Rust d
 
 
 
-
-## Option methods by semantics
-
-Unless otherwise noted, methods are for `impl<T> Option<T>`
-
-```rust
-// identify
-fn is_some(&self) -> bool;
-fn is_none(&self) -> bool;
-
-// weaken T: Option<T> => Option<&T>
-fn as_ref(&self) -> Option<&T>;
-fn as_mut(&mut self) -> Option<&mut T>;
-
-// unwrap to get T
-fn expect(self, msg: &str) -> T;
-fn unwrap(self) -> T;
-fn unwrap_or(self, def: T) -> T;
-fn unwrap_or_else<F>(self, f: F) -> T;
-fn unwrap_or_default(self) -> T; // impl<T: Default> Option<T>
-
-// replace: Some(T) => None, return Option<T>
-fn take(&mut self) -> Option<T>;
-
-// convert: Option<T> => Option<U> by applying fn to the wrapped value.
-// where T is T, &T, &mut T
-fn map<U, F>(self, f: F) -> Option<U>;
-fn map_or<U, F>(self, default: U, f: F) -> U;
-fn map_or_else<U, D, F>(self, default: D, f: F) -> U
-  where D: FnOnce() -> U, F: FnOnce(T) -> U;
-
-// transform: Option<T> => Result<T, E>
-fn ok_or<E>(self, err: E) -> Result<T, E>;
-fn ok_or_else<E, F>(self, err: F) -> Result<T, E>;
-
-// alternate: return Option<U> if Option<T>::None
-fn and<U>(self, optb: Option<U>) -> Option<U>;
-fn and_then<U, F>(self, f: F) -> Option<U>  where F: FnOnce(T)->Option<U>;
-
-fn filter<P>(self, predicate: P) -> Option<T>  where P: FnOnce(&T)->bool;
-
-fn or(self, optb: Option<T>) -> Option<T>;
-fn or_else<F>(self, f: F) -> Option<T>  where F: FnOnce()->Option<T>;
-
-fn get_or_insert(&mut self, v: T) -> &mut T;
-fn get_or_insert_with<F>(&mut self, f: F) -> &mut T  where F: FnOnce()->T;
-
-// iterate
-fn iter(&self) -> Iter<T>;
-fn iter_mut(&mut self) -> IterMut<T>;
-
-// clone: Option<T> => Option<T>
-fn cloned(self) -> Option<T>; // impl<'a, T: Clone> Option<&'a T>
-fn cloned(self) -> Option<T>; // impl<'a, T: Clone> Option<&'a mut T>
-```
 
 
 ## Option methods by ownership

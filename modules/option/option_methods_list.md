@@ -30,7 +30,7 @@ consumes the self argument then, if Some, returns the contained value, otherwise
 
 `and` Returns `None` if the option is `None`, otherwise returns `optb`.
 `and_then` Returns `None` if the option is `None`, otherwise calls `f` with the 
-wrapped value and returns the result. Some langs call this operation *flatmap*.
+wrapped value and returns the result.
 
 `or` Returns the option if it contains a value, otherwise returns optb.
 `or_else` Returns the option if it contains a value, otherwise calls f and returns the result.

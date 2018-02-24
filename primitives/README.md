@@ -1,2 +1,3 @@
 # Primitives
 
+- [Primitives](primitives.md)
