@@ -24,4 +24,3 @@ hubristic taglines:
 - Rust debrief: from summary to particularity
 - Rust, one bullet (point) at the time
 - Notes on Rust accretion
-- Consuming Rust reference
