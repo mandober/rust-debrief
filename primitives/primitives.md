@@ -1,4 +1,8 @@
-# Primitive Types
+# Rust Primitives
+
+Fundamental type category in any language are the primitives. Primitive types are the basic building blocks of a language. In Rust, they are implemented by the compiler, while std implements method on them. Nominal primitives have distinguishing naming style in comparison to other types - a single lowercased word, as opposed to CamelCase naming style of non-primitives. Primitives are stored on the stack.
+
+Rust's primitives: numbers, boolean, character, reference, raw pointer, function pointer, slice, string slice, array, tuple, unit, and never type.
 
 Scalars
 - `bool`  boolean

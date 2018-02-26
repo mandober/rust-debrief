@@ -28,6 +28,7 @@ assert_eq!(20, v.len() * std::mem::size_of::<char>());
 
 let s = String::from("hello");
 
+
 // five elements times one byte per element
 assert_eq!(5, s.len() * std::mem::size_of::<u8>());
 

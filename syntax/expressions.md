@@ -18,14 +18,12 @@
   - it always produces a value
   - it may have side effects
 - Expressions have two main categories:
-  - __place expression__ (lvalue): represents a memory location
-  - __value expression__ (rvalue): represents an actual value
+  - __place expression__ (lvalue): represents a __memory location__
+  - __value expression__ (rvalue): represents an __actual value__
 - Within each expression, sub-expressions may occur in:
   - place expression context
   - value expression context
-- The evaluation of an expression depends on:
-  - its category (place expr or value expr)
-  - the context it occurs within (place or value expr context)
+- The evaluation of an expression depends on its category and the context
 - _Place expressions_ are paths which refer to:
   - local variables
   - static variables
@@ -33,19 +31,37 @@
   - array indexing expressions, `expr[expr]`
   - field access, `expr.f`
   - parenthesized place expressions
-- _Value expressions_: all other expressions
-- __Place expression contexts__:
+- _Value expressions_ are all other expressions.
+- _Place expression contexts_:
   - left operand of (compound) assignment
   - single operand of a unary borrow
   - operand of any implicit borrow
   - discriminant or subject of a `match` expression
   - right side of a `let` statement
-- __Value expression contexts__: all other expression contexts
-- Only these place expressions may be moved out of:
+- _Value expression contexts_ are all other expression contexts.
+- Place expr from which the value (if type is `Sized`) may be moved out of:
   - variables which are not currently borrowed
   - temporary values
   - fields of a place expr, which can be moved out and doesn't impl `Drop`
   - result of derefing expr of `Box` type, which can be moved out of.
+- Place expr must be mutable in order to be:
+  - assigned to
+  - mutably borrowed
+  - implicitly mutably borrowed
+  - bound to a pattern containing `ref mut`
+  - These are mutable place expr, opposing immutable place exp.
+- __Mutable place expression contexts__:
+  - mutable variables (that are not currently borrowed)
+  - mutable static items
+  - temporary values
+  - fields (evaluate subexpr in a mutable place expr context)
+  - dereferences of a raw mutable pointer, `*mut T`
+  - dereference of a variable, or field of a variable, with type `&mut T`.   
+    This is an exception to the requirement of the next rule.
+  - dereferences of a type that implements `DerefMut`, which requires that the value being derefed is evaluated in a mutable place expression context.
+  - array indexing of a type that implements `DerefMut`, which evaluates the value being indexed, but not the index, in mutable place expression context.
+
+
 
 - Expressions:
 
@@ -124,15 +140,7 @@ match place_exp_context {
 
 ## Move and Copy types
 
-When a place expression is evaluated in a value expression context, or is bound by value in a pattern, it denotes the value held in that memory location.
-
-```rust
-let mut x = 8_u8;
-let r = &mut x;
-*r = 6;
-```
-
-If the type of that value implements `Copy`, then the value will be copied. In the remaining situations, if that type is `Sized`, then it may be possible to move the value.
+When a place expression is evaluated in a value expression context, or is bound by value in a pattern, it denotes the value held in that memory location. If the type of that value implements `Copy`, then the value will be copied. Otherwise, if that type is `Sized`, then it may be possible to move the value.
 
 Only these place expressions may be moved out of:
 - Variables which are not currently borrowed
@@ -150,7 +158,7 @@ Place expression must be mutable in order to be:
 - assigned to
 - mutably borrowed
 - implicitly mutably borrowed
-- bound to a pattern containing ref mut
+- bound to a pattern containing `ref mut`
 
 We call these **mutable place expressions**.
 Other place expressions are called **immutable place expressions**.
@@ -169,7 +177,7 @@ These expressions can be mutable place expression contexts:
 
 ## Temporary lifetimes
 
-When using a value expression in most place expression contexts, a temporary unnamed memory location is created initialized to that value and the expression evaluates to that location instead, except if promoted to `'static`. 
+When using a value expression in most place expression contexts, a temporary unnamed memory location is created initialized to that value and the expression evaluates to that location instead, except if promoted to `'static`.
 
 Promotion of a value expression to a `'static` slot occurs when the expression could be written in a constant and then borrowed; then dereferencing that borrow where the expression was originally written, without changing the runtime behavior.
 
@@ -201,7 +209,7 @@ let x = if foo(&temp()) { bar() } else { baz() };
 let x = if temp().must_run_bar { bar() } else { baz() };
 ```
 
-3. The expression `temp()` is a value expression. As the temporary is created in the condition expression of an `if`, it will be freed at the end of the condition expression; in this example before the call to bar or baz is made.
+3. The expression `temp()` is a value expression. As the temporary is created in the condition expression of an `if`, it will be freed at the end of the condition expression; in this example before the call to `bar` or `baz` is made.
 
 4. Here we assume the type of `temp()` is a struct with a boolean field `must_run_bar`. As the previous example, the temporary corresponding to `temp()` will be freed at the end of the condition expression.
 

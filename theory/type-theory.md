@@ -25,39 +25,18 @@ A "pair of integers" is a type; a "pair of integers where the second is greater 
 
 A dependent function's return type may depend on the value (not just type) of its parameter. For example, a function that takes a positive integer `n` and returns an array of length `n`.
 
-
-
-
-
-
-
-
-
+---
 
 The type returned by a function may depend upon the argument to the function.
 
 Dependent types generalize the normal function space to model functions whose output type varies on their input. While normal function have assertion:  
 `fn() int -> int`
 
-
-
 For example, writing `Vec(R, n)` for the type of n-tuples of real numbers (R) and N for the type of natural numbers,
 
 ∏ Vec(R, n)
 n:N
 
-
-
-
-
-
-
-
-
-
-
-
-
 ---
-https://www.wikiwand.com/en/Type_theory
 
+https://www.wikiwand.com/en/Type_theory

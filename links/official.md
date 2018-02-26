@@ -1,15 +1,16 @@
-# Docs
+# Links: official
 
+- [Rust lang homepage][rust]
+- [Rust lang repo][repo]
+- API docs: [stable][apis], [nightly][apin]
 
-## Language
-
-- [Rust Homepage][rust]
-- [GitHub Issues][rlgi]
-- Rust API: [stable][sapi], [nightly][napi], [repo][rapi]
 - Rust Reference: [stable][sref], [nightly][nref], [repo][rref]
 - Rustonomicon: [stable][snom], [nightly][nnom], [repo][rnom]
 - Unstable Book: [stable][suns], [nightly][nuns], [repo][runs]
 - Rust by Example: [stable][suns], [nightly][nuns], [repo][runs]
+- [GitHub Issues][rlgi]
+
+> Note: Rust's 3 channels of distribution (stable, nightly and beta) plus release (version) specific tags, coupled with the fact that the docs are build from source files, result in numerous possible URLs of official docs and other resources.
 
 
 https://doc.rust-lang.org/1.9.0/book/
@@ -42,9 +43,9 @@ https://doc.rust-lang.org/1.9.0/book/
 
 
 [rust]: https://www.rust-lang.org
-[sapi]: https://doc.rust-lang.org/std/
-[napi]: https://doc.rust-lang.org/nightly/std/
-[rapi]: https://github.com/rust-lang/rust
+[repo]: https://github.com/rust-lang/rust
+[apis]: https://doc.rust-lang.org/std/
+[apin]: https://doc.rust-lang.org/nightly/std/
 
 [sref]: https://doc.rust-lang.org/reference
 [nref]: https://doc.rust-lang.org/nightly/reference

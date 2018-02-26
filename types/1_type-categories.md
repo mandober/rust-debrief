@@ -18,13 +18,13 @@
 
 <!-- /TOC -->
 
-Rust's types can be classified in many categories by different criteria.
+Rust's types can be classified in many categories by different properties.
 
 ## Nominal vs structural
-Types are either nominal, meaning they have both, a proper type name and a  colloquial name, with latter being used in type annotations (e.g. `bool`, `u8`, `char`), or they are structural, without a proper type name, whose type is determined from structural elements. Naturally, structural types have colloquial names, so we can talk about array, tuple, references, raw pointers, slice, unit, and never type. All structural types are primitives.
+Types are either nominal, meaning they have both, a proper type name and a  colloquial name, with latter being used in type annotations (e.g. `bool`, `u8`, `char`), or they are structural, without a proper type name, whose type is determined from structural elements. Naturally, structural types have colloquial names, so we can talk about array, tuple, references, raw pointers, slice, unit, and never type.
 
 ## Primitive types
-The basic type category in any language is primitives, the types that make the basic building blocks of the language. In Rust, they are implemented by the compiler and they are stored on the stack. They have distinguishing naming style in comparison to other types: a single lowercased word as opposed to CamelCase naming style of non-primitives. The Rust's Core library, `libcore` in `core` crate, implements methods on primitives, and they are also re-exported (and accessible) through `std`. Rust's primitives: numbers, boolean, character, reference, raw pointer, function pointer, slice, string slice, array, tuple, unit, and never type.
+Fundamental type category in any language are the primitives. Primitive types are the basic building blocks of a language. In Rust, they are implemented by the compiler, while std implements method on them. Nominal primitives have distinguishing naming style in comparison to other types - a single lowercased word, as opposed to CamelCase naming style of non-primitives. Rust's primitives: numbers, boolean, character, reference, raw pointer, function pointer, slice, string slice, array, tuple, unit, and never type.
 
 ## Scalar types
 Scalars are the most basic primitives, they cannot be divided further and they don't depend on other types. They are atomic units: numbers, booleans and characters. Operations on scalar primitive types are the fastest language constructs there are. Integer addition, for example, can be performed as a single machine instruction.
@@ -36,22 +36,14 @@ Compound (or aggregate) types are build from heterogeneous or homogeneous groupi
 Unlike concrete types (e.g. boolean, character), generic types have a type parameter, which will be provided when needed (when used). For example, a vector, `Vec<T>`, has a type parameter, `T`, that is a placeholder for any concrete type, which will be specified when a vector is constructed. Among the primitives, array, tuple, pointer types are generic; Majority of non-primitives are generic. Generic types are like type constructors: they take some inputs and produce a new type. For example, `&` operator takes a value of some type and a lifetime and produces a sharable reference.
 
 ## Copy vs Move types
-Types that implement Copy trait have copy semantics, other types have move semantics. Copy types are scalars, sharable reference, 
-
+Types that implement Copy trait have copy semantics, other types have move semantics. Copy types: scalars, sharable reference, 
 
 ## sized vs unsized
-
 Smart pointers
 pointer types
 
-
 ## Dependent
-- vector
-- array
-- pointer types (reference, raw pointer, function pointer, slice, string slice)
-
-
-
+Functions, closures
 
 ## Dynamically-sized types
 - slice
@@ -66,7 +58,6 @@ pointer types
 - raw pointers
 - smart pointers
 
-
 ## Algebraic types
 sum (enum) and product (struct) types
 
@@ -75,13 +66,11 @@ sum (enum) and product (struct) types
 - function pointer
 - closure type
 
-
 ## Data structures
 - Sequences: `Vec`, `VecDeque`, `LinkedList`
 - Maps: `HashMap`, `BTreeMap`
 - Sets: `HashSet`, `BTreeSet`
 - other: `BinaryHeap`
-
 
 # Smart pointers
 - `String`

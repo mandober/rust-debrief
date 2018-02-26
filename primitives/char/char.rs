@@ -1,4 +1,5 @@
-// ! char
+//! Collection types
+
 
 /**
 The char type represents a single UNICODE SCALAR VALUE.

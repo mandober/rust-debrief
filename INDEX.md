@@ -1,5 +1,29 @@
 # Index
 
+
+- [data][01]
+- [data type][01]
+- [static type system][01]
+- [dynamic type system][01]
+- [weakly typed][01]
+- [strongly typed][01]
+- [type checking][01]
+- [type identifier][01]
+- [type inference][01]
+- [type error][01]
+- [type safety][01]
+- [type system][01]
+- [typing][01]
+
+
+
+[01]: theory/type-systems.md
+
+
+
+
+
+
 - algebraic data types
 - attributes
 - binding
@@ -13,7 +37,7 @@
 - crates
 - data alignment
 - data types
-- dinamically sized types
+- dynamically sized types
 - empty types
 - enum definitions
 - extern blocks
@@ -67,7 +91,7 @@
 - pointer
 - static dispatch
 - dispatch
-- dinamic dispatch
+- dynamic dispatch
 - trait object
 - token
 - statement

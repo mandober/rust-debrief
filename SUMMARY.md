@@ -3,15 +3,12 @@
 * [Rust Debrief](README.md)
 * [PAGES](PAGES.md)
 
-
 ## Theory
 - [Type Systems](theory/type-systems.md)
 - [Data Types](theory/data-types.md)
 
-
 ## Core
 - [The compiler](core/compiler.md)
-
 
 ## Syntax
 - [Attributes](syntax/attributes.md)
@@ -28,16 +25,14 @@
 - [Operators](syntax/operators.md)
 - [Syntactic elements and notations](syntax/syntax.md)
 
-
 ## Semantics
 - [Lifetimes](semantics/lifetimes/1_lifetimes.md)
 - [Visibility](semantics/visibility.md)
 - [Iterators](semantics/iterators.md)
 
-
 ## Primitives
 - [Slices](primitives/slices/slices.md)
-
+- [Character](primitives/char/char.md)
 
 ## Types
 - [Type categories](types/1_type-categories.md)
@@ -45,23 +40,21 @@
 - [Never](types/type_never.md)
 - [Top](types/type_top.md)
 
-
 ## Modules
 - [Box](modules/boxed/box.md)
 - [Option](modules/option/README.md)
 
-
 ## Items
 - [Lang Items](items/README.md)
-
 
 ## Traits
 - [Index](traits/README.md)
 
-
 ## Appendix
 - [Terminology](appendix/terminology.md)
 - [Abbreviations](appendix/abbreviations.md)
-- [Links](appendix/links.md)
 - [PAGES](PAGES.md)
 - [SUMMARY](SUMMARY.md)
+
+## Links
+- [Links](links/README.md)
