@@ -1,4 +1,4 @@
 # Primitives
 
 - [Primitives](primitives.md)
-- [Character](char/char.md)
+- [Characters](char/char.md)
