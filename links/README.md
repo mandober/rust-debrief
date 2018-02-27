@@ -1,13 +1,12 @@
 # Links
 
-
-- [Official](official.md)
-
 - [Articles](articles.md)
 - [Books](books.md)
 - [Community](community.md)
 - [Crates](crates.md)
-- [The Rust Project](official.md)
+- [Dev](dev.md)
+- [Misc](misc.md)
+- [Official](official.md)
 - [Resources](resources.md)
 - [Tools](tools.md)
-- [Development environment](dev.md)
+- [WebAssembly](wasm.md)

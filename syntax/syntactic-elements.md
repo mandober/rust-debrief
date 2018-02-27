@@ -1,27 +1,28 @@
-# Syntactic elements and notations
+# Syntactic elements
 
 <!-- TOC -->
 
+- [Symbols](#symbols)
 - [Arithmetic](#arithmetic)
 - [Comparison](#comparison)
 - [Bitwise](#bitwise)
 - [Logical](#logical)
 - [Patterns](#patterns)
 - [Operators](#operators)
-- [Misc](#misc)
+- [Literals](#literals)
 - [Paths](#paths)
 - [Generics](#generics)
 - [Constraints](#constraints)
-- [Macros and attributes](#macros-and-attributes)
-- [Special types](#special-types)
 - [Parenthesis and tuples](#parenthesis-and-tuples)
-- [Notations](#notations)
 - [Comments](#comments)
-- [Symbols](#symbols)
-- [Operators and remaining symbols](#operators-and-remaining-symbols)
+- [Macros and attributes](#macros-and-attributes)
 
 <!-- /TOC -->
 
+
+## Symbols
+
+`::  ->  #  [  ]  (  )  {  }  ,  ;`
 
 ## Arithmetic
 - `-`  negation: `- expr`. Trait `Neg`
@@ -72,8 +73,6 @@
 * `|`   pattern alternatives: `pat | pat`
 * `@`   pattern binding: `ident @ pat`
 * `_`   "ignored" pattern (no actual binding), catch-all: `Some(_)`
-* `_`   decorative number separator: `1_000_usize`
-* `_`   inferable part of type annotation: `Vec<_>`
 
 
 ## Operators
@@ -99,21 +98,31 @@
 - `?` Error propagation, `expr?`, early return on `Err(_)`, or unwraps
 
 
-## Misc
-- named lifetime: `'ident` (`'a`)
-- loop label: `'ident` (`'loop`)
-- numeric literal of specific type: `…u8`, `…i32`, `…f64`, `…usize`, …
+## Literals
+
+- `'ident` named lifetime: `'inner`
+- `'ident` loop label: `'loop`
+- numeric literal type suffix: `…u8`, `…i32`, `…f64`, `…usize`, …
+- character literal: `'…'`
 - string literal: `"…"`
 - raw string literal: `r"…"`, `r#"…"#`, `r##"…"##`, …
 - byte string literal, constructs a `[u8]` instead of a string: `b"…"`
 - raw byte string literal: `br"…"`, `br#"…"#`, `br##"…"##`, …
-- character literal: `'…'`
 - ASCII byte literal: `b'…'`
-- closure: `|…| expr`
+- `|…| expr` closure: `|x, y| x + y`
+- `_` decorative number separator: `1_000_usize`
+- `!` never type (see diverging functions)
+- `{…}`: block expression.
+- `Type {…}`: `struct` literal.
+- `[…]`: array literal.
+- `[expr; len]`: array literal containing `len` copies of `expr`.
+- `[type; len]`: array type containing `len` instances of `type`.
+- `expr[expr]`: collection indexing. trait:`Index`, `IndexMut`
+- `expr[..]`, `expr[a..]`, `expr[..b]`, `expr[a..b]`: collection indexing pretending to be collection slicing, using `Range`, `RangeFrom`, `RangeTo`, `RangeFull` as the "index".
 
 
 ## Paths
-* `ident::ident`: path
+* `ident::ident` path: `std::mem`
 * `::path`: absolute path
 * `self::path`: path relative to the current module
 * `super::path`: path relative to the parent of the current module
@@ -125,14 +134,15 @@
 
 
 ## Generics
-* `path<…>`: type parameter, `Vec<u8>`
-* `path::<…>`, `method::<…>`: generic type params, fn, or method in an expr: `"42".parse::<i32>()`
+* `path<…>` Generic Type Parameter (GTP): `Vec<u8>`
+* `path::<…>`, `method::<…>`: GTP in fn: `"42".parse::<i32>()`
 * `fn ident<…> …`: define generic function.
 * `struct ident<…> …`: define generic structure.
 * `enum ident<…> …`: define generic enumeration.
 * `impl<…> …`: define generic implementation.
 * `for<…> type`: higher-ranked lifetime bounds.
-* `type<ident=type>`: generic type where one or more associated types have specific assignments, `Iterator<Item=T>`
+* `type<ident=type>` GTP where one or more associated types have specific assignments: `Iterator<Item=T>`
+- `_` inferred (inferable) part of type annotation: `Vec<_>`
 
 
 ## Constraints
@@ -142,18 +152,6 @@
 * `'b: 'a`: generic lifetime `'b` must outlive lifetime `'a`.
 * `T: ?Sized`: allow generic type param to be dynamically-sized type.
 * `'a + trait`, `trait + trait`: compound type constraint.
-
-
-## Macros and attributes
-* `#[meta]`: outer attribute.
-* `#![meta]`: inner attribute.
-* `$ident`: macro substitution.
-* `$ident:kind`: macro capture.
-* `$(…)…`: macro repetition.
-
-
-## Special types
-* `!`: never type (diverging functions)
 
 
 ## Parenthesis and tuples
@@ -168,16 +166,6 @@
 * `expr.0`, `expr.1`, …: tuple indexing
 
 
-## Notations
-* `{…}`: block expression.
-* `Type {…}`: `struct` literal.
-* `[…]`: array literal.
-* `[expr; len]`: array literal containing `len` copies of `expr`.
-* `[type; len]`: array type containing `len` instances of `type`.
-* `expr[expr]`: collection indexing. trait:`Index`, `IndexMut`
-* `expr[..]`, `expr[a..]`, `expr[..b]`, `expr[a..b]`: collection indexing pretending to be collection slicing, using `Range`, `RangeFrom`, `RangeTo`, `RangeFull` as the "index".
-
-
 ## Comments
 * `//`: line comment.
 * `//!`: inner line doc comment.
@@ -187,17 +175,9 @@
 * `/**…*/`: outer block doc comment.
 
 
-## Symbols
-
-```
-::  ->  #  [  ]  (  )  {  }  ,  ;
-```
-
-## Operators and remaining symbols
-
-```
-! != % %=
-```
-
-- `!` denotes macro expansion
-
+## Macros and attributes
+* `#[meta]`: outer attribute.
+* `#![meta]`: inner attribute.
+* `$ident`: macro substitution.
+* `$ident:kind`: macro capture.
+* `$(…)…`: macro repetition.

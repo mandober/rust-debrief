@@ -1,4 +1,4 @@
-# Trait Implementations
+# char trait implementations
 
 `char` implements these traits
 

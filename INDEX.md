@@ -14,16 +14,6 @@
 - [type safety][01]
 - [type system][01]
 - [typing][01]
-
-
-
-[01]: theory/type-systems.md
-
-
-
-
-
-
 - algebraic data types
 - attributes
 - binding
@@ -147,3 +137,6 @@
 - Mutability
 - Overloading
 - Unsized Types
+
+
+[01]: theory/type-systems.md

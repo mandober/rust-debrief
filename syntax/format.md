@@ -48,4 +48,12 @@ println!("{:+007.2}", dec); // +003.20
 //  +00 = literal text
 //    7 = total character width of output
 //   .2 = 2 digits after decimal point
+
+format!("Hello");                 // => "Hello"
+format!("Hello, {}!", "world");   // => "Hello, world!"
+format!("The number is {}", 1);   // => "The number is 1"
+format!("{:?}", (3, 4));          // => "(3, 4)"
+format!("{value}", value=4);      // => "4"
+format!("{} {}", 1, 2);           // => "1 2"
+format!("{:04}", 42);             // => "0042" with leading zeros
 ```

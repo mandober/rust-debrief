@@ -1,96 +1,51 @@
 # PAGES
+<!-- TOC -->
 
-Theory
+- [Theory](#theory)
+- [Rust Core](#rust-core)
+- [Syntax](#syntax)
+- [Semantics](#semantics)
+- [Primitives](#primitives)
+- [Types](#types)
+- [Modules](#modules)
+- [Traits](#traits)
+- [Items](#items)
+- [Appendix](#appendix)
+- [Links](#links)
+
+<!-- /TOC -->
+
+
+## Theory
 - [Type Systems](theory/type-systems.md)
-- [Data Types](theory/data-types.md)
-
-Core
-- [The compiler](core/compiler.md)
-
-Syntax
-- [Attributes](syntax/attributes.md)
-- [Comments](syntax/comments.md)
-- [Naming conventions](syntax/conventions.md)
-- [Expressions](syntax/expressions.md)
-- [Grammar](syntax/grammar.md)
-- [Keywords](syntax/keywords.md)
-- [Literals](syntax/literals.md)
-- [Macros](syntax/macros.md)
-- [Operators](syntax/operators.md)
-- [Statements](syntax/statements.md)
-- [Syntactic notations](syntax/syntax.md)
-
-Semantics
-- [Iterators](semantics/iterators.md)
-- [Visibility](semantics/visibility.md)
-
-Primitives
-- [Slices](primitives/slices/slices.md)
-
-Types
-- [Scalars](types/scalars.md)
-- [Unit](types/type_unit.md)
-- [Never](types/type_never.md)
-- [Top](types/type_top.md)
-
-Modules
-- [Box](modules/boxed/box.md)
-- [Option](modules/option/README.md)
-  - [Option module](modules/option/module.md)
-  - [Option enum](modules/option/option.md)
-  - [Option methods](modules/option/option_methods.md)
-  - [Option traits](modules/option/option_traits.md)
-
-Items
-- [Lang Items](items/README.md)
-
-Traits
-- [Index](traits/README.md)
-
-Appendix
-- [Terminology](appendix/terminology.md)
-- [Abbreviations](appendix/abbreviations.md)
-- [Links](appendix/links.md)
-- [PAGES](PAGES.md)
-- [SUMMARY](SUMMARY.md)
-
-
-
----
-
-Sections:
-- Theory
-- Types
-- Primitives
-- Modules
-- Items
-- Syntax
-- Semantics
-- Core
-- Appendix
-
-
----
-
-Theory
-- Type Systems
-  - Data Types
-  - Algebraic Data Types
-- Memory management
-  - Address space
-  - Pointers
-  - Alignment
-  - The Stack
-  - The Heap
+  - [Data Types](theory/data-types.md)
+  - Type class
+  - Algebraic Data Types (ADT)
 - Binary relations
   - Partial equality
   - Partial ordering
-- Paradigms
+- [Unicode](theory/unicode.md)
+- Memory management
+  - Pointers
+  - Address space
+  - Alignment
+  - The Stack
+  - The Heap
+- Programming Paradigms
+  - Inheritance
+  - Interface
   - Polymorphism
+  - Generics
+  - Reflection
+- Low Level
+  - ISA, x86
+  - Compilers, IR, Object code
 
 
-Core
+## Rust Core
 - The Rust Language
+- [The compiler](core/compiler.md)
+- HIR, MIR, LLVM IR
 - Internals
 - Feature Gates
 - Libraries
@@ -104,34 +59,24 @@ Core
   - rustdoc
 - Third Party Crates
 
-Types
-- Unit type
-- Never type
-- Composite types
-- Dynamically Sized Types
-- Zero Sized Types
-- Empty Types
 
+## Syntax
+- [Attributes](syntax/attributes.md)
+- [Comments](syntax/comments.md)
+- [Constraints](syntax/syntax/constraints.md)
+- [Conventions](syntax/conventions.md)
+- [Expressions](syntax/expressions.md)
+- [Control flow](syntax/flow.md)
+- [Formatting output](syntax/format.md)
+- [Fully Qualified Syntax](syntax/fully-qualified-syntax.md)
+- [Grammar](syntax/grammar.md)
+- [Keywords](syntax/keywords.md)
+- [Literals](syntax/literals.md)
+- [Macros](syntax/macros.md)
+- [Operators](syntax/operators.md)
+- [Syntactic elements](syntactic-elements.md)
 
-Primitives
-- Scalars
-  - booleans
-  - integers
-  - machine dependent integers
-  - floats
-  - characters
-- Aggregate types
-  - Array
-  - Tuple
-- Dynamically-sized types
-  - Slice
-  - String slice
-- Pointer types
-  - references
-  - raw pointers
-  - function pointers
-
-Semantics
+## Semantics
 - Ownership
 - Binding
 - Move
@@ -141,21 +86,61 @@ Semantics
 - Functions
 - Pattern matching
 - Lifetimes
+- [Iterators](semantics/iterators.md)
+- [Visibility](semantics/visibility.md)
 
-Modules
+## Primitives
+- Scalars
+  - booleans
+  - integers
+  - machine dependent integers
+  - floats
+  - characters
+- Array
+- Tuple
+- Pointer types
+  - references
+  - raw pointers
+  - function pointers
+  - [Slices](primitives/slices/slices.md)
+    - slice
+    - string slice
+
+
+## Types
+- [Categories](types/type-categories.md)
+- [Unit](types/type_unit.md)
+- [Never](types/type_never.md)
+- Composite types
+- Dynamically Sized Types
+- Zero Sized Types
+- Empty Types
+- [Top](types/type_top.md)
+
+
+## Modules
 - methods on primitives
-- composite types and methods
+- types and methods
+  - [Option](modules/option/README.md)
+  - [Box](modules/boxed/box.md)
   - Option
   - Result
   - Vec
   - Box
-- containers and collections
+- collections
 - traits
 - env and IO
 - other modules
 
+## Traits
+- [Index](traits/README.md)
+- [Index by module](traits/traits-by-mod.md)
+- [Derivable traits](traits/traits-derive.md)
+- [Display](traits/display.md)
 
-Items
+
+## Items
+- [Lang Items](items/README.md)
 - extern crate declarations
 - extern blocks
 - use declarations
@@ -170,11 +155,15 @@ Items
 - trait definitions
 - implementations
 
-
-
-Appendix
-- Terminology
-- Links
+## Appendix
 - Glossary
-- Bibliography
-- Index
+- [Terminology](appendix/terminology.md)
+- [Abbreviations](appendix/abbreviations.md)
+- [Pages](PAGES.md)
+- [Index](INDEX.md)
+
+## Links
+- [Links](links/links.md)
+  - official
+  - community
+  - resources

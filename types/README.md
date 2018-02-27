@@ -1,3 +1,3 @@
 # Types
 
-- [Type categories](1_type-categories.md)
+- [Type categories](type-categories.md)
