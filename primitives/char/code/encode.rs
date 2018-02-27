@@ -1,4 +1,4 @@
-// ! encode_*
+//! char Methods: encode_*
 
 fn encode_utf8(self, dst: &mut [u8]) -> &mut str;
 fn encode_utf16(self, dst: &mut [u16]) -> &mut [u16];

@@ -1,4 +1,4 @@
-// ! `is_*` methods
+//! char Methods: is_*
 
 fn is_alphabetic(self) -> bool;
 fn is_uppercase(self) -> bool;

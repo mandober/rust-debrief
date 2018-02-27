@@ -8,7 +8,7 @@ Assert
 - `debug_assert_eq` asserts 2 expressions are equal
 - `debug_assert_ne` asserts 2 expressions are not equal
 
-Write
+Format
 - `print`           printing to stout
 - `println`         to stout, with newline i.e. LINE FEED (\n, U+000A)
 - `eprint`          printing to sterr
@@ -27,8 +27,8 @@ Source
 Utility
 - `unreachable`     indicating unreachable code
 - `unimplemented`   marks unfinished code
+- `panic`           the entry point for panic of Rust threads
 - `vec`             creates a vector
-- `try`             deprecated error handling (use `?` instead)
 - `concat`          concatenates literals into a static string slice
 - `stringify`       stringifies its argument
 - `include`         parse a file as an expression or an item
@@ -37,8 +37,8 @@ Utility
 - `env`             inspect an environment variable at compile time
 - `option_env`      optionally inspect an env var at compile time
 - `thread_local`    thread local storage key of `std::thread::LocalKey`type
-- `concat_idents`   concatenate identifiers into one. [LAB]
-- `select`          select an event from a number of receivers. [LAB]
+- `concat_idents`   concatenate identifiers into one. **LAB**
+- `select`          select an event from a number of receivers. **LAB**
 - `cfg`             boolean evaluation of conf flags
 - `compile_error`   unconditional compilation failure
-- `panic`           the entry point for panic of Rust threads
+- `try`             error handling. <kbd>deprecated</kbd> (use `?` instead)

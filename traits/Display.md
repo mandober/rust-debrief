@@ -1,16 +1,18 @@
-# Trait `std::fmt::Display`
-1.0.0
-https://doc.rust-lang.org/std/fmt/trait.Display.html
+# Display trait 
+
+- Format trait for an empty format, `{}`.
+- `std::fmt::Display`, since 1.0.0
+- online [doc](https://doc.rust-lang.org/std/fmt/trait.Display.html)
+
+
+Display is similar to Debug, but Display is for user-facing output, and so cannot be derived.
 
 ```rust
 pub trait Display {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> Result<(), Error>;
 }
 ```
-Format trait for an empty format, `{}`.
 
-Display is similar to Debug, but Display is for 
-user-facing output, and so cannot be derived.
 
 
 ## Implementing Display on a type

@@ -1,4 +1,4 @@
-// ! `to_*`
+//! char Methods: to_*
 
 fn to_lowercase(self) -> ToLowercase; // Returns an iterator
 fn to_uppercase(self) -> ToUppercase; // Returns an iterator

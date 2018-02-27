@@ -1,6 +1,6 @@
-fn escape_unicode(self) -> EscapeUnicode[src]
-[−]
+//! char Methods: escape_*
 
+fn escape_unicode(self) -> EscapeUnicode
 Returns an iterator that yields the hexadecimal Unicode escape of a character as chars.
 
 This will escape characters with the Rust syntax of the form \u{NNNNNN} where NNNNNN is a hexadecimal representation.

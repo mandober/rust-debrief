@@ -1,5 +1,7 @@
-fn len_utf8(self) -> usize[src]
-[−]
+//! char Methods: len_*
+
+
+fn len_utf8(self) -> usize
 
 Returns the number of bytes this char would need if encoded in UTF-8.
 

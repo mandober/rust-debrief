@@ -1,19 +1,18 @@
-# std::fmt
+# fmt module
 
-Module [std::fmt](https://doc.rust-lang.org/std/fmt/)
+- Utilities for formatting and printing Strings
+- Online doc: [`std::fmt`](https://doc.rust-lang.org/std/fmt/)
+- Contains the runtime support for `format!` macro
+- `format!`is implemented in the compiler to emit calls to this module in order to format its args at runtime into strings.
 
-Utilities for formatting and printing Strings
 
-This module contains the runtime support for the format! syntax extension. 
-This macro is implemented in the compiler to emit calls to this module in order to format 
-arguments at runtime into strings.
 
 ## Usage
 
-The format! macro is intended to be familiar to those coming from C's printf/fprintf 
-functions or Python's str.format function.
+The `format!` macro's first argument is a format string i.e. a string literal as required by the compiler; it cannot be a variable. The compiler will parse the format string and determine if the list of args is fit to be passed to this format string.
 
-Some examples of the format! extension are:
+Some examples of the `format!` extension are:
+
 ```rust
 format!("Hello");                 // => "Hello"
 format!("Hello, {}!", "world");   // => "Hello, world!"
@@ -24,11 +23,7 @@ format!("{} {}", 1, 2);           // => "1 2"
 format!("{:04}", 42);             // => "0042" with leading zeros
 ```
 
-From these, you can see that the *first argument is a format string*. 
-It is required by the compiler for this to be a *string literal*; 
-it cannot be a variable passed in (in order to perform validity checking). 
-The compiler will then parse the format string and determine if the list of arguments 
-provided is suitable to pass to this format string.
+
 
 ### Positional parameters
 

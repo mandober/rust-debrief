@@ -8,7 +8,7 @@
 - [Compound types](#compound-types)
 - [Generic vs concrete](#generic-vs-concrete)
 - [Copy vs Move types](#copy-vs-move-types)
-- [sized vs unsized](#sized-vs-unsized)
+- [Sized vs Unsized](#sized-vs-unsized)
 - [Dependent](#dependent)
 - [Dynamically-sized types](#dynamically-sized-types)
 - [Pointer types](#pointer-types)
@@ -36,11 +36,24 @@ Compound (or aggregate) types are build from heterogeneous or homogeneous groupi
 Unlike concrete types (e.g. boolean, character), generic types have a type parameter, which will be provided when needed (when used). For example, a vector, `Vec<T>`, has a type parameter, `T`, that is a placeholder for any concrete type, which will be specified when a vector is constructed. Among the primitives, array, tuple, pointer types are generic; Majority of non-primitives are generic. Generic types are like type constructors: they take some inputs and produce a new type. For example, `&` operator takes a value of some type and a lifetime and produces a sharable reference.
 
 ## Copy vs Move types
-Types that implement Copy trait have copy semantics, other types have move semantics. Copy types: scalars, sharable reference, 
+Types that implement Copy trait have copy semantics, other types have move semantics. Copy trait marks the types that are sized and completely (all their parts) stored on the stack such as scalars. 
 
-## sized vs unsized
+
+## Sized vs Unsized
+
 Smart pointers
 pointer types
+
+Getting size:
+
+```rust
+let s = String::from("love: ❤️");
+assert_eq!(12, s.len() * std::mem::size_of::<u8>());
+let v: Vec<char> = s.chars().collect();
+assert_eq!(32, v.len() * std::mem::size_of::<char>());
+```
+
+
 
 ## Dependent
 Functions, closures
