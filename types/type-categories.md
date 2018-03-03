@@ -3,7 +3,7 @@
 <!-- TOC -->
 
 - [Nominal vs structural](#nominal-vs-structural)
-- [Primitive types](#primitive-types)
+- [Primitive vs std types](#primitive-vs-std-types)
 - [Scalar types](#scalar-types)
 - [Compound types](#compound-types)
 - [Generic vs concrete](#generic-vs-concrete)
@@ -23,8 +23,10 @@ Rust's types can be classified in many categories by different properties.
 ## Nominal vs structural
 Types are either nominal, meaning they have both, a proper type name and a  colloquial name, with latter being used in type annotations (e.g. `bool`, `u8`, `char`), or they are structural, without a proper type name, whose type is determined from structural elements. Naturally, structural types have colloquial names, so we can talk about array, tuple, references, raw pointers, slice, unit, and never type.
 
-## Primitive types
-Fundamental type category in any language are the primitives. Primitive types are the basic building blocks of a language. In Rust, they are implemented by the compiler, while std implements method on them. Nominal primitives have distinguishing naming style in comparison to other types - a single lowercased word, as opposed to CamelCase naming style of non-primitives. Rust's primitives: numbers, boolean, character, reference, raw pointer, function pointer, slice, string slice, array, tuple, unit, and never type.
+## Primitive vs std types
+Fundamental type category in any language are the primitives. Primitive types are the basic building blocks of a language. In Rust, they are implemented by the compiler, while std implements method on them. Some primitives have their own module in std with additional resources (math, constants, etc.).
+
+Nominal primitives have distinguishing naming style in comparison to other types - a single lowercased word, as opposed to CamelCase naming style of non-primitives. Rust's primitives: numbers, boolean, character, reference, raw pointer, function pointer, slice, string slice, array, tuple, unit, and never type. Non-primitives are implemented by various modules in the Standard Library.
 
 ## Scalar types
 Scalars are the most basic primitives, they cannot be divided further and they don't depend on other types. They are atomic units: numbers, booleans and characters. Operations on scalar primitive types are the fastest language constructs there are. Integer addition, for example, can be performed as a single machine instruction.

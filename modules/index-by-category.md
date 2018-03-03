@@ -17,7 +17,7 @@
 - [`vec`](vec/vec.md) vector
 
 
-## Ops
+## Operations
 - `ascii`   ASCII operations
 - `borrow`  working with borrowed data
 - `clone`   cloning
@@ -33,7 +33,7 @@
 - `thread`  native threads
 - `time`    working with time
 
-## Env
+## Environment
 - `env`     process's environment
 - `fs`      filesystem
 - `io`      I/O functionality
@@ -43,7 +43,7 @@
 - `process` working with processes
 
 
-## Core
+## System
 - `ffi`     FFI bindings
 - `heap`    working with heap data. **LAB**
 - `intrinsics` compiler intrinsics. **LAB**
@@ -53,7 +53,7 @@
 - `raw`     compiler built-ins. **LAB**
 
 
-## Num
+## Numbers
 - `f32`     f32 constants
 - `f64`     f64 constants
 - `i8`      8-bit signed integer

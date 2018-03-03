@@ -1,6 +1,25 @@
-# Programming Concepts
+# Theory
 
 - [Type Systems](type-systems.md)
-- [Data Types](data-types.md)
-
-
+  - [Data Types](data-types.md)
+  - Type class
+  - Algebraic Data Types (ADT)
+- [Binary relations](binary-relations.md)
+  - Partial equality
+  - Partial ordering
+- [Unicode](unicode.md)
+- Memory management
+  - Pointers
+  - Address space
+  - Alignment
+  - The Stack
+  - The Heap
+- Programming Paradigms
+  - Inheritance
+  - Interface
+  - Polymorphism
+  - Generics
+  - Reflection
+- Low Level
+  - ISA, x86
+  - Compilers, IR, Object code

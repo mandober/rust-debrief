@@ -1,10 +1,11 @@
-# Character
+# Character primitive
 
 - `char` primitive is a Unicode Scalar Value
-- `char` must be in the Unicode range `0-D7FF` and `E000-10FFFF`
-- `char` is 4 bytes long.`char` array is effectively an UCS-4/UTF-32 string.
-- `char` is always in single quotes
-- `char` array is effectively an UCS-4/UTF-32 string
+- it must be in the Unicode range `0-D7FF` and `E000-10FFFF`
+- `char` is 4 bytes long, it can be cast to `u32` (not vice versa)
+- array of chars is effectively an UCS-4/UTF-32 string
+- a character is always in single quotes
+- effectively`char` array is an UCS-4/UTF-32 string
 - online docs: [`char` primitive][pchar], [`std::char` module][mchar]
 
 
@@ -17,22 +18,12 @@
 | **Unicode Scalar Values** (2) | E000 | 10FFFF |
 
 
+
 [pchar]: https://doc.rust-lang.org/std/primitive.char.html
 [mchar]: https://doc.rust-lang.org/std/char/
 
 
-<!-- TOC -->
-
-- [Unicode](#unicode)
-- [Size](#size)
-- [Methods](#methods)
-  - [Inherent](#inherent)
-  - [Trait Implementations](#trait-implementations)
-
-<!-- /TOC -->
-
-
-## Unicode
+## Character
 
 The `char` type represents a single character; more precisely, `char` is a Unicode Scalar Value, which is a subset of Unicode Code Points.
 
@@ -60,9 +51,6 @@ let c = "é";
 
 > When backspacing over a combining glyph, such as the one above, some text editors will only delete the second byte on the first key press, leaving a valid character: `é => e`
 
-
-
-## Size
 `char` is always 4 bytes in size. This is a different representation than a given character would have as part of a `String`, because `String` uses UTF-8, so it has variable size per character, from 1 to 4 bytes. Effectively, an array of characters is an UCS-4/UTF-32 string.
 
 ```rust
@@ -83,71 +71,4 @@ assert_eq!(12, s_size);
 let v: Vec<char> = s.chars().collect();
 assert_eq!(32, v.len() * std::mem::size_of::<char>());
 
-```
-
-
-## Methods
-
-
-### Inherent
-
-```rust
-impl char
-```
-
-```rust
-is_digit
-to_digit
-escape_unicode
-escape_debug
-escape_default
-len_utf8
-len_utf16
-encode_utf8
-encode_utf16
-is_alphabetic
-is_xid_start
-is_xid_continue
-is_lowercase
-is_uppercase
-is_whitespace
-is_alphanumeric
-is_control
-is_numeric
-to_lowercase
-to_uppercase
-is_ascii
-to_ascii_uppercase
-to_ascii_lowercase
-eq_ignore_ascii_case
-make_ascii_uppercase
-make_ascii_lowercase
-is_ascii_alphabetic
-is_ascii_uppercase
-is_ascii_lowercase
-is_ascii_alphanumeric
-is_ascii_digit
-is_ascii_hexdigit
-is_ascii_punctuation
-is_ascii_graphic
-is_ascii_whitespace
-is_ascii_control
-```
-
-### Trait Implementations
-
-```rust
-Display
-Debug
-Default
-Hash
-TryFrom<u32>
-FromStr
-From<u8>
-Pattern<'a>
-AsciiExt
-Eq
-PartialEq<char>
-Ord
-PartialOrd<char>
 ```

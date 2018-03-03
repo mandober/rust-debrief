@@ -1,4 +1,4 @@
 # Traits
 
-- [Index by module](traits-by-mod.md)
-- [Derivable traits](traits-derive.md)
+- [Traits index by module](traits-by-mod.md)
+- [Derivable traits](derivable-traits.md)

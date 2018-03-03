@@ -1,19 +1,4 @@
 # PAGES
-<!-- TOC -->
-
-- [Theory](#theory)
-- [Rust Core](#rust-core)
-- [Syntax](#syntax)
-- [Semantics](#semantics)
-- [Primitives](#primitives)
-- [Types](#types)
-- [Modules](#modules)
-- [Traits](#traits)
-- [Items](#items)
-- [Appendix](#appendix)
-- [Links](#links)
-
-<!-- /TOC -->
 
 
 ## Theory
@@ -41,7 +26,6 @@
   - ISA, x86
   - Compilers, IR, Object code
 
-
 ## Rust Core
 - The Rust Language
 - [The compiler](core/compiler.md)
@@ -59,7 +43,6 @@
   - rustdoc
 - Third Party Crates
 
-
 ## Syntax
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
@@ -74,7 +57,7 @@
 - [Literals](syntax/literals.md)
 - [Macros](syntax/macros.md)
 - [Operators](syntax/operators.md)
-- [Syntactic elements](syntactic-elements.md)
+- [Syntactic elements](syntax/syntactic-elements.md)
 
 ## Semantics
 - Ownership
@@ -106,7 +89,6 @@
     - slice
     - string slice
 
-
 ## Types
 - [Categories](types/type-categories.md)
 - [Unit](types/type_unit.md)
@@ -116,7 +98,6 @@
 - Zero Sized Types
 - Empty Types
 - [Top](types/type_top.md)
-
 
 ## Modules
 - methods on primitives
@@ -137,7 +118,6 @@
 - [Index by module](traits/traits-by-mod.md)
 - [Derivable traits](traits/traits-derive.md)
 - [Display](traits/display.md)
-
 
 ## Items
 - [Lang Items](items/README.md)
@@ -163,7 +143,7 @@
 - [Index](INDEX.md)
 
 ## Links
-- [Links](links/links.md)
-  - official
-  - community
-  - resources
+- [Links](links/README.md)
+  - Official
+  - Community
+  - Resources

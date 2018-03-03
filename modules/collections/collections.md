@@ -1,14 +1,13 @@
 # Collections
 
-- Data structures, module `std::collections` (re-export from `alloc` crate):
+- Data structures
+- module `std::collections` (re-export from `alloc` crate by `std`):
 - Sequences:
   - `VecDeque<T>`, double-ended queue implemented with a growable ring buffer.
   - `LinkedList<T>`
 - Maps: `HashMap<K, V, S = RandomState>`, `BTreeMap<K, V>`
 - Sets: `HashSet<K, S = RandomState>`, `BTreeSet<K>`
 - Misc: `BinaryHeap<T>`
-
-
 
 
 ## Modules
@@ -20,7 +19,7 @@
 - `vec_deque` double-ended queue implemented with a growable ring buffer.
 - `binary_heap` priority queue impl with a binary heap.
 - `range` [LAB] Range syntax.
-  
+
 ## Structs
 - `HashMap` impl with linear probing and Robin Hood bucket stealing.
 - `HashSet` impl as a `HashMap` where the value is `().`

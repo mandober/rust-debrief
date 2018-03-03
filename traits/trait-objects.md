@@ -9,8 +9,8 @@ Trait objects, like `&TraitName` or `Box<TraitName>`, are normal values that sto
 A trait object can be obtained from a ref to a concrete type that impl the trait by *casting* it (`&x as &TraitName`) or by *coercing* it (using `&x` as an arg to a fn that takes `&TraitName`). These trait object coercions and casts also work for mut refs, like `&mut T` to `&mut TraitName` and smart pointers, like `Box<T>` to `Box<TraitName>`. 
 
 
-## Trait objects: reason d'etre
-Vector holds homogenuous elements. In order to hold heterogenuous elements, we can set up an enum and then the vector can hold enum's variants instances. This works for cases in which the kinds of things we want to be able to treat interchangeably are a fixed set of types that we know when our code gets compiled.
+## Trait objects
+Vector holds homogeneous elements. In order to hold heterogeneous elements, we can set up an enum and then the vector can hold enum's variants instances. This works for cases in which the kinds of things we want to be able to treat interchangeably are a fixed set of types that we know when our code gets compiled.
 
 Trait objects are more like objects in other languages, in the sense that they combine the data made up of the pointer to a concrete object with the behavior of the methods defined in the trait.
 

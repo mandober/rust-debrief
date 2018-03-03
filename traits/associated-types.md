@@ -1,5 +1,5 @@
-# Advanced traits
-https://doc.rust-lang.org/book/second-edition/ch19-03-advanced-traits.html
+# Associated Types
+
 
 <!-- TOC -->
 

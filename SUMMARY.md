@@ -7,9 +7,6 @@
 - [Type Systems](theory/type-systems.md)
 - [Data Types](theory/data-types.md)
 
-## Rust Core
-- [The compiler](core/compiler.md)
-
 ## Syntax
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
@@ -42,14 +39,36 @@
 - [Top](types/type_top.md)
 
 ## Modules
-- [Box](modules/boxed/box.md)
-- [Option](modules/option/README.md)
+- [collections](modules/collections/README.md)
+- [option](modules/option/README.md)
+- [any](modules/any/any.md)
+  - [any](modules/any/any-trait.md)
+- [iter](modules/iter/README.md)
+  - [methods](modules/iter/methods-all.md)
+- [box](modules/boxed/box.md)
+
 
 ## Traits
-- [Index](traits/README.md)
+- [Traits](traits/README.md)
+- [Index by module](traits/traits-by-mod.md)
+- [Derivable traits](traits/derivable-traits.md)
+- [Trait resolution](core/trait-resolution.md)
+
 
 ## Items
 - [Lang Items](items/README.md)
+
+
+## Rust Core
+- [The compiler](core/compiler.md)
+- [Trait resolution](core/trait-resolution.md)
+- [Type inference engine](core/type-inference-engine.md)
+- [Types and the Type Context](core/types-and-the-type-context.md)
+- [MIR](core/mir.md)
+- [HIR](core/hir.md)
+- [The Borrow Checker](core/borrow-checker.md)
+- [Variance of type and lifetime parameters](core/variance-of-type-and-lifetime-parameters.md)
+
 
 ## Appendix
 - [Terminology](appendix/terminology.md)
