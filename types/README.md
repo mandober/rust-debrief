@@ -1,3 +1,4 @@
 # Types
 
-- [Type categories](type-categories.md)
+- [Classification](classification.md)
+- [Annotation](annotation.md)

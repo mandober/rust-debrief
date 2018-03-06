@@ -1,4 +1,4 @@
-# Macros
+# Macro Index
 
 Assert
 - `assert`          ensure that a boolean is true at runtime

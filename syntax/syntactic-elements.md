@@ -15,7 +15,9 @@
 - [Constraints](#constraints)
 - [Parenthesis and tuples](#parenthesis-and-tuples)
 - [Comments](#comments)
-- [Macros and attributes](#macros-and-attributes)
+- [Doc comments](#doc-comments)
+- [Attributes](#attributes)
+- [Macros](#macros)
 
 <!-- /TOC -->
 
@@ -76,7 +78,6 @@
 
 
 ## Operators
-- `!` macro expansion: `ident!(…)`, `ident!{…}`, `ident![…]`
 - `&` borrow: `&expr`, `&mut expr`
 - `&` borrowed pointer: `&T`, `&mut T`
 - `&` borrowed pointer with a lifetime: `&'a T`, `&'a mut T`
@@ -141,8 +142,8 @@
 * `enum ident<…> …`: define generic enumeration.
 * `impl<…> …`: define generic implementation.
 * `for<…> type`: higher-ranked lifetime bounds.
-* `type<ident=type>` GTP where one or more associated types have specific assignments: `Iterator<Item=T>`
-- `_` inferred (inferable) part of type annotation: `Vec<_>`
+* `type<ident=type>` GTP with associated type having specific assignment: `Iterator<Item=u8>`
+- `_` type hint; easy to infer inner type in type annotation: `Vec<_>`
 
 
 ## Constraints
@@ -162,22 +163,28 @@
 * `(expr, …)`: tuple expression
 * `(type, …)`: tuple type
 * `expr(expr, …)`: fn call expr. Also used to initialize tuple structs and tuple enum variants
-* `ident!(…)`, `ident!{…}`, `ident![…]`: macro invocation
 * `expr.0`, `expr.1`, …: tuple indexing
 
 
 ## Comments
-* `//`: line comment.
-* `//!`: inner line doc comment.
-* `///`: outer line doc comment.
-* `/*…*/`: block comment.
-* `/*!…*/`: inner block doc comment.
-* `/**…*/`: outer block doc comment.
+* `// ...`: line comment
+* `/* ... */`: block comment
 
 
-## Macros and attributes
+## Doc comments
+* `//! ...`: inner (referring to the enclosing item) line doc-comment
+* `/*! ... */`: inner block doc-comment
+* `/// ...`: outer (referring to the immediate item) line doc-comment
+* `/** ... */`: outer block doc-comment
+
+
+## Attributes
 * `#[meta]`: outer attribute.
 * `#![meta]`: inner attribute.
+
+
+## Macros
 * `$ident`: macro substitution.
 * `$ident:kind`: macro capture.
 * `$(…)…`: macro repetition.
+* `ident!(…)`, `ident!{…}`, `ident![…]`: macro invocation

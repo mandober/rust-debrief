@@ -1,7 +1,6 @@
 # Summary
 
-* [Rust Debrief](README.md)
-* [PAGES](PAGES.md)
+- [Rust Debrief](README.md)
 
 ## Theory
 - [Type Systems](theory/type-systems.md)
@@ -33,10 +32,12 @@
 - [Slices](primitives/slices/slices.md)
 
 ## Types
-- [Type categories](types/type-categories.md)
+- [Classification](types/classification.md)
+- [Annotation](types/annotation.md)
 - [Unit](types/type_unit.md)
 - [Never](types/type_never.md)
 - [Top](types/type_top.md)
+
 
 ## Modules
 - [collections](modules/collections/README.md)

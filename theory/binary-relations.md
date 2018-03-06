@@ -1,7 +1,7 @@
 # Binary relations
 
-- equivalence relation: symmetric and transitive and reflexive
-- partial equivalence: symmetric and transitive
+- equivalence relation: symmetric, transitive, reflexive
+- partial equivalence: symmetric, transitive
 
 <!-- TOC -->
 
@@ -79,12 +79,13 @@ If `X = Y` then we simply say that the binary relation is over `X`, or that it i
 
 ## List of some of relations by properties
 
-- **equivalence**: reflexive, symmetric, transitive.
-- **partial equivalence**: symmetric, transitive.
-- **reflexive**  : symmetric, transitive, serial.
-- **partial order**: reflexive, antisymmetric, transitive.
-- **total order** (linear order, or chain): partial order that is total.
-- **well-order**: linear order where every nonempty subset has a least element.
+- equivalence: reflexive, symmetric, transitive.
+- partial equivalence: symmetric, transitive.
+- reflexive: symmetric, transitive, serial.
+- partial order: reflexive, antisymmetric, transitive.
+- total order (linear order, or chain): partial order that is total.
+- well-order: linear order where every nonempty subset has a least element.
+
 
 
 ## Reflexive relations
@@ -95,19 +96,18 @@ Formal definition: `∀x ∈ X : x R x`
 An example of a reflexive relation is the relation "is equal to" on the set of real numbers, since every real number is equal to itself. A reflexive relation is said to have the _reflexive property_ or _reflexivity_. Along with symmetry and transitivity, reflexivity is one of three properties defining equivalence relations.
 
 Examples of reflexive relations include:
-
-"is equal to" (equality)
-"is a subset of" (set inclusion)
-"divides" (divisibility)
-"is greater than or equal to"
-"is less than or equal to"
+- "is equal to" (equality)
+- "is a subset of" (set inclusion)
+- "divides" (divisibility)
+- "is greater than or equal to"
+- "is less than or equal to"
 
 Examples of irreflexive relations include:
-"is not equal to"
-"is coprime to" (for the integers>1, since 1 is coprime to itself)
-"is a proper subset of"
-"is greater than"
-"is less than"
+- "is not equal to"
+- "is coprime to" (for the integers>1, since 1 is coprime to itself)
+- "is a proper subset of"
+- "is greater than"
+- "is less than"
 
 
 ## Symmetric relations
@@ -124,8 +124,6 @@ Transitivity (or transitiveness) is a key property of both _partial order_ relat
 Formal definition: `∀a,b,c ∈ X: (aRb ∧ bRc) ⇒ aRc`
 
 
-
-
 ## Equivalence relation
 An equivalence relation is a binary relation that is at the same time a *reflexive* relation, a *symmetric* relation and a _transitive_ relation.
 
@@ -137,7 +135,7 @@ Definition: A given binary relation `~` on a set `X` is said to be an equivalenc
 - Reflexivity: `a ~ a`
 - Symmetry: `a ~ b` if and only if `b ~ a`
 - Transitivity: if `a ~ b` and `b ~ c` then `a ~ c`
-`X` together with the relation `~` is called a **setoid**. The equivalence class of `a` under `~`, denoted `[a]`, is defined as: 
+`X` together with the relation `~` is called a setoid. The equivalence class of `a` under `~`, denoted `[a]`, is defined as: 
 `[a] = {b ∈ X | a ~ b }`
 
 
@@ -149,6 +147,7 @@ It holds for all `a, b, c ∈ X` that:
 2. if `aRb` and `bRc`, then `aRc` (transitivity)
 
 If `R` is also reflexive, then `R` is an equivalence relation.
+
 
 
 ## Links

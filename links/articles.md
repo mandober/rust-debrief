@@ -2,23 +2,6 @@
 
 
 
-## Iterators
-- [Demonstration of basic iterator usage][itdobiu] by M.Skybin, 2017-12-08
-- [Effectively Using Iterators In Rust][iteuiir] by H.J.Radtke, 2015-06-22
-- [Learning Rust: Iterator][itlri] by D.Beck, 2016-04-17
-- [A Journey into Iterators][itajii] by A.Hobden, 2015-05-02
-- [Rust Iterator Cheat Sheet][itricc], Rust 1.17
-- [Parallel Iterators: Foundations][itpif], by N.Matsakis, 2016-02-19
-
-
-[itdobiu]: https://github.com/rustomax/rust-iterators
-[itlri]: http://dbeck.github.io/Learning-Rust-Iterator/
-[itricc]: https://danielkeep.github.io/itercheat_baked.html
-[itajii]: https://hoverbear.org/2015/05/02/a-journey-into-iterators/
-[iteuiir]: http://hermanradtke.com/2015/06/22/effectively-using-iterators-in-rust.html
-[itpif]: http://smallcultfollowing.com/babysteps/blog/2016/02/19/parallel-iterators-part-1-foundations/
-
-
 
 ## Closures
 - [Finding Closure in Rust](http://huonw.github.io/blog/2015/05/finding-closure-in-rust/)

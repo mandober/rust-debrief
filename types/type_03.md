@@ -1,35 +1,7 @@
 # Types
-https://doc.rust-lang.org/reference/types.html
-
-
-Every variable, item and value in a Rust program has a type.
-The type of a value defines the interpretation of the memory holding it.
-
-Built-in types are tightly integrated into the language, in nontrivial ways that are not possible to emulate in user-defined types. User-defined types have limited capabilities.
-
-
-## Primitive types
-
-Some types are defined by the language, rather than as part of the standard library, these are called *primitive* types. Some of these are individual types:
-- The boolean type bool with values true and false.
-- The machine types (integer and floating-point).
-- The machine-dependent integer types.
-- The textual types char and str.
-
-There are also some *primitive constructs for generic types* built in to the language:
-- Tuples
-- Arrays
-- Slices
-- Function pointers
-- References
-- Pointers
-
-
-## Numeric types
 
 
 ## Machine types
-
 The machine types are the following:
 
 The unsigned word types u8, u16, u32 and u64, with values drawn from the integer intervals [0, 2^8 - 1], [0, 2^16 - 1], [0, 2^32 - 1] and [0, 2^64 - 1] respectively.
@@ -39,13 +11,11 @@ The signed two's complement word types i8, i16, i32 and i64, with values drawn f
 The IEEE 754-2008 binary32 and binary64 floating-point types: f32 and f64, respectively.
 
 ## Machine-dependent integer types
-
 The usize type is an unsigned integer type with the same number of bits as the platform's pointer type. It can represent every memory address in the process.
 
 The isize type is a signed integer type with the same number of bits as the platform's pointer type. The theoretical upper bound on object and array size is the maximum isize value. This ensures that isize can be used to calculate differences between pointers into an object or array and can address every byte within an object along with one byte past the end.
 
 ## Textual types
-
 The types char and str hold textual data.
 
 A value of type char is a Unicode scalar value (i.e. a code point that is not a surrogate), represented as a 32-bit unsigned word in the 0x0000 to 0xD7FF or 0xE000 to 0x10FFFF range. A [char] is effectively a UCS-4 / UTF-32 string.
@@ -53,28 +23,15 @@ A value of type char is a Unicode scalar value (i.e. a code point that is not a 
 A value of type str is a Unicode string, represented as an array of 8-bit unsigned bytes holding a sequence of UTF-8 code points. Since str is a dynamically sized type, it is not a first-class type, but can only be instantiated through a pointer type, such as &str.
 
 ## Tuple types
-
 A tuple type is a heterogeneous product of other types, called the elements of the tuple. It has no nominal name and is instead structurally typed.
 
 Tuple types and values are denoted by listing the types or values of their elements, respectively, in a parenthesized, comma-separated list.
 
 Because tuple elements don't have a name, they can only be accessed by pattern-matching or by using N directly as a field to access the Nth element.
 
-An example of a tuple type and its use:
-
-
-type Pair<'a> = (i32, &'a str);
-let p: Pair<'static> = (10, "ten");
-let (a, b) = p;
-
-assert_eq!(a, 10);
-assert_eq!(b, "ten");
-assert_eq!(p.0, 10);
-assert_eq!(p.1, "ten");
 For historical reasons and convenience, the tuple type with no elements (()) is often called ‘unit’ or ‘the unit type’.
 
-## Array, and Slice types
-
+## Array and slice types
 Rust has two different types for a list of items:
 
 [T; N], an 'array'

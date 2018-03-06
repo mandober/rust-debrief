@@ -24,7 +24,6 @@ Byte Order Mark (BOM)        | FEFF
 
 
 ## UCS
-
 Universal Character Set has a capacity to encode 1,114,112 (0x110000)characters. Each UCS character is abstractly represented by a code point, which is an integer between 0 and 1,114,111, used to represent each character within the internal logic of text processing software.
 - 1,114,112 potential code points (2^20 + 2^16)
 
@@ -91,7 +90,7 @@ Any of the 7 fundamental classes of code points in the standard:
 - Control
 - Private-Use
 - Surrogate
-- Noncharacter
+- Non-character
 - Reserved
 
 ## Unicode Code Point

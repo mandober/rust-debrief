@@ -1,9 +1,8 @@
-# Theory
+# TOC
 
 - [Type Systems](type-systems.md)
   - [Data Types](data-types.md)
-  - Type class
-  - Algebraic Data Types (ADT)
+  - [Algebraic Data Types](algebraic.md)
 - [Binary relations](binary-relations.md)
   - Partial equality
   - Partial ordering

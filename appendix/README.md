@@ -1,5 +1,6 @@
 # Appendix
 
-- [Terminology](terminology.md)
-- [Abbreviations](abbreviations.md)
-- [Index](../INDEX.md)
+
+- [Terminology](appendix_terms.md)
+- [Abbreviations](appendix_abbrevs.md)
+- [Index](appendix_index.md)

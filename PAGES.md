@@ -1,13 +1,11 @@
 # PAGES
 
-
 ## Theory
 - [Type Systems](theory/type-systems.md)
   - [Data Types](theory/data-types.md)
-  - Type class
-  - Algebraic Data Types (ADT)
-- Binary relations
-  - Partial equality
+  - [Algebraic Data Types](theory/algebraic.md)
+- [Binary relations](binary-relations.md)
+  - [Partial equality](binary-relations.md#partial-equivalence-relation)
   - Partial ordering
 - [Unicode](theory/unicode.md)
 - Memory management
@@ -22,16 +20,17 @@
   - Polymorphism
   - Generics
   - Reflection
-- Low Level
+
+
+## Core
+- Low level
   - ISA, x86
   - Compilers, IR, Object code
-
-## Rust Core
-- The Rust Language
-- [The compiler](core/compiler.md)
-- HIR, MIR, LLVM IR
-- Internals
-- Feature Gates
+  - The Rust Language
+  - [The Compiler](core/compiler.md)
+  - HIR, MIR, LLVM IR
+  - Internals
+  - Feature Gates
 - Libraries
   - core
   - alloc
@@ -42,6 +41,7 @@
   - rustup
   - rustdoc
 - Third Party Crates
+
 
 ## Syntax
 - [Attributes](syntax/attributes.md)
@@ -135,12 +135,14 @@
 - trait definitions
 - implementations
 
+
 ## Appendix
 - Glossary
 - [Terminology](appendix/terminology.md)
 - [Abbreviations](appendix/abbreviations.md)
 - [Pages](PAGES.md)
 - [Index](INDEX.md)
+
 
 ## Links
 - [Links](links/README.md)
