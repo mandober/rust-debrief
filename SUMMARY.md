@@ -2,9 +2,11 @@
 
 - [Rust Debrief](README.md)
 
+
 ## Theory
 - [Type Systems](theory/type-systems.md)
 - [Data Types](theory/data-types.md)
+
 
 ## Syntax
 - [Attributes](syntax/attributes.md)
@@ -20,6 +22,7 @@
 - [Literals](syntax/literals.md)
 - [Operators](syntax/operators.md)
 - [Syntactic elements](syntax/syntactic-elements.md)
+
 
 ## Semantics
 - [Lifetimes](semantics/lifetimes/1_lifetimes.md)
