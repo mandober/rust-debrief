@@ -1,4 +1,4 @@
-# Syntactic elements
+# Syntax
 
 <!-- TOC -->
 

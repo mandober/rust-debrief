@@ -24,3 +24,6 @@ Idiomatic Rust
 https://github.com/mre/idiomatic-rust
 Collects resources for writing clean, idiomatic Rust code. 
 
+
+
+https://doc.rust-lang.org/1.9.0/book/

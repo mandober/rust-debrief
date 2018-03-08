@@ -15,7 +15,7 @@ Both slices are solution to the problem of referring to a part of sequential typ
 Slices implement two of the three `IntoIterator` variants; since they don't own their elements, there is no "by value" case. Instead, `into_iter` for `&[T]` and `&mut [T]` returns an iterator that produces shared and mutable references to the elements.
 
 
-## Sliconseq
+## sequential
 Commonly used sequential types are array and vector. They are compound types and they are both able to hold homogenous elements of type `T`.
 
 __Array__ is a fixed type; once declared, its size, which is a part of its type, cannot be changed. If its elements are scalar primitives, array is stored completely on the stack.

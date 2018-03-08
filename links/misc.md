@@ -1,4 +1,4 @@
+# Misc
 
-
-
-- [Rust Friends][orrp] Organizations running Rust in production
+## Meta
+- Rust Friends: organizations running Rust in production

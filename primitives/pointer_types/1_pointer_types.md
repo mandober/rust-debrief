@@ -1,6 +1,6 @@
 # Pointer types
 
-Pointer (or reference) types are types that allows indirect access to data. Rust has 5 pointer types that are primitives:
+Pointer (or reference) types are types that allows indirect access to data. Rust has 5 primitive pointer types:
 - Reference (shared and mutable)
 - Slice
 - String slice

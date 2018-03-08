@@ -1,11 +1,10 @@
+# std modules
 
 any
 ascii
 borrow
-
 boxed
 cell
-
 char
 clone
 cmp
@@ -44,7 +43,6 @@ vec
 heap
 intrinsics
 raw
-
 i8
 u8
 i16

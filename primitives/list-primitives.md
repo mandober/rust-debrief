@@ -1,0 +1,29 @@
+# List
+
+- `bool` boolean
+- `char` character
+- `f32` float binary32
+- `f64` float binary64
+- `i8` 8 bit signed integer
+- `i16` 16 bit signed integer
+- `i32` 32 bit signed integer
+- `i64` 64 bit signed integer
+- `i128` 128 bit signed integer __LAB__
+- `u8` bit unsigned integer
+- `u16` bit unsigned integer
+- `u32` bit unsigned integer
+- `u64` bit unsigned integer
+- `u128` bit unsigned integer __LAB__
+- `isize` Pointer sized arch dependent signed integer
+- `usize` Pointer sized arch dependent unsigned integer
+- `unit` unit type
+- `never` never type
+- `str`: string slice: `&str`
+- array: `[T: n]`
+- slice: `&[T]`
+- tuple: `(T, U, ...)`
+- shared reference: `&T` 
+- mutable reference: `&mut T`
+- raw shared pointer: `*const T`
+- raw mutable pointer: `*mut T`
+- fn (function pointer): `fn(T) -> U`

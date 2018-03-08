@@ -25,23 +25,6 @@
 
 
 
-## Rust and wasm
-- [Rust and WebAssembly][rawg]
-  Coordinating early work on using Rust and WebAssembly together.
-- [Rust and WebAssembly: Guide][rawb]
-  Small guidebook describing how to use Rust and WebAssembly.
-- [Hello, Rust!][hrwa]
-  Rust for the Web: WebAssembly setup and examples.
-- [The Rusty Web][trws]
-  Demonstration of integrating Rust into a web app. Benchmark of wasm vs JS. 
-  https://github.com/davidMcneil/the-rusty-web
-- [The Rusty Web: Guide][trwb]
-  Guidebook for using Rust to target the web.
-- [mir2wasm](https://github.com/brson/mir2wasm/)
-  An experimental compiler from Rust to WebAssembly, based on rustc and MIR.
-- [wasm-bindgen](https://github.com/alexcrichton/wasm-bindgen)
-- [wasm-bindgen: design](https://github.com/alexcrichton/wasm-bindgen/blob/master/DESIGN.md)
-
 
 
 
@@ -50,12 +33,6 @@
 [emsc]: http://kripken.github.io/emscripten-site/
 [llvm]: http://llvm.org/
 [clng]: http://clang.llvm.org/
-[rawg]: https://github.com/rust-lang-nursery/rust-wasm
-[rawb]: https://rust-lang-nursery.github.io/rust-wasm/
-[hrwa]: https://www.hellorust.com/
-[trwb]: https://davidmcneil.gitbooks.io/the-rusty-web/content/
-[trws]: https://davidmcneil.github.io/the-rusty-web/
-
 
 
 ## crates

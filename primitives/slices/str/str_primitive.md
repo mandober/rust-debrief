@@ -1,21 +1,5 @@
 # Primitive: string slice
-https://doc.rust-lang.org/std/primitive.str.html
 
-Primitive Type `str` 1.0.0
-
-The `str` type, a *string slice*, is the most primitive string type.
-It is usually seen in its borrowed form, `&str`.
-It is also the type of *string literals*, `&'static str`.
-String literals are string slices.
-
-Strings slices are always valid UTF-8.
-
-Strings slices have fixed size, they are a view into String.
-
-This documentation describes a number of methods 
-and trait implementations on the `str` type. 
-For technical reasons, there is additional, separate 
-documentation in the `std::str` module as well.
 
 ## Examples
 

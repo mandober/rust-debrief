@@ -1,0 +1,160 @@
+# std modules
+
+- `any`
+  - Structs
+    - `TypeId`
+      - Methods
+        - `of`
+      - Trait Implementations
+        - `Copy`
+        - `Clone`
+        - `Hash`
+        - `Debug`
+        - `Eq`
+        - `PartialEq<TypeId>`
+        - `Ord`
+        - `PartialOrd<TypeId>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+  - Traits
+    - `Any`
+      - Required Methods
+        - `get_type_id`
+      - Methods
+        - `impl Any + 'static`
+          - `is`
+          - `downcast_ref`
+          - `downcast_mut`
+        - `impl Any + 'static + Send`
+          - `is`
+          - `downcast_ref`
+          - `downcast_mut`
+      - Trait Implementations
+        - `impl Debug for Any + 'static`
+        - `impl Debug for Any + 'static + Send`
+- `ascii`
+  - Structs
+    - `EscapeDefault`
+      - Trait Implementations
+        - `Iterator`
+        - `DoubleEndedIterator`
+        - `ExactSizeIterator`
+        - `FusedIterator`
+        - `Debug`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+  - Traits
+    - `AsciiExt`
+  - Functions
+    - `escape_default`
+- borrow
+  - Enums
+    - to_mut
+    - into_owned
+  - Traits
+    - `Borrow`
+      - borrow
+    - `BorrowMut`
+      - borrow_mut
+    - `ToOwned`
+      - to_owned
+      - clone_into
+- boxed
+- cell
+- char
+  - Structs
+    - `CharTryFromError`
+      - impl
+        - Copy, Clone, Display, Debug, Error, Eq, PartialEq<CharTryFromError>, Send, Sync
+    - `DecodeUtf16`
+      - Trait Implementations
+        - Clone
+        - Debug
+        - Iterator
+      - Auto Trait Implementations
+        - Send
+        - Sync
+    - `DecodeUtf16Error`
+      - Methods
+        - unpaired_surrogate
+      - Trait Implementations
+        - Clone
+        - Display
+        - Eq
+        - Debug
+        - PartialEq<DecodeUtf16Error>
+        - Error
+      - _Auto Trait Implementations_
+        - Send
+        - Sync
+    - DecodeUtf8
+    - EscapeDebug
+    - EscapeDefault
+    - EscapeUnicode
+    - ParseCharError
+    - ToLowercase
+    - ToUppercase
+    - UnicodeVersion
+  - _Constants_
+    - MAX
+    - REPLACEMENT_CHARACTER
+    - UNICODE_VERSION
+  - _Functions_
+    - decode_utf16
+    - decode_utf8
+    - from_digit
+    - from_u32
+    - from_u32_unchecked
+- clone
+- cmp
+- collections
+- convert
+- default
+- env
+- error
+- ffi
+- fmt
+- fs
+- hash
+- io
+- iter
+- marker
+- mem
+- net
+- num
+- ops
+- option
+- os
+- panic
+- path
+- prelude
+- process
+- ptr
+- rc
+- result
+- slice
+- str
+- string
+- sync
+- thread
+- time
+- vec
+- heap
+- intrinsics
+- raw
+- i8
+- u8
+- i16
+- u16
+- i32
+- u32
+- i64
+- u64
+- i128
+- u128
+- isize
+- usize
+- f32
+- f64

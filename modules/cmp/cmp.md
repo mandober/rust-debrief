@@ -4,10 +4,27 @@ https://doc.rust-lang.org/stable/std/cmp/index.html
 
 Functionality for ordering and comparison.
 
+```tcc {cmd=true output="html"}
+dir
+```
+
+```javascript {cmd="node.exe" output="markdown"}
+const date = Date.now()
+console.log(date.toString())
+```
+
+```python {cmd="py.exe" args=["-3"]}
+print("This will run python3 program")
+```
+
 This module defines both `PartialOrd` and `PartialEq` traits which are used by 
 the compiler to implement comparison operators. Rust programs may implement 
 `PartialOrd` to overload the <, <=, >, and >= operators, and may implement 
 `PartialEq` to overload the == and != operators.
+
+
+@import "comparison.rs" {as="rust" code_block=true class="line-numbers"}
+
 
 ```rust
 let x: u32 = 0;

@@ -29,10 +29,3 @@
 ## Iterators
 - [Rust Iterator Cheat Sheet](https://danielkeep.github.io/itercheat_baked.html), since Rust 1.17.0, Itertools 0.6.0
 
-
-## External tools
-
-- [LLVM](https://llvm.org/) LLVM compiler
-- [jemalloc](http://jemalloc.net/) Heap allocation library
-- [TOML](https://github.com/toml-lang/toml) Tom's Obvious, Minimal Language
-

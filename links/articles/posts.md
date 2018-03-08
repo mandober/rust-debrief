@@ -1,50 +1,51 @@
-# Rust Anthology Master List
+# Rust Anthology
 
-This is a collection of substantial blog posts about Rust.
+Collection of substantial blog posts about Rust.
 
 It additionally collects other notable sources of material that might be useful 
-to a Rust learner: [cheat sheets][cs], [examples and exercises][ee], and 
-[additional long-form reading][lf]. In content it has significant overlap with 
-[rust-learning][rl], but with a different focus.
+to a Rust learner: cheat sheets, examples and exercises and other goodies.
 
-[cs]: #cheat-sheets
-[ee]: #examples-and-exercises
-[lf]: #additional-long-form-reading
-[rl]: https://github.com/ctjhoa/rust-learning
 
-## Anthology 1 candidates
 
-- Introduction
-  - [Understanding Over Guesswork](https://hoverbear.org/2015/09/12/understand-over-guesswork/)
-  - [An Alternative Introduction to Rust](http://words.steveklabnik.com/a-new-introduction-to-rust)
-  - [Learning Rust](https://medium.com/learning-rust)
-    - [Rust Basics](https://medium.com/learning-rust/rust-basics-e73304ab35c7)
-    - [Rust: Beyond the Basics](https://medium.com/learning-rust/rust-beyond-the-basics-4fc697e3bf4f)
-    - [Rust: The Tough Part](https://medium.com/learning-rust/rust-the-tough-part-2ea11ed3693e)
-  - [Rust and CSV Parsing](http://blog.burntsushi.net/csv/)
-  - [Rust for Functional Programmers](http://science.raphael.poss.name/rust-for-functional-programmers.html)
-  - Graydon's Lists
-    - [Five Lists of Six Things About Rust](http://graydon2.dreamwidth.org/214016.html)
-    - [Things Rust Shipped Without](http://graydon2.dreamwidth.org/218040.html)
-- Experience Reports
-  - [My Experience Writing Enjarify in Rust](https://medium.com/@robertgrosse/my-experience-rewriting-enjarify-in-rust-723089b406ad)
-  - [Rust: A Scala Engineer's Perspective](https://beachape.com/blog/2017/05/24/rust-from-scala/)
-- Ownership
-  - [Where Rust Really Shines](https://manishearth.github.io/blog/2015/05/03/where-rust-really-shines/)
-  - [Rust Means Never Having to Close a Socket](http://blog.skylight.io/rust-means-never-having-to-close-a-socket/)
-  - [The Problem with Single-threaded Shared Mutability](https://manishearth.github.io/blog/2015/05/17/the-problem-with-shared-mutability/)
-  - [Rust Ownership the Hard Way](https://chrismorgan.info/blog/rust-ownership-the-hard-way.html)
-  - [Strategies for Solving "cannot move out of" Borrowing Errors](http://hermanradtke.com/2015/06/09/strategies-for-solving-cannot-move-out-of-borrowing-errors-in-rust.html)
-  - Interior Mutability In Rust
-    - [Interior mutability in Rust: what, why, how?](https://ricardomartins.cc/2016/06/08/interior-mutability)
-    - [Interior mutability in Rust, part 2: thread safety](https://ricardomartins.cc/2016/06/25/interior-mutability-thread-safety)
-    - [Interior mutability in Rust, part 3: behind the curtain](https://ricardomartins.cc/2016/07/11/interior-mutability-behind-the-curtain)
-  - [`&` vs. `ref` in Patterns](http://xion.io/post/code/rust-patterns-ref.html)
-  - Holy `std::borrow::Cow`
-    - [Holy `std::borrow::Cow`!](https://llogiq.github.io/2015/07/09/cow.html)
-    - [Holy `std::borrow::Cow` Redux!](https://llogiq.github.io/2015/07/10/cow-redux.html)
-  - [Graphical Depiction of Ownership and Borrowing in Rust](https://rufflewind.com/2017-02-15/rust-move-copy-borrow)
-  - [Wrapper Types in Rust: Choosing Your Guarantees](https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/)
+## Introducing Rust
+
+- [Understanding Over Guesswork](https://hoverbear.org/2015/09/12/understand-over-guesswork/)
+- [An Alternative Introduction to Rust](http://words.steveklabnik.com/a-new-introduction-to-rust)
+- [Learning Rust](https://medium.com/learning-rust)
+- [Rust for Functional Programmers](http://science.raphael.poss.name/rust-for-functional-programmers.html)
+- [Five Lists of Six Things About Rust](http://graydon2.dreamwidth.org/214016.html)
+- [Things Rust Shipped Without](http://graydon2.dreamwidth.org/218040.html)
+
+
+- [Rust and CSV Parsing](http://blog.burntsushi.net/csv/)
+
+
+## Experiences with Rust
+- [My Experience Writing Enjarify in Rust](https://medium.com/@robertgrosse/my-experience-rewriting-enjarify-in-rust-723089b406ad)
+- [Rust: A Scala Engineer's Perspective](https://beachape.com/blog/2017/05/24/rust-from-scala/)
+
+## Ownership
+- [Where Rust Really Shines](https://manishearth.github.io/blog/2015/05/03/where-rust-really-shines/)
+- [Rust Means Never Having to Close a Socket](http://blog.skylight.io/rust-means-never-having-to-close-a-socket/)
+- [The Problem with Single-threaded Shared Mutability](https://manishearth.github.io/blog/2015/05/17/the-problem-with-shared-mutability/)
+- [Rust Ownership the Hard Way](https://chrismorgan.info/blog/rust-ownership-the-hard-way.html)
+- [Strategies for Solving "cannot move out of" Borrowing Errors](http://hermanradtke.com/2015/06/09/strategies-for-solving-cannot-move-out-of-borrowing-errors-in-rust.html)
+- [Graphical Depiction of Ownership and Borrowing in Rust](https://rufflewind.com/2017-02-15/rust-move-copy-borrow)
+
+
+## Interior Mutability In Rust
+- [Interior mutability in Rust: what, why, how?](https://ricardomartins.cc/2016/06/08/interior-mutability)
+- [Interior mutability in Rust, part 2: thread safety](https://ricardomartins.cc/2016/06/25/interior-mutability-thread-safety)
+- [Interior mutability in Rust, part 3: behind the curtain](https://ricardomartins.cc/2016/07/11/interior-mutability-behind-the-curtain)
+- [References in Patterns](http://xion.io/post/code/rust-patterns-ref.html)
+
+## Cow
+- [Holy `std::borrow::Cow`!](https://llogiq.github.io/2015/07/09/cow.html)
+- [Holy `std::borrow::Cow` Redux!](https://llogiq.github.io/2015/07/10/cow-redux.html)- 
+
+- [Wrapper Types in Rust: Choosing Your Guarantees](https://manishearth.github.io/blog/2015/05/27/wrapper-types-in-rust-choosing-your-guarantees/)
+
+
 - Traits
   - [Abstraction Without Overhead](https://blog.rust-lang.org/2015/05/11/traits.html)
   - [Going Down the Rabbit Hole with Rust Traits](http://www.jonathanturner.org/2016/02/down-the-rabbit-hole-with-traits.html)

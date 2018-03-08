@@ -9,18 +9,17 @@
 ## Syntax
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
-- [Constraints](syntax/syntax/constraints.md)
+- [Constraints](syntax/constraints.md)
 - [Conventions](syntax/conventions.md)
 - [Expressions](syntax/expressions.md)
 - [Control flow](syntax/flow.md)
 - [Formatting output](syntax/format.md)
-- [Fully Qualified Syntax](syntax/fully-qualified-syntax.md)
+- [Fully Qualified Syntax](syntax/fqs.md)
 - [Grammar](syntax/grammar.md)
 - [Keywords](syntax/keywords.md)
 - [Literals](syntax/literals.md)
-- [Macros](syntax/macros.md)
 - [Operators](syntax/operators.md)
-- [Syntactic elements](syntactic-elements.md)
+- [Syntactic elements](syntax/syntactic-elements.md)
 
 ## Semantics
 - [Lifetimes](semantics/lifetimes/1_lifetimes.md)
@@ -58,6 +57,13 @@
 
 ## Items
 - [Lang Items](items/README.md)
+
+
+## Macros
+- [Macros](macros/macro.md)
+- [Declerative macros](macros/macro-declerative.md)
+- [Procedural macros](macros/macro-procedural.md)
+- [Index of std macros](macros/macro-index.md)
 
 
 ## Rust Core

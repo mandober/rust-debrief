@@ -11,7 +11,6 @@
 - [Grammar](grammar.md)
 - [Keywords](keywords.md)
 - [Literals](literals.md)
-- [Macros](macros.md)
 - [Operators](operators.md)
 - [Statements](statements.md)
 - [Syntactic elements](syntactic-elements.md)
