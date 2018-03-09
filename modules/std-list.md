@@ -1,5 +1,6 @@
-# List
+# The Rust Standard Library  
 
+## Primitives
 - `bool` boolean
 - `char` character
 - `f32` float binary32
@@ -27,3 +28,63 @@
 - raw shared pointer: `*const T`
 - raw mutable pointer: `*mut T`
 - fn (function pointer): `fn(T) -> U`
+
+
+## Modules
+any
+ascii
+borrow
+boxed
+cell
+char
+clone
+cmp
+collections
+convert
+default
+env
+error
+ffi
+fmt
+fs
+hash
+io
+iter
+marker
+mem
+net
+num
+ops
+option
+os
+panic
+path
+prelude
+process
+ptr
+rc
+result
+slice
+str
+string
+sync
+thread
+time
+vec
+heap
+intrinsics
+raw
+i8
+u8
+i16
+u16
+i32
+u32
+i64
+u64
+i128
+u128
+isize
+usize
+f32
+f64

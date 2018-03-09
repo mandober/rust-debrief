@@ -1,4 +1,7 @@
-# Index of `std` items
+# `std` index
+
+
+## Modules
 
 - any
   - Structs
@@ -210,7 +213,7 @@
 
 
 
-## Primitive Types
+## Primitives
 
 - **never**
   - Trait Implementations
@@ -270,3 +273,49 @@
 - usize
 - f32
 - f64
+
+
+---
+
+
+<details>
+<summary>any</summary>
+
+- <details><summary>Structs</summary>
+
+  `TypeId`
+    - Methods
+      - `of`
+    - Trait Implementations
+      - `Copy`
+      - `Clone`
+      - `Hash`
+      - `Debug`
+      - `Eq`
+      - `PartialEq<TypeId>`
+      - `Ord`
+      - `PartialOrd<TypeId>`
+    - Auto Trait Implementations
+      - `Send`
+      - `Sync`
+  </details>
+- <details><summary>Traits</summary>
+
+  `Any`
+    - Required Methods
+      - `get_type_id`
+    - Methods
+      - `impl Any + 'static`
+      - `is`
+      - `downcast_ref`
+      - `downcast_mut`
+      - `impl Any + 'static + Send`
+      - `is`
+      - `downcast_ref`
+      - `downcast_mut`
+    - Trait Implementations
+      - `impl Debug for Any + 'static`
+      - `impl Debug for Any + 'static + Send`
+  </details>
+</details>
+
