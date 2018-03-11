@@ -2,6 +2,7 @@
 
 - any
   - `Any` type to emulate dynamic typing.
+- arch
 - ascii
   - `AsciiExt` methods for ASCII only operations.
 - borrow

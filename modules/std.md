@@ -33,6 +33,7 @@
       - Trait Implementations
         - `impl Debug for Any + 'static`
         - `impl Debug for Any + 'static + Send`
+- arch
 - ascii
   - Structs
     - `EscapeDefault`
@@ -63,6 +64,60 @@
       - `clone_into`
 - boxed
 - cell
+  - _Structs_
+    - `Cell`
+      - _Methods_
+        - new
+        - get
+        - get_mut
+        - as_ptr
+        - into_inner
+        - set
+        - take
+        - replace
+        - swap
+      - _Trait Implementations_
+        - Debug
+        - Default
+        - Send
+        - !Sync
+        - Clone
+        - Ord
+        - PartialOrd<Cell<T>>
+        - Eq
+        - PartialEq<Cell<T>>
+        - From<T>
+        - CoerceUnsized<Cell<U>>
+    - `RefCell`
+      - _Methods_
+        - new
+        - get_mut
+        - as_ptr
+        - borrow
+        - borrow_mut
+        - try_borrow
+        - try_borrow_mut
+        - replace
+        - replace_with
+        - into_inner
+        - swap
+      - _Trait Implementations_
+        - Debug
+        - Default
+        - Send
+        - !Sync
+        - Clone
+        - Ord
+        - PartialOrd<RefCell<T>>
+        - Eq
+        - PartialEq<RefCell<T>>
+        - From<T>
+        - CoerceUnsized<RefCell<U>>
+    - `Ref`
+    - `RefMut`
+    - `UnsafeCell`
+    - `BorrowError`
+    - `BorrowMutError`
 - char
   - Structs
     - `CharTryFromError`
@@ -117,8 +172,93 @@
     - `from_u32_unchecked`
 - clone
 - cmp
-- collections
-- convert
+- `collections`
+  - _Modules_
+    - `binary_heap`
+    - `btree_map`
+    - `btree_set`
+    - `hash_map`
+      - _Structs_
+        - `DefaultHasher`
+          - _Methods_
+            - `new`
+          - _Trait Implementations_
+            - `Clone`
+            - `Debug`
+            - `Default`
+            - `Hasher`
+          - _Auto Trait Implementations_
+            - `Send`
+            - `Sync`
+        - `Drain`
+        - `HashMap<K, V, S = RandomState>`
+          - _Methods_
+            - `new`
+            - `with_capacity`
+            - `with_hasher`
+            - `with_capacity_and_hasher`
+            - `reserve`
+            - `shrink_to_fit`
+            - `hasher`
+            - `capacity`
+            - `len`
+            - `is_empty`
+            - `keys`
+            - `contains_key`
+            - `values`
+            - `values_mut`
+            - `iter`
+            - `iter_mut`
+            - `insert`
+            - `get`
+            - `get_mut`
+            - `entry`
+            - `retain`
+            - `remove`
+            - `remove_entry`
+            - `clear`
+            - `drain`
+          - _Trait Implementations_
+            - `Clone`
+            - `Debug`
+            - `Default`
+            - `Eq`
+            - `PartialEq`
+            - `Index<&'a Q>`
+            - `IntoIterator`
+            - `FromIterator<(K, V)>`
+            - `Extend<(K, V)>`
+            - `Extend<(&'a K, &'a V)>`
+          - _Auto Trait Implementations_
+            - `Send`
+            - `Sync`
+        - `IntoIter`
+        - `Iter`
+        - `IterMut`
+        - `Keys`
+        - `OccupiedEntry`
+        - `RandomState`
+        - `VacantEntry`
+        - `Values`
+        - `ValuesMut`
+        - `EntryPlace` LAB
+      - _Enums_
+        - `Entry`
+    - `hash_set`
+    - `linked_list`
+    - `vec_deque`
+    - `range` LAB
+  - _Structs_
+    - `BTreeMap`
+    - `BTreeSet`
+    - `BinaryHeap`
+    - `HashMap`
+    - `HashSet`
+    - `LinkedList`
+    - `VecDeque`
+  - _Enums_
+    - `Bound`
+- `convert`
 - default
 - env
 - error
@@ -181,7 +321,64 @@
 - prelude
 - process
 - ptr
-- rc
+- `rc`
+  - _Structs_
+    - `Rc`
+      - _Methods_
+        - new
+        - try_unwrap
+        - into_raw
+        - from_raw
+        - downgrade
+        - weak_count
+        - strong_count
+        - get_mut
+        - ptr_eq
+        - make_mut
+        - downcast
+      - _Trait Implementations_
+        - Hash
+        - AsRef<T>
+        - Display
+        - Deref
+        - Borrow<T>
+        - PartialOrd<Rc<T>>
+        - Clone
+        - From<T>
+        - From<String>
+        - From<Box<T>>
+        - From<Vec<T>>
+        - From<&'a [T]>
+        - From<&'a str>
+        - Eq
+        - Debug
+        - PartialEq<Rc<T>>
+        - Pointer
+        - Ord
+        - !Send
+        - !Sync
+        - CoerceUnsized<Rc<U>>
+        - Default
+        - Drop
+        - From<CString>
+        - From<&'a CStr>
+        - From<OsString>
+        - From<&'a OsStr>
+        - UnwindSafe
+        - From<PathBuf>
+        - From<&'a Path>
+    - `Weak`
+      - _Methods_
+        - new
+        - upgrade
+      - _Trait Implementations_
+        - Clone
+        - Debug
+        - !Send
+        - !Sync
+        - CoerceUnsized<Weak<U>>
+        - Default
+        - Drop
 - result
 - slice
 - str

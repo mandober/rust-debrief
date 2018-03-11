@@ -32,6 +32,7 @@
 
 ## Modules
 any
+arch
 ascii
 borrow
 boxed

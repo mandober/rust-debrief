@@ -27,8 +27,8 @@ It is a 64-bit register-rich explicitly parallel architecture. The base data wor
 ## x86-64
 x86-64 (x86_64, AMD64, Intel64) is the 64-bit version of the x86 instruction set. It supports vastly larger amounts (theoretically, 2^64 bytes or 16 exabytes) of virtual memory and physical memory. It also provides 64-bit general-purpose registers.
 
-## AMD64
 
+## AMD64
 In the current implementation of AMD64, pointers are 64 bit long and addresses only extend to 48 bits.
 
 The primary defining characteristic of AMD64 is the availability of 64-bit general-purpose processor registers (for example, rax and rbx), 64-bit integer arithmetic and logical operations, and 64-bit virtual addresses. The designers took the opportunity to make other improvements as well. Some of the most significant changes are described below.

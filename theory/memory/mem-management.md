@@ -3,8 +3,6 @@
 <!-- TOC -->
 
 - [Memory address space](#memory-address-space)
-- [Data segment](#data-segment)
-- [Program memory](#program-memory)
 - [Processor register](#processor-register)
 - [The stack and the heap](#the-stack-and-the-heap)
 - [calling convention](#calling-convention)
@@ -15,21 +13,6 @@
 - [garbage collection](#garbage-collection)
 
 <!-- /TOC -->
-
-
-
-https://www.wikiwand.com/en/Shared_memory
-https://www.wikiwand.com/en/Memory_segmentation
-https://www.wikiwand.com/en/Code_segment
-https://www.wikiwand.com/en/Data_segment
-https://www.wikiwand.com/en/Heap_overflow
-https://www.wikiwand.com/en/.bss
-https://www.wikiwand.com/en/Static_variable
-https://www.wikiwand.com/en/Stack-based_memory_allocation
-https://www.wikiwand.com/en/Memory-mapped_file
-https://www.wikiwand.com/en/Library_(computing)#/Shared_libraries
-https://www.wikiwand.com/en/Pointer_(computer_programming)
-
 
 
 
@@ -127,14 +110,19 @@ Garbage collection is a strategy for automatically detecting memory allocated to
 
 
 https://www.wikiwand.com/en/Execution_(computing)
-
 https://www.wikiwand.com/en/Call_stack
-
 https://www.wikiwand.com/en/Manual_memory_management
-
 https://www.wikiwand.com/en/C_dynamic_memory_allocation
-
 https://www.wikiwand.com/en/Memory_management#/ALLOCATION
-
 https://www.wikiwand.com/en/Memory_management
-
+https://www.wikiwand.com/en/Shared_memory
+https://www.wikiwand.com/en/Memory_segmentation
+https://www.wikiwand.com/en/Code_segment
+https://www.wikiwand.com/en/Data_segment
+https://www.wikiwand.com/en/Heap_overflow
+https://www.wikiwand.com/en/.bss
+https://www.wikiwand.com/en/Static_variable
+https://www.wikiwand.com/en/Stack-based_memory_allocation
+https://www.wikiwand.com/en/Memory-mapped_file
+https://www.wikiwand.com/en/Library_(computing)#/Shared_libraries
+https://www.wikiwand.com/en/Pointer_(computer_programming)

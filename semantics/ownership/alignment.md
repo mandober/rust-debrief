@@ -1,13 +1,26 @@
 # Alignment
+
+- all types have alignment value specified in bytes.
+- alignment specifies what addresses are valid to store the value at.
+- these addresses must be multiples of alignment value.
+- alignment value is at least 1, and always a power of 2.
+- most primitives are aligned to their size (platform-specific)
+- alignment must be a 
+type's size must be a multiple of its alignment.
+
+
+
+
+
 https://doc.rust-lang.org/stable/nomicon/repr-rust.html
 
-First and foremost, *all types have an alignment* specified in bytes. The alignment of a type specifies what addresses are valid to store the value at.
+All types in Rust have an alignment specified in bytes. The alignment of a type specifies what main memory addresses are valid to store the value at. A value of alignment `n` must only be stored at an address that is a multiple of `n`. So alignment 2 means it must be stored at an even address, and 1 means that it can be stored anywhere. Alignment is at least 1, and always a power of 2.
 
-A value of alignment n must only be stored at an address that is a multiple of n. So alignment 2 means it must be stored at an even address, and 1 means that it can be stored anywhere. Alignment is at least 1, and always a power of 2.
+Most primitives are generally aligned to their size, although this is platform-specific behavior. In x86 architecture, `u64` and `f64` may be only aligned to 32 bits.
 
-Most primitives are generally aligned to their size, although this is platform-specific behavior. In particular, on x86 u64 and f64 may be only aligned to 32 bits.
+A type's size must always be a multiple of its alignment.
 
-*A type's size must always be a multiple of its alignment*. This ensures that an array of that type may always be indexed by offsetting by a multiple of its size. Note that the size and alignment of a type may not be known statically in the case of dynamically sized types.
+This ensures that an array of that type may always be indexed by offsetting by a multiple of its size. Note that the size and alignment of a type may not be known statically in the case of dynamically sized types.
 
 Rust gives you the following ways to lay out composite data:
 - structs (named product types)

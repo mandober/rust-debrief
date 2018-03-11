@@ -1,5 +1,6 @@
 # Mutability
 
+
 - variables are *immutable* by default which means once a variable is bound to a value, it cannot be rebound.
 - variables can be made mutable with keyword `mut`
 - when variable is first declared and only later bound, it doesn't have to be mutable for that single initial binding.
@@ -11,6 +12,9 @@
   - always immutable
   - naming convention: upper case (separated with underscores)
 
+
+
+Values of the `Cell<T>` and `RefCell<T>` types may be mutated through shared references (i.e. the common `&T` type), whereas most Rust types can only be mutated through unique (`&mut T`) references. We say that `Cell<T>` and `RefCell<T>` provide **interior mutability**, in contrast with typical Rust types that exhibit __inherited mutability__.
 
 
 ```rust

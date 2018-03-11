@@ -1,6 +1,4 @@
-# x86 architecture
-
-
+# x86 CPU modes
 
 ## x86 CPUs
 
@@ -9,7 +7,7 @@ Intel 8086
 - operating in real mode
 - 16-bit linear address space
 - 20-bit segmented memory address space
-- 1 MiB (2^20 Bytes) addressable memory
+- 1 MB (2^20 Bytes) addressable memory
 
 Intel 80186
 - in 1982, `186`
@@ -30,20 +28,14 @@ Intel 80386
 - 32-bit segmented memory address space
 
 
-
-
-
-
 ## CPUs modes
-
 
 Real mode
 - 16-bit linear address space
 - 20-bit segmented memory address space
-- 1 MiB (2^20 Bytes) addressable memory
+- 1 MB (2^20 Bytes) addressable memory
 - no support for memory protection, multitasking, or code privilege levels
-- all x86 compatibile CPUs start in real mode when reset
-
+- all x86 compatible CPUs start in real mode when reset
 
 Protected mode
 - Intel 80286 in 1982, `286`
