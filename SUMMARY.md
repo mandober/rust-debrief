@@ -83,8 +83,9 @@
 ## Appendix
 - [Terminology](appendix/terminology.md)
 - [Abbreviations](appendix/abbreviations.md)
-- [Pages](PAGES.md)
-- [Index](INDEX.md)
+- [Pages](appendix/pages.md)
+- [Index](appendix/index.md)
 
 ## Links
 - [Links](links/README.md)
+

@@ -64,6 +64,9 @@ Any type that does not specify an implementation is an abstract data type. For i
 ## Algebraic data type
 Algebraic data type is a kind of composite type, a type formed by combining other types. Two common classes of algebraic types are product types and sum types, also called tagged or disjoint unions or variant types.
 
+## Aliasing
+Aliasing is situation in which a data location in memory can be accessed through different symbolic names in the program; modifying the data through one name implicitly modifies the value associated with all aliased names, which may not be expected. As a result, aliasing makes it particularly difficult to understand, analyze and optimize programs. Rust allows read-only alising.
+
 ## Application Binary Interface
 ABI defines how to call a function at the assembly level. Languages define which ABI the external function uses to call its code.
 
@@ -81,6 +84,9 @@ Sometimes a limit on types which can be used in generics is needed and this can 
 
 ## Compiler
 Compiler is primarily used to translate source code from a high-level programming language to a lower level language (e.g., assembly language, object code, or machine code), to create an executable program.
+
+## Composition over inheritance
+or composite reuse principle in object-oriented programming (OOP) is the principle that classes should achieve polymorphic behavior and code reuse by their composition (by containing instances of other classes that implement the desired functionality) rather than inheritance from a base or parent class.
 
 ## Data structure
 Data structure is a particular way of organizing and storing data in a computer so that it can be accessed and modified efficiently. More precisely, a data structure is a collection of data values, the relationships among them and the functions or operations that can be applied to the data.
@@ -170,8 +176,14 @@ A function is reentrant if it can be interrupted in the middle of its execution,
 ## Reflection
 Reflection is the ability of a program to examine, introspect, and modify its own structure and behavior at runtime.
 
+## Reference
+A reference is a value that enables an indirect access a particular data; it refers to some data and accessing that data is called dereferencing the reference. A reference is distinct from the data itself. A reference may be implemented as the physical address of where the data is stored in memory; due to this, it is often confused with a pointer, but a reference may also be implemented in other ways, such as the offset between the data's address and some fixed "base" address, as an index into an array, or more abstractly as a handle; more broadly, in networking, a reference may be a network address such as URL.
+
 ## Slice
 A slice is a view into some contiguous storage. Slice is a fat pointer; the information that completes a slice is the number of elements it points to.
+
+## Smart pointer
+A smart pointer is an abstract data type that simulates a pointer while providing added features, such as automatic memory management or bounds checking. Such features are intended to reduce bugs caused by the misuse of pointers, while retaining efficiency. Smart pointers typically keep track of the memory they point to, and may also be used to manage other resources, such as network connections and file handles. Smart pointers prevent most situations of memory leaks, caused by pointer mishandling (double free, dangling pointers, etc.), by making the memory deallocation automatic.
 
 ## Statically typed language
 In static languages, variables are classified into types: once a variable aquires a type, it is type-locked. It cannot change its type and it accepts bindings only to the values of the matching type. Moreover, in some languages, a variable cannot even be rebound to a different value, after its initial binding, although some languages permit this by declaring a variable mutable. Static languages perform type checking at compile-time (many also at run-time).
@@ -208,6 +220,9 @@ Deduction of data types based on context rather than from explicit type annotati
 
 ## Type safety
 Type safety is the extent to which a language discourages type errors.
+
+## Typestate
+Typestates define valid sequences of operations that can be performed upon an instance of a given type. Typestates, associate state information with variables of that type. This state information is used to determine at compile-time which operations are valid to be invoked upon an instance of the type. Operations performed on an object that would usually only be executed at run-time are performed upon the type state information which is modified to be compatible with the new state of the object.
 
 ## Type system
 A type system is a set of rules that assigns a type property to the various value-carrying constructs of a programming language.

@@ -267,6 +267,61 @@
 - fs
 - hash
 - io
+  - Modules
+    - `prelude`
+  - Structs
+    - `BufReader`
+    - `BufWriter`
+    - `Bytes`
+    - `Chain`
+    - `Cursor`
+    - `Empty`
+    - `Error`
+    - `IntoInnerError`
+    - `LineWriter`
+    - `Lines`
+    - `Repeat`
+    - `Sink`
+    - `Split`
+    - `Stderr`
+    - `StderrLock`
+    - `Stdin`
+    - `StdinLock`
+    - `Stdout`
+    - `StdoutLock`
+    - `Take`
+    - `Chars`
+  - Enums
+    - `ErrorKind`
+    - `SeekFrom`
+    - `CharsError`
+  - Traits
+    - `BufRead`
+    - `Read`
+      - Required Methods
+        - `read`
+      - Provided Methods
+        - `initializer`
+        - `read_to_end`
+        - `read_to_string`
+        - `read_exact`
+        - `by_ref`
+        - `bytes`
+        - `chars`
+        - `chain`
+        - `take`
+    - `Seek`
+    - `Write`
+  - Functions
+    - `copy`
+    - `empty`
+    - `repeat`
+    - `sink`
+    - `stderr`
+    - `stdin`
+    - `stdout`
+  - Type Definitions
+    - `Result`
 - iter
 - `marker`
   - Structs

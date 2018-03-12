@@ -15,14 +15,11 @@ to a Rust learner: cheat sheets, examples and exercises and other goodies.
 - [Rust for Functional Programmers](http://science.raphael.poss.name/rust-for-functional-programmers.html)
 - [Five Lists of Six Things About Rust](http://graydon2.dreamwidth.org/214016.html)
 - [Things Rust Shipped Without](http://graydon2.dreamwidth.org/218040.html)
-
+- [My Experience Writing Enjarify in Rust](https://medium.com/@robertgrosse/my-experience-rewriting-enjarify-in-rust-723089b406ad)
+- [Rust: A Scala Engineer's Perspective](https://beachape.com/blog/2017/05/24/rust-from-scala/)
 
 - [Rust and CSV Parsing](http://blog.burntsushi.net/csv/)
 
-
-## Experiences with Rust
-- [My Experience Writing Enjarify in Rust](https://medium.com/@robertgrosse/my-experience-rewriting-enjarify-in-rust-723089b406ad)
-- [Rust: A Scala Engineer's Perspective](https://beachape.com/blog/2017/05/24/rust-from-scala/)
 
 ## Ownership
 - [Where Rust Really Shines](https://manishearth.github.io/blog/2015/05/03/where-rust-really-shines/)

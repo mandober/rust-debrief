@@ -1,25 +1,13 @@
 ## Alignment
 
+Data structure alignment is the way data is arranged in the main memory and it encompasses 3 separate, but related issues: data alignment, data structure padding and packing.
 
-__Data structure alignment__ is the way data is arranged in the main memory and it encompasses 3 separate, but related issues: data alignment, data structure padding and packing.
+CPU performs reads and writes to memory the most efficiently when the data is naturally aligned i.e. when the data address is a multiple of the data size. Data alignment refers to aligning elements according to their natural alignment. To ensure natural alignment, it may be necessary to insert some padding between structure elements or after the last element of a structure. Many languages handle data alignment automatically. Rust is among languages that allow some degree of control over alignment and padding.
 
-CPU performs reads and writes to memory most efficiently when the data is _naturally aligned_, which generally means that the data address is a multiple of the data size.
-
-**Data alignment** refers to aligning elements according to their natural alignment.
-
-To ensure natural alignment, it may be necessary to insert some **padding** between structure elements or after the last element of a structure.
-
-Many languages handle data alignment automatically. Rust is among languages that allow some degree of control over alignment and padding, which is useful in special circumstances.
+A memory address `x`, is said to be `n-byte aligned` when `x` is a multiple of `n` bytes (where `n` is a power of 2). In this context a byte is the smallest unit of memory access, i.e. each memory address specifies a different byte. An `n-byte aligned` address would have a minimum of `log2(n)` least significant zeros (LSZ) when expressed as binary number.
 
 
-## Definitions
-
-A **memory address** `x`, is said to be `n-byte aligned` when `x` is a multiple of `n` bytes (where `n` is a power of 2).
-
-In this context a byte is the smallest unit of memory access, i.e. each memory address specifies a different byte. An `n-byte aligned` address would have a minimum of `log2(n)` least significant zeros when expressed in binary.
-
-
-        n | n^2 |   << 1 | log2(n) |
+        n | n^2 |   << 1 |   LSZ   |
 ---------:|----:|-------:| -------:|
         1 | 0^2 |      1 |
        10 | 1^2 |      2 |       1

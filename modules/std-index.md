@@ -1,321 +1,91 @@
-# `std` index
+# details and summary test
+
+## outline
+
+- mod1
+  - Structs:
+    - struct1
+      - struct1_Functions:
+        - mod1_struct1_fn1
+        - mod1_struct1_fn2
+    - struct2
+      - struct2_Traits:
+        - mod1_struct2_trait1
+          - Required
+            - mod1_struct2_trait1_req1
+            - mod1_struct2_trait1_req2
+          - Methods
+            - mod1_struct2_trait1_meth1
+        - mod1_struct2_trait2
+  - Enums:
+    - enum1
+    - enum2
 
 
-## Modules
+---
 
-- any
-  - Structs
-    - `TypeId`
-      - Methods
-        - `of`
-      - Trait Implementations
-        - `Copy`
-        - `Clone`
-        - `Hash`
-        - `Debug`
-        - `Eq`
-        - `PartialEq<TypeId>`
-        - `Ord`
-        - `PartialOrd<TypeId>`
-      - Auto Trait Implementations
-        - `Send`
-        - `Sync`
-  - Traits
-    - `Any`
-      - Required Methods
-        - `get_type_id`
-      - Methods
-        - `impl Any + 'static`
-          - `is`
-          - `downcast_ref`
-          - `downcast_mut`
-        - `impl Any + 'static + Send`
-          - `is`
-          - `downcast_ref`
-          - `downcast_mut`
-      - Trait Implementations
-        - `impl Debug for Any + 'static`
-        - `impl Debug for Any + 'static + Send`
-- ascii
-  - Structs
-    - `EscapeDefault`
-      - Trait Implementations
-        - `Iterator`
-        - `DoubleEndedIterator`
-        - `ExactSizeIterator`
-        - `FusedIterator`
-        - `Debug`
-      - Auto Trait Implementations
-        - `Send`
-        - `Sync`
-  - Traits
-    - `AsciiExt`
-  - Functions
-    - `escape_default`
-- borrow
-  - Enums
-    - `to_mut`
-    - `into_owned`
-  - Traits
-    - `Borrow`
-      - `borrow`
-    - `BorrowMut`
-      - `borrow_mut`
-    - `ToOwned`
-      - `to_owned`
-      - `clone_into`
-- boxed
-- cell
-- char
-  - Structs
-    - `CharTryFromError`
-      - Traits
-        - `Copy`
-        - `Clone`
-        - `Display`
-        - `Debug`
-        - `Error`
-        - `Eq`
-        - `PartialEq<CharTryFromError>`
-        - `Send`
-        - `Sync`
-    - `DecodeUtf16`
-      - Trait Implementations
-        - `Clone`
-        - `Debug`
-        - `Iterator`
-      - Auto Trait Implementations
-        - `Send`
-        - `Sync`
-    - `DecodeUtf16Error`
-      - Methods
-        - `unpaired_surrogate`
-      - Trait Implementations
-        - `Clone`
-        - `Display`
-        - `Eq`
-        - `Debug`
-        - `PartialEq<DecodeUtf16Error>`
-        - `Error`
-      - Auto Trait Implementations
-        - `Send`
-        - `Sync`
-    - `DecodeUtf8`
-    - `EscapeDebug`
-    - `EscapeDefault`
-    - `EscapeUnicode`
-    - `ParseCharError`
-    - `ToLowercase`
-    - `ToUppercase`
-    - `UnicodeVersion`
-  - Constants
-    - `MAX`
-    - `REPLACEMENT_CHARACTER`
-    - `UNICODE_VERSION`
-  - Functions
-    - `decode_utf16`
-    - `decode_utf8`
-    - `from_digit`
-    - `from_u32`
-    - `from_u32_unchecked`
-- clone
-- cmp
-- collections
-- convert
-- default
-- env
-- error
-- ffi
-- fmt
-- fs
-- hash
-- io
-- iter
-- `marker`
-  - Structs
-    - `PhantomData`
-    - Trait Implementations
-      - `Hash`
-      - `Copy`
-      - `Default`
-      - `Clone`
-      - `PartialOrd<PhantomData<T>>`
-      - `Ord`
-      - `Debug`
-      - `Eq`
-      - `PartialEq<PhantomData<T>>`
-    - Auto Trait Implementations
-      - `Send`
-      - `Sync`
-  - Traits
-    - `Copy`
-    - `Send`
-    - `Sized`
-    - `Sync`
-    - `Unsize`
-- mem
-- net
-  - Structs
-    - `AddrParseError`
-    - `Incoming`
-    - `Ipv4Addr`
-    - `Ipv6Addr`
-    - `SocketAddrV4`
-    - `SocketAddrV6`
-    - `TcpListener`
-    - `TcpStream`
-    - `UdpSocket`
-    - ~~`LookupHost` LAB~~
-    - Enums
-      - `IpAddr`
-      - `Shutdown`
-      - `SocketAddr`
-      - `Ipv6MulticastScope` LAB
-    - Traits
-      - `ToSocketAddrs`
-    - Functions
-      - ~~`lookup_host` LAB~~
-- num
-- ops
-- option
-- os
-- panic
-- path
-- prelude
-- process
-- ptr
-- rc
-- result
-- slice
-- str
-- string
-- sync
-- thread
-- time
-- vec
-- heap
-- intrinsics
-- raw
-- i8
-- u8
-- i16
-- u16
-- i32
-- u32
-- i64
-- u64
-- i128
-- u128
-- isize
-- usize
-- f32
-- f64
+## test
 
+<details><summary>mod1</summary>
 
+- <details><summary>Structs</summary>
 
-## Primitives
+  - struct1
 
-- **never**
-  - Trait Implementations
-    - Display
-    - PartialOrd<!>
-    - Ord
-    - Debug
-    - Eq
-    - PartialEq<!>
-    - Error
-    - Termination
-- **unit**
-- **bool**
-  - Trait Implementations
-    - `Copy`
-    - `Debug`
-    - `PartialOrd<bool>`
-    - `Ord`
-    - `PartialEq<bool>`
-    - `Eq`
-    - `BitAnd<bool>`
-    - `BitAndAssign<bool>`
-    - `FromStr`
-    - `BitOr<bool>`
-    - `BitOrAssign<bool>`
-    - `Not`
-    - `BitXor<bool>`
-    - `BitXorAssign<bool>`
-    - `Hash`
-    - `BitAnd<&'a bool>`
-    - `BitAndAssign<&'a bool>`
-    - `Display`
-    - `BitOr<&'a bool>`
-    - `BitOrAssign<&'a bool>`
-    - `Default`
-    - `BitXor<&'a bool>`
-    - `BitXorAssign<&'a bool>`
-- **char**
-- array
-- fn
-- pointer
-- reference
-- slice
-- str
-- tuple
-- i8
-- u8
-- i16
-- u16
-- i32
-- u32
-- i64
-- u64
-- i128
-- u128
-- isize
-- usize
-- f32
-- f64
+    - <details><summary>Functions</summary>
+
+      - mod1_struct1_fn1
+      - mod1_struct1_fn2
+
+      </details>
+
+  - struct2
+
+  </details>
+
+- <details><summary>Enums</summary>
+
+  - enum1
+  - enum2
+
+  </details>
+
+</details>
+
 
 
 ---
 
 
+
+## test1
+
+
 <details>
-<summary>any</summary>
+<summary><kbd>level1</kbd></summary>
 
-- <details><summary>Structs</summary>
+- <details>
+  <summary><kbd>level2</kbd></summary>
 
-  `TypeId`
-    - Methods
-      - `of`
-    - Trait Implementations
-      - `Copy`
-      - `Clone`
-      - `Hash`
-      - `Debug`
-      - `Eq`
-      - `PartialEq<TypeId>`
-      - `Ord`
-      - `PartialOrd<TypeId>`
-    - Auto Trait Implementations
-      - `Send`
-      - `Sync`
+  - <details>
+    <summary><kbd>level3</kbd></summary>
+
+    - <details>
+      <summary><kbd>level4</kbd>: Functions</summary>
+
+      - `mod1_struct1_fn1`
+      - `mod1_struct1_fn2`
+      </details>
+
+    </details>
+
   </details>
-- <details><summary>Traits</summary>
 
-  `Any`
-    - Required Methods
-      - `get_type_id`
-    - Methods
-      - `impl Any + 'static`
-      - `is`
-      - `downcast_ref`
-      - `downcast_mut`
-      - `impl Any + 'static + Send`
-      - `is`
-      - `downcast_ref`
-      - `downcast_mut`
-    - Trait Implementations
-      - `impl Debug for Any + 'static`
-      - `impl Debug for Any + 'static + Send`
+- <details>
+  <summary>level2: Enums</summary>
+
+  - `enum1`
+  - `enum2`
   </details>
+
 </details>
-

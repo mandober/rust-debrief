@@ -1,7 +1,7 @@
 # Program memory
 
-- `.text`: ro code segment with executable instructions
-- `.data`: globals and statics, rw, retain their address across calls
+- `.text`: read-only code segment with executable instructions
+- `.data`: globals and statics, retain their address across calls
 - `.bss`: uninitialized data, globals and statics initialized to zero
 - the heap: shared pool of free memory
 - the stack: program's own stack
