@@ -1,9 +1,10 @@
 # Module index by name
 
-any, ascii, borrow, boxed, cell, char, clone, cmp, collections, convert, default, env, error, f32, f64, ffi, fmt, fs, hash, i8, i16, i32, i64, io, isize, iter, marker, mem, net, num, ops, option, os, panic, path, prelude, process, ptr, rc, result, slice, str, string, sync, thread, time, u8, u16, u32, u64, usize, vec, heap, i128, intrinsics, raw, u128
+any, arch, ascii, borrow, boxed, cell, char, clone, cmp, collections, convert, default, env, error, f32, f64, ffi, fmt, fs, hash, i8, i16, i32, i64, io, isize, iter, marker, mem, net, num, ops, option, os, panic, path, prelude, process, ptr, rc, result, slice, str, string, sync, thread, time, u8, u16, u32, u64, usize, vec, heap, i128, intrinsics, raw, u128
 
 
 1. `any`     dynamic typing
+1. `arch`    architecture dependent modules **LAB**
 1. `ascii`   ASCII operations
 1. `borrow`  working with borrowed data
 1. [`boxed`](boxed/box.md) box

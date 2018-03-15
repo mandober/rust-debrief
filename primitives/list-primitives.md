@@ -1,7 +1,16 @@
 # List
 
-- `bool` boolean
-- `char` character
+- array
+- bool
+- char
+- fn
+- never
+- raw pointers: shared, mutable
+- references: shared, mutable
+- slice
+- str
+- tuple
+- unit
 - `f32` float binary32
 - `f64` float binary64
 - `i8` 8 bit signed integer
@@ -16,14 +25,3 @@
 - `u128` bit unsigned integer __LAB__
 - `isize` Pointer sized arch dependent signed integer
 - `usize` Pointer sized arch dependent unsigned integer
-- unit type: `()`
-- never type: `!`
-- tuple: `(T, U, ...)`
-- array: `[T: n]`
-- slice: `&[T]`
-- `str`: string slice: `&str`
-- shared reference: `&T`
-- mutable reference: `&mut T`
-- raw shared pointer: `*const T`
-- raw mutable pointer: `*mut T`
-- fn (function pointer): `fn(T) -> U`

@@ -1,45 +1,22 @@
 # String slice
 
-- string slice, `str`, usually seen in its borrowed form `&str`, is the most primitive string type.
-- string literals, also string slices, have type `&'static str`.
+A string slice, `&str` is a reference to the part of a string.
 
-- online docs: [`str` primitive][strpri] and [`str` module][strmod]
-- It is a fat pointer: a pointer itself and a lenght
+Slice is a *2-part fat pointer*:
+a *pointer* to the string, and the *length* of the slice.
 
+String slice has *no ownership* over data it points to, it borrows it.
 
+String slices are either mutable or shared:
+- shared slice `&str`
+- mutable slice `&mut str`
 
-[strpri]: https://doc.rust-lang.org/std/primitive.str.html
-[strmod]: https://doc.rust-lang.org/std/str/
+A value of type `str` is a Unicode string, represented as an array of 8-bit
+unsigned bytes holding a sequence of UTF-8 code points. Since `str` is a
+dynamically sized type, it is *not a first-class* type, but can only be
+instantiated through a pointer type, such as `&str`.
 
-
-
-## String slices
-String slice, `str`, is the most primitive string type. It is an unsized type and as such it must be behind a pointer - that is why it is always in seen in its borrowed form as `&str`.
-
-
-## String literals
-String literals, which are also string slices, have `&'static str` type. They have a static lifetime, which means they are guaranteed to be valid for the duration of the entire program. This is not a problem for them as they are stored in the final binary; when the binary is executed, the string slices are stored in the `.data` section of the memory block.
-
-
-
-It is also the type of *string literals*, `&'static str`.
-String literals are string slices.
-
-Strings slices are always valid UTF-8.
-
-Strings slices have fixed size, they are a view into String.
-
-This documentation describes a number of methods 
-and trait implementations on the `str` type. 
-For technical reasons, there is additional, separate 
-documentation in the `std::str` module as well.
-
-
-
-
-Casting str to pointer
-
-```rust
-let ptr = "Once upon a time".as_ptr();
-println!("{:?}", ptr); // 0x7ff614f86958
-```
+The type str in Rust is special: it is primitive, so that the compiler can 
+optimize certain string operations; but it is not first class, so it is not 
+possible to define variables of type str or pass str values directly to functions. 
+To use Rust strings in programs, one should use string references.

@@ -1,9 +1,7 @@
 # Function item types
 https://doc.rust-lang.org/reference/types.html#function-item-types
 
-When referred to, a function item
-(or the constructor of a tuple-like struct or enum variant),
-yields a zero-sized value of its *function item type*.
+When referred to, a function item (or the constructor of a tuple-like struct or enum variant), yields a zero-sized value of its *function item type*.
 
 Function item type explicitly identifies the function: its name, its type arguments, and its early-bound lifetime arguments (but not its late-bound lifetime arguments, which are only assigned when the function is called) - so the *value doesn't need to contain an actual function pointer*, and no indirection is needed when the function is called.
 

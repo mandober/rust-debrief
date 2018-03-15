@@ -7,7 +7,7 @@ Rust 1.0, the first stable release, was released on May 15, 2015. Stable release
 
 - compiled
 - guaranteed memory safety
-- safe by default (optin for unsafe)
+- safe by default (option for unsafe)
 - no data races
 - no dangling, wild pointers, null pointers
 - performance is comparable to C++
@@ -20,7 +20,7 @@ Rust 1.0, the first stable release, was released on May 15, 2015. Stable release
 - meta elements: macros, attributes
 - favors stack allocation
 - lazy evaluation
-- zero cost abstactions
+- zero cost abstractions
 - concurrency
 - atomics
 - multi style paradigms: functional, imperative, structured, generic
@@ -34,8 +34,8 @@ Rust 1.0, the first stable release, was released on May 15, 2015. Stable release
 - Typing discipline: static, strong, inferred, nominal, linear
 - static
 - strongly typed
-- Hindley–Milner typing
-- efficient type inference (type annotations are not alwasy needed) 
+- Hindley-Milner typing
+- efficient type inference (type annotations are not always needed) 
 - algebraic data types
 - pattern matching, destructuring
 
@@ -43,10 +43,11 @@ Rust 1.0, the first stable release, was released on May 15, 2015. Stable release
 - borrow checker
 - lifetime concept: lifetime annotations
 - resources managed through Resource Acquisition Is Initialization (RAII)
-- immutablility by default
+- immutability by default
 
 - generics
-- monomorphization, static dispatch prefered
+- bounded parametric polymorphism
+- monomorphization, static dispatch preferred
 - dynamic dispatch through trait objects
 - ad hoc polymorphism through the traits system
 - Inheritance and polymorphism are provided by traits
@@ -55,14 +56,14 @@ Rust 1.0, the first stable release, was released on May 15, 2015. Stable release
 
 - first class functions
 - higher-order functions
+- block scope
 - closures
 - iterators
 - generators (nightly)
-- asynchronisity: futures, async, await (external crates)
+- async features: futures, async, await (external crates)
 - UTF-8 encoded strings
 - control flow: if, loop, while, for, (if let, while let)
-- no case, switch, ternary constructa
-- block scope
+- no switch or case, no ternary constructs
 
 - rustup for toolchain management
 - cargo for project and package management

@@ -41,6 +41,7 @@
 - `os`      OS specific functionality
 - `path`    cross-platform path manipulation
 - `process` working with processes
+- `arch`    architecture dependent modules **LAB**
 
 
 ## System

@@ -1,6 +1,5 @@
 # Trait index by module
 
-
 - any
   - `Any` type to emulate dynamic typing.
 - ascii

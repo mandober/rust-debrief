@@ -1,10 +1,11 @@
 # Lang items
 
-- [items](items.md)
-- [modules](module.md)
-- [extern crate declarations](extern-crate.md)
-- [use declarations](use-declaration)
-- [function definitions](../functions/function-definition)
+- [Items](items.md)
+- [Type parameter](type-parameters.md)
+- [Modules](module.md)
+- [Extern crate declarations](extern-crate.md)
+- [Use declarations](use-declaration)
+- [Function definitions](../functions/function-definition)
 - type definitions
 - struct definitions
 - enumeration definitions

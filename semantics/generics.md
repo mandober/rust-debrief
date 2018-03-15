@@ -13,5 +13,6 @@
 
 ## Generic type parameters
 - Generic functions operate on abstract types instead of concrete types. 
-- When we call the function, the code actually runs on the concrete 
-  values that we pass in; generic types get locked into concrete types.
+- When we call the generic function, the code actually runs on the concrete 
+  values that we pass in; generic types are locked into concrete types.
+- Generics have both input and output types: type parameters stand in for **input** types and associated types stand in for **output** types. Input types are specified with generic type parameters and output types are specified using associated types.

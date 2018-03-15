@@ -1,6 +1,6 @@
 # Index of `std` items
 
-- any
+- `any`
   - Structs
     - `TypeId`
       - Methods
@@ -33,8 +33,12 @@
       - Trait Implementations
         - `impl Debug for Any + 'static`
         - `impl Debug for Any + 'static + Send`
-- arch
-- ascii
+      - Implementors
+        - `impl<T: 'static + ?Sized> Any for T`
+- `arch`
+  - Modules
+    - `x86_64` LAB
+- `ascii`
   - Structs
     - `EscapeDefault`
       - Trait Implementations
@@ -48,9 +52,34 @@
         - `Sync`
   - Traits
     - `AsciiExt`
+      - Associated Types
+        - `Owned`
+      - Required Methods
+        - `is_ascii`
+        - `to_ascii_uppercase`
+        - `to_ascii_lowercase`
+        - `eq_ignore_ascii_case`
+        - `make_ascii_uppercase`
+        - `make_ascii_lowercase`
+      - Provided Methods
+        - `is_ascii_alphabetic`
+        - `is_ascii_uppercase`
+        - `is_ascii_lowercase`
+        - `is_ascii_alphanumeric`
+        - `is_ascii_digit`
+        - `is_ascii_hexdigit`
+        - `is_ascii_punctuation`
+        - `is_ascii_graphic`
+        - `is_ascii_whitespace`
+        - `is_ascii_control`
+      - Implementors
+        - `char`, `type Owned = u8`
+        - `str`, `type Owned = String`
+        - `u8`, `type Owned = u8`
+        - `[u8]`, `type Owned = Vec<u8>`
   - Functions
     - `escape_default`
-- borrow
+- `borrow`
   - Enums
     - `to_mut`
     - `into_owned`
@@ -63,62 +92,62 @@
       - `to_owned`
       - `clone_into`
 - boxed
-- cell
-  - _Structs_
+- `cell`
+  - Structs
     - `Cell`
-      - _Methods_
-        - new
-        - get
-        - get_mut
-        - as_ptr
-        - into_inner
-        - set
-        - take
-        - replace
-        - swap
-      - _Trait Implementations_
-        - Debug
-        - Default
-        - Send
-        - !Sync
-        - Clone
-        - Ord
-        - PartialOrd<Cell<T>>
-        - Eq
-        - PartialEq<Cell<T>>
-        - From<T>
-        - CoerceUnsized<Cell<U>>
+      - Methods
+        - `new`
+        - `get`
+        - `get_mut`
+        - `as_ptr`
+        - `into_inner`
+        - `set`
+        - `take`
+        - `replace`
+        - `swap`
+      - Trait Implementations
+        - `Debug`
+        - `Default`
+        - `Clone`
+        - `Ord`
+        - `PartialOrd<Cell<T>>`
+        - `Eq`
+        - `PartialEq<Cell<T>>`
+        - `From<T>`
+        - `CoerceUnsized<Cell<U>>`
+        - `Send`
+        - `!Sync`
     - `RefCell`
-      - _Methods_
-        - new
-        - get_mut
-        - as_ptr
-        - borrow
-        - borrow_mut
-        - try_borrow
-        - try_borrow_mut
-        - replace
-        - replace_with
-        - into_inner
-        - swap
-      - _Trait Implementations_
-        - Debug
-        - Default
-        - Send
-        - !Sync
-        - Clone
-        - Ord
-        - PartialOrd<RefCell<T>>
-        - Eq
-        - PartialEq<RefCell<T>>
-        - From<T>
-        - CoerceUnsized<RefCell<U>>
+      - Methods
+        - `new`
+        - `get_mut`
+        - `as_ptr`
+        - `borrow`
+        - `borrow_mut`
+        - `try_borrow`
+        - `try_borrow_mut`
+        - `replace`
+        - `replace_with`
+        - `into_inner`
+        - `swap`
+      - Trait Implementations
+        - `Debug`
+        - `Default`
+        - `Clone`
+        - `Ord`
+        - `PartialOrd<RefCell<T>>`
+        - `Eq`
+        - `PartialEq<RefCell<T>>`
+        - `From<T>`
+        - `CoerceUnsized<RefCell<U>>`
+        - `Send`
+        - `!Sync`
     - `Ref`
     - `RefMut`
     - `UnsafeCell`
     - `BorrowError`
     - `BorrowMutError`
-- char
+- `char`
   - Structs
     - `CharTryFromError`
       - Traits
@@ -173,26 +202,26 @@
 - clone
 - cmp
 - `collections`
-  - _Modules_
+  - Modules
     - `binary_heap`
     - `btree_map`
     - `btree_set`
     - `hash_map`
-      - _Structs_
+      - Structs
         - `DefaultHasher`
-          - _Methods_
+          - Methods
             - `new`
-          - _Trait Implementations_
+          - Trait Implementations
             - `Clone`
             - `Debug`
             - `Default`
             - `Hasher`
-          - _Auto Trait Implementations_
+          - Auto Trait Implementations
             - `Send`
             - `Sync`
         - `Drain`
         - `HashMap<K, V, S = RandomState>`
-          - _Methods_
+          - Methods
             - `new`
             - `with_capacity`
             - `with_hasher`
@@ -218,7 +247,7 @@
             - `remove_entry`
             - `clear`
             - `drain`
-          - _Trait Implementations_
+          - Trait Implementations
             - `Clone`
             - `Debug`
             - `Default`
@@ -229,7 +258,7 @@
             - `FromIterator<(K, V)>`
             - `Extend<(K, V)>`
             - `Extend<(&'a K, &'a V)>`
-          - _Auto Trait Implementations_
+          - Auto Trait Implementations
             - `Send`
             - `Sync`
         - `IntoIter`
@@ -242,13 +271,13 @@
         - `Values`
         - `ValuesMut`
         - `EntryPlace` LAB
-      - _Enums_
+      - Enums
         - `Entry`
     - `hash_set`
     - `linked_list`
     - `vec_deque`
     - `range` LAB
-  - _Structs_
+  - Structs
     - `BTreeMap`
     - `BTreeSet`
     - `BinaryHeap`
@@ -256,7 +285,7 @@
     - `HashSet`
     - `LinkedList`
     - `VecDeque`
-  - _Enums_
+  - Enums
     - `Bound`
 - `convert`
 - default
@@ -357,7 +386,7 @@
     - `TcpListener`
     - `TcpStream`
     - `UdpSocket`
-    - ~~`LookupHost` LAB~~
+    - `LookupHost` DEPR LAB
     - Enums
       - `IpAddr`
       - `Shutdown`
@@ -366,7 +395,7 @@
     - Traits
       - `ToSocketAddrs`
     - Functions
-      - ~~`lookup_host` LAB~~
+      - `lookup_host` DEPR LAB
 - num
 - ops
 - option
@@ -377,63 +406,63 @@
 - process
 - ptr
 - `rc`
-  - _Structs_
+  - Structs
     - `Rc`
-      - _Methods_
-        - new
-        - try_unwrap
-        - into_raw
-        - from_raw
-        - downgrade
-        - weak_count
-        - strong_count
-        - get_mut
-        - ptr_eq
-        - make_mut
-        - downcast
-      - _Trait Implementations_
-        - Hash
-        - AsRef<T>
-        - Display
-        - Deref
-        - Borrow<T>
-        - PartialOrd<Rc<T>>
-        - Clone
-        - From<T>
-        - From<String>
-        - From<Box<T>>
-        - From<Vec<T>>
-        - From<&'a [T]>
-        - From<&'a str>
-        - Eq
-        - Debug
-        - PartialEq<Rc<T>>
-        - Pointer
-        - Ord
-        - !Send
-        - !Sync
-        - CoerceUnsized<Rc<U>>
-        - Default
-        - Drop
-        - From<CString>
-        - From<&'a CStr>
-        - From<OsString>
-        - From<&'a OsStr>
-        - UnwindSafe
-        - From<PathBuf>
-        - From<&'a Path>
+      - Methods
+        - `new`
+        - `try_unwrap`
+        - `into_raw`
+        - `from_raw`
+        - `downgrade`
+        - `weak_count`
+        - `strong_count`
+        - `get_mut`
+        - `ptr_eq`
+        - `make_mut`
+        - `downcast`
+      - Trait Implementations
+        - `Debug`
+        - `Display`
+        - `Deref`
+        - `Default`
+        - `Drop`
+        - `Clone`
+        - `Hash`
+        - `Pointer`
+        - `UnwindSafe`
+        - `AsRef<T>`
+        - `Borrow<T>`
+        - `From<T>`
+        - `From<Box<T>>`
+        - `From<&'a [T]>`
+        - `From<Vec<T>>`
+        - `From<&'a str>`
+        - `From<String>`
+        - `CoerceUnsized<Rc<U>>`
+        - `Eq`
+        - `PartialEq<Rc<T>>`
+        - `Ord`
+        - `PartialOrd<Rc<T>>`
+        - `From<&'a CStr>`
+        - `From<CString>`
+        - `From<&'a Path>`
+        - `From<PathBuf>`
+        - `From<&'a OsStr>`
+        - `From<OsString>`
+        - `!Send`
+        - `!Sync`
     - `Weak`
-      - _Methods_
-        - new
-        - upgrade
-      - _Trait Implementations_
-        - Clone
-        - Debug
-        - !Send
-        - !Sync
-        - CoerceUnsized<Weak<U>>
-        - Default
-        - Drop
+      - Methods
+        - `new`
+        - `upgrade`
+      - Trait Implementations
+        - `Debug`
+        - `Default`
+        - `Drop`
+        - `Clone`
+        - `CoerceUnsized<Weak<U>>`
+        - `!Send`
+        - `!Sync`
 - result
 - slice
 - str
@@ -461,24 +490,31 @@
 - f64
 
 
-
 ## Primitive Types
 
-- **never**
+- **array**
   - Trait Implementations
-    - Display
-    - PartialOrd<!>
-    - Ord
-    - Debug
-    - Eq
-    - PartialEq<!>
-    - Error
-    - Termination
-- **unit**
+    - `Debug`
+    - `Default`
+    - `Hash`
+    - `IntoIterator`
+    - `AsRef<[T]>`
+    - `Borrow<[T]>`
+    - `AsMut<[T]>`
+    - `BorrowMut<[T]>`
+    - `TryFrom<&'a [T]>`
+    - `TryFrom<&'a mut [T]>`
+    - `Ord`
+    - `PartialOrd<[T; 0..33]>`
+    - `Eq`
+    - `PartialEq<&'b [B]>`
+    - `PartialEq<&'b mut [B]>`
+    - `PartialEq<[B]>`
+    - `PartialEq<[B; 0..33]>`
 - **bool**
   - Trait Implementations
-    - `Copy`
     - `Debug`
+    - `Copy`
     - `PartialOrd<bool>`
     - `Ord`
     - `PartialEq<bool>`
@@ -501,13 +537,145 @@
     - `BitXor<&'a bool>`
     - `BitXorAssign<&'a bool>`
 - **char**
-- array
-- fn
-- pointer
-- reference
-- slice
-- str
-- tuple
+  - Methods
+    - `encode_utf16`
+    - `encode_utf8`
+    - `len_utf16`
+    - `len_utf8`
+    - `escape_debug`
+    - `escape_default`
+    - `escape_unicode`
+    - `eq_ignore_ascii_case`
+    - `is_alphabetic`
+    - `is_alphanumeric`
+    - `is_ascii`
+    - `is_ascii_alphabetic`
+    - `is_ascii_alphanumeric`
+    - `is_ascii_control`
+    - `is_ascii_digit`
+    - `is_ascii_graphic`
+    - `is_ascii_hexdigit`
+    - `is_ascii_lowercase`
+    - `is_ascii_punctuation`
+    - `is_ascii_uppercase`
+    - `is_ascii_whitespace`
+    - `is_control`
+    - `is_digit`
+    - `is_lowercase`
+    - `is_numeric`
+    - `is_uppercase`
+    - `is_whitespace`
+    - `is_xid_continue`
+    - `is_xid_start`
+    - `make_ascii_lowercase`
+    - `make_ascii_uppercase`
+    - `to_digit`
+    - `to_ascii_lowercase`
+    - `to_ascii_uppercase`
+    - `to_lowercase`
+    - `to_uppercase`
+  - Trait Implementations
+    - `Debug`
+    - `Default`
+    - `Display`
+    - `Hash`
+    - `Pattern<'a>` LAB
+    - `AsciiExt`
+    - `From<u8>`
+    - `FromStr`
+    - `TryFrom<u32>`
+    - `Eq`
+    - `PartialEq<char>`
+    - `Ord`
+    - `PartialOrd<char>`
+- **fn**
+  - Trait Implementations
+    - `Debug`
+    - `Hash`
+    - `Pointer`
+    - `Eq`
+    - `PartialEq<fn(...) -> Ret>`
+    - `PartialEq<unsafe fn(...) -> Ret>`
+    - `PartialEq<extern "C" fn(...) -> Ret>`
+    - `PartialEq<unsafe extern "C" fn(...) -> Ret>`
+    - `Ord`
+    - `PartialOrd<fn(...) -> Ret>`
+    - `PartialOrd<unsafe fn(...) -> Ret>`
+    - `PartialOrd<extern "C" fn(...) -> Ret>`
+    - `PartialOrd<unsafe extern "C" fn(...) -> Ret>`
+- **never**
+  - Trait Implementations
+    - `Display`
+    - `Debug`
+    - `Ord`
+    - `PartialOrd<!>`
+    - `Eq`
+    - `PartialEq<!>`
+    - `Error`
+    - `Termination`
+- **pointers**
+  - Methods
+    - `is_null`
+    - `as_ref`
+    - `offset`
+    - `wrapping_offset`
+    - `offset_to`
+    - `add`
+    - `sub`
+    - `wrapping_add`
+    - `wrapping_sub`
+    - `read`
+    - `read_volatile`
+    - `read_unaligned`
+    - `copy_to`
+    - `copy_to_nonoverlapping`
+    - `align_offset`
+    - `is_null`
+    - `as_ref`
+    - `offset`
+    - `wrapping_offset`
+    - `as_mut`
+    - `offset_to`
+    - `align_offset`
+    - `add`
+    - `sub`
+    - `wrapping_add`
+    - `wrapping_sub`
+    - `read`
+    - `read_volatile`
+    - `read_unaligned`
+    - `copy_to`
+    - `copy_to_nonoverlapping`
+    - `copy_from`
+    - `copy_from_nonoverlapping`
+    - `drop_in_place`
+    - `write`
+    - `write_bytes`
+    - `write_volatile`
+    - `write_unaligned`
+    - `replace`
+    - `swap`
+  - Trait Implementations
+    - `PartialOrd<*const T>`
+    - `PartialOrd<*mut T>`
+    - `Ord`
+    - `Pointer`
+    - `Eq`
+    - `PartialEq<*const T>`
+    - `PartialEq<*mut T>`
+    - `Zeroable`
+    - `Debug`
+    - `!Sync`
+    - `!Send`
+    - `Hash`
+    - `CoerceUnsized<*const U>`
+    - `CoerceUnsized<*mut U>`
+    - `UnwindSafe`
+- **reference**
+- **slice**
+- **str**
+- **tuple**
+- **unit**
 - i8
 - u8
 - i16

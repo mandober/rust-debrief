@@ -9,8 +9,12 @@
 <!-- /TOC -->
 
 
+
+Generics have both input and output types: type parameters stand in for **input** types and associated types stand in for **output** types. Input types are specified with generic type parameters and output types are specified using associated types.
+
+
 ## Associated Types
-Associated Types are a way of associating a type placeholder with a trait such that the trait method definitions can use these placeholder types in their signatures. The implementor of a trait will specify the concrete type to be used in this type’s place for the particular implementation.
+Associated Types are a way of associating a type placeholder with a trait such that the trait method definitions can use these placeholder types in their signatures. The implementor of a trait will specify the concrete type to be used in this type's place for the particular implementation.
 
 An example of a trait with an associated type is the `Iterator` trait. It has an associated type `Item` that stands in for the type of the values that are iterated over:
 
@@ -20,24 +24,6 @@ pub trait Iterator {
     fn next(&mut self) -> Option<Self::Item>;
 }
 ```
-Item is just a type alias: in order to avoid redefining the return type every
-time this trait is implemented, we just set alias to some type (that is being iterated over):
-
-```rust
-impl Iterator for Counter {
-    type Item = u8;
-    fn next(&mut self) -> Option<Self::Item> {}
-```
-
-Which might as well be:
-
-```rust
-impl Iterator for Counter {
-    fn next(&mut self) -> Option<Self::u8> {}
-```
-
-
-
 
 
 When we impl the `Iterator` trait on the `Counter` struct, we then specify that the `Item` type is `u32`:
@@ -61,7 +47,6 @@ In other words, *when a trait has a generic parameter, we can implement that tra
 Then when we use the next method on Counter, we’d have to provide type annotations to indicate which implementation of Iterator we wanted to use.
 
 With associated types, *we can’t implement a trait on a type multiple times*. Using the actual definition of Iterator, we can only choose once what the type of Item will be, since there can only be one impl Iterator for Counter. We don’t have to specify that we want an iterator of u32 values everywhere that we call next on Counter.
-
 
 The benefit of not having to specify generic type parameters when a trait uses associated types shows up in another way as well. Consider these two traits:
 
