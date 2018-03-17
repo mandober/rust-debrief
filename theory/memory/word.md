@@ -1,16 +1,17 @@
 # Word
 
-
-Word is the fixed-sized unit of data used by a particular processor design. The word size (or width or length) is the number of bits that make up the word: in x86 it is 32 bits, in x86_64 it is 64 bits.
+Word is the fixed-sized unit of data used by a particular CPU architecture. The word size (width, length) is the number of bits in word.
 
 The size of a word influences many aspects of computing: 
-- the majority of the registers in a processor are usually word-sized.
-- the largest piece of data that can be transferred to and from the working memory in a single operation is a word.
+- the size of the majority of CPU registers is a word.
+- the size of the largest chunk of data that can be transferred to and from the memory in a single operation is a word.
 - the largest possible address size, used to designate a location in memory, is typically a word.
-- the word size is also the unit of address resolution.
+- unit of address resolution is frequently a word.
 
-The memory model of an architecture is strongly influenced by the word size. In particular, the resolution of a memory address, that is, the smallest unit that can be designated by an address, has often been chosen to be the word. In x86 architecture the smallest addressable unit is a byte and the word is 4 bytes, increasing to 8 bytes with the x64 extension.
+In x86 architecture it is 32 bits, in x86_64 it is 64 bits.
 
+
+The memory model of an architecture is strongly influenced by the word size. In particular, the resolution of a memory address, that is, the smallest unit that can be designated by an address, has often been chosen to be the word.
 
 Different amounts of memory are used to store data values with different degrees of precision. The commonly used sizes are usually a power of two multiple of the unit of address resolution (byte or word).
 

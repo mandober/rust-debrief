@@ -63,15 +63,10 @@
 
 
 
-- Expressions:
-
-
-
-
 ## Expression
-An expression may have two roles: 
-- it always produces a value, and 
-- it may have side effects.
+An expression may have two roles:
+- it always produces a value
+- it may have side effects
 
 An expression evaluates to a value, and may have side effects during evaluation. Many expressions contain sub-expressions (operands).
 

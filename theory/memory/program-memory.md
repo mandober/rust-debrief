@@ -1,17 +1,18 @@
 # Program memory
 
-- `.text`: read-only code segment with executable instructions
-- `.data`: globals and statics, retain their address across calls
-- `.bss`: uninitialized data, globals and statics initialized to zero
+- `.text` read-only code segment with executable instructions
+- `.data` initialized globals and statics; retain their address across calls
+- `.bss` uninitialized variables, globals and statics initialized to zero
+- `.stack` program's own call stack
 - the heap: shared pool of free memory
-- the stack: program's own stack
 
 
-Program memory can be largely categorized into two sections: read-only (ro) and read-write (rw). This distinction grew from early computer systems, but the idea that some portions of the program's memory should not be modified was retained.
+## Program memory
+Program memory can be categorized into two sections: read-only and read-write.
 
-**Text**: The code segment (text, text segment) is where a portion of an object file, or the corresponding section of the program's virtual address space that contains executable instructions, is stored and is generally read-only and fixed size.
+`.text`: **The code segment** (text, text segment) is where a portion of an object file, or the corresponding section of the program's virtual address space that contains executable instructions, is stored and is generally read-only and fixed size.
 
-**Data**: The `.data` segment contains any global or static variables which have a pre-defined value and can be modified: any variable not declared within a function, but defined as static, so it retains its address across calls. 
+`.data`: **The data segment** contains any global or static variables which have a pre-defined value and can be modified: any variable not declared within a function, but defined as static, so it retains its address across calls. 
 
 The values for these variables are initially stored within the read-only memory (typically within `.text`) and are copied into the `.data` segment during the start-up routine of the program. Example in C:
 

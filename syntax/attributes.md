@@ -11,8 +11,7 @@
 - Grouping: `[allow(dead_code, unused_variables)]`
 
 
-## Categories
-
+## Attribute Categories
 - Crate-only
 - Module-only
 - Function-only
@@ -24,9 +23,7 @@
 - Language items
 
 
-
-## Index
-
+## Attribute Index
 - Crate-only
   - crate_name: `#![crate_name = "std"]`
   - crate_type: `#![crate_type = "lib"]`
@@ -82,8 +79,7 @@
   - derive: `#[derive(Debug, Copy, Clone)]`
 
 
-## Linting attributes
-
+## Linting Attributes
 Command to see lint checks supported by the compiler: `rustc -W help`.
 Run `rustc -W help foo.rs` to see a list of lints known to rustc, including those provided by plugins loaded by foo.rs file.
 
@@ -98,23 +94,4 @@ Run `rustc -W help foo.rs` to see a list of lints known to rustc, including thos
   - unused_mut
   - unused_assignments
   - non_camel_case_types
-
-
-
-
-## Links
-
-- Rust Reference: [Attributes][arr01]
-- Rust Reference: [Linkage][arl02]
-- Rust Unstable Book: [About linting plugins][alp01]
-- Rust source: [Built-in lints][rsrcl]
-- Rust nightly: [Compiler plugins][rnrcp]
-- [LLVM][llvm1]
-
-
-[arr01]: https://doc.rust-lang.org/reference/attributes.html
-[arl02]: https://doc.rust-lang.org/reference/linkage.html
-[alp01]: https://doc.rust-lang.org/unstable-book/language-features/plugin.html
-[llvm1]: http://llvm.org/docs/LangRef.html
-[rnrcp]: https://doc.rust-lang.org/1.9.0/book/compiler-plugins.html
-[rsrcl]: https://github.com/rust-lang/rust/blob/master/src/librustc/lint/builtin.rs
+  - etc.

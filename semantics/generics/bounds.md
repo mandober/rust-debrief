@@ -1,4 +1,6 @@
-# Constraints
+# Bounds
+
+Bounds Constraints
 
 
 - `T: Debug` generic type T constrained to types that implement `Debug` trait.

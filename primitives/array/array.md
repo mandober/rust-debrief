@@ -1,68 +1,133 @@
-# Array
+# Arrays
 
 - online [std doc](https://doc.rust-lang.org/std/primitive.array.html)
 - no accompanying module in std
-- array is a primitive, compound, generic type; it is a contiguous, fixed-size, sequence of homogenous elements. As a structural type, it only has a literal expression (there's no name `array`).
-- type annotation: `[T; N]`, for a constant size N, where N>=0
-  - N is the length of the array and a part of its type.
-  - N is non-negative compile-time constant.
-  - N (like all numbers for index, size and length) is `usize`
-- shared reference to array: `&[T; N]`; mut ref: `&mut [T; N]`; but since array coerces to slice, slice is also a (mut) ref to array: `&[T]` or `&mut [T]`
+- array is a contiguous, fixed-size, sequence of homogenous elements.
+- structural type, has literal expression.
+- type annotation: `[T; N]`
+  - `N` is the length of the array and a __part of its type__.
+  - `N` is a non-negative compile-time constant integer
+  - `N` is in the range `isize::MAX >= N >= 0`
+  - although `N` is `usize`, in practice it can't be larger than `isize::MAX`
+  - traits are implemented only for `32 >= N >= 0`
+- coerces to a slice; all methods are on slices. Not iterable, slice is.
+- array is a primitive, compound, generic type that stores elements on the stack if they are primitives; otherwise on the heap.
+- array of any size is `Copy` if the elements' type is `Copy`
+- impossible to move elements out of the array (use `mem::replace`)
+- indexing is bounds-checked at run-time, out-of-bounds indexing causes panic
 
 
-- subtypes: the number of all array types is a product of all available Rust types times `usize`: `T × usize`
 
 
-- arrays of any size are Copy if the element type is Copy
-- trait implementations are statically generated up to size 32
-- array cannot be resized
-- no way to move elements out of an array (alt: `mem::replace`)
-- indexed with `[]`
-- access is bounds-checked at run-time, out of bounds indexing causes panic
-
-- array doesn't have any methods, slice does
-- array itself is not iterable, the slice is
-- can coerced to slice `[T]`
-
-
-## Types of array
-
-- type annotation: `[T; N]`, for a constant size N, where N>=0
-  - N is the length of the array and a part of its type.
-  - N is non-negative compile-time constant.
-  - N (like all numbers for index, size and length) is `usize`
-
-
-Array is one big generic supertype, `[T; N]`,
-If N is a fixed size constant, for example 3,
-then, for example, `[i32; 3]` and `[&str; 3]`
-are *instances of same generic type* `[T; 3]`,
-but, for example, `[f32; 3]` and `[f32; 5]`
-are *entirely different types*.
-
+## Syntax
+There are 2 forms for creating an array:
+- list literal expression: `[x, y, z]`
+- repeat expression: `[x; N]`, which produces an array with `N` copies of `x`, but the type of `x` must be `Copy` (otherwise an error is emitted).
 
 ```rust
-// type annotated array
-let a: [i32; 6] = [9; 6];
-// type partially annotated, partially inferred
-let mut a: [_; 6] = [9; 6];
-// can mutate the array (but size must remain the same)
-a = [3; 6];
+// literal expression:
+let arr = [0, 1, 2];
 
-println!("{:?}", a);
-println!("{}b", std::mem::size_of_val(&a)); // 24b
+// repeat expression:
+let arr = [0; 3];
+
+// invalid repeat expression:
+let arr = [String::from("array"); 3]; // error:
+// `Copy` trait is required because the repeated element will be copied
 ```
 
-There are two syntactic forms for creating an array:
-- A list with each element, i.e. `[x, y, z]`.
-- A repeat expression `[x; N]`, which produces an array with `N` copies of x.
-  The type of x must be `Copy`.
+
+## Type
+
+Array's size is a part of its type; the size must be specified as an `usize` constant (must be known at compile-time).
+
+```rust
+// type and size are inferred
+let arr = [253; 6]; // arr: [i32; 6]
+
+// the type can be elided, the size cannot:
+let arr: [_; 6] = [253; 6];
+
+// explicit type annotation enforces the specified type:
+let arr: [u8; 6] = [253; 6];
+
+// array's size must be an usize constant
+const SIZE: usize = 6;
+let arr= [253; SIZE];
+```
+
+Arrays of any size are `Copy` if the element type is `Copy` and `Clone` if the element type is `Clone`. This works because `Copy` and `Clone` traits are specially known to the compiler.
+
+References to an array:
+- shared reference to an array: `&[T; N]`
+- mutable reference: `&mut [T; N]`
+
+A slice is a view into a contiguous sequence (which array is):
+- shared slice : `&[T]`
+- mutable slices: `&mut [T]`
+
+
+
+
+## Access
+Arrays can be indexed with the brackets operator, `[]`. Indexing starts at 0 and it is checked for out-of-bounds errors at run-time; out-of-bounds indexing causes panic.
+
+An array can be mutable, but its size must remain the same.
+
+```rust
+let mut array: [i32; 3] = [0; 3];
+array[1] = 1;
+// array is now [0, 1, 0]
+```
+
+
+It is impossible to move an element out of an array; the (in)direct approach is to use `mem::replace`, which replaces (and returns) an element with another (arbitrary) value of the same type.
+
+```rust
+let mut arr = [5, 6];
+let x = ::std::mem::replace(&mut arr[0], 7);
+println!("{:?}", arr); // [7, 6]
+println!("{}", x);     // 5
+```
+
+
+
+## Coercion
+Arrays don't have any inherent methods, but they coerce to slices and the slice provides all the methods that may be called on an array.
+
+Using iterators avoids out-of-bounds array checks: although array itself is not iterable, the slice is.
+
+```rust
+let array = [5; 10];
+// array is not iterable:
+for x in array { } // error:
+// the trait bound `[i32; 10]: std::iter::Iterator` is not satisfied
+
+// the solution is to coerce the array
+// to a slice by calling slice's iter method:
+for x in array.iter() { }
+```
+
+If the array has 32 or fewer elements, a reference to an array implements `IntoIterator` trait, providing `into_iter()` method that can be used for iteration.
+
+```rust
+let xs: [i32; 4] = [7, 8, 9, 10];
+let rs: &[i32; 4] = &xs;
+for r in rs {
+  println!("{}", r);
+}
+
+// a ref to array implements IntoIterator trait
+impl<'a, T> IntoIterator for &'a [T; SIZE] { // only if SIZE <= 32
+  type Item = &'a T;
+  type IntoIter = Iter<'a, T>;
+}
+```
 
 
 ## Implemented traits
 
-Arrays of sizes 0-32 implement these traits if the element type allows it:
-
+Arrays, of sizes up to 32, implement these traits if the element's type allows:
 - `Clone` (only if `T: Copy`)
 - `Debug`
 - `IntoIterator` (implemented for `&[T; N]` and `&mut [T; N]`)
@@ -72,91 +137,17 @@ Arrays of sizes 0-32 implement these traits if the element type allows it:
 - `Borrow`, `BorrowMut`
 - `Default`
 
-
-This limitation on the size N exists because Rust doesn't yet support code that is generic over the size of an array type.
-
-`[Foo; 3]` and `[Bar; 3]` are instances of same generic type `[T; 3]`,
-but `[Foo; 3]` and `[Foo; 5]` are *entirely different types*.
-
-As a stopgap, trait implementations are statically generated up to size 32.
-
-Arrays of any size are `Copy` if the element type is `Copy`.
-This works because the `Copy` trait is specially known to the compiler.
-
-Arrays coerce to slices `[T]`, so a slice method may be called on an array.
-Indeed, this provides most of the API for working with arrays.
-Slices have a dynamic size and do not coerce to arrays.
-
-There is *no way to move elements out of an array*.
-See `mem::replace` for an alternative.
+This limitation exists because Rust doesn't yet support code that is generic over the size of an array type. For example, `[Foo; 3]` and `[Bar; 3]` are instances of same generic type `[T; 3]`, but `[Foo; 3]` and `[Foo; 5]` are __entirely different types__.
 
 
-## Examples:
 
 ```rust
-let mut array: [i32; 3] = [0; 3];
-array[1] = 1;
-array[2] = 2;
-
-assert_eq!([1, 2], &array[1..]);
-
-// This loop prints: 0 1 2
-for x in &array {
-    print!("{} ", x);
-}
-```
-
-An array itself is not iterable:
-
-```rust
-let array: [i32; 3] = [0; 3];
-for x in array { }
-// error: the trait bound `[i32; 3]: std::iter::Iterator` is not satisfied
-```
-
-The solution is to coerce the array to a slice by calling a slice method:
-
-```rust
-for x in array.iter() { }
-```
-
-If the array has 32 or fewer elements, you can also use 
-the array reference's `IntoIterator` implementation:
-
-```rust
-for x in &array { }
-```
-
-
-## Trait Implementations
-
-```rust
-impl<'a, 'b, A, B> PartialEq<[B; 4]> for [A; 4]
+impl<'a, 'b, A, B> PartialEq<[B; SIZE]> for [A; SIZE]
   where A: PartialEq<B>
 {
-  fn eq(&self, other: &[B; 4]) -> bool;
-  fn ne(&self, other: &[B; 4]) -> bool;
+  fn eq(&self, other: &[B; SIZE]) -> bool;
+  fn ne(&self, other: &[B; SIZE]) -> bool;
 }
 
-impl<'a, 'b, A, B> PartialEq<[B]> for [A; 4]
-  where A: PartialEq<B>
-{
-  fn eq(&self, other: &[B]) -> bool;
-  fn ne(&self, other: &[B]) -> bool;
-}
-
-
-impl<'a, 'b, A, B> PartialEq<&'b [B]> for [A; 4]
-  where A: PartialEq<B>
-{
-  fn eq(&self, other: &&'b [B]) -> bool {};
-  fn ne(&self, other: &&'b [B]) -> bool {};
-}
-
-impl<'a, 'b, A, B> PartialEq<&'b mut [B]> for [A; 4]
-  where A: PartialEq<B>
-{
-  fn eq(&self, other: &&'b mut [B]) -> bool;
-  fn ne(&self, other: &&'b mut [B]) -> bool;
-}
+// ...
 ```
