@@ -4,8 +4,8 @@ The state pattern is an object-oriented design pattern. In this pattern
 - a value has internal state represented by a set of state objects
 - value's behavior changes based on the internal state
 - state objects share functionality
-- state objects are responsible 
-  - for their own behavior and 
+- state objects are responsible:
+  - for their own behavior
   - for governing when they should change into another state.
 - the value that holds state objects knows nothing about 
   - the different behavior of each state or 
@@ -13,40 +13,79 @@ The state pattern is an object-oriented design pattern. In this pattern
 
 When the program's requirements change, we can add more states, and we never need to update the code of the value holding the state or the code that uses the value; only the rules for a particular state object need to be updated.
 
+
+## States
 This workshop is about modeling a workflow of a blogging platform that has the following functionality:
-- a blog post starts as an empty DRAFT
-- once the draft is done, a REVIEW of the post is requested
-- once the post is approved, it gets PUBLISHED
-- only published blog posts return content to PRINT
+0. new Post is instantiated as an empty post
+  - the only accepted action: `new()`
+  - `Post --> (new) --> DRAFT (entry state)`
+1. Post in the _draft_ state accepts:
+  - adding of text to its content: `set()` action
+  - requesting a review: `request_review()` action [^1]
+2. the Post transitions into the _pending_ state.
+  - `Post in DRAFT --> (request review) --> Post PENDING`
+- Once the post is approved, it gets published
+  - Post in pending state accepts `approve` action
+  `Post PENDING --> (approved) --> Post PUBLISHED`
+- only published posts return ("get") content
 - other actions should have no effect
 
+[^1]: The way things are set now, the post can request review without first accepting some text for its content. To enforce addition of text before requesting a review, we need another state.
+
+
 ```
-entry     request review         approved
-    DRAFT -------------> PENDING -------> PUBLISHED
+entry   => new        => EMPTY
+EMPTY   => add_text   => DRAFT
+DRAFT   => req_review => PENDING
+PENDING => approve    => PUBLISHED
+
+entry   req.review         approved
+  DRAFT ---------> PENDING -------> PUBLISHED
 ```
 
+
+## Constraints
 - only the `Post` type is public,
-- `Post` holds a value, one of the 3 state objects
-- repr the post's states: DRAFT, PENDING (review), PUBLISHED
-- transition between states is managed internally within `Post`.
-- transitions occur in response to the fn calls on the `Post` instance
-- state transitions cannot be managed directly.
-- only allowed to call an appropriate action on an appropriate state.
-- e.g. a post can't be publish before the review is requested, etc.
+- `Post` holds a value, one of the 3 state objects that
+   repr the post's states: DRAFT, PENDING, PUBLISHED
+- transition between states is managed internally in `Post`
+  - transitions are triggered by actions on the `Post`
+  - transitions cannot be triggered directly,
+    only by specific actions on the particular state
+    e.g. post can't go from draft to published, etc.
 
-To implement:
-- `State` private trait for shared behavior
-- `Post` public struct repr the post. 
-  - has `Box<State>` trait object, in `Option`, in priv field `state`
-  - has `content` field for storing the text as String
-  - has assoc. fn: `new`
-  - has inherent methods: `get`, `set`, `request_review`, `approve`
-- `Draft` (struct) state
-  - impl the `State` trait
-- `Pending` (struct) state
-  - impl the `State` trait
-- `Published` (struct) state
-  - impl the `State` trait
+
+## Components
+1. public `Post` struct:
+  - field `state: Option<Box<State>>`for state objects
+  - field `content: String` for text content
+  - `impl Post`:
+    - `new` ass.fn
+    - `get` method
+    - `set` method
+    - public `request_review` method
+    - public `approve` method
+
+2. trait `State` for shared behavior
+  - `request_review` method
+  - `approve` method
+
+3. `Draft` struct, state object
+  - `impl State for Draft`
+    - `request_review` method: _allowed_
+    - `approve` method: _disallowed_
+
+4. `Pending` struct, state object
+  - `impl State for Pending`
+    - `request_review` method: _disallowed_
+    - `approve` method: _allowed_
+
+5. `Published` struct, state object
+  - `impl State for Published`
+    - `request_review` method: _disallowed_
+    - `approve` method: _disallowed_
+
+Note: this design is obviously not ideal as we have a trait that all structs implement and therefore must provide all the traits methods, regardless if they need them or not.
 
 
 ## Implementation: step 1
@@ -170,7 +209,7 @@ The `request_review` method on `Draft` needs to return new boxed instance of `Pe
 
 Now we can start seeing the advantages of the state pattern: the `request_review` method on Post is the same no matter its state value. Each state is responsible for its own rules.
 
-We’re going to leave the content method on Post as it is, returning an empty string slice. We can now have a Post in the `Pending` state as well as the Draft state, but we want the same behavior in the `Pending` state. Listing 17-11 now works up until line 11!
+We’re going to leave the content method on Post as it is, returning an empty string slice. We can now have a Post in the `Pending` state as well as the Draft state, but we want the same behavior in the `Pending` state.
 
 
 ```rust

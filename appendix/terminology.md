@@ -222,7 +222,7 @@ Deduction of data types based on context rather than from explicit type annotati
 Type safety is the extent to which a language discourages type errors.
 
 ## Typestate
-Typestates define valid sequences of operations that can be performed upon an instance of a given type. Typestates, associate state information with variables of that type. This state information is used to determine at compile-time which operations are valid to be invoked upon an instance of the type. Operations performed on an object that would usually only be executed at run-time are performed upon the type state information which is modified to be compatible with the new state of the object.
+Typestate is the dependence of the type and its behavior on the contained value: typestates define valid sequences of operations that can be performed upon an instance of a given type. Typestates, associate state information with variables of that type. This state information is used to determine, at compile-time, which operations are valid on an instance of that type. Operations performed on an object, that would usually only be executed at run-time, are performed upon the type state information, which is modified to be compatible with the new state of the object.
 
 ## Type system
 A type system is a set of rules that assigns a type property to the various value-carrying constructs of a programming language.
@@ -235,4 +235,3 @@ A variable is a storage location paired with an associated symbolic name (an ide
 
 ## Zero Sized Type
 Zero Sized Type (ZST) are types that occupy no space (empty tuple, empty array).
-

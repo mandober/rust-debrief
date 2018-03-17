@@ -112,11 +112,10 @@ impl Contains<i32, i32> for Container {
 
 // `C` contains `A` and `B`.
 // In light of that, having to express `A` and `B` again is a nuisance.
-fn difference<A, B, C>(container: &C) -> i32 where
-    C: Contains<A, B> {
+fn difference<A, B, C>(container: &C) -> i32 
+where C: Contains<A, B> {
     container.last() - container.first()
 }
-
 
 
 fn main() {
@@ -148,7 +147,7 @@ struct Container(i32, i32);
 // A trait which checks if 2 items are stored inside of container.
 // Also retrieves first or last value.
 trait Contains {
-    // Define generic types here which methods will be able to utilize.
+    // Define generic types here whose methods we'll be able to utilize.
     type A;
     type B;
 
