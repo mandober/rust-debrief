@@ -26,7 +26,7 @@
           - `is`
           - `downcast_ref`
           - `downcast_mut`
-        - `impl Any + 'static + Send`
+        - `impl Any + 'static + Send`   
           - `is`
           - `downcast_ref`
           - `downcast_mut`
@@ -467,6 +467,152 @@
 - slice
 - str
 - string
+  - Structs
+    - `Drain`
+    - `FromUtf16Error`
+    - `FromUtf8Error`
+    - `String`
+      - Methods
+        - `as_bytes`
+        - `as_mut_str`
+        - `as_mut_vec`
+        - `as_str`
+        - `capacity`
+        - `clear`
+        - `drain`
+        - `from_raw_parts`
+        - `from_utf16_lossy`
+        - `from_utf16`
+        - `from_utf8_lossy`
+        - `from_utf8_unchecked`
+        - `from_utf8`
+        - `insert_str`
+        - `insert`
+        - `into_boxed_str`
+        - `into_bytes`
+        - `is_empty`
+        - `len`
+        - `new`
+        - `pop`
+        - `push_str`
+        - `push`
+        - `remove`
+        - `reserve_exact`
+        - `reserve`
+        - `retain`
+        - `shrink_to_fit`
+        - `splice`
+        - `split_off`
+        - `truncate`
+        - `with_capacity`
+      - Methods from `Deref<Target=str>`
+        - `len`
+        - `is_empty`
+        - `is_char_boundary`
+        - `as_bytes`
+        - `as_ptr`
+        - `get`
+        - `get_unchecked`
+        - `slice_unchecked`
+        - `split_at`
+        - `chars`
+        - `char_indices`
+        - `bytes`
+        - `split_whitespace`
+        - `lines`
+        - `lines_any`
+        - `encode_utf16`
+        - `contains`
+        - `starts_with`
+        - `ends_with`
+        - `find`
+        - `rfind`
+        - `split`
+        - `rsplit`
+        - `split_terminator`
+        - `rsplit_terminator`
+        - `splitn`
+        - `rsplitn`
+        - `matches`
+        - `rmatches`
+        - `match_indices`
+        - `rmatch_indices`
+        - `trim`
+        - `trim_left`
+        - `trim_right`
+        - `trim_matches`
+        - `trim_left_matches`
+        - `trim_right_matches`
+        - `parse`
+        - `replace`
+        - `replacen`
+        - `to_lowercase`
+        - `to_uppercase`
+        - `escape_debug`
+        - `escape_default`
+        - `escape_unicode`
+        - `repeat`
+        - `is_ascii`
+        - `to_ascii_uppercase`
+        - `to_ascii_lowercase`
+        - `eq_ignore_ascii_case`
+      - Trait Implementations
+        - `Debug`
+        - `Display`
+        - `ToString`
+        - `Default`
+        - `Clone`
+        - `Hash`
+        - `Write`
+        - `Deref`
+        - `DerefMut`
+        - `FromStr`
+        - `ToSocketAddrs`
+        - `Pattern<'a>`
+        - `Add<&'a str>`
+        - `AddAssign<&'a str>`
+        - `AsRef<[u8]>`
+        - `AsRef<OsStr>`
+        - `AsRef<Path>`
+        - `AsRef<str>`
+        - `Borrow<str>`
+        - `Extend<&'a char>`
+        - `Extend<&'a str>`
+        - `Extend<char>`
+        - `Extend<Cow<'a, str>>`
+        - `Extend<String>`
+        - `From<&'a str>`
+        - `From<Box<str>>`
+        - `From<Cow<'a, str>>`
+        - `From<String>`
+        - `FromIterator<&'a char>`
+        - `FromIterator<&'a str>`
+        - `FromIterator<char>`
+        - `FromIterator<Cow<'a, str>>`
+        - `FromIterator<String>`
+        - `Index<Range<usize>>`
+        - `Index<RangeFrom<usize>>`
+        - `Index<RangeFull>`
+        - `Index<RangeInclusive<usize>>`
+        - `Index<RangeTo<usize>>`
+        - `Index<RangeToInclusive<usize>>`
+        - `IndexMut<Range<usize>>`
+        - `IndexMut<RangeFrom<usize>>`
+        - `IndexMut<RangeFull>`
+        - `IndexMut<RangeInclusive<usize>>`
+        - `IndexMut<RangeTo<usize>>`
+        - `IndexMut<RangeToInclusive<usize>>`
+        - `Eq`
+        - `PartialEq<&'a str>`
+        - `PartialEq<Cow<'a, str>>`
+        - `PartialEq<str>`
+        - `PartialEq<String>`
+        - `Ord`
+        - `PartialOrd<String>`
+  - Enums
+    - `ParseError`
+    - `Traits`
+    - `ToString`
 - sync
 - thread
 - time

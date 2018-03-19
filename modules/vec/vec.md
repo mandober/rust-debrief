@@ -1,14 +1,13 @@
 # Vector
 
-- name: vector
-- contiguous growable array type with heap-allocated contents
-- annotation: `Vec<T>`
-- generic, compound
-- O(1) indexing, amortized O(1) push (to the end) and O(1) pop (from the end)
+- contiguous growable sequance with heap-allocated contents
 - std module: [`std::vec`](https://doc.rust-lang.org/std/vec/)
 - actual module: [`alloc::vec`](https://doc.rust-lang.org/alloc/vec/)
-- store: fat pointer on stack to data on heap
+- representation: fat pointer (ptr, len, cap) on stack with data on the heap
 - deref: `Deref<Target = [T]>`
+- annotation: `Vec<T>`
+- type: generic, compound, library, move, owned, nominal
+- O(1) indexing, amortized O(1) push (to the end) and O(1) pop (from the end)
 - indexing through `Index` and `IndexMut` traits
 - structs `std::vec`
   - `Drain` draining iterator for Vec<T>

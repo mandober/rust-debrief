@@ -3,10 +3,10 @@
 Types that can be destructured:
 - tuples
 - enums
-- pointer types
 - structs
 - arrays (feature gated, add attr `#![feature(slice_patterns)]`)
-
+- pointer types
+- boxes
 
 Destructuring
 - Irrefutable patterns: binding sites (`let`, function's parameters, etc.)
@@ -18,6 +18,26 @@ Destructuring
   - use `_` non-binding pattern as "catch-all" (default, last match arm)
   - use `..` ("the rest" pattern) to ignore the rest of elements
   - constants can be used and they must match exactly
+
+
+
+## Box destructuring
+It is not possible to destructure a box in a match pattern in stable Rust; however, this feature is available in nightly release under the feature flag 
+`#![feature(box_patterns)]`. Box patterns let you match on a box.
+
+```rust
+#![feature(box_patterns, box_syntax)]
+
+// `box` is used to create a box
+let b = Some(box 5);
+
+match b {
+  // and to destructure it
+  Some(box n) => println!("Do not try and destructure the box {}", n),
+         None => println!("Instead try to realize the truth"),
+            _ => println!("There is no box")
+}
+```
 
 
 

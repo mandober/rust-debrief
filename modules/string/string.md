@@ -1,5 +1,43 @@
 # String
 
+- module [`std::string`][mod] contains `String` type
+- representation: fat pointer (ptr, len, cap) on stack to data on heap
+- UTF-8 encoded, owned, growable string
+- annotation: `String`
+- type: library, move, owned, nominal
+- deref: `Deref<Target=str>`
+
+
+[mod]: https://doc.rust-lang.org/std/vec/
+
+
+
+## String module
+- module `std::string` contains struct `String`, trait `ToStrings`, etc.
+- module online docs: [`std::string`][mod], 1.0.0. Module contains:
+  - Structs:
+    - `Drain` draining iterator for `String`.
+    - `FromUtf16Error` error converting UTF-16 byte slice to `String`.
+    - `FromUtf8Error` error converting byte vector to `String`.
+    - `String` UTF-8 encoded, growable string.
+  - Enums:
+    - `ParseError` error parsing a `String`.
+  - Traits:
+    - `ToString` converting a value to a `String`.
+
+
+## Strings type
+- online docs [`std::string::String`][string]
+- representation: fat pointer (ptr, len, cap) on stack to data on heap
+- UTF-8 encoded, owned, growable string
+- annotation: `String`
+- type: library, move, owned, nominal
+- deref: `Deref<Target=str>`
+
+
+This module contains the String type, a trait for converting ToStrings, and several error types that may result from working with Strings.
+
+
 String is a kind of smart pointers. It owns some memory and allows manipulation, 
 and has metadata (like capacity) and extra capabilities or guarantees (String 
 data will always be valid UTF-8). Like all smart pointer it implements the `Deref` 
@@ -41,3 +79,17 @@ raw strings
 just like regular strings except they are prefixed with an `r` and do not process 
 any escape sequences. For example, "\\d" is the same expression as r"\d".
 
+
+
+
+String struct has relationship with this types (used in impl trait)
+
+```rust
+char
+&'a char
+[u8]
+str
+Box<str>
+&'a str
+Cow<'a, str>
+```

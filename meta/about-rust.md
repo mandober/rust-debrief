@@ -1,10 +1,15 @@
-# Rust Language
+# The Rust Language
 
-Rust is an open source programming language, whose development started in 2006 by Mozilla employee Graydon Hoare. Its development continued on GitHub by the Rust project developers - a large portion of current commits to the project are from community members. Rust is dual licensed under Apache 2.0 and MIT. Rust uses `.rs` filename extension for source files, `.rlib` for libraries.
+Rust is an open source programming language, whose development started in 2006 by Mozilla employee Graydon Hoare. Its development continued on GitHub by the community, steered by the Rust Project Team (a large portion of commits to the project in 2018 are from community members). Rust is dual licensed under Apache 2.0 and MIT. Rust uses `.rs` filename extension for source files and `.rlib` for libraries.
 
-Rust 1.0, the first stable release, was released on May 15, 2015. Stable releases are delivered every six weeks, while features are developed in nightly Rust and then tested with alpha and beta releases that last six weeks.
+Rust v.1.0 (the first stable release) was released on May 15, 2015. Stable releases are delivered every 6 weeks, while features are developed in nightly Rust and then tested with alpha and beta releases that last 6 weeks.
+
+Rust is a multi-paradigm programming language, employing multiple programming styles such as imperative, functional, structured, generic, etc. Rust can be used as all-level language, from low-level systems programming to shell scripting.
+
+> _"A programming language is low level when its concepts require attention to the irrelevant"._
 
 
+## Language Characteristics
 - compiled
 - guaranteed memory safety
 - safe by default (option for unsafe)
@@ -23,7 +28,7 @@ Rust 1.0, the first stable release, was released on May 15, 2015. Stable release
 - zero cost abstractions
 - concurrency
 - atomics
-- multi style paradigms: functional, imperative, structured, generic
+- multi-paradigms: functional, imperative, structured, generic
 - module system: crates, modules
 - expressive
 

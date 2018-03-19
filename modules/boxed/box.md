@@ -8,7 +8,6 @@
 
 
 ## boxed
-
 - module: `std::boxed`, since 1.0.0
 - module [doc](https://doc.rust-lang.org/std/boxed "external link:std docs")
 - the main feature of this module is [Box struct](box.md).
@@ -42,8 +41,10 @@ The main feature of this module is [Box struct](box.md).
 - When you have a large amount of data and you want to transfer ownership but ensure the data won’t be copied when you do so.
 - When you want to own a value and only care that it's a type that implements a particular trait rather than knowing the concrete type itself.
 
+The deallocation happens for both the box (stored on the stack) and the data it points to (stored on the heap).
 
-## Box definition in std:
+
+## Box definition in std
 
 ```rust
 #[lang = "owned_box"]
@@ -51,28 +52,51 @@ The main feature of this module is [Box struct](box.md).
 pub struct Box<T: ?Sized>(_);
 ```
 
-## Creating a box:
+
+
+## Manipulating boxes
+
+Currently, the only stable way to create a box is the `Box::new()` method. 
 
 ```rust
-fn main() {
-    let x = Box::new(5);
+const BOX: &'static str = "there is no box";
+let opt_box = Some(Box::new(BOX));
 
-} // boxed is dropped here:
-// The deallocation happens for both the box (stored on the stack) 
-// and the data it points to (stored on the heap).
+match opt_box {
+    None => println!("no box found: {}", BOX),
+    Some(boxed_value) => {
+        // `boxed_value` has the type `Box<&str>`
+        // box can be derefrenced explicitly,
+        // although `Box<T>` derefs to `T` anyway.
+        let unbox: &str = *boxed_value;
+        println!("{}. {}. {}.", BOX, unbox, boxed_value);
+    },
+}
 ```
 
-More convenient way to create a boxed value - available only in nightly Rust releases with `box_syntax` feature flag enabled:
+More convenient syntax is available in nightly Rust release under the feature flag `#![feature(box_syntax)]`.
+
+Also, it is not possible to destructure a box in stable Rust, but the feature flag `#![feature(box_patterns)]` is available in nightly that allows destructuring a box in the match block pattern. Similarly to `ref`, the unstable `box` keyword can be used for both purposes, to create a box and to destructure it.
 
 ```rust
-#![feature(box_syntax)]
-let x = box 5;
+#![feature(box_patterns, box_syntax)]
+const BOX: &'static str = "there is no box";
+
+let xboxed = Some(box BOX);
+
+match xboxed {
+  None        => println!("do not try and destructure the box"),
+  Some(box x) => println!("instead try to realize the truth: {}", x),
+}
 ```
+
 
 
 
 
 ## Box is special
+
+
 https://manishearth.github.io/blog/2017/01/10/rust-tidbits-box-is-special
 
 Box is somewhat of a primitive, it is a special type - the compiler has intimate knowledge about it. Because of this the box can move out of a borrow:

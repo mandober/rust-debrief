@@ -1,6 +1,7 @@
-# Type Annotation
+# Type Annotations
 
-In order to perform type checking, a (static) type system requires that all expressions were designated with an appropriate type. 
+A static type system performs type checking at compile-time, so in order to do its job it requires that all expressions have been designated with a type.
+
 
 The process of setting a type may be dynamic (performed by compiler or interpreter), or static (done manually by the programmer), or, to a different extent, somewhere in between.
 

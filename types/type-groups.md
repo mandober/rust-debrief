@@ -1,4 +1,6 @@
-# Classification of types
+# Type groups
+
+Classification of types with regard to their common characteristics.
 
 <!-- TOC -->
 

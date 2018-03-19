@@ -5,80 +5,57 @@
 
 <!-- TOC -->
 
-- [Binary relation](#binary-relation)
-- [Relations over a set](#relations-over-a-set)
-- [List of some of relations by properties](#list-of-some-of-relations-by-properties)
-- [Reflexive relations](#reflexive-relations)
+- [Binary relations](#binary-relations)
+- [List of properties](#list-of-properties)
+- [List of relations](#list-of-relations)
+- [Reflexive](#reflexive)
+- [Irreflexive](#irreflexive)
+- [Coreflexive](#coreflexive)
+- [symmetric](#symmetric)
+- [antisymmetric](#antisymmetric)
+- [asymmetric](#asymmetric)
+- [transitive](#transitive)
+- [total](#total)
+- [trichotomous](#trichotomous)
+- [Euclidean](#euclidean)
+- [serial](#serial)
+- [set-like (or local)](#set-like-or-local)
 - [Symmetric relations](#symmetric-relations)
 - [Transitive relations](#transitive-relations)
 - [Equivalence relation](#equivalence-relation)
 - [Partial equivalence relation](#partial-equivalence-relation)
+- [Partially ordered set](#partially-ordered-set)
 - [Links](#links)
 
 <!-- /TOC -->
 
-## Binary relation
+## Binary relations
 
-A binary relation on a set `A` is a collection of ordered pairs of elements of `A`. In other words, it is a subset of the Cartesian product `A×A`. More generally, a binary relation between two sets `A` and `B` is a subset of `A×B`.
+A binary relation (on a set) is a **collection of ordered pairs** of the set's elements. Binary relations are used to model concepts like "is greater than", "is equal to", and similar. The concept of function is defined as a special kind of binary relation.
 
-A binary relation R between arbitrary sets X (the set of departure) and Y (the set of destination or codomain) is specified by its graph G, which is a subset of the Cartesian product X × Y.
+An example is the _"divides" relation_ between the set of prime numbers and the set of integers, in which every prime number is associated with every integer that is a multiple of that prime (but with no integer that is not a multiple).
 
-The binary relation R itself is usually identified with its graph G, but some authors define it as an ordered triple (X, Y, G), which is otherwise referred to as a correspondence.
+In this relation, for instance, the prime 2 is associated with numbers that include −4, 0, 6, 10, but not 1 or 9; and the prime 3 is associated with numbers that include 0, 6, and 9, but not 4 or 13.
 
-The statement `(x, y) ∈ G` is read _x is R-related to y_, and is denoted by `xRy` or `R(x, y)`. The latter notation corresponds to viewing `R` as the characteristic function of the subset `G` of `X × Y`, i.e. `R(x, y)` equals to 1 (true), if `(x, y) ∈ G`, and 0 (false) otherwise.
-
-The order of the elements in each pair of `G` is important: if `a ≠ b`, then `aRb` and `bRa` can be true or false, independently of each other. For example, the prime 3 divides the integer 9, but 9 doesn't divide 3.
-
-The domain of `R` is the set of all `x` such that `xRy` for at least one `y`. The range of `R` is the set of all `y` such that `xRy` for at least one `x`. The field of `R` is the union of its domain and its range.
+The order of elements in each pair is important; resuming the "divides" relation example, the prime 3 divides the integer 9, but 9 doesn't divide 3.
 
 
-## Relations over a set
+## List of properties
 
-If `X = Y` then we simply say that the binary relation is over `X`, or that it is an endorelation over `X`. In computer science, such a relation is also called a homogeneous (binary) relation. The set of all binary relations `Rel(X)` on a set `X` is the set `2^(X × X)`. Some important properties that a binary relation `R` over a set `X` may have:
-
-- **reflexive**   
-  `∀x ∈ X : xRx` for all `x` in `X` it holds that `xRx`   
-  e.g. `≥` (gt or equal to) is reflexive, but `>` (gt) is not.
-- **irreflexive** (or strict)   
-  `∀x ∈ X : ¬xRx` for all `x` in `X` it holds that `not xRx`   
-  e.g. `>` is an irreflexive relation, but `>=` is not.
-- **coreflexive**   
-  `∀x,y ∈ X (xRy ⇒ x = y)`   
-  for all `x` and `y` in `X` it holds that `if xRy then x = y`.   
-  An example of a coreflexive relation is the relation on integers in which each odd number is related to itself and there are no other relations. The equality relation is the only example of a both reflexive and coreflexive relation, and any coreflexive relation is a subset of the identity relation.
-- **symmetric**   
-  `∀x,y ∈ X (xRy ⇔ yRx)`   
-  for all `x` and `y` in `X` it holds that `if xRy then yRx`,   
-  "Is a blood relative of" is a symmetric relation, because x is a blood relative of y if and only if y is a blood relative of x.
-- **antisymmetric**   
-  `∀x,y ∈ X (xRy ∧ yRx) ⇒ x = y` or, equivalently,   
-  `∀x,y ∈ X (xRy ∧ x ≠ y ⇒ ¬yRx)`   
-  for all `x` and `y` in `X`, if `xRy` and `yRx` then `x = y`   
-  For example, `>=` is anti-symmetric; so is `>`, but vacuously   
-  (the condition in the definition is always false).
-- **asymmetric**   
-  for all `x` and `y` in `X`, if `xRy` then not `yRx`.   
-  A relation is asymmetric if and only if it is both anti-symmetric and irreflexive. For example, `>` is asymmetric, but `>=` is not.
-- **transitive**   
-  for all `x`, `y` and `z` in `X` it holds that if `xRy` and `yRz` then `xRz`. For example, "is ancestor of" is transitive, while "is parent of" is not. A transitive relation is irreflexive if and only if it is asymmetric.
-- **total**   
-  for all `x` and `y` in `X` it holds that `xRy` or `yRx` (or both). This definition for total is different from left total in the previous section. For example, `>=` is a total relation.
-- **trichotomous**   
-  for all `x` and `y` in `X` exactly one of `xRy`, `yRx` or `x = y` holds. For example, `>` is a trichotomous relation, while the relation "divides" on natural numbers is not.
-- **Right Euclidean**   
-  for all `x`, `y` and `z` in `X` it holds that if `xRy` and `xRz`, then `yRz`.
-- **Left Euclidean**   
-  for all `x`, `y` and `z` in `X` it holds that if `yRx` and `zRx`, then `yRz`.
-- **Euclidean**   
-  A Euclidean relation is both left and right Euclidean. Equality is a Euclidean relation because if `x=y` and `x=z`, then `y=z`.
-- **serial**   
-  for all `x` in `X`, there exists `y` in `X` such that `xRy`. "Is greater than" is a serial relation on the integers. But it is not a serial relation on the positive integers, because there is no `y` in the positive integers such that `1 > y`. However, "is less than" is a serial relation on the positive integers, the rational numbers and the real numbers. Every reflexive relation is serial: for a given `x`, choose `y = x`. A serial relation can be equivalently characterized as every element having a non-empty successor neighborhood. Similarly an inverse serial relation is a relation in which every element has non-empty predecessor neighborhood.
-- **set-like** (or local):   
-  for every `x` in `X`, the class of all `y` such that `yRx` is a set. (This makes sense only if relations on proper classes are allowed.) The usual ordering `<` on the class of ordinal numbers is set-like, while its inverse `>` is not.
+Some important properties that a binary relation may have:
+- reflexive, irreflexive, coreflexive
+- symmetric, antisymmetric, asymmetric
+- transitive
+- total
+- trichotomous
+- right Euclidean, left Euclidean, Euclidean
+- serial
+- set-like
 
 
-## List of some of relations by properties
+## List of relations
 
+List of some relations by properties
 - equivalence: reflexive, symmetric, transitive.
 - partial equivalence: symmetric, transitive.
 - reflexive: symmetric, transitive, serial.
@@ -87,27 +64,76 @@ If `X = Y` then we simply say that the binary relation is over `X`, or that it i
 - well-order: linear order where every nonempty subset has a least element.
 
 
+## Reflexive
+A binary relation is reflexive if every element of the set is related to itself.
 
-## Reflexive relations
-A binary relation `R` over a set `X` is reflexive if every element of `X` is related to itself.
-
-Formal definition: `∀x ∈ X : x R x`
-
-An example of a reflexive relation is the relation "is equal to" on the set of real numbers, since every real number is equal to itself. A reflexive relation is said to have the _reflexive property_ or _reflexivity_. Along with symmetry and transitivity, reflexivity is one of three properties defining equivalence relations.
+An example is the relation "is equal to" on the set of real numbers, since every real number is equal to itself. Along with symmetry and transitivity, reflexivity is one of the 3 properties defining _equivalence relations_.
 
 Examples of reflexive relations include:
 - "is equal to" (equality)
-- "is a subset of" (set inclusion)
-- "divides" (divisibility)
 - "is greater than or equal to"
 - "is less than or equal to"
+- "is a subset of" (set inclusion)
+- "divides" (divisibility)
+
+
+## Irreflexive
+A binary relation is irreflexive (anti-reflexive) if no element is related to itself.
+
+An example is the "greater than" relation on the set of real numbers, since no real number is greater than itself.
+
+Not every relation which is not reflexive is irreflexive; it is possible to define relations where some elements are related to themselves but others are not. For example, the binary relation "the product of x and y is even" is reflexive on the set of even natural numbers, irreflexive on the set of odd natural numbers, and neither reflexive nor irreflexive on the set of natural numbers.
 
 Examples of irreflexive relations include:
 - "is not equal to"
-- "is coprime to" (for the integers>1, since 1 is coprime to itself)
 - "is a proper subset of"
 - "is greater than"
 - "is less than"
+- "is coprime to" (for the integers > 1, since 1 is coprime to itself)
+
+
+## Coreflexive
+A binary relation is coreflexive
+
+An example of a coreflexive relation is the relation on integers in which each odd number is related to itself and there are no other relations. The equality relation is the only example of a both reflexive and coreflexive relation, and any coreflexive relation is a subset of the identity relation.
+
+## symmetric
+"Is a blood relative of" is a symmetric relation, because x is a blood relative of y if and only if y is a blood relative of x.
+
+
+## antisymmetric
+For example, `>=` is anti-symmetric; so is `>`, but vacuously (the condition in the definition is always false).
+
+## asymmetric
+A relation is asymmetric if and only if it is both anti-symmetric and irreflexive. For example, `>` is asymmetric, but `>=` is not.
+
+## transitive
+For example, "is ancestor of" is transitive, while "is parent of" is not. A transitive relation is irreflexive if and only if it is asymmetric.
+
+## total
+This definition for total is different from left total. 
+For example, `>=` is a total relation.
+
+## trichotomous
+For example, `>` is a trichotomous relation, while the relation "divides" on natural numbers is not.
+
+## Euclidean
+A Euclidean relation is both left and right Euclidean. Equality is a Euclidean relation because if `x=y` and `x=z`, then `y=z`.
+
+## serial
+"Is greater than" is a serial relation on the integers.
+But it is not a serial relation on the positive integers, because there is no `y` in the positive integers such that `1 > y`. 
+However, "is less than" is a serial relation on the positive integers, the rational numbers and the real numbers.
+
+Every reflexive relation is serial: for a given `x`, choose `y = x`.
+A serial relation can be equivalently characterized as every element having a non-empty successor neighborhood. Similarly an inverse serial relation is a relation in which every element has non-empty predecessor neighborhood.
+
+
+## set-like (or local)
+The usual ordering `<` on the class of ordinal numbers is set-like, while its inverse `>` is not.
+
+
+
 
 
 ## Symmetric relations
@@ -150,9 +176,26 @@ If `R` is also reflexive, then `R` is an equivalence relation.
 
 
 
+## Partially ordered set
+A partially ordered set (poset) consists of a set together with a binary relation indicating that, for certain pairs of elements in the set, one of the elements precedes the other in the ordering. The word "partial" is used as an indication that not every pair of elements need be comparable: there may be pairs of elements for which neither element precedes the other.
+
+Partial orders thus generalize total orders, in which every pair is comparable.
+
+
+
+
+
+
+
+
+
+
+---
+
+
 ## Links
-- [Reflexive relation](https://www.wikipedia.com/en/Reflexive_relation)
-- [Symmetric relation](https://www.wikipedia.com/en/Symmetric_relation)
-- [Transitive relation](https://www.wikipedia.com/en/Transitive_relation)
-- [Equivalence relation](https://www.wikipedia.com/en/Equivalence_relation)
-- [Partial equivalence relation](https://www.wikipedia.com/en/Partial_equivalence_relation)
+- [Reflexive relation](http://www.wikipedia.com/en/Reflexive_relation)
+- [Symmetric relation](http://www.wikipedia.com/en/Symmetric_relation)
+- [Transitive relation](http://www.wikipedia.com/en/Transitive_relation)
+- [Equivalence relation](http://www.wikipedia.com/en/Equivalence_relation)
+- [Partial equivalence relation](http://www.wikipedia.com/en/Partial_equivalence_relation)
