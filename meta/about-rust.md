@@ -9,34 +9,48 @@ Rust is a multi-paradigm programming language, employing multiple programming st
 > _"A programming language is low level when its concepts require attention to the irrelevant"._
 
 
-## Language Characteristics
-- compiled
-- guaranteed memory safety
-- safe by default (option for unsafe)
-- no data races
-- no dangling, wild pointers, null pointers
-- performance is comparable to C++
-- compiling to wasm, etc.
+
+## Features
+- compiled: compiling to multiple targets, including wasm, asm
 - self-hosting compiler written in Rust, rustc, using LLVM as back end
-- foreign function interface (FFI)
-- built-in unit and integrated testing
-- assertions via macros
+- C like sytax
+- concurrent, system threads (green threads also available in crates)
+- UTF-8 encoded strings
+- FFI
+- performance is comparable to C++
+- zero cost abstractions
+
+## Guarantees
+- guaranteed memory safety
+- no data races
+- no dangling or wild or null pointers
+- safe by default (optional unsafety)
+
+## !Features (absent concepts)
+- no GC
+- no null
+- no exceptions
+- not oo
+- no classes, no fn overloading
+
+
+
+- The standard library, can be avoided
+- small runtime code
+- built-in unit and integrated testing, assertions via macros
 - operator overloading
 - meta elements: macros, attributes
 - favors stack allocation
 - lazy evaluation
-- zero cost abstractions
 - concurrency
 - atomics
 - multi-paradigms: functional, imperative, structured, generic
 - module system: crates, modules
 - expressive
-
 - manual memory management (no garbage collection)
 - Option type (no null)
 - Result type (no exceptions)
-
-- Typing discipline: static, strong, inferred, nominal, linear
+- Typing discipline: static, strong, inferred, linear
 - static
 - strongly typed
 - Hindley-Milner typing
@@ -66,7 +80,6 @@ Rust is a multi-paradigm programming language, employing multiple programming st
 - iterators
 - generators (nightly)
 - async features: futures, async, await (external crates)
-- UTF-8 encoded strings
 - control flow: if, loop, while, for, (if let, while let)
 - no switch or case, no ternary constructs
 

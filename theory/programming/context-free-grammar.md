@@ -1,0 +1,2 @@
+# Context-free grammar
+A context-free grammar (CFG) is a certain type of formal grammar: a set of production rules that describe all possible strings in a given formal language. Production rules are simple replacements. In context-free grammars, all rules are one-to-one, one-to-many, or one-to-none. The left-hand side of the production rule is always a nonterminal symbol; this means that the symbol does not appear in the resulting formal language.

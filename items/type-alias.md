@@ -14,4 +14,9 @@ enum E { A }
 type F = E;
 let _: F = E::A;  // OK
 // let _: F = F::A;  // Doesn't work
+
+
+pub type Float = f64;
+pub type Matrix<T = Float> = Matrix23<T>;
+pub type Matrix<T = u8> = Matrix23<T>;
 ```

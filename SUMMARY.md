@@ -4,19 +4,18 @@
 
 
 ## Theory
-- [Type Systems](theory/type-systems.md)
-- [Data Types](theory/data-types.md)
+- [Type Systems](theory/type-theory/type-systems.md)
+- [Data Types](theory/type-theory/data-types.md)
 
 
 ## Syntax
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
-- [Constraints](syntax/constraints.md)
 - [Conventions](syntax/conventions.md)
 - [Expressions](syntax/expressions.md)
-- [Control flow](syntax/flow.md)
+- [Control flow](syntax/control-flow.md)
 - [Formatting output](syntax/format.md)
-- [Fully Qualified Syntax](syntax/fqs.md)
+- [Fully Qualified Syntax](syntax/fully-qualified-syntax.md)
 - [Grammar](syntax/grammar.md)
 - [Keywords](syntax/keywords.md)
 - [Literals](syntax/literals.md)
@@ -31,15 +30,14 @@
 
 ## Primitives
 - [Character](primitives/char/char.md)
-- [Slices](primitives/slices/slices.md)
+- [Slices](primitives/slice/slice.md)
+- [Unit](primitives/unit/unit.md)
+- [Never](primitives/never/never.md)
 
 ## Types
-- [Classification](types/classification.md)
-- [Annotation](types/annotation.md)
-- [Unit](types/type_unit.md)
-- [Never](types/type_never.md)
+- [Classification](types/type-groups.md)
+- [Annotation](types/type-annotation.md)
 - [Top](types/type_top.md)
-
 
 ## Modules
 - [collections](modules/collections/README.md)
