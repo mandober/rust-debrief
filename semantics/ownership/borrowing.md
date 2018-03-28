@@ -1,4 +1,4 @@
-# Ownership and Borrowing
+# Borrowing
 
 A variable is a storage location paired with an associated symbolic name (an identifier) that contains some quantity of information referred to as a value. 
 
@@ -12,9 +12,6 @@ A type represents a constraint placed upon the interpretation of data in a type 
 
 
 
-
-
-
 Simple values like scalars are entirely stored on the stack, while complex values are represented with a stack-stored pointer that points to some data allocated on the heap. Contrary to the heap, manipulating the stack is very cheap and efficient.
 
 In Rust, Copy types are values stored exclusively on the stack, which can be duplicated simply by copying bits within the stack.
@@ -24,8 +21,6 @@ Value is a sequence of bits together with its interpretation.
 `Copy` types: types whose values can be duplicated simply by copying bits.
 By default, variable bindings have move semantics.
 However, if a type implements `Copy`, it instead has 'copy semantics':
-
-
 
 
 Primitive scalar values (numbers, characters and booleans), compound primitives (array, tuple) that containt only scalars and immutable kinds of references (raw pointers, refrences and function pointers).
@@ -42,5 +37,3 @@ Copy types:
 - function pointers`fn`
 - immutable references
 
-
-Move semantics:  

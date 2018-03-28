@@ -1,4 +1,4 @@
-# Function definition
+# Functions
 
 A function definition consists of a block, along with a name and a set of parameters. Other than a name, all these are optional.
 

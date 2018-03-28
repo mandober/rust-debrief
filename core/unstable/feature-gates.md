@@ -21,7 +21,7 @@ e.g. `#![feature(box_syntax)]`
 - `abi_x86_interrupt`
 - `advanced_slice_patterns`
 - `allocator_internals`
-- `allow_fail`
+- `allow_fail` test attribute
 - `allow_internal_unsafe`
 - `allow_internal_unstable`
 - `asm`

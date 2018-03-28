@@ -1,4 +1,4 @@
-# The Stack
+# Call stack
 
 <!-- TOC -->
 
@@ -11,6 +11,7 @@
 <!-- /TOC -->
 
 A stack is an abstract data type that serves as a collection of elements, with two principal operations: *push*, which adds an element to the collection, and *pop*, which removes the most recently added element. The order in which elements come off a stack gives rise to its alternative name, LIFO (last in, first out). The name "stack" comes from the analogy to a set of physical items stacked on top of each other, which makes it very easy to put or get an item off the top.
+
 
 ## Properties
 Considered as a linear data structure, the push and pop operations occur only at one end of the structure, referred to as the top of the stack. This makes the stack extremely fast as there is only one place for data to be written or read.
@@ -86,3 +87,9 @@ For example, some programming languages use a common stack to store both data lo
 Malicious parties may attempt a stack smashing attack that takes advantage of this type of implementation by providing oversized data input to a program that does not check the length of input. Such a program may copy the data in its entirety to a location on the stack, and in so doing it may change the return addresses for procedures that have called it. An attacker can experiment to find a specific type of data that can be provided to such a program such that the return address of the current procedure is reset to point to an area within the stack itself (and within the data provided by the attacker), which in turn contains instructions that carry out unauthorized operations.
 
 This type of attack is a variation on the buffer overflow attack and is an extremely frequent source of security breaches in software, mainly because some of the most popular compilers use a shared stack for both data and procedure calls, and do not verify the length of data items. Frequently programmers do not write code to verify the size of data items, either, and when an oversized or undersized data item is copied to the stack, a security breach may occur.
+
+
+---
+
+https://msdn.microsoft.com/en-us/library/ew5tede7(v=vs.140).aspx
+https://docs.microsoft.com/en-us/cpp/build/stack-allocation

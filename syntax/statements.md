@@ -1,7 +1,7 @@
 # Statements
 
-- A statement is a component of a block, which is a component of an outer expression or function.
-- Rust has two kinds of statements:
+- statement is a component of a block, which is a component of an outer expression or function.
+- two kinds of statements:
   1. declaration statement
   2. expression statement
 - Declaration statement introduces names into the enclosing statement block.
@@ -36,7 +36,9 @@ Note: there is no implicit capture of the function's dynamic environment when de
 
 
 #### let statements
-A let statement introduces a new set of variables, given by a pattern. The pattern may be followed by a type annotation, and/or an initializer expression. When no type annotation is given, the compiler will infer the type, or signal an error if insufficient type information is available for definite inference. Any variable introduced by a variable declaration are visible from the point of declaration until the end of the enclosing block scope.
+A let statement introduces a new set of variables, given by a pattern. The pattern may be followed by a type annotation, and/or an initializer expression.
+
+When no type annotation is given, the compiler will infer the type, or signal an error if insufficient type information is available for definite inference. Any variable introduced by a variable declaration are visible from the point of declaration until the end of the enclosing block scope.
 
 
 #### Expression statements

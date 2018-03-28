@@ -87,3 +87,18 @@ Rust is a multi-paradigm programming language, employing multiple programming st
 - cargo for project and package management
 - rustdoc for documentation management
 - doc comments
+
+
+
+## Influences
+- Abstract Machine Model : C
+- Data types : C, SML, OCaml, Lisp, Limbo
+- Optional Bindings : Swift
+- Hygienic Macros : Scheme
+- Functional Programming : Haskell, OCaml, F#
+- Attributes : ECMA-335
+- Memory Model and Memory Management : C++, ML Kit, Cyclone
+- Type Classes : Haskell
+- Crate : Assembly in the ECMA-335 CLI model
+- Channels and Concurrency : Newsqueak, Alef, Limbo
+- Message passing and Thread failure : Erlang

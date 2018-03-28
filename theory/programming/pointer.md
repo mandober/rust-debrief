@@ -1,12 +1,9 @@
-# Pointer
-https://www.wikiwand.com/en/Pointer_(computer_programming)
+# Pointers
 
+https://www.wikiwand.com/en/Pointer_(computer_programming)
 
 <!-- TOC -->
 
-- [primitive](#primitive)
-- [aggregate](#aggregate)
-- [pointer](#pointer)
 - [Memory protection](#memory-protection)
 - [segmentation fault](#segmentation-fault)
 - [null pointer](#null-pointer)
@@ -19,16 +16,17 @@ https://www.wikiwand.com/en/Pointer_(computer_programming)
 
 <!-- /TOC -->
 
+A variable is a memory address paired with an associated symbolic name that contains some quantity of information referred to as a value. Using that symbolic name (the name of a variable) is the usual way to reference the stored value. The "value of variable" is given by the corresponding mapping in the symbol table in the environment.
 
-## primitive
-A *data primitive* (or just primitive) is any datum that can be read from or written to computer memory using one memory access (for instance, both a byte and a word are primitives).
+A pointer is a primitive whose value is a memory address.
 
-## aggregate
-A *data aggregate* (or just aggregate) is a group of primitives that are logically contiguous in memory and that are viewed collectively as one datum (for instance, an aggregate could be 3 logically contiguous bytes, the values of which represent the 3 coordinates of a point in space). When an aggregate is entirely composed of the same type of primitive, the aggregate may be called an array; in a sense, a multi-byte word primitive is an array of bytes, and some programs use words in this way.
+If that memory address designates a valid value
 
-In the context of these definitions, a byte is the smallest primitive; each memory address specifies a different byte. The memory address of the initial byte of a datum is considered the memory address (or base memory address) of the entire datum.
 
-## pointer
+refers to ("points to") another value in the memory using its memory address.
+
+A pointer references a location in memory, and obtaining the value stored at that location is known as dereferencing the pointer.
+
 A memory pointer (or just pointer) is a primitive, whose value is intended to be used as a memory address; a pointer points to a memory address; a pointer points to a data in memory when the pointer's value is the data's memory address.
 
 More generally, a pointer is a kind of reference, it references a datum stored somewhere in memory; to obtain that datum is to dereference the pointer. The feature that separates pointers from other kinds of reference is that a pointer's value is meant to be interpreted as a memory address, which is a rather low-level concept.

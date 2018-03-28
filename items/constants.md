@@ -5,6 +5,7 @@
 - references to the same constant are not necessarily guaranteed to refer to the same memory address.
 - constant values must not have destructors. 
 - constant values permit most forms of data.
+- implicit static lifetime unless an explicit lifetime is specified
 - constants may refer to the address of other constants, in which case the address will have elided lifetimes where applicable, otherwise (which is in most cases) defaults to the static lifetime.
 - the compiler is still at liberty to translate the constant many times, so the address referred to may not be stable.
 - constants must be explicitly typed. The type may be any type that doesn't implement `Drop` and has a `'static` lifetime: any references it contains must have static lifetimes.

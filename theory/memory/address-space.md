@@ -56,11 +56,3 @@ With AMD's introduction of a 64-bit architecture backwards-compatible with x86, 
 
 
 
-
-https://www.wikiwand.com/en/X86_calling_conventions
-
-Stack Allocation
-https://msdn.microsoft.com/en-us/library/ew5tede7(v=vs.140).aspx
-https://docs.microsoft.com/en-us/cpp/build/stack-allocation
-
-

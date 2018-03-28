@@ -11,6 +11,7 @@ let new_owner = owner; // move: owner is dropped
 ```
 If copy of the value is needed, there is explicit clone method.
 
+
 ## Copy semantics
 types that implement the `Copy` trait have copy semantics.
 

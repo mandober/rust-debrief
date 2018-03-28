@@ -4,18 +4,17 @@
 
 
 
-Languages with manual memory management: Ada, C, C++, Fortran, Pascal and Rust.
 
 
-https://www.wikiwand.com/en/Optimizing_compiler
-https://www.wikiwand.com/en/Generic_programming
+
 https://www.wikiwand.com/en/Data_structure
 https://www.wikiwand.com/en/Tree_(data_structure)
 
 
 
-## Language comparison:
+Languages with manual memory management: Ada, C, C++, Fortran, Pascal and Rust.
 
+## Language constructs and concepts
 Assignment
 Basic syntax
 Basic instructions

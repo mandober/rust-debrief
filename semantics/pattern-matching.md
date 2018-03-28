@@ -1,29 +1,112 @@
 # Pattern matching
 
-Refutability
-- patterns which cannot fail to match for any possible value are irrefutable, and patterns which can fail to match for some possible value are refutable.
-- `let` statements, function parameters, and `for` loops only accept _irrefutable_ patterns, since there’s nothing correct the program could do if the pattern fails to match.
-- `if let`, `while let` only accept _refutable_ patterns, since it is their job to handle possible failure.
-
-Places where patterns are used:
-- `match` expression
-- refutable: `if let`, `while let` expressions
-- irrefutable: `let`statements, `for` loops, function parameters
+- irrefutable patterns cannot fail to match for any possible value
+- refutable patterns can fail to match for some possible value
 
 
+<!-- TOC -->
+
+- [Patterns](#patterns)
+- [Refutability](#refutability)
+- [match](#match)
+- [`if let` expressions](#if-let-expressions)
+- [`while let`](#while-let)
+- [`for` loops](#for-loops)
+- [`let` Statements](#let-statements)
+- [Function parameters](#function-parameters)
+
+<!-- /TOC -->
+
+
+## Patterns
+
+An expression is matched against a pattern.
+A pattern can be:
+- pattern `_` matches anything, binds nothing.
+- constant expression (constant, constant identifier)
+- variable name (to be bound to it if matched)
+- range
+- structural type (struct, tuple, array)
+- etc. (non-exhaustive list)
+
+
+## Refutability
+
+**Irrefutable** patterns cannot fail to match for any possible value. The _binding sites_ (`let` statement, function parameters, `for` loop, `match`) only accept irrefutable patterns.
+
+**Refutable** patterns can fail to match for some possible value. The _match sites_ (`match`, `if let`, `while let`) accept refutable patterns since they know how to handle all outcomes (pattern matches, pattern fals to match). `match` must handle all possible outcomes. `if/while let` are shorthand forms for match and they only handle one outcome, ignoring the rest.
+
+
+
+## match
+
+match consists of `match` keyword, a _test expression_ and an appropriate number of match arms so that all possible outcomes are covered.
+
+A _match arm_ consist of a _pattern_ and an _branch_ expression, which is executed if the value matches that arm's pattern.
+
+A match arm is an expression (unless teminated with a semicolon) and if matched, it returns a value, which in turn becomes the return value of the whole match expression (unless teminated with a semicolon).
+
+
+
+```rust
+// match expression
+match TEST {
+    PAT => BRANCH
+}
+// match statement
+match TEST {
+    PAT => BRANCH
+};
+```
 
 
 
 
-## `match`expressions
 
-match expressions are required to be exhaustive.
+match arms must be "just right": they must be exhaustive, but not overdone:
+- all possible outcomes must be accounted for, otherwise the complier will emit the "non-exhaustive patterns" _error_.
+- a matching overkill will compile, but the compiler will issue the "unreachable pattern" _warning_.
 
-an `_` matches anything, but never binds variables.
+
+```rust
+// delimit arms with comma:
+match TEST {
+    PAT1 => EXECUTOR1,
+    PAT2 => EXECUTOR2,
+}
+
+// delimit arms with braces:
+match EXPRESS {
+    PAT1 => { EXECUTOR1 }
+    PAT2 => { EXECUTOR2 }
+}
+
+// delimit arms with braces, in which case comma is optional:
+match EXPRESS {
+    PAT1 => { EXECUTOR1 },
+    PAT2 => { EXECUTOR2 },
+}
+
+// mixture:
+match EXPRESS {
+    PAT1 => EXECUTOR1,
+    PAT2 => { EXECUTOR2 },
+}
+```
+
 
 Formally, match expressions are defined as the keyword `match`, a value to match on, and one or more match arms that consist of a pattern and an expression to run if the value matches that arm’s pattern:
 
 ```rust
+
+match v {
+        5 => {println!("five")}
+        _ => {println!("no match")}
+    }
+
+
+
+
 let result: Result<File, Error> = std::fs::File::open("hello.txt");
 let file_handle: File = match result {
     Ok(fh) => fh,

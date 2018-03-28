@@ -1,7 +1,6 @@
 # Feature Flags
 
-Unstable Rust features organized by feature gate.
-To use an unstable feature, you must use a feature flag, e.g. `#![feature(box_syntax)]`.
+Unstable Rust features organized by feature gate. To use an unstable feature, you must use a feature flag, e.g. `#![feature(box_syntax)]` and use nightly.
 
 
 ## Compiler flags
@@ -11,13 +10,25 @@ To use an unstable feature, you must use a feature flag, e.g. `#![feature(box_sy
 - `remap_path_prefix` allows replacing prefixes of compiler emitted file paths.
 
 
-## Language features
+## Language features: matching
 
 - `advanced_slice_patterns` lets you use `..` pattern in slice matching.
-- `asm` inline assembly via `asm!` macro.
-- `attr_literals` allows other types of literals to be used in attributes. 
 - `box_patterns`lets you match on `Box`es.
 - `box_syntax` provides unstable `box` keyword.
+- `match_beginning_vert` add a '|' to the beginning of a match arm
+- `match_default_bindings` improves pattern-matching on references in `match`.
+- `macro_vis_matcher` visibility qualifier for fragments in macro definitions.
+- `slice_patterns` matching against a slice or array, with `&` feature.
+- `structural_match`
+- `dotdoteq_in_patterns`
+- `exclusive_range_pattern`
+
+
+## Language features
+
+- `pattern` trait
+- `asm` inline assembly via `asm!` macro.
+- `attr_literals` allows other types of literals to be used in attributes. 
 - `catch_expr` adds support for a `catch` expression.
 - `concat_idents`adds a macro for concatenating multiple identifiers into one.
 - `conservative_impl_trait` allows a conservative form of abstract return types.
@@ -34,9 +45,6 @@ To use an unstable feature, you must use a feature flag, e.g. `#![feature(box_sy
 - `inclusive_range_syntax` adds syntax for inclusive ranges: `0 ..= 10`
 - `lang_items` pluggable operations
 - `link_args` customize linking
-- `macro_vis_matcher` visibility qualifier for fragments in macro definitions.
-- `match_beginning_vert` add a '|' to the beginning of a match arm
-- `match_default_bindings` improves pattern-matching on references in `match`.
 - `non_ascii_idents`  adds support for non-ASCII identifiers.
 - `non_exhaustive` use `#[non_exhaustive]` attribute on structs and enums.
 - `on_unimplemented` provides `#[rustc_on_unimplemented]` attribute.
@@ -44,7 +52,6 @@ To use an unstable feature, you must use a feature flag, e.g. `#![feature(box_sy
 - `plugin`compiler plugins
 - `plugin_registrar` compiler plugins
 - `proc_macro` procedural macros features
-- `slice_patterns` matching against a slice or array, with `&` feature.
 - `trace_macros` trace the expansion of macros in the code.
 - `unboxed_closures` allows writing functions using the "rust-call" ABI.
 - `unsized_tuple_coercion` RFC for unsized tuple coercion.
@@ -74,10 +81,8 @@ custom_attribute
 custom_derive
 decl_macro
 default_type_parameter_fallback
-dotdoteq_in_patterns
 dropck_eyepatch
 dropck_parametricity
-exclusive_range_pattern
 fundamental
 generic_param_attrs
 intrinsics
@@ -115,7 +120,6 @@ staged_api
 start
 static_nobundle
 stmt_expr_attributes
-structural_match
 target_feature
 thread_local
 type_ascription
@@ -209,7 +213,6 @@ option_ref_mut_cloned
 panic_abort
 panic_col
 panic_unwind
-pattern
 placement_in
 placement_new_protocol
 pointer_methods

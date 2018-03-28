@@ -287,15 +287,280 @@
     - `VecDeque`
   - Enums
     - `Bound`
-- `convert`
+- convert
 - default
 - env
-- error
-- ffi
-- fmt
+- `error`
+  - Traits
+    - `Error`
+      - Required Methods
+        - `description`
+      - Provided Methods
+        - `cause`
+      - Implementations on Foreign Types
+        - `TryFromSliceError`
+      - Methods
+        - `impl Error + 'static`
+          - `is`
+          - `downcast_ref`
+          - `downcast_mut`
+        - `impl Error + Send + 'static`
+          - `is`
+          - `downcast_ref`
+          - `downcast_mut`
+        - `impl Error + Send + Sync + 'static`
+          - `is`
+          - `downcast_ref`
+          - `downcast_mut`
+        - `impl Error`
+          - `downcast`
+        - `impl Error + Send`
+          - `downcast`
+        - `impl Error + Send + Sync`
+          - `downcast`
+- `ffi`
+  - Structs
+    - `CStr`
+      - Methods
+        - `from_ptr`
+        - `from_bytes_with_nul`
+        - `from_bytes_with_nul_unchecked`
+        - `as_ptr`
+        - `to_bytes`
+        - `to_bytes_with_nul`
+        - `to_str`
+        - `to_string_lossy`
+        - `into_c_string`
+      - Trait Implementations
+        - `Hash`
+        - `Debug`
+        - `Default`
+        - `Borrow<CStr>`
+        - `From<&'a CStr>`
+        - `PartialEq`
+        - `Eq`
+        - `PartialOrd`
+        - `Ord`
+        - `ToOwned`
+        - `AsRef<CStr>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `CString`
+      - Methods
+        - `new`
+        - `from_vec_unchecked`
+        - `from_raw`
+        - `into_raw`
+        - `into_string`
+        - `into_bytes`
+        - `into_bytes_with_nul`
+        - `as_bytes`
+        - `as_bytes_with_nul`
+        - `as_c_str`
+        - `into_boxed_c_str`
+      - Methods from `Deref<Target=CStr>`
+        - `as_ptr`
+        - `to_bytes`
+        - `to_bytes_with_nul`
+        - `to_str`
+        - `to_string_lossy`
+      - Trait Implementations
+        - `Deref`
+        - `Debug`
+        - `Default`
+        - `Clone`
+        - `Hash`
+        - `Drop`
+        - `Eq`
+        - `PartialEq`
+        - `Ord`
+        - `PartialOrd`
+        - `Index<RangeFull>`
+        - `Borrow<CStr>`
+        - `AsRef<CStr>`
+        - `From<CString>`
+        - `From<&'a CStr>`
+        - `From<Box<CStr>>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `FromBytesWithNulError`
+      - Trait Implementations
+        - `Debug`
+        - `Display`
+        - `Clone`
+        - `Eq`
+        - `PartialEq`
+        - `Error`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `IntoStringError`
+      - Methods
+        - `into_cstring`
+        - `utf8_error`
+      - Trait Implementations
+        - `Clone`
+        - `PartialEq`
+        - `Eq`
+        - `Debug`
+        - `Error`
+        - `Display`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `NulError`
+      - Methods
+        - `nul_position`
+        - `into_vec`
+      - Trait Implementations
+        - `Clone`
+        - `PartialEq`
+        - `Eq`
+        - `Debug`
+        - `Error`
+        - `Display`
+        - `From<NulError>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `OsStr`
+      - Methods
+        - `new`
+        - `to_str`
+        - `to_string_lossy`
+        - `to_os_string`
+        - `is_empty`
+        - `len`
+        - `into_os_string`
+      - Trait Implementations
+        - `Debug`
+        - `Default`
+        - `Hash`
+        - `From<&'a OsStr>`
+        - `Borrow<OsStr>`
+        - `ToOwned`
+        - `AsRef<OsStr>`
+        - `AsRef<Path>`
+        - `OsStrExt`
+        - `Eq`
+        - `PartialEq`
+        - `PartialEq<str>`
+        - `PartialEq<OsStr>`
+        - `PartialEq<&'a OsStr>`
+        - `PartialEq<&'b OsStr>`
+        - `PartialEq<Cow<'a, OsStr>>`
+        - `PartialEq<&'a Path>`
+        - `PartialEq<Cow<'a, Path>>`
+        - `PartialEq<OsString>`
+        - `PartialEq<Path>`
+        - `PartialEq<PathBuf>`
+        - `Ord`
+        - `PartialOrd`
+        - `PartialOrd<OsStr>`
+        - `PartialOrd<&'a OsStr>`
+        - `PartialOrd<&'b OsStr>`
+        - `PartialOrd<Cow<'a, OsStr>>`
+        - `PartialOrd<&'a Path>`
+        - `PartialOrd<Cow<'a, Path>>`
+        - `PartialOrd<OsString>`
+        - `PartialOrd<Path>`
+        - `PartialOrd<PathBuf>`
+        - `PartialOrd<str>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `OsString`
+      - Methods
+        - `new`
+        - `as_os_str`
+        - `into_string`
+        - `push`
+        - `with_capacity`
+        - `clear`
+        - `capacity`
+        - `reserve`
+        - `reserve_exact`
+        - `shrink_to_fit`
+        - `into_boxed_os_str`
+      - Methods from `Deref<Target=OsStr>`
+        - `len`
+        - `to_str`
+        - `to_string_lossy`
+        - `is_empty`
+        - `to_os_string`
+      - Trait Implementations
+        - `Debug`
+        - `Default`
+        - `Deref`
+        - `Hash`
+        - `Clone`
+        - `OsStringExt`
+        - `Index<RangeFull>`
+        - `Borrow<OsStr>`
+        - `From<String>`
+        - `From<&'a T>`
+        - `From<PathBuf>`
+        - `From<Box<OsStr>>`
+        - `From<OsString>`
+        - `AsRef<OsStr>`
+        - `AsRef<Path>`
+        - `Eq`
+        - `PartialEq`
+        - `PartialEq<&'a OsStr>`
+        - `PartialEq<&'a Path>`
+        - `PartialEq<Cow<'a, OsStr>>`
+        - `PartialEq<Cow<'a, Path>>`
+        - `PartialEq<OsStr>`
+        - `PartialEq<OsString>`
+        - `PartialEq<Path>`
+        - `PartialEq<PathBuf>`
+        - `PartialEq<str>`
+        - `Ord`
+        - `PartialOrd`
+        - `PartialOrd<&'a OsStr>`
+        - `PartialOrd<&'a Path>`
+        - `PartialOrd<Cow<'a, OsStr>>`
+        - `PartialOrd<Cow<'a, Path>>`
+        - `PartialOrd<OsStr>`
+        - `PartialOrd<OsString>`
+        - `PartialOrd<Path>`
+        - `PartialOrd<PathBuf>`
+        - `PartialOrd<str>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+- `fmt`
+  - Structs
+    - `Arguments`
+    - `DebugList`
+    - `DebugMap`
+    - `DebugSet`
+    - `DebugStruct`
+    - `DebugTuple`
+    - `Error`
+    - `Formatter`
+  - Enums
+    - `Alignment`
+  - Traits
+    - `Binary`
+    - `Debug`
+    - `Display`
+    - `LowerExp`
+    - `LowerHex`
+    - `Octal`
+    - `Pointer`
+    - `UpperExp`
+    - `UpperHex`
+    - `Write`
+  - Functions
+    - `write`
+  - Type Definitions
+    - `Result`
 - fs
 - hash
-- io
+- `io`
   - Modules
     - `prelude`
   - Structs
@@ -322,6 +587,38 @@
     - `Chars`
   - Enums
     - `ErrorKind`
+      - Variants
+        - `NotFound`
+        - `PermissionDenied`
+        - `ConnectionRefused`
+        - `ConnectionReset`
+        - `ConnectionAborted`
+        - `NotConnected`
+        - `AddrInUse`
+        - `AddrNotAvailable`
+        - `BrokenPipe`
+        - `AlreadyExists`
+        - `WouldBlock`
+        - `InvalidInput`
+        - `InvalidData`
+        - `TimedOut`
+        - `WriteZero`
+        - `Interrupted`
+        - `Other`
+        - `UnexpectedEof`
+      - Trait Implementations
+        - `Clone`
+        - `Copy`
+        - `Debug`
+        - `Eq`
+        - `Hash`
+        - `Ord`
+        - `PartialEq`
+        - `PartialOrd`
+        - `From<ErrorKind>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
     - `SeekFrom`
     - `CharsError`
   - Traits
@@ -375,7 +672,7 @@
     - `Sync`
     - `Unsize`
 - mem
-- net
+- `net`
   - Structs
     - `AddrParseError`
     - `Incoming`
@@ -398,7 +695,106 @@
       - `lookup_host` DEPR LAB
 - num
 - ops
-- option
+- `option`
+  - Structs
+    - `IntoIter`
+      - Trait Implementations
+        - `Iterator`
+        - `TrustedLen`
+        - `DoubleEndedIterator`
+        - `FusedIterator`
+        - `ExactSizeIterator`
+        - `Clone`
+        - `Debug`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `Iter`
+      - Trait Implementations
+        - `Iterator`
+        - `TrustedLen`
+        - `DoubleEndedIterator`
+        - `FusedIterator`
+        - `ExactSizeIterator`
+        - `Clone`
+        - `Debug`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `IterMut`
+      - Trait Implementations
+        - `Iterator`
+        - `TrustedLen`
+        - `DoubleEndedIterator`
+        - `FusedIterator`
+        - `ExactSizeIterator`
+        - `Debug`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `NoneError`
+      - Trait Implementations
+        - `Copy`
+        - `Hash`
+        - `Clone`
+        - `PartialOrd<NoneError>`
+        - `Ord`
+        - `Debug`
+        - `Eq`
+        - `PartialEq<NoneError>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+  - Enums
+    - `Option`
+      - Variants
+        - `None`
+        - `Some`
+      - Methods
+        - `is_some`
+        - `is_none`
+        - `as_ref`
+        - `as_mut`
+        - `expect`
+        - `unwrap`
+        - `unwrap_or`
+        - `unwrap_or_else`
+        - `unwrap_or_default`
+        - `map`
+        - `map_or`
+        - `map_or_else`
+        - `ok_or`
+        - `ok_or_else`
+        - `and`
+        - `and_then`
+        - `or`
+        - `or_else`
+        - `iter`
+        - `iter_mut`
+        - `filter`
+        - `get_or_insert`
+        - `get_or_insert_with`
+        - `take`
+        - `cloned`
+        - `cloned`
+        - `transpose`
+      - Trait Implementations
+        - `Try`
+        - `From<T>`
+        - `Copy`
+        - `IntoIterator`
+        - `Hash`
+        - `FromIterator<Option<A>>`
+        - `Default`
+        - `Clone`
+        - `PartialOrd<Option<T>>`
+        - `Ord`
+        - `Debug`
+        - `Eq`
+        - `PartialEq<Option<T>>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
 - os
 - panic
 - path
