@@ -6,39 +6,60 @@
 - since box has a known, defined, size it is frequently used "to box" a recursive type or a type of unknown size.
 - box is somewhat of a primitive, it is a special type - the compiler has intimate knowledge about it; due to this the box can move out of a borrow.
 
+<!-- TOC -->
 
-## boxed
-- module: `std::boxed`, since 1.0.0
-- module [doc](https://doc.rust-lang.org/std/boxed "external link:std docs")
-- the main feature of this module is [Box struct](box.md).
-- `boxed` module contains
-    - Structs:
+- [Boxes](#boxes)
+- [Boxing](#boxing)
+- [Box definition in std](#box-definition-in-std)
+- [Manipulating boxes](#manipulating-boxes)
+- [Box is special](#box-is-special)
+  - [Deref and DerefMut](#deref-and-derefmut)
+
+<!-- /TOC -->
+
+## Boxes
+- module `std::boxed`, since 1.0.0
+- online [docs](https://doc.rust-lang.org/std/boxed)
+- module contains
+  - Structs:
     - `Box`
-    - `ExchangeHeapSingleton`[LAB]
-    - `IntermediateBox`[LAB]
-    - Constants:
-    - `HEAP` [LAB]
-    - Traits:
-    - `FnBox` [LAB]
+    - `ExchangeHeapSingleton`__LAB__
+    - `IntermediateBox`__LAB__
+  - Constants:
+    - `HEAP` __LAB__
+  - Traits:
+    - `FnBox` __LAB__
 
-### Structs
+Structs
 - `Box` a pointer type for heap allocation.
-- `ExchangeHeapSingleton` [LAB] the singleton type used for `boxed::HEAP`.
-- `IntermediateBox` - [LAB] uninitialized backing storage for Box.
+- `ExchangeHeapSingleton` __LAB__ the singleton type used for `boxed::HEAP`.
+- `IntermediateBox` - __LAB__ uninitialized backing storage for Box.
 
-### Constants
-- `HEAP` [LAB] a value that represents the heap. This is the default place that the box keyword allocates into when no place is supplied.
+Constants
+- `HEAP` __LAB__ a value that represents the heap. This is the default place that the box keyword allocates into when no place is supplied.
 
-### Traits
-- `FnBox` [LAB] a version of the `FnOnce` intended for use with boxed closure objects. `Box<FnBox()>` is to be used instead of storing `Box<FnOnce()>` in a data structure. The two traits behave essentially the same, except that a `FnBox` closure can only be called if it is boxed. Note that `FnBox` may be deprecated in the future if `Box<FnOnce()>` closures become directly usable.
-
-The main feature of this module is [Box struct](box.md).
+Traits
+- `FnBox` __LAB__ a version of the `FnOnce` intended for use with boxed closure objects. `Box<FnBox()>` is to be used instead of storing `Box<FnOnce()>` in a data structure. The two traits behave essentially the same, except that a `FnBox` closure can only be called if it is boxed. Note that `FnBox` may be deprecated in the future if `Box<FnOnce()>` closures become directly usable.
 
 
+## Boxing
+The `Box` type is most often used with types whose size can't be known at compile time: by boxing such types their size becomes known i.e. their size is the size of box pointer on the stack; and the size of box pointer is always 3 words: pointer to heap data, length and capacity. A recursive data structure must employ this technic in its definition.
 
-## Boxes are most often used:
-- When you have a type whose size can't be known at compile time, and you want to use a value of that type in a context that needs to know an exact size.
-- When you have a large amount of data and you want to transfer ownership but ensure the data won’t be copied when you do so.
+```rust
+enum List<T> {
+  // referring to self i.e. List must be boxed
+  Cons(T, Box<List<T>>),
+  Nil,
+}
+```
+
+Box is also used when the ownership of a large-sized data needs to be transferred, while avoiding the copying of the data.
+
+
+
+
+- recursive
+
 - When you want to own a value and only care that it's a type that implements a particular trait rather than knowing the concrete type itself.
 
 The deallocation happens for both the box (stored on the stack) and the data it points to (stored on the heap).
@@ -127,6 +148,13 @@ Implementing `Deref` for smart pointers makes accessing the data behind them con
 In fact, the rules regarding `Deref` and `DerefMut` were designed specifically to accommodate smart pointers, and because of this, `Deref` should only be implemented for them in order to avoid confusion.
 
 Box implements the `Deref` trait, which allows `Box<T>` values to be treated like references. When a `Box<T>` value goes out of scope, the heap data that the box is pointing to is cleaned up as well because of the `Box<T>` type's `Drop` trait implementation. 
+
+
+
+[Rust Tidbits: What Is a Lang Item? - In Pursuit of Laziness](https://manishearth.github.io/blog/2017/01/11/rust-tidbits-what-is-a-lang-item/)
+
+[Rust Tidbits: Box Is Special - In Pursuit of Laziness](https://manishearth.github.io/blog/2017/01/10/rust-tidbits-box-is-special/)
+
 
 Box's impl of deref:
 

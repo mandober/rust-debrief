@@ -1,5 +1,16 @@
 # Control flow
 
+<!-- TOC -->
+
+- [if](#if)
+- [match](#match)
+- [if let](#if-let)
+- [loop](#loop)
+- [while](#while)
+- [for](#for)
+- [while let](#while-let)
+
+<!-- /TOC -->
 
 ## if
 

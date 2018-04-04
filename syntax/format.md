@@ -18,13 +18,12 @@ Format placeholder is `{}`.
 - display: `{}` Type must implement `Display` trait
 - debug: `{:?}` Type must implement `Debug` trait
 
-## Formats
+
+## Format specifiers
 - display: `{}`
 - debug: `{:?}`
 - pretty debug: `{:#?}`
 - pointer: `{:p}`
-
-## Numbers
 - binary: `{:b}`
 - octal: `{:o}`
 - lower hexadecimal: `{:x}`

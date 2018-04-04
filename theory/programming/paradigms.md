@@ -15,3 +15,14 @@ Sometimes a limit on types which can be used in generics (for example, in generi
 ## Generic programming
 is a style of computer programming in which algorithms are written in terms of types to-be-specified-later that are then instantiated when needed for specific types provided as parameters. This approach permits writing common functions that differ only in the set of types on which they operate when used, thus reducing duplication.
 
+
+## Type classes
+
+https://www.wikiwand.com/en/Type_class
+http://okmij.org/ftp/Computation/typeclass.html
+
+Type classes are a powerful tool used in functional programming to enable ad-hoc polymorphism, more commonly known as overloading. Where many object-oriented languages leverage subtyping for polymorphic code, functional programming tends towards a combination of parametric polymorphism (think type parameters, like Java generics) and ad-hoc polymorphism.
+
+Rust supports traits, which are a limited form of type classes with coherence.
+
+parametric overloading, also known as bounded polymorphism, or just `type classes'

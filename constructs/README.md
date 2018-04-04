@@ -1,6 +1,25 @@
 # Language Constructs
 
 
+- Values
+- Variables
+- Declaration
+- Definition
+- Forward declarations
+- Identifier
+- Explicit declaration
+- Implicit declaration
+- Binding
+- Initialization
+- Re-initialization
+- Deinitialization
+- Late binding
+- Early binding
+- Static binding
+
+
+
+
 1. Entities
   - variable
   - constant

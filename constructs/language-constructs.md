@@ -1,4 +1,4 @@
-# Language Constructs
+# Language constructs
 
 A language construct is syntactically allowable part of the program that may be formed from one or more lexical tokens in accordance with the rules of the language.
 
@@ -7,7 +7,7 @@ A language construct is syntactically allowable part of the program that may be 
 - language item
 - statement
 - expression
-
+- type
 
 
 ## List of language constructs

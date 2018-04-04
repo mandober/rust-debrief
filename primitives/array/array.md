@@ -1,24 +1,25 @@
-# Arrays
+# Array
 
-- online [std doc](https://doc.rust-lang.org/std/primitive.array.html)
-- no accompanying module in std
-- array is a contiguous, fixed-size, sequence of homogenous elements.
-- structural type, has literal expression.
-- type annotation: `[T; N]`
-  - `N` is the length of the array and a __part of its type__.
-  - `N` is a non-negative compile-time constant integer
-  - `N` is in the range `isize::MAX >= N >= 0`
-  - although `N` is `usize`, in practice it can't be larger than `isize::MAX`
-  - traits are implemented only for `32 >= N >= 0`
-- coerces to a slice; all methods are on slices. Not iterable, slice is.
-- array is a primitive, compound, generic type that stores elements on the stack if they are primitives; otherwise on the heap.
-- array of any size is `Copy` if the elements' type is `Copy`
-- impossible to move elements out of the array (use `mem::replace`)
-- indexing is bounds-checked at run-time, out-of-bounds indexing causes panic
+
+<!-- TOC -->
+
+- [Storage](#storage)
+- [Syntax](#syntax)
+- [Type](#type)
+- [Access](#access)
+- [Coercion](#coercion)
+- [Implemented traits](#implemented-traits)
+
+<!-- /TOC -->
+
+## Arrays
 
 
 
-
+## Storage
+For example, if a variable referring to a large array, needs to be supplied by value to a function; if the array holds primitives then everything is on the stack and there will be a lot of data moving around; even if the array's elements are non-primitives and thus stored on the heap, for a very large array that involves moving the array itself around (an array with 1000 elements which are all pointers to the data on the heap)
+ 
+ 
 ## Syntax
 There are 2 forms for creating an array:
 - list literal expression: `[x, y, z]`

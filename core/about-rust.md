@@ -1,24 +1,50 @@
-# The Rust Language
+# The Rust Programming Language
 
-Rust is an open source programming language, whose development started in 2006 by Mozilla employee Graydon Hoare. Its development continued on GitHub by the community, steered by the Rust Project Team (a large portion of commits to the project in 2018 are from community members). Rust is dual licensed under Apache 2.0 and MIT. Rust uses `.rs` filename extension for source files and `.rlib` for libraries.
 
-Rust v.1.0 (the first stable release) was released on May 15, 2015. Stable releases are delivered every 6 weeks, while features are developed in nightly Rust and then tested with alpha and beta releases that last 6 weeks.
+Rust is a all-level, general-purposes, multi-paradigm programming language providing safety, speed, concurrency and control without garbage collection.
 
-Rust is a multi-paradigm programming language, employing multiple programming styles such as imperative, functional, structured, generic, etc. Rust can be used as all-level language, from low-level systems programming to shell scripting.
+
+## Info
+- Rust was started in 2006 by Graydon Hoare working at Mozilla
+- Mozilla began sponsoring Rust in 2009
+- First official presentation in 2010
+- Release v.1.0.0 on May 15 2015
+- Development by the community, on GitHub, steered by the Rust Project Team
+- Open source, dual licensed under Apache 2.0 and MIT.
+- Filename extension for source files:`.rs`, libraries: `.rlib`
+- Stable releases delivered every 6 weeks
+- Features developed in nightly Rust and tested with alpha/beta for 6 weeks.
+
 
 > _"A programming language is low level when its concepts require attention to the irrelevant"._
 
 
+## Specialty
+- Rust = Safety + Performance + Expressiveness + Control + Concurrency (- GC)
+- Rust is the only language that makes concurrent programming memory safe without GC, with performance rivaling that of C, C++
+- Rust is the only language that provides safety with expressiveness without sacrificing control or performance.
+
+
+- Low overhead, small runtime
+- Zero Cost Abstractions (ZCA)
+- Choose Your Guarantees (CYG)
+- Pay only what you use
+- Control AND safety: Provides maximum control while also providing maximum safety
+
+
+
 
 ## Features
-- compiled: compiling to multiple targets, including wasm, asm
-- self-hosting compiler written in Rust, rustc, using LLVM as back end
-- C like sytax
-- concurrent, system threads (green threads also available in crates)
+- Compiled: compiling to multiple targets and formats
+- Self-hosting compiler written in Rust, `rustc`, using LLVM as the back-end
+- Safe
+- Concurrent, parallel, system threads
 - UTF-8 encoded strings
 - FFI
-- performance is comparable to C++
-- zero cost abstractions
+- Performance is comparable to C++
+- Zero Cost Abstractions (ZCA)
+- Choose Your Guarantees (CYG)
+- Pay only what you use
 
 ## Guarantees
 - guaranteed memory safety

@@ -19,3 +19,7 @@ let n = 5;      // ok: type infered as i32 (default for integers)
 let n: i32 = 5; // ok: reduntant explicit type annotation
 let n: i16 = 5; // ok: explicit type annotation
 ```
+
+## Values
+
+{% include "./values.md" %}

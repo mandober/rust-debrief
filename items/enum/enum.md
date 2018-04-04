@@ -1,5 +1,19 @@
 # Enumerations
 
+## null pointer optimization
+every enum has to store a tag to specify which variant of the enum its bits represent. However, if we have a special kind of enum:
+
+```rust
+enum Foo {
+  A,
+  B(NonNullPtr),
+}
+```
+
+the null pointer optimization kicks in, which eliminates the space needed for the tag. If the variant is A, the whole enum is set to all 0's. Otherwise, the variant is B. This works because B can never be all 0's, since it contains a non-zero pointer.
+
+
+## enum
 An enumeration is a simultaneous definition of a nominal enumerated type as well as a set of constructors, that can be used to create or pattern-match values of the corresponding enumerated type.
 
 Enumerations are declared with the keyword `enum`.

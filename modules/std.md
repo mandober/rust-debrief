@@ -92,6 +92,117 @@
       - `to_owned`
       - `clone_into`
 - boxed
+  - Structs
+    - `Box`
+      -Methods
+        - `new`
+        - `from_raw`
+        - `into_raw`
+        - `into_raw_non_null`
+        - `into_unique`
+        - `leak`
+        - `downcast`
+        - `downcast`
+      - Trait Implementations
+        - `Iterator`
+        - `Pointer`
+        - `Boxed`
+        - `ExactSizeIterator`
+        - `Borrow<T>`
+        - `Hasher`
+        - `Display`
+        - `Ord`
+        - `FusedIterator`
+        - `DerefMut`
+        - `From<Box<str>>`
+        - `From<Box<T>>`
+        - `From<Box<[T]>>`
+        - `From<&'a str>`
+        - `From<PinBox<T>>`
+        - `From<&'a [T]>`
+        - `From<T>`
+        - `From<Vec<T>>`
+        - `From<String>`
+        - `AsRef<T>`
+        - `FnOnce<A>`
+        - `CoerceUnsized<Box<U>>`
+        - `Drop`
+        - `Hash`
+        - `Eq`
+        - `Clone`
+        - `AsMut<T>`
+        - `Default`
+        - `Deref`
+        - `PartialEq<Box<T>>`
+        - `DoubleEndedIterator`
+        - `Generator`
+        - `BorrowMut<T>`
+        - `PartialOrd<Box<T>>`
+        - `Debug`
+        - `From<E>`
+        - `From<&'b str>`
+        - `From<Cow<'b, str>>`
+        - `From<Cow<'a, str>>`
+        - `Error`
+        - `From<&'a CStr>`
+        - `From<Box<CStr>>`
+        - `From<CString>`
+        - `From<&'a OsStr>`
+        - `From<Box<OsStr>>`
+        - `From<OsString>`
+        - `Read`
+        - `Write`
+        - `Seek`
+        - `BufRead`
+        - `From<&'a Path>`
+        - `From<Box<Path>>`
+        - `From<PathBuf>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `ExchangeHeapSingleton`
+      - Trait Implementations
+        - `Copy`
+        - `Clone`
+        - `Placer<T>`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+    - `IntermediateBox`
+      - Trait Implementations
+        - `InPlace<T>`
+        - `Drop`
+        - `BoxPlace<T>`
+        - `Place<T>`
+      - Auto Trait Implementations
+        - `!Send`
+        - `!Sync`
+    - `PinBox`
+      - Methods
+        - `new`
+        - `as_pin`
+        - `get_mut`
+        - `unpin`
+      - Trait Implementations
+        - `Pointer`
+        - `Display`
+        - `DerefMut`
+        - `From<Box<T>>`
+        - `From<PinBox<T>>`
+        - `CoerceUnsized<PinBox<U>>`
+        - `Deref`
+        - `Debug`
+      - Auto Trait Implementations
+        - `Send`
+        - `Sync`
+  - Constants
+    - `HEAP`
+  - Traits
+    - `FnBox`
+      - Associated Types
+        - `Output`
+      - Required Methods
+        - `call_box`
 - `cell`
   - Structs
     - `Cell`

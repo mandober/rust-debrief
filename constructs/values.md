@@ -1,5 +1,3 @@
-# Values
-
 A value is a sequence of bits together with its interpretation.
 
 The term value type is commonly used to refer to one of two kinds of data types:

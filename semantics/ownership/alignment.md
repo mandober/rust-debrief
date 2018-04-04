@@ -10,26 +10,43 @@ type's size must be a multiple of its alignment.
 
 
 
-
-
 https://doc.rust-lang.org/stable/nomicon/repr-rust.html
 
-All types in Rust have an alignment specified in bytes. The alignment of a type specifies what main memory addresses are valid to store the value at. A value of alignment `n` must only be stored at an address that is a multiple of `n`. So alignment 2 means it must be stored at an even address, and 1 means that it can be stored anywhere. Alignment is at least 1, and always a power of 2.
 
-Most primitives are generally aligned to their size, although this is platform-specific behavior. In x86 architecture, `u64` and `f64` may be only aligned to 32 bits.
+## Alignment
+All types in Rust have an alignment specified in bytes. The alignment of a type specifies what main memory addresses are valid to store the value at. A value of alignment `n` must only be stored at an address that is a multiple of `n`. So alignment 2 means it must be stored at an even address, and 1 means that it can be stored anywhere. Alignment is at least 1, and always a power of 2. Most primitives are generally aligned to their size, although this is platform specific behavior. In x86 architecture, `u64` and `f64` may be only aligned to 32 bits.
 
-A type's size must always be a multiple of its alignment.
+A type's size must always be a multiple of its alignment. This ensures that an array of that type may always be indexed by offsetting by a multiple of its size. The size and alignment of _dynamically sized types_ is not known (statically, at compile time).
 
-This ensures that an array of that type may always be indexed by offsetting by a multiple of its size. Note that the size and alignment of a type may not be known statically in the case of dynamically sized types.
 
-Rust gives you the following ways to lay out composite data:
-- structs (named product types)
-- tuples (anonymous product types)
-- arrays (homogeneous product types)
-- enums (named sum types, tagged unions)
-An enum is said to be C-like if none of its variants have associated data.
+## Laying out composite data
+- arrays: homogeneous, product types
+- structs: heterogeneous, named, product types
+- tuples: heterogeneous, anonymous, product types
+- enums: heterogeneous, named, sum types (tagged unions)
 
-Composite structures will have an alignment equal to the maximum of their fields' alignment. Rust will consequently insert padding where necessary to ensure that all fields are properly aligned and that the overall type's size is a multiple of its alignment.
+An enum is said to be field-less (C-like) if none of its variants have associated data.
+
+Composite structures have an alignment equal to the maximum of their fields' alignment. The compiler will insert padding to ensure that all fields are properly aligned and that the overall type's size is a multiple of its alignment.
+
+```rust
+struct A {
+  a: u8,          // 1B
+  _pad1: [u8; 3], //+3B so the next field is aligned
+
+  b: u32,         // 4B
+
+  c: u16,         // 2B
+  _pad2: [u8; 2], //+2B to make size of struct multiple of 4
+}
+```
+
+This struct will be 4 byte aligned on an architecture that aligns these primitives to their respective sizes. The whole struct will therefore have a size that is a multiple of 4 bytes. There is no indirection: all data is stored within the struct, as in C. In Rust, save for arrays which are densely packed and in-order, the layout of data is not specified by default.
+
+
+
+
+
 
 ...
 

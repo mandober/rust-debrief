@@ -1,5 +1,19 @@
 # Destructuring
 
+<!-- TOC -->
+
+- [Irrefutable patterns](#irrefutable-patterns)
+- [Arrays](#arrays)
+- [Tuples](#tuples)
+- [Structs](#structs)
+- [References](#references)
+- [Box](#box)
+- [Slices](#slices)
+- [Feature gated](#feature-gated)
+
+<!-- /TOC -->
+
+
 Types that can be destructured:
 - tuples
 - arrays

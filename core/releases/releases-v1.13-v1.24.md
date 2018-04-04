@@ -2,6 +2,7 @@
 
 <!-- TOC -->
 
+- [Version 1.24.1 (2018-03-01)](#version-1241-2018-03-01)
 - [Version 1.24.0 (2018-02-15)](#version-1240-2018-02-15)
 - [Version 1.23.0 (2018-01-04)](#version-1230-2018-01-04)
 - [Version 1.22.1 (2017-11-22)](#version-1221-2017-11-22)
@@ -17,6 +18,19 @@
 - [Version 1.14.0 (2016-12-22)](#version-1140-2016-12-22)
 
 <!-- /TOC -->
+
+## Version 1.24.1 (2018-03-01)
+
+ - [Do not abort when unwinding through FFI][48251]
+ - [Emit UTF-16 files for linker arguments on Windows][48318]
+ - [Make the error index generator work again][48308]
+ - [Cargo will warn on Windows 7 if an update is needed][cargo/5069].
+
+[48251]: https://github.com/rust-lang/rust/issues/48251
+[48308]: https://github.com/rust-lang/rust/issues/48308
+[48318]: https://github.com/rust-lang/rust/issues/48318
+[cargo/5069]: https://github.com/rust-lang/cargo/pull/5069
+
 
 ## Version 1.24.0 (2018-02-15)
 

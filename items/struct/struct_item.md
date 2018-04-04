@@ -1,5 +1,8 @@
 # Structure i.e. `struct`
 
+struct with a single field, its size is the same as that field. zero-cost abstraction!
+
+
 A `struct`, is a custom data type that lets us name and package 
 together multiple related values that make up a meaningful group.
 

@@ -5,7 +5,19 @@ Rust by bullet point: from summary to particularity
 - [GitHub](https://github.com/mandober/rust-debrief)
 - [GitBooks](https://mandober.gitbooks.io/rust-debrief)
 
-Rust, debriefings and details: notes, lists, reminders, quick reference, cheat-sheets and other by-products of oxidation.
+Rust: the digested and the detailed. Notes, lists, references, indices, tables, cheat-sheets and other by-products of my Rust accretion primarily through official channels: both versions of the Book, Reference, Rustonomicon, Unstable Book, Rust by Example, The Cookbook, Internals Forum, The Grammar, The Style guide, The Cargo Book, User Forum, The Official Blog, The Error Index, RFCs, FAQ, as well as from many other places I encounter while studying Rust. Noting things down, classifying, indexing... distilling while instilling.
+
+Project:
+- lang: Rust
+- title: Rust Debrief
+- subtitle: Rust by bullet point: from summary to particularity
+- desc: Taking notes while learning Rust.
+- GitHub: https://github.com/mandober/rust-debrief
+- GitBooks: https://mandober.gitbooks.io/rust-debrief
+- slug: rust-debrief
+- author: Ilic Ivan
+- date: 2017/18 (`'my`)
+- notes: WIP
 
 ```rust
 impl<T> Debriefing for Topic<T> where T: Rust {
@@ -16,18 +28,3 @@ impl<T> Details for Topic<T> where T: Rust {
   fn details(&self) -> Particularity;
 }
 ```
-
-Material contained is aggregated primarily from Rust's official documentation, both versions of the Rust Book, Rust Reference, Rustonomicon, Unstable Book, Rust by Example, Rust Cookbook, various RFCs, Rust FAQ, Rust internals forum, Rust user forum, Rust grammar, Rust style guide, rustdoc book, Cargo book, Rust official blog, Compiler Error Index, as well as from many other places I encounter while studying Rust. A work in progress never to be completed.
-
-
-Project:
-- title: Rust Debrief
-- subtitle: Rust by bullet point: from summary to particularity
-- desc: Rust, debriefings and details: notes, lists, reminders, quick reference, cheat-sheets and other by-products of oxidation.
-- language: Rust
-- repo: https://github.com/mandober/rust-debrief
-- GitBooks: https://mandober.gitbooks.io/rust-debrief
-- author: Ilic Ivan
-- about: Rust learning, notes taking: documenting the process of studying Rust
-- date: `'my`
-- note: still unstructured

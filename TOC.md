@@ -1,12 +1,17 @@
-# PAGES
+# TOC
 
-## Theory
+## Type
 - Type Systems
-  - Data Types
-  - Algebraic Data Types
+- Data Types
+- Algebraic Data Types
+
+
 - Binary relations
-  - Partial equality
   - Partial ordering
+  - Equivalence relation
+  - Partial equality
+  - Partial equivalence relation
+
 - Hashing
 - Unicode
 - Memory management
@@ -23,12 +28,71 @@
   - CPU
   - Registers
   - Cache
+- Programming
 - Programming Paradigms
   - Inheritance
   - Interface
   - Polymorphism
   - Generics
   - Reflection
+
+
+Programming
+- Value
+  - Memory type (stack, heap)
+  - type of value
+- Variable
+  - Variable name
+- Declaration
+  - Symbol table
+  - Variable Declaration
+    - Identifier
+    - Data Type
+    - Scope
+    - Lifetime
+    - Mutability
+    - Memory type (stack, heap)
+    - Privacy, Visibility
+- Binding
+- Assignment
+- Aliasing
+Reference
+Pointer
+Operator
+Expression
+Statement
+Computer program
+Formal language
+Grammar
+Syntax
+Semantics
+Context-free grammar
+Loader
+Compiler
+Machine code
+
+Memory
+- Memory address
+- Hierarchy
+- Memory type: SRAM, DRAM
+
+
+- Memory management
+  - Pointers
+  - Address space
+  - Alignment
+  - The Stack
+  - The Heap
+- Programming Paradigms
+  - Inheritance
+  - Interface
+  - Polymorphism
+  - Generics
+  - Reflection
+- Low Level
+  - ISA, x86
+  - Compilers, IR, Object code
+
 
 ## Core
 - Low level

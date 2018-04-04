@@ -2,6 +2,10 @@
 
 - [Rust Debrief](README.md)
 
+## Language constructs
+- [Declaration](pages/declaration.md)
+- [Definition](pages/definition.md)
+
 
 ## Theory
 - [Type Systems](theory/type-theory/type-systems.md)

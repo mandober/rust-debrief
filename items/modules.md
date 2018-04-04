@@ -7,6 +7,14 @@
 - module is a container for items
 - _module item_ is a module, surrounded in braces, named, prefixed with`mod`. It introduces a new named module into the tree of modules that make up a crate.
 
+## Modules
+- Every crate has a single, outermost, _anonymous_ module.
+- All further items in the crate have paths in the module tree of the crate.
+- Items are entirely determined at compile-time
+- They generally remain fixed during execution
+- They may reside in read-only memory
+
+
 
 
 ## Module resolution

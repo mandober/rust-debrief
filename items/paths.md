@@ -1,6 +1,17 @@
 # Path
 
-
+## Paths
+- A path is a sequence of one or more path components logically separated by a namespace qualifier, `::`.
+- If a path consists of only one component, it may refer to either an item or a variable in a local control scope.
+- If a path has multiple components, it refers to an item.
+- Path components are usually identifiers, but they may also include angle- bracket enclosed lists of type arguments.
+- In expression context, the type argument list is given after a namespace qualifier in order to disambiguate it from a relational expression involving the less-than symbol, `<`.
+- In type expression context, the final namespace qualifier is omitted.
+- Paths starting with qualifier
+  - `::` resolve from the crate root
+  - `super` resolve relative to the parent module
+  - `self` resolve relative to the current module
+  - `super` can reoccur after `super` or `self` to refer to ancestor modules
 
 ## Paths
 A path is a sequence of one or more path components logically separated by a namespace qualifier, `::`.

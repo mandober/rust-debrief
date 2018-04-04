@@ -8,7 +8,6 @@
   * deprecated
 
 
-
 - `true`     boolean true literal
 - `false`    boolean false literal
 - `const`    constant raw pointer, `*const T`
@@ -77,25 +76,25 @@ Items
 - `super`    parent module of the current module
 
 Weak
-- `default`  [weak] use of default in front of impl block is deprecated.
+- `default`  [weak] use of default in front of impl block is _deprecated_.
 - `'static`  [weak] keyword; static lifetime annotation.
 - `dyn`      [weak] keyword
-- `catch` [weak, unstable] create new scope; `?` with `#![feature(catch_expr)]`
+- `catch` [weak, unstable] create new scope; `?` via `#![feature(catch_expr)]`
 
 Reserved
-- `priv`     visibility
-- `yield`    generators:`#![feature(generators,generator_trait)]`
-- `alignof`  [reserved]
-- `offsetof` [reserved]
-- `sizeof`   [reserved]
-- `typeof`   [reserved]
-- `abstract` [reserved]
-- `final`    [reserved]
-- `virtual`  [reserved]
-- `unsized`  [reserved]
-- `pure`     [reserved]
-- `become`   [reserved]
-- `do`       [reserved]
-- `override` [reserved]
-- `macro`    [reserved]
-- `proc`     [reserved]
+- `priv` visibility
+- `yield` generators, add`#![feature(generators,generator_trait)]`
+- `alignof`
+- `offsetof`
+- `sizeof`
+- `typeof`
+- `abstract`
+- `final`
+- `virtual`
+- `unsized`
+- `pure`
+- `become`
+- `do`
+- `override`
+- `macro`
+- `proc`

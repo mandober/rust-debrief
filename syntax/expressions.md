@@ -61,7 +61,15 @@
   - dereferences of a type that implements `DerefMut`, which requires that the value being derefed is evaluated in a mutable place expression context.
   - array indexing of a type that implements `DerefMut`, which evaluates the value being indexed, but not the index, in mutable place expression context.
 
-
+```
+expr : literal | path | tuple_expr | unit_expr | struct_expr
+     | block_expr | method_call_expr | field_expr | array_expr
+     | idx_expr | range_expr | unop_expr | binop_expr
+     | paren_expr | call_expr | lambda_expr | while_expr
+     | loop_expr | break_expr | continue_expr | for_expr
+     | if_expr | match_expr | if_let_expr | while_let_expr
+     | return_expr ;
+```
 
 ## Expression
 An expression may have two roles:

@@ -26,7 +26,4 @@
   - Compilers, IR, Object code
 
 
-
-
-
 > "_If you find that you're spending almost all your time on practice, start turning some attention to theoretical things; it will improve your practice_." -- Donald Knuth

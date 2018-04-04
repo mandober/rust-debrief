@@ -55,9 +55,7 @@
 
 
 ## Binary operators
-
-In order of operator precedence:
-
+In order of operator precedence
 
 ### Arithmetic operators
 - sugar for calls to traits defined in the `std::ops`
@@ -81,7 +79,7 @@ In order of operator precedence:
   - RSHIFT: `shr` of `std::ops::Shr` trait
 
 ### Lazy boolean operators
-- short-circuited
+short-circuited
 - `||` and `&&` may be applied to booleans
 - `||` denotes logical OR, `&&` denotes logical AND
 

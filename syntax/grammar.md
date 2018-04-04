@@ -2,53 +2,31 @@
 
 <!-- TOC -->
 
-- [Productions](#productions)
-- [Modules](#modules)
-- [Items](#items)
-- [Paths](#paths)
+- [Notation](#notation)
+- [Grammar productions](#grammar-productions)
 
 <!-- /TOC -->
 
 
-## Productions
+## Notation
+- Rust's grammar is defined over Unicode codepoints, each denoted `U+XXXX`. 
+- Most of grammar is confined to the ASCII range of Unicode.
+- Grammar is described by _Extended Backus-Naur Form (EBNF)_, i.e. by EBNF dialect supported by common automated LL(k) parsing tools such as `llgen`(rather than the dialect given in ISO 14977)
+
+
+Unicode productions
+A few productions in Rust's grammar permit Unicode code points outside the ASCII range. We define these productions in terms of character properties specified in the Unicode standard, rather than in terms of ASCII-range code points. The grammar has a Special Unicode Productions section that lists these productions.
+
+String table productions
+Some rules in the grammar — notably unary operators, binary operators, and keywords — are given in a simplified form: as a listing of printable strings. These cases form a subset of the rules regarding the token rule, and are assumed to be the result of a lexical-analysis phase feeding the parser, driven by a DFA, operating over the disjunction of all such string table entries.
+
+When such a string in monospace font occurs inside the grammar, it is an implicit reference to a single member of such a string table production. See tokens for more information.
+
+
+## Grammar productions
 - Tokens are primitive productions defined by regular, non-recursive, language.
-- A literal is a compile-time evaluated expression that immediately and directly denotes the value it evaluates to.
+- literal is a compile-time evaluated expression that immediately and directly denotes the value it evaluates to.
 - Symbols are printable structural tokens: `:: -> # [ ] ( ) { } , ;`
 - An item is a component of a crate
 - Items are organized within a crate by a nested set of modules.
 
-## Modules
-- Every crate has a single, outermost, _anonymous_ module.
-- All further items in the crate have paths in the module tree of the crate.
-- Items are entirely determined at compile-time
-- They generally remain fixed during execution
-- They may reside in read-only memory
-
-## Items
-- modules
-- extern crate declarations
-- use declarations
-- function definitions
-- type definitions
-- struct definitions
-- enumeration definitions
-- union definitions
-- constant items
-- static items
-- trait definitions
-- implementations
-- extern blocks
-
-
-## Paths
-- A path is a sequence of one or more path components logically separated by a namespace qualifier, `::`.
-- If a path consists of only one component, it may refer to either an item or a variable in a local control scope.
-- If a path has multiple components, it refers to an item.
-- Path components are usually identifiers, but they may also include angle- bracket enclosed lists of type arguments.
-- In expression context, the type argument list is given after a namespace qualifier in order to disambiguate it from a relational expression involving the less-than symbol, `<`.
-- In type expression context, the final namespace qualifier is omitted.
-- Paths starting with qualifier
-  - `::` resolve from the crate root
-  - `super` resolve relative to the parent module
-  - `self` resolve relative to the current module
-  - `super` can reoccur after `super` or `self` to refer to ancestor modules

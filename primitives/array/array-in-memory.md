@@ -2,6 +2,7 @@
 
 http://www.wikipedia.com/en/Array_data_structure
 
+[Arrays in Memory](http://cis.poly.edu/cs1114/mings-websites/ch07/memory.htm)
 Two pieces of information are needed to retrieve the value of a variable:
 - type of the variable
 - memory address of its first byte

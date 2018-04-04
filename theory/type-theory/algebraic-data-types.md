@@ -9,9 +9,7 @@
 <!-- /TOC -->
 
 
-Algebraic data type (ADT) is a kind of composite type, a type formed by heterogeneous grouping of other types.
-
-The name is associated with algebra, where operations like addition and multiplication operate on variables, whereas in type theory they operate on data types producing a type class for each applicable algebraic operation: addition produces sum types, multiplication product types, exponentiation exponential types.
+Algebraic data type (ADT) is a composite type formed by heterogeneous grouping of other types. The name is associated with algebra, where operations like addition and multiplication operate on variables, whereas in type theory they operate on data types, producing a type class for each applicable algebraic operation: addition produces _sum types_, multiplication _product types_, exponentiation _exponential types_.
 
 Values of algebraic types are analyzed with **pattern matching**, which identifies a value by its constructor or field names and extracts the data it contains. Pattern matching on algebraic data types matches on the structural properties of an object rather than on the character sequence of strings.
 
