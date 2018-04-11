@@ -1,4 +1,4 @@
-# Semantics
+# Concepts
 
 - [Functions](functions/README.md)
 

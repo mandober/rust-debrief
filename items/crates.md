@@ -8,6 +8,8 @@
 
 
 
+A crate is somewhat analogous to an assembly in the ECMA-335 CLI model, a library in the SML/NJ Compilation Manager, a unit in the Owens and Flatt module system, or a configuration in Mesa.
+
 
 Pull in libraries into a project i.e. declare external dependencies in `Cargo.toml` by specifying crate names and versions
 

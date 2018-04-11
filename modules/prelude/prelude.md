@@ -17,11 +17,11 @@
 - `std::boxed::Box`
 - `std::option::Option::{self, Some, None}`
 - `std::result::Result::{self, Ok, Err}`
+- `std::cmp::{PartialEq, PartialOrd, Eq, Ord }`
 - `std::default::Default`
 - `std::ops::{Drop, Fn, FnMut, FnOnce}`
 - `std::mem::drop`
 - `std::borrow::ToOwned`
-- `std::cmp::{PartialEq, PartialOrd, Eq, Ord }`
 - `std::convert::{AsRef, AsMut, Into, From}`
 - `std::iter::{Iterator, IntoIterator, DoubleEndedIterator,ExactSizeIterator, Extend}`
 

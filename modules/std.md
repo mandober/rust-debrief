@@ -1,4 +1,4 @@
-# Index of `std` items
+# Modules
 
 - `any`
   - Structs
@@ -1140,10 +1140,45 @@
 - isize
 - usize
 - f32
-- f64
+- `f64`
+  - Constants
+    - `DIGITS`
+    - `EPSILON`
+    - `INFINITY`
+    - `MANTISSA_DIGITS`
+    - `MAX`
+    - `MAX_10_EXP`
+    - `MAX_EXP`
+    - `MIN`
+    - `MIN_10_EXP`
+    - `MIN_EXP`
+    - `MIN_POSITIVE`
+    - `NAN`
+    - `NEG_INFINITY`
+    - `RADIX`
+  - Modules
+    - `consts`
+      - Constants
+        - `E`
+        - `FRAC_1_PI`
+        - `FRAC_1_SQRT_2`
+        - `FRAC_2_PI`
+        - `FRAC_2_SQRT_PI`
+        - `FRAC_PI_2`
+        - `FRAC_PI_3`
+        - `FRAC_PI_4`
+        - `FRAC_PI_6`
+        - `FRAC_PI_8`
+        - `LN_10`
+        - `LN_2`
+        - `LOG10_E`
+        - `LOG2_E`
+        - `PI`
+        - `SQRT_2`
 
 
-## Primitive Types
+
+## Primitives and their modules
 
 - **array**
   - Trait Implementations
@@ -1342,4 +1377,102 @@
 - isize
 - usize
 - f32
-- f64
+- `f64`
+  - Methods
+    - `is_nan`
+    - `is_infinite`
+    - `is_finite`
+    - `is_normal`
+    - `classify`
+    - `floor`
+    - `ceil`
+    - `round`
+    - `trunc`
+    - `fract`
+    - `abs`
+    - `signum`
+    - `is_sign_positive`
+    - `is_positive`
+    - `is_sign_negative`
+    - `is_negative`
+    - `mul_add`
+    - `recip`
+    - `powi`
+    - `powf`
+    - `sqrt`
+    - `exp`
+    - `exp2`
+    - `ln`
+    - `log`
+    - `log2`
+    - `log10`
+    - `to_degrees`
+    - `to_radians`
+    - `max`
+    - `min`
+    - `abs_sub`
+    - `cbrt`
+    - `hypot`
+    - `sin`
+    - `cos`
+    - `tan`
+    - `asin`
+    - `acos`
+    - `atan`
+    - `atan2`
+    - `sin_cos`
+    - `exp_m1`
+    - `ln_1p`
+    - `sinh`
+    - `cosh`
+    - `tanh`
+    - `asinh`
+    - `acosh`
+    - `atanh`
+    - `to_bits`
+    - `from_bits`
+  - Trait Implementations
+    - `Copy`
+    - `PartialEq<f64>`
+    - `Rem<&'a f64>`
+    - `Rem<f64>`
+    - `LowerExp`
+    - `FromStr`
+    - `Display`
+    - `Product<f64>`
+    - `Product<&'a f64>`
+    - `Default`
+    - `Div<f64>`
+    - `Div<&'a f64>`
+    - `Add<&'a f64>`
+    - `Add<f64>`
+    - `DivAssign<f64>`
+    - `DivAssign<&'a f64>`
+    - `SubAssign<&'a f64>`
+    - `SubAssign<f64>`
+    - `UpperExp`
+    - `Clone`
+    - `PartialOrd<f64>`
+    - `Mul<f64>`
+    - `Mul<&'a f64>`
+    - `Debug`
+    - `Sum<&'a f64>`
+    - `Sum<f64>`
+    - `RemAssign<&'a f64>`
+    - `RemAssign<f64>`
+    - `MulAssign<f64>`
+    - `MulAssign<&'a f64>`
+    - `AddAssign<f64>`
+    - `AddAssign<&'a f64>`
+    - `Neg`
+    - `From<u8>`
+    - `From<f32>`
+    - `From<i16>`
+    - `From<u32>`
+    - `From<i8>`
+    - `From<u16>`
+    - `From<i32>`
+    - `Sub<f64>`
+    - `Sub<&'a f64>`
+
+

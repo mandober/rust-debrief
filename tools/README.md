@@ -1,8 +1,9 @@
 # Tools
 
+- [cargo](cargo/README.md)
 - [rustup](rustup.md)
-- [cargo](cargo.md)
+- [clippy](clippy.md)
 - rustdoc
-- clippy
 - rustfmt
 - rls
+

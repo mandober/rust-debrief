@@ -1,14 +1,15 @@
 # Floats
 
-Floats can be compared with the ==, !=, <, <=, >, and >= operators, and with the partial_cmp() function. == and != are part of the PartialEq trait, while <, <=, >, >=, and partial_cmp() are part of the PartialOrd trait.
 
-Floats cannot be compared with the cmp() function, which is part of the Ord trait, as there is no total ordering for floats. Furthermore, there is no total equality relation for floats, and so they also do not implement the Eq trait.
+Floats can be compared with the ==, !=, <, <=, >, and >= operators, and with the `partial_cmp()` function; == and != are part of the `PartialEq` trait, while <, <=, >, >=, and `partial_cmp()` are part of the `PartialOrd` trait.
+
+Floats cannot be compared with the `cmp()` function, which is part of the `Ord` trait, as there is no total ordering for floats. Furthermore, there is no total equality relation for floats, and so they also do not implement the `Eq` trait.
 
 There is no total ordering or equality on floats because the floating-point value NaN is not less than, greater than, or equal to any other floating-point value or itself.
 
-Because floats do not implement Eq or Ord, they may not be used in types whose trait bounds require those traits, such as BTreeMap or HashMap. This is important because these types assume their keys provide a total ordering or total equality relation, and will malfunction otherwise.
+Because floats do not implement `Eq` or `Ord`, they may not be used in types whose trait bounds require those traits, such as `BTreeMap` or `HashMap`. This is important because these types assume their keys provide a total ordering or total equality relation, and will malfunction otherwise.
 
-There is a crate that wraps f32 and f64 to provide Ord and Eq implementations, which may be useful in certain cases.
+There is a crate that wraps `f32` and `f64` to provide `Ord` and `Eq` implementations, which may be useful in certain cases.
 
 
 ## Why the split between Eq/PartialEq and Ord/PartialOrd?

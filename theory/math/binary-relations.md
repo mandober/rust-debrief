@@ -147,7 +147,7 @@ A binary relation `R` over a set `X` is transitive if whenever an element `a` is
 
 Transitivity (or transitiveness) is a key property of both _partial order_ relations and _equivalence_ relations.
 
-Formal definition: `∀a,b,c ∈ X: (aRb ∧ bRc) ⇒ aRc`
+Formal definition: `∀ a,b,c ∈ X: a ⥽ b ∧ b ⥽ c ⇒ a ⥽ c`
 
 
 ## Equivalence relation

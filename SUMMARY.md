@@ -10,7 +10,7 @@
 ## Theory
 - [Type Systems](theory/type-theory/type-systems.md)
 - [Data Types](theory/type-theory/data-types.md)
-
+- [Binary relations](theory/math/binary-relations.md)
 
 ## Syntax
 - [Attributes](syntax/attributes.md)
@@ -27,10 +27,10 @@
 - [Syntactic elements](syntax/syntactic-elements.md)
 
 
-## Semantics
-- [Lifetimes](semantics/lifetimes/1_lifetimes.md)
-- [Visibility](semantics/visibility.md)
-- [Iterators](semantics/iterators.md)
+## Concepts
+- [Lifetimes](concepts/lifetimes/1_lifetimes.md)
+- [Visibility](concepts/visibility.md)
+- [Iterators](concepts/iterators.md)
 
 ## Primitives
 - [Character](primitives/char/char.md)
