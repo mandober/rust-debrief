@@ -78,6 +78,25 @@ let [a, ..] = [1, 2, 3];
 ## Tuples
 
 ```rust
+struct Foo {
+  a: Vec<u8>,
+  b: Vec<u8>
+}
+
+let foo = box Foo { a: vec![1, 2], b: vec![3, 4] };
+let Foo { a, b } = *foo; 
+// a:  error: use of moved value: `foo`, value moved here
+// b:  error: use of moved value: `foo`, value used here after move
+
+// but when forcing a single member tuple (with trailing comma) it works:
+let (Foo { a, b },) = (*foo,);
+// a: [1, 2]
+// b: [3, 4]
+```
+
+
+
+```rust
 // irrefutable patterns:
 let (f, g, h) = (7, 8, 9);
 

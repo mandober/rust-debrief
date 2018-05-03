@@ -30,6 +30,7 @@ Utility
 - `panic`           the entry point for panic of Rust threads
 - `vec`             creates a vector
 - `concat`          concatenates literals into a static string slice
+- `concat_idents`   concatenate identifiers into one. **LAB**
 - `stringify`       stringifies its argument
 - `include`         parse a file as an expression or an item
 - `include_bytes`   includes a file as a reference to a byte array
@@ -37,7 +38,6 @@ Utility
 - `env`             inspect an environment variable at compile time
 - `option_env`      optionally inspect an env var at compile time
 - `thread_local`    thread local storage key of `std::thread::LocalKey`type
-- `concat_idents`   concatenate identifiers into one. **LAB**
 - `select`          select an event from a number of receivers. **LAB**
 - `cfg`             boolean evaluation of conf flags
 - `compile_error`   unconditional compilation failure

@@ -1,4 +1,61 @@
-# Option methods by semantics 
+# Classification of Option methods
+
+
+## List of methods
+
+- `is_some`
+- `is_none`
+- `as_ref`
+- `as_mut`
+- `expect`
+- `unwrap`
+- `unwrap_or`
+- `unwrap_or_else`
+- `unwrap_or_default`
+- `map`
+- `map_or`
+- `map_or_else`
+- `ok_or`
+- `ok_or_else`
+- `and`
+- `and_then`
+- `or`
+- `or_else`
+- `iter`
+- `iter_mut`
+- `filter`
+- `get_or_insert`
+- `get_or_insert_with`
+- `take`
+- `cloned`
+- `cloned`
+- `transpose`
+
+Trait Implementations
+- `Try`: into_result, from_ok, from_error,
+- `From<T>`: from
+- `IntoIterator`: `into_iter`
+- `Hash`: `hash`, `hash_slice`
+- `FromIterator<Option<A>>`: from_iter
+- `Clone`: clone, clone_from
+- `Ord`: `cmp`, max, min
+- `PartialEq<Option<T>>`: `eq`, `ne`
+- `PartialOrd<Option<T>>`: `partial_ord`, le, lt, ge, gt
+- `Default`: default
+- `Eq`
+- `Debug`
+- `Copy`
+
+
+
+## Conventions
+
+- `*_or`   
+  caller supplies value that may be returned   
+  `map_or`
+- `*_or_else` caller supplies closure that may be used to calculate return val
+- `*_or_default` may return type's default value
+
 
 
 ## Check inner value

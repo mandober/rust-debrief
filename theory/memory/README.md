@@ -1,13 +1,23 @@
 # Memory
 
-- [Memory hierarchy](01_memory-hierarchy.md)
-- [Types of memory](02_memory-types.md)
+- units
+  - [bit](./bit.md)
+  - nibble
+  - byte
+- [word](./word.md)
+- numbers: binary, octal, dec, hex, etc.
+- [memory hierarchy](memory-hierarchy.md)
+- [memory types](memory-types.md)
+- [registers](./registers.md)
+- [address space](./address-space.md)
+- [alignment](./alignment.md)
+- [program-memory](./program-memory.md)
+- calling convention
+- stack
+- [the-call-stack](./the-call-stack.md)
+- [stack-machine](./stack-machine.md)
+- [memory-management](./mem-management.md)
+- heap
+- [cache](./cache.md)
+- [cpu-modes-x86](./cpu-modes-x86.md)
 
-- Alignment
-- Address space
-- Registers
-- Calling convention
-- Word
-- Program memory
-- Stack
-- Heap

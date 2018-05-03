@@ -1,13 +1,11 @@
 # Integers
 
-- The type of an unsuffixed integer literal is determined by type inference:
-  - if an integer type can be uniquely determined from the surrounding program
-    context, the unsuffixed integer literal has that type.
-  - if the program context under-constrains the type, it defaults to i32
-  - If the program context over-constrains the type, 
-    it is considered a static type error.
-- little-endian
-- two's compliment
+- type: primitive, scalar, concrete, fixed, sized
+- default: `i32`
+- multi-byte integers could be stored as little-endian or big-endian
+- signed integers use two's compliment representation
+
+
 
 
 ```rust

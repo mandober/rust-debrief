@@ -1,7 +1,7 @@
 # Numbers
 
-* [Numbers](numbers.md)
+- [Numbers](numbers.md)
 - [Integers](integers.md)
-- [Machine dependent integers](machine.md)
+- [Machine architecture dependent integers](machine-integers.md)
 - [Floats](floats.md)
-* [Casts](casts.md)
+- [Casts](casts.md)

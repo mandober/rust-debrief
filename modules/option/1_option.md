@@ -1,8 +1,6 @@
 # Option
 
-
-## Debrief
-- Option represents optional value: either present or absent (akin to `null`).
+- Option represents optional value: either present or absent (alike `null`).
 - Option enum lives in`std::option` module
 - Online docs: [std::option][mods], [std::option::Option][enum]
 - This module also contains structs, used for iteration over Option:
@@ -26,32 +24,49 @@
 
 <!-- TOC -->
 
-- [Debrief](#debrief)
 - [Option enum](#option-enum)
-- [Option and NULL](#option-and-null)
-- [Optional values](#optional-values)
+- [Option and null](#option-and-null)
+- [Null-pointer optimization](#null-pointer-optimization)
 - [Nullable pointers](#nullable-pointers)
-- [Methods by purpose](#methods-by-purpose)
 - [Option methods by ownership](#option-methods-by-ownership)
 
 <!-- /TOC -->
 
 
+
 ## Option enum
 
-Option is not a special language item, if it didn't exist it would be easy to implement it in safe Rust.
+Option is not a special language item, if it weren't defined, it would be easy to implement it in safe Rust.
 
 ```rust
 // Option definition in std::option::Option
 pub enum Option<T> {
-    Some(T),
-    None
+  Some(T),
+  None,
 }
 ```
 
-Both of Option's variants are tuples: `Some(T)` is a named tuple with one element of type `T`. `None` variant is an empty tuple, `None()`.
+Option enum is ideal for representing an optional value, a value that is either present or possibly absent. Option encodes this with two variants: variant `Some(T)` signifies presence of value `T` and variant `None` its absence. 
 
-Option represents an optional value; if it is possible that the value of some type could be missing or not be known, then Option is used to encode such situation. It is similar to the concept of `null` from other languages; Even though in such languages `null` represents the absence of some particular value, it also represents the absence of __any__ value, meaning that `null` is the separate type from the type whose absence it represents; therein null is equal to null. In Rust however, each optional type has its own `None` variant; any time a `None` is seen in the code, it is a `None` of some particular type, and because of this, occasionally its type must be annotated:
+```rust
+// None variants sometimes need annotatation
+let x: Option<u32> = None;
+let y: Option<&str> = None;
+```
+
+Option types are very common in Rust code, as they have a number of uses:
+- Initial values
+- Return values for functions that are not defined over their entire input range (partial functions)
+- Stand-in for `Result`, replacing `Err` variant with `None`
+- Optional `struct` fields; struct fields that can be loaned or "taken"
+- Optional function arguments
+- Swapping things out of difficult situations
+- Nullable pointers:`Option<&T>` has the same memory representation as a nullable pointer, and can be passed across FFI boundaries as such.
+
+
+## Option and null
+
+Option is used whenever there is a chance that the value could be absent. It is similar to the concept of null (nil) from the other languages. In those languages, null is a separate type that has only one value `null` and null values are equal to each other. As such it is a super type, because it can stand in for any other type. On the other hand, in Rust, the None variant is always of the same type as the value whose absence it represents. Any time a `None` is seen, it is a `None` of some specific type, and because of this occasionally its type must be annotated:
 
 ```rust
 // the conservative way
@@ -64,39 +79,19 @@ let opt = None::<u8>;
 let opt: Option<u8> = Option::None::<u8>;
 ```
 
-Option is mostly used to represent optional values, but also initial values, return values for partial functions, as a stand-in for simple errors, optional struct fields, optional function args, nullable pointers, etc.
 
-Option is null-pointer optimized which means there is no memory overhead for putting any type into the Option; the size of `T` and the size of `Option<T>` is the same.
+## Null-pointer optimization
 
-Option is suitable for representation of nullable pointers; `Option<&T>` has the same memory representation as a nullable pointer, it can be passed across FFI boundaries as such.
+Option is null-pointer optimized which means there is no memory overhead for putting any type into the Option; the size of `T` and the size of `Option<T>` is the same. 
 
-
-
-## Option and NULL
-
-Option enum is ideal for representing an optional value, a value that is either present or possibly absent; as such it is similar to a `null` value in other languages. Option encodes this with two variants: variant `Some(T)` signifies presence of value `T` and variant `None` its absence. 
-
-
-```rust
-// None variants sometimes need annotatation
-let x: Option<u32> = None;
-let y: Option<&str> = None;
-```
-
-## Optional values
-
-`Option` types are very common in Rust code, as they have a number of uses:
-- Initial values
-- Return values for functions that are not defined over their entire input range (partial functions)
-- Stand-in for `Result`, replacing `Err` variant with `None`
-- Optional `struct` fields; struct fields that can be loaned or "taken"
-- Optional function arguments
-- Swapping things out of difficult situations
-- Nullable pointers:`Option<&T>` has the same memory representation as a nullable pointer, and can be passed across FFI boundaries as such.
+As any enum, Option is as big as its biggest variant. 
 
 
 
 ## Nullable pointers
+
+Option is suitable for representation of __nullable pointers__. `Option<&T>` has the same memory representation as a nullable pointer, it can be passed across FFI boundaries as such.
+
 
 Rust's pointer types must always point to a valid location, there are no null pointers. Instead, Rust has optional pointers, like the optionally owned box, `Option<Box<T>>`
 
@@ -120,7 +115,6 @@ fn check_optional(optional: Option<Box<i32>>) {
 ```
 
 This usage of `Option` to create safe nullable pointers is so common that Rust does special optimizations to make the representation of `Option<Box<T>>` a single pointer. Optional pointers in Rust are stored as efficiently as any other pointer type.
-
 
 
 

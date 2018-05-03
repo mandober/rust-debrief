@@ -5,9 +5,19 @@
 - [Identify](#identify)
 - [Get inner value](#get-inner-value)
 - [Get optional ref to inner value](#get-optional-ref-to-inner-value)
+- [Mapping](#mapping)
+- [Iteration](#iteration)
+- [Result](#result)
 - [Methods by purpose](#methods-by-purpose)
 
 <!-- /TOC -->
+
+
+Conventions:
+- `*_or` caller supplies value that may be returned
+- `*_or_else` caller supplies closure that may be used to calculate return val
+- `*_or_default` may return type's default value
+
 
 
 ## Identify
@@ -37,6 +47,8 @@ and feed it to the methods that consume the Option (e.g. map) to preserve origin
 - `as_mut`: optional mut ref, `Some::<&mut T>(&mut v)`, or `None::<&mut T>`
 
 
+## Mapping
+
 `Option<T>` => `Option<U>`
 - `map` maps `Option<T>` to `Option<U>` via fn `FnOnce(T)->U`
 - `and` returns supplied param of type `Option<U>`, or None::<U>
@@ -51,10 +63,14 @@ and feed it to the methods that consume the Option (e.g. map) to preserve origin
 - `or_else` returns `Some(T)`, or result of fn `FnOnce()->Option<T>`
 - `filter` calls `FnOnce(&T)->bool` on `T` and returns `Some(T)` if true.
 
+## Iteration
 
 `Option<T>` => `Iter<T>`
 - `iter` returns iterator over T, or empty iterator.
 - `iter_mut` returns mut iterator over T, or empty iterator.
+
+
+## Result
 
 `Option<T>` => `Result<T, E>`
 - `ok_or` transform `Option<T>` into `Result<T, E>`, E type of param.
@@ -69,13 +85,13 @@ and feed it to the methods that consume the Option (e.g. map) to preserve origin
 ```rust
 from Option<T> to:
 
+bool
 T
 U
 Option<&T>, Option<&mut T>
 Option<U>
 Iter<T>, IterMut<T>
 Result<T, E>
-bool
 ```
 
 
@@ -94,23 +110,47 @@ Comparison
 Unless otherwise noted, methods are on `impl<T> Option<T>`
 
 ```rust
-// identify
+// get variant. identify inner value
 fn is_some(&self) -> bool;
 fn is_none(&self) -> bool;
 
-// weaken the type: Option<T> => Option<&T>
+
+// get opt ref to inner. Option<T> => Option<&T>
 fn as_ref(&self) -> Option<&T>;
 fn as_mut(&mut self) -> Option<&mut T>;
 
-// unwrap to get T
+// get ref mut to inner (or first insert if None). Option<T> ==> &mut T
+fn get_or_insert(&mut self, v: T) -> &mut T;
+fn get_or_insert_with<F: FnOnce()->T>(&mut self, f: F) -> &mut T;
+
+// get T by unwrapping inner
 fn expect(self, msg: &str) -> T;
 fn unwrap(self) -> T;
 fn unwrap_or(self, def: T) -> T;
 fn unwrap_or_else<F>(self, f: F) -> T;
 fn unwrap_or_default(self) -> T; // impl<T: Default> Option<T>
 
-// replace: Some(T) => None, return Option<T>
+
+// get opt T by replacing (stealing) inner. orig Option<T> => new Option<T>
 fn take(&mut self) -> Option<T>;
+
+
+// get another by cloning. Option<&'a T> ==> Option<T>
+impl<'a, T: Clone> Option<&'a T> {
+  fn cloned(self) -> Option<T>;
+}
+
+// get another by cloning. Option<&'a mut T> ==> Option<T>
+impl<'a, T: Clone> Option<&'a mut T> {
+  fn cloned(self) -> Option<T>;
+}
+
+
+// iterate (on Some)
+fn iter(&self) -> Iter<T>;
+fn iter_mut(&mut self) -> IterMut<T>;
+
+
 
 // convert: Option<T> => Option<U> by applying fn to the wrapped value.
 // where T is T, &T, &mut T
@@ -131,16 +171,5 @@ fn filter<P>(self, predicate: P) -> Option<T>  where P: FnOnce(&T)->bool;
 
 fn or(self, optb: Option<T>) -> Option<T>;
 fn or_else<F>(self, f: F) -> Option<T>  where F: FnOnce()->Option<T>;
-
-fn get_or_insert(&mut self, v: T) -> &mut T;
-fn get_or_insert_with<F>(&mut self, f: F) -> &mut T  where F: FnOnce()->T;
-
-// iterate
-fn iter(&self) -> Iter<T>;
-fn iter_mut(&mut self) -> IterMut<T>;
-
-// clone: Option<T> => Option<T>
-fn cloned(self) -> Option<T>; // impl<'a, T: Clone> Option<&'a T>
-fn cloned(self) -> Option<T>; // impl<'a, T: Clone> Option<&'a mut T>
 ```
 
