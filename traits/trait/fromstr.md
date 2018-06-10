@@ -1,19 +1,19 @@
-# `FromStr` trait
-https://doc.rust-lang.org/std/str/trait.FromStr.html
+# FromStr trait
 
-Trait `std::str::FromStr` 1.0.0
+- https://doc.rust-lang.org/std/str/trait.FromStr.html
+- `std::str::FromStr` 1.0.0
+- creating a new instance of a type from a string
+
+
 
 ```rust
 pub trait FromStr {
-    type Err;
-    fn from_str(s: &str) -> Result<Self, Self::Err>;
+  type Err;
+  fn from_str(s: &str) -> Result<Self, Self::Err>;
 }
 ```
-A trait to abstract the idea of creating
-a new instance of a type from a string.
 
-Method `from_str()` in `FromStr` trait is often
-used implicitly, through str's method `parse()`.
+Method `from_str()` in `FromStr` trait is often used implicitly, through `str::parse()`.
 
 
 ## Examples

@@ -3,8 +3,8 @@
 - [Rust Debrief](README.md)
 
 ## Language constructs
-- [Declaration](pages/declaration.md)
-- [Definition](pages/definition.md)
+- Declaration
+- Definition
 
 
 ## Theory
@@ -39,7 +39,7 @@
 - [Never](primitives/never/never.md)
 
 ## Types
-- [Classification](types/type-groups.md)
+- Classification](types/type-groups.md)
 - [Annotation](types/type-annotation.md)
 - [Top](types/type_top.md)
 
@@ -55,9 +55,9 @@
 
 ## Traits
 - [Traits](traits/README.md)
-- [Index by module](traits/traits-by-mod.md)
-- [Derivable traits](traits/derivable-traits.md)
-- [Trait resolution](core/trait-resolution.md)
+- Index by module](traits/traits-by-mod.md)
+- Derivable traits](traits/derivable-traits.md)
+- Trait resolution](core/trait-resolution.md)
 
 
 ## Items
@@ -73,20 +73,18 @@
 
 ## Rust Core
 - [The compiler](core/compiler.md)
-- [Trait resolution](core/trait-resolution.md)
-- [Type inference engine](core/type-inference-engine.md)
-- [Types and the Type Context](core/types-and-the-type-context.md)
-- [MIR](core/mir.md)
-- [HIR](core/hir.md)
-- [The Borrow Checker](core/borrow-checker.md)
-- [Variance of type and lifetime parameters](core/variance-of-type-and-lifetime-parameters.md)
+- [Trait resolution](core/rustc/trait-resolution.md)
+- [Type inference engine](core/rustc/type-inference-engine.md)
+- [Types and the Type Context](core/rustc/types-and-the-type-context.md)
+- [MIR](core/rustc/mir.md)
+- [HIR](core/rustc/hir.md)
+- [The Borrow Checker](core/rustc/borrow-checker.md)
+- [Variance of type and lifetime parameters](core/rustc/variance-of-type-and-lifetime-parameters.md)
 
 
 ## Appendix
 - [Terminology](appendix/terminology.md)
 - [Abbreviations](appendix/abbreviations.md)
-- [Pages](appendix/pages.md)
-- [Index](appendix/index.md)
 
 ## Links
 - [Links](links/README.md)

@@ -91,7 +91,7 @@
     - `ToOwned`
       - `to_owned`
       - `clone_into`
-- boxed
+- `boxed`
   - Structs
     - `Box`
       -Methods
@@ -1180,7 +1180,7 @@
 
 ## Primitives and their modules
 
-- **array**
+- array
   - Trait Implementations
     - `Debug`
     - `Default`
@@ -1199,7 +1199,7 @@
     - `PartialEq<&'b mut [B]>`
     - `PartialEq<[B]>`
     - `PartialEq<[B; 0..33]>`
-- **bool**
+- bool
   - Trait Implementations
     - `Debug`
     - `Copy`
@@ -1224,7 +1224,7 @@
     - `Default`
     - `BitXor<&'a bool>`
     - `BitXorAssign<&'a bool>`
-- **char**
+- char
   - Methods
     - `encode_utf16`
     - `encode_utf8`
@@ -1276,7 +1276,7 @@
     - `PartialEq<char>`
     - `Ord`
     - `PartialOrd<char>`
-- **fn**
+- fn
   - Trait Implementations
     - `Debug`
     - `Hash`
@@ -1291,7 +1291,7 @@
     - `PartialOrd<unsafe fn(...) -> Ret>`
     - `PartialOrd<extern "C" fn(...) -> Ret>`
     - `PartialOrd<unsafe extern "C" fn(...) -> Ret>`
-- **never**
+- never
   - Trait Implementations
     - `Display`
     - `Debug`
@@ -1301,7 +1301,7 @@
     - `PartialEq<!>`
     - `Error`
     - `Termination`
-- **pointers**
+- pointers
   - Methods
     - `is_null`
     - `as_ref`
@@ -1359,11 +1359,319 @@
     - `CoerceUnsized<*const U>`
     - `CoerceUnsized<*mut U>`
     - `UnwindSafe`
-- **reference**
-- **slice**
-- **str**
-- **tuple**
-- **unit**
+- reference
+  - Trait Implementations
+    - `BorrowMut<T>`
+    - `DoubleEndedIterator`
+    - `FnMut<A>`
+    - `Iterator`
+    - `TrustedLen`
+    - `AsRef<U>`
+    - `Pointer`
+    - `Binary`
+    - `Debug`
+    - `ExactSizeIterator`
+    - `Clone`
+    - `Generator`
+    - `PartialOrd<&'b mut B>`
+    - `PartialOrd<&'b B>`
+    - `Borrow<T>`
+    - `Ord`
+    - `Fn<A>`
+    - `Copy`
+    - `Write`
+    - `Eq`
+    - `PartialEq<&'b mut B>`
+    - `PartialEq<&'b B>`
+    - `CoerceUnsized<*const U>`
+    - `CoerceUnsized<&'a U>`
+    - `CoerceUnsized<&'a mut U>`
+    - `CoerceUnsized<*mut U>`
+    - `FusedIterator`
+    - `UpperExp`
+    - `UpperHex`
+    - `Octal`
+    - `Hasher`
+    - `Hash`
+    - `FnOnce<A>`
+    - `Send`
+    - `DerefMut`
+    - `AsMut<U>`
+    - `Deref`
+    - `LowerExp`
+    - `LowerHex`
+    - `Display`
+    - `Read`
+    - `Seek`
+    - `BufRead`
+    - `ToSocketAddrs`
+    - `!UnwindSafe`
+    - `UnwindSafe`
+- slice
+  - Methods
+    - `len`
+    - `is_empty`
+    - `first`
+    - `first_mut`
+    - `split_first`
+    - `split_first_mut`
+    - `split_last`
+    - `split_last_mut`
+    - `last`
+    - `last_mut`
+    - `get`
+    - `get_mut`
+    - `get_unchecked`
+    - `get_unchecked_mut`
+    - `as_ptr`
+    - `as_mut_ptr`
+    - `swap`
+    - `reverse`
+    - `iter`
+    - `iter_mut`
+    - `windows`
+    - `chunks`
+    - `exact_chunks`
+    - `chunks_mut`
+    - `exact_chunks_mut`
+    - `split_at`
+    - `split_at_mut`
+    - `split`
+    - `split_mut`
+    - `rsplit`
+    - `rsplit_mut`
+    - `splitn`
+    - `splitn_mut`
+    - `rsplitn`
+    - `rsplitn_mut`
+    - `contains`
+    - `starts_with`
+    - `ends_with`
+    - `binary_search`
+    - `binary_search_by`
+    - `binary_search_by_key`
+    - `sort_unstable`
+    - `sort_unstable_by`
+    - `sort_unstable_by_key`
+    - `rotate_left`
+    - `rotate_right`
+    - `clone_from_slice`
+    - `copy_from_slice`
+    - `swap_with_slice`
+    - `align_to`
+    - `align_to_mut`
+    - `is_ascii`
+    - `eq_ignore_ascii_case`
+    - `make_ascii_uppercase`
+    - `make_ascii_lowercase`
+    - `sort`
+    - `sort_by`
+    - `sort_by_key`
+    - `sort_by_cached_key`
+    - `to_vec`
+    - `into_vec`
+    - `repeat`
+    - `to_ascii_uppercase`
+    - `to_ascii_lowercase`
+  - Trait Implementations
+    - `IntoIterator`
+    - `AsRef<[T]>`
+    - `IndexMut<I>`
+    - `Index<I>`
+    - `Debug`
+    - `PartialOrd<[T]>`
+    - `Ord`
+    - `Eq`
+    - `PartialEq<[A; 1]>`
+    - `PartialEq<[A; 32]>`
+    - `PartialEq<[A; 21]>`
+    - `PartialEq<[A; 19]>`
+    - `PartialEq<[A; 5]>`
+    - `PartialEq<[A; 14]>`
+    - `PartialEq<[A; 16]>`
+    - `PartialEq<[A; 9]>`
+    - `PartialEq<[A; 28]>`
+    - `PartialEq<[A; 23]>`
+    - `PartialEq<[A; 0]>`
+    - `PartialEq<[A; 18]>`
+    - `PartialEq<[A; 3]>`
+    - `PartialEq<[A; 26]>`
+    - `PartialEq<[A; 15]>`
+    - `PartialEq<[A; 8]>`
+    - `PartialEq<[A; 7]>`
+    - `PartialEq<[A; 29]>`
+    - `PartialEq<[A; 4]>`
+    - `PartialEq<[A; 2]>`
+    - `PartialEq<[A; 20]>`
+    - `PartialEq<[A; 27]>`
+    - `PartialEq<[A; 24]>`
+    - `PartialEq<[A; 30]>`
+    - `PartialEq<[A; 6]>`
+    - `PartialEq<[A; 10]>`
+    - `PartialEq<[A; 31]>`
+    - `PartialEq<[A; 25]>`
+    - `PartialEq<[A; 12]>`
+    - `PartialEq<[A; 11]>`
+    - `PartialEq<[A; 17]>`
+    - `PartialEq<[A; 13]>`
+    - `PartialEq<[A; 22]>`
+    - `PartialEq<[B]>`
+    - `Hash`
+    - `Pattern<'a>`
+    - `AsMut<[T]>`
+    - `Default`
+    - `SliceConcatExt<T>`
+    - `SliceConcatExt<str>`
+    - `ToOwned`
+    - `AsciiExt`
+    - `Read`
+    - `BufRead`
+    - `Write`
+    - `ToSocketAddrs`
+    - `std`
+- str
+  - Methods
+    - `len`
+    - `is_empty`
+    - `is_char_boundary`
+    - `as_bytes`
+    - `as_bytes_mut`
+    - `as_ptr`
+    - `get`
+    - `get_mut`
+    - `get_unchecked`
+    - `get_unchecked_mut`
+    - `slice_unchecked`
+    - `slice_mut_unchecked`
+    - `split_at`
+    - `split_at_mut`
+    - `chars`
+    - `char_indices`
+    - `bytes`
+    - `split_whitespace`
+    - `lines`
+    - `lines_any`
+    - `encode_utf16`
+    - `contains`
+    - `starts_with`
+    - `ends_with`
+    - `find`
+    - `rfind`
+    - `split`
+    - `rsplit`
+    - `split_terminator`
+    - `rsplit_terminator`
+    - `splitn`
+    - `rsplitn`
+    - `matches`
+    - `rmatches`
+    - `match_indices`
+    - `rmatch_indices`
+    - `trim`
+    - `trim_left`
+    - `trim_right`
+    - `trim_matches`
+    - `trim_left_matches`
+    - `trim_right_matches`
+    - `parse`
+    - `is_ascii`
+    - `eq_ignore_ascii_case`
+    - `make_ascii_uppercase`
+    - `make_ascii_lowercase`
+    - `into_boxed_bytes`
+    - `replace`
+    - `replacen`
+    - `to_lowercase`
+    - `to_uppercase`
+    - `escape_debug`
+    - `escape_default`
+    - `escape_unicode`
+    - `into_string`
+    - `repeat`
+    - `to_ascii_uppercase`
+    - `to_ascii_lowercase`
+  - Trait Implementations
+    - `AsRef<[u8]>`
+    - `AsRef<str>`
+    - `IndexMut<RangeToInclusive<usize>>`
+    - `IndexMut<RangeInclusive<usize>>`
+    - `IndexMut<RangeTo<usize>>`
+    - `IndexMut<Range<usize>>`
+    - `IndexMut<RangeFrom<usize>>`
+    - `IndexMut<RangeFull>`
+    - `Index<RangeTo<usize>>`
+    - `Index<RangeToInclusive<usize>>`
+    - `Index<RangeFull>`
+    - `Index<Range<usize>>`
+    - `Index<RangeInclusive<usize>>`
+    - `Index<RangeFrom<usize>>`
+    - `Debug`
+    - `PartialOrd<str>`
+    - `Ord`
+    - `Eq`
+    - `PartialEq<str>`
+    - `Hash`
+    - `Pattern<'a>`
+    - `Default`
+    - `Display`
+    - `ToOwned`
+    - `ToString`
+    - `PartialEq<Cow<'a, str>>`
+    - `PartialEq<String>`
+    - `AsciiExt`
+    - `PartialEq<OsString>`
+    - `PartialEq<OsStr>`
+    - `AsRef<OsStr>`
+    - `ToSocketAddrs`
+    - `AsRef<Path>`
+  - Auto Trait Implementations
+    - `Send`
+    - `Sync`
+- tuple
+  - Trait Implementations
+    - `RangeBounds<T>`
+    - `Debug`
+    - `PartialOrd<(A,)>`
+    - `PartialOrd<(A, B, C, D, E, F, G, H, I)>`
+    - `PartialOrd<(A, B, C, D, E, F, G, H, I, J, K)>`
+    - `PartialOrd<(A, B, C, D, E, F)>`
+    - `PartialOrd<(A, B, C, D, E)>`
+    - `PartialOrd<(A, B, C)>`
+    - `PartialOrd<(A, B, C, D, E, F, G, H, I, J)>`
+    - `PartialOrd<(A, B, C, D)>`
+    - `PartialOrd<(A, B, C, D, E, F, G)>`
+    - `PartialOrd<(A, B, C, D, E, F, G, H)>`
+    - `PartialOrd<(A, B)>`
+    - `PartialOrd<(A, B, C, D, E, F, G, H, I, J, K, L)>`
+    - `Ord`
+    - `Eq`
+    - `PartialEq<(A,)>`
+    - `PartialEq<(A, B, C, D, E, F, G, H, I)>`
+    - `PartialEq<(A, B, C, D, E, F, G, H)>`
+    - `PartialEq<(A, B, C)>`
+    - `PartialEq<(A, B, C, D, E, F, G)>`
+    - `PartialEq<(A, B, C, D, E, F, G, H, I, J)>`
+    - `PartialEq<(A, B, C, D)>`
+    - `PartialEq<(A, B, C, D, E)>`
+    - `PartialEq<(A, B, C, D, E, F, G, H, I, J, K, L)>`
+    - `PartialEq<(A, B, C, D, E, F)>`
+    - `PartialEq<(A, B, C, D, E, F, G, H, I, J, K)>`
+    - `PartialEq<(A, B)>`
+    - `Hash`
+    - `Default`
+    - `ToSocketAddrs`
+- unit
+  - Trait Implementations
+    - `Debug`
+    - `PartialOrd<()>`
+    - `Ord`
+    - `FromIterator<()>`
+    - `Eq`
+    - `PartialEq<()>`
+    - `Extend<()>`
+    - `Hash`
+    - `Default`
+    - `Termination`
 - i8
 - u8
 - i16
@@ -1375,9 +1683,578 @@
 - i128
 - u128
 - isize
+  - Methods
+    - `min_value`
+    - `max_value`
+    - `from_str_radix`
+    - `count_ones`
+    - `count_zeros`
+    - `leading_zeros`
+    - `trailing_zeros`
+    - `rotate_left`
+    - `rotate_right`
+    - `swap_bytes`
+    - `reverse_bits`
+    - `from_be`
+    - `from_le`
+    - `to_be`
+    - `to_le`
+    - `checked_add`
+    - `checked_sub`
+    - `checked_mul`
+    - `checked_div`
+    - `checked_div_euc`
+    - `checked_rem`
+    - `checked_mod_euc`
+    - `checked_neg`
+    - `checked_shl`
+    - `checked_shr`
+    - `checked_abs`
+    - `checked_pow`
+    - `saturating_add`
+    - `saturating_sub`
+    - `saturating_mul`
+    - `saturating_pow`
+    - `wrapping_add`
+    - `wrapping_sub`
+    - `wrapping_mul`
+    - `wrapping_div`
+    - `wrapping_div_euc`
+    - `wrapping_rem`
+    - `wrapping_mod_euc`
+    - `wrapping_neg`
+    - `wrapping_shl`
+    - `wrapping_shr`
+    - `wrapping_abs`
+    - `wrapping_pow`
+    - `overflowing_add`
+    - `overflowing_sub`
+    - `overflowing_mul`
+    - `overflowing_div`
+    - `overflowing_div_euc`
+    - `overflowing_rem`
+    - `overflowing_mod_euc`
+    - `overflowing_neg`
+    - `overflowing_shl`
+    - `overflowing_shr`
+    - `overflowing_abs`
+    - `overflowing_pow`
+    - `pow`
+    - `div_euc`
+    - `mod_euc`
+    - `abs`
+    - `signum`
+    - `is_positive`
+    - `is_negative`
+    - `to_bytes`
+    - `from_bytes`
+  - Trait Implementations
+    - `BitOr<isize>`
+    - `BitOr<&'a isize>`
+    - `RemAssign<&'a isize>`
+    - `RemAssign<isize>`
+    - `DivAssign<isize>`
+    - `DivAssign<&'a isize>`
+    - `MulAssign<&'a isize>`
+    - `MulAssign<isize>`
+    - `SubAssign<isize>`
+    - `SubAssign<&'a isize>`
+    - `AddAssign<&'a isize>`
+    - `AddAssign<isize>`
+    - `From<i8>`
+    - `From<i16>`
+    - `From<u8>`
+    - `Neg`
+    - `ShrAssign<&'a u32>`
+    - `ShrAssign<i32>`
+    - `ShrAssign<&'a u8>`
+    - `ShrAssign<&'a u64>`
+    - `ShrAssign<u128>`
+    - `ShrAssign<u64>`
+    - `ShrAssign<i8>`
+    - `ShrAssign<&'a u16>`
+    - `ShrAssign<i128>`
+    - `ShrAssign<u32>`
+    - `ShrAssign<&'a i128>`
+    - `ShrAssign<&'a i64>`
+    - `ShrAssign<usize>`
+    - `ShrAssign<i64>`
+    - `ShrAssign<&'a u128>`
+    - `ShrAssign<u8>`
+    - `ShrAssign<isize>`
+    - `ShrAssign<&'a isize>`
+    - `ShrAssign<u16>`
+    - `ShrAssign<i16>`
+    - `ShrAssign<&'a usize>`
+    - `ShrAssign<&'a i32>`
+    - `ShrAssign<&'a i8>`
+    - `ShrAssign<&'a i16>`
+    - `Binary`
+    - `Sum<&'a isize>`
+    - `Sum<isize>`
+    - `Debug`
+    - `Sub<&'a isize>`
+    - `Sub<isize>`
+    - `Shr<u16>`
+    - `Shr<u64>`
+    - `Shr<&'a i32>`
+    - `Shr<i8>`
+    - `Shr<usize>`
+    - `Shr<u8>`
+    - `Shr<&'a i16>`
+    - `Shr<i64>`
+    - `Shr<&'a isize>`
+    - `Shr<&'a u16>`
+    - `Shr<&'a u128>`
+    - `Shr<&'a u8>`
+    - `Shr<isize>`
+    - `Shr<&'a i64>`
+    - `Shr<&'a i128>`
+    - `Shr<i128>`
+    - `Shr<&'a u32>`
+    - `Shr<&'a u64>`
+    - `Shr<u32>`
+    - `Shr<u128>`
+    - `Shr<&'a i8>`
+    - `Shr<i16>`
+    - `Shr<&'a usize>`
+    - `Shr<i32>`
+    - `Clone`
+    - `PartialOrd<isize>`
+    - `BitXor<isize>`
+    - `BitXor<&'a isize>`
+    - `Ord`
+    - `Not`
+    - `Copy`
+    - `Eq`
+    - `PartialEq<isize>`
+    - `FromStr`
+    - `Rem<&'a isize>`
+    - `Rem<isize>`
+    - `UpperHex`
+    - `Octal`
+    - `Mul<isize>`
+    - `Mul<&'a isize>`
+    - `Shl<u64>`
+    - `Shl<u128>`
+    - `Shl<&'a i64>`
+    - `Shl<&'a u32>`
+    - `Shl<u16>`
+    - `Shl<&'a isize>`
+    - `Shl<&'a i8>`
+    - `Shl<&'a i16>`
+    - `Shl<i16>`
+    - `Shl<&'a usize>`
+    - `Shl<&'a u64>`
+    - `Shl<u32>`
+    - `Shl<i8>`
+    - `Shl<&'a u128>`
+    - `Shl<u8>`
+    - `Shl<usize>`
+    - `Shl<i64>`
+    - `Shl<i128>`
+    - `Shl<i32>`
+    - `Shl<isize>`
+    - `Shl<&'a u8>`
+    - `Shl<&'a u16>`
+    - `Shl<&'a i128>`
+    - `Shl<&'a i32>`
+    - `Step`
+    - `Hash`
+    - `BitAnd<isize>`
+    - `BitAnd<&'a isize>`
+    - `TryFrom<usize>`
+    - `Default`
+    - `ShlAssign<usize>`
+    - `ShlAssign<u32>`
+    - `ShlAssign<&'a i16>`
+    - `ShlAssign<u64>`
+    - `ShlAssign<&'a usize>`
+    - `ShlAssign<isize>`
+    - `ShlAssign<i128>`
+    - `ShlAssign<&'a u32>`
+    - `ShlAssign<&'a i64>`
+    - `ShlAssign<u16>`
+    - `ShlAssign<&'a i32>`
+    - `ShlAssign<u8>`
+    - `ShlAssign<i64>`
+    - `ShlAssign<&'a i8>`
+    - `ShlAssign<&'a isize>`
+    - `ShlAssign<&'a i128>`
+    - `ShlAssign<u128>`
+    - `ShlAssign<i8>`
+    - `ShlAssign<i32>`
+    - `ShlAssign<&'a u8>`
+    - `ShlAssign<&'a u128>`
+    - `ShlAssign<i16>`
+    - `ShlAssign<&'a u64>`
+    - `ShlAssign<&'a u16>`
+    - `Div<isize>`
+    - `Div<&'a isize>`
+    - `LowerHex`
+    - `BitXorAssign<&'a isize>`
+    - `BitXorAssign<isize>`
+    - `Product<isize>`
+    - `Product<&'a isize>`
+    - `BitOrAssign<isize>`
+    - `BitOrAssign<&'a isize>`
+    - `Display`
+    - `BitAndAssign<isize>`
+    - `BitAndAssign<&'a isize>`
+    - `Add<isize>`
+    - `Add<&'a isize>`
+  - Auto Trait Implementations
+    - `Send`
+    - `Sync`
+  - Constants
+    - `MAX`
+    - `MIN`
 - usize
+  - Methods
+    - `min_value`
+    - `max_value`
+    - `from_str_radix`
+    - `count_ones`
+    - `count_zeros`
+    - `leading_zeros`
+    - `trailing_zeros`
+    - `rotate_left`
+    - `rotate_right`
+    - `swap_bytes`
+    - `reverse_bits`
+    - `from_be`
+    - `from_le`
+    - `to_be`
+    - `to_le`
+    - `checked_add`
+    - `checked_sub`
+    - `checked_mul`
+    - `checked_div`
+    - `checked_div_euc`
+    - `checked_rem`
+    - `checked_mod_euc`
+    - `checked_neg`
+    - `checked_shl`
+    - `checked_shr`
+    - `checked_pow`
+    - `saturating_add`
+    - `saturating_sub`
+    - `saturating_mul`
+    - `saturating_pow`
+    - `wrapping_add`
+    - `wrapping_sub`
+    - `wrapping_mul`
+    - `wrapping_div`
+    - `wrapping_div_euc`
+    - `wrapping_rem`
+    - `wrapping_mod_euc`
+    - `wrapping_neg`
+    - `wrapping_shl`
+    - `wrapping_shr`
+    - `wrapping_pow`
+    - `overflowing_add`
+    - `overflowing_sub`
+    - `overflowing_mul`
+    - `overflowing_div`
+    - `overflowing_div_euc`
+    - `overflowing_rem`
+    - `overflowing_mod_euc`
+    - `overflowing_neg`
+    - `overflowing_shl`
+    - `overflowing_shr`
+    - `overflowing_pow`
+    - `pow`
+    - `div_euc`
+    - `mod_euc`
+    - `is_power_of_two`
+    - `next_power_of_two`
+    - `checked_next_power_of_two`
+    - `to_bytes`
+    - `from_bytes`
+  - Trait Implementations
+    - `BitOr<&'a usize>`
+    - `BitOr<usize>`
+    - `RemAssign<&'a usize>`
+    - `RemAssign<usize>`
+    - `DivAssign<&'a usize>`
+    - `DivAssign<usize>`
+    - `MulAssign<&'a usize>`
+    - `MulAssign<usize>`
+    - `SubAssign<usize>`
+    - `SubAssign<&'a usize>`
+    - `AddAssign<usize>`
+    - `AddAssign<&'a usize>`
+    - `From<u8>`
+    - `From<u16>`
+    - `ShrAssign<i8>`
+    - `ShrAssign<u128>`
+    - `ShrAssign<&'a u64>`
+    - `ShrAssign<&'a i32>`
+    - `ShrAssign<&'a u32>`
+    - `ShrAssign<i128>`
+    - `ShrAssign<i64>`
+    - `ShrAssign<&'a u128>`
+    - `ShrAssign<u8>`
+    - `ShrAssign<&'a i8>`
+    - `ShrAssign<&'a u8>`
+    - `ShrAssign<&'a i128>`
+    - `ShrAssign<i16>`
+    - `ShrAssign<u32>`
+    - `ShrAssign<&'a i16>`
+    - `ShrAssign<usize>`
+    - `ShrAssign<&'a usize>`
+    - `ShrAssign<u64>`
+    - `ShrAssign<u16>`
+    - `ShrAssign<&'a u16>`
+    - `ShrAssign<&'a isize>`
+    - `ShrAssign<i32>`
+    - `ShrAssign<&'a i64>`
+    - `ShrAssign<isize>`
+    - `Binary`
+    - `Sum<&'a usize>`
+    - `Sum<usize>`
+    - `Debug`
+    - `Sub<&'a usize>`
+    - `Sub<usize>`
+    - `Shr<u16>`
+    - `Shr<i32>`
+    - `Shr<&'a isize>`
+    - `Shr<usize>`
+    - `Shr<isize>`
+    - `Shr<&'a usize>`
+    - `Shr<&'a i32>`
+    - `Shr<&'a i16>`
+    - `Shr<&'a u8>`
+    - `Shr<i8>`
+    - `Shr<u64>`
+    - `Shr<&'a u128>`
+    - `Shr<&'a i8>`
+    - `Shr<i16>`
+    - `Shr<&'a i64>`
+    - `Shr<u32>`
+    - `Shr<i128>`
+    - `Shr<&'a i128>`
+    - `Shr<u8>`
+    - `Shr<u128>`
+    - `Shr<&'a u16>`
+    - `Shr<i64>`
+    - `Shr<&'a u64>`
+    - `Shr<&'a u32>`
+    - `Clone`
+    - `PartialOrd<usize>`
+    - `BitXor<&'a usize>`
+    - `BitXor<usize>`
+    - `Ord`
+    - `Not`
+    - `Copy`
+    - `Eq`
+    - `PartialEq<usize>`
+    - `FromStr`
+    - `Rem<usize>`
+    - `Rem<&'a usize>`
+    - `UpperHex`
+    - `SliceIndex<[T]>`
+    - `Octal`
+    - `Mul<&'a usize>`
+    - `Mul<usize>`
+    - `Shl<u64>`
+    - `Shl<i32>`
+    - `Shl<i64>`
+    - `Shl<i8>`
+    - `Shl<&'a isize>`
+    - `Shl<&'a i128>`
+    - `Shl<&'a u64>`
+    - `Shl<&'a i16>`
+    - `Shl<&'a i8>`
+    - `Shl<&'a i32>`
+    - `Shl<&'a u16>`
+    - `Shl<i128>`
+    - `Shl<u128>`
+    - `Shl<&'a u128>`
+    - `Shl<&'a i64>`
+    - `Shl<u32>`
+    - `Shl<&'a u8>`
+    - `Shl<u8>`
+    - `Shl<i16>`
+    - `Shl<usize>`
+    - `Shl<&'a usize>`
+    - `Shl<u16>`
+    - `Shl<isize>`
+    - `Shl<&'a u32>`
+    - `Step`
+    - `Hash`
+    - `BitAnd<&'a usize>`
+    - `BitAnd<usize>`
+    - `TryFrom<i8>`
+    - `TryFrom<i32>`
+    - `TryFrom<i16>`
+    - `TryFrom<isize>`
+    - `TryFrom<i128>`
+    - `TryFrom<i64>`
+    - `Default`
+    - `ShlAssign<&'a i64>`
+    - `ShlAssign<&'a u32>`
+    - `ShlAssign<i16>`
+    - `ShlAssign<i128>`
+    - `ShlAssign<&'a i128>`
+    - `ShlAssign<&'a u16>`
+    - `ShlAssign<u128>`
+    - `ShlAssign<&'a u8>`
+    - `ShlAssign<&'a u64>`
+    - `ShlAssign<&'a usize>`
+    - `ShlAssign<&'a i8>`
+    - `ShlAssign<&'a i32>`
+    - `ShlAssign<usize>`
+    - `ShlAssign<&'a u128>`
+    - `ShlAssign<i64>`
+    - `ShlAssign<u64>`
+    - `ShlAssign<i32>`
+    - `ShlAssign<u16>`
+    - `ShlAssign<i8>`
+    - `ShlAssign<&'a isize>`
+    - `ShlAssign<u8>`
+    - `ShlAssign<u32>`
+    - `ShlAssign<&'a i16>`
+    - `ShlAssign<isize>`
+    - `Div<&'a usize>`
+    - `Div<usize>`
+    - `LowerHex`
+    - `BitXorAssign<usize>`
+    - `BitXorAssign<&'a usize>`
+    - `Product<usize>`
+    - `Product<&'a usize>`
+    - `BitOrAssign<usize>`
+    - `BitOrAssign<&'a usize>`
+    - `Display`
+    - `BitAndAssign<usize>`
+    - `BitAndAssign<&'a usize>`
+    - `Add<&'a usize>`
+    - `Add<usize>`
+  - Auto Trait Implementations
+    - `Send`
+    - `Sync`
+  - Constants
+    - `MAX`
+    - `MIN`
 - f32
-- `f64`
+  - Methods
+    - `is_nan`
+    - `is_infinite`
+    - `is_finite`
+    - `is_normal`
+    - `classify`
+    - `is_sign_positive`
+    - `is_sign_negative`
+    - `recip`
+    - `to_degrees`
+    - `to_radians`
+    - `max`
+    - `min`
+    - `to_bits`
+    - `from_bits`
+    - `floor`
+    - `ceil`
+    - `round`
+    - `trunc`
+    - `fract`
+    - `abs`
+    - `signum`
+    - `mul_add`
+    - `div_euc`
+    - `mod_euc`
+    - `powi`
+    - `powf`
+    - `sqrt`
+    - `exp`
+    - `exp2`
+    - `ln`
+    - `log`
+    - `log2`
+    - `log10`
+    - `abs_sub`
+    - `cbrt`
+    - `hypot`
+    - `sin`
+    - `cos`
+    - `tan`
+    - `asin`
+    - `acos`
+    - `atan`
+    - `atan2`
+    - `sin_cos`
+    - `exp_m1`
+    - `ln_1p`
+    - `sinh`
+    - `cosh`
+    - `tanh`
+    - `asinh`
+    - `acosh`
+    - `atanh`
+  - Trait Implementations
+    - `RemAssign<f32>`
+    - `RemAssign<&'a f32>`
+    - `DivAssign<f32>`
+    - `DivAssign<&'a f32>`
+    - `MulAssign<&'a f32>`
+    - `MulAssign<f32>`
+    - `SubAssign<&'a f32>`
+    - `SubAssign<f32>`
+    - `AddAssign<&'a f32>`
+    - `AddAssign<f32>`
+    - `From<u16>`
+    - `From<i8>`
+    - `From<i16>`
+    - `From<u8>`
+    - `Neg`
+    - `Sum<f32>`
+    - `Sum<&'a f32>`
+    - `Debug`
+    - `Sub<f32x16>`
+    - `Sub<&'a f32>`
+    - `Sub<f32x8>`
+    - `Sub<f32x4>`
+    - `Sub<f32x2>`
+    - `Sub<f32>`
+    - `Clone`
+    - `PartialOrd<f32>`
+    - `Copy`
+    - `PartialEq<f32>`
+    - `FromStr`
+    - `UpperExp`
+    - `Rem<f32>`
+    - `Rem<&'a f32>`
+    - `Rem<f32x8>`
+    - `Rem<f32x16>`
+    - `Rem<f32x4>`
+    - `Rem<f32x2>`
+    - `Mul<f32x16>`
+    - `Mul<&'a f32>`
+    - `Mul<f32>`
+    - `Mul<f32x8>`
+    - `Mul<f32x2>`
+    - `Mul<f32x4>`
+    - `Default`
+    - `LowerExp`
+    - `Div<f32x2>`
+    - `Div<f32>`
+    - `Div<f32x16>`
+    - `Div<f32x8>`
+    - `Div<f32x4>`
+    - `Div<&'a f32>`
+    - `Product<f32>`
+    - `Product<&'a f32>`
+    - `Display`
+    - `Add<f32>`
+    - `Add<&'a f32>`
+    - `Add<f32x4>`
+    - `Add<f32x8>`
+    - `Add<f32x16>`
+    - `Add<f32x2>`
+    - `Float`
+  - Auto Trait Implementations
+    - `Send`
+    - `Sync`
+- f64
   - Methods
     - `is_nan`
     - `is_infinite`
@@ -1474,5 +2351,6 @@
     - `From<i32>`
     - `Sub<f64>`
     - `Sub<&'a f64>`
-
-
+  - Auto Trait Implementations
+    - `Send`
+    - `Sync`

@@ -11,6 +11,9 @@ rustc 1.27.0-nightly (eeea94c11 2018-04-06)
 - Rust 0.14.0 = rustc 1.8.0
 
 
+`cargo rustc --release -- -Z print-type-sizes`
+
+
 ```
 $ rustc --version -v
 rustc 1.27.0-nightly (eeea94c11 2018-04-06)

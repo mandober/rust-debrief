@@ -1,0 +1,2331 @@
+# List of all items in std
+
+- List of [all items in std][all]
+- Version 1.28.0-nightly (c2d46037f 2018-05-24)
+- Date: 2018-05-24
+
+<!-- TOC -->
+
+- [Modules](#modules)
+- [Structs](#structs)
+- [Enums](#enums)
+- [Unions](#unions)
+- [Primitives](#primitives)
+- [Traits](#traits)
+- [Macros](#macros)
+- [Functions](#functions)
+- [Typedefs](#typedefs)
+- [Constants](#constants)
+
+<!-- /TOC -->
+
+
+## Modules
+  - any
+  - arch
+  - ascii
+  - borrow
+  - boxed
+  - cell
+  - char
+  - clone
+  - cmp
+  - collections
+  - convert
+  - default
+  - env
+  - error
+  - ffi
+  - fmt
+  - fs
+  - hash
+  - io
+  - iter
+  - marker
+  - mem
+  - net
+  - num
+  - ops
+  - option
+  - os
+  - panic
+  - path
+  - prelude
+  - process
+  - ptr
+  - rc
+  - result
+  - slice
+  - str
+  - string
+  - sync
+  - thread
+  - time
+  - vec
+  - heap
+  - intrinsics
+  - raw
+  - i8
+  - u8
+  - i16
+  - u16
+  - i32
+  - u32
+  - i64
+  - u64
+  - i128
+  - u128
+  - isize
+  - usize
+  - f32
+  - f64
+
+
+## Structs
+  - alloc::Global
+  - alloc::System
+  - any::TypeId
+  - ascii::EscapeDefault
+  - boxed::Box
+  - boxed::PinBox
+  - cell
+    - cell::BorrowError
+    - cell::BorrowMutError
+    - cell::Cell
+    - cell::Ref
+    - cell::RefCell
+    - cell::RefMut
+    - cell::UnsafeCell
+  - char
+    - char::CharTryFromError
+    - char::DecodeUtf16
+    - char::DecodeUtf16Error
+    - char::DecodeUtf8
+    - char::EscapeDebug
+    - char::EscapeDefault
+    - char::EscapeUnicode
+    - char::InvalidSequence
+    - char::ParseCharError
+    - char::ToLowercase
+    - char::ToUppercase
+    - char::UnicodeVersion
+  - cmp::Reverse
+  - collections
+    - collections::BinaryHeap
+      - collections::binary_heap::BinaryHeap
+      - collections::binary_heap::Drain
+      - collections::binary_heap::IntoIter
+      - collections::binary_heap::Iter
+      - collections::binary_heap::PeekMut
+    - collections::BTreeMap
+      - collections::btree_map::BTreeMap
+      - collections::btree_map::IntoIter
+      - collections::btree_map::Iter
+      - collections::btree_map::IterMut
+      - collections::btree_map::Keys
+      - collections::btree_map::OccupiedEntry
+      - collections::btree_map::Range
+      - collections::btree_map::RangeMut
+      - collections::btree_map::VacantEntry
+      - collections::btree_map::Values
+      - collections::btree_map::ValuesMut
+    - collections::BTreeSet
+      - collections::btree_set::BTreeSet
+      - collections::btree_set::Difference
+      - collections::btree_set::Intersection
+      - collections::btree_set::IntoIter
+      - collections::btree_set::Iter
+      - collections::btree_set::Range
+      - collections::btree_set::SymmetricDifference
+      - collections::btree_set::Union
+    - collections::HashMap
+      - collections::hash_map::DefaultHasher
+      - collections::hash_map::Drain
+      - collections::hash_map::HashMap
+      - collections::hash_map::IntoIter
+      - collections::hash_map::Iter
+      - collections::hash_map::IterMut
+      - collections::hash_map::Keys
+      - collections::hash_map::OccupiedEntry
+      - collections::hash_map::RandomState
+      - collections::hash_map::VacantEntry
+      - collections::hash_map::Values
+      - collections::hash_map::ValuesMut
+      - collections::hash_set::Difference
+      - collections::hash_set::Drain
+      - collections::hash_set::HashSet
+      - collections::hash_set::Intersection
+      - collections::hash_set::IntoIter
+      - collections::hash_set::Iter
+      - collections::hash_set::SymmetricDifference
+      - collections::hash_set::Union
+    - collections::LinkedList
+      - collections::linked_list::DrainFilter
+      - collections::linked_list::IntoIter
+      - collections::linked_list::Iter
+      - collections::linked_list::IterMut
+      - collections::linked_list::LinkedList
+    - collections::VecDeque
+      - collections::vec_deque::Drain
+      - collections::vec_deque::IntoIter
+      - collections::vec_deque::Iter
+      - collections::vec_deque::IterMut
+      - collections::vec_deque::VecDeque
+  - env
+    - env::Args
+    - env::ArgsOs
+    - env::JoinPathsError
+    - env::SplitPaths
+    - env::Vars
+    - env::VarsOs
+  - ffi
+    - ffi::CStr
+    - ffi::CString
+    - ffi::FromBytesWithNulError
+    - ffi::IntoStringError
+    - ffi::NulError
+    - ffi::OsStr
+    - ffi::OsString
+  - fmt
+    - fmt::Arguments
+    - fmt::DebugList
+    - fmt::DebugMap
+    - fmt::DebugSet
+    - fmt::DebugStruct
+    - fmt::DebugTuple
+    - fmt::Error
+    - fmt::Formatter
+  - fs
+    - fs::DirBuilder
+    - fs::DirEntry
+    - fs::File
+    - fs::FileType
+    - fs::Metadata
+    - fs::OpenOptions
+    - fs::Permissions
+    - fs::ReadDir
+  - hash::BuildHasherDefault
+  - hash::SipHasher
+  - io
+    - io::BufReader
+    - io::BufWriter
+    - io::Bytes
+    - io::Chain
+    - io::Chars
+    - io::Cursor
+    - io::Empty
+    - io::Error
+    - io::Initializer
+    - io::IntoInnerError
+    - io::LineWriter
+    - io::Lines
+    - io::Repeat
+    - io::Sink
+    - io::Split
+    - io::Stderr
+    - io::StderrLock
+    - io::Stdin
+    - io::StdinLock
+    - io::Stdout
+    - io::StdoutLock
+    - io::Take
+  - iter
+    - iter::Chain
+    - iter::Cloned
+    - iter::Cycle
+    - iter::Empty
+    - iter::Enumerate
+    - iter::Filter
+    - iter::FilterMap
+    - iter::FlatMap
+    - iter::Flatten
+    - iter::Fuse
+    - iter::Inspect
+    - iter::Map
+    - iter::Once
+    - iter::Peekable
+    - iter::Repeat
+    - iter::RepeatWith
+    - iter::Rev
+    - iter::Scan
+    - iter::Skip
+    - iter::SkipWhile
+    - iter::StepBy
+    - iter::Take
+    - iter::TakeWhile
+    - iter::Zip
+  - marker::PhantomData
+  - marker::Pinned
+  - mem::Discriminant
+  - mem::PinMut
+  - net
+    - net::AddrParseError
+    - net::Incoming
+    - net::Ipv4Addr
+    - net::Ipv6Addr
+    - net::SocketAddrV4
+    - net::SocketAddrV6
+    - net::TcpListener
+    - net::TcpStream
+    - net::UdpSocket
+  - num
+    - num::NonZeroU128
+    - num::NonZeroU16
+    - num::NonZeroU32
+    - num::NonZeroU64
+    - num::NonZeroU8
+    - num::NonZeroUsize
+    - num::ParseFloatError
+    - num::ParseIntError
+    - num::TryFromIntError
+    - num::Wrapping
+  - ops
+    - ops::Range
+    - ops::RangeFrom
+    - ops::RangeFull
+    - ops::RangeInclusive
+    - ops::RangeTo
+    - ops::RangeToInclusive
+  - option
+    - option::IntoIter
+    - option::Iter
+    - option::IterMut
+    - option::NoneError
+  - os
+    - os::linux::raw::stat
+    - os::unix::net::Incoming
+    - os::unix::net::SocketAddr
+    - os::unix::net::UnixDatagram
+    - os::unix::net::UnixListener
+    - os::unix::net::UnixStream
+    - os::windows::ffi::EncodeWide
+  - panic::AssertUnwindSafe
+  - panic::Location
+  - panic::PanicInfo
+  - path
+    - path::Ancestors
+    - path::Components
+    - path::Display
+    - path::Iter
+    - path::Path
+    - path::PathBuf
+    - path::PrefixComponent
+    - path::StripPrefixError
+  - process
+    - process::Child
+    - process::ChildStderr
+    - process::ChildStdin
+    - process::ChildStdout
+    - process::Command
+    - process::ExitCode
+    - process::ExitStatus
+    - process::Output
+    - process::Stdio
+  - ptr::NonNull
+  - raw::TraitObject
+  - rc::Rc
+  - rc::Weak
+  - result::IntoIter
+  - result::Iter
+  - result::IterMut
+  - vec
+    - vec::Drain
+    - vec::DrainFilter
+    - vec::IntoIter
+    - vec::Splice
+    - vec::Vec
+  - slice
+    - slice::Chunks
+    - slice::ChunksMut
+    - slice::ExactChunks
+    - slice::ExactChunksMut
+    - slice::Iter
+    - slice::IterMut
+    - slice::RSplit
+    - slice::RSplitMut
+    - slice::RSplitN
+    - slice::RSplitNMut
+    - slice::Split
+    - slice::SplitMut
+    - slice::SplitN
+    - slice::SplitNMut
+    - slice::Windows
+  - str
+    - str::Bytes
+    - str::CharIndices
+    - str::Chars
+    - str::EncodeUtf16
+    - str::Lines
+    - str::LinesAny
+    - str::MatchIndices
+    - str::Matches
+    - str::ParseBoolError
+    - str::RMatchIndices
+    - str::RMatches
+    - str::RSplit
+    - str::RSplitN
+    - str::RSplitTerminator
+    - str::Split
+    - str::SplitN
+    - str::SplitTerminator
+    - str::SplitWhitespace
+    - str::Utf8Error
+    - str::pattern::CharPredicateSearcher
+    - str::pattern::CharSearcher
+    - str::pattern::CharSliceSearcher
+    - str::pattern::StrSearcher
+  - string
+    - string::Drain
+    - string::FromUtf16Error
+    - string::FromUtf8Error
+    - string::String
+  - time
+    - time::Duration
+    - time::Instant
+    - time::SystemTime
+    - time::SystemTimeError
+  - thread
+    - thread::AccessError
+    - thread::Builder
+    - thread::JoinHandle
+    - thread::LocalKey
+    - thread::Thread
+    - thread::ThreadId
+  - sync
+      - sync::Arc
+      - sync::Barrier
+      - sync::BarrierWaitResult
+      - sync::Condvar
+      - sync::Mutex
+      - sync::MutexGuard
+      - sync::Once
+      - sync::OnceState
+      - sync::PoisonError
+      - sync::RwLock
+      - sync::RwLockReadGuard
+      - sync::RwLockWriteGuard
+      - sync::WaitTimeoutResult
+      - sync::Weak
+      - sync::atomic::AtomicBool
+      - sync::atomic::AtomicI16
+      - sync::atomic::AtomicI32
+      - sync::atomic::AtomicI64
+      - sync::atomic::AtomicI8
+      - sync::atomic::AtomicIsize
+      - sync::atomic::AtomicPtr
+      - sync::atomic::AtomicU16
+      - sync::atomic::AtomicU32
+      - sync::atomic::AtomicU64
+      - sync::atomic::AtomicU8
+      - sync::atomic::AtomicUsize
+      - sync::mpsc::Handle
+      - sync::mpsc::IntoIter
+      - sync::mpsc::Iter
+      - sync::mpsc::Receiver
+      - sync::mpsc::RecvError
+      - sync::mpsc::Select
+      - sync::mpsc::SendError
+      - sync::mpsc::Sender
+      - sync::mpsc::SyncSender
+      - sync::mpsc::TryIter
+  - simd
+    - simd::f32x16
+    - simd::f32x2
+    - simd::f32x4
+    - simd::f32x8
+    - simd::f64x2
+    - simd::f64x4
+    - simd::f64x8
+    - simd::i16x16
+    - simd::i16x2
+    - simd::i16x32
+    - simd::i16x4
+    - simd::i16x8
+    - simd::i32x16
+    - simd::i32x2
+    - simd::i32x4
+    - simd::i32x8
+    - simd::i64x2
+    - simd::i64x4
+    - simd::i64x8
+    - simd::i8x16
+    - simd::i8x2
+    - simd::i8x32
+    - simd::i8x4
+    - simd::i8x64
+    - simd::i8x8
+    - simd::m16x16
+    - simd::m16x2
+    - simd::m16x4
+    - simd::m16x8
+    - simd::m1x16
+    - simd::m1x32
+    - simd::m1x64
+    - simd::m1x8
+    - simd::m32x2
+    - simd::m32x4
+    - simd::m32x8
+    - simd::m64x2
+    - simd::m64x4
+    - simd::m8x16
+    - simd::m8x2
+    - simd::m8x32
+    - simd::m8x4
+    - simd::m8x8
+    - simd::u16x16
+    - simd::u16x2
+    - simd::u16x32
+    - simd::u16x4
+    - simd::u16x8
+    - simd::u32x16
+    - simd::u32x2
+    - simd::u32x4
+    - simd::u32x8
+    - simd::u64x2
+    - simd::u64x4
+    - simd::u64x8
+    - simd::u8x16
+    - simd::u8x2
+    - simd::u8x32
+    - simd::u8x4
+    - simd::u8x64
+    - simd::u8x8
+
+
+## Enums
+  - option::Option
+  - result::Result
+  - cmp::Ordering
+  - borrow::Cow
+  - num::FpCategory
+  - ops::Bound
+  - ops::GeneratorState
+  - string::ParseError
+  - str::pattern::SearchStep
+  - collections::CollectionAllocErr
+  - collections::btree_map::Entry
+  - collections::hash_map::Entry
+  - env::VarError
+  - io::CharsError
+  - io::ErrorKind
+  - io::SeekFrom
+  - net::IpAddr
+  - net::Ipv6MulticastScope
+  - net::SocketAddr
+  - net::Shutdown
+  - path::Component
+  - path::Prefix
+  - os::raw::c_void
+  - sync::TryLockError
+  - sync::atomic::Ordering
+  - sync::mpsc::RecvTimeoutError
+  - sync::mpsc::TryRecvError
+  - sync::mpsc::TrySendError
+
+
+## Unions
+  - mem::ManuallyDrop
+
+
+## Primitives
+  - array
+  - bool
+  - char
+  - f32
+  - f64
+  - fn
+  - i128
+  - i16
+  - i32
+  - i64
+  - i8
+  - isize
+  - never
+  - pointer
+  - reference
+  - slice
+  - str
+  - tuple
+  - u128
+  - u16
+  - u32
+  - u64
+  - u8
+  - unit
+  - usize
+
+
+## Traits
+  - any::Any
+  - boxed::FnBox
+  - clone::Clone
+  - default::Default
+  - error::Error
+  - slice::SliceConcatExt
+  - slice::SliceIndex
+  - string::ToString
+  - net::ToSocketAddrs
+  - process::Termination
+  - ascii::AsciiExt
+  - simd::FromBits
+  - simd::IntoBits
+  - panic::RefUnwindSafe
+  - panic::UnwindSafe
+  - borrow
+    - borrow::Borrow
+    - borrow::BorrowMut
+    - borrow::ToOwned
+  - cmp
+    - cmp::Eq
+    - cmp::Ord
+    - cmp::PartialEq
+    - cmp::PartialOrd
+  - convert
+    - convert::AsMut
+    - convert::AsRef
+    - convert::From
+    - convert::Into
+    - convert::TryFrom
+    - convert::TryInto
+  - fmt
+    - fmt::Display
+    - fmt::Debug
+    - fmt::Write
+    - fmt::Pointer
+    - fmt::Binary
+    - fmt::Octal
+    - fmt::LowerHex
+    - fmt::UpperHex
+    - fmt::LowerExp
+    - fmt::UpperExp
+  - hash
+    - hash::BuildHasher
+    - hash::Hash
+    - hash::Hasher
+  - io
+    - io::BufRead
+    - io::Read
+    - io::Seek
+    - io::Write
+  - iter
+    - iter::Iterator
+    - iter::IntoIterator
+    - iter::DoubleEndedIterator
+    - iter::ExactSizeIterator
+    - iter::FusedIterator
+    - iter::FromIterator
+    - iter::Extend
+    - iter::Product
+    - iter::Step
+    - iter::Sum
+    - iter::TrustedLen
+  - marker
+    - marker::Copy
+    - marker::Send
+    - marker::Sized
+    - marker::Sync
+    - marker::Unpin
+    - marker::Unsize
+  - str
+    - str::FromStr
+    - str::pattern::Pattern
+    - str::pattern::DoubleEndedSearcher
+    - str::pattern::ReverseSearcher
+    - str::pattern::Searcher
+  - ops
+  - Arithmetics
+    - ops::Add
+    - ops::AddAssign
+    - ops::Sub
+    - ops::SubAssign
+    - ops::Mul
+    - ops::MulAssign
+    - ops::Div
+    - ops::DivAssign
+    - ops::Rem
+    - ops::RemAssign
+  - Bitwise
+    - ops::BitAnd
+    - ops::BitAndAssign
+    - ops::BitOr
+    - ops::BitOrAssign
+    - ops::BitXor
+    - ops::BitXorAssign
+    - ops::Shl
+    - ops::ShlAssign
+    - ops::Shr
+    - ops::ShrAssign
+    - ops::Neg
+    - ops::Not
+  - Functions
+    - ops::Fn
+    - ops::FnMut
+    - ops::FnOnce
+    - ops::Generator
+  - Indexing
+    - ops::Index
+    - ops::IndexMut
+    - ops::RangeBounds
+  - Other
+    - ops::CoerceUnsized
+    - ops::Deref
+    - ops::DerefMut
+    - ops::Drop
+    - ops::Try
+  - Platforms
+    - os::linux::fs::MetadataExt
+    - os::unix
+      - os::unix::ffi::OsStrExt
+      - os::unix::ffi::OsStringExt
+      - os::unix::fs::DirBuilderExt
+      - os::unix::fs::DirEntryExt
+      - os::unix::fs::FileExt
+      - os::unix::fs::FileTypeExt
+      - os::unix::fs::MetadataExt
+      - os::unix::fs::OpenOptionsExt
+      - os::unix::fs::PermissionsExt
+      - os::unix::io::AsRawFd
+      - os::unix::io::FromRawFd
+      - os::unix::io::IntoRawFd
+      - os::unix::process::CommandExt
+      - os::unix::process::ExitStatusExt
+      - os::unix::thread::JoinHandleExt
+    - os::windows
+      - os::windows::ffi::OsStrExt
+      - os::windows::ffi::OsStringExt
+      - os::windows::fs::FileExt
+      - os::windows::fs::FileTypeExt
+      - os::windows::fs::MetadataExt
+      - os::windows::fs::OpenOptionsExt
+      - os::windows::io::AsRawHandle
+      - os::windows::io::AsRawSocket
+      - os::windows::io::FromRawHandle
+      - os::windows::io::FromRawSocket
+      - os::windows::io::IntoRawHandle
+      - os::windows::io::IntoRawSocket
+      - os::windows::process::CommandExt
+      - os::windows::process::ExitStatusExt
+
+
+## Macros
+  - assert
+  - assert_eq
+  - assert_ne
+  - cfg
+  - column
+  - compile_error
+  - concat
+  - concat_idents
+  - debug_assert
+  - debug_assert_eq
+  - debug_assert_ne
+  - env
+  - eprint
+  - eprintln
+  - file
+  - format
+  - format_args
+  - include
+  - include_bytes
+  - include_str
+  - is_aarch64_feature_detected
+  - is_arm_feature_detected
+  - is_mips64_feature_detected
+  - is_mips_feature_detected
+  - is_powerpc64_feature_detected
+  - is_x86_feature_detected
+  - line
+  - module_path
+  - option_env
+  - panic
+  - print
+  - println
+  - select
+  - stringify
+  - thread_local
+  - try
+  - unimplemented
+  - unreachable
+  - vec
+  - write
+  - writeln
+
+
+## Functions
+  - ascii::escape_default
+  - char::decode_utf16
+  - char::decode_utf8
+  - char::from_digit
+  - char::from_u32
+  - char::from_u32_unchecked
+  - cmp::max
+  - cmp::min
+  - env
+    - env::args
+    - env::args_os
+    - env::current_dir
+    - env::current_exe
+    - env::home_dir
+    - env::join_paths
+    - env::remove_var
+    - env::set_current_dir
+    - env::set_var
+    - env::split_paths
+    - env::temp_dir
+    - env::var
+    - env::var_os
+    - env::vars
+    - env::vars_os
+  - fmt::format
+  - fmt::write
+  - hint::unreachable_unchecked
+  - fs
+    - fs::canonicalize
+    - fs::copy
+    - fs::create_dir
+    - fs::create_dir_all
+    - fs::hard_link
+    - fs::metadata
+    - fs::read
+    - fs::read_dir
+    - fs::read_link
+    - fs::read_to_string
+    - fs::remove_dir
+    - fs::remove_dir_all
+    - fs::remove_file
+    - fs::rename
+    - fs::set_permissions
+    - fs::soft_link
+    - fs::symlink_metadata
+    - fs::write
+  - io
+    - io::copy
+    - io::empty
+    - io::repeat
+    - io::sink
+    - io::stderr
+    - io::stdin
+    - io::stdout
+  - iter::empty
+  - iter::once
+  - iter::repeat
+  - iter::repeat_with
+  - alloc::oom
+  - mem
+    - mem::align_of
+    - mem::align_of_val
+    - mem::discriminant
+    - mem::drop
+    - mem::forget
+    - mem::min_align_of
+    - mem::min_align_of_val
+    - mem::needs_drop
+    - mem::replace
+    - mem::size_of
+    - mem::size_of_val
+    - mem::swap
+    - mem::transmute
+    - mem::transmute_copy
+    - mem::uninitialized
+    - mem::zeroed
+  - os::unix::fs::symlink
+  - os::unix::process::parent_id
+  - os::windows::fs::symlink_dir
+  - os::windows::fs::symlink_file
+  - panic::catch_unwind
+  - panic::resume_unwind
+  - panic::set_hook
+  - panic::take_hook
+  - path::is_separator
+  - process::abort
+  - process::exit
+  - process::id
+  - ptr
+    - ptr::copy
+    - ptr::copy_nonoverlapping
+    - ptr::drop_in_place
+    - ptr::eq
+    - ptr::null
+    - ptr::null_mut
+    - ptr::read
+    - ptr::read_unaligned
+    - ptr::read_volatile
+    - ptr::replace
+    - ptr::swap
+    - ptr::swap_nonoverlapping
+    - ptr::write
+    - ptr::write_bytes
+    - ptr::write_unaligned
+    - ptr::write_volatile
+  - slice::from_mut
+  - slice::from_raw_parts
+  - slice::from_raw_parts_mut
+  - slice::from_ref
+  - str::from_boxed_utf8_unchecked
+  - str::from_utf8
+  - str::from_utf8_mut
+  - str::from_utf8_unchecked
+  - str::from_utf8_unchecked_mut
+  - sync
+    - sync::atomic::compiler_fence
+    - sync::atomic::fence
+    - sync::atomic::spin_loop_hint
+    - sync::mpsc::channel
+    - sync::mpsc::sync_channel
+  - thread
+    - thread::current
+    - thread::panicking
+    - thread::park
+    - thread::park_timeout
+    - thread::park_timeout_ms
+    - thread::sleep
+    - thread::sleep_ms
+    - thread::spawn
+    - thread::yield_now
+  - intrinsics
+    - intrinsics::abort
+    - intrinsics::add_with_overflow
+    - intrinsics::arith_offset
+    - intrinsics::assume
+    - intrinsics::atomic_and
+    - intrinsics::atomic_and_acq
+    - intrinsics::atomic_and_acqrel
+    - intrinsics::atomic_and_rel
+    - intrinsics::atomic_and_relaxed
+    - intrinsics::atomic_cxchg
+    - intrinsics::atomic_cxchg_acq
+    - intrinsics::atomic_cxchg_acq_failrelaxed
+    - intrinsics::atomic_cxchg_acqrel
+    - intrinsics::atomic_cxchg_acqrel_failrelaxed
+    - intrinsics::atomic_cxchg_failacq
+    - intrinsics::atomic_cxchg_failrelaxed
+    - intrinsics::atomic_cxchg_rel
+    - intrinsics::atomic_cxchg_relaxed
+    - intrinsics::atomic_cxchgweak
+    - intrinsics::atomic_cxchgweak_acq
+    - intrinsics::atomic_cxchgweak_acq_failrelaxed
+    - intrinsics::atomic_cxchgweak_acqrel
+    - intrinsics::atomic_cxchgweak_acqrel_failrelaxed
+    - intrinsics::atomic_cxchgweak_failacq
+    - intrinsics::atomic_cxchgweak_failrelaxed
+    - intrinsics::atomic_cxchgweak_rel
+    - intrinsics::atomic_cxchgweak_relaxed
+    - intrinsics::atomic_fence
+    - intrinsics::atomic_fence_acq
+    - intrinsics::atomic_fence_acqrel
+    - intrinsics::atomic_fence_rel
+    - intrinsics::atomic_load
+    - intrinsics::atomic_load_acq
+    - intrinsics::atomic_load_relaxed
+    - intrinsics::atomic_load_unordered
+    - intrinsics::atomic_max
+    - intrinsics::atomic_max_acq
+    - intrinsics::atomic_max_acqrel
+    - intrinsics::atomic_max_rel
+    - intrinsics::atomic_max_relaxed
+    - intrinsics::atomic_min
+    - intrinsics::atomic_min_acq
+    - intrinsics::atomic_min_acqrel
+    - intrinsics::atomic_min_rel
+    - intrinsics::atomic_min_relaxed
+    - intrinsics::atomic_nand
+    - intrinsics::atomic_nand_acq
+    - intrinsics::atomic_nand_acqrel
+    - intrinsics::atomic_nand_rel
+    - intrinsics::atomic_nand_relaxed
+    - intrinsics::atomic_or
+    - intrinsics::atomic_or_acq
+    - intrinsics::atomic_or_acqrel
+    - intrinsics::atomic_or_rel
+    - intrinsics::atomic_or_relaxed
+    - intrinsics::atomic_singlethreadfence
+    - intrinsics::atomic_singlethreadfence_acq
+    - intrinsics::atomic_singlethreadfence_acqrel
+    - intrinsics::atomic_singlethreadfence_rel
+    - intrinsics::atomic_store
+    - intrinsics::atomic_store_rel
+    - intrinsics::atomic_store_relaxed
+    - intrinsics::atomic_store_unordered
+    - intrinsics::atomic_umax
+    - intrinsics::atomic_umax_acq
+    - intrinsics::atomic_umax_acqrel
+    - intrinsics::atomic_umax_rel
+    - intrinsics::atomic_umax_relaxed
+    - intrinsics::atomic_umin
+    - intrinsics::atomic_umin_acq
+    - intrinsics::atomic_umin_acqrel
+    - intrinsics::atomic_umin_rel
+    - intrinsics::atomic_umin_relaxed
+    - intrinsics::atomic_xadd
+    - intrinsics::atomic_xadd_acq
+    - intrinsics::atomic_xadd_acqrel
+    - intrinsics::atomic_xadd_rel
+    - intrinsics::atomic_xadd_relaxed
+    - intrinsics::atomic_xchg
+    - intrinsics::atomic_xchg_acq
+    - intrinsics::atomic_xchg_acqrel
+    - intrinsics::atomic_xchg_rel
+    - intrinsics::atomic_xchg_relaxed
+    - intrinsics::atomic_xor
+    - intrinsics::atomic_xor_acq
+    - intrinsics::atomic_xor_acqrel
+    - intrinsics::atomic_xor_rel
+    - intrinsics::atomic_xor_relaxed
+    - intrinsics::atomic_xsub
+    - intrinsics::atomic_xsub_acq
+    - intrinsics::atomic_xsub_acqrel
+    - intrinsics::atomic_xsub_rel
+    - intrinsics::atomic_xsub_relaxed
+    - intrinsics::bitreverse
+    - intrinsics::breakpoint
+    - intrinsics::bswap
+    - intrinsics::ceilf32
+    - intrinsics::ceilf64
+    - intrinsics::copy
+    - intrinsics::copy_nonoverlapping
+    - intrinsics::copysignf32
+    - intrinsics::copysignf64
+    - intrinsics::cosf32
+    - intrinsics::cosf64
+    - intrinsics::ctlz
+    - intrinsics::ctlz_nonzero
+    - intrinsics::ctpop
+    - intrinsics::cttz
+    - intrinsics::cttz_nonzero
+    - intrinsics::discriminant_value
+    - intrinsics::drop_in_place
+    - intrinsics::exact_div
+    - intrinsics::exp2f32
+    - intrinsics::exp2f64
+    - intrinsics::expf32
+    - intrinsics::expf64
+    - intrinsics::fabsf32
+    - intrinsics::fabsf64
+    - intrinsics::fadd_fast
+    - intrinsics::fdiv_fast
+    - intrinsics::floorf32
+    - intrinsics::floorf64
+    - intrinsics::fmaf32
+    - intrinsics::fmaf64
+    - intrinsics::fmul_fast
+    - intrinsics::frem_fast
+    - intrinsics::fsub_fast
+    - intrinsics::init
+    - intrinsics::likely
+    - intrinsics::log10f32
+    - intrinsics::log10f64
+    - intrinsics::log2f32
+    - intrinsics::log2f64
+    - intrinsics::logf32
+    - intrinsics::logf64
+    - intrinsics::min_align_of
+    - intrinsics::min_align_of_val
+    - intrinsics::move_val_init
+    - intrinsics::mul_with_overflow
+    - intrinsics::nearbyintf32
+    - intrinsics::nearbyintf64
+    - intrinsics::needs_drop
+    - intrinsics::nontemporal_store
+    - intrinsics::offset
+    - intrinsics::overflowing_add
+    - intrinsics::overflowing_mul
+    - intrinsics::overflowing_sub
+    - intrinsics::powf32
+    - intrinsics::powf64
+    - intrinsics::powif32
+    - intrinsics::powif64
+    - intrinsics::pref_align_of
+    - intrinsics::prefetch_read_data
+    - intrinsics::prefetch_read_instruction
+    - intrinsics::prefetch_write_data
+    - intrinsics::prefetch_write_instruction
+    - intrinsics::rintf32
+    - intrinsics::rintf64
+    - intrinsics::roundf32
+    - intrinsics::roundf64
+    - intrinsics::rustc_peek
+    - intrinsics::sinf32
+    - intrinsics::sinf64
+    - intrinsics::size_of
+    - intrinsics::size_of_val
+    - intrinsics::sqrtf32
+    - intrinsics::sqrtf64
+    - intrinsics::sub_with_overflow
+    - intrinsics::transmute
+    - intrinsics::truncf32
+    - intrinsics::truncf64
+    - intrinsics::try
+    - intrinsics::type_id
+    - intrinsics::type_name
+    - intrinsics::unchecked_div
+    - intrinsics::unchecked_rem
+    - intrinsics::unchecked_shl
+    - intrinsics::unchecked_shr
+    - intrinsics::uninit
+    - intrinsics::unlikely
+    - intrinsics::unreachable
+    - intrinsics::volatile_copy_memory
+    - intrinsics::volatile_copy_nonoverlapping_memory
+    - intrinsics::volatile_load
+    - intrinsics::volatile_set_memory
+    - intrinsics::volatile_store
+    - intrinsics::write_bytes
+
+
+## Typedefs
+  - alloc::Heap
+  - fmt::Result
+  - io::Result
+  - os::linux::raw::blkcnt_t
+  - os::linux::raw::blksize_t
+  - os::linux::raw::dev_t
+  - os::linux::raw::ino_t
+  - os::linux::raw::mode_t
+  - os::linux::raw::nlink_t
+  - os::linux::raw::off_t
+  - os::linux::raw::pthread_t
+  - os::linux::raw::time_t
+  - os::raw::c_char
+  - os::raw::c_double
+  - os::raw::c_float
+  - os::raw::c_int
+  - os::raw::c_long
+  - os::raw::c_longlong
+  - os::raw::c_schar
+  - os::raw::c_short
+  - os::raw::c_uchar
+  - os::raw::c_uint
+  - os::raw::c_ulong
+  - os::raw::c_ulonglong
+  - os::raw::c_ushort
+  - os::unix::io::RawFd
+  - os::unix::raw::blkcnt_t
+  - os::unix::raw::blksize_t
+  - os::unix::raw::dev_t
+  - os::unix::raw::gid_t
+  - os::unix::raw::ino_t
+  - os::unix::raw::mode_t
+  - os::unix::raw::nlink_t
+  - os::unix::raw::off_t
+  - os::unix::raw::pid_t
+  - os::unix::raw::pthread_t
+  - os::unix::raw::time_t
+  - os::unix::raw::uid_t
+  - os::unix::thread::RawPthread
+  - os::windows::io::RawHandle
+  - os::windows::io::RawSocket
+  - os::windows::raw::HANDLE
+  - os::windows::raw::SOCKET
+  - sync::LockResult
+  - sync::TryLockResult
+  - thread::Result
+
+
+## Constants
+  - path::MAIN_SEPARATOR
+  - time::UNIX_EPOCH
+  - char::REPLACEMENT_CHARACTER
+  - char::UNICODE_VERSION
+  - char::MAX
+  - f32
+    - f32::DIGITS
+    - f32::EPSILON
+    - f32::INFINITY
+    - f32::MANTISSA_DIGITS
+    - f32::MAX
+    - f32::MAX_10_EXP
+    - f32::MAX_EXP
+    - f32::MIN
+    - f32::MIN_10_EXP
+    - f32::MIN_EXP
+    - f32::MIN_POSITIVE
+    - f32::NAN
+    - f32::NEG_INFINITY
+    - f32::RADIX
+    - f32::consts
+      - f32::consts::E
+      - f32::consts::FRAC_1_PI
+      - f32::consts::FRAC_1_SQRT_2
+      - f32::consts::FRAC_2_PI
+      - f32::consts::FRAC_2_SQRT_PI
+      - f32::consts::FRAC_PI_2
+      - f32::consts::FRAC_PI_3
+      - f32::consts::FRAC_PI_4
+      - f32::consts::FRAC_PI_6
+      - f32::consts::FRAC_PI_8
+      - f32::consts::LN_10
+      - f32::consts::LN_2
+      - f32::consts::LOG10_2
+      - f32::consts::LOG10_E
+      - f32::consts::LOG2_10
+      - f32::consts::LOG2_E
+      - f32::consts::PI
+      - f32::consts::SQRT_2
+  - f64
+    - f64::DIGITS
+    - f64::EPSILON
+    - f64::INFINITY
+    - f64::MANTISSA_DIGITS
+    - f64::MAX
+    - f64::MAX_10_EXP
+    - f64::MAX_EXP
+    - f64::MIN
+    - f64::MIN_10_EXP
+    - f64::MIN_EXP
+    - f64::MIN_POSITIVE
+    - f64::NAN
+    - f64::NEG_INFINITY
+    - f64::RADIX
+    - f64::consts
+      - f64::consts::E
+      - f64::consts::FRAC_1_PI
+      - f64::consts::FRAC_1_SQRT_2
+      - f64::consts::FRAC_2_PI
+      - f64::consts::FRAC_2_SQRT_PI
+      - f64::consts::FRAC_PI_2
+      - f64::consts::FRAC_PI_3
+      - f64::consts::FRAC_PI_4
+      - f64::consts::FRAC_PI_6
+      - f64::consts::FRAC_PI_8
+      - f64::consts::LN_10
+      - f64::consts::LN_2
+      - f64::consts::LOG10_2
+      - f64::consts::LOG10_E
+      - f64::consts::LOG2_10
+      - f64::consts::LOG2_E
+      - f64::consts::PI
+      - f64::consts::SQRT_2
+  - Integers: MAX and MIN
+    - i8::MAX
+    - i8::MIN
+    - u8::MAX
+    - u8::MIN
+    - i16::MAX
+    - i16::MIN
+    - u16::MAX
+    - u16::MIN
+    - i32::MAX
+    - i32::MIN
+    - u32::MAX
+    - u32::MIN
+    - i64::MAX
+    - i64::MIN
+    - u64::MAX
+    - u64::MIN
+    - i128::MAX
+    - i128::MIN
+    - u128::MAX
+    - u128::MIN
+    - usize::MAX
+    - usize::MIN
+    - isize::MAX
+    - isize::MIN
+  - env
+    - env::consts::ARCH
+    - env::consts::DLL_EXTENSION
+    - env::consts::DLL_PREFIX
+    - env::consts::DLL_SUFFIX
+    - env::consts::EXE_EXTENSION
+    - env::consts::EXE_SUFFIX
+    - env::consts::FAMILY
+    - env::consts::OS
+  - sync
+    - sync::ONCE_INIT
+    - sync::atomic::ATOMIC_BOOL_INIT
+    - sync::atomic::ATOMIC_I16_INIT
+    - sync::atomic::ATOMIC_I32_INIT
+    - sync::atomic::ATOMIC_I64_INIT
+    - sync::atomic::ATOMIC_I8_INIT
+    - sync::atomic::ATOMIC_ISIZE_INIT
+    - sync::atomic::ATOMIC_U16_INIT
+    - sync::atomic::ATOMIC_U32_INIT
+    - sync::atomic::ATOMIC_U64_INIT
+    - sync::atomic::ATOMIC_U8_INIT
+    - sync::atomic::ATOMIC_USIZE_INIT
+
+
+
+---
+
+from: [all](https://doc.rust-lang.org/nightly/std/all.html)
+
+- [alloc::Global](https://doc.rust-lang.org/nightly/std/alloc/struct.Global.html)
+- [alloc::System](https://doc.rust-lang.org/nightly/std/alloc/struct.System.html)
+- [any::TypeId](https://doc.rust-lang.org/nightly/std/any/struct.TypeId.html)
+- [ascii::EscapeDefault](https://doc.rust-lang.org/nightly/std/ascii/struct.EscapeDefault.html)
+- [boxed::Box](https://doc.rust-lang.org/nightly/std/boxed/struct.Box.html)
+- [boxed::PinBox](https://doc.rust-lang.org/nightly/std/boxed/struct.PinBox.html)
+- [cell::BorrowError](https://doc.rust-lang.org/nightly/std/cell/struct.BorrowError.html)
+- [cell::BorrowMutError](https://doc.rust-lang.org/nightly/std/cell/struct.BorrowMutError.html)
+- [cell::Cell](https://doc.rust-lang.org/nightly/std/cell/struct.Cell.html)
+- [cell::Ref](https://doc.rust-lang.org/nightly/std/cell/struct.Ref.html)
+- [cell::RefCell](https://doc.rust-lang.org/nightly/std/cell/struct.RefCell.html)
+- [cell::RefMut](https://doc.rust-lang.org/nightly/std/cell/struct.RefMut.html)
+- [cell::UnsafeCell](https://doc.rust-lang.org/nightly/std/cell/struct.UnsafeCell.html)
+- [char::CharTryFromError](https://doc.rust-lang.org/nightly/std/char/struct.CharTryFromError.html)
+- [char::DecodeUtf16](https://doc.rust-lang.org/nightly/std/char/struct.DecodeUtf16.html)
+- [char::DecodeUtf16Error](https://doc.rust-lang.org/nightly/std/char/struct.DecodeUtf16Error.html)
+- [char::DecodeUtf8](https://doc.rust-lang.org/nightly/std/char/struct.DecodeUtf8.html)
+- [char::EscapeDebug](https://doc.rust-lang.org/nightly/std/char/struct.EscapeDebug.html)
+- [char::EscapeDefault](https://doc.rust-lang.org/nightly/std/char/struct.EscapeDefault.html)
+- [char::EscapeUnicode](https://doc.rust-lang.org/nightly/std/char/struct.EscapeUnicode.html)
+- [char::InvalidSequence](https://doc.rust-lang.org/nightly/std/char/struct.InvalidSequence.html)
+- [char::ParseCharError](https://doc.rust-lang.org/nightly/std/char/struct.ParseCharError.html)
+- [char::ToLowercase](https://doc.rust-lang.org/nightly/std/char/struct.ToLowercase.html)
+- [char::ToUppercase](https://doc.rust-lang.org/nightly/std/char/struct.ToUppercase.html)
+- [char::UnicodeVersion](https://doc.rust-lang.org/nightly/std/char/struct.UnicodeVersion.html)
+- [cmp::Reverse](https://doc.rust-lang.org/nightly/std/cmp/struct.Reverse.html)
+- [collections::BTreeMap](https://doc.rust-lang.org/nightly/std/collections/struct.BTreeMap.html)
+- [collections::BTreeSet](https://doc.rust-lang.org/nightly/std/collections/struct.BTreeSet.html)
+- [collections::BinaryHeap](https://doc.rust-lang.org/nightly/std/collections/struct.BinaryHeap.html)
+- [collections::HashMap](https://doc.rust-lang.org/nightly/std/collections/struct.HashMap.html)
+- [collections::HashSet](https://doc.rust-lang.org/nightly/std/collections/struct.HashSet.html)
+- [collections::LinkedList](https://doc.rust-lang.org/nightly/std/collections/struct.LinkedList.html)
+- [collections::VecDeque](https://doc.rust-lang.org/nightly/std/collections/struct.VecDeque.html)
+- [collections::binary_heap::BinaryHeap](https://doc.rust-lang.org/nightly/std/collections/binary_heap/struct.BinaryHeap.html)
+- [collections::binary_heap::Drain](https://doc.rust-lang.org/nightly/std/collections/binary_heap/struct.Drain.html)
+- [collections::binary_heap::IntoIter](https://doc.rust-lang.org/nightly/std/collections/binary_heap/struct.IntoIter.html)
+- [collections::binary_heap::Iter](https://doc.rust-lang.org/nightly/std/collections/binary_heap/struct.Iter.html)
+- [collections::binary_heap::PeekMut](https://doc.rust-lang.org/nightly/std/collections/binary_heap/struct.PeekMut.html)
+- [collections::btree_map::BTreeMap](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.BTreeMap.html)
+- [collections::btree_map::IntoIter](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.IntoIter.html)
+- [collections::btree_map::Iter](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.Iter.html)
+- [collections::btree_map::IterMut](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.IterMut.html)
+- [collections::btree_map::Keys](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.Keys.html)
+- [collections::btree_map::OccupiedEntry](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.OccupiedEntry.html)
+- [collections::btree_map::Range](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.Range.html)
+- [collections::btree_map::RangeMut](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.RangeMut.html)
+- [collections::btree_map::VacantEntry](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.VacantEntry.html)
+- [collections::btree_map::Values](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.Values.html)
+- [collections::btree_map::ValuesMut](https://doc.rust-lang.org/nightly/std/collections/btree_map/struct.ValuesMut.html)
+- [collections::btree_set::BTreeSet](https://doc.rust-lang.org/nightly/std/collections/btree_set/struct.BTreeSet.html)
+- [collections::btree_set::Difference](https://doc.rust-lang.org/nightly/std/collections/btree_set/struct.Difference.html)
+- [collections::btree_set::Intersection](https://doc.rust-lang.org/nightly/std/collections/btree_set/struct.Intersection.html)
+- [collections::btree_set::IntoIter](https://doc.rust-lang.org/nightly/std/collections/btree_set/struct.IntoIter.html)
+- [collections::btree_set::Iter](https://doc.rust-lang.org/nightly/std/collections/btree_set/struct.Iter.html)
+- [collections::btree_set::Range](https://doc.rust-lang.org/nightly/std/collections/btree_set/struct.Range.html)
+- [collections::btree_set::SymmetricDifference](https://doc.rust-lang.org/nightly/std/collections/btree_set/struct.SymmetricDifference.html)
+- [collections::btree_set::Union](https://doc.rust-lang.org/nightly/std/collections/btree_set/struct.Union.html)
+- [collections::hash_map::DefaultHasher](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.DefaultHasher.html)
+- [collections::hash_map::Drain](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.Drain.html)
+- [collections::hash_map::HashMap](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.HashMap.html)
+- [collections::hash_map::IntoIter](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.IntoIter.html)
+- [collections::hash_map::Iter](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.Iter.html)
+- [collections::hash_map::IterMut](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.IterMut.html)
+- [collections::hash_map::Keys](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.Keys.html)
+- [collections::hash_map::OccupiedEntry](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.OccupiedEntry.html)
+- [collections::hash_map::RandomState](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.RandomState.html)
+- [collections::hash_map::VacantEntry](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.VacantEntry.html)
+- [collections::hash_map::Values](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.Values.html)
+- [collections::hash_map::ValuesMut](https://doc.rust-lang.org/nightly/std/collections/hash_map/struct.ValuesMut.html)
+- [collections::hash_set::Difference](https://doc.rust-lang.org/nightly/std/collections/hash_set/struct.Difference.html)
+- [collections::hash_set::Drain](https://doc.rust-lang.org/nightly/std/collections/hash_set/struct.Drain.html)
+- [collections::hash_set::HashSet](https://doc.rust-lang.org/nightly/std/collections/hash_set/struct.HashSet.html)
+- [collections::hash_set::Intersection](https://doc.rust-lang.org/nightly/std/collections/hash_set/struct.Intersection.html)
+- [collections::hash_set::IntoIter](https://doc.rust-lang.org/nightly/std/collections/hash_set/struct.IntoIter.html)
+- [collections::hash_set::Iter](https://doc.rust-lang.org/nightly/std/collections/hash_set/struct.Iter.html)
+- [collections::hash_set::SymmetricDifference](https://doc.rust-lang.org/nightly/std/collections/hash_set/struct.SymmetricDifference.html)
+- [collections::hash_set::Union](https://doc.rust-lang.org/nightly/std/collections/hash_set/struct.Union.html)
+- [collections::linked_list::DrainFilter](https://doc.rust-lang.org/nightly/std/collections/linked_list/struct.DrainFilter.html)
+- [collections::linked_list::IntoIter](https://doc.rust-lang.org/nightly/std/collections/linked_list/struct.IntoIter.html)
+- [collections::linked_list::Iter](https://doc.rust-lang.org/nightly/std/collections/linked_list/struct.Iter.html)
+- [collections::linked_list::IterMut](https://doc.rust-lang.org/nightly/std/collections/linked_list/struct.IterMut.html)
+- [collections::linked_list::LinkedList](https://doc.rust-lang.org/nightly/std/collections/linked_list/struct.LinkedList.html)
+- [collections::vec_deque::Drain](https://doc.rust-lang.org/nightly/std/collections/vec_deque/struct.Drain.html)
+- [collections::vec_deque::IntoIter](https://doc.rust-lang.org/nightly/std/collections/vec_deque/struct.IntoIter.html)
+- [collections::vec_deque::Iter](https://doc.rust-lang.org/nightly/std/collections/vec_deque/struct.Iter.html)
+- [collections::vec_deque::IterMut](https://doc.rust-lang.org/nightly/std/collections/vec_deque/struct.IterMut.html)
+- [collections::vec_deque::VecDeque](https://doc.rust-lang.org/nightly/std/collections/vec_deque/struct.VecDeque.html)
+- [env::Args](https://doc.rust-lang.org/nightly/std/env/struct.Args.html)
+- [env::ArgsOs](https://doc.rust-lang.org/nightly/std/env/struct.ArgsOs.html)
+- [env::JoinPathsError](https://doc.rust-lang.org/nightly/std/env/struct.JoinPathsError.html)
+- [env::SplitPaths](https://doc.rust-lang.org/nightly/std/env/struct.SplitPaths.html)
+- [env::Vars](https://doc.rust-lang.org/nightly/std/env/struct.Vars.html)
+- [env::VarsOs](https://doc.rust-lang.org/nightly/std/env/struct.VarsOs.html)
+- [ffi::CStr](https://doc.rust-lang.org/nightly/std/ffi/struct.CStr.html)
+- [ffi::CString](https://doc.rust-lang.org/nightly/std/ffi/struct.CString.html)
+- [ffi::FromBytesWithNulError](https://doc.rust-lang.org/nightly/std/ffi/struct.FromBytesWithNulError.html)
+- [ffi::IntoStringError](https://doc.rust-lang.org/nightly/std/ffi/struct.IntoStringError.html)
+- [ffi::NulError](https://doc.rust-lang.org/nightly/std/ffi/struct.NulError.html)
+- [ffi::OsStr](https://doc.rust-lang.org/nightly/std/ffi/struct.OsStr.html)
+- [ffi::OsString](https://doc.rust-lang.org/nightly/std/ffi/struct.OsString.html)
+- [fmt::Arguments](https://doc.rust-lang.org/nightly/std/fmt/struct.Arguments.html)
+- [fmt::DebugList](https://doc.rust-lang.org/nightly/std/fmt/struct.DebugList.html)
+- [fmt::DebugMap](https://doc.rust-lang.org/nightly/std/fmt/struct.DebugMap.html)
+- [fmt::DebugSet](https://doc.rust-lang.org/nightly/std/fmt/struct.DebugSet.html)
+- [fmt::DebugStruct](https://doc.rust-lang.org/nightly/std/fmt/struct.DebugStruct.html)
+- [fmt::DebugTuple](https://doc.rust-lang.org/nightly/std/fmt/struct.DebugTuple.html)
+- [fmt::Error](https://doc.rust-lang.org/nightly/std/fmt/struct.Error.html)
+- [fmt::Formatter](https://doc.rust-lang.org/nightly/std/fmt/struct.Formatter.html)
+- [fs::DirBuilder](https://doc.rust-lang.org/nightly/std/fs/struct.DirBuilder.html)
+- [fs::DirEntry](https://doc.rust-lang.org/nightly/std/fs/struct.DirEntry.html)
+- [fs::File](https://doc.rust-lang.org/nightly/std/fs/struct.File.html)
+- [fs::FileType](https://doc.rust-lang.org/nightly/std/fs/struct.FileType.html)
+- [fs::Metadata](https://doc.rust-lang.org/nightly/std/fs/struct.Metadata.html)
+- [fs::OpenOptions](https://doc.rust-lang.org/nightly/std/fs/struct.OpenOptions.html)
+- [fs::Permissions](https://doc.rust-lang.org/nightly/std/fs/struct.Permissions.html)
+- [fs::ReadDir](https://doc.rust-lang.org/nightly/std/fs/struct.ReadDir.html)
+- [hash::BuildHasherDefault](https://doc.rust-lang.org/nightly/std/hash/struct.BuildHasherDefault.html)
+- [hash::SipHasher](https://doc.rust-lang.org/nightly/std/hash/struct.SipHasher.html)
+- [io::BufReader](https://doc.rust-lang.org/nightly/std/io/struct.BufReader.html)
+- [io::BufWriter](https://doc.rust-lang.org/nightly/std/io/struct.BufWriter.html)
+- [io::Bytes](https://doc.rust-lang.org/nightly/std/io/struct.Bytes.html)
+- [io::Chain](https://doc.rust-lang.org/nightly/std/io/struct.Chain.html)
+- [io::Chars](https://doc.rust-lang.org/nightly/std/io/struct.Chars.html)
+- [io::Cursor](https://doc.rust-lang.org/nightly/std/io/struct.Cursor.html)
+- [io::Empty](https://doc.rust-lang.org/nightly/std/io/struct.Empty.html)
+- [io::Error](https://doc.rust-lang.org/nightly/std/io/struct.Error.html)
+- [io::Initializer](https://doc.rust-lang.org/nightly/std/io/struct.Initializer.html)
+- [io::IntoInnerError](https://doc.rust-lang.org/nightly/std/io/struct.IntoInnerError.html)
+- [io::LineWriter](https://doc.rust-lang.org/nightly/std/io/struct.LineWriter.html)
+- [io::Lines](https://doc.rust-lang.org/nightly/std/io/struct.Lines.html)
+- [io::Repeat](https://doc.rust-lang.org/nightly/std/io/struct.Repeat.html)
+- [io::Sink](https://doc.rust-lang.org/nightly/std/io/struct.Sink.html)
+- [io::Split](https://doc.rust-lang.org/nightly/std/io/struct.Split.html)
+- [io::Stderr](https://doc.rust-lang.org/nightly/std/io/struct.Stderr.html)
+- [io::StderrLock](https://doc.rust-lang.org/nightly/std/io/struct.StderrLock.html)
+- [io::Stdin](https://doc.rust-lang.org/nightly/std/io/struct.Stdin.html)
+- [io::StdinLock](https://doc.rust-lang.org/nightly/std/io/struct.StdinLock.html)
+- [io::Stdout](https://doc.rust-lang.org/nightly/std/io/struct.Stdout.html)
+- [io::StdoutLock](https://doc.rust-lang.org/nightly/std/io/struct.StdoutLock.html)
+- [io::Take](https://doc.rust-lang.org/nightly/std/io/struct.Take.html)
+- [iter::Chain](https://doc.rust-lang.org/nightly/std/iter/struct.Chain.html)
+- [iter::Cloned](https://doc.rust-lang.org/nightly/std/iter/struct.Cloned.html)
+- [iter::Cycle](https://doc.rust-lang.org/nightly/std/iter/struct.Cycle.html)
+- [iter::Empty](https://doc.rust-lang.org/nightly/std/iter/struct.Empty.html)
+- [iter::Enumerate](https://doc.rust-lang.org/nightly/std/iter/struct.Enumerate.html)
+- [iter::Filter](https://doc.rust-lang.org/nightly/std/iter/struct.Filter.html)
+- [iter::FilterMap](https://doc.rust-lang.org/nightly/std/iter/struct.FilterMap.html)
+- [iter::FlatMap](https://doc.rust-lang.org/nightly/std/iter/struct.FlatMap.html)
+- [iter::Flatten](https://doc.rust-lang.org/nightly/std/iter/struct.Flatten.html)
+- [iter::Fuse](https://doc.rust-lang.org/nightly/std/iter/struct.Fuse.html)
+- [iter::Inspect](https://doc.rust-lang.org/nightly/std/iter/struct.Inspect.html)
+- [iter::Map](https://doc.rust-lang.org/nightly/std/iter/struct.Map.html)
+- [iter::Once](https://doc.rust-lang.org/nightly/std/iter/struct.Once.html)
+- [iter::Peekable](https://doc.rust-lang.org/nightly/std/iter/struct.Peekable.html)
+- [iter::Repeat](https://doc.rust-lang.org/nightly/std/iter/struct.Repeat.html)
+- [iter::RepeatWith](https://doc.rust-lang.org/nightly/std/iter/struct.RepeatWith.html)
+- [iter::Rev](https://doc.rust-lang.org/nightly/std/iter/struct.Rev.html)
+- [iter::Scan](https://doc.rust-lang.org/nightly/std/iter/struct.Scan.html)
+- [iter::Skip](https://doc.rust-lang.org/nightly/std/iter/struct.Skip.html)
+- [iter::SkipWhile](https://doc.rust-lang.org/nightly/std/iter/struct.SkipWhile.html)
+- [iter::StepBy](https://doc.rust-lang.org/nightly/std/iter/struct.StepBy.html)
+- [iter::Take](https://doc.rust-lang.org/nightly/std/iter/struct.Take.html)
+- [iter::TakeWhile](https://doc.rust-lang.org/nightly/std/iter/struct.TakeWhile.html)
+- [iter::Zip](https://doc.rust-lang.org/nightly/std/iter/struct.Zip.html)
+- [marker::PhantomData](https://doc.rust-lang.org/nightly/std/marker/struct.PhantomData.html)
+- [marker::Pinned](https://doc.rust-lang.org/nightly/std/marker/struct.Pinned.html)
+- [mem::Discriminant](https://doc.rust-lang.org/nightly/std/mem/struct.Discriminant.html)
+- [mem::PinMut](https://doc.rust-lang.org/nightly/std/mem/struct.PinMut.html)
+- [net::AddrParseError](https://doc.rust-lang.org/nightly/std/net/struct.AddrParseError.html)
+- [net::Incoming](https://doc.rust-lang.org/nightly/std/net/struct.Incoming.html)
+- [net::Ipv4Addr](https://doc.rust-lang.org/nightly/std/net/struct.Ipv4Addr.html)
+- [net::Ipv6Addr](https://doc.rust-lang.org/nightly/std/net/struct.Ipv6Addr.html)
+- [net::SocketAddrV4](https://doc.rust-lang.org/nightly/std/net/struct.SocketAddrV4.html)
+- [net::SocketAddrV6](https://doc.rust-lang.org/nightly/std/net/struct.SocketAddrV6.html)
+- [net::TcpListener](https://doc.rust-lang.org/nightly/std/net/struct.TcpListener.html)
+- [net::TcpStream](https://doc.rust-lang.org/nightly/std/net/struct.TcpStream.html)
+- [net::UdpSocket](https://doc.rust-lang.org/nightly/std/net/struct.UdpSocket.html)
+- [num::NonZeroU128](https://doc.rust-lang.org/nightly/std/num/struct.NonZeroU128.html)
+- [num::NonZeroU16](https://doc.rust-lang.org/nightly/std/num/struct.NonZeroU16.html)
+- [num::NonZeroU32](https://doc.rust-lang.org/nightly/std/num/struct.NonZeroU32.html)
+- [num::NonZeroU64](https://doc.rust-lang.org/nightly/std/num/struct.NonZeroU64.html)
+- [num::NonZeroU8](https://doc.rust-lang.org/nightly/std/num/struct.NonZeroU8.html)
+- [num::NonZeroUsize](https://doc.rust-lang.org/nightly/std/num/struct.NonZeroUsize.html)
+- [num::ParseFloatError](https://doc.rust-lang.org/nightly/std/num/struct.ParseFloatError.html)
+- [num::ParseIntError](https://doc.rust-lang.org/nightly/std/num/struct.ParseIntError.html)
+- [num::TryFromIntError](https://doc.rust-lang.org/nightly/std/num/struct.TryFromIntError.html)
+- [num::Wrapping](https://doc.rust-lang.org/nightly/std/num/struct.Wrapping.html)
+- [ops::Range](https://doc.rust-lang.org/nightly/std/ops/struct.Range.html)
+- [ops::RangeFrom](https://doc.rust-lang.org/nightly/std/ops/struct.RangeFrom.html)
+- [ops::RangeFull](https://doc.rust-lang.org/nightly/std/ops/struct.RangeFull.html)
+- [ops::RangeInclusive](https://doc.rust-lang.org/nightly/std/ops/struct.RangeInclusive.html)
+- [ops::RangeTo](https://doc.rust-lang.org/nightly/std/ops/struct.RangeTo.html)
+- [ops::RangeToInclusive](https://doc.rust-lang.org/nightly/std/ops/struct.RangeToInclusive.html)
+- [option::IntoIter](https://doc.rust-lang.org/nightly/std/option/struct.IntoIter.html)
+- [option::Iter](https://doc.rust-lang.org/nightly/std/option/struct.Iter.html)
+- [option::IterMut](https://doc.rust-lang.org/nightly/std/option/struct.IterMut.html)
+- [option::NoneError](https://doc.rust-lang.org/nightly/std/option/struct.NoneError.html)
+- [os::linux::raw::stat](https://doc.rust-lang.org/nightly/std/os/linux/raw/struct.stat.html)
+- [os::unix::net::Incoming](https://doc.rust-lang.org/nightly/std/os/unix/net/struct.Incoming.html)
+- [os::unix::net::SocketAddr](https://doc.rust-lang.org/nightly/std/os/unix/net/struct.SocketAddr.html)
+- [os::unix::net::UnixDatagram](https://doc.rust-lang.org/nightly/std/os/unix/net/struct.UnixDatagram.html)
+- [os::unix::net::UnixListener](https://doc.rust-lang.org/nightly/std/os/unix/net/struct.UnixListener.html)
+- [os::unix::net::UnixStream](https://doc.rust-lang.org/nightly/std/os/unix/net/struct.UnixStream.html)
+- [os::windows::ffi::EncodeWide](https://doc.rust-lang.org/nightly/std/os/windows/ffi/struct.EncodeWide.html)
+- [panic::AssertUnwindSafe](https://doc.rust-lang.org/nightly/std/panic/struct.AssertUnwindSafe.html)
+- [panic::Location](https://doc.rust-lang.org/nightly/std/panic/struct.Location.html)
+- [panic::PanicInfo](https://doc.rust-lang.org/nightly/std/panic/struct.PanicInfo.html)
+- [path::Ancestors](https://doc.rust-lang.org/nightly/std/path/struct.Ancestors.html)
+- [path::Components](https://doc.rust-lang.org/nightly/std/path/struct.Components.html)
+- [path::Display](https://doc.rust-lang.org/nightly/std/path/struct.Display.html)
+- [path::Iter](https://doc.rust-lang.org/nightly/std/path/struct.Iter.html)
+- [path::Path](https://doc.rust-lang.org/nightly/std/path/struct.Path.html)
+- [path::PathBuf](https://doc.rust-lang.org/nightly/std/path/struct.PathBuf.html)
+- [path::PrefixComponent](https://doc.rust-lang.org/nightly/std/path/struct.PrefixComponent.html)
+- [path::StripPrefixError](https://doc.rust-lang.org/nightly/std/path/struct.StripPrefixError.html)
+- [process::Child](https://doc.rust-lang.org/nightly/std/process/struct.Child.html)
+- [process::ChildStderr](https://doc.rust-lang.org/nightly/std/process/struct.ChildStderr.html)
+- [process::ChildStdin](https://doc.rust-lang.org/nightly/std/process/struct.ChildStdin.html)
+- [process::ChildStdout](https://doc.rust-lang.org/nightly/std/process/struct.ChildStdout.html)
+- [process::Command](https://doc.rust-lang.org/nightly/std/process/struct.Command.html)
+- [process::ExitCode](https://doc.rust-lang.org/nightly/std/process/struct.ExitCode.html)
+- [process::ExitStatus](https://doc.rust-lang.org/nightly/std/process/struct.ExitStatus.html)
+- [process::Output](https://doc.rust-lang.org/nightly/std/process/struct.Output.html)
+- [process::Stdio](https://doc.rust-lang.org/nightly/std/process/struct.Stdio.html)
+- [ptr::NonNull](https://doc.rust-lang.org/nightly/std/ptr/struct.NonNull.html)
+- [raw::TraitObject](https://doc.rust-lang.org/nightly/std/raw/struct.TraitObject.html)
+- [rc::Rc](https://doc.rust-lang.org/nightly/std/rc/struct.Rc.html)
+- [rc::Weak](https://doc.rust-lang.org/nightly/std/rc/struct.Weak.html)
+- [result::IntoIter](https://doc.rust-lang.org/nightly/std/result/struct.IntoIter.html)
+- [result::Iter](https://doc.rust-lang.org/nightly/std/result/struct.Iter.html)
+- [result::IterMut](https://doc.rust-lang.org/nightly/std/result/struct.IterMut.html)
+- [simd::f32x16](https://doc.rust-lang.org/nightly/std/simd/struct.f32x16.html)
+- [simd::f32x2](https://doc.rust-lang.org/nightly/std/simd/struct.f32x2.html)
+- [simd::f32x4](https://doc.rust-lang.org/nightly/std/simd/struct.f32x4.html)
+- [simd::f32x8](https://doc.rust-lang.org/nightly/std/simd/struct.f32x8.html)
+- [simd::f64x2](https://doc.rust-lang.org/nightly/std/simd/struct.f64x2.html)
+- [simd::f64x4](https://doc.rust-lang.org/nightly/std/simd/struct.f64x4.html)
+- [simd::f64x8](https://doc.rust-lang.org/nightly/std/simd/struct.f64x8.html)
+- [simd::i16x16](https://doc.rust-lang.org/nightly/std/simd/struct.i16x16.html)
+- [simd::i16x2](https://doc.rust-lang.org/nightly/std/simd/struct.i16x2.html)
+- [simd::i16x32](https://doc.rust-lang.org/nightly/std/simd/struct.i16x32.html)
+- [simd::i16x4](https://doc.rust-lang.org/nightly/std/simd/struct.i16x4.html)
+- [simd::i16x8](https://doc.rust-lang.org/nightly/std/simd/struct.i16x8.html)
+- [simd::i32x16](https://doc.rust-lang.org/nightly/std/simd/struct.i32x16.html)
+- [simd::i32x2](https://doc.rust-lang.org/nightly/std/simd/struct.i32x2.html)
+- [simd::i32x4](https://doc.rust-lang.org/nightly/std/simd/struct.i32x4.html)
+- [simd::i32x8](https://doc.rust-lang.org/nightly/std/simd/struct.i32x8.html)
+- [simd::i64x2](https://doc.rust-lang.org/nightly/std/simd/struct.i64x2.html)
+- [simd::i64x4](https://doc.rust-lang.org/nightly/std/simd/struct.i64x4.html)
+- [simd::i64x8](https://doc.rust-lang.org/nightly/std/simd/struct.i64x8.html)
+- [simd::i8x16](https://doc.rust-lang.org/nightly/std/simd/struct.i8x16.html)
+- [simd::i8x2](https://doc.rust-lang.org/nightly/std/simd/struct.i8x2.html)
+- [simd::i8x32](https://doc.rust-lang.org/nightly/std/simd/struct.i8x32.html)
+- [simd::i8x4](https://doc.rust-lang.org/nightly/std/simd/struct.i8x4.html)
+- [simd::i8x64](https://doc.rust-lang.org/nightly/std/simd/struct.i8x64.html)
+- [simd::i8x8](https://doc.rust-lang.org/nightly/std/simd/struct.i8x8.html)
+- [simd::m16x16](https://doc.rust-lang.org/nightly/std/simd/struct.m16x16.html)
+- [simd::m16x2](https://doc.rust-lang.org/nightly/std/simd/struct.m16x2.html)
+- [simd::m16x4](https://doc.rust-lang.org/nightly/std/simd/struct.m16x4.html)
+- [simd::m16x8](https://doc.rust-lang.org/nightly/std/simd/struct.m16x8.html)
+- [simd::m1x16](https://doc.rust-lang.org/nightly/std/simd/struct.m1x16.html)
+- [simd::m1x32](https://doc.rust-lang.org/nightly/std/simd/struct.m1x32.html)
+- [simd::m1x64](https://doc.rust-lang.org/nightly/std/simd/struct.m1x64.html)
+- [simd::m1x8](https://doc.rust-lang.org/nightly/std/simd/struct.m1x8.html)
+- [simd::m32x2](https://doc.rust-lang.org/nightly/std/simd/struct.m32x2.html)
+- [simd::m32x4](https://doc.rust-lang.org/nightly/std/simd/struct.m32x4.html)
+- [simd::m32x8](https://doc.rust-lang.org/nightly/std/simd/struct.m32x8.html)
+- [simd::m64x2](https://doc.rust-lang.org/nightly/std/simd/struct.m64x2.html)
+- [simd::m64x4](https://doc.rust-lang.org/nightly/std/simd/struct.m64x4.html)
+- [simd::m8x16](https://doc.rust-lang.org/nightly/std/simd/struct.m8x16.html)
+- [simd::m8x2](https://doc.rust-lang.org/nightly/std/simd/struct.m8x2.html)
+- [simd::m8x32](https://doc.rust-lang.org/nightly/std/simd/struct.m8x32.html)
+- [simd::m8x4](https://doc.rust-lang.org/nightly/std/simd/struct.m8x4.html)
+- [simd::m8x8](https://doc.rust-lang.org/nightly/std/simd/struct.m8x8.html)
+- [simd::u16x16](https://doc.rust-lang.org/nightly/std/simd/struct.u16x16.html)
+- [simd::u16x2](https://doc.rust-lang.org/nightly/std/simd/struct.u16x2.html)
+- [simd::u16x32](https://doc.rust-lang.org/nightly/std/simd/struct.u16x32.html)
+- [simd::u16x4](https://doc.rust-lang.org/nightly/std/simd/struct.u16x4.html)
+- [simd::u16x8](https://doc.rust-lang.org/nightly/std/simd/struct.u16x8.html)
+- [simd::u32x16](https://doc.rust-lang.org/nightly/std/simd/struct.u32x16.html)
+- [simd::u32x2](https://doc.rust-lang.org/nightly/std/simd/struct.u32x2.html)
+- [simd::u32x4](https://doc.rust-lang.org/nightly/std/simd/struct.u32x4.html)
+- [simd::u32x8](https://doc.rust-lang.org/nightly/std/simd/struct.u32x8.html)
+- [simd::u64x2](https://doc.rust-lang.org/nightly/std/simd/struct.u64x2.html)
+- [simd::u64x4](https://doc.rust-lang.org/nightly/std/simd/struct.u64x4.html)
+- [simd::u64x8](https://doc.rust-lang.org/nightly/std/simd/struct.u64x8.html)
+- [simd::u8x16](https://doc.rust-lang.org/nightly/std/simd/struct.u8x16.html)
+- [simd::u8x2](https://doc.rust-lang.org/nightly/std/simd/struct.u8x2.html)
+- [simd::u8x32](https://doc.rust-lang.org/nightly/std/simd/struct.u8x32.html)
+- [simd::u8x4](https://doc.rust-lang.org/nightly/std/simd/struct.u8x4.html)
+- [simd::u8x64](https://doc.rust-lang.org/nightly/std/simd/struct.u8x64.html)
+- [simd::u8x8](https://doc.rust-lang.org/nightly/std/simd/struct.u8x8.html)
+- [slice::Chunks](https://doc.rust-lang.org/nightly/std/slice/struct.Chunks.html)
+- [slice::ChunksMut](https://doc.rust-lang.org/nightly/std/slice/struct.ChunksMut.html)
+- [slice::ExactChunks](https://doc.rust-lang.org/nightly/std/slice/struct.ExactChunks.html)
+- [slice::ExactChunksMut](https://doc.rust-lang.org/nightly/std/slice/struct.ExactChunksMut.html)
+- [slice::Iter](https://doc.rust-lang.org/nightly/std/slice/struct.Iter.html)
+- [slice::IterMut](https://doc.rust-lang.org/nightly/std/slice/struct.IterMut.html)
+- [slice::RSplit](https://doc.rust-lang.org/nightly/std/slice/struct.RSplit.html)
+- [slice::RSplitMut](https://doc.rust-lang.org/nightly/std/slice/struct.RSplitMut.html)
+- [slice::RSplitN](https://doc.rust-lang.org/nightly/std/slice/struct.RSplitN.html)
+- [slice::RSplitNMut](https://doc.rust-lang.org/nightly/std/slice/struct.RSplitNMut.html)
+- [slice::Split](https://doc.rust-lang.org/nightly/std/slice/struct.Split.html)
+- [slice::SplitMut](https://doc.rust-lang.org/nightly/std/slice/struct.SplitMut.html)
+- [slice::SplitN](https://doc.rust-lang.org/nightly/std/slice/struct.SplitN.html)
+- [slice::SplitNMut](https://doc.rust-lang.org/nightly/std/slice/struct.SplitNMut.html)
+- [slice::Windows](https://doc.rust-lang.org/nightly/std/slice/struct.Windows.html)
+- [str::Bytes](https://doc.rust-lang.org/nightly/std/str/struct.Bytes.html)
+- [str::CharIndices](https://doc.rust-lang.org/nightly/std/str/struct.CharIndices.html)
+- [str::Chars](https://doc.rust-lang.org/nightly/std/str/struct.Chars.html)
+- [str::EncodeUtf16](https://doc.rust-lang.org/nightly/std/str/struct.EncodeUtf16.html)
+- [str::Lines](https://doc.rust-lang.org/nightly/std/str/struct.Lines.html)
+- [str::LinesAny](https://doc.rust-lang.org/nightly/std/str/struct.LinesAny.html)
+- [str::MatchIndices](https://doc.rust-lang.org/nightly/std/str/struct.MatchIndices.html)
+- [str::Matches](https://doc.rust-lang.org/nightly/std/str/struct.Matches.html)
+- [str::ParseBoolError](https://doc.rust-lang.org/nightly/std/str/struct.ParseBoolError.html)
+- [str::RMatchIndices](https://doc.rust-lang.org/nightly/std/str/struct.RMatchIndices.html)
+- [str::RMatches](https://doc.rust-lang.org/nightly/std/str/struct.RMatches.html)
+- [str::RSplit](https://doc.rust-lang.org/nightly/std/str/struct.RSplit.html)
+- [str::RSplitN](https://doc.rust-lang.org/nightly/std/str/struct.RSplitN.html)
+- [str::RSplitTerminator](https://doc.rust-lang.org/nightly/std/str/struct.RSplitTerminator.html)
+- [str::Split](https://doc.rust-lang.org/nightly/std/str/struct.Split.html)
+- [str::SplitN](https://doc.rust-lang.org/nightly/std/str/struct.SplitN.html)
+- [str::SplitTerminator](https://doc.rust-lang.org/nightly/std/str/struct.SplitTerminator.html)
+- [str::SplitWhitespace](https://doc.rust-lang.org/nightly/std/str/struct.SplitWhitespace.html)
+- [str::Utf8Error](https://doc.rust-lang.org/nightly/std/str/struct.Utf8Error.html)
+- [str::pattern::CharPredicateSearcher](https://doc.rust-lang.org/nightly/std/str/pattern/struct.CharPredicateSearcher.html)
+- [str::pattern::CharSearcher](https://doc.rust-lang.org/nightly/std/str/pattern/struct.CharSearcher.html)
+- [str::pattern::CharSliceSearcher](https://doc.rust-lang.org/nightly/std/str/pattern/struct.CharSliceSearcher.html)
+- [str::pattern::StrSearcher](https://doc.rust-lang.org/nightly/std/str/pattern/struct.StrSearcher.html)
+- [string::Drain](https://doc.rust-lang.org/nightly/std/string/struct.Drain.html)
+- [string::FromUtf16Error](https://doc.rust-lang.org/nightly/std/string/struct.FromUtf16Error.html)
+- [string::FromUtf8Error](https://doc.rust-lang.org/nightly/std/string/struct.FromUtf8Error.html)
+- [string::String](https://doc.rust-lang.org/nightly/std/string/struct.String.html)
+- [sync::Arc](https://doc.rust-lang.org/nightly/std/sync/struct.Arc.html)
+- [sync::Barrier](https://doc.rust-lang.org/nightly/std/sync/struct.Barrier.html)
+- [sync::BarrierWaitResult](https://doc.rust-lang.org/nightly/std/sync/struct.BarrierWaitResult.html)
+- [sync::Condvar](https://doc.rust-lang.org/nightly/std/sync/struct.Condvar.html)
+- [sync::Mutex](https://doc.rust-lang.org/nightly/std/sync/struct.Mutex.html)
+- [sync::MutexGuard](https://doc.rust-lang.org/nightly/std/sync/struct.MutexGuard.html)
+- [sync::Once](https://doc.rust-lang.org/nightly/std/sync/struct.Once.html)
+- [sync::OnceState](https://doc.rust-lang.org/nightly/std/sync/struct.OnceState.html)
+- [sync::PoisonError](https://doc.rust-lang.org/nightly/std/sync/struct.PoisonError.html)
+- [sync::RwLock](https://doc.rust-lang.org/nightly/std/sync/struct.RwLock.html)
+- [sync::RwLockReadGuard](https://doc.rust-lang.org/nightly/std/sync/struct.RwLockReadGuard.html)
+- [sync::RwLockWriteGuard](https://doc.rust-lang.org/nightly/std/sync/struct.RwLockWriteGuard.html)
+- [sync::WaitTimeoutResult](https://doc.rust-lang.org/nightly/std/sync/struct.WaitTimeoutResult.html)
+- [sync::Weak](https://doc.rust-lang.org/nightly/std/sync/struct.Weak.html)
+- [sync::atomic::AtomicBool](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicBool.html)
+- [sync::atomic::AtomicI16](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicI16.html)
+- [sync::atomic::AtomicI32](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicI32.html)
+- [sync::atomic::AtomicI64](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicI64.html)
+- [sync::atomic::AtomicI8](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicI8.html)
+- [sync::atomic::AtomicIsize](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicIsize.html)
+- [sync::atomic::AtomicPtr](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicPtr.html)
+- [sync::atomic::AtomicU16](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicU16.html)
+- [sync::atomic::AtomicU32](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicU32.html)
+- [sync::atomic::AtomicU64](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicU64.html)
+- [sync::atomic::AtomicU8](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicU8.html)
+- [sync::atomic::AtomicUsize](https://doc.rust-lang.org/nightly/std/sync/atomic/struct.AtomicUsize.html)
+- [sync::mpsc::Handle](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Handle.html)
+- [sync::mpsc::IntoIter](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.IntoIter.html)
+- [sync::mpsc::Iter](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Iter.html)
+- [sync::mpsc::Receiver](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Receiver.html)
+- [sync::mpsc::RecvError](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.RecvError.html)
+- [sync::mpsc::Select](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Select.html)
+- [sync::mpsc::SendError](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.SendError.html)
+- [sync::mpsc::Sender](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.Sender.html)
+- [sync::mpsc::SyncSender](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.SyncSender.html)
+- [sync::mpsc::TryIter](https://doc.rust-lang.org/nightly/std/sync/mpsc/struct.TryIter.html)
+- [thread::AccessError](https://doc.rust-lang.org/nightly/std/thread/struct.AccessError.html)
+- [thread::Builder](https://doc.rust-lang.org/nightly/std/thread/struct.Builder.html)
+- [thread::JoinHandle](https://doc.rust-lang.org/nightly/std/thread/struct.JoinHandle.html)
+- [thread::LocalKey](https://doc.rust-lang.org/nightly/std/thread/struct.LocalKey.html)
+- [thread::Thread](https://doc.rust-lang.org/nightly/std/thread/struct.Thread.html)
+- [thread::ThreadId](https://doc.rust-lang.org/nightly/std/thread/struct.ThreadId.html)
+- [time::Duration](https://doc.rust-lang.org/nightly/std/time/struct.Duration.html)
+- [time::Instant](https://doc.rust-lang.org/nightly/std/time/struct.Instant.html)
+- [time::SystemTime](https://doc.rust-lang.org/nightly/std/time/struct.SystemTime.html)
+- [time::SystemTimeError](https://doc.rust-lang.org/nightly/std/time/struct.SystemTimeError.html)
+- [vec::Drain](https://doc.rust-lang.org/nightly/std/vec/struct.Drain.html)
+- [vec::DrainFilter](https://doc.rust-lang.org/nightly/std/vec/struct.DrainFilter.html)
+- [vec::IntoIter](https://doc.rust-lang.org/nightly/std/vec/struct.IntoIter.html)
+- [vec::Splice](https://doc.rust-lang.org/nightly/std/vec/struct.Splice.html)
+- [vec::Vec](https://doc.rust-lang.org/nightly/std/vec/struct.Vec.html)
+- [borrow::Cow](https://doc.rust-lang.org/nightly/std/borrow/enum.Cow.html)
+- [cmp::Ordering](https://doc.rust-lang.org/nightly/std/cmp/enum.Ordering.html)
+- [collections::CollectionAllocErr](https://doc.rust-lang.org/nightly/std/collections/enum.CollectionAllocErr.html)
+- [collections::btree_map::Entry](https://doc.rust-lang.org/nightly/std/collections/btree_map/enum.Entry.html)
+- [collections::hash_map::Entry](https://doc.rust-lang.org/nightly/std/collections/hash_map/enum.Entry.html)
+- [env::VarError](https://doc.rust-lang.org/nightly/std/env/enum.VarError.html)
+- [io::CharsError](https://doc.rust-lang.org/nightly/std/io/enum.CharsError.html)
+- [io::ErrorKind](https://doc.rust-lang.org/nightly/std/io/enum.ErrorKind.html)
+- [io::SeekFrom](https://doc.rust-lang.org/nightly/std/io/enum.SeekFrom.html)
+- [net::IpAddr](https://doc.rust-lang.org/nightly/std/net/enum.IpAddr.html)
+- [net::Ipv6MulticastScope](https://doc.rust-lang.org/nightly/std/net/enum.Ipv6MulticastScope.html)
+- [net::Shutdown](https://doc.rust-lang.org/nightly/std/net/enum.Shutdown.html)
+- [net::SocketAddr](https://doc.rust-lang.org/nightly/std/net/enum.SocketAddr.html)
+- [num::FpCategory](https://doc.rust-lang.org/nightly/std/num/enum.FpCategory.html)
+- [ops::Bound](https://doc.rust-lang.org/nightly/std/ops/enum.Bound.html)
+- [ops::GeneratorState](https://doc.rust-lang.org/nightly/std/ops/enum.GeneratorState.html)
+- [option::Option](https://doc.rust-lang.org/nightly/std/option/enum.Option.html)
+- [os::raw::c_void](https://doc.rust-lang.org/nightly/std/os/raw/enum.c_void.html)
+- [path::Component](https://doc.rust-lang.org/nightly/std/path/enum.Component.html)
+- [path::Prefix](https://doc.rust-lang.org/nightly/std/path/enum.Prefix.html)
+- [result::Result](https://doc.rust-lang.org/nightly/std/result/enum.Result.html)
+- [str::pattern::SearchStep](https://doc.rust-lang.org/nightly/std/str/pattern/enum.SearchStep.html)
+- [string::ParseError](https://doc.rust-lang.org/nightly/std/string/enum.ParseError.html)
+- [sync::TryLockError](https://doc.rust-lang.org/nightly/std/sync/enum.TryLockError.html)
+- [sync::atomic::Ordering](https://doc.rust-lang.org/nightly/std/sync/atomic/enum.Ordering.html)
+- [sync::mpsc::RecvTimeoutError](https://doc.rust-lang.org/nightly/std/sync/mpsc/enum.RecvTimeoutError.html)
+- [sync::mpsc::TryRecvError](https://doc.rust-lang.org/nightly/std/sync/mpsc/enum.TryRecvError.html)
+- [sync::mpsc::TrySendError](https://doc.rust-lang.org/nightly/std/sync/mpsc/enum.TrySendError.html)
+- [mem::ManuallyDrop](https://doc.rust-lang.org/nightly/std/mem/union.ManuallyDrop.html)
+- [array](https://doc.rust-lang.org/nightly/std/primitive.array.html)
+- [bool](https://doc.rust-lang.org/nightly/std/primitive.bool.html)
+- [char](https://doc.rust-lang.org/nightly/std/primitive.char.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.f3](https://doc.rust-lang.org/nightly/std/primitive.f32.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.f6](https://doc.rust-lang.org/nightly/std/primitive.f64.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.fn](https://doc.rust-lang.org/nightly/std/primitive.fn.html)
+- [i128](https://doc.rust-lang.org/nightly/std/primitive.i128.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.i1](https://doc.rust-lang.org/nightly/std/primitive.i16.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.i3](https://doc.rust-lang.org/nightly/std/primitive.i32.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.i6](https://doc.rust-lang.org/nightly/std/primitive.i64.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.i8](https://doc.rust-lang.org/nightly/std/primitive.i8.html)
+- [isize](https://doc.rust-lang.org/nightly/std/primitive.isize.html)
+- [never](https://doc.rust-lang.org/nightly/std/primitive.never.html)
+- [pointer](https://doc.rust-lang.org/nightly/std/primitive.pointer.html)
+- [reference](https://doc.rust-lang.org/nightly/std/primitive.reference.html)
+- [slice](https://doc.rust-lang.org/nightly/std/primitive.slice.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.st](https://doc.rust-lang.org/nightly/std/primitive.str.html)
+- [tuple](https://doc.rust-lang.org/nightly/std/primitive.tuple.html)
+- [u128](https://doc.rust-lang.org/nightly/std/primitive.u128.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.u1](https://doc.rust-lang.org/nightly/std/primitive.u16.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.u3](https://doc.rust-lang.org/nightly/std/primitive.u32.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.u6](https://doc.rust-lang.org/nightly/std/primitive.u64.html)
+- [https://doc.rust-lang.org/nightly/std/primitive.u8](https://doc.rust-lang.org/nightly/std/primitive.u8.html)
+- [unit](https://doc.rust-lang.org/nightly/std/primitive.unit.html)
+- [usize](https://doc.rust-lang.org/nightly/std/primitive.usize.html)
+- [any::Any](https://doc.rust-lang.org/nightly/std/any/trait.Any.html)
+- [ascii::AsciiExt](https://doc.rust-lang.org/nightly/std/ascii/trait.AsciiExt.html)
+- [borrow::Borrow](https://doc.rust-lang.org/nightly/std/borrow/trait.Borrow.html)
+- [borrow::BorrowMut](https://doc.rust-lang.org/nightly/std/borrow/trait.BorrowMut.html)
+- [borrow::ToOwned](https://doc.rust-lang.org/nightly/std/borrow/trait.ToOwned.html)
+- [boxed::FnBox](https://doc.rust-lang.org/nightly/std/boxed/trait.FnBox.html)
+- [clone::Clone](https://doc.rust-lang.org/nightly/std/clone/trait.Clone.html)
+- [cmp::Eq](https://doc.rust-lang.org/nightly/std/cmp/trait.Eq.html)
+- [cmp::Ord](https://doc.rust-lang.org/nightly/std/cmp/trait.Ord.html)
+- [cmp::PartialEq](https://doc.rust-lang.org/nightly/std/cmp/trait.PartialEq.html)
+- [cmp::PartialOrd](https://doc.rust-lang.org/nightly/std/cmp/trait.PartialOrd.html)
+- [convert::AsMut](https://doc.rust-lang.org/nightly/std/convert/trait.AsMut.html)
+- [convert::AsRef](https://doc.rust-lang.org/nightly/std/convert/trait.AsRef.html)
+- [convert::From](https://doc.rust-lang.org/nightly/std/convert/trait.From.html)
+- [convert::Into](https://doc.rust-lang.org/nightly/std/convert/trait.Into.html)
+- [convert::TryFrom](https://doc.rust-lang.org/nightly/std/convert/trait.TryFrom.html)
+- [convert::TryInto](https://doc.rust-lang.org/nightly/std/convert/trait.TryInto.html)
+- [default::Default](https://doc.rust-lang.org/nightly/std/default/trait.Default.html)
+- [error::Error](https://doc.rust-lang.org/nightly/std/error/trait.Error.html)
+- [fmt::Binary](https://doc.rust-lang.org/nightly/std/fmt/trait.Binary.html)
+- [fmt::Debug](https://doc.rust-lang.org/nightly/std/fmt/trait.Debug.html)
+- [fmt::Display](https://doc.rust-lang.org/nightly/std/fmt/trait.Display.html)
+- [fmt::LowerExp](https://doc.rust-lang.org/nightly/std/fmt/trait.LowerExp.html)
+- [fmt::LowerHex](https://doc.rust-lang.org/nightly/std/fmt/trait.LowerHex.html)
+- [fmt::Octal](https://doc.rust-lang.org/nightly/std/fmt/trait.Octal.html)
+- [fmt::Pointer](https://doc.rust-lang.org/nightly/std/fmt/trait.Pointer.html)
+- [fmt::UpperExp](https://doc.rust-lang.org/nightly/std/fmt/trait.UpperExp.html)
+- [fmt::UpperHex](https://doc.rust-lang.org/nightly/std/fmt/trait.UpperHex.html)
+- [fmt::Write](https://doc.rust-lang.org/nightly/std/fmt/trait.Write.html)
+- [hash::BuildHasher](https://doc.rust-lang.org/nightly/std/hash/trait.BuildHasher.html)
+- [hash::Hash](https://doc.rust-lang.org/nightly/std/hash/trait.Hash.html)
+- [hash::Hasher](https://doc.rust-lang.org/nightly/std/hash/trait.Hasher.html)
+- [io::BufRead](https://doc.rust-lang.org/nightly/std/io/trait.BufRead.html)
+- [io::Read](https://doc.rust-lang.org/nightly/std/io/trait.Read.html)
+- [io::Seek](https://doc.rust-lang.org/nightly/std/io/trait.Seek.html)
+- [io::Write](https://doc.rust-lang.org/nightly/std/io/trait.Write.html)
+- [iter::DoubleEndedIterator](https://doc.rust-lang.org/nightly/std/iter/trait.DoubleEndedIterator.html)
+- [iter::ExactSizeIterator](https://doc.rust-lang.org/nightly/std/iter/trait.ExactSizeIterator.html)
+- [iter::Extend](https://doc.rust-lang.org/nightly/std/iter/trait.Extend.html)
+- [iter::FromIterator](https://doc.rust-lang.org/nightly/std/iter/trait.FromIterator.html)
+- [iter::FusedIterator](https://doc.rust-lang.org/nightly/std/iter/trait.FusedIterator.html)
+- [iter::IntoIterator](https://doc.rust-lang.org/nightly/std/iter/trait.IntoIterator.html)
+- [iter::Iterator](https://doc.rust-lang.org/nightly/std/iter/trait.Iterator.html)
+- [iter::Product](https://doc.rust-lang.org/nightly/std/iter/trait.Product.html)
+- [iter::Step](https://doc.rust-lang.org/nightly/std/iter/trait.Step.html)
+- [iter::Sum](https://doc.rust-lang.org/nightly/std/iter/trait.Sum.html)
+- [iter::TrustedLen](https://doc.rust-lang.org/nightly/std/iter/trait.TrustedLen.html)
+- [marker::Copy](https://doc.rust-lang.org/nightly/std/marker/trait.Copy.html)
+- [marker::Send](https://doc.rust-lang.org/nightly/std/marker/trait.Send.html)
+- [marker::Sized](https://doc.rust-lang.org/nightly/std/marker/trait.Sized.html)
+- [marker::Sync](https://doc.rust-lang.org/nightly/std/marker/trait.Sync.html)
+- [marker::Unpin](https://doc.rust-lang.org/nightly/std/marker/trait.Unpin.html)
+- [marker::Unsize](https://doc.rust-lang.org/nightly/std/marker/trait.Unsize.html)
+- [net::ToSocketAddrs](https://doc.rust-lang.org/nightly/std/net/trait.ToSocketAddrs.html)
+- [ops::Add](https://doc.rust-lang.org/nightly/std/ops/trait.Add.html)
+- [ops::AddAssign](https://doc.rust-lang.org/nightly/std/ops/trait.AddAssign.html)
+- [ops::BitAnd](https://doc.rust-lang.org/nightly/std/ops/trait.BitAnd.html)
+- [ops::BitAndAssign](https://doc.rust-lang.org/nightly/std/ops/trait.BitAndAssign.html)
+- [ops::BitOr](https://doc.rust-lang.org/nightly/std/ops/trait.BitOr.html)
+- [ops::BitOrAssign](https://doc.rust-lang.org/nightly/std/ops/trait.BitOrAssign.html)
+- [ops::BitXor](https://doc.rust-lang.org/nightly/std/ops/trait.BitXor.html)
+- [ops::BitXorAssign](https://doc.rust-lang.org/nightly/std/ops/trait.BitXorAssign.html)
+- [ops::CoerceUnsized](https://doc.rust-lang.org/nightly/std/ops/trait.CoerceUnsized.html)
+- [ops::Deref](https://doc.rust-lang.org/nightly/std/ops/trait.Deref.html)
+- [ops::DerefMut](https://doc.rust-lang.org/nightly/std/ops/trait.DerefMut.html)
+- [ops::Div](https://doc.rust-lang.org/nightly/std/ops/trait.Div.html)
+- [ops::DivAssign](https://doc.rust-lang.org/nightly/std/ops/trait.DivAssign.html)
+- [ops::Drop](https://doc.rust-lang.org/nightly/std/ops/trait.Drop.html)
+- [ops::Fn](https://doc.rust-lang.org/nightly/std/ops/trait.Fn.html)
+- [ops::FnMut](https://doc.rust-lang.org/nightly/std/ops/trait.FnMut.html)
+- [ops::FnOnce](https://doc.rust-lang.org/nightly/std/ops/trait.FnOnce.html)
+- [ops::Generator](https://doc.rust-lang.org/nightly/std/ops/trait.Generator.html)
+- [ops::Index](https://doc.rust-lang.org/nightly/std/ops/trait.Index.html)
+- [ops::IndexMut](https://doc.rust-lang.org/nightly/std/ops/trait.IndexMut.html)
+- [ops::Mul](https://doc.rust-lang.org/nightly/std/ops/trait.Mul.html)
+- [ops::MulAssign](https://doc.rust-lang.org/nightly/std/ops/trait.MulAssign.html)
+- [ops::Neg](https://doc.rust-lang.org/nightly/std/ops/trait.Neg.html)
+- [ops::Not](https://doc.rust-lang.org/nightly/std/ops/trait.Not.html)
+- [ops::RangeBounds](https://doc.rust-lang.org/nightly/std/ops/trait.RangeBounds.html)
+- [ops::Rem](https://doc.rust-lang.org/nightly/std/ops/trait.Rem.html)
+- [ops::RemAssign](https://doc.rust-lang.org/nightly/std/ops/trait.RemAssign.html)
+- [ops::Shl](https://doc.rust-lang.org/nightly/std/ops/trait.Shl.html)
+- [ops::ShlAssign](https://doc.rust-lang.org/nightly/std/ops/trait.ShlAssign.html)
+- [ops::Shr](https://doc.rust-lang.org/nightly/std/ops/trait.Shr.html)
+- [ops::ShrAssign](https://doc.rust-lang.org/nightly/std/ops/trait.ShrAssign.html)
+- [ops::Sub](https://doc.rust-lang.org/nightly/std/ops/trait.Sub.html)
+- [ops::SubAssign](https://doc.rust-lang.org/nightly/std/ops/trait.SubAssign.html)
+- [ops::Try](https://doc.rust-lang.org/nightly/std/ops/trait.Try.html)
+- [os::linux::fs::MetadataExt](https://doc.rust-lang.org/nightly/std/os/linux/fs/trait.MetadataExt.html)
+- [os::unix::ffi::OsStrExt](https://doc.rust-lang.org/nightly/std/os/unix/ffi/trait.OsStrExt.html)
+- [os::unix::ffi::OsStringExt](https://doc.rust-lang.org/nightly/std/os/unix/ffi/trait.OsStringExt.html)
+- [os::unix::fs::DirBuilderExt](https://doc.rust-lang.org/nightly/std/os/unix/fs/trait.DirBuilderExt.html)
+- [os::unix::fs::DirEntryExt](https://doc.rust-lang.org/nightly/std/os/unix/fs/trait.DirEntryExt.html)
+- [os::unix::fs::FileExt](https://doc.rust-lang.org/nightly/std/os/unix/fs/trait.FileExt.html)
+- [os::unix::fs::FileTypeExt](https://doc.rust-lang.org/nightly/std/os/unix/fs/trait.FileTypeExt.html)
+- [os::unix::fs::MetadataExt](https://doc.rust-lang.org/nightly/std/os/unix/fs/trait.MetadataExt.html)
+- [os::unix::fs::OpenOptionsExt](https://doc.rust-lang.org/nightly/std/os/unix/fs/trait.OpenOptionsExt.html)
+- [os::unix::fs::PermissionsExt](https://doc.rust-lang.org/nightly/std/os/unix/fs/trait.PermissionsExt.html)
+- [os::unix::io::AsRawFd](https://doc.rust-lang.org/nightly/std/os/unix/io/trait.AsRawFd.html)
+- [os::unix::io::FromRawFd](https://doc.rust-lang.org/nightly/std/os/unix/io/trait.FromRawFd.html)
+- [os::unix::io::IntoRawFd](https://doc.rust-lang.org/nightly/std/os/unix/io/trait.IntoRawFd.html)
+- [os::unix::process::CommandExt](https://doc.rust-lang.org/nightly/std/os/unix/process/trait.CommandExt.html)
+- [os::unix::process::ExitStatusExt](https://doc.rust-lang.org/nightly/std/os/unix/process/trait.ExitStatusExt.html)
+- [os::unix::thread::JoinHandleExt](https://doc.rust-lang.org/nightly/std/os/unix/thread/trait.JoinHandleExt.html)
+- [os::windows::ffi::OsStrExt](https://doc.rust-lang.org/nightly/std/os/windows/ffi/trait.OsStrExt.html)
+- [os::windows::ffi::OsStringExt](https://doc.rust-lang.org/nightly/std/os/windows/ffi/trait.OsStringExt.html)
+- [os::windows::fs::FileExt](https://doc.rust-lang.org/nightly/std/os/windows/fs/trait.FileExt.html)
+- [os::windows::fs::FileTypeExt](https://doc.rust-lang.org/nightly/std/os/windows/fs/trait.FileTypeExt.html)
+- [os::windows::fs::MetadataExt](https://doc.rust-lang.org/nightly/std/os/windows/fs/trait.MetadataExt.html)
+- [os::windows::fs::OpenOptionsExt](https://doc.rust-lang.org/nightly/std/os/windows/fs/trait.OpenOptionsExt.html)
+- [os::windows::io::AsRawHandle](https://doc.rust-lang.org/nightly/std/os/windows/io/trait.AsRawHandle.html)
+- [os::windows::io::AsRawSocket](https://doc.rust-lang.org/nightly/std/os/windows/io/trait.AsRawSocket.html)
+- [os::windows::io::FromRawHandle](https://doc.rust-lang.org/nightly/std/os/windows/io/trait.FromRawHandle.html)
+- [os::windows::io::FromRawSocket](https://doc.rust-lang.org/nightly/std/os/windows/io/trait.FromRawSocket.html)
+- [os::windows::io::IntoRawHandle](https://doc.rust-lang.org/nightly/std/os/windows/io/trait.IntoRawHandle.html)
+- [os::windows::io::IntoRawSocket](https://doc.rust-lang.org/nightly/std/os/windows/io/trait.IntoRawSocket.html)
+- [os::windows::process::CommandExt](https://doc.rust-lang.org/nightly/std/os/windows/process/trait.CommandExt.html)
+- [os::windows::process::ExitStatusExt](https://doc.rust-lang.org/nightly/std/os/windows/process/trait.ExitStatusExt.html)
+- [panic::RefUnwindSafe](https://doc.rust-lang.org/nightly/std/panic/trait.RefUnwindSafe.html)
+- [panic::UnwindSafe](https://doc.rust-lang.org/nightly/std/panic/trait.UnwindSafe.html)
+- [process::Termination](https://doc.rust-lang.org/nightly/std/process/trait.Termination.html)
+- [simd::FromBits](https://doc.rust-lang.org/nightly/std/simd/trait.FromBits.html)
+- [simd::IntoBits](https://doc.rust-lang.org/nightly/std/simd/trait.IntoBits.html)
+- [slice::SliceConcatExt](https://doc.rust-lang.org/nightly/std/slice/trait.SliceConcatExt.html)
+- [slice::SliceIndex](https://doc.rust-lang.org/nightly/std/slice/trait.SliceIndex.html)
+- [str::FromStr](https://doc.rust-lang.org/nightly/std/str/trait.FromStr.html)
+- [str::pattern::DoubleEndedSearcher](https://doc.rust-lang.org/nightly/std/str/pattern/trait.DoubleEndedSearcher.html)
+- [str::pattern::Pattern](https://doc.rust-lang.org/nightly/std/str/pattern/trait.Pattern.html)
+- [str::pattern::ReverseSearcher](https://doc.rust-lang.org/nightly/std/str/pattern/trait.ReverseSearcher.html)
+- [str::pattern::Searcher](https://doc.rust-lang.org/nightly/std/str/pattern/trait.Searcher.html)
+- [string::ToString](https://doc.rust-lang.org/nightly/std/string/trait.ToString.html)
+- [assert](https://doc.rust-lang.org/nightly/std/macro.assert.html)
+- [assert_eq](https://doc.rust-lang.org/nightly/std/macro.assert_eq.html)
+- [assert_ne](https://doc.rust-lang.org/nightly/std/macro.assert_ne.html)
+- [https://doc.rust-lang.org/nightly/std/macro.cfg.ht](https://doc.rust-lang.org/nightly/std/macro.cfg.html)
+- [column](https://doc.rust-lang.org/nightly/std/macro.column.html)
+- [compile_error](https://doc.rust-lang.org/nightly/std/macro.compile_error.html)
+- [concat](https://doc.rust-lang.org/nightly/std/macro.concat.html)
+- [concat_idents](https://doc.rust-lang.org/nightly/std/macro.concat_idents.html)
+- [debug_assert](https://doc.rust-lang.org/nightly/std/macro.debug_assert.html)
+- [debug_assert_eq](https://doc.rust-lang.org/nightly/std/macro.debug_assert_eq.html)
+- [debug_assert_ne](https://doc.rust-lang.org/nightly/std/macro.debug_assert_ne.html)
+- [https://doc.rust-lang.org/nightly/std/macro.env.ht](https://doc.rust-lang.org/nightly/std/macro.env.html)
+- [eprint](https://doc.rust-lang.org/nightly/std/macro.eprint.html)
+- [eprintln](https://doc.rust-lang.org/nightly/std/macro.eprintln.html)
+- [file](https://doc.rust-lang.org/nightly/std/macro.file.html)
+- [format](https://doc.rust-lang.org/nightly/std/macro.format.html)
+- [format_args](https://doc.rust-lang.org/nightly/std/macro.format_args.html)
+- [include](https://doc.rust-lang.org/nightly/std/macro.include.html)
+- [include_bytes](https://doc.rust-lang.org/nightly/std/macro.include_bytes.html)
+- [include_str](https://doc.rust-lang.org/nightly/std/macro.include_str.html)
+- [is_aarch64_feature_detected](https://doc.rust-lang.org/nightly/std/macro.is_aarch64_feature_detected.html)
+- [is_arm_feature_detected](https://doc.rust-lang.org/nightly/std/macro.is_arm_feature_detected.html)
+- [is_mips64_feature_detected](https://doc.rust-lang.org/nightly/std/macro.is_mips64_feature_detected.html)
+- [is_mips_feature_detected](https://doc.rust-lang.org/nightly/std/macro.is_mips_feature_detected.html)
+- [is_powerpc64_feature_detected](https://doc.rust-lang.org/nightly/std/macro.is_powerpc64_feature_detected.html)
+- [is_x86_feature_detected](https://doc.rust-lang.org/nightly/std/macro.is_x86_feature_detected.html)
+- [line](https://doc.rust-lang.org/nightly/std/macro.line.html)
+- [module_path](https://doc.rust-lang.org/nightly/std/macro.module_path.html)
+- [option_env](https://doc.rust-lang.org/nightly/std/macro.option_env.html)
+- [panic](https://doc.rust-lang.org/nightly/std/macro.panic.html)
+- [print](https://doc.rust-lang.org/nightly/std/macro.print.html)
+- [println](https://doc.rust-lang.org/nightly/std/macro.println.html)
+- [select](https://doc.rust-lang.org/nightly/std/macro.select.html)
+- [stringify](https://doc.rust-lang.org/nightly/std/macro.stringify.html)
+- [thread_local](https://doc.rust-lang.org/nightly/std/macro.thread_local.html)
+- [https://doc.rust-lang.org/nightly/std/macro.try.ht](https://doc.rust-lang.org/nightly/std/macro.try.html)
+- [unimplemented](https://doc.rust-lang.org/nightly/std/macro.unimplemented.html)
+- [unreachable](https://doc.rust-lang.org/nightly/std/macro.unreachable.html)
+- [https://doc.rust-lang.org/nightly/std/macro.vec.ht](https://doc.rust-lang.org/nightly/std/macro.vec.html)
+- [write](https://doc.rust-lang.org/nightly/std/macro.write.html)
+- [writeln](https://doc.rust-lang.org/nightly/std/macro.writeln.html)
+- [alloc::oom](https://doc.rust-lang.org/nightly/std/alloc/fn.oom.html)
+- [ascii::escape_default](https://doc.rust-lang.org/nightly/std/ascii/fn.escape_default.html)
+- [char::decode_utf16](https://doc.rust-lang.org/nightly/std/char/fn.decode_utf16.html)
+- [char::decode_utf8](https://doc.rust-lang.org/nightly/std/char/fn.decode_utf8.html)
+- [char::from_digit](https://doc.rust-lang.org/nightly/std/char/fn.from_digit.html)
+- [char::from_u32](https://doc.rust-lang.org/nightly/std/char/fn.from_u32.html)
+- [char::from_u32_unchecked](https://doc.rust-lang.org/nightly/std/char/fn.from_u32_unchecked.html)
+- [cmp::max](https://doc.rust-lang.org/nightly/std/cmp/fn.max.html)
+- [cmp::min](https://doc.rust-lang.org/nightly/std/cmp/fn.min.html)
+- [env::args](https://doc.rust-lang.org/nightly/std/env/fn.args.html)
+- [env::args_os](https://doc.rust-lang.org/nightly/std/env/fn.args_os.html)
+- [env::current_dir](https://doc.rust-lang.org/nightly/std/env/fn.current_dir.html)
+- [env::current_exe](https://doc.rust-lang.org/nightly/std/env/fn.current_exe.html)
+- [env::home_dir](https://doc.rust-lang.org/nightly/std/env/fn.home_dir.html)
+- [env::join_paths](https://doc.rust-lang.org/nightly/std/env/fn.join_paths.html)
+- [env::remove_var](https://doc.rust-lang.org/nightly/std/env/fn.remove_var.html)
+- [env::set_current_dir](https://doc.rust-lang.org/nightly/std/env/fn.set_current_dir.html)
+- [env::set_var](https://doc.rust-lang.org/nightly/std/env/fn.set_var.html)
+- [env::split_paths](https://doc.rust-lang.org/nightly/std/env/fn.split_paths.html)
+- [env::temp_dir](https://doc.rust-lang.org/nightly/std/env/fn.temp_dir.html)
+- [env::var](https://doc.rust-lang.org/nightly/std/env/fn.var.html)
+- [env::var_os](https://doc.rust-lang.org/nightly/std/env/fn.var_os.html)
+- [env::vars](https://doc.rust-lang.org/nightly/std/env/fn.vars.html)
+- [env::vars_os](https://doc.rust-lang.org/nightly/std/env/fn.vars_os.html)
+- [fmt::format](https://doc.rust-lang.org/nightly/std/fmt/fn.format.html)
+- [fmt::write](https://doc.rust-lang.org/nightly/std/fmt/fn.write.html)
+- [fs::canonicalize](https://doc.rust-lang.org/nightly/std/fs/fn.canonicalize.html)
+- [fs::copy](https://doc.rust-lang.org/nightly/std/fs/fn.copy.html)
+- [fs::create_dir](https://doc.rust-lang.org/nightly/std/fs/fn.create_dir.html)
+- [fs::create_dir_all](https://doc.rust-lang.org/nightly/std/fs/fn.create_dir_all.html)
+- [fs::hard_link](https://doc.rust-lang.org/nightly/std/fs/fn.hard_link.html)
+- [fs::metadata](https://doc.rust-lang.org/nightly/std/fs/fn.metadata.html)
+- [fs::read](https://doc.rust-lang.org/nightly/std/fs/fn.read.html)
+- [fs::read_dir](https://doc.rust-lang.org/nightly/std/fs/fn.read_dir.html)
+- [fs::read_link](https://doc.rust-lang.org/nightly/std/fs/fn.read_link.html)
+- [fs::read_to_string](https://doc.rust-lang.org/nightly/std/fs/fn.read_to_string.html)
+- [fs::remove_dir](https://doc.rust-lang.org/nightly/std/fs/fn.remove_dir.html)
+- [fs::remove_dir_all](https://doc.rust-lang.org/nightly/std/fs/fn.remove_dir_all.html)
+- [fs::remove_file](https://doc.rust-lang.org/nightly/std/fs/fn.remove_file.html)
+- [fs::rename](https://doc.rust-lang.org/nightly/std/fs/fn.rename.html)
+- [fs::set_permissions](https://doc.rust-lang.org/nightly/std/fs/fn.set_permissions.html)
+- [fs::soft_link](https://doc.rust-lang.org/nightly/std/fs/fn.soft_link.html)
+- [fs::symlink_metadata](https://doc.rust-lang.org/nightly/std/fs/fn.symlink_metadata.html)
+- [fs::write](https://doc.rust-lang.org/nightly/std/fs/fn.write.html)
+- [hint::unreachable_unchecked](https://doc.rust-lang.org/nightly/std/hint/fn.unreachable_unchecked.html)
+- [intrinsics::abort](https://doc.rust-lang.org/nightly/std/intrinsics/fn.abort.html)
+- [intrinsics::add_with_overflow](https://doc.rust-lang.org/nightly/std/intrinsics/fn.add_with_overflow.html)
+- [intrinsics::arith_offset](https://doc.rust-lang.org/nightly/std/intrinsics/fn.arith_offset.html)
+- [intrinsics::assume](https://doc.rust-lang.org/nightly/std/intrinsics/fn.assume.html)
+- [intrinsics::atomic_and](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_and.html)
+- [intrinsics::atomic_and_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_and_acq.html)
+- [intrinsics::atomic_and_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_and_acqrel.html)
+- [intrinsics::atomic_and_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_and_rel.html)
+- [intrinsics::atomic_and_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_and_relaxed.html)
+- [intrinsics::atomic_cxchg](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchg.html)
+- [intrinsics::atomic_cxchg_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchg_acq.html)
+- [intrinsics::atomic_cxchg_acq_failrelaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchg_acq_failrelaxed.html)
+- [intrinsics::atomic_cxchg_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchg_acqrel.html)
+- [intrinsics::atomic_cxchg_acqrel_failrelaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchg_acqrel_failrelaxed.html)
+- [intrinsics::atomic_cxchg_failacq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchg_failacq.html)
+- [intrinsics::atomic_cxchg_failrelaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchg_failrelaxed.html)
+- [intrinsics::atomic_cxchg_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchg_rel.html)
+- [intrinsics::atomic_cxchg_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchg_relaxed.html)
+- [intrinsics::atomic_cxchgweak](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchgweak.html)
+- [intrinsics::atomic_cxchgweak_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchgweak_acq.html)
+- [intrinsics::atomic_cxchgweak_acq_failrelaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchgweak_acq_failrelaxed.html)
+- [intrinsics::atomic_cxchgweak_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchgweak_acqrel.html)
+- [intrinsics::atomic_cxchgweak_acqrel_failrelaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchgweak_acqrel_failrelaxed.html)
+- [intrinsics::atomic_cxchgweak_failacq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchgweak_failacq.html)
+- [intrinsics::atomic_cxchgweak_failrelaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchgweak_failrelaxed.html)
+- [intrinsics::atomic_cxchgweak_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchgweak_rel.html)
+- [intrinsics::atomic_cxchgweak_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_cxchgweak_relaxed.html)
+- [intrinsics::atomic_fence](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_fence.html)
+- [intrinsics::atomic_fence_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_fence_acq.html)
+- [intrinsics::atomic_fence_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_fence_acqrel.html)
+- [intrinsics::atomic_fence_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_fence_rel.html)
+- [intrinsics::atomic_load](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_load.html)
+- [intrinsics::atomic_load_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_load_acq.html)
+- [intrinsics::atomic_load_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_load_relaxed.html)
+- [intrinsics::atomic_load_unordered](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_load_unordered.html)
+- [intrinsics::atomic_max](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_max.html)
+- [intrinsics::atomic_max_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_max_acq.html)
+- [intrinsics::atomic_max_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_max_acqrel.html)
+- [intrinsics::atomic_max_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_max_rel.html)
+- [intrinsics::atomic_max_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_max_relaxed.html)
+- [intrinsics::atomic_min](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_min.html)
+- [intrinsics::atomic_min_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_min_acq.html)
+- [intrinsics::atomic_min_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_min_acqrel.html)
+- [intrinsics::atomic_min_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_min_rel.html)
+- [intrinsics::atomic_min_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_min_relaxed.html)
+- [intrinsics::atomic_nand](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_nand.html)
+- [intrinsics::atomic_nand_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_nand_acq.html)
+- [intrinsics::atomic_nand_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_nand_acqrel.html)
+- [intrinsics::atomic_nand_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_nand_rel.html)
+- [intrinsics::atomic_nand_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_nand_relaxed.html)
+- [intrinsics::atomic_or](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_or.html)
+- [intrinsics::atomic_or_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_or_acq.html)
+- [intrinsics::atomic_or_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_or_acqrel.html)
+- [intrinsics::atomic_or_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_or_rel.html)
+- [intrinsics::atomic_or_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_or_relaxed.html)
+- [intrinsics::atomic_singlethreadfence](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_singlethreadfence.html)
+- [intrinsics::atomic_singlethreadfence_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_singlethreadfence_acq.html)
+- [intrinsics::atomic_singlethreadfence_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_singlethreadfence_acqrel.html)
+- [intrinsics::atomic_singlethreadfence_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_singlethreadfence_rel.html)
+- [intrinsics::atomic_store](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_store.html)
+- [intrinsics::atomic_store_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_store_rel.html)
+- [intrinsics::atomic_store_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_store_relaxed.html)
+- [intrinsics::atomic_store_unordered](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_store_unordered.html)
+- [intrinsics::atomic_umax](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umax.html)
+- [intrinsics::atomic_umax_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umax_acq.html)
+- [intrinsics::atomic_umax_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umax_acqrel.html)
+- [intrinsics::atomic_umax_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umax_rel.html)
+- [intrinsics::atomic_umax_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umax_relaxed.html)
+- [intrinsics::atomic_umin](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umin.html)
+- [intrinsics::atomic_umin_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umin_acq.html)
+- [intrinsics::atomic_umin_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umin_acqrel.html)
+- [intrinsics::atomic_umin_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umin_rel.html)
+- [intrinsics::atomic_umin_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_umin_relaxed.html)
+- [intrinsics::atomic_xadd](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xadd.html)
+- [intrinsics::atomic_xadd_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xadd_acq.html)
+- [intrinsics::atomic_xadd_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xadd_acqrel.html)
+- [intrinsics::atomic_xadd_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xadd_rel.html)
+- [intrinsics::atomic_xadd_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xadd_relaxed.html)
+- [intrinsics::atomic_xchg](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xchg.html)
+- [intrinsics::atomic_xchg_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xchg_acq.html)
+- [intrinsics::atomic_xchg_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xchg_acqrel.html)
+- [intrinsics::atomic_xchg_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xchg_rel.html)
+- [intrinsics::atomic_xchg_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xchg_relaxed.html)
+- [intrinsics::atomic_xor](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xor.html)
+- [intrinsics::atomic_xor_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xor_acq.html)
+- [intrinsics::atomic_xor_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xor_acqrel.html)
+- [intrinsics::atomic_xor_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xor_rel.html)
+- [intrinsics::atomic_xor_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xor_relaxed.html)
+- [intrinsics::atomic_xsub](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xsub.html)
+- [intrinsics::atomic_xsub_acq](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xsub_acq.html)
+- [intrinsics::atomic_xsub_acqrel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xsub_acqrel.html)
+- [intrinsics::atomic_xsub_rel](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xsub_rel.html)
+- [intrinsics::atomic_xsub_relaxed](https://doc.rust-lang.org/nightly/std/intrinsics/fn.atomic_xsub_relaxed.html)
+- [intrinsics::bitreverse](https://doc.rust-lang.org/nightly/std/intrinsics/fn.bitreverse.html)
+- [intrinsics::breakpoint](https://doc.rust-lang.org/nightly/std/intrinsics/fn.breakpoint.html)
+- [intrinsics::bswap](https://doc.rust-lang.org/nightly/std/intrinsics/fn.bswap.html)
+- [intrinsics::ceilf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.ceilf32.html)
+- [intrinsics::ceilf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.ceilf64.html)
+- [intrinsics::copy](https://doc.rust-lang.org/nightly/std/intrinsics/fn.copy.html)
+- [intrinsics::copy_nonoverlapping](https://doc.rust-lang.org/nightly/std/intrinsics/fn.copy_nonoverlapping.html)
+- [intrinsics::copysignf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.copysignf32.html)
+- [intrinsics::copysignf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.copysignf64.html)
+- [intrinsics::cosf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.cosf32.html)
+- [intrinsics::cosf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.cosf64.html)
+- [intrinsics::ctlz](https://doc.rust-lang.org/nightly/std/intrinsics/fn.ctlz.html)
+- [intrinsics::ctlz_nonzero](https://doc.rust-lang.org/nightly/std/intrinsics/fn.ctlz_nonzero.html)
+- [intrinsics::ctpop](https://doc.rust-lang.org/nightly/std/intrinsics/fn.ctpop.html)
+- [intrinsics::cttz](https://doc.rust-lang.org/nightly/std/intrinsics/fn.cttz.html)
+- [intrinsics::cttz_nonzero](https://doc.rust-lang.org/nightly/std/intrinsics/fn.cttz_nonzero.html)
+- [intrinsics::discriminant_value](https://doc.rust-lang.org/nightly/std/intrinsics/fn.discriminant_value.html)
+- [intrinsics::drop_in_place](https://doc.rust-lang.org/nightly/std/intrinsics/fn.drop_in_place.html)
+- [intrinsics::exact_div](https://doc.rust-lang.org/nightly/std/intrinsics/fn.exact_div.html)
+- [intrinsics::exp2f32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.exp2f32.html)
+- [intrinsics::exp2f64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.exp2f64.html)
+- [intrinsics::expf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.expf32.html)
+- [intrinsics::expf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.expf64.html)
+- [intrinsics::fabsf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.fabsf32.html)
+- [intrinsics::fabsf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.fabsf64.html)
+- [intrinsics::fadd_fast](https://doc.rust-lang.org/nightly/std/intrinsics/fn.fadd_fast.html)
+- [intrinsics::fdiv_fast](https://doc.rust-lang.org/nightly/std/intrinsics/fn.fdiv_fast.html)
+- [intrinsics::floorf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.floorf32.html)
+- [intrinsics::floorf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.floorf64.html)
+- [intrinsics::fmaf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.fmaf32.html)
+- [intrinsics::fmaf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.fmaf64.html)
+- [intrinsics::fmul_fast](https://doc.rust-lang.org/nightly/std/intrinsics/fn.fmul_fast.html)
+- [intrinsics::frem_fast](https://doc.rust-lang.org/nightly/std/intrinsics/fn.frem_fast.html)
+- [intrinsics::fsub_fast](https://doc.rust-lang.org/nightly/std/intrinsics/fn.fsub_fast.html)
+- [intrinsics::init](https://doc.rust-lang.org/nightly/std/intrinsics/fn.init.html)
+- [intrinsics::likely](https://doc.rust-lang.org/nightly/std/intrinsics/fn.likely.html)
+- [intrinsics::log10f32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.log10f32.html)
+- [intrinsics::log10f64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.log10f64.html)
+- [intrinsics::log2f32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.log2f32.html)
+- [intrinsics::log2f64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.log2f64.html)
+- [intrinsics::logf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.logf32.html)
+- [intrinsics::logf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.logf64.html)
+- [intrinsics::min_align_of](https://doc.rust-lang.org/nightly/std/intrinsics/fn.min_align_of.html)
+- [intrinsics::min_align_of_val](https://doc.rust-lang.org/nightly/std/intrinsics/fn.min_align_of_val.html)
+- [intrinsics::move_val_init](https://doc.rust-lang.org/nightly/std/intrinsics/fn.move_val_init.html)
+- [intrinsics::mul_with_overflow](https://doc.rust-lang.org/nightly/std/intrinsics/fn.mul_with_overflow.html)
+- [intrinsics::nearbyintf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.nearbyintf32.html)
+- [intrinsics::nearbyintf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.nearbyintf64.html)
+- [intrinsics::needs_drop](https://doc.rust-lang.org/nightly/std/intrinsics/fn.needs_drop.html)
+- [intrinsics::nontemporal_store](https://doc.rust-lang.org/nightly/std/intrinsics/fn.nontemporal_store.html)
+- [intrinsics::offset](https://doc.rust-lang.org/nightly/std/intrinsics/fn.offset.html)
+- [intrinsics::overflowing_add](https://doc.rust-lang.org/nightly/std/intrinsics/fn.overflowing_add.html)
+- [intrinsics::overflowing_mul](https://doc.rust-lang.org/nightly/std/intrinsics/fn.overflowing_mul.html)
+- [intrinsics::overflowing_sub](https://doc.rust-lang.org/nightly/std/intrinsics/fn.overflowing_sub.html)
+- [intrinsics::powf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.powf32.html)
+- [intrinsics::powf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.powf64.html)
+- [intrinsics::powif32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.powif32.html)
+- [intrinsics::powif64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.powif64.html)
+- [intrinsics::pref_align_of](https://doc.rust-lang.org/nightly/std/intrinsics/fn.pref_align_of.html)
+- [intrinsics::prefetch_read_data](https://doc.rust-lang.org/nightly/std/intrinsics/fn.prefetch_read_data.html)
+- [intrinsics::prefetch_read_instruction](https://doc.rust-lang.org/nightly/std/intrinsics/fn.prefetch_read_instruction.html)
+- [intrinsics::prefetch_write_data](https://doc.rust-lang.org/nightly/std/intrinsics/fn.prefetch_write_data.html)
+- [intrinsics::prefetch_write_instruction](https://doc.rust-lang.org/nightly/std/intrinsics/fn.prefetch_write_instruction.html)
+- [intrinsics::rintf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.rintf32.html)
+- [intrinsics::rintf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.rintf64.html)
+- [intrinsics::roundf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.roundf32.html)
+- [intrinsics::roundf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.roundf64.html)
+- [intrinsics::rustc_peek](https://doc.rust-lang.org/nightly/std/intrinsics/fn.rustc_peek.html)
+- [intrinsics::sinf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.sinf32.html)
+- [intrinsics::sinf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.sinf64.html)
+- [intrinsics::size_of](https://doc.rust-lang.org/nightly/std/intrinsics/fn.size_of.html)
+- [intrinsics::size_of_val](https://doc.rust-lang.org/nightly/std/intrinsics/fn.size_of_val.html)
+- [intrinsics::sqrtf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.sqrtf32.html)
+- [intrinsics::sqrtf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.sqrtf64.html)
+- [intrinsics::sub_with_overflow](https://doc.rust-lang.org/nightly/std/intrinsics/fn.sub_with_overflow.html)
+- [intrinsics::transmute](https://doc.rust-lang.org/nightly/std/intrinsics/fn.transmute.html)
+- [intrinsics::truncf32](https://doc.rust-lang.org/nightly/std/intrinsics/fn.truncf32.html)
+- [intrinsics::truncf64](https://doc.rust-lang.org/nightly/std/intrinsics/fn.truncf64.html)
+- [intrinsics::try](https://doc.rust-lang.org/nightly/std/intrinsics/fn.try.html)
+- [intrinsics::type_id](https://doc.rust-lang.org/nightly/std/intrinsics/fn.type_id.html)
+- [intrinsics::type_name](https://doc.rust-lang.org/nightly/std/intrinsics/fn.type_name.html)
+- [intrinsics::unchecked_div](https://doc.rust-lang.org/nightly/std/intrinsics/fn.unchecked_div.html)
+- [intrinsics::unchecked_rem](https://doc.rust-lang.org/nightly/std/intrinsics/fn.unchecked_rem.html)
+- [intrinsics::unchecked_shl](https://doc.rust-lang.org/nightly/std/intrinsics/fn.unchecked_shl.html)
+- [intrinsics::unchecked_shr](https://doc.rust-lang.org/nightly/std/intrinsics/fn.unchecked_shr.html)
+- [intrinsics::uninit](https://doc.rust-lang.org/nightly/std/intrinsics/fn.uninit.html)
+- [intrinsics::unlikely](https://doc.rust-lang.org/nightly/std/intrinsics/fn.unlikely.html)
+- [intrinsics::unreachable](https://doc.rust-lang.org/nightly/std/intrinsics/fn.unreachable.html)
+- [intrinsics::volatile_copy_memory](https://doc.rust-lang.org/nightly/std/intrinsics/fn.volatile_copy_memory.html)
+- [intrinsics::volatile_copy_nonoverlapping_memory](https://doc.rust-lang.org/nightly/std/intrinsics/fn.volatile_copy_nonoverlapping_memory.html)
+- [intrinsics::volatile_load](https://doc.rust-lang.org/nightly/std/intrinsics/fn.volatile_load.html)
+- [intrinsics::volatile_set_memory](https://doc.rust-lang.org/nightly/std/intrinsics/fn.volatile_set_memory.html)
+- [intrinsics::volatile_store](https://doc.rust-lang.org/nightly/std/intrinsics/fn.volatile_store.html)
+- [intrinsics::write_bytes](https://doc.rust-lang.org/nightly/std/intrinsics/fn.write_bytes.html)
+- [io::copy](https://doc.rust-lang.org/nightly/std/io/fn.copy.html)
+- [io::empty](https://doc.rust-lang.org/nightly/std/io/fn.empty.html)
+- [io::repeat](https://doc.rust-lang.org/nightly/std/io/fn.repeat.html)
+- [io::sink](https://doc.rust-lang.org/nightly/std/io/fn.sink.html)
+- [io::stderr](https://doc.rust-lang.org/nightly/std/io/fn.stderr.html)
+- [io::stdin](https://doc.rust-lang.org/nightly/std/io/fn.stdin.html)
+- [io::stdout](https://doc.rust-lang.org/nightly/std/io/fn.stdout.html)
+- [iter::empty](https://doc.rust-lang.org/nightly/std/iter/fn.empty.html)
+- [iter::once](https://doc.rust-lang.org/nightly/std/iter/fn.once.html)
+- [iter::repeat](https://doc.rust-lang.org/nightly/std/iter/fn.repeat.html)
+- [iter::repeat_with](https://doc.rust-lang.org/nightly/std/iter/fn.repeat_with.html)
+- [mem::align_of](https://doc.rust-lang.org/nightly/std/mem/fn.align_of.html)
+- [mem::align_of_val](https://doc.rust-lang.org/nightly/std/mem/fn.align_of_val.html)
+- [mem::discriminant](https://doc.rust-lang.org/nightly/std/mem/fn.discriminant.html)
+- [mem::drop](https://doc.rust-lang.org/nightly/std/mem/fn.drop.html)
+- [mem::forget](https://doc.rust-lang.org/nightly/std/mem/fn.forget.html)
+- [mem::min_align_of](https://doc.rust-lang.org/nightly/std/mem/fn.min_align_of.html)
+- [mem::min_align_of_val](https://doc.rust-lang.org/nightly/std/mem/fn.min_align_of_val.html)
+- [mem::needs_drop](https://doc.rust-lang.org/nightly/std/mem/fn.needs_drop.html)
+- [mem::replace](https://doc.rust-lang.org/nightly/std/mem/fn.replace.html)
+- [mem::size_of](https://doc.rust-lang.org/nightly/std/mem/fn.size_of.html)
+- [mem::size_of_val](https://doc.rust-lang.org/nightly/std/mem/fn.size_of_val.html)
+- [mem::swap](https://doc.rust-lang.org/nightly/std/mem/fn.swap.html)
+- [mem::transmute](https://doc.rust-lang.org/nightly/std/mem/fn.transmute.html)
+- [mem::transmute_copy](https://doc.rust-lang.org/nightly/std/mem/fn.transmute_copy.html)
+- [mem::uninitialized](https://doc.rust-lang.org/nightly/std/mem/fn.uninitialized.html)
+- [mem::zeroed](https://doc.rust-lang.org/nightly/std/mem/fn.zeroed.html)
+- [os::unix::fs::symlink](https://doc.rust-lang.org/nightly/std/os/unix/fs/fn.symlink.html)
+- [os::unix::process::parent_id](https://doc.rust-lang.org/nightly/std/os/unix/process/fn.parent_id.html)
+- [os::windows::fs::symlink_dir](https://doc.rust-lang.org/nightly/std/os/windows/fs/fn.symlink_dir.html)
+- [os::windows::fs::symlink_file](https://doc.rust-lang.org/nightly/std/os/windows/fs/fn.symlink_file.html)
+- [panic::catch_unwind](https://doc.rust-lang.org/nightly/std/panic/fn.catch_unwind.html)
+- [panic::resume_unwind](https://doc.rust-lang.org/nightly/std/panic/fn.resume_unwind.html)
+- [panic::set_hook](https://doc.rust-lang.org/nightly/std/panic/fn.set_hook.html)
+- [panic::take_hook](https://doc.rust-lang.org/nightly/std/panic/fn.take_hook.html)
+- [path::is_separator](https://doc.rust-lang.org/nightly/std/path/fn.is_separator.html)
+- [process::abort](https://doc.rust-lang.org/nightly/std/process/fn.abort.html)
+- [process::exit](https://doc.rust-lang.org/nightly/std/process/fn.exit.html)
+- [process::id](https://doc.rust-lang.org/nightly/std/process/fn.id.html)
+- [ptr::copy](https://doc.rust-lang.org/nightly/std/ptr/fn.copy.html)
+- [ptr::copy_nonoverlapping](https://doc.rust-lang.org/nightly/std/ptr/fn.copy_nonoverlapping.html)
+- [ptr::drop_in_place](https://doc.rust-lang.org/nightly/std/ptr/fn.drop_in_place.html)
+- [ptr::eq](https://doc.rust-lang.org/nightly/std/ptr/fn.eq.html)
+- [ptr::null](https://doc.rust-lang.org/nightly/std/ptr/fn.null.html)
+- [ptr::null_mut](https://doc.rust-lang.org/nightly/std/ptr/fn.null_mut.html)
+- [ptr::read](https://doc.rust-lang.org/nightly/std/ptr/fn.read.html)
+- [ptr::read_unaligned](https://doc.rust-lang.org/nightly/std/ptr/fn.read_unaligned.html)
+- [ptr::read_volatile](https://doc.rust-lang.org/nightly/std/ptr/fn.read_volatile.html)
+- [ptr::replace](https://doc.rust-lang.org/nightly/std/ptr/fn.replace.html)
+- [ptr::swap](https://doc.rust-lang.org/nightly/std/ptr/fn.swap.html)
+- [ptr::swap_nonoverlapping](https://doc.rust-lang.org/nightly/std/ptr/fn.swap_nonoverlapping.html)
+- [ptr::write](https://doc.rust-lang.org/nightly/std/ptr/fn.write.html)
+- [ptr::write_bytes](https://doc.rust-lang.org/nightly/std/ptr/fn.write_bytes.html)
+- [ptr::write_unaligned](https://doc.rust-lang.org/nightly/std/ptr/fn.write_unaligned.html)
+- [ptr::write_volatile](https://doc.rust-lang.org/nightly/std/ptr/fn.write_volatile.html)
+- [slice::from_mut](https://doc.rust-lang.org/nightly/std/slice/fn.from_mut.html)
+- [slice::from_raw_parts](https://doc.rust-lang.org/nightly/std/slice/fn.from_raw_parts.html)
+- [slice::from_raw_parts_mut](https://doc.rust-lang.org/nightly/std/slice/fn.from_raw_parts_mut.html)
+- [slice::from_ref](https://doc.rust-lang.org/nightly/std/slice/fn.from_ref.html)
+- [str::from_boxed_utf8_unchecked](https://doc.rust-lang.org/nightly/std/str/fn.from_boxed_utf8_unchecked.html)
+- [str::from_utf8](https://doc.rust-lang.org/nightly/std/str/fn.from_utf8.html)
+- [str::from_utf8_mut](https://doc.rust-lang.org/nightly/std/str/fn.from_utf8_mut.html)
+- [str::from_utf8_unchecked](https://doc.rust-lang.org/nightly/std/str/fn.from_utf8_unchecked.html)
+- [str::from_utf8_unchecked_mut](https://doc.rust-lang.org/nightly/std/str/fn.from_utf8_unchecked_mut.html)
+- [sync::atomic::compiler_fence](https://doc.rust-lang.org/nightly/std/sync/atomic/fn.compiler_fence.html)
+- [sync::atomic::fence](https://doc.rust-lang.org/nightly/std/sync/atomic/fn.fence.html)
+- [sync::atomic::spin_loop_hint](https://doc.rust-lang.org/nightly/std/sync/atomic/fn.spin_loop_hint.html)
+- [sync::mpsc::channel](https://doc.rust-lang.org/nightly/std/sync/mpsc/fn.channel.html)
+- [sync::mpsc::sync_channel](https://doc.rust-lang.org/nightly/std/sync/mpsc/fn.sync_channel.html)
+- [thread::current](https://doc.rust-lang.org/nightly/std/thread/fn.current.html)
+- [thread::panicking](https://doc.rust-lang.org/nightly/std/thread/fn.panicking.html)
+- [thread::park](https://doc.rust-lang.org/nightly/std/thread/fn.park.html)
+- [thread::park_timeout](https://doc.rust-lang.org/nightly/std/thread/fn.park_timeout.html)
+- [thread::park_timeout_ms](https://doc.rust-lang.org/nightly/std/thread/fn.park_timeout_ms.html)
+- [thread::sleep](https://doc.rust-lang.org/nightly/std/thread/fn.sleep.html)
+- [thread::sleep_ms](https://doc.rust-lang.org/nightly/std/thread/fn.sleep_ms.html)
+- [thread::spawn](https://doc.rust-lang.org/nightly/std/thread/fn.spawn.html)
+- [thread::yield_now](https://doc.rust-lang.org/nightly/std/thread/fn.yield_now.html)
+- [alloc::Heap](https://doc.rust-lang.org/nightly/std/alloc/type.Heap.html)
+- [fmt::Result](https://doc.rust-lang.org/nightly/std/fmt/type.Result.html)
+- [io::Result](https://doc.rust-lang.org/nightly/std/io/type.Result.html)
+- [os::linux::raw::blkcnt_t](https://doc.rust-lang.org/nightly/std/os/linux/raw/type.blkcnt_t.html)
+- [os::linux::raw::blksize_t](https://doc.rust-lang.org/nightly/std/os/linux/raw/type.blksize_t.html)
+- [os::linux::raw::dev_t](https://doc.rust-lang.org/nightly/std/os/linux/raw/type.dev_t.html)
+- [os::linux::raw::ino_t](https://doc.rust-lang.org/nightly/std/os/linux/raw/type.ino_t.html)
+- [os::linux::raw::mode_t](https://doc.rust-lang.org/nightly/std/os/linux/raw/type.mode_t.html)
+- [os::linux::raw::nlink_t](https://doc.rust-lang.org/nightly/std/os/linux/raw/type.nlink_t.html)
+- [os::linux::raw::off_t](https://doc.rust-lang.org/nightly/std/os/linux/raw/type.off_t.html)
+- [os::linux::raw::pthread_t](https://doc.rust-lang.org/nightly/std/os/linux/raw/type.pthread_t.html)
+- [os::linux::raw::time_t](https://doc.rust-lang.org/nightly/std/os/linux/raw/type.time_t.html)
+- [os::raw::c_char](https://doc.rust-lang.org/nightly/std/os/raw/type.c_char.html)
+- [os::raw::c_double](https://doc.rust-lang.org/nightly/std/os/raw/type.c_double.html)
+- [os::raw::c_float](https://doc.rust-lang.org/nightly/std/os/raw/type.c_float.html)
+- [os::raw::c_int](https://doc.rust-lang.org/nightly/std/os/raw/type.c_int.html)
+- [os::raw::c_long](https://doc.rust-lang.org/nightly/std/os/raw/type.c_long.html)
+- [os::raw::c_longlong](https://doc.rust-lang.org/nightly/std/os/raw/type.c_longlong.html)
+- [os::raw::c_schar](https://doc.rust-lang.org/nightly/std/os/raw/type.c_schar.html)
+- [os::raw::c_short](https://doc.rust-lang.org/nightly/std/os/raw/type.c_short.html)
+- [os::raw::c_uchar](https://doc.rust-lang.org/nightly/std/os/raw/type.c_uchar.html)
+- [os::raw::c_uint](https://doc.rust-lang.org/nightly/std/os/raw/type.c_uint.html)
+- [os::raw::c_ulong](https://doc.rust-lang.org/nightly/std/os/raw/type.c_ulong.html)
+- [os::raw::c_ulonglong](https://doc.rust-lang.org/nightly/std/os/raw/type.c_ulonglong.html)
+- [os::raw::c_ushort](https://doc.rust-lang.org/nightly/std/os/raw/type.c_ushort.html)
+- [os::unix::io::RawFd](https://doc.rust-lang.org/nightly/std/os/unix/io/type.RawFd.html)
+- [os::unix::raw::blkcnt_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.blkcnt_t.html)
+- [os::unix::raw::blksize_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.blksize_t.html)
+- [os::unix::raw::dev_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.dev_t.html)
+- [os::unix::raw::gid_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.gid_t.html)
+- [os::unix::raw::ino_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.ino_t.html)
+- [os::unix::raw::mode_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.mode_t.html)
+- [os::unix::raw::nlink_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.nlink_t.html)
+- [os::unix::raw::off_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.off_t.html)
+- [os::unix::raw::pid_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.pid_t.html)
+- [os::unix::raw::pthread_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.pthread_t.html)
+- [os::unix::raw::time_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.time_t.html)
+- [os::unix::raw::uid_t](https://doc.rust-lang.org/nightly/std/os/unix/raw/type.uid_t.html)
+- [os::unix::thread::RawPthread](https://doc.rust-lang.org/nightly/std/os/unix/thread/type.RawPthread.html)
+- [os::windows::io::RawHandle](https://doc.rust-lang.org/nightly/std/os/windows/io/type.RawHandle.html)
+- [os::windows::io::RawSocket](https://doc.rust-lang.org/nightly/std/os/windows/io/type.RawSocket.html)
+- [os::windows::raw::HANDLE](https://doc.rust-lang.org/nightly/std/os/windows/raw/type.HANDLE.html)
+- [os::windows::raw::SOCKET](https://doc.rust-lang.org/nightly/std/os/windows/raw/type.SOCKET.html)
+- [sync::LockResult](https://doc.rust-lang.org/nightly/std/sync/type.LockResult.html)
+- [sync::TryLockResult](https://doc.rust-lang.org/nightly/std/sync/type.TryLockResult.html)
+- [thread::Result](https://doc.rust-lang.org/nightly/std/thread/type.Result.html)
+- [char::MAX](https://doc.rust-lang.org/nightly/std/char/constant.MAX.html)
+- [char::REPLACEMENT_CHARACTER](https://doc.rust-lang.org/nightly/std/char/constant.REPLACEMENT_CHARACTER.html)
+- [char::UNICODE_VERSION](https://doc.rust-lang.org/nightly/std/char/constant.UNICODE_VERSION.html)
+- [env::consts::ARCH](https://doc.rust-lang.org/nightly/std/env/consts/constant.ARCH.html)
+- [env::consts::DLL_EXTENSION](https://doc.rust-lang.org/nightly/std/env/consts/constant.DLL_EXTENSION.html)
+- [env::consts::DLL_PREFIX](https://doc.rust-lang.org/nightly/std/env/consts/constant.DLL_PREFIX.html)
+- [env::consts::DLL_SUFFIX](https://doc.rust-lang.org/nightly/std/env/consts/constant.DLL_SUFFIX.html)
+- [env::consts::EXE_EXTENSION](https://doc.rust-lang.org/nightly/std/env/consts/constant.EXE_EXTENSION.html)
+- [env::consts::EXE_SUFFIX](https://doc.rust-lang.org/nightly/std/env/consts/constant.EXE_SUFFIX.html)
+- [env::consts::FAMILY](https://doc.rust-lang.org/nightly/std/env/consts/constant.FAMILY.html)
+- [env::consts::OS](https://doc.rust-lang.org/nightly/std/env/consts/constant.OS.html)
+- [f32::DIGITS](https://doc.rust-lang.org/nightly/std/f32/constant.DIGITS.html)
+- [f32::EPSILON](https://doc.rust-lang.org/nightly/std/f32/constant.EPSILON.html)
+- [f32::INFINITY](https://doc.rust-lang.org/nightly/std/f32/constant.INFINITY.html)
+- [f32::MANTISSA_DIGITS](https://doc.rust-lang.org/nightly/std/f32/constant.MANTISSA_DIGITS.html)
+- [f32::MAX](https://doc.rust-lang.org/nightly/std/f32/constant.MAX.html)
+- [f32::MAX_10_EXP](https://doc.rust-lang.org/nightly/std/f32/constant.MAX_10_EXP.html)
+- [f32::MAX_EXP](https://doc.rust-lang.org/nightly/std/f32/constant.MAX_EXP.html)
+- [f32::MIN](https://doc.rust-lang.org/nightly/std/f32/constant.MIN.html)
+- [f32::MIN_10_EXP](https://doc.rust-lang.org/nightly/std/f32/constant.MIN_10_EXP.html)
+- [f32::MIN_EXP](https://doc.rust-lang.org/nightly/std/f32/constant.MIN_EXP.html)
+- [f32::MIN_POSITIVE](https://doc.rust-lang.org/nightly/std/f32/constant.MIN_POSITIVE.html)
+- [f32::NAN](https://doc.rust-lang.org/nightly/std/f32/constant.NAN.html)
+- [f32::NEG_INFINITY](https://doc.rust-lang.org/nightly/std/f32/constant.NEG_INFINITY.html)
+- [f32::RADIX](https://doc.rust-lang.org/nightly/std/f32/constant.RADIX.html)
+- [f32::consts::E](https://doc.rust-lang.org/nightly/std/f32/consts/constant.E.html)
+- [f32::consts::FRAC_1_PI](https://doc.rust-lang.org/nightly/std/f32/consts/constant.FRAC_1_PI.html)
+- [f32::consts::FRAC_1_SQRT_2](https://doc.rust-lang.org/nightly/std/f32/consts/constant.FRAC_1_SQRT_2.html)
+- [f32::consts::FRAC_2_PI](https://doc.rust-lang.org/nightly/std/f32/consts/constant.FRAC_2_PI.html)
+- [f32::consts::FRAC_2_SQRT_PI](https://doc.rust-lang.org/nightly/std/f32/consts/constant.FRAC_2_SQRT_PI.html)
+- [f32::consts::FRAC_PI_2](https://doc.rust-lang.org/nightly/std/f32/consts/constant.FRAC_PI_2.html)
+- [f32::consts::FRAC_PI_3](https://doc.rust-lang.org/nightly/std/f32/consts/constant.FRAC_PI_3.html)
+- [f32::consts::FRAC_PI_4](https://doc.rust-lang.org/nightly/std/f32/consts/constant.FRAC_PI_4.html)
+- [f32::consts::FRAC_PI_6](https://doc.rust-lang.org/nightly/std/f32/consts/constant.FRAC_PI_6.html)
+- [f32::consts::FRAC_PI_8](https://doc.rust-lang.org/nightly/std/f32/consts/constant.FRAC_PI_8.html)
+- [f32::consts::LN_10](https://doc.rust-lang.org/nightly/std/f32/consts/constant.LN_10.html)
+- [f32::consts::LN_2](https://doc.rust-lang.org/nightly/std/f32/consts/constant.LN_2.html)
+- [f32::consts::LOG10_2](https://doc.rust-lang.org/nightly/std/f32/consts/constant.LOG10_2.html)
+- [f32::consts::LOG10_E](https://doc.rust-lang.org/nightly/std/f32/consts/constant.LOG10_E.html)
+- [f32::consts::LOG2_10](https://doc.rust-lang.org/nightly/std/f32/consts/constant.LOG2_10.html)
+- [f32::consts::LOG2_E](https://doc.rust-lang.org/nightly/std/f32/consts/constant.LOG2_E.html)
+- [f32::consts::PI](https://doc.rust-lang.org/nightly/std/f32/consts/constant.PI.html)
+- [f32::consts::SQRT_2](https://doc.rust-lang.org/nightly/std/f32/consts/constant.SQRT_2.html)
+- [f64::DIGITS](https://doc.rust-lang.org/nightly/std/f64/constant.DIGITS.html)
+- [f64::EPSILON](https://doc.rust-lang.org/nightly/std/f64/constant.EPSILON.html)
+- [f64::INFINITY](https://doc.rust-lang.org/nightly/std/f64/constant.INFINITY.html)
+- [f64::MANTISSA_DIGITS](https://doc.rust-lang.org/nightly/std/f64/constant.MANTISSA_DIGITS.html)
+- [f64::MAX](https://doc.rust-lang.org/nightly/std/f64/constant.MAX.html)
+- [f64::MAX_10_EXP](https://doc.rust-lang.org/nightly/std/f64/constant.MAX_10_EXP.html)
+- [f64::MAX_EXP](https://doc.rust-lang.org/nightly/std/f64/constant.MAX_EXP.html)
+- [f64::MIN](https://doc.rust-lang.org/nightly/std/f64/constant.MIN.html)
+- [f64::MIN_10_EXP](https://doc.rust-lang.org/nightly/std/f64/constant.MIN_10_EXP.html)
+- [f64::MIN_EXP](https://doc.rust-lang.org/nightly/std/f64/constant.MIN_EXP.html)
+- [f64::MIN_POSITIVE](https://doc.rust-lang.org/nightly/std/f64/constant.MIN_POSITIVE.html)
+- [f64::NAN](https://doc.rust-lang.org/nightly/std/f64/constant.NAN.html)
+- [f64::NEG_INFINITY](https://doc.rust-lang.org/nightly/std/f64/constant.NEG_INFINITY.html)
+- [f64::RADIX](https://doc.rust-lang.org/nightly/std/f64/constant.RADIX.html)
+- [f64::consts::E](https://doc.rust-lang.org/nightly/std/f64/consts/constant.E.html)
+- [f64::consts::FRAC_1_PI](https://doc.rust-lang.org/nightly/std/f64/consts/constant.FRAC_1_PI.html)
+- [f64::consts::FRAC_1_SQRT_2](https://doc.rust-lang.org/nightly/std/f64/consts/constant.FRAC_1_SQRT_2.html)
+- [f64::consts::FRAC_2_PI](https://doc.rust-lang.org/nightly/std/f64/consts/constant.FRAC_2_PI.html)
+- [f64::consts::FRAC_2_SQRT_PI](https://doc.rust-lang.org/nightly/std/f64/consts/constant.FRAC_2_SQRT_PI.html)
+- [f64::consts::FRAC_PI_2](https://doc.rust-lang.org/nightly/std/f64/consts/constant.FRAC_PI_2.html)
+- [f64::consts::FRAC_PI_3](https://doc.rust-lang.org/nightly/std/f64/consts/constant.FRAC_PI_3.html)
+- [f64::consts::FRAC_PI_4](https://doc.rust-lang.org/nightly/std/f64/consts/constant.FRAC_PI_4.html)
+- [f64::consts::FRAC_PI_6](https://doc.rust-lang.org/nightly/std/f64/consts/constant.FRAC_PI_6.html)
+- [f64::consts::FRAC_PI_8](https://doc.rust-lang.org/nightly/std/f64/consts/constant.FRAC_PI_8.html)
+- [f64::consts::LN_10](https://doc.rust-lang.org/nightly/std/f64/consts/constant.LN_10.html)
+- [f64::consts::LN_2](https://doc.rust-lang.org/nightly/std/f64/consts/constant.LN_2.html)
+- [f64::consts::LOG10_2](https://doc.rust-lang.org/nightly/std/f64/consts/constant.LOG10_2.html)
+- [f64::consts::LOG10_E](https://doc.rust-lang.org/nightly/std/f64/consts/constant.LOG10_E.html)
+- [f64::consts::LOG2_10](https://doc.rust-lang.org/nightly/std/f64/consts/constant.LOG2_10.html)
+- [f64::consts::LOG2_E](https://doc.rust-lang.org/nightly/std/f64/consts/constant.LOG2_E.html)
+- [f64::consts::PI](https://doc.rust-lang.org/nightly/std/f64/consts/constant.PI.html)
+- [f64::consts::SQRT_2](https://doc.rust-lang.org/nightly/std/f64/consts/constant.SQRT_2.html)
+- [i128::MAX](https://doc.rust-lang.org/nightly/std/i128/constant.MAX.html)
+- [i128::MIN](https://doc.rust-lang.org/nightly/std/i128/constant.MIN.html)
+- [i16::MAX](https://doc.rust-lang.org/nightly/std/i16/constant.MAX.html)
+- [i16::MIN](https://doc.rust-lang.org/nightly/std/i16/constant.MIN.html)
+- [i32::MAX](https://doc.rust-lang.org/nightly/std/i32/constant.MAX.html)
+- [i32::MIN](https://doc.rust-lang.org/nightly/std/i32/constant.MIN.html)
+- [i64::MAX](https://doc.rust-lang.org/nightly/std/i64/constant.MAX.html)
+- [i64::MIN](https://doc.rust-lang.org/nightly/std/i64/constant.MIN.html)
+- [i8::MAX](https://doc.rust-lang.org/nightly/std/i8/constant.MAX.html)
+- [i8::MIN](https://doc.rust-lang.org/nightly/std/i8/constant.MIN.html)
+- [isize::MAX](https://doc.rust-lang.org/nightly/std/isize/constant.MAX.html)
+- [isize::MIN](https://doc.rust-lang.org/nightly/std/isize/constant.MIN.html)
+- [path::MAIN_SEPARATOR](https://doc.rust-lang.org/nightly/std/path/constant.MAIN_SEPARATOR.html)
+- [sync::ONCE_INIT](https://doc.rust-lang.org/nightly/std/sync/constant.ONCE_INIT.html)
+- [sync::atomic::ATOMIC_BOOL_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_BOOL_INIT.html)
+- [sync::atomic::ATOMIC_I16_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_I16_INIT.html)
+- [sync::atomic::ATOMIC_I32_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_I32_INIT.html)
+- [sync::atomic::ATOMIC_I64_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_I64_INIT.html)
+- [sync::atomic::ATOMIC_I8_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_I8_INIT.html)
+- [sync::atomic::ATOMIC_ISIZE_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_ISIZE_INIT.html)
+- [sync::atomic::ATOMIC_U16_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_U16_INIT.html)
+- [sync::atomic::ATOMIC_U32_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_U32_INIT.html)
+- [sync::atomic::ATOMIC_U64_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_U64_INIT.html)
+- [sync::atomic::ATOMIC_U8_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_U8_INIT.html)
+- [sync::atomic::ATOMIC_USIZE_INIT](https://doc.rust-lang.org/nightly/std/sync/atomic/constant.ATOMIC_USIZE_INIT.html)
+- [time::UNIX_EPOCH](https://doc.rust-lang.org/nightly/std/time/constant.UNIX_EPOCH.html)
+- [u128::MAX](https://doc.rust-lang.org/nightly/std/u128/constant.MAX.html)
+- [u128::MIN](https://doc.rust-lang.org/nightly/std/u128/constant.MIN.html)
+- [u16::MAX](https://doc.rust-lang.org/nightly/std/u16/constant.MAX.html)
+- [u16::MIN](https://doc.rust-lang.org/nightly/std/u16/constant.MIN.html)
+- [u32::MAX](https://doc.rust-lang.org/nightly/std/u32/constant.MAX.html)
+- [u32::MIN](https://doc.rust-lang.org/nightly/std/u32/constant.MIN.html)
+- [u64::MAX](https://doc.rust-lang.org/nightly/std/u64/constant.MAX.html)
+- [u64::MIN](https://doc.rust-lang.org/nightly/std/u64/constant.MIN.html)
+- [u8::MAX](https://doc.rust-lang.org/nightly/std/u8/constant.MAX.html)
+- [u8::MIN](https://doc.rust-lang.org/nightly/std/u8/constant.MIN.html)
+- [usize::MAX](https://doc.rust-lang.org/nightly/std/usize/constant.MAX.html)
+- [usize::MIN](https://doc.rust-lang.org/nightly/std/usize/constant.MIN.html)

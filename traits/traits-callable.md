@@ -1,4 +1,4 @@
-# `Fn` traits
+# Function related traits 
 
 `FnOnce`,`FnMut`,`Fn` 
 traits are implemented by types that can be invoked like fn.

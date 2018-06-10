@@ -2,10 +2,10 @@
 
 
 
-- [Identifier](pages/declaration.md)
-- [Declaration](pages/declaration.md)
-- [Definition](pages/declaration.md)
-- [Forward declaration](pages/declaration.md)
+- [Identifier](../pages/declaration.md)
+- [Declaration](../pages/declaration.md)
+- [Definition](../pages/declaration.md)
+- [Forward declaration](../pages/declaration.md)
 
 
 

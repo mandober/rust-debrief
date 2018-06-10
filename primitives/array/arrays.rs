@@ -28,3 +28,18 @@ fn main() {
 let mut x = [[[[23; 4]; 6]; 8]; 15];
 x[14][7][5][3] = 56;
 print!("{}, {}", x[0][0][0][0], x[14][7][5][3]); // 23, 56
+
+
+
+
+// A stack-allocated array
+let array: [i32; 3] = [1, 2, 3];
+
+// A heap-allocated array...
+let boxed_array = Box::new([1, 2, 3]);
+
+// ...coerced to a slice
+let boxed_slice: Box<[i32]> = boxed_array;
+
+// A shared slice into an array
+let shared_slice: &[i32] = &boxed_slice[..];

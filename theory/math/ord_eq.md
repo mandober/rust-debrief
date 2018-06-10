@@ -1,4 +1,4 @@
-# Binary rel
+# Binary relations
 
 - https://doc.rust-lang.org/std/cmp/trait.Eq.html
 - https://doc.rust-lang.org/std/cmp/trait.PartialEq.html
@@ -99,7 +99,7 @@ pub trait PartialEq<Rhs = Self> where Rhs: ?Sized {
 
 - `Ord` requires that the type also be `PartialOrd` and `Eq`   
   (and `Eq` requires `PartialEq`).
-- Trait for types that form a [total order](www.wikipedia.com/en/Total_order)
+- Trait for types that form a total orderhttps://www.wikipedia.com/en/Total_order
 - This trait can be used with `#[derive]`. When derived on structs, it will 
   produce a lexicographic ordering based on the top-to-bottom declaration order 
   of the struct's members. When derived on enums, variants are ordered by their 

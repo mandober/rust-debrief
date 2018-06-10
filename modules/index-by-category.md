@@ -7,7 +7,7 @@
 - `char`    character type
 - `collections` collection types
 - `error`   working with Errors
-- [`option`](option/option.md) optional values
+- [`option`](option/README.md) optional values
 - `ptr`     raw pointers
 - `rc`      single-threaded reference-counting pointers
 - [`result`](result/result.md) error handling
@@ -50,7 +50,7 @@
 - `intrinsics` compiler intrinsics. **LAB**
 - [`mem`](mem/mem.md) working with memory
 - `panic`   panic support
-- [`prelude`](prelude.md) prelude v1
+- [`prelude`](prelude/prelude.md) prelude v1
 - `raw`     compiler built-ins. **LAB**
 
 

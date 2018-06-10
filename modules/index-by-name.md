@@ -37,12 +37,12 @@ any, arch, ascii, borrow, boxed, cell, char, clone, cmp, collections, convert, d
 1. [`mem`](mem/mem.md) working with memory
 1. `net`     networking
 1. `num`     additional functionality for numerics
-1. [`option`](option/option.md) optional values
+1. [`option`](option/README.md) optional values
 1. `ops`     overloadable operators
 1. `os`      OS specific functionality
 1. `panic`   panic support
 1. `path`    cross-platform path manipulation
-1. [`prelude`](prelude.md) prelude v1
+1. [`prelude`](prelude/prelude.md) prelude v1
 1. `process` working with processes
 1. `ptr`     raw pointers
 1. `raw`     compiler built-ins. **LAB**

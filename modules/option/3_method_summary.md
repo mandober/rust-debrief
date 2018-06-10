@@ -110,6 +110,12 @@ Comparison
 Unless otherwise noted, methods are on `impl<T> Option<T>`
 
 ```rust
+
+impl<T> Option<T> {
+  
+}
+
+
 // get variant. identify inner value
 fn is_some(&self) -> bool;
 fn is_none(&self) -> bool;
