@@ -59,3 +59,6 @@ Rust's type constructors: `struct`, `union`, `enum`
 
 ## ZST
 Zero-sized type
+
+## HRTB
+Higher-ranked trait bound

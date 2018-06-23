@@ -14,6 +14,20 @@ The keyword `pub` is the only (at the moment) visibility qualifier which makes a
 There is no "private" modifier keyword active in Rust now, although the keyword `priv` is reserved.
 
 
+## Visibility restrictions
+
+- `pub(crate)`: visible only on the current crate
+- `pub(super)`: visible only in the current module's parent
+- `pub(in path::to::module)`: visible only on the specified path, e.g.:
+  `pub(in r#dll_ci::list)` visible only in module
+
+Make this visible only to module `r#mod` with `in`: `pub(in r#mod)`
+add `#![feature(raw_identifiers)]` to the crate attributes to enable them so
+you can use current module's raw identifier: `pub(in r#dll_ci::list)`
+
+
+
+
 The `pub` can be used on:
 - modules
 - functions

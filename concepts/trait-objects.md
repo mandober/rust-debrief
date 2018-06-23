@@ -1,6 +1,87 @@
 # Trait object
 
-Trait object is a trait behind some sort of pointer, like reference or Box<T>.
+- a trait object is a trait behind abstraction pointer (ref, box).
+
+
+
+
+A trait object is an *opaque* value of another type that implements a set of traits. The set of traits is made up of an object save base trait plus any number of auto traits.
+
+Trait objects implement the base trait, its auto traits, and any super traits of the base trait.
+
+Trait objects are written as the optional keyword `dyn` followed by a set of trait bounds, with restrictions on the trait bounds:
+- all traits, except the first trait, must be auto traits
+- there may not be more than one lifetime
+- opt-out bounds (e.g. `?Sized`) are not allowed
+- paths to traits may be parenthesized
+
+
+For example, given a trait `Trait`, the following are all trait objects:
+
+```rust
+Trait
+dyn Trait
+dyn Trait + Send
+dyn Trait + Send + Sync
+dyn Trait + 'static
+dyn Trait + Send + 'static
+dyn Trait +
+dyn 'static + Trait.
+dyn (Trait)
+```
+
+If the first bound of the trait object is a path that starts with `::`, then the `dyn` will be treated as a part of the path. The first path can be put in parenthesis to get around this. So, if you want a trait object with the trait `::your_module::Trait`, you should write it as `dyn (::your_module::Trait)`.
+
+Note: For clarity, it is recommended to always use the `dyn` keyword on your trait objects unless your codebase supports compiling with Rust 1.26 or lower.
+
+Two trait object types alias each other if the base traits alias each other and if the sets of auto traits are the same and the lifetime bounds are the same. For example, `dyn Trait + Send + UnwindSafe` is the same as `dyn Trait + Unwindsafe + Send`.
+
+WARNING: With two trait object types, even when the complete set of traits is the same, if the base traits differ, the type is different. For example, `dyn Send + Sync` is a different type from `dyn Sync + Send`(see issue 33140).
+
+WARNING: Including the same auto trait multiple times is allowed, and each instance is considered a unique type. As such, `dyn Trait + Send` is a distinct type to `dyn Trait + Send + Send` (See issue 47010).
+
+Due to the opaqueness of which concrete type the value is of, trait objects are dynamically sized types. Like all DSTs, trait objects are used behind some ptr; for example `&dyn SomeTrait` or `Box<dyn SomeTrait>`. 
+
+Each instance of a pointer to a trait object includes:
+- a pointer to an instance of a type `T` that implements `SomeTrait`
+- a virtual method table, often just called a _vtable_, which contains, for each method of `SomeTrait` that `T` implements, a pointer to `T`'s implementation (i.e. a function pointer).
+
+The purpose of trait objects is to permit _late binding_ of methods. Calling a method on a trait object results in virtual dispatch at runtime: that is, a function pointer is loaded from the trait object vtable and invoked indirectly. The actual implementation for each vtable entry can vary on an object-by-object basis.
+
+
+An example of a trait object:
+
+```rust
+
+trait Printable {
+    fn stringify(&self) -> String;
+}
+
+impl Printable for i32 {
+    fn stringify(&self) -> String { self.to_string() }
+}
+
+fn print(a: Box<dyn Printable>) {
+    println!("{}", a.stringify());
+}
+
+fn main() {
+    print(Box::new(10) as Box<dyn Printable>);
+}
+```
+
+In this example, the trait `Printable` occurs as a trait object in both the type signature of print, and the cast expression in main.
+
+
+## Trait Object Lifetime Bounds
+Since a trait object can contain references, the lifetimes of those references need to be expressed as part of the trait object. This lifetime is written as `Trait + 'a`. There are defaults that allow this lifetime to usually be inferred with a sensible choice.
+
+
+
+
+
+
+---
 
 Trait object is dynamically sized type that implements some trait. The original type is *erased* in favor of runtime reflection, with a *vtable* containing all the information necessary to use the type. The information that "completes" a trait object (trait object is a fat pointer) is a *pointer to its vtable*.
 
