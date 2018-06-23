@@ -5,26 +5,19 @@ Rust by bullet point: from summary to particularity
 - [GitHub](https://github.com/mandober/rust-debrief)
 - [GitBooks](https://mandober.gitbooks.io/rust-debrief)
 
-Rust: the digested and the detailed. Notes, lists, references, indices, tables, cheat-sheets and other by-products of my Rust accretion primarily through official channels: both versions of the Book, Reference, Rustonomicon, Unstable Book, Rust by Example, The Cookbook, Internals Forum, The Grammar, The Style guide, The Cargo Book, User Forum, The Official Blog, The Error Index, RFCs, FAQ, as well as from many other places I encounter while studying Rust. Noting things down, classifying, indexing... distilling while instilling.
+Hoarding Rust: notes, tips, listings, indices, maps, references, cheat-sheets and other by-products of my Rust accretion, gathered mostly by rummaging through official resources (API reference, the old and new Book, Rust Reference, The Rustonomicon, The Unstable Book, Rust by Example, The Rust Cookbook, Internals and User Forum, The Grammar, The Style guide, The Cargo Book, Rust official blog, The API Guidelines, The Error Index, RFCs, the FAQ, The Compiler Guide), but also from many other encountered resources.
 
-Project:
+project
 - lang: Rust
-- title: Rust Debrief
-- subtitle: Rust by bullet point: from summary to particularity
-- desc: Taking notes while learning Rust.
+- tagline: Rust by bullet point: from summary to particularity
+- desc: Hoarding Rust info
+- stage: raw
 - GitHub: https://github.com/mandober/rust-debrief
 - GitBooks: https://mandober.gitbooks.io/rust-debrief
-- slug: rust-debrief
-- author: Ilic Ivan
-- date: 2017/18 (`'my`)
-- notes: WIP
 
-```rust
-impl<T> Debriefing for Topic<T> where T: Rust {
-  fn debriefing(&self) -> Summary;
-}
+about
+Trying to get a better grasp on the huge Rust universe (and beyond, towards CS in general), preferably linearly, in increasing complexity, and an overview to help get a sense of what is available, where is it located and how it all fits together. Raw project stage.
 
-impl<T> Details for Topic<T> where T: Rust {
-  fn details(&self) -> Particularity;
-}
-```
+research
+- collapsible mind-map of all std items, organized per module
+- supercrate re-exporting the established crates ("std-extras", mimicking and complementing std paths)

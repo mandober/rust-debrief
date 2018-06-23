@@ -39,7 +39,7 @@
 - [Never](primitives/never/never.md)
 
 ## Types
-- Classification](types/type-groups.md)
+- Classification
 - [Annotation](types/type-annotation.md)
 - [Top](types/type_top.md)
 
@@ -66,7 +66,7 @@
 
 ## Macros
 - [Macros](macros/macro.md)
-- [Declerative macros](macros/macro-declerative.md)
+- [Declarative macros](macros/macro-declerative.md)
 - [Procedural macros](macros/macro-procedural.md)
 - [Index of std macros](macros/macro-index.md)
 
