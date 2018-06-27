@@ -8,8 +8,8 @@
 
 
 ## Theory
-- [Type Systems](theory/type-theory/type-systems.md)
-- [Data Types](theory/type-theory/data-types.md)
+- [Type Systems](theory/type-systems/type-systems.md)
+- [Data Types](theory/types/data-types.md)
 - [Binary relations](theory/math/binary-relations.md)
 
 ## Syntax
@@ -28,7 +28,7 @@
 
 
 ## Concepts
-- [Lifetimes](concepts/lifetimes/1_lifetimes.md)
+- [Lifetimes](concepts/lifetimes/lifetimes.md)
 - [Visibility](concepts/visibility.md)
 - [Iterators](concepts/iterators.md)
 

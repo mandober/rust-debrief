@@ -1,10 +1,8 @@
-# Type groups
-
-Classification of types with regard to their common characteristics.
+# Rust Types: Classification
 
 <!-- TOC -->
 
-- [Nominal vs structural](#nominal-vs-structural)
+- [Nominal vs structural types](#nominal-vs-structural-types)
 - [Primitives vs library types](#primitives-vs-library-types)
 - [Scalar types](#scalar-types)
 - [Compound types](#compound-types)
@@ -20,8 +18,13 @@ Classification of types with regard to their common characteristics.
 
 <!-- /TOC -->
 
-## Nominal vs structural
-A type is nominal when it has a formal type name that is used in type annotations (e.g. `bool`, `u8`, `char`). Nominal types often also have additional, colloquial, names (e.g. boolean, character, string slice).
+## Nominal vs structural types
+
+A nominal type system means that the language decides whether types are compatible and/or equivalent based on explicit declarations and names.
+
+A structural type system means that the language decides whether types are compatible and/or equivalent based on the definition and characteristics of the types.
+
+A type is nominal if it has a formal type name that is used in type annotations (e.g. `bool`, `String`, `char`). Nominal types often also have additional, colloquial, names (e.g. boolean, character, string slice).
 
 A type is structural if it doesn't have a formal type name, but is identifiable by its structure. Naturally, structural types always have colloquial names, so we can talk about array, tuple, references, raw pointers, function pointer, slice, unit, and never type.
 

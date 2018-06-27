@@ -10,15 +10,19 @@
   lifetime, which is the scope for which it is valid.
 - The same ref with different GLAs are distinct from each other.
 - `'static` is max lifetime, valid throughout the entire program.
+- __outlives__: some lifetime lives at least as long as another (or self)
 - Lifetime Elision Rules (LER):
   1. Each param of ref type gets its own distinct GLP
   2. If there's 1 input GLP, that GLA is set to all output GLPs
   3. In methods, with 2+ input GLP, GLA of `self` is set to all output GLPs
 
 
+
 <!-- TOC -->
 
 - [Debrief](#debrief)
+- [Lifetimes as bounds](#lifetimes-as-bounds)
+- [Outlives relation](#outlives-relation)
 - [Lifetimes](#lifetimes)
 - [Lifetime Elision Rules (LER)](#lifetime-elision-rules-ler)
 - [The static lifetime](#the-static-lifetime)
@@ -27,6 +31,41 @@
 - [Syntax](#syntax)
 
 <!-- /TOC -->
+
+
+
+## Lifetimes as bounds
+
+Just like generic types can be bounded so can lifetimes.  
+The bound symbol, `:`, has a slightly different meaning. 
+
+This reads as:
+- `T: 'a` all references in `T` must outlive lifetime `'a`.
+- `T: Trait + 'a` type `T` must implement trait `Trait` and all references in `T` must outlive lifetime `'a`.
+
+
+```rust
+struct Items<'a, T:'a> {
+  v: &'a Collection<T>
+}
+```
+
+Here, the constraint T:'a indicates that the data being iterated over must live at least as long as the collection (logically enough).
+
+
+## Outlives relation
+
+The "outlives" relation between two lifetimes, `'a` and `'b`, is written as
+`'a, 'b: 'a`. Here, lifetime `'b` outlives the lifetime `'a`.
+
+In fact, __"outlives"__ means that some lifetime lives __at least as long__ as some other lifetime (but possibly longer).
+
+> Outlives is "longer then or equal" relation: `'a: 'a`.
+> It is similar to "greater then or equal" relation: `a >= a`.
+
+Because of the "or equal" part in this "greater then or equal" relation, it can be said that every lifetime outlives itself: for any lifetime `'a`, `'a` outlives `'a` i.e. any lifetime "outlives" itself. 
+This is also similar to how it is said that every type is a subtype of itself.
+
 
 
 ## Lifetimes

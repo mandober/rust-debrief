@@ -1,4 +1,5 @@
 # Type systems
+https://www.wikiwand.com/en/Comparison_of_programming_languages_by_type_system
 
 At the lowest level, **data** is just a stream of bits without inherent structure, open to arbitrary interpretation. For example, in an unconstrained access to data, a bit pattern representing an integer can be reinterpreted as it were representing a character.
 
