@@ -107,7 +107,7 @@ design should retain this functionality.
 # Detailed design
 
 Note: this design is influenced by the
-[Boost filesystem library](www.boost.org/doc/libs/1_57_0/libs/filesystem/doc/reference.html)
+Boost filesystem library](www.boost.org/doc/libs/1_57_0/libs/filesystem/doc/reference.html)
 and [Scheme48](http://s48.org/1.8/manual/manual-Z-H-6.html#node_sec_5.15) and
 [Racket's](http://plt.eecs.northwestern.edu/snapshots/current/doc/reference/windowspaths.html#%28part._windowspathrep%29)
 approach to encoding issues on windows.

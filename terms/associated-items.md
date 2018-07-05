@@ -1,11 +1,37 @@
 # Associated items
 
-Associated items:
-- Associated types
-- Associated functions
-- Associated lifetimes
-- Associated constants
+- associated items are items declared in traits and defined in impls
+- assoc. items can have default values, overridable in impl
 
+
+
+
+Associated items are declared within and along with a trait. Declared items may contain optional (default) definition. These declarations together make up the contract that implementors must respect.
+
+
+The implementing type must define items that were only declared, it may override items containing default definition. Overriding default definition with an identical one will triger a linting error about futility of such maneuvre.
+
+Associated items:
+- Associated functions ("static" functions)
+- Associated types
+- Associated constants
+- Associated lifetimes (?)
+
+
+An associated item can be:
+- _declaration_ that declares the signature a definition must respect
+- _definition_ that contains the actual implementation
+- definitions are optional and overridable
+
+
+
+
+
+
+
+
+
+---
 
 Rust's [RFC 195](https://github.com/rust-lang/rfcs/blob/master/text/0195-associated-items.md) defines support for associated items (functions, statics, types, lifetimes) in trait declarations. All associated items can have default values.
 

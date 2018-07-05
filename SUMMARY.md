@@ -8,9 +8,9 @@
 
 
 ## Theory
-- [Type Systems](theory/type-systems/type-systems.md)
-- [Data Types](theory/types/data-types.md)
-- [Binary relations](theory/math/binary-relations.md)
+- Type Systems theory/type-systems/type-systems.md 
+- Data Types theory/types/data-types.md
+- Binary relations theory/math/binary-relations.md
 
 ## Syntax
 - [Attributes](syntax/attributes.md)
@@ -30,7 +30,7 @@
 ## Concepts
 - [Lifetimes](concepts/lifetimes/lifetimes.md)
 - [Visibility](concepts/visibility.md)
-- [Iterators](concepts/iterators.md)
+- [Iterators](concepts/iterators/iterators.md)
 
 ## Primitives
 - [Character](primitives/char/char.md)
@@ -40,8 +40,7 @@
 
 ## Types
 - Classification
-- [Annotation](types/type-annotation.md)
-- [Top](types/type_top.md)
+- Annotation](types/type-annotation.md)
 
 ## Modules
 - [collections](modules/collections/README.md)

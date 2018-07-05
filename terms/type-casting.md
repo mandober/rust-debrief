@@ -1,4 +1,4 @@
-# Casting
+# Type Casting
 
 Cast is performed between applicable types using the binary operator `as`
 

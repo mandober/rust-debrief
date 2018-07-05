@@ -1,11 +1,14 @@
 # Destructuring
 
+- Destructuring takes irrefutable pattern only
+
 <!-- TOC -->
 
-- [Irrefutable patterns](#irrefutable-patterns)
+- [Types that can be destructured](#types-that-can-be-destructured)
+- [Destructuring patterns](#destructuring-patterns)
+- [Structs](#structs)
 - [Arrays](#arrays)
 - [Tuples](#tuples)
-- [Structs](#structs)
 - [References](#references)
 - [Box](#box)
 - [Slices](#slices)
@@ -13,28 +16,24 @@
 
 <!-- /TOC -->
 
-
-Types that can be destructured:
+## Types that can be destructured
+- structs
 - tuples
 - arrays
 - enums
-- structs
 - slices (feature gated, add attr `#![feature(slice_patterns)]`)
 - pointer types
 - boxes
 
 
-Destructuring places
+## Destructuring patterns
+- Destructuring takes only irrefutable pattern 
 - Irrefutable patterns: binding sites (`let`, fn params, `for` loop)
   - constants cannot be used
 - Refutable patterns with ``if/while let`
   - constants can be used and they must match exactly
-  - use `_` non-binding pattern as "catch-all" (default, last match arm)
+- use `_` non-binding pattern as "catch-all" (default, last match arm)
 
-
-
-## Irrefutable patterns
-Destructuring must take irrefutable pattern 
 
 ```rust
 // let binding
@@ -58,6 +57,95 @@ let pair = (4, 5);
 destr_tup(pair);
 ```
 
+
+## Structs
+
+```rust
+// struct
+struct Point { x: u8, y: u8, z: u8 };
+
+// instance
+let p = Point { x: 1, y: 2, z: 3 };
+```
+
+A struct can be destructured by naming its fields: 
+
+```rust
+// destructuring creates new immutable bindings
+let Point { x, y, z } = p;
+// x = 1, y = 2, z = 3
+
+// `mut` creates a mutable binding
+let Point { mut x, y, z } = p;
+x = x + y + z;
+
+
+// rather useless form:
+let Point { x, y, z } = Point { x: 1, y: 2, z: 3 };
+// x = 1, y = 2, z = 3
+
+// the order in which the fields are named is inconsequential:
+let Point { y, z, x } = p;
+// x = 1, y = 2, z = 3
+```
+
+Renaming while destructuring:
+
+```rust
+// renaming fields
+let Point { x: a, y: b, z: c } = p;
+// a = 1, b = 2, c = 3
+
+// out of order renaming
+let Point { z: c, y: b, x: a } = p;
+// a = 1, b = 2, c = 3
+
+// partial renaming
+let Point { x: a, y, z } = p;
+// a = 1, y = 2, z = 3
+```
+
+Ignoring fields:
+
+```rust
+// ignoring a field (still the field must be named)
+let Point { x, y: _, z } = p;
+// let Point { x, _, z } = p;
+// error: pattern does not mention field `y`
+
+// ignore all but the first field
+let Point { x, .. } = p;
+// let Point { .., z } = p;
+// error: `..` must be at the end and cannot have a trailing comma
+
+// ignoring all fields (?)
+let Point { .. } = p;
+
+// destructuring patterns can be combined
+// rename first, ignore the rest
+let Point { x:a, .. } = p;
+```
+
+
+
+```rust
+// struct 2
+struct TuplePoint {
+  x: (u8, u8),
+  y: u8
+}
+let tpoint = TuplePoint { x: (1, 2), y: 3 };
+
+// destructuring
+let TuplePoint { x, .. } = tpoint; // x => (1, 2)
+
+// destructuring with renaming
+let TuplePoint { x: (a, b), y } = tpoint;
+println!("{:?}", x); // x => (1, 2)
+println!("{:?}", y); // x => 3
+println!("{}", a);   // a => 1
+println!("{}", b);   // b => 2
+```
 
 ## Arrays
 
@@ -133,49 +221,6 @@ match pair {
   // by now, all possibilities are exhausted, so this can't be used:
   // _ => ...
 }
-```
-
-
-## Structs
-
-```rust
-// struct 1
-struct Point { 
-  x: u8,
-  y: u8
-}
-let point = Point { x: 1, y: 2 };
-
-// destructuring:
-let Point { x, y } = p; // x=1, y=2
-
-// destructuring with renaming:
-let Point { x: a, y: b } = p; // a=1, b=2
-
-// destructuring with renaming and ignoring
-let Point { x: a, .. } = p; // a=1 (ignore the rest of fields)
-
-// destructuring with ignoring
-// let Point { x: _, y } = p; // y=2 (ignore the first field)
-let Point { x: _, y } = p; // y=2 (ignore the first field)
-
-
-// struct 2
-struct TuplePoint {
-  x: (u8, u8),
-  y: u8
-}
-let tpoint = TuplePoint { x: (1, 2), y: 3 };
-
-// destructuring
-let TuplePoint { x, .. } = tpoint; // x => (1, 2)
-
-// destructuring with renaming
-let TuplePoint { x: (a, b), y } = tpoint;
-println!("{:?}", x); // x => (1, 2)
-println!("{:?}", y); // x => 3
-println!("{}", a);   // a => 1
-println!("{}", b);   // b => 2
 ```
 
 

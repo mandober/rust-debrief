@@ -257,7 +257,7 @@ converts a type `T` from being `Sendable` to something `Sharable`:
 
 The final two builtin traits are `Copy` and `Share`. This RFC does not
 propose any changes to those two traits but rather relies on the
-specification from [the original opt-in RFC](0003-opt-in-builtin-traits.md).
+specification from the original opt-in RFC](0003-opt-in-builtin-traits.md).
 
 ### Controlling copy vs move with the `Copy` trait
 

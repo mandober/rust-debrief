@@ -19,7 +19,9 @@ Rust code, including the code within `unsafe` blocks and `unsafe` functions, is 
   - A value in a `char` which is a surrogate or above `char::MAX`.
   - Non-UTF-8 byte sequences in a `str`.
 
+---
 
+Links
 [2]: https://doc.rust-lang.org/std/ptr/fn.read_unaligned.html
 [3]: https://doc.rust-lang.org/std/ptr/fn.write_unaligned.html
 [4]: http://llvm.org/docs/LangRef.html#undefined-values

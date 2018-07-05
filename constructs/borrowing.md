@@ -1,5 +1,11 @@
 # Borrowing
 
+- Rust requires any references to freeze the referent and its owners.
+- A reference cannot outlive its referent
+- A mutable reference cannot be aliased
+
+
+
 A variable is a storage location paired with an associated symbolic name (an identifier) that contains some quantity of information referred to as a value. 
 
 A value is a sequence of bits together with its interpretation and some meta information, like alignment. 

@@ -1,6 +1,6 @@
 # Variables
 
-A variable is a memory location paired with an associated symbolic name (an identifier) that contains some quantity of information referred to as a value.
+A variable is a memory location paired with a symbolic name (an identifier) that contains some quantity of information referred to as a value.
 
 The variable name is the usual way to reference the stored value; this separation of name and content allows the name to be used independently of the exact information it represents.
 

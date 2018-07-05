@@ -178,17 +178,17 @@ trait for "values that can be iterated over". There are two main motivations:
 
 * *Ergonomics*. You'd be able to write
 
-  ```rust
-  for v in some_vec { ... }
-  ```
+```rust
+for v in some_vec { ... }
+```
 
-  rather than
+rather than
 
-  ```rust
-  for v in some_vec.iter() { ... }
-  ```
+```rust
+for v in some_vec.iter() { ... }
+```
 
-  and `consume_iter(some_vec)` rather than `consume_iter(some_vec.iter())`.
+and `consume_iter(some_vec)` rather than `consume_iter(some_vec.iter())`.
 
 # Detailed design
 
@@ -789,10 +789,10 @@ closures, but for which convenience variants taking simpler data are common:
 * *Taking values by need*. For example, consider the `unwrap_or` and
   `unwrap_or_else` methods in `Option`:
 
-  ```rust
-  fn unwrap_or(self, def: T) -> T
-  fn unwrap_or_else(self, f: || -> T) -> T
-  ```
+```rust
+fn unwrap_or(self, def: T) -> T
+fn unwrap_or_else(self, f: || -> T) -> T
+```
 
   The `unwrap_or_else` method is the most general: it invokes the closure to
   compute a default value *only when `self` is `None`*. When the default value
@@ -806,7 +806,7 @@ closures, but for which convenience variants taking simpler data are common:
   ```rust
   fn contains(&self, elem: &T) -> bool; // where T: PartialEq
   fn contains_fn(&self, pred: |&T| -> bool) -> bool;
-  ```
+```
 
   Again, the `contains_fn` version is the more general, but it's convenient to
   provide a specialized variant when the element type can be compared for
@@ -1079,7 +1079,7 @@ The biggest changes from the current APIs are:
   fn cloned(self) -> Option<T> {
       self.map(|x| x.clone())
   }
-  ```
+```
 
   so that `some_map.find_copy(key)` will instead be written
   `some_map.find(key).cloned()`. This method chain is slightly longer, but is
@@ -1687,7 +1687,7 @@ could potentially be dropped. However, there are a few downsides:
   ```rust
   map.find("some static string".as_string()) // with the hack
   map.find("some static string")             // with this RFC
-  ```
+```
 
 * The solution is specialized to strings and vectors, and does not necessarily
   support user-defined unsized types or slices.

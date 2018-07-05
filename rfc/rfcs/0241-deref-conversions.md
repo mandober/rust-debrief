@@ -86,7 +86,7 @@ this reasoning difficulty was cited as a major motivator:
 
   let mut a = ~[ ... ];
   sort(a); // not only does this not move `a`, but it mutates it!
-  ```
+```
 
 Having to include an extra `&` or `&mut` for arguments is a slight
 inconvenience, but it makes it much easier to track ownership at a glance.

@@ -1,13 +1,21 @@
-# enum: basics
+# enum
 
+- purpose
 - variants
 - discriminant
-- kinds
 - sum type
+- available std enums
+- `repr` - representation
+- null pointer optimization
+
+
+
+- Enum allows defining a new type by enumerating all its values.
+- Each enumeration is called a variant and has an associated tag (integer), called discriminant, which identifies it.
 
 
 Fields of structs, enums and tuples are directly put into the memory layout of the struct (without boxing them like in Java!).
-Data inside structs, enums and tuples is stored directly inline inside the memory of the struct value. 
+Data inside structs, enums and tuples is stored directly inline inside the memory of the struct value.
 
 
 ## Variants

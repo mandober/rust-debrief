@@ -1,11 +1,16 @@
-# Traits
+- a trait describes an *abstract interface* that types can implement.
+- traits can be used to mark a capability or to enforce a behaviour
+- a trait can have associated items (fn, type, const)
 
-A trait describes an *abstract interface* that types can implement.
 
-This interface consists of associated items, which come in 3 varieties:
-- functions
-- types
-- constants
+A trait is a language construct that enables defining a contract 
+
+
+## Capability-announcing trait (CAT)
+
+## Behavior-enforcing trait (BAT)
+
+
 
 All traits define an implicit type parameter `Self` that
 refers to "the type that is implementing this interface".
@@ -14,6 +19,7 @@ Traits may also contain additional type parameters. These type parameters
 (including Self) may be constrained by other traits and so forth as usual.
 
 Traits are implemented for specific types through separate implementations.
+
 
 
 ## Associated functions and methods

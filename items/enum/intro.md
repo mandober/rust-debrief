@@ -1,4 +1,17 @@
-# enum: intro
+# enum
+
+Maybe enum represents an optional (nullable) value.
+
+Maybe solves the problem of type nullability: a type can be viewed as a
+set with finite cardinality whose elements are concrete values.
+A `bool` is a set of cardinality 2 whose elements are true and false.
+A boolean value is either true or false, but what if the value is absent
+(unknown, at the moment or always, or not just applicable).
+
+e.g. a survey asking whether one is content with their current job, provining only a boolean "yes" and "no" as potential answers, but the participant is unemployed.
+
+Rust doesn't have nullable types
+
 
 An enumeration, `enum`, allows defining a new type by enumerating all its possible values; these values can be of any type, so enums are heterogeneous compound types (type constructors). For example, `Ordering` enum from std (`std::cmp::Ordering`) has 3 possible values, but at any given time, an instance of this enum holds ("collapses" into) only one of these values.
 
@@ -88,3 +101,8 @@ let n = Pair(4, 6);
 let m = Couple(4, 6);
 assert!(m == n);
 ```
+
+## representation
+
+- representation
+- null pointer optimization

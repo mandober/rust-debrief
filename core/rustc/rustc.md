@@ -62,7 +62,7 @@ The `rustc_driver` crate, at the top of this lattice, is effectively
 the "main" function for the rust compiler. It doesn't have much "real
 code", but instead ties together all of the code defined in the other
 crates and defines the overall flow of execution. (As we transition
-more and more to the [query model](ty/maps/README.md), however, the
+more and more to the query model](ty/maps/README.md), however, the
 "flow" of compilation is becoming less centrally defined.)
 
 At the other extreme, the `rustc` crate defines the common and

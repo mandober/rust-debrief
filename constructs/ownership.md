@@ -1,5 +1,15 @@
 # Ownership
 
+https://doc.rust-lang.org/nightly/nomicon/ownership.html
+
+
+
+- Rust requires any references to freeze the referent and its owners.
+- A reference cannot outlive its referent
+- A mutable reference cannot be aliased
+
+
+
 
 **Value**
 - Memory address
@@ -84,18 +94,26 @@ Semantics
 
 ## Ownership
 
-1. Each value in Rust has a variable that’s called its owner.
-2. There can only be one owner at a time.
-3. When the owner goes out of scope, the value will be dropped.
+Rules
+1. Every value has an owner - a variable that owns it.
+2. There must be only one owner at a time.
+3. When the owner (owning variable) goes out of scope, the value is dropped
 
 
-A **variable** is a **memory address** paired with an associated **symbolic name** that contains some quantity of information referred to as a **value**. Using that symbolic name (the name of a variable) is the usual way to reference the stored value. The "value of variable" is given by the corresponding mapping in the symbol table in the environment.
-
-An **assignment** statement sets the value stored at the memory address denoted by a variable name i.e. an assignment copies a value into the variable.
+The ownership is realized through binding.
 
 
 
-The ownership is realized through binding
+A variable is a way to refer to a memory region; it has a (symbolic) name
+that contains some quantity of information referred to as a value.
+
+Using that symbolic name (the name of a variable) is a way to refer the value. 
+
+The "value of variable" is given by the corresponding mapping in the symbol table in the environment.
+
+An assignment statement sets the value stored at the memory address denoted by a variable name i.e. an assignment copies a value into the variable.
+
+
 
 ```rust
 let symname = 54;

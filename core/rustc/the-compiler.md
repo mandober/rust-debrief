@@ -2,7 +2,7 @@
 
 NB: This crate is part of the Rust compiler. For an overview of the
 compiler as a whole, see
-[the README.md file found in `librustc`](../librustc/README.md).
+the README.md file found in `librustc`](../librustc/README.md).
 
 The `rustc_typeck` crate contains the source for "type collection" and
 "type checking", as well as a few other bits of related functionality.

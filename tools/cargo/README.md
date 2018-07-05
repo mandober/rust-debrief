@@ -21,5 +21,11 @@ cargo new --lib project_name
 ```
 
 
+---
+Links
+
+
+Make explicit opt-out of target discovery neccessary for Rust 2018:
+https://github.com/rust-lang/cargo/issues/5330
 
 https://ashleygwilliams.github.io/a-very-brief-intro-to-rust/#5
