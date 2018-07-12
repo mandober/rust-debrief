@@ -1,11 +1,13 @@
-# Container types
+# Rust Pointer Types
 
-Box
-Rc, Arc
-Cell
-RefCell
-Mutex
-RwLock
+- ref
+- mut ref
+- Box
+- Rc
+- Arc
+- raw ptr
+- raw mut ptr
+
 
 Box is a container type designed to allocate and "hold" an object on the heap. It's the most simple form of allocation on the heap and the content is dropped when it goes out of scope.
 

@@ -1,4 +1,4 @@
-# Abstract Data Types
+# Abstract Data Type
 
 https://www.wikiwand.com/en/Abstract_data_type
 https://www.geeksforgeeks.org/abstract-data-types/

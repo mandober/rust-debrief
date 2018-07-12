@@ -234,6 +234,9 @@ A slice is a view into some contiguous storage. Slice is a fat pointer; the info
 ## Smart pointer
 A smart pointer is an abstract data type that simulates a pointer while providing added features, such as automatic memory management or bounds checking. Such features are intended to reduce bugs caused by the misuse of pointers, while retaining efficiency. Smart pointers typically keep track of the memory they point to, and may also be used to manage other resources, such as network connections and file handles. Smart pointers prevent most situations of memory leaks, caused by pointer mishandling (double free, dangling pointers, etc.), by making the memory deallocation automatic.
 
+## Standard Library
+A standard library is the library made available across implementations of a programming language. It is often treated as part of the language by its users, although the designers may have treated it as a separate entity. The line between a language and its libraries differs between languages and it is not always clear. Some languages are designed so that the meanings of certain syntactic constructs cannot even be described without referring to the core library.
+
 ## Statically typed language
 In static languages, variables are classified into types: once a variable acquires a type, it is type-locked. It cannot change its type and it accepts bindings only to the values of the matching type. Moreover, in some languages, a variable cannot even be rebound to a different value, after its initial binding, although some languages permit this by declaring a variable mutable. Static languages perform type checking at compile-time (many also at run-time).
 
@@ -275,6 +278,9 @@ Typestate is the dependence of the type and its behavior on the contained value:
 
 ## Type system
 A type system is a set of rules that assigns a type property to the various value-carrying constructs of a programming language.
+
+## Undefined behavior
+Undefined behavior (UB) is the result of executing computer code whose behavior is not prescribed by the language specification.
 
 ## Value
 A value is a sequence of bits together with its interpretation.

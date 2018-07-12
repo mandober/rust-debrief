@@ -100,29 +100,4 @@ Some languages have other control structures that require general unwinding. Pas
 When applying a continuation, the stack is (logically) unwound and then rewound with the stack of the continuation. This is not the only way to implement continuations; for example, using multiple, explicit stacks, application of a continuation can simply activate its stack and wind a value to be passed. The Scheme programming language allows arbitrary thunks to be executed in specified points on "unwinding" or "rewinding" of the control stack when a continuation is invoked.
 
 
-
-## garbage collection
-garbage collection (GC) is a form of automatic memory management. The garbage collector, or just collector, attempts to reclaim garbage, or memory occupied by objects that are no longer in use by the program.
-Garbage collection is often portrayed as the opposite of manual memory management, which requires the programmer to specify which objects to deallocate and return to the memory system. However, many systems use a combination of approaches, including other techniques such as stack allocation and region inference. Like other memory management techniques, garbage collection may take a significant proportion of total processing time in a program and, as a result, can have significant influence on performance. With good implementations, enough memory, and depending on application, garbage collection can be faster than manual memory management, while the opposite can also be true and has often been the case in the past with sub-optimal GC algorithms.
-
-Garbage collection is a strategy for automatically detecting memory allocated to objects that are no longer usable in a program, and returning that allocated memory to a pool of free memory locations. This method is in contrast to "manual" memory management where a programmer explicitly codes memory requests and memory releases in the program. While automatic garbage has the advantages of reducing programmer workload and preventing certain kinds of memory allocation bugs, garbage collection does require memory resources of its own, and can compete with the application program for processor time.
-
-
-
-https://www.wikiwand.com/en/Execution_(computing)
-https://www.wikiwand.com/en/Call_stack
-https://www.wikiwand.com/en/Manual_memory_management
-https://www.wikiwand.com/en/C_dynamic_memory_allocation
-https://www.wikiwand.com/en/Memory_management#/ALLOCATION
-https://www.wikiwand.com/en/Memory_management
-https://www.wikiwand.com/en/Shared_memory
-https://www.wikiwand.com/en/Memory_segmentation
-https://www.wikiwand.com/en/Code_segment
-https://www.wikiwand.com/en/Data_segment
-https://www.wikiwand.com/en/Heap_overflow
-https://www.wikiwand.com/en/.bss
-https://www.wikiwand.com/en/Static_variable
-https://www.wikiwand.com/en/Stack-based_memory_allocation
-https://www.wikiwand.com/en/Memory-mapped_file
-https://www.wikiwand.com/en/Library_(computing)#/Shared_libraries
-https://www.wikiwand.com/en/Pointer_(computer_programming)
+---

@@ -1,33 +1,4 @@
-# Exotically Sized Types
-https://doc.rust-lang.org/stable/nomicon/exotic-sizes.html
-
-Most of the time, we think in terms of types with a fixed, positive size. This is not always the case, however.
-
-## Dinamically Sized Types (DSTs)
-
-Rust in fact supports Dynamically Sized Types (DSTs): types without a statically known size or alignment. On the surface, this is a bit nonsensical: Rust must know the size and alignment of something in order to correctly work with it! In this regard, DSTs are not normal types. Due to their lack of a statically known size, these types can only exist behind some kind of pointer. Any pointer to a DST consequently becomes a fat pointer consisting of the pointer and the information that "completes" them (more on this below).
-
-There are two major DSTs exposed by the language: trait objects, and slices.
-
-A trait object represents some type that implements the traits it specifies. The exact original type is erased in favor of runtime reflection with a vtable containing all the information necessary to use the type. This is the information that completes a trait object: a pointer to its vtable.
-
-A slice is simply a view into some contiguous storage -- typically an array or Vec. The information that completes a slice is just the number of elements it points to.
-
-Structs can actually store a single DST directly as their last field, but this makes them a DST as well:
-
-```rust
-// Can't be stored on the stack directly
-struct Foo {
-    info: u32,
-    data: [u8],
-}
-```
-
-NOTE: As of Rust 1.0 struct DSTs are broken if the last field has a variable position based on its alignment.
-
-
-
-## Zero Sized Types (ZSTs)
+# Zero Sized Types (ZSTs)
 Rust actually allows types to be specified that occupy no space:
 
 ```rust

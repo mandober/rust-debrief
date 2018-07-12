@@ -1,8 +1,11 @@
+# Rust: Value
+
 A value is a sequence of bits together with its interpretation.
 
+The term __value type__ is used to refer to one of 2 kinds of data types:
+- types of values
+- types of objects with deep copy semantics
 
-
-The term _value type_ is commonly used to refer to one of two kinds of data types: *types of values* or *types of objects* with deep copy semantics.
 
 Since the values underpinning value types are not stored, value types also do not include a notion of mutation.
 

@@ -1,6 +1,10 @@
 # Type aliases
 
-A type alias defines a new name for an existing type. Type aliases are declared with the keyword type. Every value has a single, specific type, but may implement several different traits, or be compatible with several different type constraints.
+- type alias defines a new name for an existing type
+- declared with the `type` keyword
+
+
+
 
 For example, the following defines the type Point as a synonym for the type (u8, u8), the type of pairs of unsigned 8 bit integers:
 

@@ -5,6 +5,7 @@ A variable is a memory location paired with a symbolic name (an identifier) that
 The variable name is the usual way to reference the stored value; this separation of name and content allows the name to be used independently of the exact information it represents.
 
 
+
 ## Variables in Rust
 
 By default, variable bindings have move semantics. However, if a type implements `Copy`, it instead has 'copy semantics':
@@ -22,4 +23,11 @@ let n: i16 = 5; // ok: explicit type annotation
 
 ## Values
 
-{% include "./values.md" %}
+<!-- git book file include -->
+{% include "value.md" %}
+
+<!-- markdown-preview-enhanced: import file 1 -->
+@import "value.md"
+
+<!-- markdown-preview-enhanced: import file 2 -->
+<!-- @import "mutability.md" -->

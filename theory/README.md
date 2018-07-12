@@ -1,16 +1,19 @@
-# Bit chasing
+# CS
+
+- [Abstract Data Type](adt.md)
+- [Algebraic Data Types](algebraic-data-types.md)
 
 
-- [Type Systems (type-systems.md)
-  - Data Types](data-types.md)
-  - Algebraic Data Types](algebraic.md)
-- Binary relations](binary-relations.md)
-  - Equivalence relation](binary-relations.md#equivalence-relation)
-  - Partial equivalence relation](binary-relations.md#partial-equivalence-relation)
+
+- Type Systems
+  - Data Types
+  - Algebraic Data Types
+- Binary relations
+  - Equivalence relation
+  - Partial equivalence relation
   - Partial ordering
-- Unicode](unicode.md)
+- Unicode
 - Memory management
-  - Pointers
   - Address space
   - Alignment
   - The Stack

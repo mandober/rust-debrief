@@ -153,7 +153,7 @@ $ rustdoc src/lib.rs --passes strip-priv-imports
 An argument of "list" will print a list of possible "rustdoc passes", and other
 arguments will be the name of which passes to run in addition to the defaults.
 
-For more details on passes, see [the chapter on them](passes.html).
+For more details on passes, see the chapter on them](passes.html).
 
 See also `--no-defaults`.
 
@@ -169,7 +169,7 @@ By default, `rustdoc` will run several passes over your code. This
 removes those defaults, allowing you to use `--passes` to specify
 exactly which passes you want.
 
-For more details on passes, see [the chapter on them](passes.html).
+For more details on passes, see the chapter on them](passes.html).
 
 See also `--passes`.
 
@@ -195,7 +195,7 @@ $ rustdoc src/lib.rs --test --test-args ignored
 ```
 
 This flag will pass options to the test runner when running documentation tests.
-For more, see [the chapter on documentation tests](documentation-tests.html).
+For more, see the chapter on documentation tests](documentation-tests.html).
 
 See also `--test`.
 

@@ -9,7 +9,6 @@
 - [memory hierarchy](memory-hierarchy.md)
 - [memory types](memory-types.md)
 - [registers](./registers.md)
-- [address space](./address-space.md)
 - [alignment](./alignment.md)
 - [program-memory](./program-memory.md)
 - calling convention
