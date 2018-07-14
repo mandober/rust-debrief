@@ -41,6 +41,5 @@ CPU mode determines how much physical memory can be accessed.
 - A CPU running in 64-bit mode can address 64GB of physical RAM and can even access some of the memory reserved for DMA devices.
 
 
-
 ---
 http://duartes.org/gustavo/blog/post/motherboard-chipsets-memory-map/

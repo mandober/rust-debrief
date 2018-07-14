@@ -1,6 +1,4 @@
-# Program in Memory
 
-Each process has its own virtual address space, which in 32-bit mode is always a 4GB block of memory addresses. These virtual addresses are mapped to physical memory by page tables, which are maintained by the kernel and consulted by the CPU.
 
 
 ```
@@ -32,11 +30,8 @@ Each process has its own virtual address space, which in 32-bit mode is always a
 
 ```
 
-
 http://duartes.org/gustavo/blog/post/journey-to-the-stack/
-
 http://duartes.org/gustavo/blog/post/anatomy-of-a-program-in-memory/
-
 http://css.csail.mit.edu/6.858/2017/readings/i386/s02_03.htm
 
 

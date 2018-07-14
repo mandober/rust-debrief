@@ -1,29 +1,18 @@
-# CS
-
-- [Abstract Data Type](adt.md)
-- [Algebraic Data Types](algebraic-data-types.md)
+# Memory
 
 
+- [aliasing](aliasing.md)
+- [alignment](alignment.md)
+- [assignment](assignment.md)
+- [binary relations](binary-relations.md)
 
-- Type Systems
-  - Data Types
-  - Algebraic Data Types
-- Binary relations
-  - Equivalence relation
-  - Partial equivalence relation
-  - Partial ordering
-- Unicode
-- Memory management
-  - Address space
-  - Alignment
-  - The Stack
-  - The Heap
-- Programming Paradigms
-  - Inheritance
-  - Interface
-  - Polymorphism
-  - Generics
-  - Reflection
-- Low Level
-  - ISA, x86
-  - Compilers, IR, Object code
+
+- [cpu-modes-x86](cpu-modes-x86.md)
+- [the-call-stack](the-call-stack.md)
+- [stack-machine](stack-machine.md)
+
+- calling convention
+- stack
+- heap
+
+

@@ -1,63 +1,53 @@
 # Garbage Collection
 
-[Garbage collection (computer science) | Wikiwand](https://www.wikiwand.com/en/Garbage_collection_(computer_science))
 
 Garbage Collection (GC) is a form of automatic memory management whose objective is finding data objects that cannot be accessed in the future, and to reclaim the memory used by those objects. Garbage collection was invented by John McCarthy in 1959 to simplify memory management in Lisp.
 
-Majority of programming languages require garbage collection. Garbage collector is a component in the runtime of the language that autonomously and periodically attempts to reclaim memory, after identifying exactly which memory blocks are not needed anymore.
+Majority of programming languages require GC. Garbage collector is a component in the runtime of the language that autonomously and periodically attempts to reclaim memory, after identifying exactly which memory blocks are not needed anymore. 
 
+The advantage of GC is that it frees the programmers from manually dealing with memory, making it easier to concentrate on the actual problem, rather then the details of implementation. It potentially reduces numerous memory-related problems such as dangling pointers, double free errors, memory leaks, etc.
 
-Manual memory management requires the programmer to specify which objects to deallocate and return to the memory system.
-
-systems use a combination of approaches, including other techniques such as stack allocation and region inference.
-
-Like other memory management techniques, garbage collection may take a significant proportion of total processing time in a program and, as a result, can have significant influence on performance.
-
-
-
-Garbage collection frees the programmer from manually dealing with memory, thereby potentially reducing numerous problems such as dangling pointers, double free errors, memory leaks, etc.
-
-
-Disadvantages
-- non-determinism
+Disadvantage of GC
+- non-deterministic occurance
 - consuming additional resources
 - performance impacts
-- possible stalls in program execution
+- potential stalls in program execution
+- runtime overhead
 - incompatibility with manual resource management
 
-Garbage collection consumes computing resources in deciding which memory to free, even though the programmer may have already known this information.
+The disadvantage of GC is that it frees the programmers from manually dealing with memory, making it easier for harder-to-find bugs to skip through. For example, Rust might be considered a hard language, because it makes it very hard for a programer to easily violate memory safety. It is also probably the only mainstream language that requires the lifetime of objects is known at compile-time; similarly to annotating types, this sometimes mean that the programer needs to manually annotate lifetimes of objects in the source code and to carefully think about their aliasing and mutation. And these things are always present, in any language, it's just that many languages, especially dynamic ones, don't expose these issues, at least not in so many details.
 
-The penalty for the convenience of not annotating object lifetime manually in the source code is overhead, which can lead to decreased or uneven performance.
+The penalty for the convenience of not annotating object lifetime manually is an overhead in the runtime that can lead to decreased or uneven performance. GC process can take a significant proportion of total processing time in a program and, as a result, can have significant influence on performance.
+
+The moment when the garbage is actually collected can be unpredictable, resulting in stalls scattered throughout a session. Unpredictable stalls can be unacceptable in real-time environments, in transaction processing, or in interactive programs.
 
 A peer-reviewed paper came to the conclusion that GC needs five times the memory to compensate for this overhead and to perform as fast as explicit memory management.
 
-Interaction with memory hierarchy effects can make this overhead intolerable in circumstances that are hard to predict or to detect in routine testing.
-
-The moment when the garbage is actually collected can be unpredictable, resulting in stalls (pauses to shift/free memory) scattered throughout a session.
-
-Unpredictable stalls can be unacceptable in real-time environments, in transaction processing, or in interactive programs.
-
-Incremental, concurrent, and real-time garbage collectors address these problems, with varying trade-offs.
-
-The modern GC implementations try to minimize blocking _stop-the-world_ stalls by doing as much work as possible on a separate thread, for example, marking unreachable garbage instances while the application process continues to run.
-
-In spite of these advancements, it is still very difficult to maintain large heaps (millions of objects).
-
-Non-deterministic GC is incompatible with resource acquisition is initialization (RAII) based management of non-GC'ed resources.
-
-As a result, the need for explicit manual resource management (release/close) for non-GCed resources becomes transitive to composition.
+Non-deterministic GC is incompatible with resource acquisition is initialization (RAII) based management of non-GC'ed resources. As a result, the need for explicit manual resource management (release/close) for non-GCed resources becomes transitive to composition.
 
 That is: in a non-deterministic GC system, if a resource or a resource-like object requires manual resource management (release/close), and this object is used as "part of" another object, then the composed object will also become a resource-like object that itself requires manual resource management (release/close).
 
 
-## Tracing Strategy
+## GC implementations
+The modern GC implementations try to minimize blocking _stop-the-world_ stalls by doing as much work as possible on a separate thread.
 
-Tracing garbage collection is the most common type of garbage collection, so much so that "garbage collection" often refers to tracing garbage collection, rather than other methods such as reference counting. The overall strategy consists of determining which objects should be garbage collected by tracing which objects are reachable by a chain of references from certain root objects, and considering the rest as garbage and collecting them. However, there are a large number of algorithms used in implementation, with widely varying complexity and performance characteristics.
+For example, marking unreachable garbage instances while the application process continues to run. In spite of these advancements, it is still very difficult to maintain large heaps (millions of objects).
+
+Incremental, concurrent, and real-time garbage collectors address many of the problems, with varying trade-offs. 
+
+
+## Tracing GC
+The term "garbage collection" usually refers to tracing garbage collection because it is the most common GC strategy.
+
+It consists of determining which objects are garbage by tracing which objects are reachable by a chain of references (from root objects) and considering the rest as garbage to be collected.
+
+However, a large number of algorithms that is used in implementing tracing, has widely varying complexity and performance characteristics.
 
 
 ## Reference counting
+Reference counting garbage collection is where each object has a count of the number of references to it.
 
-Reference counting garbage collection is where each object has a count of the number of references to it. Garbage is identified by having a reference count of zero. An object's reference count is incremented when a reference to it is created, and decremented when a reference is destroyed. When the count reaches zero, the object's memory is reclaimed.
+Garbage is identified by having a reference count of zero. An object's reference count is incremented when a reference to it is created, and decremented when a reference is destroyed. When the count reaches zero, the object's memory is reclaimed.
 
 As with manual memory management, and unlike tracing garbage collection, reference counting guarantees that objects are destroyed as soon as their last reference is destroyed, and usually only accesses memory which is either in CPU caches, in objects to be freed, or directly pointed by those, and thus tends to not have significant negative side effects on CPU cache and virtual memory operation.
 

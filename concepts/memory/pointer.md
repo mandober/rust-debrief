@@ -1,45 +1,9 @@
-# Pointers in Rust
-
-## Managing Memory
-
-Managing and using resources, primarily memory, in Rust is a complex topic with intertwined concepts, so it is here presented together rather then each concept having its own page.
-
-The concepts involved:
-- memory
-- processor registers
-- static i.e. read only memory
-- the stack
-- the heap
-- value
-- variable
-- object
-- binding
-- ownership of a value
-- borrowing a value
-- moving a value
+# Pointers
 
 
-
-
-The memory ocupied by a Rust program is split into two distinct areas: the heap and the sack. Simply put, the stack contains primitive variables, while the heap stores complex types; a heap can grow until the available memory is exhausted. The stack is faster, but may not grow without limits. Every binding in Rust is on the stack, but those bindings may refer to things in the heap, and elsewhere.
-
-
-
-
----
-
-http://www.electronicdesign.com/blog/reflections-rust
-
-In general, there is an owner of an object and references can be borrowed. An object cannot be released if there are borrowed references to it. All references have a lifetime, but they can often be inferred based on Rust language rules. There are also explicit lifetime parameters that can be used in various areas in the code, such as in function signatures.
-
-
----
-
-- Variable is a named memory area
-
+Variable is a named memory area
 
 To a 64-bit process running on x86_64 architecture on a computer equipped with the maximum allowed amount of memory i.e. 2 EiB (2,048 PiB or 2,097,152 TiB), memory is presented as an array, with byte-sized cells, which is indexed from zero to 2^64-1, which in hex is: `0 - 1FFF FFFF FFFF FFFF`.
-
 
 The minimum addressable size (unit of memory) is a byte.
 
@@ -102,39 +66,6 @@ When setting up data structures like lists, queues and trees, it is necessary to
 Pointers are a very thin abstraction on top of the addressing capabilities provided by most modern architectures. In the simplest scheme, an address, or a numeric index, is assigned to each unit of memory in the system, where the unit is typically either a byte or a word – depending on whether the architecture is byte-addressable or word-addressable – effectively transforming all of memory into a very large array. The system would then also provide an operation to retrieve the value stored in the memory unit at a given address (usually utilizing the machine's general purpose registers).
 
 In the usual case, a pointer is large enough to hold more addresses than there are units of memory in the system. This introduces the possibility that a program may attempt to access an address which corresponds to no unit of memory, either because not enough memory is installed (i.e. beyond the range of available memory) or the architecture does not support such addresses. The first case may, in certain platforms such as the Intel x86 architecture, be called a segmentation fault (segfault). The second case is possible in the current implementation of AMD64, where pointers are 64 bit long and addresses only extend to 48 bits. Pointers must conform to certain rules (canonical addresses), so if a non-canonical pointer is dereferenced, the processor raises a general protection fault.
-
-
-## Memory protection
-Memory protection is a way to control memory access rights on a computer, and is a part of most modern instruction set architectures and operating systems. The main purpose of memory protection is to prevent a process from accessing memory that has not been allocated to it. This prevents a bug or malware within a process from affecting other processes, or the operating system itself. An attempt to access unowned memory results in a hardware fault, called a segmentation fault or storage violation exception, generally causing abnormal termination of the offending process. Memory protection for computer security includes additional techniques such as address space layout randomization and executable space protection.
-
-Segmentation refers to dividing a computer's memory into segments. A reference to a memory location includes a value that identifies a segment and an offset within that segment.
-
-
-## segmentation fault
-
-https://www.wikiwand.com/en/Segmentation_fault
-
-In computing, a segmentation fault (often shortened to segfault) or access violation is a fault, or failure condition, raised by hardware with memory protection, notifying an operating system (OS) the software has attempted to access a restricted area of memory (a memory access violation). On standard x86 computers, this is a form of general protection fault. The OS kernel will, in response, usually perform some corrective action, generally passing the fault on to the offending process by sending the process a signal. Processes can in some cases install a custom signal handler, allowing them to recover on their own,[1] but otherwise the OS default signal handler is used, generally causing abnormal termination of the process (a program crash), and sometimes a core dump.
-
-Segmentation faults are a common class of error in programs written in languages like C that provide low-level memory access. They arise primarily due to errors in use of pointers for virtual memory addressing, particularly illegal access. Another type of memory access error is a bus error, which also has various causes, but is today much rarer; these occur primarily due to incorrect physical memory addressing, or due to misaligned memory access – these are memory references that the hardware cannot address, rather than references that a process is not allowed to address.
-
-Newer programming languages may employ mechanisms designed to avoid segmentation faults and improve memory safety. For example, the Rust programming language employs an "Ownership" based model to ensure memory safety.
-
-The following are some typical causes of a segmentation fault:
-- Dereferencing null pointers – this is special-cased by memory management hardware
-- Attempting to access a nonexistent memory address (outside process's address space)
-- Attempting to access memory the program does not have rights to (such as kernel structures in process context)
-- Attempting to write read-only memory (such as code segment)
-
-These in turn are often caused by programming errors that result in invalid memory access:
-- Dereferencing or assigning to an uninitialized pointer (wild pointer, which points to a random memory address)
-- Dereferencing or assigning to a freed pointer (dangling pointer, which points to memory that has been freed/deallocated/deleted)
-- A buffer overflow
-- A stack overflow
-- Attempting to execute a program that does not compile correctly. (Some compilers will output an executable file despite the presence of compile-time errors.)
-
-In C code, segmentation faults most often occur because of errors in pointer use, particularly in C dynamic memory allocation. Dereferencing a null pointer will always result in a segmentation fault, but wild pointers and dangling pointers point to memory that may or may not exist, and may or may not be readable or writable, and thus can result in transient bugs.
-
 
 
 ## null pointer

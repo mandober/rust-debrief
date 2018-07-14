@@ -1,6 +1,5 @@
 # Programming
 
-- [computer-program](./computer-program.md)
 - [language-constructs](./language-constructs.md)
 - [programming-languages](./programming-languages.md)
 - [variable](./variable.md)

@@ -2,15 +2,22 @@
 
 - [Rust Debrief](README.md)
 
-## Language constructs
+
+## Memory
+- [Memory Management](cs/memory/README.md)
+
+
+## Language
 - Declaration
 - Definition
 
-
-## Theory
+## Type System
 - Type Systems theory/type-systems/type-systems.md 
 - Data Types theory/types/data-types.md
+
+## Relations
 - Binary relations theory/math/binary-relations.md
+
 
 ## Syntax
 - [Attributes](syntax/attributes.md)

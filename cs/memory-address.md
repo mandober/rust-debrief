@@ -1,5 +1,6 @@
 # Memory Address
 
+
 A memory address is a reference to a specific memory location. Conventionally, a memory addresses is presented as a hex number.
 
 Each memory location has a physical address which is an index in the (memory) array. The CPU uses the index to access the corresponding memory location.
@@ -10,7 +11,8 @@ The memory controllers' bus consists of a number of parallel lines, each represe
 
 
 
-physical-address
+Physical Address
+
 In computing, a physical address (also real address, or binary address), is a memory address that is represented in the form of a binary number on the address bus circuitry in order to enable the data bus to access a particular storage cell of main memory, or a register of memory mapped I/O device.
 
 Use by central processing unit
@@ -94,23 +96,3 @@ Another common feature of address spaces are mappings and translations, often fo
 
 An iconic example of virtual-to-physical address translation is virtual memory, where different pages of virtual address space map either to page file or to main memory physical address space. It is possible that several numerically different virtual addresses all refer to one physical address and hence to the same physical byte of RAM. It is also possible that a single virtual address maps to zero, one, or more than one physical address.
 
-
----
-
-__Flat memory model or linear memory model__ refers to a memory addressing paradigm in which "memory appears to the program as a single contiguous address space."[1] The CPU can directly (and linearly) address all of the available memory locations without having to resort to any sort of memory segmentation or paging schemes.
-
-Memory management and address translation can still be implemented on top of a flat memory model in order to facilitate the operating system's functionality, resource protection, multitasking or to increase the memory capacity beyond the limits imposed by the processor's physical address space, but the key feature of a flat memory model is that the entire memory space is linear, sequential and contiguous from address zero to MaxBytes − 1.
-
-
----
-
-__the Memory Address Register (MAR)__ is the CPU register that either stores the memory address from which data will be fetched from the CPU, or the address to which data will be sent and stored.
-
-In other words, MAR holds the memory location of data that needs to be accessed. When reading from memory, data addressed by MAR is fed into the MDR (memory data register) and then used by the CPU. When writing to memory, the CPU writes data from MDR to the memory location whose address is stored in MAR. MAR which is found inside the CPU goes either to the RAM(Random Access Memory) or Cache.
-
-The Memory Address Register is half of a minimal interface between a microprogram and computer storage. The other half is a memory data register.
-
-In general, MAR is a parallel load register that contains the next memory address to be manipulated. For example, the next address to be read or written to. It is a register inside the CPU (or some other device that needs access to the memory contents, such as a Direct Memory Access (DMA) controller, which holds the address of the memory location that needs to be accessed to obtain the data at that address The memory address register will apply its contents to the address bus in accordance with the timing requirements of the memory concerned and is controlled by the CPU or other device (DMA controller mentioned earlier). It is a register inside the CPU (or some other device that needs access to the memory contents, such as a Direct Memory Access (DMA) controller) which holds the address of the memory location that needs to be accessed to obtain the data at that address. The memory address register will apply its contents to the address bus in accordance with the timing requirements of the memory concerned and is controlled by the CPU or other device (DMA controller mentioned earlier).
-
-
----

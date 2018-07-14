@@ -1,3 +1,6 @@
-virtual memory
+# Virtual Memory
 
-An iconic example of virtual-to-physical address translation is virtual memory, where different pages of virtual address space map either to page file or to main memory physical address space. It is possible that several numerically different virtual addresses all refer to one physical address and hence to the same physical byte of RAM. It is also possible that a single virtual address maps to zero, one, or more than one physical address.
+Virtual memory system abstracts the memory management by mapping memory addresses, used by a program (virtual addresses) into physical addresses in RAM. This increases security by isolating the processes from each other and provides extended space, beyond the physically available RAM, through paging and swapping techniques.
+
+The OS manages virtual address spaces and the assignment of real memory to virtual memory. The A CPU has memory management unit (MMU) for automatic virtual to physical address translation. The program sees the memory as a vast contiguous address space, his happy place.
+

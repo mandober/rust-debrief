@@ -1,16 +1,21 @@
 # Memory hierarchy
 
-The memory hierarchy is a grouping of storage, based on the response times, with the fastest components located on the top of the hierarchy, close to the CPU. Going towards lower components, each descending layer is (orders of magnitude) slower with (orders of magnitude) larger capacity. In a practical approach, all storage can be divided into 3 tiers:
+
+The memory hierarchy is a grouping of storage, based on the response times, with the faster components located towards the top of the hierarchy, closer to the CPU.
+
+Going towards lower components, each descending layer is (orders of magnitude) slower with (orders of magnitude) larger capacity.
+
+Practically, all storage can be divided into 3 tiers:
 - Internal: CPU registers and several levels of cache (SRAM)
 - Primary storage: main system memory (DRAM)
 - Secondary storage (SDD, HDD)
 
 Each tier can further be divided into its own hierarchy based on response times, and even though significant improvements are made (for example in the secondary storage with SSD pushing aside the traditional rotating disks) there is still a huge gap in terms of responsiveness and speed between adjacent memory tiers.
 
-> One way to increase system performance is minimizing how far down the memory hierarchy one has to go to fetch the data.
+One way to increase system performance is minimizing how far down the memory hierarchy one has to go to fetch the data.
+
 
 The following table illustrates this:
-
 
  ns         | cycles | notes
 -----------:|-------:|-----------------
@@ -36,11 +41,3 @@ These values may not precise, but they illustrate the speed ratios well enough. 
 
 It takes 1 clock cycle for CPU to execute a simple instruction, and at 3 GHz, 1 cycle is 0.3ns (a light beam travels approximately 10cm during that time). Electronic signals, depending a many factors, travel through circuitry at 50–99% of the speed of light.
 
-The cache
-
-
-## References
-- https://www.wikipedia.com/en/Memory_hierarchy
-- http://duartes.org/gustavo/blog/post/what-your-computer-does-while-you-wait/
-- http://people.eecs.berkeley.edu/~rcs/research/interactive_latency.html
-- https://developers.redhat.com/blog/2016/03/01/reducing-memory-access-times-with-caches/

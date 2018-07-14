@@ -1,5 +1,6 @@
-# Bit
+## Units of information
 
+## Bit
 A bit is the unit of information. The name "bit" is a portmanteau of binary digit, although it is not the same: a binary digit is a number that can take one, out of two possible values (0 or 1), whereas a bit is the maximum amount of information that can be conveyed by a binary digit. By analogy, a binary digit is like a container, whereas information is the amount of matter in the container. One bit is typically defined as the information entropy of a random binary variable that is 0 or 1 with equal probability, or the information that is gained when the value of such variable becomes known.
 
 > The most significant digit in a byte is bit#7 and the least significant digit is bit#0, otherwise known as **msb** and **lsb** respectively in lowercase; lsb is always bit#0, msb varies. **MSB** (uppercase) is the most significant byte.

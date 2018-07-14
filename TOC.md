@@ -1,108 +1,117 @@
-# TOC
+# Topics
 
-## Type
-- Type Systems
-- Data Types
-- Algebraic Data Types
+## CS
+
+### Architecture
+- Architecture
+- Microarchitecture
+- Instruction Set
+- x86
+- x86_64
+- CPU
+- CPU Cache
+- CPU Registers
 
 
-- Binary relations
-  - Partial ordering
-  - Equivalence relation
-  - Partial equality
-  - Partial equivalence relation
-
-- Hashing
-- Unicode
+### Memory
+- Memory hierarchy
 - Memory management
-  - Memory hierarchy
-  - Types of memory (SRAM, DRAM)
-  - Address space
-  - Calling convention
-  - The Stack
-  - The Heap
-  - Alignment
-  - Word
-  - Pointer
-  - Program memory
-  - CPU
-  - Registers
-  - Cache
-- Programming
-- Programming Paradigms
-  - Inheritance
-  - Interface
-  - Polymorphism
-  - Generics
-  - Reflection
-
-
-Programming
-- Value
-  - Memory type (stack, heap)
-  - type of value
-- Variable
-  - Variable name
-- Declaration
-  - Symbol table
-  - Variable Declaration
-    - Identifier
-    - Data Type
-    - Scope
-    - Lifetime
-    - Mutability
-    - Memory type (stack, heap)
-    - Privacy, Visibility
-- Binding
-- Assignment
-- Aliasing
-Reference
-Pointer
-Operator
-Expression
-Statement
-Computer program
-Formal language
-Grammar
-Syntax
-Semantics
-Context-free grammar
-Loader
-Compiler
-Machine code
-
-Memory
+- Memory types (SRAM, DRAM)
 - Memory address
-- Hierarchy
-- Memory type: SRAM, DRAM
+- Memory Alignment
+- Program memory
+- [Word](cs/word.md)
+- The Heap
+- The Stack
+- Calling convention
+- Aliasing
+- Assignment
+- Binding
+- Declaration
+- Identifier
+- Lifetime
+- Mutability
+- Operator
+- Pointers
+- Privacy
+- Reference
+- Scope
+- Symbol table
+- Value
+- Variable
+- Variable Declaration
+- Visibility
+- Local variable
+- Non-local variable
+- Global variable
+- Declaration
+- Forward declaration
+- volatile
+- static
+- constant
 
 
-- Memory management
-  - Pointers
-  - Address space
-  - Alignment
-  - The Stack
-  - The Heap
-- Programming Paradigms
-  - Inheritance
-  - Interface
-  - Polymorphism
-  - Generics
-  - Reflection
-- Low Level
-  - ISA, x86
-  - Compilers, IR, Object code
+
+### Type System
+- Data
+- Type Systems
+- Type safety
+- Data Type
+- Algebraic Data Types
+- Dynamic Types
+- Aggregate types
+- type checking
+- type inference
+- type annotation
+- type ascription
 
 
-## Core
-- Low level
-  - ISA, x86
-  - Compilers, IR, Object code
-  - The Rust Language
-  - The Compiler
-  - HIR, MIR, LLVM IR
-  - Internals
-  - Feature Gates
+### Programming Language
+- Formal language
+- Grammar
+- Context-free grammar
+- Syntax
+- Semantics
+- Expression
+- Statement
+- Language construct
+
+### Programming Paradigms
+- Inheritance
+- Interface
+- Polymorphism
+- Generics
+- Reflection
+
+### Computer Program
+- Loader
+- Linker
+- Compiler
+- Machine code
+- Intermediate Representation
+- Object code
+
+
+### unsorted
+- Boolean algebra
+- Binary relations
+- Partial ordering
+- Equivalence relation
+- Partial equality
+- Partial equivalence relation
+- Hashing
+- Hash function
+- Unicode
+- Referential transparency
+
+
+
+
+## Rust
+- The Compiler
+- HIR, MIR, LLVM IR
+- Internals
+- Feature Gates
 - Libraries
   - core
   - alloc
@@ -113,9 +122,7 @@ Memory
   - rustup
   - rustdoc
 - Third Party Crates
-
-
-## Syntax
+- Syntax
 - Attributes
 - Comments
 - Constraints
@@ -129,9 +136,7 @@ Memory
 - Literals
 - Macros
 - Operators
-- Syntax
-
-## Semantics
+- Semantics
 - Ownership
 - Binding
 - Move
@@ -143,8 +148,7 @@ Memory
 - Lifetimes
 - Iterators
 - Visibility
-
-## Primitives
+- Primitives
 - Scalars
   - booleans
   - integers
@@ -160,8 +164,7 @@ Memory
   - Slices
     - slice
     - string slice
-
-## Types
+- Rust Types
 - Categories
 - Unit
 - Never
@@ -170,8 +173,7 @@ Memory
 - Zero Sized Types
 - Empty Types
 - Top
-
-## Modules
+- Rust Modules
 - methods on primitives
 - types and methods
   - Option
@@ -184,39 +186,22 @@ Memory
 - traits
 - env and IO
 - other modules
-
-## Traits
+- Rust Traits
 - Index
 - Index by module
 - Derivable traits
 - Display
-
-## Items
-- Lang Items
-- extern crate declarations
-- extern blocks
-- use declarations
-- modules
-- constant items
-- static items
-- function definitions
-- type definitions
-- struct definitions
-- enum definitions
-- union definitions
-- trait definitions
-- implementations
-
-
-## Appendix
-- Glossary
-- Terminology
-- Abbreviations
-- Pages
-- Index
-
-
-## Links
-- Official
-- Community
-- Resources
+- Rust Lang Items
+  - extern crate declarations
+  - extern blocks
+  - use declarations
+  - modules
+  - constant items
+  - static items
+  - function definitions
+  - type definitions
+  - struct definitions
+  - enum definitions
+  - union definitions
+  - trait definitions
+  - implementations
