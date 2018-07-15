@@ -20,7 +20,7 @@
 - Memory address
 - Memory Alignment
 - Program memory
-- [Word](cs/word.md)
+- Word
 - The Heap
 - The Stack
 - Calling convention

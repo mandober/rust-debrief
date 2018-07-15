@@ -1,18 +1,18 @@
 # Registers
 
-There are 10 32-bit and 6 16-bit processor registers in IA-32 architecture.
-
-The registers are grouped into:
-- General
-  - Data
-  - Pointer
-  - Index
-- Control
+The registers usually form the groups:
+- General purpose registers (GPR)
+  - Data registers
+  - Pointer registers
+  - Index registers
+- Control registers
 - Segments (.bss, .data, .text)
+
+There are ten 32-bit and six 16-bit processor registers in IA-32 architecture.
 
 
 ## Data Registers
-4 32-bit data registers are used for arithmetic, logical, and other operations.
+The four 32-bit data registers are used for arithmetic, logical, and other operations.
 
 These 32-bit registers can be used in 3 ways:
 - 4*32b: E{A,B,C,D}X as complete 32-bit regs
@@ -35,11 +35,11 @@ FF       1F         F    7    0
 
 EIP, ESP, EBP: 32-bit and corresponding 16-bit lower portions IP, SP, BP.
 
-- IP: Instruction Pointer  
+- __IP: Instruction Pointer__  
 The 16-bit IP register stores the offset address of the next instruction to be executed. IP in association with the CS register (as CS:IP) gives the complete address of the current instruction in the code segment.
-- SP: Stack Pointer   
+- __SP: Stack Pointer__   
 The 16-bit SP register provides the offset value within the program stack. SP in association with the SS register (SS:SP) refers to be current position of data or address within the program stack.
-- BP: Base Pointer   
+- __BP: Base Pointer__   
 The 16-bit BP register mainly helps in referencing the parameter variables passed to a subroutine. The address in SS register is combined with the offset in BP to get the location of the parameter. BP can also be combined with DI and SI as base register for special addressing.
 
 
@@ -70,7 +70,7 @@ The common flag bits are: `ZODIACPTS`
 
 
 ## Segment Registers
-Segments are specific areas defined in a program for containing data, code and stack. 
+Segments are specific areas defined in a program for containing data, code and stack.
 
 There are 3 main segments:
 - Code Segment contains all the instructions to be executed. A 16-bit Code Segment register (CS) stores the starting address of the code segment.

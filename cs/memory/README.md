@@ -9,11 +9,13 @@ Memory Management levels (with some overlap):
 
 Hardware level
 - [Memory hierachy](memory-hierarchy.md)
-- [Memory address register](./mar.md)
-- [Registers](registers.md)
-- [Cache](cache.md)
 - [Memory types](memory-types.md)
+- [Cache](cache.md)
+- [Memory address register](mar.md)
+- [Registers](registers.md)
+
 - [Word](word.md)
+
 
 OS level
 - [Memory model](./memory-model.md)

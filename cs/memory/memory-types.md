@@ -1,14 +1,29 @@
 # Memory Types
 
 
-## SRAM
-A common SRAM cell consists of 6 transistors. The cell gives a nearly perfect rectangular signal (it can quickly change between the two states) representing 0 or 1. The state is available for reading immediately. SRAM (Static RAM) is orders of magnitude faster than DRAM, but also more expensive due to production complexity. The SRAM cell needs individual constant power for the transistors that maintain the state; therefore, the cell state is stable and no refresh cycles are needed.
+
+## Static random access memory (SRAM)
+
+A common SRAM cell consists of 6 transistors. The cell gives a nearly perfect rectangular signal, it quickly changes between the two states, representing 0 and 1. The state is immediately available for reading.
+
+SRAM is orders of magnitude faster than DRAM, but also more expensive due to production complexity. The SRAM cell needs individual constant power for the transistors that maintain the state, making the cell state is stable, so no refresh cycles are needed, as opposed to DRAM.
 
 
-## DRAM
-A common DRAM cell consists of one capacitor and one transistor. The former keeps the state while the latter guards the access. The problem is the capacitor drains ("leaks") too quickly, so the cell must be constantly refreshed - every 64ms (most DRAM chips in 2008). During the refresh cycle no access to the memory is possible. The second problem, resulting from the tiny charge of the capacitor, is that the signal (charge) from the cell is not directly usable - it must be sent through a sense amplifier, which can distinguish between a stored 0 or 1 over the whole range of charges which still have to count as 1. The third problem is that charging and draining a capacitor is not instantaneous. The signals received by the sense amplifier are not rectangular, so a conservative estimate as to when the output of the cell is usable has to be used.
+## Dynamic random access memory (DRAM)
 
-## DRAM Access
+A common DRAM cell consists of one capacitor and one transistor. The former keeps the state while the latter guards the access.
+
+The problem is the capacitor drains ("leaks") too quickly, so the cell must be constantly refreshed - every 64ms (most DRAM chips in 2008). During the refresh cycle no access to the memory is possible.
+
+The second problem, resulting from the tiny charge of the capacitor, is that the signal (charge) from the cell is not directly usable. Unlike the SRAM's, the signal is not even close to rectangular shape so it first must be picked up by a sense amplifier that tries to distinguish a concrete value (0 or 1) over a whole range of charges. The third problem is that charging and draining a capacitor is not instantaneous.
+
+
+
+---
+
+## Addressing
+
+## DRAM access
 A program selects a memory location using a virtual address. The processor translates this into a physical address and finally the memory controller selects the RAM chip corresponding to that address. To select the individual memory cell on the RAM chip, parts of the physical address are passed in the form of a number of address lines.
 
 Addressing memory locations individually would be impractical: 4GB of RAM would require 2^32 address lines; instead the address is passed encoded as a binary number using a smaller set of address lines.
@@ -38,6 +53,8 @@ For instance, `2-3-2-8-T1`:
 - z=8 Active to Precharge delay (tRAS)
 - T=1 Command Rate
 
+
+---
 
 > Excerpts from ["What every programmer should know about memory"][am] by Ulrich Drepper, 2007-09-21
 

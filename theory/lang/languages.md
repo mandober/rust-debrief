@@ -1,6 +1,4 @@
-# CS
-
-Programming languages
+# Programming languages
 
 
 ## Design principles

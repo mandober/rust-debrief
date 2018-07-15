@@ -1,4 +1,9 @@
-# Finite-state machine
+# Automata
+
+## Stack machine
+In some cases, a stack machine refers to a type of computer, while in other cases to a software scheme that simulates a stack machine. The main difference from other computers is that most of its instructions operate on a pushdown stack of numbers rather than numbers in registers. Most computers implement a stack in some form to pass parameters and link to subroutines - this does not make them stack machines. The common alternatives to stack machines are register machines, in which each instruction explicitly names specific registers for its operands and result.
+
+## Finite-state machine
 
 A finite-state machine (FSM) or finite-state automaton (FSA, plural: automata), finite automaton, or simply a state machine, is an abstract machine that can be in exactly one of a finite number of states at any given time. The FSM can change from one state to another in response to some external inputs; the change from one state to another is called a transition. An FSM is defined by a list of its states, its initial state, and the conditions for each transition.
 
