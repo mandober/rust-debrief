@@ -1,4 +1,5 @@
 # Classes of Data types
+
 https://www.wikiwand.com/en/Data_type
 
 

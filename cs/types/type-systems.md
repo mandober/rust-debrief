@@ -1,5 +1,4 @@
 # Type systems
-https://www.wikiwand.com/en/Comparison_of_programming_languages_by_type_system
 
 At the lowest level, **data** is just a stream of bits without inherent structure, open to arbitrary interpretation. For example, in an unconstrained access to data, a bit pattern representing an integer can be reinterpreted as it were representing a character.
 
@@ -27,7 +26,3 @@ In order to perform type checking, a (static) type system requires that all valu
 
 In contrast to manual type annotation, **type inference** is identification of data types entirely performed by the compiler, where the type of value is deduced from the context at compile-time. The ability of language (i.e. its compiler) to infer types makes programming easier, allowing the programmer to omit type annotations while still enjoying the benefits of type checking.
 
-
----
-
-Adapted (mostly) from Wikipedia

@@ -5,22 +5,33 @@ Rust by bullet point: from summary to particularity
 - [GitBooks](https://mandober.gitbooks.io/rust-debrief)
 
 Hoarding Rust    
-articles, posts, notes, tips, listings, indices, maps, references, cheat-sheets and other products of my Rust accretion, gathered by rummaging through official resources (API reference, the Old and the New Book, Rust Reference, The Rustonomicon, The Unstable Book, Rust by Example, The Rust Cookbook, Internals and User Forum, The Grammar, The Style guide, The Cargo Book, Rust official blog, The API Guidelines, The Error Index, RFCs, the FAQ, The Compiler Guide, Rust Edition Guide, etc.) and many other sources.
+articles, posts, notes, tips, listings, indices, maps, references, cheat-sheets and other products of my Rust accretion. Many concepts are still verbatim copies of the original articles or their excerpts, waiting to be digested, analyzed, summarized, classified, or at least properly linked.
 
-Status    
-Many concepts are verbatim copies of the articles or their excerpts, waiting to be classified, digested, summarized and properly linked.
+Material    
+mostly gathered by rummaging through official channels (API reference, the Old and the New Book, Rust Reference, The Rustonomicon, The Unstable Book, Rust by Example, The Rust Cookbook, Internals and User Forum, The Grammar, The Style guide, The Cargo Book, Rust official blog, The API Guidelines, The Error Index, RFCs, the FAQ, The Compiler Guide, Rust Edition Guide, etc.) and many other encountered resources.
 
 Purpose    
-Trying to get a better grasp on the huge Rust universe (and beyond, towards CS in general), in order to get a better insight of what is available, where it is located and how it all fits together.
+Trying to get a better grasp on the huge Rust universe (and beyond, towards CS in general), an insight of what is available, where it's located and how it all fits together. An attempt to extract essentials in the form of bullet-point summary, followed by detailed explanation (consolidation through explanation learning principle).
 
-Meta    
+Meta
 - lang: Rust
+- type: reference
 - tagline: Rust by bullet point - from summary to particularity
-- tagline: Hoarding any and all info about Rust I get my hands on
 - GitHub: https://github.com/mandober/rust-debrief
 - GitBooks (legacy): https://mandober.gitbooks.io/rust-debrief
 - GitBooks: https://devrev.gitbook.io/rust-debrief/
 
-Research     
-- collapsible mind-map of std items
-- metacrate re-exporting the established, nearly-std, crates (rand, serde, etc.), while mimicking std paths
+
+
+
+
+
+Research. 
+Collapsible mind-map of all std items.
+Canonical solution: index of crates, de facto standards for common tasks (common traits, numbers, terminal, random, regex, serialization, etc.).
+Meta-crate, re-exporting from those well-established crates, complementing std, mimicking std paths.
+
+
+{% hint style='info' %}
+Info note experiment take 1
+{% endhint %}

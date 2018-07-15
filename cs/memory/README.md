@@ -1,11 +1,6 @@
 # Memory
 
-Memory Management levels (with some overlap):
-* Hardware level
-* OS level
-* Application level
-
-- [Memory management](memory-management.md)
+[Memory management](memory-management.md)
 
 Hardware level
 - [Memory hierachy](memory-hierarchy.md)
@@ -13,9 +8,7 @@ Hardware level
 - [Cache](cache.md)
 - [Memory address register](mar.md)
 - [Registers](registers.md)
-
 - [Word](word.md)
-
 
 OS level
 - [Memory model](./memory-model.md)
@@ -36,5 +29,5 @@ Application level
 - [Memory safety](./memory-safety.md)
 - [Memory leak](memory-leak.md)
 - [program-memory](program-memory.md)
-  - Code segment
-  - Data segment
+- Code segment
+- Data segment

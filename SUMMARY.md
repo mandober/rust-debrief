@@ -4,7 +4,35 @@
 
 
 ## Memory
-- [Memory Management](cs/memory/README.md)
+- [Memory](cs/memory/README.md)
+- [Memory Management](cs/memory/memory-management.md)
+
+Hardware level
+- [Memory hierachy](cs/memory/memory-hierarchy.md)
+- [Memory types](cs/memory/memory-types.md)
+- [Cache](cs/memory/cache.md)
+- [Memory address register](cs/memory/mar.md)
+- [Registers](cs/memory/registers.md)
+- [Word](cs/memory/word.md)
+
+OS level
+- [Memory model](cs/memory/memory-model.md)
+- [Memory protection](cs/memory/memory-protection.md)
+- [Virtual memory](cs/memory/virtual-memory.md)
+- [Segmentation fault](cs/memory/segmentation-fault.md)
+- [Address space](cs/memory/address-space.md)
+- [Memory address](cs/memory/memory-address.md)
+- [Physical address](cs/memory/physical-address.md)
+
+Application level
+- [Manual memory management](cs/memory/memory-management-manual.md)
+- [Garbage collection](cs/memory/memory-management-gc.md)
+- [Memory allocation](cs/memory/memory-allocation.md)
+- [Stack based allocation](cs/memory/memory-allocation-stack-based.md)
+- [Dynamic memory allocation](cs/memory/memory-allocation-dynamic.md)
+- [Memory safety](cs/memory/memory-safety.md)
+- [Memory leak](cs/memory/memory-leak.md)
+- [program-memory](cs/memory/program-memory.md)
 
 
 ## Language
@@ -12,14 +40,11 @@
 - Definition
 
 ## Type System
-- Type Systems theory/type-systems/type-systems.md 
-- Data Types theory/types/data-types.md
-
-## Relations
-- Binary relations theory/math/binary-relations.md
+- Type Systems
+- Data Types
 
 
-## Syntax
+# Rust Syntax
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
 - [Conventions](syntax/conventions.md)
@@ -45,9 +70,9 @@
 - [Unit](primitives/unit/unit.md)
 - [Never](primitives/never/never.md)
 
-## Types
+## Rust Types
 - Classification
-- Annotation](types/type-annotation.md)
+- Annotation
 
 ## Modules
 - [collections](modules/collections/README.md)
