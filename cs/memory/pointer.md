@@ -1,24 +1,18 @@
 # Pointers
 
-## Pointer
-
-- a variable is a named memory area
-
-
-
-To a 64-bit process running on x86_64 architecture on a computer equipped with the maximum allowed amount of memory i.e. 2 EiB (2,048 PiB or 2,097,152 TiB), memory is presented as an array, with byte-sized cells, which is indexed from zero to 2^64-1, which in hex is: `0 - 1FFF FFFF FFFF FFFF`.
-
-
-The minimum addressable size (unit of memory) is a byte.
-
 A value consisting of a single byte (e.g. `char`) gets stored at some memory address. To read that value only that single memory address is needed.
 
-sequence of bytes located at some memory addresses, is realized through the use of variables.
+Access to the sequence of bytes located at some memory addresses, is realized through the use of variables.
+
+A variable is a named range of memory blocks; it only refers to the first byte of that chunk, but the compiler knows its size (i.e. it knows how much bytes it actually refers to) by its type.
+
+A pointer, being a variable, has a name and type; its type (base type) is the same type as that of a value (variable) it points to. Its direct value is a memory address which it gets via "address of" operator from a variable; its indirect value is the value beginning at that memory address. 
+
+A pointer points to a single memory address, but its base type determines how many bytes to access from there on.
 
 
-A variable is a named (n byte-sized) chunk of memory; it only refers to the first byte of that chunk, but the compiler knows its size (i.e. it knows how much bytes it actually refers to) by its type. A pointer, being a variable, has a name and type; its type (base type) is the same type as that of a value (variable) it points to. Its direct value is a memory address which it gets via "address of" operator from a variable; its indirect value is the value beginning at that memory address. A pointer points to a single memory address, but its base type determines how many bytes to access from there on.
+> For example, a variable of pointer to `int` type points to a single memory address, but if `int` is 4 bytes long (depending on the implementation and platform) the pointed to byte at that address plus the next 3 bytes are accessed to form a value of `int` type. In the case of `char`, whose size is always 1 byte, it is just the pointed to byte that is accessed.
 
-For example, a variable of pointer to `int` type points to a single memory address, but if `int` is 4 bytes long (depending on the implementation and platform) the pointed to byte at that address plus the next 3 bytes are accessed to form a value of `int` type. In the case of `char`, whose size is always 1 byte, it is just the pointed to byte that is accessed.
 
 The size of a pointer variable is the same regardless of its base type, but the size of memory (in byte-sized chunks) that will be accessed when retrieving the pointed to data depends on the base type of the pointer variable.
 
@@ -27,6 +21,7 @@ In a way, types in C could be ordered horizontally and vertically: all non-point
 A pointer has its own type and the base type, which is the type of value it points to, so the base type of `(char *)` is `char` (1 byte is accessed), but the base type of `(char **)` is `(char *)` (8 bytes on x64 are accessed), and for `(char ***)` the base type is `(char **)`(again, 8 bytes @ x64); the base types for  
 
 All (valid) pointers store a memory address, so they all have the same size. That size is determined by architecture of the host platform; in x32 systems it is 4 bytes and in x64 it is 8 bytes. The size of pointer needs to be big enough to accommodate the biggest available memory address (on a given platform).
+
 
 Pointers contain a number that represents a memory location, and in that regard they are all the same - it is the type system that constrains them to a certain type, classifying them as pointers to integers, to characters, to a user-defined type, etc. The compiler will complain if a pointer to, for example, an integer is assigned the address of a float. Nevertheless, they can easily change their (base) type by casting.
 
@@ -46,22 +41,30 @@ Pointers contain a number that represents a memory location, and in that regard 
 
 <!-- /TOC -->
 
+
 A variable is a memory address paired with an associated symbolic name that contains some quantity of information referred to as a value. Using that symbolic name (the name of a variable) is the usual way to reference the stored value. The "value of variable" is given by the corresponding mapping in the symbol table in the environment.
 
 A pointer is a primitive whose value is a memory address.
 
 If that memory address designates a valid value
 
+refers to another value in the memory using its memory address.
 
-refers to ("points to") another value in the memory using its memory address.
 
 A pointer references a location in memory, and obtaining the value stored at that location is known as dereferencing the pointer.
 
-A memory pointer (or just pointer) is a primitive, whose value is intended to be used as a memory address; a pointer points to a memory address; a pointer points to a data in memory when the pointer's value is the data's memory address.
+A pointer is a primitive, whose value is intended to be used as a memory address. 
 
-More generally, a pointer is a kind of reference, it references a datum stored somewhere in memory; to obtain that datum is to dereference the pointer. The feature that separates pointers from other kinds of reference is that a pointer's value is meant to be interpreted as a memory address, which is a rather low-level concept.
+a pointer holds a memory address, thereby it points to a data in memory when the pointer's value is the data's memory address.
+
+
+More generally, a pointer is a kind of reference, it references a datum stored somewhere in memory; to obtain that datum is to dereference the pointer. 
+
+The feature that separates pointers from other kinds of reference is that a pointer's value is meant to be interpreted as a memory address, which is a rather low-level concept.
+
 
 References serve as a level of indirection: a pointer's value determines which memory address (that is, which datum) is to be used in a calculation. Since indirection is a fundamental aspect of algorithms, pointers are often expressed as a fundamental data type in programming languages; in statically (or strongly) typed programming languages, the type of a pointer determines the type of the datum to which the pointer points.
+
 
 *in data structures*
 When setting up data structures like lists, queues and trees, it is necessary to have pointers to help manage how the structure is implemented and controlled. Typical examples of pointers are start pointers, end pointers, and stack pointers. These pointers can either be absolute (the actual physical address or a virtual address in virtual memory) or relative (an offset from an absolute start address ("base") that typically uses fewer bits than a full address, but will usually require one additional arithmetic operation to resolve).

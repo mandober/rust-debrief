@@ -10,6 +10,10 @@ The registers usually form the groups:
 
 There are ten 32-bit and six 16-bit processor registers in IA-32 architecture.
 
+## Processor register
+Processor register is a quickly accessible location available to a computer's central processing unit (CPU). Registers usually consist of a small amount of fast storage. Computers load data from memory into registers where they can manipulate it. Manipulated data is then often stored back to main memory, either by the same instruction or by a subsequent one. Registers are normally at the top of the memory hierarchy, and provide the fastest way to access data. Allocating frequently used variables to registers can be critical to a program's performance; this register allocation is performed either by a compiler in the code generation phase.
+
+
 
 ## Data Registers
 The four 32-bit data registers are used for arithmetic, logical, and other operations.

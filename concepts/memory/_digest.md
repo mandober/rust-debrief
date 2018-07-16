@@ -1,4 +1,3 @@
-# Rust digest
 
 
 
@@ -42,17 +41,6 @@ mutable (exclusive) borrowing of value locks the value 🔒
 ```
 
 the original object is effectively locked for the duration of the borrow, rendering it unusable.
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -13,8 +13,8 @@
   - given a _shared ref_ of iterable, `into_iter` returns the iterator that produces shared references to its elements.
   - given a _mutable ref_ of iterable, `into_iter` returns the iterator that produces mutable references to its elements.
   - given an iterable by _value_, `into_iter` returns the iterator that takes ownership of the iterable and returns its elements by value.
-- Iterator adaptors produce other iterators; they can be chained.
-- Consuming adaptors are methods that consume the iterator by calling its `next` method, thereby using the iterator up.
+- _Iterator adaptors_ produce other iterators; they can be chained.
+- _Consuming adaptors_ are methods that consume the iterator by calling its `next` method, thereby using the iterator up.
 
 
 
@@ -49,22 +49,11 @@ println!("{:?}", iter.next()); // ok
 ## Adaptors
 
 - __Consuming adaptors__ are methods that consume iterator. Methods that call the `next` method are consuming adaptors, since calling them uses up the iterator.
-- __Iterator adaptors__ are methods that produce other iterators. These methods transform iterators into different kind of iterators and allow for chaining of multiple calls to iterator adaptors. In the end, they require a call to one of 
-consuming adaptor methods in order to collect results.
+- __Iterator adaptors__ are methods that produce other iterators. These methods transform iterators into different kind of iterators and allow for chaining of multiple calls to iterator adaptors. In the end, they require a call to one of consuming adaptor methods in order to collect results.
 
 
-## Iterators are lazy
-
-Producing an iterator doesn't do anything until it is consumed, either with a `for` loop or with a consumer method.
-
-```rust
-vec1.par_iter()
-    .zip(vec2.par_iter())
-    .map(|(i, j)| i * j)
-    .sum()
-```
-
-
+## Laziness
+Producing an iterator doesn't do anything until it is consumed.
 
 
 

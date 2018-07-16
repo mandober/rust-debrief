@@ -32,6 +32,42 @@ Canonical solution: index of crates, de facto standards for common tasks (common
 Meta-crate, re-exporting from those well-established crates, complementing std, mimicking std paths.
 
 
+---
+
+__Call-out boxes__
+
 {% hint style='info' %}
 Info note experiment take 1
 {% endhint %}
+
+{% hint style='warning' %}
+Info note experiment take 1
+{% endhint %}
+
+{% hint style='error' %}
+Info note experiment take 1
+{% endhint %}
+
+{% hint style='danger' %}
+Info note experiment take 1
+{% endhint %}
+
+
+__Include file__
+
+
+import file 1: should include article about WORD
+{% include "cs/memory/word.md" %}
+
+
+import file 2: should include article about VALUES
+@import "cs/memory/variable.md"
+
+
+import file 2: should include article about POINTERS
+<!-- @import "cs/memory/pointer.md" -->
+
+
+
+
+

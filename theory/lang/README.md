@@ -7,7 +7,6 @@
 - [symbol-table](./symbol-table.md)
 - [aliasing](./aliasing.md)
 - [assignment](./assignment.md)
-- [signature](./signature.md)
 - [paradigms](./paradigms.md)
 - [polymorphism](./polymorphism.md)
 - [traits](./traits.md)

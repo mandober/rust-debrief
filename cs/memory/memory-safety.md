@@ -1,5 +1,14 @@
 # Memory Safety
 
+There are two common classes of memory safety:
+1. Spatial memory safety    
+   guarantees that one can not get out of bounds of the claimed memory blocks.
+2. Temporal memory safety    
+   ensures that it's impossible to dereference memory that has already been freed.
+
+
+---
+
 [Memory Safety in Rust: A Case Study with C | Will Crichton](http://willcrichton.net/notes/rust-memory-safety/)
 
 

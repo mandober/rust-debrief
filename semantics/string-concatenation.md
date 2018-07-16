@@ -10,3 +10,8 @@ add &strs using format!
 let str1 = "hello ";
 let str2 = "world!";
 let message = format!("{}{}", str1, str2);
+
+
+---
+String literal concatenation
+https://en.wikipedia.org/w/index.php?title=String_literal&action=edit&section=15

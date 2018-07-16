@@ -1,8 +1,4 @@
-# CS
-
-- [Algebraic Data Types](algebraic-data-types.md)
-
-
+# Types
 
 - Type Systems
   - Data Types

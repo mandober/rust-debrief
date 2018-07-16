@@ -35,6 +35,8 @@ Manual memory management requires the programer to annotate the lifetimes.
 
 The memory ocupied by a Rust program is split into two distinct areas: the heap and the sack. Simply put, the stack contains primitive variables, while the heap stores complex types; a heap can grow until the available memory is exhausted. The stack is faster, but may not grow without limits. Every binding in Rust is on the stack, but those bindings may refer to things in the heap, and elsewhere.
 
+
+
 ---
 
 http://www.electronicdesign.com/blog/reflections-rust

@@ -79,11 +79,21 @@ Any type that does not specify an implementation is an abstract data type. For i
 ## Algebraic data type
 Algebraic data type is a kind of composite type, a type formed by combining other types. Two common classes of algebraic types are product types and sum types, also called tagged or disjoint unions or variant types.
 
+## Abstract Syntax Tree
+Abstract syntax tree (AST) is abstract syntactic structure of the source code,
+representing the structure of the program. This tree data sturture is an intermediate product of compilation, where each node of the tree denotes a construct occurring in the source code. As a ballpark example, an expression `x = 6` would have a subroot node, named "=", with two children, "x" and "6".
+
 ## Aliasing
 Aliasing is situation in which a data location in memory can be accessed through different symbolic names in the program; modifying the data through one name implicitly modifies the value associated with all aliased names, which may not be expected. As a result, aliasing makes it particularly difficult to understand, analyze and optimize programs. Rust allows read-only aliasing.
 
+## Alignment
+Alignment is the way a data structure (value, object) is layed-out and accessed in memory. A memory access is aligned when the address of data is a multiple of its size. It specifies what addresses must be used to store a particular value. It is always a power of two.
+
 ## Application Binary Interface
 ABI defines how to call a function at the assembly level. Languages define which ABI the external function uses to call its code.
+
+## Arity
+Arity refers to the number of arguments a function or operator takes. Languages that support automatic partial application, only have unary functions. Such functions are unary (arity is 1); functions that take two arguments are binary; generally all functions are n-ary.
 
 ## Assembly
 An assembler language (asm), is a low-level programming language in which there is a very strong, but often not one-to-one, correspondence between the language and the architecture's machine code instructions. Assembly language may also be called symbolic machine code.
@@ -148,8 +158,14 @@ Generic programming is a style of programming in which algorithms are written in
 ## HRTB
 Higher-ranked trait bound
 
+## Hungarian notation
+It is a variable-naming convention that reminds the user what type the variable has, by prefixing its name with a mnemonic.
+
 ## ICE
 Internal compiler error: an internal assertion failure in the compiler, which always indicates a bug in the compiler.
+
+## Initialization
+A variable is initialized if it has been assigned a value and hasn't since been moved from. All other memory locations are assumed to be initialized. Only unsafe Rust can create such a memory without initializing it.
 
 ## Inlining
 1. Function:
@@ -194,6 +210,9 @@ That way the code size is increased (occasionally referred to as _code bloat_), 
 ## Newtype
 A tuple structure with a single unnamed field. Used to create type wrappers. For example: `struct Meter(i32)`. 
 
+## Nominal Types
+Types that can be referred using a path directly. Specifically enum, struct, union and trait object.
+
 ## Opaque data type
 An opaque data type is a data type whose concrete data structure is not defined in an interface. This enforces information hiding, since its values can only be manipulated by calling subroutines. Typical examples of opaque data types include handles for miscellaneous resources.
 
@@ -216,6 +235,9 @@ A polymorphic type is one whose operations can also be applied to values of some
 ## Polymorphism
 Polymorphism is the provision of a single interface to entities of different types.
 
+## Prelude
+Prelude defines a set of commonly and frequentlly used language items that is implicitly imported.
+
 ## Reentrant
 A function is reentrant if it can be interrupted in the middle of its execution, and then be safely called again ("re-entered") before its previous invocations complete execution.
 
@@ -226,7 +248,10 @@ Reflection is the ability of a program to examine, introspect, and modify its ow
 A reference is a value that enables an indirect access a particular data; it refers to some data and accessing that data is called dereferencing the reference. A reference is distinct from the data itself. A reference may be implemented as the physical address of where the data is stored in memory; due to this, it is often confused with a pointer, but a reference may also be implemented in other ways, such as the offset between the data's address and some fixed "base" address, as an index into an array, or more abstractly as a handle; more broadly, in networking, a reference may be a network address such as URL.
 
 ## Rust
-The Rust language gets its name (possibly) after a fungi that is very robust, distributed (non-single-cellular), and parallel (reproduction). [Source](https://www.reddit.com/r/rust/comments/27jvdt/internet_archaeology_the_definitive_endall_source/)
+(assumed) The Rust language gets its name after a fungi that is very robust, distributed (non-single-cellular), and has parallel reproduction. [Source](https://www.reddit.com/r/rust/comments/27jvdt/internet_archaeology_the_definitive_endall_source/)
+
+## Sigil
+A sigil is a symbol attached to a variable name, presenting some attribute of variable (datatype, scope, etc.), usually in prefix position; e.g. `$foo` where `$` is the sigil.
 
 ## Slice
 A slice is a view into some contiguous storage. Slice is a fat pointer; the information that completes a slice is the number of elements it points to.
