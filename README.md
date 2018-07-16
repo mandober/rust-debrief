@@ -26,51 +26,10 @@ Meta
 
 
 
-Research. 
+Research.
 Collapsible mind-map of all std items.
 Canonical solution: index of crates, de facto standards for common tasks (common traits, numbers, terminal, random, regex, serialization, etc.).
 Meta-crate, re-exporting from those well-established crates, complementing std, mimicking std paths.
 
 
----
-
-__Call-out boxes__
-
-{% hint style='info' %}
-Info note experiment take 1
-{% endhint %}
-
-{% hint style='warning' %}
-Info note experiment take 1
-{% endhint %}
-
-{% hint style='error' %}
-Info note experiment take 1
-{% endhint %}
-
-{% hint style='danger' %}
-Info note experiment take 1
-{% endhint %}
-
-
-__Include file__
-
-import file 1: should include article about: attributes
-{% include "syntax/attributes.md" %}
-
----
-
-{% include "syntax/attributes.md" %}
-
----
-
-@import "syntax/attributes.md"
-
----
-
-<!-- @import "syntax/attributes.md" -->
-
-
-
-
-
+{% include "./syntax/attributes.md" %}
