@@ -55,17 +55,20 @@ Info note experiment take 1
 
 __Include file__
 
+import file 1: should include article about: attributes
+{% include "syntax/attributes.md" %}
 
-import file 1: should include article about WORD
-{% include "cs/memory/word.md" %}
+---
 
+{% include "syntax/attributes.md" %}
 
-import file 2: should include article about VALUES
-@import "cs/memory/variable.md"
+---
 
+@import "syntax/attributes.md"
 
-import file 2: should include article about POINTERS
-<!-- @import "cs/memory/pointer.md" -->
+---
+
+<!-- @import "syntax/attributes.md" -->
 
 
 

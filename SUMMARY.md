@@ -61,7 +61,6 @@ Application level
 
 ## Concepts
 - [Lifetimes](concepts/lifetimes/lifetimes.md)
-- [Visibility](concepts/visibility.md)
 - [Iterators](concepts/iterators/iterators.md)
 
 ## Primitives

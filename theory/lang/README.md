@@ -5,7 +5,6 @@
 - [variable](./variable.md)
 - [declaration](./declaration.md)
 - [symbol-table](./symbol-table.md)
-- [aliasing](./aliasing.md)
 - [assignment](./assignment.md)
 - [paradigms](./paradigms.md)
 - [polymorphism](./polymorphism.md)
