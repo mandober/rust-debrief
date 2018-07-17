@@ -3,7 +3,7 @@
 An implementation is an item, defined with the keyword `impl`, that associates (other) items with a particular type. The type in this role is called the implementing type, denoted as `Self`.
 
 There are two types of implementations:
-- [Trait implementation](trait-implementation.md)
+- Trait implementation
 - Inherent implementation
 
 

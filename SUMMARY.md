@@ -5,7 +5,7 @@
 
 ## Memory
 - [Memory](cs/memory/README.md)
-- [Memory Management](cs/memory/memory-management.md)
+- Memory Management](cs/memory/memory-management.md)
 
 Hardware level
 - [Memory hierachy](cs/memory/memory-hierarchy.md)
@@ -25,11 +25,11 @@ OS level
 - [Physical address](cs/memory/physical-address.md)
 
 Application level
-- [Manual memory management](cs/memory/memory-management-manual.md)
-- [Garbage collection](cs/memory/memory-management-gc.md)
+- Manual memory management](cs/memory/memory-management-manual.md)
+- Garbage collection](cs/memory/memory-management-gc.md)
 - [Memory allocation](cs/memory/memory-allocation.md)
-- [Stack based allocation](cs/memory/memory-allocation-stack-based.md)
-- [Dynamic memory allocation](cs/memory/memory-allocation-dynamic.md)
+- Stack based allocation](cs/memory/memory-allocation-stack-based.md)
+- Dynamic memory allocation](cs/memory/memory-allocation-dynamic.md)
 - [Memory safety](cs/memory/memory-safety.md)
 - [Memory leak](cs/memory/memory-leak.md)
 - [program-memory](cs/memory/program-memory.md)
@@ -60,7 +60,7 @@ Application level
 
 
 ## Concepts
-- [Lifetimes](concepts/lifetimes/lifetimes.md)
+- Lifetimes](concepts/lifetimes/lifetimes.md)
 - [Iterators](concepts/iterators/iterators.md)
 
 ## Primitives
