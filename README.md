@@ -23,13 +23,9 @@ Meta
 
 
 
-
-
-
 Research.
 Collapsible mind-map of all std items.
 Canonical solution: index of crates, de facto standards for common tasks (common traits, numbers, terminal, random, regex, serialization, etc.).
 Meta-crate, re-exporting from those well-established crates, complementing std, mimicking std paths.
 
 
-{% include "./syntax/attributes.md" %}

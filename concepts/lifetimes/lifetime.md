@@ -5,7 +5,7 @@
 - Lifetimes are annotated with Generic Lifetime Annotations (GLA)   
   using lowercase, preceded by a single quote, e.g. `'a`
 - GLA tell Rust how GLP relate to each other: they are descriptive, not 
-  prescriptive; borrowchk compares scopes to determine if all exp are valid.
+  prescriptive; borrowck compares scopes to determine if all exp are valid.
 - GLP are mostly tied to references, even through every expression has a 
   lifetime, which is the scope for which it is valid.
 - The same ref with different GLAs are distinct from each other.
@@ -67,7 +67,6 @@ Because of the "or equal" part in this "greater then or equal" relation, it can 
 This is also similar to how it is said that every type is a subtype of itself.
 
 
-
 ## Lifetimes
 
 The basic idea of the borrow checker is that values may not be mutated or moved while they are borrowed. To enforce this, whenever a borrow is created, the compiler assigns the resulting reference a lifetime. This lifetime corresponds to the span of the code where the reference may be used. The compiler infers this lifetime to be the smallest possible while still encompassing all the uses of the reference.
@@ -107,12 +106,6 @@ fn bar() {
 ```
 
 Without the block the push call that mutates the data would error. The block makes the scope of `slice` smaller, thus the resulting lifetime is smaller. Introducing a block like this is kind of artificial, prompting an RFC for Non-Lexical Lifetimes ([NLL](https://github.com/nikomatsakis/nll-rfc/blob/master/0000-nonlexical-lifetimes.md))
-
-
-
-
-
-
 
 
 ---
@@ -202,6 +195,7 @@ fn get() -> &str;
 
 
 ## The static lifetime
+
 The lifetime named `static` is special; a ref with static lifetime is valid throughout the entire program.
 
 ```rust
@@ -220,7 +214,8 @@ let x: &'static u8 = &FOO;
 ```
 
 
-## Lifetimes with structs
+## Structs and lifetimes
+
 Besides owned values, structs can hold references in their fields, but similar to other generics, GLP must be declared first (in the angle brackets) after the name of the struct, so that we can use the GLP in the body of the struct definition.
 
 ```rust
@@ -231,6 +226,7 @@ struct Foo<'a, T> { inner: Option<&'a T> }
 
 
 ## Type distinction
+
 Just like `T` and `&T` are distinct types, so is the reference with a lifetime distinct from the reference without it, even though the referent type is the same. These are all distinct types:  
 `T`, `&T`, `&'a T`, `&'static T`, `&mut T`, `&'a mut T`, `&'static mut T`
 

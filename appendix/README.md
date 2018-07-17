@@ -1,6 +1,4 @@
 # Appendix
 
-
-- [Terminology](terminology.md)
+- [Glossary](terminology.md)
 - [Abbreviations](abbreviations.md)
-- [Index](index.md)

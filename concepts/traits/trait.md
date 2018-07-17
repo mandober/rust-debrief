@@ -1,3 +1,5 @@
+# Trait
+
 - a trait describes an *abstract interface* that types can implement.
 - traits can be used to mark a capability or to enforce a behaviour
 - a trait can have associated items (fn, type, const)

@@ -11,14 +11,20 @@ Behavior-enforcing trait
 ## CAT
 Capability-announcing trait
 
+## COI
+Composition over inheritance
+
 ## DST
-Dynamically sized type
+Dynamically-sized type
 
 ## DTC
-Data type constructors (`struct`, `enum`, `union`).
+Data type constructors
 
 ## EH
-Exception Handling
+Exception handling
+
+## FFI
+Foreign Function Interface
 
 ## GLA
 Generic lifetimes annotation
@@ -29,14 +35,20 @@ Generic lifetimes parameter
 ## GTP
 Generic type parameter
 
+## HRTB
+Higher-ranked trait bounds
+
 ## LER
 Lifetime elision rules (LER1, LER2, LER3)
+
+## LTO
+Link-time optimization
 
 ## ICE
 Internal compiler error
 
-## MADI
-Machine architecture dependent integer
+## IR
+Intermediate Representation
 
 ## MDI
 Machine dependent integer
@@ -50,15 +62,16 @@ Pointer-like types (references, raw pointers, slices, smart pointers, etc.)
 ## PDT
 Product data type
 
+## RAII
+Resource acquisition is initialization
+
 ## SDT
 1. Structural data type
 2. Sum data type
 
-## SUE
-Rust's type constructors: `struct`, `union`, `enum`
+## SSA
+Static Single Assignment
 
 ## ZST
 Zero-sized type
 
-## HRTB
-Higher-ranked trait bound

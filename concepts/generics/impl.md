@@ -1,4 +1,13 @@
+# Implementation
 
+An implementation is an item, defined with the keyword `impl`, that associates (other) items with a particular type. The type in this role is called the implementing type, denoted as `Self`.
+
+There are two types of implementations:
+- [Trait implementation](trait-implementation.md)
+- Inherent implementation
+
+
+## Inherent implementation
 
 An inherent implementation is defined as the sequence of the impl keyword, generic type declarations, a path to a nominal type, a where clause, and a bracketed set of associable items. The nominal type is called the implementing type and the associable items are the associated items to the implementing type.
 

@@ -146,6 +146,9 @@ Dynamically Sized Type (DST) is a type without a statically known size or alignm
 ## Endianness
 Endianness only applies to processors that allow individual addressing of units of data (such as bytes) that are smaller than the basic addressable machine word. An architecture may use _big_ or _little endianness_, or both, or be configurable to use either. The x86 architecture is little endian. Most RISC architectures (SPARC, Power, PowerPC, MIPS) were originally big endian (ARM was little endian), but many (including ARM) are now configurable.
 
+## Embarrassingly parallel
+In parallel computing, a pleasingly (embarrassingly, perfectly) parallel problem is one where little effort is needed to separate the problem into a number of parallel tasks. 
+
 ## Fat pointer
 A pointer with accompanying extra information. It comprises a pointer and one or more associated fields that "complete" the pointer. For example, a string is a fat pointer made up of pointer to some data on the heap, a length (number of characters it points to) and a capacity (additional space for characters reserved).
 
