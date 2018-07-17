@@ -1,0 +1,42 @@
+{
+	"title": "Rust Debrief",
+	"description": "Rust by bullet point, from summary to particularity",
+	"author": "Ilic Ivan <ilicivan@zoho.com>",
+	"structure": {
+		"readme": "README.md",
+		"summary": "SUMMARY.md",
+		"glossary": "GLOSSARY.md"
+	},
+	"plugins": [
+		"json-sidebar",
+		"collapse",
+		"include-codeblock",
+		"codeblock-rust",
+    "codetabs",
+		"page-toc",
+		"panel",
+		"anchorjs",
+		"toggle-chapters",
+		"theme-default",
+		"hints",
+		"theme-appcom",
+		"-styles-sass-fix"
+	],
+	"pluginsConfig": {
+		"selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
+		"position": "before-first",
+		"showByDefault": true,
+    "hints": {
+        "info": "fa fa-info-circle",
+        "tip": "fa fa-mortar-board",
+        "danger": "fa fa-exclamation-cicle",
+        "working": "fa fa-wrench"
+    },
+		"anchorjs": {
+			"icon": "❡",
+			"placement": "left",
+			"visible": "hover",
+			"class": "custom-class another-one"
+		}
+	}
+}

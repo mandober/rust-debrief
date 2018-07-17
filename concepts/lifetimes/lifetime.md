@@ -144,6 +144,7 @@ You can never create owning type inside a function and then have that fn return 
 
 
 ## Lifetime Elision Rules (LER)
+
 Every reference has some lifetime associated with it, but the compiler lets you elide them in common cases:
 
 1. Each elided lifetime in input becomes a distinct lifetime param.

@@ -25,9 +25,6 @@ Every assignment of the value results in a copy of the value.
 ## immutable borrowing
 immutable (shared) borrowing of value freezes the value ❄
 
-```rust
-
-```
 
 
 the original object is only frozen: you can still take more non-mutable references, but you cannot move or take mutable references of it.
@@ -36,14 +33,7 @@ the original object is only frozen: you can still take more non-mutable referenc
 ## mutable borrowing
 mutable (exclusive) borrowing of value locks the value 🔒
 
-```rust
-
-```
-
 the original object is effectively locked for the duration of the borrow, rendering it unusable.
-
-
-
 
 
 Even a simple statement packs a lot of rules:

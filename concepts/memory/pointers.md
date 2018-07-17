@@ -130,36 +130,3 @@ In computer science, a tagged pointer is a pointer with additional data associat
 The name comes from "tagged union", and the additional data is called a "tag" or "tags", though strictly speaking "tag" refers to data specifying a type, not other data; however, the usage "tagged pointer" is standard.
 
 
-## Function Pointer
-https://www.wikiwand.com/en/Function_pointer
-
-A function pointer points to a function. 
-
-Instead of referring to data values, a function pointer points to executable code within memory. When dereferenced, a function pointer can be used to invoke the function it points to and pass its arguments just like a normal function call. Such an invocation is also known as an "indirect" call, because the function is being invoked indirectly through a variable instead of directly through a fixed name or address.
-
-Function pointers can be used to simplify code by providing a simple way to select a function to execute based on run-time values.
-
-The simplest implementation of a function (or subroutine) pointer is as a variable containing the address of the function within executable memory.
-
-## Smart Pointer
-In computer science, a smart pointer is an abstract data type that simulates a pointer while providing added features, such as automatic memory management or bounds checking. Such features are intended to reduce bugs caused by the misuse of pointers, while retaining efficiency. Smart pointers typically keep track of the memory they point to, and may also be used to manage other resources, such as network connections and file handles. Smart pointers originated in the programming language C++.
-
-Pointer misuse can be a major source of bugs. Smart pointers prevent most situations of memory leaks by making the memory deallocation automatic. More generally, they make object destruction automatic: an object controlled by a smart pointer is automatically destroyed (finalized and then deallocated) when the last (or only) owner of an object is destroyed, for example because the owner is a local variable, and execution leaves the variable's scope. Smart pointers also eliminate dangling pointers by postponing destruction until an object is no longer in use.
-
-Several types of smart pointers exist. Some work with reference counting, others by assigning ownership of an object to one pointer. If a language supports automatic garbage collection (for example, Java or C#), then smart pointers are unneeded for the reclaiming and safety aspects of memory management, yet are useful for other purposes, such as cache data structure residence management and resource management of objects such as file handles or network sockets.
-
-## Opaque pointer
-https://www.wikiwand.com/en/Opaque_pointer
-
-
-
-## Functors
-Functors, or **function objects**, are similar to function pointers, and can be used in similar ways. A functor is an object of a class type that implements the function-call operator, allowing the object to be used within expressions using the same syntax as a function call. Functors are more powerful than simple function pointers, being able to contain their own data values, and allowing the programmer to emulate closures. They are also used as callback functions if it is necessary to use a member function as a callback function.[4]
-
-Many "pure" object-oriented languages do not support function pointers. Something similar can be implemented in these kinds of languages, though, using references to interfaces that define a single method (member function). CLI languages such as C# and Visual Basic .NET implement type-safe function pointers with delegates.
-
-In other languages that support first-class functions, functions are regarded as data, and can be passed, returned, and created dynamically directly by other functions, eliminating the need for function pointers.
-
-Extensively using function pointers to call functions may produce a slow-down for the code on modern processors, because branch predictor may not be able to figure out where to branch to (it depends on the value of the function pointer at run time) although this effect can be overstated as it is often amply compensated for by significantly reduced non-indexed table lookups.
-
-

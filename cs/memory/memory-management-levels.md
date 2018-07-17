@@ -1,4 +1,4 @@
-# Memory Management
+# Memory management levels
 
 Memory Management concens tree levels:
 - Hardware level
@@ -7,21 +7,23 @@ Memory Management concens tree levels:
 
 
 ## Hardware level
+
 At the hardware level, memory management is concerned with the electronic devices that actually store data. This includes all kinds of computer memory like SRAM, DRAM, SSD, Hard disk and other storage.
 
 
 ## OS level
+
 In the early days of computing, programs would have direct, sole, unrestricted access to the entire physical memory and could write data anywhere just by specifying the _physical memory address_. Today, programs have illusion they have direct, sole, unrestricted access to memory, when, not only is the OS solely in charge of it, but the medium itself is not even real, being abstracted by the _virtual memory system_. 
 
 The OS is in charge of all memory: it manages the virtual memory system, controlls the allocation of virtual memory to programs, mapping of virtual to physical memory, and reclaming memory from programs that fail to return it.
 
-The OS manages the logical division of memory: the stack, the heap, static blocks, etc.
+The OS manages the logical division of memory: the _stack_, the _heap_, _static_ blocks, etc.
 
 Each process has its own virtual address space, which in 32-bit mode is always a 4GB block of memory addresses. These virtual addresses are mapped to physical memory by page tables, which are maintained by the OS (kerenl) and consulted by the CPU.
 
 
-
 ## Application level
+
 The essential requirement of memory management is to provide ways to _dynamically allocate_ portions of memory to programs at their request, and release these resources when they are no longer needed, so they can be reused.
 
 Knowing when an object needs to be created doesn't present a challange, but determining when an object is no longer needed, proved to be one of the fundamental issues in computing, so much so that different approaches to solving this would seperate, yet again, programing languages into two extremes: those that provide automatic memory management and those that require manual labor.

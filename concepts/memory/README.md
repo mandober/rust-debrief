@@ -1,36 +1,4 @@
-# Memory menagement
-
-Memory menagement levels
-1. CPU level
-2. OS level
-3. Program level
-
-
-1. Memory menagement: CPU level
-
-2. Memory menagement: OS level
-
-3. Memory menagement: Program  level
-
-
-* Memory address
-  - Address space
-  - Physical address
-  - Physical address space
-  - Virtual address
-  - Virtual address space
-  - Address translation
-* Paging
-  - page fault
-* Memory safety
-* Memory allocation
-  - Dynamic memory allocation
-  - Static memory allocation
-* Memory regions
-  - Program segment
-  - Static segment
-  - Stack
-  - Heap
+# Rust and memory
 
 
 * Variable

@@ -1,5 +1,5 @@
-# Lifetimes
+# Lifetime
 
-- [Lifetimes](lifetimes.md)
-- [Lifetimes Subtyping](subtyping.md)
 - [Higher-Ranked Trait Bounds](hrtb.md)
+- [Lifetime](lifetime.md)
+- [Lifetimes subtyping](lifetime-subtyping.md)

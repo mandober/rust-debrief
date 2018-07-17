@@ -1,13 +1,10 @@
-# Advanced Lifetimes
-https://doc.rust-lang.org/book/second-edition/ch19-02-advanced-lifetimes.html
+# Lifetime subtyping
 
 There are 3 advanced features of lifetimes:
-- Lifetime Subtyping
+- Lifetime subtyping
 - Lifetime bounds
 - Trait object lifetimes
 
-
-## Lifetime subtyping
 
 Lifetime subtyping is a way to specify that one lifetime should outlive another lifetime.
 
@@ -88,3 +85,6 @@ That told Rust the lifetime of the string slice that `Context` holds is the same
 
 The `parse_context` function can't see that within the `parse` function, the string slice returned will outlive both `Context` and `Parser`, and that the reference `parse_context` returns refers to the string slice, not to `Context` or `Parser`.
 
+---
+
+https://doc.rust-lang.org/book/second-edition/ch19-02-advanced-lifetimes.html

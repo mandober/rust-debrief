@@ -177,3 +177,20 @@ pub struct SliceIter<'it, T: 'it> {
 ```
 
 `SliceIter` type has a single field that stores the slice being iterated over. Each time a new item is produced, this field is updated to contain a subslice with the remaining items.
+
+
+
+
+## DoubleEndedIterator (DEI)
+
+A double ended iterator has two ends, and you can alternate taking elements from either side. Taking from one side does not alter the other side, unless you reach the point where the ends meet. Note: Double ended does not mean bi-directional! We can only take from the front and from the back.
+Sketch about the concept of a DEI:
+
+```
+[a b c d ] start
+[. b c d ] .next() -> a
+[. b c . ] .next_back() -> d
+[. b . . ] .next_back() -> c
+[. . . . ] .next() -> b
+[. . . . ] .next() or .next_back() -> None
+```
