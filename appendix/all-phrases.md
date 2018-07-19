@@ -6,10 +6,29 @@ aliasing
 annotation
 annotation
 Application Binary Interface
+Symbols
+Arithmetic
+Comparison
+Bitwise
+Logical
+Patterns
+Operators
+Literals
+Paths
+Generics
+Constraints
+Parenthesis and tuples
+Comments
+Doc comments
+Attributes
+Macros
 ascii byte literal
 associated constant
 associated function
 associated type
+byte
+bit
+word
 attribute
 Attributes
 Big Endian

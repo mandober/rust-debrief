@@ -30,8 +30,8 @@ Knowing when an object needs to be created doesn't present a challange, but dete
 
 Dynamic memory management contrasts with automatic destruction of objects held in automatic variables, notably functions' local variables, which are destroyed at the end of their scope, when their containg stack frame is discarded.
 
-[Manual memory management](memory-management-manual.md) requires the programmer to annotate objects to be deallocated, so that the memory they occupy is returned to the free store (this issue is only related to the free store i.e. the heap, the stack got off scot-free. this time). Nearly everything computer programmers do requires them to consider how to manage memory.
+Manual memory management requires the programmer to annotate objects to be deallocated, so that the memory they occupy is returned to the free store (this issue is only related to the free store i.e. the heap, the stack got off scot-free. this time). Nearly everything computer programmers do requires them to consider how to manage memory.
 
-[Garbage collection](memory-management-gc.md) (GC) is automatic memory management aimed at identifying objects that cannot be accessed in the future, in order to destroy them and reclaim resources.
+Garbage collection (GC) is automatic memory management aimed at identifying objects that cannot be accessed in the future, in order to destroy them and reclaim resources.
 
 Majority of popular languages require garbage collection. Even when a language is designed with manual memory management in mind, it can have garbage collection implemented. Some languages allow both management methods at the same time, others allow users to choose between the available methods. Systems might also use a combination of approaches, or they could employ other techniques such as stack only allocation and region inference.

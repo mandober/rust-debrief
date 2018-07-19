@@ -1,6 +1,7 @@
 # Concepts
 
-* Memory menagement
+
+* Memory management
 * Pattern matching
 * Error handling
 * Functions

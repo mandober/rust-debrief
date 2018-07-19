@@ -1,6 +1,6 @@
 # Memory
 
-- [Memory management](memory-management.md)
+- [Memory management](memory-management-levels.md)
 - Memory menagement levels
   - Hardware level
   - OS level
@@ -59,8 +59,8 @@
   - Finalizer
   - [Garbage collection](garbage-collection.md)
   - [Memory allocation](memory-allocation.md)
-  - [Stack based allocation](memory-allocation-stack-based.md)
-  - [Dynamic memory allocation](memory-allocation-dynamic.md)
+  - [Stack based allocation](stack-based-memory-allocation.md)
+  - [Dynamic memory allocation](dynamic-memory-allocation.md)
   
 * Garbage collection
   - mark and sweep

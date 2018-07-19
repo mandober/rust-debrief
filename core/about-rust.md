@@ -1,6 +1,29 @@
 # The Rust Programming Language
 
 
+Premium features
+- Guaranteed Memory Safety (GMT)
+- Zero cost abstractions ($0a)
+- Choose your guarantees (CYG)
+- Pay only what you obviously use (POWYOU)
+- Maximum control with maximum safety (Control+Safety)
+- Low overhead, extra small runtime (XS-RT)
+- No hidden computing cost (!hCC)
+- Expressiveness, Explicitness, Efficiency (E3)
+- no null no exceptions (!(null^XPTN)
+
+Featuring
+- move semantics
+- guaranteed memory safety
+- zero-cost abstractions
+- threads without data races
+- trait-based generics
+- pattern matching
+- type inference
+- minimal runtime
+- efficient C bindings
+
+
 Rust is a all-level, general-purposes, multi-paradigm programming language providing safety, speed, concurrency and control without garbage collection.
 
 
@@ -23,15 +46,6 @@ Rust is a all-level, general-purposes, multi-paradigm programming language provi
 - Rust = Safety + Performance + Expressiveness + Control + Concurrency (- GC)
 - Rust is the only language that makes concurrent programming memory safe without GC, with performance rivaling that of C, C++
 - Rust is the only language that provides safety with expressiveness without sacrificing control or performance.
-
-
-- Low overhead, small runtime
-- Zero Cost Abstractions (ZCA)
-- Choose Your Guarantees (CYG)
-- Pay only what you use
-- Control AND safety: Provides maximum control while also providing maximum safety
-
-
 
 
 ## Features

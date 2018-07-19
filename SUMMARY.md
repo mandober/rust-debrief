@@ -1,13 +1,14 @@
 # Summary
 
-- [Rust Debrief](README.md)
+- [Rust Debrief](./README.md)
 
 
 ## Memory
-- [Memory](cs/memory/README.md)
-- Memory Management](cs/memory/memory-management.md)
 
-Hardware level
+- [Memory](./cs/memory/README.md)
+- Memory Management](./cs/memory/memory-management.md)
+
+Memory Management at the hardware level
 - [Memory hierachy](cs/memory/memory-hierarchy.md)
 - [Memory types](cs/memory/memory-types.md)
 - [Cache](cs/memory/cache.md)
@@ -15,7 +16,7 @@ Hardware level
 - [Registers](cs/memory/registers.md)
 - [Word](cs/memory/word.md)
 
-OS level
+Memory Management at the OS level
 - [Memory model](cs/memory/memory-model.md)
 - [Memory protection](cs/memory/memory-protection.md)
 - [Virtual memory](cs/memory/virtual-memory.md)
@@ -24,7 +25,7 @@ OS level
 - [Memory address](cs/memory/memory-address.md)
 - [Physical address](cs/memory/physical-address.md)
 
-Application level
+Memory Management at the program level
 - Manual memory management](cs/memory/memory-management-manual.md)
 - Garbage collection](cs/memory/memory-management-gc.md)
 - [Memory allocation](cs/memory/memory-allocation.md)
@@ -113,8 +114,8 @@ Application level
 
 
 ## Appendix
-- [Terminology](appendix/terminology.md)
-- [Abbreviations](appendix/abbreviations.md)
+- [Terminology](appendix/terms.md)
+- [Abbreviations](appendix/abbr.md)
 
 ## Links
 - [Links](links/README.md)
