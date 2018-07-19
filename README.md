@@ -24,15 +24,11 @@ Meta
   - [GitBooks legacy][gb1]
 
 
-<details>
 
-<summary>Research</summary>
-
+Research
 - Collapsible mind-map of all std items.
 - Canonical crates. For discoverability. Gathered de facto standard crates comprising a sega-mega meta-crate that re-exports paths from containing children crates respecting and mimicking the std paths.
 (well-established crates complementing std mimicking std paths)
-
-</details>
 
 
 

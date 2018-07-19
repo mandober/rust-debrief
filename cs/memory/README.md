@@ -1,10 +1,10 @@
 # Memory
 
-- [Memory management](memory-management-levels.md)
-- Memory menagement levels
-  - Hardware level
-  - OS level
-  - Program level
+Memory management
+- [Memory menagement levels](memory-management-levels.md)
+- Hardware level
+- OS level
+- Program level
 
 
 * [Memory hierachy](memory-hierarchy.md)

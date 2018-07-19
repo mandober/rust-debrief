@@ -6,7 +6,7 @@
 ## Memory
 
 - [Memory](./cs/memory/README.md)
-- Memory Management](./cs/memory/memory-management.md)
+- [Memory Management](./cs/memory/memory-management-levels.md)
 
 Memory Management at the hardware level
 - [Memory hierachy](cs/memory/memory-hierarchy.md)
