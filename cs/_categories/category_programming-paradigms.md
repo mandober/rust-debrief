@@ -1,10 +1,10 @@
-Programming paradigms
-
-- [Design pattern](https://www.wikiwand.com/en/Design_pattern_(computer_science))
-- [Business object](https://www.wikiwand.com/en/Business_object_(computer_science))
-- [Actor model](https://www.wikiwand.com/en/Actor_model)
+# Programming paradigms
 
 - [Programming paradigm ](https://www.wikiwand.com/en/Programming_paradigm)
+- [Design pattern](https://www.wikiwand.com/en/Design_pattern_(computer_science))
+- [Business object](https://www.wikiwand.com/en/Business_object_(computer_science))
+
+- [Actor model](https://www.wikiwand.com/en/Actor_model)
 - [Action language](https://www.wikiwand.com/en/Action_language)
 - [Agent-oriented programming](https://www.wikiwand.com/en/Agent-oriented_programming)
 - [Array programming](https://www.wikiwand.com/en/Array_programming)

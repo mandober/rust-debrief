@@ -2,75 +2,82 @@
 
 
 ## ADT
-1. Algebraic data type
-2. Abstract data type
+Algebraic Data Type. Abstract Data Type.
 
 ## BET
-Behavior-enforcing trait
+Behavior-enforcing Trait
 
 ## CAT
-Capability-announcing trait
+Capability-announcing Trait
 
 ## COI
-Composition over inheritance
+Composition Over Inheritance
 
 ## DST
-Dynamically-sized type
+Dynamically-sized Type
 
 ## DTC
-Data type constructors
+Data Type Constructors
 
 ## EH
-Exception handling
+Exception Handling
 
 ## FFI
 Foreign Function Interface
 
 ## GLA
-Generic lifetimes annotation
+Generic Lifetimes Annotation
 
 ## GLP
-Generic lifetimes parameter
+Generic Lifetimes Parameter
 
 ## GTP
-Generic type parameter
+Generic Type Parameter
 
 ## HRTB
-Higher-ranked trait bounds
+Higher-ranked Trait Bounds
 
 ## LER
-Lifetime elision rules (LER1, LER2, LER3)
+Lifetime Elision Rules (LER1, LER2, LER3)
 
 ## LTO
-Link-time optimization
+Link-time Optimization
 
 ## ICE
-Internal compiler error
+Internal Compiler Error
 
 ## IR
 Intermediate Representation
 
+## ISA
+Instruction Set Architectures
+
 ## MDI
-Machine dependent integer
+Machine Dependent Integer
 
 ## NDT
-Nominal data type
+Nominal Data Type
 
 ## PLT
-Pointer-like types (references, raw pointers, slices, smart pointers, etc.)
+Pointer-like Type (references, raw pointers, slices, smart pointers, etc.)
 
 ## PDT
-Product data type
+Product Data Type
 
 ## RAII
 Resource acquisition is initialization
 
 ## SDT
-1. Structural data type
-2. Sum data type
+Structural Data Type, Sum Data Type
 
 ## SSA
 Static Single Assignment
+
+## SVO
+Small vector optimazition
+
+## SSO
+Small string optimazition
 
 ## ZST
 Zero-sized type

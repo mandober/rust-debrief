@@ -1,12 +1,7 @@
-CPU technologies
-
-Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Addressing_mode)
+# CPU technologies
 
 
-- [hide](https://www.wikiwand.com/en/Addressing_mode#)
-- [Template:CPU technologies](https://www.wikiwand.com/en/Template:CPU_technologies)
-- [Template talk:CPU technologies](https://www.wikiwand.com/en/Template_talk:CPU_technologies)
-- [https://en.wikipedia.org/w/index.php?title=Templat](https://en.wikipedia.org/w/index.php?title=Template:CPU_technologies&action=edit)
+Architecture
 - [CPU technologies](https://www.wikiwand.com/en/Central_processing_unit)
 - [Computer architecture](https://www.wikiwand.com/en/Computer_architecture)
 - [Turing machine](https://www.wikiwand.com/en/Turing_machine)
@@ -22,9 +17,11 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [Random access stored program machine](https://www.wikiwand.com/en/Random_access_stored_program_machine)
 - [Finite-state machine](https://www.wikiwand.com/en/Finite-state_machine)
 - [Queue automaton](https://www.wikiwand.com/en/Queue_automaton)
+
 - [Von Neumann](https://www.wikiwand.com/en/Von_Neumann_architecture)
 - [Harvard](https://www.wikiwand.com/en/Harvard_architecture)
 - [Modified Harvard architecture](https://www.wikiwand.com/en/Modified_Harvard_architecture)
+
 - [Dataflow](https://www.wikiwand.com/en/Dataflow_architecture)
 - [Transport triggered architecture](https://www.wikiwand.com/en/Transport_triggered_architecture)
 - [Cellular architecture](https://www.wikiwand.com/en/Cellular_architecture)
@@ -77,6 +74,8 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [Asymmetric multiprocessing](https://www.wikiwand.com/en/Asymmetric_multiprocessing)
 - [Cache hierarchy](https://www.wikiwand.com/en/Cache_hierarchy)
 - [Memory hierarchy](https://www.wikiwand.com/en/Memory_hierarchy)
+
+ISA types
 - [Instruction set architecture](https://www.wikiwand.com/en/Instruction_set_architecture)
 - [Application-specific instruction set processor](https://www.wikiwand.com/en/Application-specific_instruction_set_processor)
 - [Complex instruction set computer](https://www.wikiwand.com/en/Complex_instruction_set_computer)
@@ -90,6 +89,8 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [No instruction set computing](https://www.wikiwand.com/en/No_instruction_set_computing)
 - [Zero instruction set computer](https://www.wikiwand.com/en/Zero_instruction_set_computer)
 - [Comparison](https://www.wikiwand.com/en/Comparison_of_instruction_set_architectures)
+
+ISAs
 - [List of instruction sets](https://www.wikiwand.com/en/List_of_instruction_sets)
 - [https://www.wikiwand.com/en/X86](https://www.wikiwand.com/en/X86)
 - [Z/Architecture](https://www.wikiwand.com/en/Z/Architecture)
@@ -111,6 +112,8 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [PA-RISC](https://www.wikiwand.com/en/PA-RISC)
 - [MicroBlaze](https://www.wikiwand.com/en/MicroBlaze)
 - [RISC-V](https://www.wikiwand.com/en/RISC-V)
+
+Word size
 - [Word (computer architecture)](https://www.wikiwand.com/en/Word_(computer_architecture))
 - [1-bit architecture](https://www.wikiwand.com/en/1-bit_architecture)
 - [2-bit architecture](https://www.wikiwand.com/en/2-bit_architecture)
@@ -141,6 +144,8 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [256-bit](https://www.wikiwand.com/en/256-bit)
 - [512-bit](https://www.wikiwand.com/en/512-bit)
 - [Variable](https://www.wikiwand.com/en/Word_(computer_architecture)#Variable_word_architectures)
+
+Execution
 - [Instruction cycle](https://www.wikiwand.com/en/Instruction_cycle)
 - [Instruction pipelining](https://www.wikiwand.com/en/Instruction_pipelining)
 - [Bubble](https://www.wikiwand.com/en/Bubble_(computing))
@@ -151,6 +156,8 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [Branch predictor](https://www.wikiwand.com/en/Branch_predictor)
 - [Memory dependence prediction](https://www.wikiwand.com/en/Memory_dependence_prediction)
 - [Hazards](https://www.wikiwand.com/en/Hazard_(computer_architecture))
+
+Parallelism level
 - [Bit-level parallelism](https://www.wikiwand.com/en/Bit-level_parallelism)
 - [Bit-serial architecture](https://www.wikiwand.com/en/Bit-serial_architecture)
 - [Instruction-level parallelism](https://www.wikiwand.com/en/Instruction-level_parallelism)
@@ -162,6 +169,8 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [Data parallelism](https://www.wikiwand.com/en/Data_parallelism)
 - [Vector processor](https://www.wikiwand.com/en/Vector_processor)
 - [Memory-level parallelism](https://www.wikiwand.com/en/Memory-level_parallelism)
+
+Multithreading
 - [Multithreading (computer architecture)](https://www.wikiwand.com/en/Multithreading_(computer_architecture))
 - [Temporal multithreading](https://www.wikiwand.com/en/Temporal_multithreading)
 - [Simultaneous multithreading](https://www.wikiwand.com/en/Simultaneous_multithreading)
@@ -169,17 +178,20 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [Speculative multithreading](https://www.wikiwand.com/en/Speculative_multithreading)
 - [Preemptive](https://www.wikiwand.com/en/Preemption_(computing))
 - [Cooperative](https://www.wikiwand.com/en/Cooperative_multithreading)
-- [Bulldozer (microarchitecture)](https://www.wikiwand.com/en/Bulldozer_(microarchitecture)#Bulldozer_core)
 - [Hardware scout](https://www.wikiwand.com/en/Hardware_scout)
+
+Flynn's taxonomy
 - [Flynn's taxonomy](https://www.wikiwand.com/en/Flynn%27s_taxonomy)
+- [Single instruction, multiple threads](https://www.wikiwand.com/en/Single_instruction,_multiple_threads)
 - [SISD](https://www.wikiwand.com/en/SISD)
 - [SIMD](https://www.wikiwand.com/en/SIMD)
 - [SWAR](https://www.wikiwand.com/en/SWAR)
-- [Single instruction, multiple threads](https://www.wikiwand.com/en/Single_instruction,_multiple_threads)
 - [MISD](https://www.wikiwand.com/en/MISD)
 - [MIMD](https://www.wikiwand.com/en/MIMD)
 - [SPMD](https://www.wikiwand.com/en/SPMD)
 - [Addressing mode](https://www.wikiwand.com/en/undefined)
+
+CPU performance
 - [Computer performance](https://www.wikiwand.com/en/Computer_performance)
 - [Transistor count](https://www.wikiwand.com/en/Transistor_count)
 - [Instructions per second](https://www.wikiwand.com/en/Instructions_per_second)
@@ -192,6 +204,8 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [Orders of magnitude (computing)](https://www.wikiwand.com/en/Orders_of_magnitude_(computing))
 - [Cache performance measurement and metric](https://www.wikiwand.com/en/Cache_performance_measurement_and_metric)
 - [CORDIC](https://www.wikiwand.com/en/CORDIC)
+
+Core count
 - [Single-core](https://www.wikiwand.com/en/Single-core)
 - [Multi-core processor](https://www.wikiwand.com/en/Multi-core_processor)
 - [Manycore processor](https://www.wikiwand.com/en/Manycore_processor)
@@ -206,6 +220,8 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [Baseband processor](https://www.wikiwand.com/en/Baseband_processor)
 - [Physics processing unit](https://www.wikiwand.com/en/Physics_processing_unit)
 - [Coprocessor](https://www.wikiwand.com/en/Coprocessor)
+
+Types
 - [Secure cryptoprocessor](https://www.wikiwand.com/en/Secure_cryptoprocessor)
 - [ASIC](https://www.wikiwand.com/en/ASIC)
 - [FPGA](https://www.wikiwand.com/en/FPGA)
@@ -225,6 +241,8 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [System-on-Chip](https://www.wikiwand.com/en/System-on-Chip)
 - [PSoC](https://www.wikiwand.com/en/PSoC)
 - [Network on a chip](https://www.wikiwand.com/en/Network_on_a_chip)
+
+Components
 - [Execution unit](https://www.wikiwand.com/en/Execution_unit)
 - [Arithmetic logic unit](https://www.wikiwand.com/en/Arithmetic_logic_unit)
 - [Address generation unit](https://www.wikiwand.com/en/Address_generation_unit)
@@ -290,11 +308,15 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [Vision chip](https://www.wikiwand.com/en/Vision_chip)
 - [Memristor](https://www.wikiwand.com/en/Memristor)
 - [Power management](https://www.wikiwand.com/en/Power_management)
+
+Power management
 - [Advanced Power Management](https://www.wikiwand.com/en/Advanced_Power_Management)
 - [Advanced Configuration and Power Interface](https://www.wikiwand.com/en/Advanced_Configuration_and_Power_Interface)
 - [Dynamic frequency scaling](https://www.wikiwand.com/en/Dynamic_frequency_scaling)
 - [Dynamic voltage scaling](https://www.wikiwand.com/en/Dynamic_voltage_scaling)
 - [Clock gating](https://www.wikiwand.com/en/Clock_gating)
+
+Hardware security
 - [Computer security](https://www.wikiwand.com/en/Computer_security)
 - [NX bit](https://www.wikiwand.com/en/NX_bit)
 - [Intel MPX](https://www.wikiwand.com/en/Intel_MPX)
@@ -306,6 +328,9 @@ Collected from: [Addressing mode - Wikiwand](https://www.wikiwand.com/en/Address
 - [Trusted Platform Module](https://www.wikiwand.com/en/Trusted_Platform_Module)
 - [Hardware security module](https://www.wikiwand.com/en/Hardware_security_module)
 - [Hengzhi chip](https://www.wikiwand.com/en/Hengzhi_chip)
+
+Related
 - [History of general-purpose CPUs](https://www.wikiwand.com/en/History_of_general-purpose_CPUs)
 - [Microprocessor chronology](https://www.wikiwand.com/en/Microprocessor_chronology)
 - [Processor design](https://www.wikiwand.com/en/Processor_design)
+

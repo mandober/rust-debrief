@@ -79,5 +79,6 @@ Collected from: [Object (computer science) - Wikiwand](https://www.wikiwand.com/
 - [Subtyping](https://www.wikiwand.com/en/Subtyping)
 - [Type constructor](https://www.wikiwand.com/en/Type_constructor)
 - [Type conversion](https://www.wikiwand.com/en/Type_conversion)
+
 - [Type system](https://www.wikiwand.com/en/Type_system)
 - [Type theory](https://www.wikiwand.com/en/Type_theory)

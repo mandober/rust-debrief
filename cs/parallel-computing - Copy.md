@@ -151,7 +151,6 @@ Search Wikipedia
 Collected from: [Embarrassingly parallel - Wikiwand](https://www.wikiwand.com/en/Embarrassingly_parallel)
 
 
-- [hide](https://www.wikiwand.com/en/Embarrassingly_parallel#)
 - [Parallel computing](https://www.wikiwand.com/en/Parallel_computing)
 - [Distributed computing](https://www.wikiwand.com/en/Distributed_computing)
 - [Massively parallel](https://www.wikiwand.com/en/Massively_parallel)

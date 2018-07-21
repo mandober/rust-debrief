@@ -1,10 +1,15 @@
-# Memory
+# CS: Memory
 
-Memory management
-- [Memory menagement levels](memory-management-levels.md)
-- Hardware level
-- OS level
-- Program level
+• CS > Software and its engineering > Memory management
+
+
+
+## Memory management
+
+* [Memory menagement levels](memory-management-levels.md)
+  - Hardware level
+  - OS level
+  - Program level
 
 
 * [Memory hierachy](memory-hierarchy.md)

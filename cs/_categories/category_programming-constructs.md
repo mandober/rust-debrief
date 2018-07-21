@@ -68,8 +68,5 @@
 - [Tombstone (programming)](https://en.wikipedia.org/wiki/Tombstone_(programming))
 - [Type punning](https://en.wikipedia.org/wiki/Type_punning)
 - [TypeParameter](https://en.wikipedia.org/wiki/TypeParameter)
-
-
 - [Concurrent ML](https://en.wikipedia.org/wiki/Concurrent_ML)
-
 - [Comparison of programming languages (basic instruc](https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(basic_instructions))

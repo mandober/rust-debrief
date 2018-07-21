@@ -1,4 +1,5 @@
 MSC Classification Codes
+
 00-xx: General
 00-01: Instructional exposition (textbooks, tutorial papers, etc.)
 00-02: Research exposition (monographs, survey articles)
@@ -29,6 +30,7 @@ MSC Classification Codes
 00B50: Volumes of selected translations
 00B55: Miscellaneous volumes of translations
 00B60: Collections of reprinted articles
+
 01-xx: History and biography
 01-00: General reference works (handbooks, dictionaries, bibliographies, etc.)
 01-01: Instructional exposition (textbooks, tutorial papers, etc.)
@@ -68,6 +70,7 @@ MSC Classification Codes
 01A85: Historiography
 01A90: Bibliographic studies
 01A99: Miscellaneous topics
+
 03-xx: Mathematical logic and foundations
 03-00: General reference works (handbooks, dictionaries, bibliographies, etc.)
 03-01: Instructional exposition (textbooks, tutorial papers, etc.)

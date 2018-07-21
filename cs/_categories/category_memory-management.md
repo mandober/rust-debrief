@@ -1,11 +1,9 @@
 Memory management
 
-https://en.wikipedia.org/wiki/Category:Memory_management?oldformat=true
 
-Collected from: [Category:Memory management - Wikipedia](https://en.wikipedia.org/wiki/Category:Memory_management?oldformat=true)
+Collected from: [Category:Memory management](https://en.wikipedia.org/wiki/Category:Memory_management?oldformat=true)
 
 
-- [Wikipedia:FAQ/Categorization](https://en.wikipedia.org/wiki/Wikipedia:FAQ/Categorization#Why_might_a_category_list_not_be_up_to_date?)
 - [Memory management](https://en.wikipedia.org/wiki/Memory_management)
 - [Antifragmentation](https://en.wikipedia.org/wiki/Antifragmentation)
 - [Automatic Reference Counting](https://en.wikipedia.org/wiki/Automatic_Reference_Counting)

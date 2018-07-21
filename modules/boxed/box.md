@@ -56,6 +56,13 @@ enum List<T> {
 Box is also used when the ownership of a large-sized data needs to be transferred, while avoiding the copying of the data.
 
 
+```rust
+// The output of functions can be boxed
+let boxed_point: Box<Point> = Box::new(origin());
+
+// Double indirection
+let box_in_a_box: Box<Box<Point>> = Box::new(boxed_origin());
+```
 
 
 - recursive

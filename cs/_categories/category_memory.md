@@ -1,6 +1,33 @@
 # Computer memory
 
-https://en.wikipedia.org/wiki/Category:Computer_memory?oldformat=true#
+Sub-categories
+- [Cache](https://en.wikipedia.org/wiki/Category:Cache_(computing))
+  - [Cache coherency](https://en.wikipedia.org/wiki/Category:Cache_coherency)
+- [Consistency models](https://en.wikipedia.org/wiki/Category:Consistency_models)
+- [Data unit](https://en.wikipedia.org/wiki/Category:Data_unit)
+  - [Binary prefixes](https://en.wikipedia.org/wiki/Category:Binary_prefixes)
+  - [IEC prefixes](https://en.wikipedia.org/wiki/Category:IEC_prefixes)
+- [Digital registers](https://en.wikipedia.org/wiki/Category:Digital_registers)
+- [Logic families](https://en.wikipedia.org/wiki/Category:Logic_families)
+- [Memory expansion](https://en.wikipedia.org/wiki/Category:Memory_expansion)
+- [Memory management](https://en.wikipedia.org/wiki/Category:Memory_management)
+- [Memory management algorithms](https://en.wikipedia.org/wiki/Category:Memory_management_algorithms)
+  - [Automatic memory management](https://en.wikipedia.org/wiki/Category:Automatic_memory_management)
+- [Memory management software](https://en.wikipedia.org/wiki/Category:Memory_management_software)
+  - [Free memory management software](https://en.wikipedia.org/wiki/Category:Free_memory_management_software)
+  - [Free memory debuggers](https://en.wikipedia.org/wiki/Category:Free_memory_debuggers)
+- [Virtual memory](https://en.wikipedia.org/wiki/Category:Virtual_memory)
+- [X86 memory management](https://en.wikipedia.org/wiki/Category:X86_memory_management)
+  - [DOS memory management](https://en.wikipedia.org/wiki/Category:DOS_memory_management)
+  - [DOS extenders](https://en.wikipedia.org/wiki/Category:DOS_extenders)
+  - [Expanded memory managers](https://en.wikipedia.org/wiki/Category:Expanded_memory_managers)
+- [Non-volatile memory](https://en.wikipedia.org/wiki/Category:Non-volatile_memory)
+  - [Non-volatile random-access memory](https://en.wikipedia.org/wiki/Category:Non-volatile_random-access_memory)
+  - [Pauli exclusion principle](https://en.wikipedia.org/wiki/Category:Pauli_exclusion_principle)
+- [Transactional memory](https://en.wikipedia.org/wiki/Category:Transactional_memory)
+- [Types of RAM](https://en.wikipedia.org/wiki/Category:Types_of_RAM)
+  - [SDRAM](https://en.wikipedia.org/wiki/Category:SDRAM)
+
 
 
 Topics
@@ -197,33 +224,5 @@ Topics
 - [Write-only memory (joke)](https://en.wikipedia.org/wiki/Write-only_memory_(joke))
 - [XQD card](https://en.wikipedia.org/wiki/XQD_card)
 - [Zero wait state](https://en.wikipedia.org/wiki/Zero_wait_state)
-
-Sub-categories
-- [Cache](https://en.wikipedia.org/wiki/Category:Cache_(computing))
-  - [Cache coherency](https://en.wikipedia.org/wiki/Category:Cache_coherency)
-- [Consistency models](https://en.wikipedia.org/wiki/Category:Consistency_models)
-- [Data unit](https://en.wikipedia.org/wiki/Category:Data_unit)
-  - [Binary prefixes](https://en.wikipedia.org/wiki/Category:Binary_prefixes)
-  - [IEC prefixes](https://en.wikipedia.org/wiki/Category:IEC_prefixes)
-- [Digital registers](https://en.wikipedia.org/wiki/Category:Digital_registers)
-- [Logic families](https://en.wikipedia.org/wiki/Category:Logic_families)
-- [Memory expansion](https://en.wikipedia.org/wiki/Category:Memory_expansion)
-- [Memory management](https://en.wikipedia.org/wiki/Category:Memory_management)
-- [Memory management algorithms](https://en.wikipedia.org/wiki/Category:Memory_management_algorithms)
-  - [Automatic memory management](https://en.wikipedia.org/wiki/Category:Automatic_memory_management)
-- [Memory management software](https://en.wikipedia.org/wiki/Category:Memory_management_software)
-  - [Free memory management software](https://en.wikipedia.org/wiki/Category:Free_memory_management_software)
-  - [Free memory debuggers](https://en.wikipedia.org/wiki/Category:Free_memory_debuggers)
-- [Virtual memory](https://en.wikipedia.org/wiki/Category:Virtual_memory)
-- [X86 memory management](https://en.wikipedia.org/wiki/Category:X86_memory_management)
-  - [DOS memory management](https://en.wikipedia.org/wiki/Category:DOS_memory_management)
-  - [DOS extenders](https://en.wikipedia.org/wiki/Category:DOS_extenders)
-  - [Expanded memory managers](https://en.wikipedia.org/wiki/Category:Expanded_memory_managers)
-- [Non-volatile memory](https://en.wikipedia.org/wiki/Category:Non-volatile_memory)
-  - [Non-volatile random-access memory](https://en.wikipedia.org/wiki/Category:Non-volatile_random-access_memory)
-  - [Pauli exclusion principle](https://en.wikipedia.org/wiki/Category:Pauli_exclusion_principle)
-- [Transactional memory](https://en.wikipedia.org/wiki/Category:Transactional_memory)
-- [Types of RAM](https://en.wikipedia.org/wiki/Category:Types_of_RAM)
-  - [SDRAM](https://en.wikipedia.org/wiki/Category:SDRAM)
 
 

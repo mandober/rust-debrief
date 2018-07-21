@@ -1,11 +1,10 @@
 # OS
 
-https://en.wikipedia.org/wiki/Category:Operating_system_technology?oldformat=true
 
-Collected from: [Category:Operating system technology - Wikipedia](https://en.wikipedia.org/wiki/Category:Operating_system_technology?oldformat=true)
+Collected from: [Category:Operating systems - Wikiwand](https://www.wikiwand.com/en/Category:Operating_systems)
 
 
-- [Wikipedia:FAQ/Categorization](https://en.wikipedia.org/wiki/Wikipedia:FAQ/Categorization#Why_might_a_category_list_not_be_up_to_date?)
+
 - [Application binary interface](https://en.wikipedia.org/wiki/Application_binary_interface)
 - [Asynchronous System Trap](https://en.wikipedia.org/wiki/Asynchronous_System_Trap)
 - [Attached Support Processor](https://en.wikipedia.org/wiki/Attached_Support_Processor)
@@ -92,10 +91,6 @@ Collected from: [Category:Operating system technology - Wikipedia](https://en.wi
 - [Year 2038 problem](https://en.wikipedia.org/wiki/Year_2038_problem)
 - [Yield (multithreading)](https://en.wikipedia.org/wiki/Yield_(multithreading))
 
-
----
-
-Collected from: [Category:Operating systems - Wikiwand](https://www.wikiwand.com/en/Category:Operating_systems)
 
 - [Operating system](https://www.wikiwand.com/en/Operating_system)
 - [Operating system advocacy](https://www.wikiwand.com/en/Operating_system_advocacy)
