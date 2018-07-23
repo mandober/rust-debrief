@@ -1,24 +1,21 @@
 # CS: Memory
 
-• CS > Software and its engineering > Memory management
 
-
-
-## Memory management
-
-* [Memory menagement levels](memory-management-levels.md)
+- [Memory menagement levels](memory-management-levels.md)
   - Hardware level
   - OS level
   - Program level
 
+- [Memory hierachy](memory-hierarchy.md)
+- [Memory types](memory-types.md)
+- [Word](word.md)
 
-* [Memory hierachy](memory-hierarchy.md)
-  - [Memory types](memory-types.md)
-  - [Registers](registers.md)
-  - [Memory address register](mar.md)
-  - [Word](word.md)
+Registers
+- [Registers](registers.md)
+- [Memory address register](mar.md)
 
-* [Cache](cache.md)
+Cache
+- [Cache](cache.md)
   - cache levels
   - cache hit
   - cache miss
@@ -26,18 +23,18 @@
   - cache line
   - cache consistency
 
-* [Memory model](./memory-model.md)
-  - [Memory protection](./memory-protection.md)
+Main memory
+- [Memory model](./memory-model.md)
+- [Memory protection](./memory-protection.md)
   - Segmentation
-  - [Segmentation fault](./segmentation-fault.md)
-
-* [Virtual memory](./virtual-memory.md)
+    - [Segmentation fault](./segmentation-fault.md)
+  - [Virtual memory](./virtual-memory.md)
     - Paging
     - Page fault
     - Page table
     - Page Frame Allocation
 
-* Memory addressing
+- Memory addressing
   - [Memory address](./memory-address.md)
   - [Address space](address-space.md)
   - [Physical address](./physical-address.md)
@@ -47,6 +44,8 @@
   - Address translation
   - MMU
   - TBL
+  - [mar](./mar.md)
+
 
 * [Memory safety](./memory-safety.md)
   - [Memory leak](memory-leak.md)
@@ -66,7 +65,7 @@
   - [Memory allocation](memory-allocation.md)
   - [Stack based allocation](stack-based-memory-allocation.md)
   - [Dynamic memory allocation](dynamic-memory-allocation.md)
-  
+
 * Garbage collection
   - mark and sweep
   - Boehm garbage collector
@@ -85,6 +84,8 @@
   - Heap
 
 
+## Variables, values
+
 * Variable
   * Variable attributes
     - Symbolic name
@@ -102,7 +103,6 @@
     - Free variables
     - Bound variables
 
-
 * Value
   - Object
   - Object lifetime, extent
@@ -111,7 +111,7 @@
   - Value data type
   - Pointer
   - Pointer data type
-  - Aliasing
+  - [Aliasing](./aliasing.md)
   - Pointer aliasing
   - RAII
   - Drop
@@ -159,4 +159,57 @@
 * Scope
   - Static scope
   - Dynamic scope
+
+
+---
+
+## Alphabetical listing
+
+- [address-space](./address-space.md)
+- [aliasing](./aliasing.md)
+- [alignment](./alignment.md)
+- [assignment](./assignment.md)
+- [binding](./binding.md)
+- [byte-addressing](./byte-addressing.md)
+- [cache](./cache.md)
+- [call-site](./call-site.md)
+- [call-stack](./call-stack.md)
+- [calling-convention](./calling-convention.md)
+- [declaration](./declaration.md)
+- [definition](./definition.md)
+- [dynamic-memory-allocation](./dynamic-memory-allocation.md)
+- [garbage-collection](./garbage-collection.md)
+- [heap](./heap.md)
+- [initialization](./initialization.md)
+- [literal](./literal.md)
+- [manual-memory-management](./manual-memory-management.md)
+- [mar](./mar.md)
+- [mem-diagram](./mem-diagram.md)
+- [memory-address-space](./memory-address-space.md)
+- [memory-address](./memory-address.md)
+- [memory-addressing](./memory-addressing.md)
+- [memory-allocation](./memory-allocation.md)
+- [memory-hierarchy](./memory-hierarchy.md)
+- [memory-leak](./memory-leak.md)
+- [memory-management-levels](./memory-management-levels.md)
+- [memory-model](./memory-model.md)
+- [memory-protection](./memory-protection.md)
+- [memory-safety](./memory-safety.md)
+- [memory-types](./memory-types.md)
+- [memory-units](./memory-units.md)
+- [mem_protection](./mem_protection.md)
+- [mutability](./mutability.md)
+- [physical-address](./physical-address.md)
+- [pointer](./pointer.md)
+- [program-memory](./program-memory.md)
+- [registers](./registers.md)
+- [segmentation-fault](./segmentation-fault.md)
+- [shared-memory](./shared-memory.md)
+- [stack-based-memory-allocation](./stack-based-memory-allocation.md)
+- [stack](./stack.md)
+- [undefined-behavior](./undefined-behavior.md)
+- [value](./value.md)
+- [variable](./variable.md)
+- [virtual-memory](./virtual-memory.md)
+- [word](./word.md)
 

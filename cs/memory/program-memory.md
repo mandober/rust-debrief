@@ -3,37 +3,43 @@
 - `.text` read-only code segment with executable instructions
 - `.data` initialized globals and statics; retain their address across calls
 - `.bss` uninitialized variables, globals and statics initialized to zero
-- `.stack` program's own call stack
-- the heap: shared pool of free memory
+- `.stack` call stack
+- the heap: shared pool of memory
+
+Every process runs isolated from the others.
+Each process has its own segments, stack and heap.
+Each threds has its own stack.
+The heap area is shared by all threads, shared libraries, and dynamically loaded modules in a process.
 
 
-## Program memory
-Program memory can be categorized into two sections: read-only and read-write.
+categorized into two sections: read-only and read-write
 
-`.text`: **The code segment** (text, text segment) is where a portion of an object file, or the corresponding section of the program's virtual address space that contains executable instructions, is stored and is generally read-only and fixed size.
+`.text`: **code segment** (text segment) is a read-only segment with a fixed size  containing program's executable instructions.
 
-`.data`: **The data segment** contains any global or static variables which have a pre-defined value and can be modified: any variable not declared within a function, but defined as static, so it retains its address across calls. 
+`.data`: **data segment** contains any global or static variables which have a pre-defined value; they have a stable address and can be modified. The values of these variables are initially typically stored in .text, but during the program's start-up routine they are copied into .data segment.
 
-The values for these variables are initially stored within the read-only memory (typically within `.text`) and are copied into the `.data` segment during the start-up routine of the program. Example in C:
+`.bss`: **BSS segment** is for uninitialized data: all global and static variables that are initialized to zero or that don't have explicit initialization are stored here.
 
-```c
-int val = 3;
-char string[] = "Hello World";
-```
+The **heap** area commonly begins after the `.bss` segment and grows toward higher addresses.
+
+The heap area is managed by allocator functions, which usually have the similar name as the ones in C: `malloc`, `calloc`, `realloc`, `free`.
+
+The overall size of heap can be adjusted with `brk` and `sbrk` system calls.
+
+(use of brk/sbrk and a single heap area is not required to fulfill the contract of malloc, calloc, realloc, free)
+they may also be implemented using mmap/munmap to reserve/unreserve potentially non-contiguous regions of virtual memory into the process' virtual address space).
+
+The heap area is shared by all threads, shared libraries, and dynamically loaded modules in a process.
 
 
-**BSS**: The BSS segment, also known as uninitialized data, is usually adjacent to the data segment. The `.bss` segment contains all global variables and static variables that are *initialized to zero* or do not have explicit initialization in source code. For instance, a variable defined as `static int i` would be contained in the BSS segment.
 
+`.stack`: **Stack** area contains the program stack, typically located in the higher parts of memory.
 
-**Heap**: The heap area commonly begins at the end of the `.bss` and `.data` segments and grows to larger addresses from there. The heap area is managed by `malloc`, `calloc`, `realloc` and `free`, which may use the `brk` and `sbrk` system calls to adjust its size (note that the use of brk/sbrk and a single "heap area" is not required to fulfill the contract of malloc, calloc, realloc, free; they may also be implemented using mmap/munmap to reserve/unreserve potentially non-contiguous regions of virtual memory into the process' virtual address space). The heap area is shared by all threads, shared libraries, and dynamically loaded modules in a process.
+The specal register (rsp @x64, esp @x86) called the stack pointer tracks the top of the stack; it is adjusted each time a value is pushed onto the stack.
 
-
-**Stack**: The stack area contains the program stack, typically located in the higher parts of memory. A "stack pointer" register tracks the top of the stack; it is adjusted each time a value is "pushed" onto the stack. The set of values pushed for one function call is termed a "stack frame". A stack frame consists at minimum of a return address. Automatic variables are also stack allocated. 
-
-Typical layout of a legacy program's memory:   
-`^| text | data | bss | heap ->              <- stack |$`
-
-The stack area is traditionally adjoined to the heap area and they grew towards each other; when the stack pointer meets the heap pointer, free memory is exhausted.
+The set of values pushed for one function call is termed a stack frame.
+A stack frame consists at minimum of a return address.
+Automatic variables are also stack allocated.
 
 With large address spaces and virtual memory techniques, they tend to be placed more freely, but they still typically grow in a converging direction. On the standard x86 architecture, the stack grows toward address zero, meaning that more recent items, deeper in the call chain, are at numerically lower addresses and closer to the heap.
 

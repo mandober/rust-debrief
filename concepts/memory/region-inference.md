@@ -1,30 +1,26 @@
 # Region inference
 
-Region inference module.
-# Terminology
-Note that we use the terms region and lifetime interchangeably,
-though the term `lifetime` is preferred.
-# Introduction
-Region inference uses a somewhat more involved algorithm than type
-inference.  It is not the most efficient thing ever written though it
-seems to work well enough in practice (famous last words).  The reason
-that we use a different algorithm is because, unlike with types, it is
-impractical to hand-annotate with regions (in some cases, there aren't
-even the requisite syntactic forms).  So we have to get it right, and
-it's worth spending more time on a more involved analysis.  Moreover,
-regions are a simpler case than types: they don't have aggregate
-structure, for example.
-Unlike normal type inference, which is similar in spirit to H-M and thus
-works progressively, the region type inference works by accumulating
-constraints over the course of a function.  Finally, at the end of
-processing a function, we process and solve the constraints all at
-once.
-The constraints are always of one of three possible forms:
+Region inference module from rustc.
+
+The terms region and lifetime are used interchangeably, although "lifetime" is preferred.
+
+The reason that we use a different algorithm is because, unlike with types, it is impractical to hand-annotate with regions.
+
+So we have to get it right, and it's worth spending more time on a more involved analysis.
+
+Moreover, regions are a simpler case than types: they don't have aggregate structure, for example.
+
+Unlike normal type inference, which is similar in spirit to H-M and thus works progressively, the region type inference works by accumulating constraints over the course of a function.
+
+Finally, at the end of processing a function, we process and solve the constraints all at once.
+
+The constraints are always of one of 3 possible forms:
 - ConstrainVarSubVar(R_i, R_j) states that region variable R_i
   must be a subregion of R_j
 - ConstrainRegSubVar(R, R_i) states that the concrete region R
   (which must not be a variable) must be a subregion of the varibale R_i
 - ConstrainVarSubReg(R_i, R) is the inverse
+
 # Building up the constraints
 Variables and constraints are created using the following methods:
 - `new_region_var()` creates a new, unconstrained region variable;
@@ -33,42 +29,32 @@ Variables and constraints are created using the following methods:
   the smallest region that is greater than both R_i and R_j
 - `glb_regions(R_i, R_j) -> R_k` returns a region R_k which is
   the greatest region that is smaller than both R_i and R_j
-The actual region resolution algorithm is not entirely
-obvious, though it is also not overly complex.
+The actual region resolution algorithm is not entirely obvious, though it is also not overly complex.
+
 ## Snapshotting
-It is also permitted to try (and rollback) changes to the graph.  This
-is done by invoking `start_snapshot()`, which returns a value.  Then
-later you can call `rollback_to()` which undoes the work.
-Alternatively, you can call `commit()` which ends all snapshots.
-Snapshots can be recursive---so you can start a snapshot when another
-is in progress, but only the root snapshot can "commit".
+It is also permitted to try (and rollback) changes to the graph. This is done by invoking `start_snapshot()`, which returns a value. Then later you can call `rollback_to()` which undoes the work. Alternatively, you can call `commit()` which ends all snapshots. Snapshots can be recursive - so you can start a snapshot when another is in progress, but only the root snapshot can "commit".
+
 # Resolving constraints
-The constraint resolution algorithm is not super complex but also not
-entirely obvious.  Here I describe the problem somewhat abstractly,
-then describe how the current code works.  There may be other, smarter
-ways of doing this with which I am unfamiliar and can't be bothered to
-research at the moment. - NDM
+The constraint resolution algorithm is not super complex but also not entirely obvious. Here I describe the problem somewhat abstractly, then describe how the current code works. There may be other, smarter ways of doing this with which I am unfamiliar and can't be bothered to research at the moment. - NDM
+
 ## The problem
-Basically our input is a directed graph where nodes can be divided
-into two categories: region variables and concrete regions.  Each edge
-`R -> S` in the graph represents a constraint that the region `R` is a
-subregion of the region `S`.
-Region variable nodes can have arbitrary degree.  There is one region
-variable node per region variable.
-Each concrete region node is associated with some, well, concrete
-region: e.g., a free lifetime, or the region for a particular scope.
-Note that there may be more than one concrete region node for a
-particular region value.  Moreover, because of how the graph is built,
-we know that all concrete region nodes have either in-degree 1 or
-out-degree 1.
-Before resolution begins, we build up the constraints in a hashmap
-that maps `Constraint` keys to spans.  During resolution, we construct
-the actual `Graph` structure that we describe here.
+Basically our input is a directed graph where nodes can be divided into two categories: region variables and concrete regions.
+
+Each edge `R -> S` in the graph represents a constraint that the region `R` is a subregion of the region `S`.
+
+Region variable nodes can have arbitrary degree. There is one region variable node per region variable. Each concrete region node is associated with some, well, concrete region: e.g., a free lifetime, or the region for a particular scope.
+
+Note that there may be more than one concrete region node for a particular region value. Moreover, because of how the graph is built, we know that all concrete region nodes have either in-degree 1 or out-degree 1.
+
+Before resolution begins, we build up the constraints in a hashmap that maps `Constraint` keys to spans.  During resolution, we construct the actual `Graph` structure that we describe here.
+
+
 ## Our current algorithm
+
 We divide region variables into two groups: Expanding and Contracting.
-Expanding region variables are those that have a concrete region
-predecessor (direct or indirect).  Contracting region variables are
-all others.
+
+Expanding region variables are those that have a concrete region predecessor (direct or indirect). Contracting region variables are all others.
+
 We first resolve the values of Expanding region variables and then
 process Contracting ones.  We currently use an iterative, fixed-point
 procedure (but read on, I believe this could be replaced with a linear
@@ -86,41 +72,44 @@ source is a Contracting node).  For each contracting node, we compute
 its value as the GLB of all its successors.  Basically contracting
 nodes ensure that there is overlap between their successors; we will
 ultimately infer the largest overlap possible.
+
+
 # The Region Hierarchy
+
 ## Without closures
-Let's first consider the region hierarchy without thinking about
-closures, because they add a lot of complications. The region
-hierarchy *basically* mirrors the lexical structure of the code.
-There is a region for every piece of 'evaluation' that occurs, meaning
-every expression, block, and pattern (patterns are considered to
-"execute" by testing the value they are applied to and creating any
-relevant bindings).  So, for example:
-    fn foo(x: int, y: int) { // -+
-    //  +------------+       //  |
-    //  |      +-----+       //  |
-    //  |  +-+ +-+ +-+       //  |
-    //  |  | | | | | |       //  |
-    //  v  v v v v v v       //  |
-        let z = x + y;       //  |
-        ...                  //  |
-    }                        // -+
-    fn bar() { ... }
-In this example, there is a region for the fn body block as a whole,
-and then a subregion for the declaration of the local variable.
-Within that, there are sublifetimes for the assignment pattern and
-also the expression `x + y`. The expression itself has sublifetimes
-for evaluating `x` and `y`.
+Let's first consider the region hierarchy without thinking about closures, because they add a lot of complications. The region hierarchy basically mirrors the lexical structure of the code.
+
+There is a region for every piece of 'evaluation' that occurs, meaning every expression, block, and pattern (patterns are considered to "execute" by testing the value they are applied to and creating any relevant bindings). For example:
+
+```
+fn foo(x: int, y: int) { // -+
+//  +------------+       //  |
+//  |      +-----+       //  |
+//  |  +-+ +-+ +-+       //  |
+//  |  | | | | | |       //  |
+//  v  v v v v v v       //  |
+    let z = x + y;       //  |
+    ...                  //  |
+}                        // -+
+fn bar() { ... }
+```
+
+In this example, there is a region for the fn body block as a whole, and then a subregion for the declaration of the local variable. Within that, there are sublifetimes for the assignment pattern and also the expression `x + y`. The expression itself has sublifetimes for evaluating `x` and `y`.
+
+
 ## Function calls
 Function calls are a bit tricky. I will describe how we handle them
 *now* and then a bit about how we can improve them (Issue #6268).
 Consider a function call like `func(expr1, expr2)`, where `func`,
 `arg1`, and `arg2` are all arbitrary expressions. Currently,
 we construct a region hierarchy like:
+
     +----------------+
     |                |
     +--+ +---+  +---+|
     v  v v   v  v   vv
     func(expr1, expr2)
+
 Here you can see that the call as a whole has a region and the
 function plus arguments are subregions of that. As a side-effect of
 this, we get a lot of spurious errors around nested calls, in
@@ -129,8 +118,10 @@ like this one
     self.foo(self.bar())
 where both `foo` and `bar` are `&mut self` functions will always yield
 an error.
+
 Here is a more involved example (which is safe) so we can see what's
 going on:
+
     struct Foo { f: uint, g: uint }
     ...
     fn add(p: &mut uint, v: uint) {
@@ -145,6 +136,7 @@ going on:
         'a: add(&mut (*x).f,
                 'b: inc(&mut (*x).f)) // (..)
     }
+
 The important part is the line marked `(..)` which contains a call to
 `add()`. The first argument is a mutable borrow of the field `f`.  The
 second argument also borrows the field `f`. Now, in the current borrow
@@ -153,10 +145,12 @@ checker, the first borrow is given the lifetime of the call to
 call to `inc()`. Because `'b` is considered to be a sublifetime of
 `'a`, an error is reported since there are two co-existing mutable
 borrows of the same data.
+
 However, if we were to examine the lifetimes a bit more carefully, we
 can see that this error is unnecessary. Let's examine the lifetimes
 involved with `'a` in detail. We'll break apart all the steps involved
 in a call expression:
+
     'a: {
         'a_arg1: let a_temp1: ... = add;
         'a_arg2: let a_temp2: &'a mut uint = &'a mut (*x).f;
@@ -195,6 +189,7 @@ this similar but unsound example:
         let mut x: ~Foo = ~Foo { ... };
         'a: add(&mut (*x).f, consume(x)) // (..)
     }
+    
 In this case, the second argument to `add` actually consumes `x`, thus
 invalidating the first argument.
 So, for now, we exclude the `call` lifetimes from our model.
@@ -203,6 +198,7 @@ borrow checker handle this situation correctly. In particular, if
 there is a reference created whose lifetime does not enclose
 the borrow expression, we must issue sufficient restrictions to ensure
 that the pointee remains valid.
+
 ## Adding closures
 The other significant complication to the region hierarchy is
 closures. I will describe here how closures should work, though some
@@ -242,6 +238,7 @@ sublifetime of `'d`. However, there is no ordering between `'c` and
 an issue for dataflow; passes like the borrow checker must assume that
 closures could execute at any time from the moment they are created
 until they go out of scope).
+
 ### Complications due to closure bound inference
 There is only one problem with the above model: in general, we do not
 actually *know* the closure bounds during region inference! In fact,
@@ -294,6 +291,7 @@ current treatment of closure bounds, but perhaps in the future we can
 address this problem somehow and make region inference somewhat more
 efficient. Note that this is solely a matter of performance, not
 expressiveness.
+
 # Skolemization and functions
 One of the trickiest and most subtle aspects of regions is dealing
 with the fact that region variables are bound in function types.  I
@@ -345,6 +343,7 @@ What about these two examples:
 Here, it is true that functions which take two pointers with any two
 lifetimes can be treated as if they only accepted two pointers with
 the same lifetime, but not the reverse.
+
 ## The algorithm
 Here is the algorithm we use to perform the subtyping check:
 1. Replace all bound regions in the subtype with new variables
@@ -355,6 +354,7 @@ Here is the algorithm we use to perform the subtyping check:
 4. Ensure that no skolemized regions 'leak' into region variables
    visible from "the outside"
 Let's walk through some examples and see how this algorithm plays out.
+
 #### First example
 We'll start with the first example, which was:
     1. fn<a>(&'a T) <: <b>|&'b T|?        Yes: a -> b
@@ -377,6 +377,7 @@ must hold, where `<=` is the subregion relationship.  Processing
 &x` and is considered successful (it can, for example, be satisfied by
 choosing the value `&x` for `&A`).
 So far we have encountered no error, so the subtype check succeeds.
+
 #### The third example
 Now let's look first at the third example, which was:
     3. fn(&'a T)    <: <b>|&'b T|?        No!
@@ -389,6 +390,7 @@ a variable.  The next step is again to check that the parameter types
 match.  This will ultimately require (as before) that `&self` <= `&x`
 must hold: but this does not hold.  `self` and `x` are both distinct
 free regions.  So the subtype check fails.
+
 #### Checking for skolemization leaks
 You may be wondering about that mysterious last step in the algorithm.
 So far it has not been relevant.  The purpose of that last step is to
@@ -433,6 +435,7 @@ set of all things reachable from a skolemized variable `x`.
 `Tainted(x)` should not contain any regions that existed before the
 step at which the skolemization was performed.  So this case here
 would fail because `&x` was created alone, but is relatable to `&A`.
+
 ## Computing the LUB and GLB
 The paper I pointed you at is written for Haskell.  It does not
 therefore considering subtyping and in particular does not consider
@@ -453,11 +456,13 @@ fn(&A)              fn(&X)              --                fn<a>(&a)
 fn<a,b>(&a, &b)     fn<x>(&x, &x)       fn<a>(&a, &a)     fn<a,b>(&a, &b)
 fn<a,b>(&a, &b, &a) fn<x,y>(&x, &y, &y) fn<a>(&a, &a, &a) fn<a,b,c>(&a,&b,&c)
 ```
+
 ### Conventions
 I use lower-case letters (e.g., `&a`) for bound regions and upper-case
 letters for free regions (`&A`).  Region variables written with a
 dollar-sign (e.g., `$a`).  I will try to remember to enumerate the
 bound-regions on the fn type as well (e.g., `fn<a>(&a)`).
+
 ### High-level summary
 Both the LUB and the GLB algorithms work in a similar fashion.  They
 begin by replacing all bound regions (on both sides) with fresh region
@@ -484,6 +489,7 @@ The other important factor in deciding how to replace a region in T is
 the function `Tainted($r)` which, for a region variable, identifies
 all regions that the region variable is related to in some way
 (`Tainted()` made an appearance in the subtype computation as well).
+
 ### LUB
 The LUB algorithm proceeds in three steps:
 1. Replace all bound regions (on both sides) with fresh region
@@ -525,6 +531,7 @@ Tainted($g) = Tainted($h) = { $a, $b, $h, $g, $x }
 ```
 Therefore we replace both `$g` and `$h` with `$a`, and end up
 with the type `fn(&a, &a)`.
+
 ### GLB
 The procedure for computing the GLB is similar.  The difference lies
 in computing the replacements for the various variables. For each
@@ -569,6 +576,7 @@ $h)` where `Tainted($g) = {$g, $a, $x}` and `Tainted($h) = {$h, $a,
 $x}`.  Both of these sets contain exactly one bound variable from each
 side, so we'll map them both to `&a`, resulting in `fn(&a, &a)`, which
 is the desired result.
+
 ### Shortcomings and correctness
 You may be wondering whether this algorithm is correct.  The answer is
 "sort of".  There are definitely cases where they fail to compute a
@@ -595,6 +603,7 @@ their intent:
     multiple bound regions, so we need to select fresh bound regions.
 Sorry this is more of a shorthand to myself.  I will try to write up something
 more convincing in the future.
+
 #### Where are the algorithms wrong?
 - The pre-replacement computation can fail even though using a
   bound-region would have succeeded.

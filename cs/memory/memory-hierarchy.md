@@ -1,11 +1,11 @@
 # Memory hierarchy
 
+The memory hierarchy is a grouping of memory, based on the response times.
+The faster components are located towards the top of the hierarchy, closer to the CPU. Going towards lower components, each descending layer is (orders of magnitude) slower with (orders of magnitude) larger capacity.
 
-The memory hierarchy is a grouping of storage, based on the response times, with the faster components located towards the top of the hierarchy, closer to the CPU. Going towards lower components, each descending layer is (orders of magnitude) slower with (orders of magnitude) larger capacity.
 
 
 ## Tiers
-
 Practically, all storage can be divided into 3 tiers:
 - Internal:
   - CPU registers

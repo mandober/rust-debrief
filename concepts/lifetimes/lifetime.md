@@ -1,6 +1,5 @@
 # Lifetime
 
-## Debrief
 - Lifetime params are part of generics, Generic Lifetime Parameters (GLP).
 - Lifetimes are annotated with Generic Lifetime Annotations (GLA)   
   using lowercase, preceded by a single quote, e.g. `'a`
@@ -8,7 +7,7 @@
   prescriptive; borrowck compares scopes to determine if all exp are valid.
 - GLP are mostly tied to references, even through every expression has a 
   lifetime, which is the scope for which it is valid.
-- The same ref with different GLAs are distinct from each other.
+- The same ref with different lifetime are different types.
 - `'static` is max lifetime, valid throughout the entire program.
 - __outlives__: some lifetime lives at least as long as another (or self)
 - Lifetime Elision Rules (LER):
@@ -20,62 +19,29 @@
 
 <!-- TOC -->
 
-- [Debrief](#debrief)
+- [Lifetimes](#lifetimes)
 - [Lifetimes as bounds](#lifetimes-as-bounds)
 - [Outlives relation](#outlives-relation)
-- [Lifetimes](#lifetimes)
 - [Lifetime Elision Rules (LER)](#lifetime-elision-rules-ler)
 - [The static lifetime](#the-static-lifetime)
-- [Lifetimes with structs](#lifetimes-with-structs)
+- [Structs and lifetimes](#structs-and-lifetimes)
 - [Type distinction](#type-distinction)
 - [Syntax](#syntax)
 
 <!-- /TOC -->
 
 
-
-## Lifetimes as bounds
-
-Just like generic types can be bounded so can lifetimes.  
-The bound symbol, `:`, has a slightly different meaning. 
-
-This reads as:
-- `T: 'a` all references in `T` must outlive lifetime `'a`.
-- `T: Trait + 'a` type `T` must implement trait `Trait` and all references in `T` must outlive lifetime `'a`.
-
-
-```rust
-struct Items<'a, T:'a> {
-  v: &'a Collection<T>
-}
-```
-
-Here, the constraint T:'a indicates that the data being iterated over must live at least as long as the collection (logically enough).
-
-
-## Outlives relation
-
-The "outlives" relation between two lifetimes, `'a` and `'b`, is written as
-`'a, 'b: 'a`. Here, lifetime `'b` outlives the lifetime `'a`.
-
-In fact, __"outlives"__ means that some lifetime lives __at least as long__ as some other lifetime (but possibly longer).
-
-> Outlives is "longer then or equal" relation: `'a: 'a`.
-> It is similar to "greater then or equal" relation: `a >= a`.
-
-Because of the "or equal" part in this "greater then or equal" relation, it can be said that every lifetime outlives itself: for any lifetime `'a`, `'a` outlives `'a` i.e. any lifetime "outlives" itself. 
-This is also similar to how it is said that every type is a subtype of itself.
-
-
 ## Lifetimes
 
-The basic idea of the borrow checker is that values may not be mutated or moved while they are borrowed. To enforce this, whenever a borrow is created, the compiler assigns the resulting reference a lifetime. This lifetime corresponds to the span of the code where the reference may be used. The compiler infers this lifetime to be the smallest possible while still encompassing all the uses of the reference.
+
+
 
 The word "lifetime" can be used in two distinct, but similar, ways:
 - The lifetime of a **reference**, corresponding to the span of time in which that reference is **used**.
 - The lifetime of a **value**, corresponding to the span of time before that value gets **dropped**.
 
 Lifetimes and scopes are linked to each other, but to distinguish the two, the latter is referred to as value's **scope**.
+
 
 A scope generally corresponds to some block or, more specifically, from the `let` statement to the end of the enclosing block, with one exception: the scope of a temporary value is sometimes the enclosing statement. A lifetime can span only a single expression, but also until the end of the enclosing block.
 
@@ -108,6 +74,12 @@ fn bar() {
 Without the block the push call that mutates the data would error. The block makes the scope of `slice` smaller, thus the resulting lifetime is smaller. Introducing a block like this is kind of artificial, prompting an RFC for Non-Lexical Lifetimes ([NLL](https://github.com/nikomatsakis/nll-rfc/blob/master/0000-nonlexical-lifetimes.md))
 
 
+The basic idea of the borrow checker is that values may not be mutated or moved while they are borrowed. 
+To enforce this, whenever a borrow is created, the compiler assigns the resulting reference a lifetime. 
+This lifetime corresponds to the span of the code where the reference may be used. 
+The compiler infers this lifetime to be the smallest possible while still encompassing all the uses of the reference.
+
+
 ---
 
 Lifetimes are annotated with Generic Lifetime Annotations (GLA), using lowercase, preceded by a single quote, e.g. `'a`.
@@ -134,6 +106,40 @@ Above, the variable `o` is declared in the outer scope. Later, it takes a refere
 Since lifetimes are scopes, they can be partially ordered based on the "outlives" relationship: `o` "outlives" `i`, or `i` doesn't live long enough (for reference to it taken by `o` to be valid).
 
 You can never create owning type inside a function and then have that fn return a reference to that type; that owning type wouldn't live long enough as it would be dropped at the end of fn. When a ref is returned from a fn its referent must be outside that fn, and ref's lifetime parameter must match the lifetime of one of the input parameters.
+
+
+## Lifetimes as bounds
+
+Just like generic types can be bounded so can lifetimes.  
+The bound symbol, `:`, has a slightly different meaning. 
+
+This reads as:
+- `T: 'a` all references in `T` must outlive lifetime `'a`.
+- `T: Trait + 'a` type `T` must implement trait `Trait` and all references in `T` must outlive lifetime `'a`.
+
+
+
+```rust
+struct Items<'a, T:'a> {
+  v: &'a Collection<T>
+}
+```
+
+Here, the constraint T:'a indicates that the data being iterated over must live at least as long as the collection (logically enough).
+
+
+## Outlives relation
+
+The "outlives" relation between two lifetimes, `'a` and `'b`, is written as
+`'a, 'b: 'a`. Here, lifetime `'b` outlives the lifetime `'a`.
+
+In fact, __"outlives"__ means that some lifetime lives __at least as long__ as some other lifetime (but possibly longer).
+
+> Outlives is "longer then or equal" relation: `'a: 'a`.
+> It is similar to "greater then or equal" relation: `a >= a`.
+
+Because of the "or equal" part in this "greater then or equal" relation, it can be said that every lifetime outlives itself: for any lifetime `'a`, `'a` outlives `'a` i.e. any lifetime "outlives" itself. 
+This is also similar to how it is said that every type is a subtype of itself.
 
 
 ## Lifetime Elision Rules (LER)

@@ -82,3 +82,5 @@ Collected from: [Object (computer science) - Wikiwand](https://www.wikiwand.com/
 
 - [Type system](https://www.wikiwand.com/en/Type_system)
 - [Type theory](https://www.wikiwand.com/en/Type_theory)
+
+

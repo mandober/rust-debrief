@@ -1,5 +1,54 @@
 # Programming paradigms
 
+
+Collected from: [Category:Polymorphism (computer science) - Wikipedia](https://en.wikipedia.org/wiki/Category:Polymorphism_(computer_science)?oldformat=true)
+
+- [Wikipedia:FAQ/Categorization](https://en.wikipedia.org/wiki/Wikipedia:FAQ/Categorization#Why_might_a_category_list_not_be_up_to_date?)
+- [Polymorphism (computer science)](https://en.wikipedia.org/wiki/Polymorphism_(computer_science))
+- [Ad hoc polymorphism](https://en.wikipedia.org/wiki/Ad_hoc_polymorphism)
+- [Bounded quantification](https://en.wikipedia.org/wiki/Bounded_quantification)
+- [Covariance and contravariance (computer science)](https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science))
+- [First-class polymorphism](https://en.wikipedia.org/wiki/First-class_polymorphism)
+- [Generics in Java](https://en.wikipedia.org/wiki/Generics_in_Java)
+- [Higher-ranked polymorphism](https://en.wikipedia.org/wiki/Higher-ranked_polymorphism)
+- [Impredicative polymorphism](https://en.wikipedia.org/wiki/Impredicative_polymorphism)
+- [Let-polymorphism](https://en.wikipedia.org/wiki/Let-polymorphism)
+- [Multiple dispatch](https://en.wikipedia.org/wiki/Multiple_dispatch)
+- [Parametric polymorphism](https://en.wikipedia.org/wiki/Parametric_polymorphism)
+- [Parametricity](https://en.wikipedia.org/wiki/Parametricity)
+- [Polymorphic recursion](https://en.wikipedia.org/wiki/Polymorphic_recursion)
+- [Polyvariance](https://en.wikipedia.org/wiki/Polyvariance)
+- [Predicate dispatch](https://en.wikipedia.org/wiki/Predicate_dispatch)
+- [Static dispatch](https://en.wikipedia.org/wiki/Static_dispatch)
+- [Static polymorphism](https://en.wikipedia.org/wiki/Static_polymorphism)
+- [Subtyping](https://en.wikipedia.org/wiki/Subtyping)
+- [System F](https://en.wikipedia.org/wiki/System_F)
+- [System F-sub](https://en.wikipedia.org/wiki/System_F-sub)
+- [Wildcard (Java)](https://en.wikipedia.org/wiki/Wildcard_(Java))
+
+
+Collected from: [Category:Generic programming - Wikipedia](https://en.wikipedia.org/wiki/Category:Generic_programming?oldformat=true)
+
+
+- [Wikipedia:FAQ/Categorization](https://en.wikipedia.org/wiki/Wikipedia:FAQ/Categorization#Why_might_a_category_list_not_be_up_to_date?)
+- [Generic programming](https://en.wikipedia.org/wiki/Generic_programming)
+- [Allocator (C++)](https://en.wikipedia.org/wiki/Allocator_(C%2B%2B))
+- [Boost (C++ libraries)](https://en.wikipedia.org/wiki/Boost_(C%2B%2B_libraries))
+- [CAPD library](https://en.wikipedia.org/wiki/CAPD_library)
+- [Concept (generic programming)](https://en.wikipedia.org/wiki/Concept_(generic_programming))
+- [Generic Image Library](https://en.wikipedia.org/wiki/Generic_Image_Library)
+- [Intel Array Building Blocks](https://en.wikipedia.org/wiki/Intel_Array_Building_Blocks)
+- [Intel Parallel Studio](https://en.wikipedia.org/wiki/Intel_Parallel_Studio)
+- [Pantheios](https://en.wikipedia.org/wiki/Pantheios)
+- [Parametric polymorphism](https://en.wikipedia.org/wiki/Parametric_polymorphism)
+- [Standard Template Library](https://en.wikipedia.org/wiki/Standard_Template_Library)
+- [Template (C++)](https://en.wikipedia.org/wiki/Template_(C%2B%2B))
+- [Threading Building Blocks](https://en.wikipedia.org/wiki/Threading_Building_Blocks)
+- [Type Tunnel pattern](https://en.wikipedia.org/wiki/Type_Tunnel_pattern)
+- [Workshop on Generic Programming](https://en.wikipedia.org/wiki/Workshop_on_Generic_Programming)
+
+
+
 - [Programming paradigm ](https://www.wikiwand.com/en/Programming_paradigm)
 - [Design pattern](https://www.wikiwand.com/en/Design_pattern_(computer_science))
 - [Business object](https://www.wikiwand.com/en/Business_object_(computer_science))
