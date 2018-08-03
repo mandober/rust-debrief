@@ -6,11 +6,10 @@ the README.md file found in `librustc`](../librustc/README.md).
 
 The `rustc_typeck` crate contains the source for "type collection" and
 "type checking", as well as a few other bits of related functionality.
-(It draws heavily on the [type inferencing][infer] and
-[trait solving][traits] code found in librustc.)
+(It draws heavily on the type inferencing and trait solving code found in librustc.)
 
-[infer]: ../librustc/infer/README.md
-[traits]: ../librustc/traits/README.md
+../librustc/infer/README.md
+../librustc/traits/README.md
 
 ## Type collection
 
