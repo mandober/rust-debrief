@@ -36,24 +36,3 @@ $\therefore{q}$
 The sequent for these examples: ${p}\wedge\neg{q}\rightarrow{r}, \neg{r}, p \vdash q$
 
 It is not necessarily obvious which rules to apply, and in what order, to obtain the desired conclusion. Additionally, our proof rules should be carefully chosen; otherwise, we might be able to "prove" invalid patterns of argumentation. 
-
-
-## Rules for natural deduction
-
-
-The rules for conjunction:
-- and-introduction: $\wedge{i}$
-- and-elimination (two rules, one for each assumption: $\wedge{e_1}$ and $\wedge{e_2}$)
-
-
-The rules of double negation:
-- double negation introduction: $\neg\neg{i}$
-- double negation elimination: $\neg\neg{e}$
-
-The rules for implication:
-- implication introduction: $\rightarrow{i}$
-- implication elimination: $\rightarrow{e}$    
-  (_modus ponens_,  implies-elimination, arrow-elimination)
-- _modus tollens_: $MT$
-$\phi \rightarrow \psi, \neg \psi \vdash \neg \phi$
-

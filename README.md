@@ -31,7 +31,6 @@ Research
 (well-established crates complementing std mimicking std paths)
 
 
-
 [gb2]: https://devrev.gitbook.io/rust-debrief/
 [gb1]: https://mandober.gitbooks.io/rust-debrief
 [ghb]: https://github.com/mandober/rust-debrief

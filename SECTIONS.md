@@ -1,5 +1,16 @@
-sections
+# Cobblestone Street to Rust
 
-- Memory
+PART ONE: CS
+PART TWO: RUST
+
+PART ONE: CS
 - Architecture
-- Appendix
+- Memory
+
+PART TWO: RUST
+- Syntax
+- Semantics
+
+APPENDICES
+- Glossary
+- Links
