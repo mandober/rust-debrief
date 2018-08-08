@@ -3,33 +3,13 @@
 	"description": "Rust by bullet point, from summary to particularity",
 	"author": "Ilic Ivan <ilicivan@zoho.com>",
 	"plugins": [
-		"json-sidebar",
 		"include-codeblock",
 		"mathjax",
-		"page-toc",
-		"anchorjs",
-		"toggle-chapters",
-		"collapse",
 		"theme-default"
 	],
 	"pluginsConfig": {
-		"selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
-		"position": "before-first",
-		"showByDefault": true,
 		"mathjax": {
 			"forceSVG": false
-		},
-		"hints": {
-			"info": "fa fa-info-circle",
-			"tip": "fa fa-mortar-board",
-			"danger": "fa fa-exclamation-cicle",
-			"working": "fa fa-wrench"
-		},
-		"anchorjs": {
-			"icon": "❡",
-			"placement": "left",
-			"visible": "hover",
-			"class": "custom-class another-one"
 		}
 	}
 }
