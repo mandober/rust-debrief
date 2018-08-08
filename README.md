@@ -35,3 +35,8 @@ Research
 [gb1]: https://mandober.gitbooks.io/rust-debrief
 [ghb]: https://github.com/mandober/rust-debrief
 [rs]: https://www.rust-lang.org/
+
+
+
+If an element $$a$$ is in the set $$A$$ and set $$A$$ is in the set $$\mathscr{M}$$, that doesn't imply the element $$a$$ is in the set $$\mathscr{M}$$: $$x \in A \land A \in \mathscr{M} \not \rightarrow x \in A$$.
+

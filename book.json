@@ -23,7 +23,7 @@
 		"position": "before-first",
 		"showByDefault": true,
 		"mathjax": {
-			"forceSVG": true
+			"forceSVG": false
 		},
 		"hints": {
 			"info": "fa fa-info-circle",
