@@ -7,7 +7,6 @@
 - [Infinite and finite sets](./02_cardinality.md)
 - [Fundamental sets](./02_cardinality.md#fundamental-sets)
 - [Empty set](./02_cardinality.md#empty-set)
-- [Fundamental sets](./02_cardinality.md#fundamental-sets)
 - [Set comprehensions](./02_cardinality.md#set-comprehensions)
 - [The Cartesian Product](./02_cardinality.md#the-cartesian-product)
 - [Indexed sets](./02_cardinality.md#indexed-sets)

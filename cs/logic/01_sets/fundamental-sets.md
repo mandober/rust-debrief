@@ -14,3 +14,6 @@ Some sets are so fundamental they have a special symbol assigned to them:
   $$\quad \mathbb{N}\subseteq \mathbb{Z}\subseteq \mathbb{Q}\subseteq \mathbb{R}$$
 - $$\mathbb{C}$$ is the set of complex numbers    
   $$\quad \{a,b\,i:a,b\in\mathbb{R}\}$$
+
+
+$$$\quad \mathbb{N}\subseteq \mathbb{Z}\subseteq \mathbb{Q}\subseteq \mathbb{R}$$$

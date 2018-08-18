@@ -30,8 +30,10 @@ Even though they are all infinite sets, it turns out that $$\mathbb{N}, \mathbb{
 ## Empty set
 
 Another special set, regarded as an existing object, is the __empty set__, i.e. a set that has no elements: $$\{\}$$. It is denoted as $$\varnothing$$, so $$\{\}=\varnothing$$. The empty set is the only set whose cardinality is zero: $$|\varnothing|=0$$. Note: $$\varnothing=\{\}$$ and $$\{\varnothing\}=\{\{\}\}$$, so $$\varnothing\neq \{\varnothing\} $$.
-- empty set is a subset of any set
-- empty set is a proper subset of any non-empty set
+
+Empty set is a subset of any set.
+
+Empty set is a proper subset of any non-empty set.
 
 $$\varnothing$$ is the empty set: $$\quad\varnothing = \emptyset = \{\}$$
 
