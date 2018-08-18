@@ -27,13 +27,19 @@ Mostly gathered by rummaging through official channels (API reference, the Old a
 Trying to get a better grasp on the huge Rust universe (and beyond, towards CS in general), an insight of what is available, where it's located and how it all fits together. An attempt to extract essentials in the form of bullet-point summary, followed by detailed explanation (consolidation through explanation learning principle).
 
 
-<details><summary>Research</summary>
+
+<details>
+
+<summary>Research</summary>
 
 - collapsible mind-map of all std items
 - well-established crates that complement std: list of canonical, de facto standard crates to comprise a mega meta-crate that re-exports paths from containing child crates mimicking and complementing std paths
 - free publishing platform with Latex support
 
-</details><br>
+</details>
+
+<br>
+
 
 
 

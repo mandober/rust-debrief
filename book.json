@@ -3,7 +3,8 @@
 	"description": "Rust by bullet point, from summary to particularity",
 	"author": "Ilic Ivan <ilicivan@zoho.com>",
 	"plugins": [
-		"mathjax"
+		"mathjax",
+		"include-codeblock"
 	],
 	"pluginsConfig": {
 		"mathjax": {

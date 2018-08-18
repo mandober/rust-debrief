@@ -2,25 +2,36 @@
 
 [Cobblestone Street to Rust](./README.md)
 
+---
 
 PART ONE: CS
 
-## Logic
+
+## Sets
 
 - [Sets](./cs/logic/01_sets/README.md)
-  - [Set membership](./cs/logic/01_sets/01_set.md#set-membership)
-  - [Set extensionality](./cs/logic/01_sets/01_set.md#extensionality)
+  - Set membership
+  - Set extensionality
   - [Set cardinality](./cs/logic/01_sets/02_cardinality.md)
-  - [Infinite and finite sets](./cs/logic/01_sets/02_cardinality.md)
-  - [Fundamental sets](./cs/logic/01_sets/02_cardinality.md#fundamental-sets)
-  - [Empty set](./cs/logic/01_sets/02_cardinality.md#empty-set)
-  - [Fundamental sets](./cs/logic/01_sets/02_cardinality.md#fundamental-sets)
-  - [Set comprehensions](./cs/logic/01_sets/02_cardinality.md#set-comprehensions)
-  - [The Cartesian Product](./cs/logic/01_sets/02_cardinality.md#the-cartesian-product)
-  - [Indexed sets](./cs/logic/01_sets/02_cardinality.md#indexed-sets)
-  - [Russell's Paradox](./cs/logic/01_sets/02_cardinality.md#russells-paradox)
+  - Infinite and finite sets
+  - Fundamental sets
+  - Empty set
+  - Fundamental sets
+  - Set comprehensions
+  - The Cartesian Product
+  - Indexed sets
+  - Russell's Paradox
+
+
+## Relations
 - [Relations](./cs/logic/02_relations/README.md)
+
+
+## Functions
 - [Functions](./cs/logic/03_functions/README.md)
+
+
+## Logic
 - Formal logic
 - Propositional Logic
 - Predicate logic

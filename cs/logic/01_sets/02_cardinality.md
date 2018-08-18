@@ -24,11 +24,17 @@ If $$X$$ is a finite set, its __cardinality__, i.e. the number of its elements, 
 <!-- @import "./fundamental-sets.md" -->
 
 
+Even though they are all infinite sets, it turns out that $$\mathbb{N}, \mathbb{Z}, \mathbb{Q}$$ have the same number of elements, while $$\mathbb{R}$$ has a whole lotta more. The former three are __enumerable__ and infinite whereas the latter R is __non-enumerable__ and infinite.
+
 
 ## Empty set
+
 Another special set, regarded as an existing object, is the __empty set__, i.e. a set that has no elements: $$\{\}$$. It is denoted as $$\varnothing$$, so $$\{\}=\varnothing$$. The empty set is the only set whose cardinality is zero: $$|\varnothing|=0$$. Note: $$\varnothing=\{\}$$ and $$\{\varnothing\}=\{\{\}\}$$, so $$\varnothing\neq \{\varnothing\} $$.
 - empty set is a subset of any set
 - empty set is a proper subset of any non-empty set
+
+$$\varnothing$$ is the empty set: $$\quad\varnothing = \emptyset = \{\}$$
+
 
 
 ## Set comprehensions
