@@ -1,16 +1,19 @@
 # Cobblestone Street to Rust
 
 PART ONE: CS
-PART TWO: RUST
+PART TWO: Rust
 
-PART ONE: CS
+
+## PART ONE: CS
+- Logic
 - Architecture
 - Memory
 
-PART TWO: RUST
+## PART TWO: RUST
 - Syntax
 - Semantics
 
-APPENDICES
+
+## APPENDICES
 - Glossary
 - Links

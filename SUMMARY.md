@@ -1,17 +1,23 @@
 # Summary
 
-- [Rust Debrief](./README.md)
+[Cobblestone Street to Rust](./README.md)
 
 
-## Math
-- [Sets](./cs/math/sets.md)
-- Lambda calculus
+PART ONE: CS
 
 ## Logic
+
+- [Sets](./cs/logic/01_sets/README.md)
+- [Relations](./cs/logic/02_relations/README.md)
+- [Functions](./cs/logic/03_functions/README.md)
 - Formal logic
 - Propositional Logic
 - Predicate logic
 - Proofs
+- Lambda calculi
+- Lambda calculus
+
+
 
 ## Memory
 - [Memory](./cs/memory/README.md)
@@ -49,7 +55,11 @@
 - Type Systems
 - Data Types
 
-# Rust Syntax
+---
+
+PART TWO: RUST
+
+## Rust Syntax
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
 - [Conventions](syntax/conventions.md)

@@ -1,2 +1,2 @@
-# CS: Architecture
+# Architecture
 
