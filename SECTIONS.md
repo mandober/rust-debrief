@@ -1,25 +1,133 @@
 # Cobblestone Street to Rust
 
-1. CS
-2. Rust
-3. Appendix
+* Discrete math
+* CS
+* Rust
+* Appendix
+
+Discrete Math
+- Sets
+- Relations
+- Functions
+- Mathematical Logic
+- Group theory
+- Counting Theory
+- Probability
+- Mathematical induction
+- Recurrence relations
+- Graph theory
+- Trees
+- Boolean algebra
+
+Logic in CS
+- Formal verification
+- Proof theory
+- Automated theorem proving
 
 
-## PART ONE: CS
-- CHAPTER 1: Discrete Math
-  - Sets
-  - Relations
-  - Functions
-- CHAPTER 2: Mathematical Logic
-  - Logic
-- CHAPTER 3: Computer Architecture
-  - Architecture
-  - Memory
-- CHAPTER 4: PL Paradigms
-  - Data Structures
-  - Algorithms
-  - Best Practices
-- CHAPTER 4: PL Paradigms
+Mathematical Logic
+- Propositinal logic
+  - Connectives
+  - Tautologies
+  - Contradictions
+  - Contingency
+  - Propositional Equivalences
+  - Inverse, Converse, and Contra-positive
+  - Duality Principle
+  - Normal Forms: CNF, DNF
+- Predicate logic
+  - Well Formed Formula
+  - Quantifiers
+- Rules of Inference
+  - Addition
+  - Conjunction
+  - Simplification
+  - MP, MT
+  - Disjunctive Syllogism
+  - Hypothetical Syllogism
+  - Constructive Dilemma
+  - Destructive Dilemma
+- Operators and Postulates
+  - Closure
+  - Associative Laws
+  - Commutative Laws
+  - Distributive Laws
+  - Identity 
+  - Inverse
+  - De Morgan's Law
+- Group theory
+  - Semigroup
+  - Monoid
+  - Group
+  - Abelian Group
+  - Cyclic Group and Subgroup
+  - Partially Ordered Set (POSET)
+  - Hasse Diagram
+  - Linearly Ordered Set
+  - Lattice
+- Counting Theory
+  - The Rules of Sum and Product
+  - Permutations
+  - Combinations
+  - Pascal's Identity
+  - Pigeonhole Principle
+  - The Inclusion-Exclusion principle
+- Probability
+  - Probability Axioms
+  - Properties of Probability
+  - Conditional Probability
+  - Bayes' Theorem
+- Mathematical induction 
+  - Induction
+  - Strong Induction
+- Recurrence relations
+  - Linear Recurrence Relations
+  - Non-Homogeneous Recurrence Relation and Particular Solutions
+  - Generating Functions
+- Graph theory
+  - Graph
+  - Graph Models
+  - Types of Graphs
+  - Representation of Graphs
+  - Planar vs. Non-planar graph
+  - Isomorphism
+  - Homomorphism
+  - Euler Graphs
+  - Hamiltonian Graphs
+  - Graph Coloring
+  - Traversal
+- Trees
+  - Properties
+  - Centers and Bi-Centers of a Tree
+  - Labeled Trees
+  - Unlabeled Trees
+  - Rooted Tree
+  - Binary Search Tree
+  - Spanning Trees
+  - Kruskal's Algorithm
+  - Prim's Algorithm
+- Boolean algebra
+  - Boolean Functions
+  - Boolean Expressions
+  - Boolean Identities
+  - Canonical Forms
+  - Logic Gates
+  - Simplification Of Boolean Functions
+    - Simplification Using Algebraic Functions
+    - Karnaugh Maps
+    - Simplification Using K-map
+
+
+
+Computer Architecture
+- Computer Architecture
+- Data representation
+- Architecture
+- Memory
+- Programming Language Paradigms
+- Data Structures
+- Algorithms
+- Best Practices
 
  
 ## PART TWO: RUST

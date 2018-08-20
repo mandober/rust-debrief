@@ -15,7 +15,10 @@ Sets come in two sizes: finite and infinite. An __infinite set__ has infinitely 
 
 A __finite set__ has an finite number of elements, but even so a large sets can be denoted by using elipsis and a terminal member, such as $$\{1,2,3, \dots,100\}$$, and $$\{1,2,\dots,n\}$$.
 
+
+{% hint style='info' %}
 If $$X$$ is a finite set, its __cardinality__, i.e. the number of its elements, is denoted by $$|X|$$. Given a set $$A=\{1,2,\dots,10\}$$, its cardinality is $$|A|=10$$.
+{% endhint %}
 
 
 ## Fundamental sets

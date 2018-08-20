@@ -1,30 +1,6 @@
-# Discrete Mathematics
-
 https://www.tutorialspoint.com/discrete_mathematics/discrete_mathematics_quick_guide.htm
 
-Mathematics can be broadly classified into two categories:
-1. Continuous Mathematics
-2. Discrete Mathematics
-
-__Continuous Mathematics__
-is based upon continuous number line or the real numbers. It is characterized by the fact that between any two numbers, there is an infinite set of numbers. For example, a function in continuous mathematics can be plotted in a smooth curve without breaks.
-
-__Discrete Mathematics__
-involves itself with distinct values; i.e. between any two points, there is a countable number of points. For example, if we have a finite set of objects, a function can be defined as a list of ordered pairs having these objects, and it can be presented as a complete list of ordered pairs.
-
-The topics of Discrete Mathematics:
-- Sets, Relations and Functions
-- Mathematical Logic
-- Group theory
-- Counting Theory
-- Probability
-- Mathematical Induction and Recurrence Relations
-- Graph Theory
-- Trees
-- Boolean Algebra
-
-
-## Sets
+# Sets
 
 A set is a collection of definite and distinguishable objects, selected by a specific rule or by a desciption of their common property.
 
@@ -62,6 +38,17 @@ If |X|≤|Y| and |X|≥|Y| then |X|=|Y|. The sets X and Y are commonly referred 
 
 
 ## Types of Sets
+- Subset
+- Proper subset
+- Superset
+- Universal set
+- Singleton (unit) set
+- Equal set
+- Equivalent set
+- Overlapping set
+- Disjoint set
+- Powerset
+
 
 Sets can be classified into many types, including: finite, infinite, universal, singleton, empty set.
 
@@ -113,6 +100,8 @@ of a set S is the set of all subsets of S including the empty set. The cardinali
 - Difference
 - Complement
 - Cartesian (cross) product
+- Partitioning
+  - Bell Numbers
 
 
 ## Partitioning
@@ -138,121 +127,13 @@ Another probable partitioning is {a,b},{c,d},{e,f,g,h}
 ## Bell Numbers
 Bell numbers give the count of the number of ways to partition a set. They are denoted by Bn where n is the cardinality of the set.
 
-Example −
-
+Example:
 Let S={1,2,3}, n=|S|=3
 The alternate partitions are −
-
 1. ∅,{1,2,3}
-
 2. {1},{2,3}
-
 3. {1,2},{3}
-
 4. {1,3},{2}
-
 5. {1},{2},{3}
-
 Hence B3=5
-
-
-
----
-
-# Relations
-
-Relations may exist between objects of the same set or between objects of two or more sets.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

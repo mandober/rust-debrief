@@ -2,10 +2,10 @@
 
 [Cobblestone Street to Rust](./README.md)
 
-PART ONE: CS
 
-## Discrete Math
-- [Discrete Math](./cs/logic/01_sets/discrete-math.md)
+## CS
+
+- [Discrete Math](./cs/logic/01_sets/dm.md)
 - [Sets](./cs/logic/01_sets/README.md)
 - [Set cardinality](./cs/logic/01_sets/02_cardinality.md)
 - [Relations](./cs/logic/02_relations/README.md)
@@ -31,9 +31,6 @@ PART ONE: CS
 - Binding
 - Type Systems
 - Data Types
-
-
-## Computer Architecture
 - Architecture
 - Data representation
 - Memory
@@ -65,10 +62,9 @@ PART ONE: CS
 - [program-memory](cs/memory/program-memory.md)
 
 
+## Rust
 
-PART TWO: RUST
-
-## Rust Syntax
+- Rust Syntax
 - [Attributes](syntax/attributes.md)
 - [Comments](syntax/comments.md)
 - [Conventions](syntax/conventions.md)
@@ -81,22 +77,18 @@ PART TWO: RUST
 - [Literals](syntax/literals.md)
 - [Operators](syntax/operators.md)
 - [Syntactic elements](syntax/syntactic-elements.md)
-
-## Concepts
+- Concepts
 - Lifetimes
 - [Iterators](concepts/iterators/iterators.md)
-
-## Primitives
+- Primitives
 - [Character](primitives/char/char.md)
 - [Slices](primitives/slice/slice.md)
 - [Unit](primitives/unit/unit.md)
 - [Never](primitives/never/never.md)
-
-## Rust Types
+- Rust Types
 - Classification
 - Annotation
-
-## Modules
+- Modules
 - [collections](modules/collections/README.md)
 - [option](modules/option/README.md)
 - [any](modules/any/any.md)
@@ -104,23 +96,19 @@ PART TWO: RUST
 - [iter](modules/iter/README.md)
   - [methods](modules/iter/methods-all.md)
 - [box](modules/boxed/box.md)
-
-## Traits
+- Traits
 - [Traits](traits/README.md)
 - Index by module
 - Derivable traits
 - Trait resolution
-
-## Items
+- Items
 - [Lang Items](items/README.md)
-
-## Macros
+- Macros
 - [Macros](macros/macro.md)
 - [Declarative macros](macros/macro-declerative.md)
 - [Procedural macros](macros/macro-procedural.md)
 - [Index of std macros](macros/macro-index.md)
-
-## Rust Core
+- Rust Core
 - [The compiler](core/compiler.md)
 - [Trait resolution](core/rustc/trait-resolution.md)
 - [Type inference engine](core/rustc/type-inference-engine.md)
@@ -131,13 +119,12 @@ PART TWO: RUST
 - [Variance of type and lifetime parameters](core/rustc/variance-of-type-and-lifetime-parameters.md)
 
 
+
 ## Appendix
+
 - [Terminology](appendix/terms.md)
 - [Abbreviations](appendix/abbr.md)
 - [Links](links/README.md)
-
-
-## Meta
 - [SECTIONS](./SECTIONS.md)
 - [README](./README.md)
 - [SUMMARY](./SUMMARY.md)

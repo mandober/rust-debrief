@@ -7,13 +7,19 @@
 
 <!-- /TOC -->
 
-Sets are the most fundamental building blocks of mathematical objects. Almost every mathematical object can be seen as a set of some kind. The theory of sets, initiated by Georg Cantor, constitutes the basis of almost all modern mathematics.
+A __mathematical object__ is an abstract object arising in mathematics. It is anything that can be formally defined, and with which one may do deductive reasoning and mathematical proofs.
+
+__Sets__ are the most fundamental building blocks of mathematical objects. Almost every mathematical object can be seen as a set of some kind. The theory of sets, initiated by Georg Cantor, constitutes the basis of almost all modern mathematics.
+
+> A set is a collection of distinct objects, considered as an object in its own right.
 
 The set concept is one of the basics so the term "set" must be accepted as a primitive notion, without formal definition. Informally, a set is a __collection__ (aggregate, class, totality, family) of objects of any kind, disregarding their repetion and the order in which they were specified in.
 
 A set can be denoted by listing its elements between the curly braces, e.g. $$\{2,4,6,8\}$$, or it can be described by a property that all of its members share, e.g. $$\{x: x \text{ is a superhero}\}$$, where the $$x$$ stands for the property that it has to have in order to be counted among the elements of the set.
 
 Sets are usually denoted with an uppercase letter; the set $$\{a,b,c\}$$ may be declared as $$A=\{a,b,c\}$$, and now we can use $$A$$ to stand in for the set $$\{a,b,c\}$$.
+
+Sets A and B are equal if and only if they have precisely the same elements.[2]
 
 
 ## Set membership
