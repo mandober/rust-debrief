@@ -5,25 +5,13 @@
 - Order or repetition of elements is unimportant: $$\{\{a\},b,\varnothing\}=\{b, \{a\},\{\},b,\varnothing,\{\}\}$$
 - $$x \in A \land A \in \mathscr{M} \not \rightarrow x \in A$$.
 - An empty set, $$\varnothing$$ or $$\{\}$$, contains no elements
-
 - Two sets are equal if they contain exactly the same elements.
-
 - $$\mathbb{N}$$: The set of natural numbers (positive integers)
-
-
-
-A set, $$\{a,b\}$$, is distinguished from the ordered pair, $$(a,b)$$
-
+- A set, $$\{a,b\}$$, is distinguished from the ordered pair, $$(a,b)$$
 - $$n$$-element set is different from ordered $$n$$-tuple: $$\{x_1, x_2,\dots,x_n\} \neq (x_1,\dots, x_n)$$
-
 - Two ordered pairs are equal __iff__: $$(a,b) = (x,y) \iff a=x \land b = y$$
-
-The order of the elements or their repetition is of no consequence to sets, $$\{a,b,\{\}\}=\{b,\{\},b,\varnothing,a\}$$.
-
-
-$$\{\varnothing\}=\{\{\}\}$$
-
-
+- The order of the elements or their repetition is of no consequence to sets, $$\{a,b,\{\}\}=\{b,\{\},b,\varnothing,a\}$$.
+- $$\{\varnothing\}=\{\{\}\}$$
 
 
 

@@ -2,81 +2,69 @@
 
 [Cobblestone Street to Rust](./README.md)
 
----
-
 PART ONE: CS
 
-
-## Sets
-
+## Discrete Math
+- [Discrete Math](./cs/logic/01_sets/discrete-math.md)
 - [Sets](./cs/logic/01_sets/README.md)
-  - Set membership
-  - Set extensionality
-  - [Set cardinality](./cs/logic/01_sets/02_cardinality.md)
-  - Infinite and finite sets
-  - Fundamental sets
-  - Empty set
-  - Fundamental sets
-  - Set comprehensions
-  - The Cartesian Product
-  - Indexed sets
-  - Russell's Paradox
-
-
-## Relations
+- [Set cardinality](./cs/logic/01_sets/02_cardinality.md)
 - [Relations](./cs/logic/02_relations/README.md)
-
-
-## Functions
 - [Functions](./cs/logic/03_functions/README.md)
-
-
-## Logic
+- Mathematical Logic
+- Logic
+- Logics
 - Formal logic
 - Propositional Logic
 - Predicate logic
 - Proofs
-- Lambda calculi
 - Lambda calculus
-
-
-## Memory
-- [Memory](./cs/memory/README.md)
-- [Memory Management](./cs/memory/memory-management-levels.md)
-- Memory Management at the hardware level
-  - [Memory hierachy](cs/memory/memory-hierarchy.md)
-  - [Memory types](cs/memory/memory-types.md)
-  - [Cache](cs/memory/cache.md)
-  - [Memory address register](cs/memory/mar.md)
-  - [Registers](cs/memory/registers.md)
-  - [Word](cs/memory/word.md)
-- Memory Management at the OS level
-  - [Memory model](cs/memory/memory-model.md)
-  - [Memory protection](cs/memory/memory-protection.md)
-  - [Virtual memory](cs/memory/virtual-memory.md)
-  - [Segmentation fault](cs/memory/segmentation-fault.md)
-  - [Address space](cs/memory/address-space.md)
-  - [Memory address](cs/memory/memory-address.md)
-  - [Physical address](cs/memory/physical-address.md)
-- Memory Management at the program level
-  - Manual memory management
-  - Garbage collection
-  - [Memory allocation](cs/memory/memory-allocation.md)
-  - Stack based allocation
-  - Dynamic memory allocation
-  - [Memory safety](cs/memory/memory-safety.md)
-  - [Memory leak](cs/memory/memory-leak.md)
-  - [program-memory](cs/memory/program-memory.md)
-
-## Language
+- Lambda calculi
+- Formal Languages
+- Syntax
+- Semantics
+- Grammer
+- BNF
+- Programming Languages
 - Declaration
 - Definition
-
-## Type System
+- Assignment
+- Binding
 - Type Systems
 - Data Types
 
----
+
+## Computer Architecture
+- Architecture
+- Data representation
+- Memory
+- [Memory](./cs/memory/README.md)
+- [Memory Management](./cs/memory/memory-management-levels.md)
+- Memory Management at the hardware level
+- [Memory hierachy](cs/memory/memory-hierarchy.md)
+- [Memory types](cs/memory/memory-types.md)
+- [Cache](cs/memory/cache.md)
+- [Memory address register](cs/memory/mar.md)
+- [Registers](cs/memory/registers.md)
+- [Word](cs/memory/word.md)
+- Memory Management at the OS level
+- [Memory model](cs/memory/memory-model.md)
+- [Memory protection](cs/memory/memory-protection.md)
+- [Virtual memory](cs/memory/virtual-memory.md)
+- [Segmentation fault](cs/memory/segmentation-fault.md)
+- [Address space](cs/memory/address-space.md)
+- [Memory address](cs/memory/memory-address.md)
+- [Physical address](cs/memory/physical-address.md)
+- Memory Management at the program level
+- Manual memory management
+- Garbage collection
+- [Memory allocation](cs/memory/memory-allocation.md)
+- Stack based allocation
+- Dynamic memory allocation
+- [Memory safety](cs/memory/memory-safety.md)
+- [Memory leak](cs/memory/memory-leak.md)
+- [program-memory](cs/memory/program-memory.md)
+
+
 
 PART TWO: RUST
 
@@ -142,10 +130,14 @@ PART TWO: RUST
 - [The Borrow Checker](core/rustc/borrow-checker.md)
 - [Variance of type and lifetime parameters](core/rustc/variance-of-type-and-lifetime-parameters.md)
 
+
 ## Appendix
 - [Terminology](appendix/terms.md)
 - [Abbreviations](appendix/abbr.md)
-
-## Links
 - [Links](links/README.md)
 
+
+## Meta
+- [SECTIONS](./SECTIONS.md)
+- [README](./README.md)
+- [SUMMARY](./SUMMARY.md)
