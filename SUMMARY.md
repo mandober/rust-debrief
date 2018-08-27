@@ -1,13 +1,12 @@
 # Summary
 
-[Cobblestone Street to Rust](./README.md)
+[Road to Rust (R2R)](./README.md)
 
 
 ## Discrete Math
 
-- [Discrete math](./cs/dm/README.md)
-- [Sets](./cs/dm/sets/README.md)
-- [Relations](./cs/dm/relations/README.md)
+- [Sets](./cs/dm/sets/01_sets.md)
+- [Relations](./cs/dm/relations/01_relations.md)
 - [Functions](./cs/dm/functions/README.md)
 - [Propositional logic](./cs/dm/propositional/README.md)
 - [Predicate logic](./cs/dm/predicate/README.md)
@@ -128,6 +127,5 @@
 - [Terminology](appendix/terms.md)
 - [Abbreviations](appendix/abbr.md)
 - [Links](links/README.md)
-- [SECTIONS](./SECTIONS.md)
 - [README](./README.md)
-- [SUMMARY](./SUMMARY.md)
+- [SECTIONS](./SECTIONS.md)

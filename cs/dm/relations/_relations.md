@@ -1,5 +1,9 @@
 # Relations
 
+
+
+
+
 An ordered pair is a pair of objects, $$(a,b)$$, where the object $$a$$ is called the __first entry__, the object $$b$$ is the __second entry__ of the pair. Unlike unordered pairs (i.e. sets with two elements), an ordered pair is affected by the order of its two elements, so $$(a,b)\neq (b,a)$$. 
 
 

@@ -1,7 +1,7 @@
-# Cobblestone Street to Rust
+# Road to Rust
 
-
-CS2RS: from CS to Rust, topic by topic, from summary to particularity.
+from CS to Rust
+or: per aspera ad Rust-a
 
 
 **Meta**    
@@ -14,7 +14,6 @@ CS2RS: from CS to Rust, topic by topic, from summary to particularity.
 Rendered
 - [GitBooks legacy][gbl]
 - [GitBooks][gbn] (but no mathJax support)
-
 
 
 **Project**    
@@ -31,14 +30,12 @@ Trying to get a better grasp on the huge Rust universe (and beyond, towards CS i
 <details>
 
 <summary>Research</summary>
-
-- collapsible mind-map of all std items
-- well-established crates that complement std: list of canonical, de facto standard crates to comprise a mega meta-crate that re-exports paths from containing child crates mimicking and complementing std paths
-- free publishing platform with Latex support
-
-</details>
-
-<br>
+    
+- collapsible mind-map of all std items      
+- well-established crates that complement std: list of canonical, de facto standard crates to comprise a mega meta-crate that re-exports paths from containing child crates mimicking and complementing std paths        
+- free publishing platform with Latex support          
+    
+</details><br>
 
 
 
