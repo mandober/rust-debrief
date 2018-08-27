@@ -37,6 +37,106 @@
 
 
 
+<details>
+<summary>DM Topics</summary>
+
+- Sets
+- Relations
+- Functions
+- Group theory
+  - Semigroup
+  - Monoid
+  - Group
+  - Abelian Group
+  - Cyclic Group and Subgroup
+  - Partially Ordered Set
+  - Hasse Diagram
+  - Linearly Ordered Set
+  - Lattice
+- Recurrence relations
+  - Linear Recurrence Relations
+  - Non-Homogeneous Recurrence Relation
+  - Generating Functions
+- Mathematical Logic
+  - Propositinal logic
+    - Connectives
+    - Tautologies
+    - Contradictions
+    - Contingency
+    - Propositional Equivalences
+    - Inverse, Converse, and Contra-positive
+    - Duality Principle
+    - Normal Forms: CNF, DNF
+  - Predicate logic
+    - Well Formed Formula
+    - Quantifiers
+  - Rules of Inference
+    - Addition
+    - Conjunction
+    - Simplification
+    - MP, MT
+    - Disjunctive Syllogism
+    - Hypothetical Syllogism
+    - Constructive Dilemma
+    - Destructive Dilemma
+  - Operators and Postulates
+    - Closure
+    - Associative Laws
+    - Commutative Laws
+    - Distributive Laws
+    - Identity 
+    - Inverse
+    - De Morgan's Law
+  - Mathematical induction
+    - Induction
+    - Strong Induction
+- Counting Theory
+  - The Rules of Sum and Product
+  - Permutations
+  - Combinations
+  - Pascal's Identity
+  - Pigeonhole Principle
+  - The Inclusion-Exclusion principle
+- Probability
+  - Probability Axioms
+  - Properties of Probability
+  - Conditional Probability
+  - Bayes' Theorem
+- Graph theory
+  - Graph Models
+  - Types of Graphs
+  - Representation of Graphs
+  - Planar vs. Non-planar graph
+  - Isomorphism
+  - Homomorphism
+  - Euler Graphs
+  - Hamiltonian Graphs
+  - Graph Coloring
+  - Traversal
+- Trees
+  - Properties
+  - Centers and Bi-Centers of a Tree
+  - Labeled Trees
+  - Unlabeled Trees
+  - Rooted Tree
+  - Binary Search Tree
+  - Spanning Trees
+  - Kruskal's Algorithm
+  - Prim's Algorithm
+- Boolean algebra
+  - Boolean Functions
+  - Boolean Expressions
+  - Boolean Identities
+  - Canonical Forms
+  - Logic Gates
+  - Simplification of Boolean Functions
+    - Simplification Using Algebraic Functions
+    - Karnaugh Maps
+    - Simplification Using K-map
+
+</details>
+
+
 
 Classical logic:
 - Aristotle's Organon introduces his theory of syllogisms

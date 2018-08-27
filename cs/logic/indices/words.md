@@ -2,17 +2,16 @@ absorption
 argument
 arity
 associativity
-atomic
 axiom
-axiomatic
-binary
+axiomatic set theory
+binary relation
 boolean
-calculus
+propositional calculus
+lambda calculus
 cardinality
-cartesian
+cartesian product
 categoricity
-church–turing
-clause
+Church–Turing theorem
 codomain
 cogency
 commutativity
@@ -21,17 +20,15 @@ completeness
 comprehension
 computability
 conjunction
-connective
+logic connective
 consequence
 consistent
 constant
 countability
 decidability
-deduction
-discourse
+natural deduction
+domain of discourse
 disjunction
-domain
-elimination
 empty set
 entailment
 enumerability
@@ -42,24 +39,25 @@ extensionality
 finitary
 FOL
 formal logic
-formation
+formation rule
 formula
+formulae
 incompleteness
 inconsistency
 inference
 infinitary
 intuitionistic
-kripke–platek
+Kripke–Platek
 lemma
-löwenheim–skolem
+Löwenheim–Skolem
 many-valued logic
 mathematical logic
 model theory
 monadic
-morse–kelley
+Morse–Kelley
 naive
-n-ary
-neumann–bernays–gödel
+k-ary
+Neumann–Bernays–Gödel
 omega-consistent
 partial order
 powerset
@@ -71,8 +69,11 @@ quantifier
 recursion
 reflexivity
 satisfiability
+SAT
 saturated
-second-order
+second-order logic
+first-order logic
+eroth-order logic
 segregative
 semantics
 sequent
@@ -82,20 +83,19 @@ subset
 syllogism
 symmetry
 syntax
-tarski–grothendieck
+Tarski–Grothendieck
 theorem
 theory
 thesis
 transformation
 transitivity
 truth
-unary
+unary relation
 uncountable
 universal
 validity
-wff
-zeroth-order
-zfc
+WFF
+ZFC
 κ-categorical
 σ-structure
 ω-logic
