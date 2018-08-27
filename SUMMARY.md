@@ -3,19 +3,22 @@
 [Cobblestone Street to Rust](./README.md)
 
 
+## Discrete Math
+
+- [Discrete math](./cs/dm/README.md)
+- [Sets](./cs/dm/sets/README.md)
+- [Relations](./cs/dm/relations/README.md)
+- [Functions](./cs/dm/functions/README.md)
+- [Propositional logic](./cs/dm/propositional/README.md)
+- [Predicate logic](./cs/dm/predicate/README.md)
+
+
 ## CS
 
-- [Discrete Math](./cs/logic/01_sets/dm.md)
-- [Sets](./cs/logic/01_sets/README.md)
-- [Set cardinality](./cs/logic/01_sets/02_cardinality.md)
-- [Relations](./cs/logic/02_relations/README.md)
-- [Functions](./cs/logic/03_functions/README.md)
 - Mathematical Logic
 - Logic
 - Logics
 - Formal logic
-- Propositional Logic
-- Predicate logic
 - Proofs
 - Lambda calculus
 - Lambda calculi
