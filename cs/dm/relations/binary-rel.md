@@ -55,7 +55,25 @@ $$$
 
 
 
+
+Binary relations 
+(all relations are transitive and reflexive)	Symmetric	Antisymmetric	Connex	Well-founded	Has joins	Has meets
+Equivalence relation	✓	✗	✗	✗	✗	✗
+Preorder (Quasiorder)	✗	✗	✗	✗	✗	✗
+Partial order	✗	✓	✗	✗	✗	✗
+Total preorder	✗	✗	✓	✗	✗	✗
+Total order	✗	✓	✓	✗	✗	✗
+Prewellordering	✗	✗	✓	✓	✗	✗
+Well-quasi-ordering	✗	✗	✗	✓	✗	✗
+Well-ordering	✗	✓	✓	✓	✗	✗
+Lattice	✗	✓	✗	✗	✓	✓
+Join-semilattice	✗	✓	✗	✗	✓	✗
+Meet-semilattice	✗	✓	✗	✗	✗	✓
+
+
 ---
+
+https://www.wikiwand.com/en/Lattice_(order)
 
 https://www.wikiwand.com/en/Finitary_relation
 https://www.wikiwand.com/en/Binary_relation

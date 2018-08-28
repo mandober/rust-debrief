@@ -3,7 +3,7 @@
 The tracking issue for this feature is: [#23121]
 [#23121]: https://github.com/rust-lang/rust/issues/23121
 
-See also [`slice_patterns`](language-features/slice-patterns.html).
+See also `slice_patterns`
 
 The `advanced_slice_patterns` gate lets you use `..` to indicate any number of
 elements inside a pattern matching a slice. This wildcard can only be used once

@@ -17,6 +17,8 @@ Subjects of interest to DM include:
 - Propositinal logic
 - Predicate logic
 - Group theory
+- Order theory
+- Lattice
 - Counting theory
 - Probability theory
 - Graph theory

@@ -38,3 +38,13 @@
   - Equavalence (Eq) relation (Re + Sy + Tr)
   - Partial order (Re + vS + Tr)
   - Total order
+
+
+Permutations
+Combinations
+Recursive Sequences
+Greatest Common Factor, GCF
+Binomial Theorem
+Arithmetic Sequences
+Proof by Induction
+

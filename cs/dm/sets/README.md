@@ -1,6 +1,6 @@
 # Sets
 
-- [Set](./sets.md)
+- [Set](./01_sets.md)
 - Set intro
 - Set notation
   - intensional
