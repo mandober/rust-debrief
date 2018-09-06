@@ -1,0 +1,189 @@
+
+
+
+- Sets
+- Relations
+- Functions
+- Mathematical Logic
+- Group theory
+- Counting Theory
+- Probability
+- Mathematical induction
+- Recurrence relations
+- Graph theory
+- Trees
+- Boolean algebra
+- Formal verification
+- Proof theory
+- Automated theorem proving
+- Mathematical Logic
+- Propositinal logic
+  - Connectives
+  - Tautologies
+  - Contradictions
+  - Contingency
+  - Propositional Equivalences
+  - Inverse, Converse, and Contra-positive
+  - Duality Principle
+  - Normal Forms: CNF, DNF
+- Predicate logic
+  - Well Formed Formula
+  - Quantifiers
+- Rules of Inference
+  - Addition
+  - Conjunction
+  - Simplification
+  - MP, MT
+  - Disjunctive Syllogism
+  - Hypothetical Syllogism
+  - Constructive Dilemma
+  - Destructive Dilemma
+- Operators and Postulates
+  - Closure
+  - Associative Laws
+  - Commutative Laws
+  - Distributive Laws
+  - Identity 
+  - Inverse
+  - De Morgan's Law
+- Group theory
+  - Semigroup
+  - Monoid
+  - Group
+  - Abelian Group
+  - Cyclic Group and Subgroup
+  - Partially Ordered Set (POSET)
+  - Hasse Diagram
+  - Linearly Ordered Set
+  - Lattice
+- Counting Theory
+  - The Rules of Sum and Product
+  - Permutations
+  - Combinations
+  - Pascal's Identity
+  - Pigeonhole Principle
+  - The Inclusion-Exclusion principle
+- Probability
+  - Probability Axioms
+  - Properties of Probability
+  - Conditional Probability
+  - Bayes' Theorem
+- Mathematical induction 
+  - Induction
+  - Strong Induction
+- Recurrence relations
+  - Linear Recurrence Relations
+  - Non-Homogeneous Recurrence Relation and Particular Solutions
+  - Generating Functions
+- Graph theory
+  - Graph
+  - Graph Models
+  - Types of Graphs
+  - Representation of Graphs
+  - Planar vs. Non-planar graph
+  - Isomorphism
+  - Homomorphism
+  - Euler Graphs
+  - Hamiltonian Graphs
+  - Graph Coloring
+  - Traversal
+- Trees
+  - Properties
+  - Centers and Bi-Centers of a Tree
+  - Labeled Trees
+  - Unlabeled Trees
+  - Rooted Tree
+  - Binary Search Tree
+  - Spanning Trees
+  - Kruskal's Algorithm
+  - Prim's Algorithm
+- Boolean algebra
+  - Boolean Functions
+  - Boolean Expressions
+  - Boolean Identities
+  - Canonical Forms
+  - Logic Gates
+  - Simplification Of Boolean Functions
+    - Simplification Using Algebraic Functions
+    - Karnaugh Maps
+    - Simplification Using K-map
+- Computer Architecture
+  - Computer Architecture
+  - Data representation
+  - Architecture
+  - Memory
+  - Programming Language Paradigms
+  - Data Structures
+  - Algorithms
+  - Best Practices
+
+
+## Discrete Math
+
+- Semantics
+- Relations
+- Functions
+- Propositional Logic
+- Predicate Logic
+
+## CS
+
+- Mathematical Logic
+- Logic
+- Logics
+- Formal logic
+- Proofs
+- Lambda calculus
+- Lambda calculi
+- Formal Languages
+- Syntax
+- Semantics
+- Grammer
+- BNF
+- Programming Languages
+- Declaration
+- Definition
+- Assignment
+- Binding
+- Type Systems
+- Data Types
+- Architecture
+- Data representation
+- Memory
+- Memory
+- Memory Management
+- Memory Management at the hardware level
+- Memory hierachy
+- Memory Types
+- Cache
+- Memory address register
+- Registers
+- Word
+- Memory Management at the OS level
+- Memory model
+- Memory protection
+- Virtual memory
+- Segmentation fault
+- Address space
+- Memory address
+- Physical address
+- Memory Management at the program level
+- Manual memory management
+- Garbage collection
+- Memory allocation
+- Stack based allocation
+- Dynamic memory allocation
+- Memory safety
+- Memory leak
+- program memory
+
+
+# Path to type theory
+
+- halting problem, to understand it, it's instructive to read up on
+- The Lambda Calculus, and methods of evaluation
+- The Simply Typed Lambda Calculus, needs a familiarity with
+- Sequent Calculus
+- Linear types and it's dual
+- Linear Logic, and most recently there is
+- Separation Logic

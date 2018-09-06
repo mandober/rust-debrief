@@ -1,6 +1,6 @@
 # Summary
 
-[Road to Rust (R2R)](./README.md)
+[Road to Rust](./README.md)
 
 
 ## Discrete Math
@@ -102,6 +102,9 @@
 - [Traits](traits/README.md)
 - Index by module
 - Derivable traits
+
+Trait resolution Trait resolution Trait `resolution` h6hhtth
+
 - Trait resolution
 - Items
 - [Lang Items](items/README.md)
@@ -129,3 +132,5 @@
 - [Links](links/README.md)
 - [README](./README.md)
 - [SECTIONS](./SECTIONS.md)
+
+asd dds
