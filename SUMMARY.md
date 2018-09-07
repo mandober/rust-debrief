@@ -5,11 +5,11 @@
 
 ## Discrete Math
 
-- [Sets](./cs/dm/sets/01_sets.md)
-- [Relations](./cs/dm/relations/01_relations.md)
-- [Functions](./cs/dm/functions/README.md)
-- [Propositional logic](./cs/dm/propositional/README.md)
-- [Predicate logic](./cs/dm/predicate/README.md)
+- Sets
+- Relations
+- Functions
+- Propositional logic
+- Predicate Logics
 
 
 ## CS

@@ -7,7 +7,16 @@ __Informal logic__ is the study of natural language arguments. The study of fall
 
 __Formal logic__ has started to take shape from the second half of the XIX century, with the use of formal and rigorous mathematical methods in the study of logic, which has introduced a shift towards a symbolic notation and language. The works of Aristotle contain the earliest known formal study of logic; modern formal logic follows and expands on Aristotle.
 
+---
+
+**Propositional logic** deals with propositions and argument flow. Compound propositions are formed by connecting propositions by logical connectives. The propositions without logical connectives are called atomic propositions. Unlike first-order logic, propositional logic does not deal with non-logical objects, predicates about them, or quantifiers. However, all the machinery of propositional logic is included in first-order logic and higher-order logics. In this sense, propositional logic is the foundation of first-order logic and higher-order logic.
+
 **Predicate logic** is in principle sufficient for math as it has a sound and complete deduction system and satisfies important semantic results. Lindstrom's theorems show that there can be no logical system with more expressive power than predicate logic and with the same good semantic properties.
+
+**Zeroth-order logic** is, under one definition, first-order logic without variables or quantifiers. Another definition extends propositional logic by adding constants, operations, and relations on non-Boolean values. Every zeroth-order language in this broader sense is complete and compact.
+
+
+---
 
 CS has seen a multitude of logics suited for different purposes.
 
@@ -21,9 +30,9 @@ Moreover, these logics come in different flavors, usually admitting propositiona
 
 __Computability logic__ is a semantically constructed formal theory of computability (as opposed to classical logic, which is a formal theory of truth); it integrates and extends classical, linear and intuitionistic logics.
 
+
 __Many-valued logics__ rejects bivalence, allowing for truth values other than just binary _true_ and _false_. The most popular forms are __three-valued logic__, as initially developed by Jan Łukasiewicz, and __infinitely-valued logics__ such as __fuzzy logic__, which deals with approximate, vague concepts such as the distinction between "warm" and "hot", so it permits any real number between 0 and 1 as a truth value.
 
 __Intuitionistic logic__, sometimes more generally called __constructive logic__, refers to systems of symbolic logic that differ from the systems used for classical logic by more closely mirroring the notion of `constructive proof`. In particular, systems of intuitionistic logic do not include `the law of the excluded middle` and `double negation elimination`, which are fundamental inference rules in classical logic.
 
-__Paraconsistent logic__ rejects the `principle of explosion`, and has a close relation to dialetheism, while __linear logic__ rejects `idempotency of entailment` as well. Linear logic, __relevance logic__ and non-monotonic logic reject `monotonicity of entailment`. __Nonmonotonic logic__ takes the stand that an established piece of knowledge may have to be retracted if additional facts are later known. __Non-reflexive logic__, also known as "Schrödinger logics", rejects or restricts `the law of identity`.
-
+__Paraconsistent logic__ rejects the `principle of explosion`, while __linear logic__ rejects `idempotency of entailment` as well. Linear logic, __relevance logic__ and non-monotonic logic reject `monotonicity of entailment`. __Nonmonotonic logic__ takes the stand that an established piece of knowledge may have to be retracted if additional facts are later known. __Non-reflexive logic__, also known as "Schrödinger logics", rejects or restricts `the law of identity`.

@@ -1,44 +1,28 @@
 # Propositional logic
 
+AKA propositional calculus, statement logic, sentential calculus, sentential logic, zeroth-order logic.
 
 
-Propositional logic is also known as propositional calculus, sentential logic, zeroth-order logic.
+**Propositional logic** deals with propositions and argument flow. Compound propositions are formed by connecting propositions by logical connectives. The propositions without logical connectives are called atomic propositions.
 
-Propositional logic is based on **propositions**, which are declarative sentences that have a __truth value__, which means they can be evaluated to true or false (i.e. true and false are truth values).
-
-The argument is valid if the conclusion logically follows from the propositions - whether the propositions are actually true is not important, only that the conclusion logically follows from the propositions. We are only concerned with the logical structure of statements, not with their semantics, because we want to translate declarative sentences into formulas in order to make arguments rigorous. To this end, we also need to develop a (symbolic) language in which we can express sentences in a way that brings out their logical structure.
-
-Translating declarative sentences into symbols allows us to concentrate on the argumentation alone. Similarly to converting declarative sentences from a natural language, we can convert a programming language, opening up the possibility for automatic program verification based on the rules of logic.
-
-By identifying __atomic__ (indecomposable) declarative statements we can assign symbols, e.g. $$p,q,\dots$$, to each atom, allowing us to make more complex statements by composing the atoms and logical connectives according to the rules.
-
-For example, using these atoms:
-- $$p$$: "I won the lottery last week".
-- $$q$$: "I've purchased a lottery ticket".
-- $$r$$: "I won the last week's sweepstakes".
-
-we can form additional, more complex, sentences according to the rules:
-- __negation__: $$\neg$$ (NOT)    
-The negation of $$p$$, denoted by $$\neg p$$, expresses "I did not win the lottery last week".
-- __disjunction__: $$\lor$$ (OR)    
-Given $$p$$ and $$r$$ we can state that at least one of them is true, denoted as $$p \lor r$$, as in "I won the lottery last week, or I won last week's sweepstakes".
-- __conjunction__: $$\land$$ (AND)    
-Given $$p$$ and $$r$$ we can state that both are true, denoted as $$p \land r$$, as in "Last week I won the lottery and the sweepstakes".
-- __implication__: $$\rightarrow$$ (IF...THEN)   
-Given $$p$$ and $$q$$ we state an implication between them as $$p \rightarrow q$$, as in "If I won the lottery last week, then I purchased a lottery ticket". Here, $$p$$ is _assumption_ and $$q$$ is _conclusion_.
+Unlike first-order logic, propositional logic does not deal with non-logical objects, predicates about them, or quantifiers. However, all the machinery of propositional logic is included in first-order logic and higher-order logics. In this sense, propositional logic is the foundation of first-order logic and higher-order logic.
 
 
 
-We can use these rules of constructing propositions repeatedly. For example, we can form the proposition: $$p \land q \to \lnot r \lor q$$.
+Propositional logic is based on __propositions__, which are declarative sentences that have a __truth value__, which means they can be evaluated to true or false (i.e. truth values are true and false).
 
-This shows we need binding priorities of these symbols: $$\lnot$$ binds more tightly than $$\lor$$ and $$\land$$, and the latter two bind more tightly than $$\to$$. Implication is right-associative: expressions of the form $$p \to q \to r$$ denote  $$p \to (q \to r)$$.
+The argument is **valid** if the conclusion logically follows from the propositions - whether the propositions are actually true is not important, only the form; we are only concerned with the logical structure of statements, not with their semantics for we want to transform declarative sentences into formulas in order to make arguments rigorous. We also need a __symbolic language__ in which we can express sentences in a way that brings out their logical structure since this lets us concentrate on the argumentation alone.
 
-<details>
-<summary>if...then</summary>
+Similarly to transforming a subset of a natural language, we can transform a subset of a programming language, opening up the possibility for __automatic program verification__ based on the __rules of logic__.
 
-The natural language meaning of "if...then" often implicitly assumes a causal role of the assumption somehow enabling its conclusion. The logical meaning of implication is different: it states the preservation of truth which might happen without any causal relationship.
+By identifying __atomic__ (indecomposable) declarative statements we can assign symbols, e.g. $$p,q,r$$, to each atom, allowing us to make additional, more complex statements by composing the atoms with __logical connectives__ according to the rules.
 
-For example, "If all birds can fly, then Bob Dole was never president" is a true statement, but there is no known causal connection between propositions.
 
-</details><br>
 
+## Syntactic rules
+
+Given a set $$A=\{p,q,r,\dots\}$$ of atomic propositions, the language of propositional logic is constructed according to the following rules:   
+
+$$\phi ::= p \in A |\ p\ | \lnot \phi\ |\ \phi \lor \phi\ |\ \phi \land \phi\ |\ \phi \to \phi\ |\ \phi \iff \phi$$
+
+We can now construct propositions such as: $$(p\land q) \to (\lnot r \lor q)$$ (if $$p$$ and $$q$$ then not $$r$$ or $$q$$).

@@ -1,6 +1,5 @@
-# Propositional logic
+# Propositional logic: debrief
 
-- AKA: {propositional, sentential, zeroth-order} x {calculus, logic}
 - PL is a branch of logic based on propositions
 - propositions are declarative sentences that have a truth value
 - formal language made by composition of atoms (indecomposable propositions) that are assign a symbol (p, q, r, etc.), and logical connectives: `¬ ∧ ∨ →`

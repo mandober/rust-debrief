@@ -5,6 +5,7 @@ A substructural type system restricts one or more structural rules in order to c
 Substructural type systems are useful for constraining access to system resources by keeping track of changes and preventing invalid states.
 
 ## Structural rules
+
 - **Weakening**    
   where the hypotheses or conclusion of a sequent may be extended with additional members.
 - **Contraction**    
@@ -14,11 +15,7 @@ Substructural type systems are useful for constraining access to system resource
 - **Cut rule**    
   is a generalisation of the modus ponens. Although suspected merely a tool for abbreviating proofs, its superfluity is unproven.
 
-With regards to most substructural type system, the rules of weakening and contraction are controlled. The former means a value of the type may be used less than once, while the latter allows it to be used more than once.
-
-Structural rules that are usually controlled:
-- Weakening:   a value of the type can be used less than once
-- Contraction: a value of the type can be used more than once
+With regards to most substructural type system, the rules of weakening and contraction are controlled. Restricting weakening means a value of the type may be used less than once, while restricting contraction allows a value of the type to be used more than once.
 
 Substructural type systems:
 * **Relevant**: values of relavant types must be used **at least once**
@@ -32,4 +29,41 @@ All the combinations of these properties gives us 4 interesting types:
 4. must be used exactly once (**linear**)
 
 For added confusion, sometimes linear or affine is used as a synonym for the whole substructural system.
+
+
+
+## Structural Properties
+
+Basic structural properties: 
+1. **Exchange** indicates that the order in which we write down variables in the context is irrelevant. A corollary of exchange is that if we can type check a term with the context Γ, then we can type check that term with any permutation of the variables in Γ. 
+2. **Weakening** indicates that adding extra, unneeded assumptions to the context, does not prevent a term from type checking.
+3. **Contraction** states that if we can type check a term using two identical assumptions ($$x_2:T_1$$ and $$x_3:T_1$$) then we can check the same term using a single assumption.
+
+$$
+\text{Lemma [Exchange]: if}\\
+Γ_{_1}, x_1:T_{_1}, x_2:T_{_2}, Γ_{_2} \vdash t:T \text{ then}\\
+Γ_{_1}, x_2:T_{_2}, x_1:T_{_1}, Γ_{_2} \vdash t:T\\
+\ \\
+\text{Lemma [Weakening]: if}\\
+Γ_{_1},\quad \quad \quad \ Γ_2 \vdash t:T \text{ then}\\
+Γ_{_1}, x_1:T_{_1}, Γ_{_2} \vdash t:T\\
+\ \\
+\text{Lemma [Contraction]: if}\\
+Γ_{_1}, x_2 : T_{_1}, x_3 :T_{_1}, Γ_{_2} \vdash t:T_{_2} \text{ then}\\
+Γ_{_1}, \quad \ x_1:T_{_1},\quad \quad Γ_{_2} \vdash [x_2,x_1][x_3,x_1]t:T_{_2}
+$$
+
+
+Substructural type systems that restrict certain properties:
+* **Linear** type systems ensure that every variable is used _exactly once_ by restricting weakening and contraction.
+
+* **Affine** type systems ensure that every variable is used at most once by restricting contraction.
+
+* **Relevant** type systems ensure that every variable is used at least once by restricting weakening.
+
+* **Ordered** type systems ensure that every variable is used exactly once and in the order of declaration. Ordered type systems restrict all three structural properties.
+
+
+
+## Simply-typed lambda calculus
 

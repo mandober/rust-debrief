@@ -2,36 +2,20 @@
 
 Logical connectives are symbols used to connect sentences in a grammatically valid way, such that the value of the compound sentence produced depends only on that of the original sentences and on the meaning of the connective.
 
-Connectives are unary, binary and n-ary. Binary (dyadic) connectives join two sentences which can be thought of as the function's operands.
+Connectives are unary, binary and n-ary. Binary connectives join two sentences which can be thought of as the function's operands.
 
-Logical connectives along with quantifiers are the two main types of logical constants used in formal systems such as propositional logic and predicate logic. Semantics of a logical connective can be presented as a truth (function) table.
+Logical connectives along with quantifiers are the two main types of __logical constants__ used in formal systems such as propositional and predicate logic. Semantics of a logical connective can be presented as a truth (function) table.
+
+- __negation__: $$\neg$$ (NOT)    
+we can negate $$p$$, denoted by $$\neg p$$
+- __disjunction__: $$\lor$$ (OR)    
+we can introduce disjunction to state that at least one of propositions is true, denoted as $$p \lor r$$
+- __conjunction__: $$\land$$ (AND)    
+we can introduce conjunction to state that both propositions are true, denoted as $$p \land r$$
+- __implication__: $$\to$$ (IF...THEN)   
+we can introduce implication to state that one proposition is implied by on another, denoted as $$p \to r$$ ($$p$$ is __assumption__, $$q$$ is __conclusion__).
+- __Bicondition__: $$\iff$$ (IFF)    
+is a shorthand for $$(p\to q) \land (q\to p)$$, **iff**: if and only if.
+- NOT has the highest precedence, followed by AND and OR which have the same precedence, then implication which is right-associative: $$p \to q \to r$$ means $$p \to (q \to r)$$.
 
 A logical connective is similar to but not equivalent to a conditional operator.
-
-Logical connectives in propositional logic:
-* negation (not): $\lnot$
-* conjunction (and): $\land$
-* disjunction (or): $\lor$
-* implication (if...then): $\rightarrow$
-* biconditional (iff): $\iff$
-
-
-Implication
-
-If p then q, $$p\to q$$, is always true except if p is true and q is somehow false, then the overall statement is a lie (falsity). In other cases th overall statement is true:
-
-
-_If it rains, the streets are wet_: $$p \to q$$
-p = "raining", q = "wet streets"
-
-1. p=1, q=1:
-  _It was raining, so the streets are wet_. Overall truth value: 1.
-  "Default" case. The premise is observed.
-2. p=1, q=0:
-  _It was raining, but the streets are NOT wet_. Overall: 0.
-   Falsity. The premise was a lie.
-3. p=0, q=1:
-  _It was NOT raining, but the streets are wet_. Overall: 1.
-4. p=0, q=0:
-  _It was NOT raining, so the streets are NOT wet_. Overall: 1.
-  Dry streets imply it was NOT raining.

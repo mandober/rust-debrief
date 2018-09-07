@@ -48,6 +48,9 @@ For example, writing `A(R, N)` for the type of n-tuples of real numbers (`R`) an
 ∏ Vec(R, n)
 n:N
 
+
 ---
 
+https://plato.stanford.edu/entries/type-theory/
+https://plato.stanford.edu/entries/type-theory-church/
 https://www.wikiwand.com/en/Type_theory
