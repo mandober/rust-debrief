@@ -1,0 +1,38 @@
+TERMS
+
+- Term logic
+- Traditional logic
+- Syllogistic logic
+- Aristotelian logic
+- Informal logic
+- Fallacy
+- Formal logic
+- Classical logic
+- Non-classical logic
+- Symbolic logic
+- Mathematical logic
+- Propositional logic
+- Predicate logic
+- Higher-order logic
+- Modal logic
+- Temporal logic
+- Fuzzy logic
+- Probabilistic logic
+- Monotonic logic
+- Non-monotonic logic
+- Intuitionistic logic
+- Constructive logic
+- Computability logic
+- Many-valued logic
+- Three-valued logic
+- Infinitely-valued logic
+- Linear logic
+- Relevance logic
+- Modal logic
+- Paraconsistent logic
+- Quantum logic
+- Non-reflexive (Schrödinger) logic
+- Temporal logic
+- inference
+- assumptions
+- conclusion

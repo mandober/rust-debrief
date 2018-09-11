@@ -1,8 +1,6 @@
 # Links
 
-- "Bibliography" is for book citations.
-- "Reference" are links to, mostly Wikipedia, articles.
-- "Links" are links to interesting sites, other then those in "Reference".
+_Bibliography_ is for book citations. _References_ are mostly Wikipedia, articles. _Links_ to misc sites, other then those in "Reference".
 
 
 

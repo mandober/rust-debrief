@@ -31,3 +31,5 @@
 - Meta-Theoretic Results for the Propositional Calculus
 - Other Forms of Propositional Logic
 
+
+https://www.wikiwand.com/en/Propositional_calculus

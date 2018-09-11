@@ -2,7 +2,7 @@
 
 For constructing a calculus for reasoning about propositions so we can establish the validity we need a set of rules each of which allows us to draw a conclusion given a certain arrangement of premises.
 
-Natural deduction has a collection of _proof rules_, which allow us to _infer_ formulas from other formulas. By applying these rules in succession, we may infer a conclusion from a set of premises.
+Natural deduction has a collection of _proof rules_, which allow us to infer formulas from other formulas. By applying these rules in succession, we may infer a conclusion from a set of premises.
 
 Given a set of _premises_, such as formulas $$\phi_1, \phi_2, \dots, \phi_n$$, and a _conclusion_ formula, $$\psi$$: we continually apply the proof rules to the premises, working our way through possibly more formulas, until we eventually arrive at the conclusion, which is denoted by $$\phi_1, \phi_2, \dots, \phi_n \vdash \psi$$.
 
