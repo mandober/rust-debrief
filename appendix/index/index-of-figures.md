@@ -1,0 +1,2 @@
+# Index of figures
+

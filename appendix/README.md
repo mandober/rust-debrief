@@ -1,5 +1,5 @@
 # Appendix
 
 
-- [Glossary](terms.md)
-- [Abbreviations](abbr.md)
+- [Glossary](glossary.md)
+- [Abbreviations](abbreviations.md)

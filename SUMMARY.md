@@ -3,29 +3,41 @@
 [Road to Rust](./README.md)
 
 
-## Discrete Math
+## DM
 
-- Sets
-- Relations
-- Functions
-- Propositional logic
-- Predicate Logics
+* Discrete Mathematics
+  - Set theory
+  - Relations
+  - Order theory
+  - Functions
+* Mathematical Logic
+  - Logic
+  - Formal logic
+  - Types of Logic
+  - Propositional logic
+  - Predicate logic
+* Proof Theory
+* Type Theory
+* Lambda calculi
+  - Lambda calculus
+  - Lambda cube
+  - Symply Typed Lambda Calculus
+  - System F
+  - System U
+* Theory of Computation
+  * Complexity Computation
+  * Formal Language
+    - Syntax
+    - Semantics
+    - Grammer
+    - BNF
+  * Automata Theory
+    - Finite Automata
+    - DFA
+    - NFA
 
 
 ## CS
-
-- Mathematical Logic
-- Logic
-- Logics
-- Formal logic
-- Proofs
-- Lambda calculus
-- Lambda calculi
-- Formal Languages
-- Syntax
-- Semantics
-- Grammer
-- BNF
 - Programming Languages
 - Declaration
 - Definition
@@ -65,72 +77,79 @@
 
 
 ## Rust
-
-- Rust Syntax
-- [Attributes](syntax/attributes.md)
-- [Comments](syntax/comments.md)
-- [Conventions](syntax/conventions.md)
-- [Expressions](syntax/expressions.md)
-- [Control flow](syntax/control-flow.md)
-- [Formatting output](syntax/format.md)
-- [Fully Qualified Syntax](syntax/fully-qualified-syntax.md)
-- [Grammar](syntax/grammar.md)
-- [Keywords](syntax/keywords.md)
-- [Literals](syntax/literals.md)
-- [Operators](syntax/operators.md)
-- [Syntactic elements](syntax/syntactic-elements.md)
-- Concepts
-- Lifetimes
-- [Iterators](concepts/iterators/iterators.md)
-- Primitives
-- [Character](primitives/char/char.md)
-- [Slices](primitives/slice/slice.md)
-- [Unit](primitives/unit/unit.md)
-- [Never](primitives/never/never.md)
-- Rust Types
-- Classification
-- Annotation
-- Modules
-- [collections](modules/collections/README.md)
-- [option](modules/option/README.md)
-- [any](modules/any/any.md)
-  - [any](modules/any/any-trait.md)
-- [iter](modules/iter/README.md)
-  - [methods](modules/iter/methods-all.md)
-- [box](modules/boxed/box.md)
-- Traits
-- [Traits](traits/README.md)
-- Index by module
-- Derivable traits
-
-Trait resolution Trait resolution Trait `resolution` h6hhtth
-
-- Trait resolution
-- Items
-- [Lang Items](items/README.md)
-- Macros
-- [Macros](macros/macro.md)
-- [Declarative macros](macros/macro-declerative.md)
-- [Procedural macros](macros/macro-procedural.md)
-- [Index of std macros](macros/macro-index.md)
-- Rust Core
-- [The compiler](core/compiler.md)
-- [Trait resolution](core/rustc/trait-resolution.md)
-- [Type inference engine](core/rustc/type-inference-engine.md)
-- [Types and the Type Context](core/rustc/types-and-the-type-context.md)
-- [MIR](core/rustc/mir.md)
-- [HIR](core/rustc/hir.md)
-- [The Borrow Checker](core/rustc/borrow-checker.md)
-- [Variance of type and lifetime parameters](core/rustc/variance-of-type-and-lifetime-parameters.md)
-
+  - Rust Syntax
+  - [Attributes](./rust/syntax/attributes.md)
+  - [Comments](./rust/syntax/comments.md)
+  - [Conventions](./rust/syntax/conventions.md)
+  - [Expressions](./rust/syntax/expressions.md)
+  - [Control flow](./rust/syntax/control-flow.md)
+  - [Formatting output](./rust/syntax/format.md)
+  - [Fully Qualified Syntax](./rust/syntax/fully-qualified-syntax.md)
+  - [Grammar](./rust/syntax/grammar.md)
+  - [Keywords](./rust/syntax/keywords.md)
+  - [Literals](./rust/syntax/literals.md)
+  - [Operators](./rust/syntax/operators.md)
+  - [Syntactic elements](./rust/syntax/syntactic-elements.md)
+  - Concepts
+  - Lifetimes
+  - [Iterators](./rust/concepts/iterators/iterators.md)
+  - Primitives
+  - [Character](./rust/primitives/char/char.md)
+  - [Slices](./rust/primitives/slice/slice.md)
+  - [Unit](./rust/primitives/unit/unit.md)
+  - [Never](./rust/primitives/never/never.md)
+  - Rust Types
+  - Classification
+  - Annotation
+  - Modules
+  - [collections](./rust/modules/collections/README.md)
+  - [option](./rust/modules/option/README.md)
+  - [any](./rust/modules/any/any.md)
+    - [any](./rust/modules/any/any-trait.md)
+  - [iter](./rust/modules/iter/README.md)
+    - [methods](./rust/modules/iter/methods-all.md)
+  - [box](./rust/modules/boxed/box.md)
+  - Traits
+  - [Traits](./rust/traits/README.md)
+  - Index by module
+  - Derivable traits
+  - Trait resolution
+  - Items
+  - [Lang Items](./rust/items/README.md)
+  - Macros
+  - [Macros](./rust/macros/macro.md)
+  - [Declarative macros](./rust/macros/macro-declerative.md)
+  - [Procedural macros](./rust/macros/macro-procedural.md)
+  - [Index of std macros](./rust/macros/macro-index.md)
+  - Rust Core
+  - [The compiler](./rust/core/compiler.md)
+  - [Trait resolution](./rust/core/rustc/trait-resolution.md)
+  - [Type inference engine](./rust/core/rustc/type-inference-engine.md)
+  - [Types and the Type Context](./rust/core/rustc/types-and-the-type-context.md)
+  - [MIR](./rust/core/rustc/mir.md)
+  - [HIR](./rust/core/rustc/hir.md)
+  - [The Borrow Checker](./rust/core/rustc/borrow-checker.md)
+  - [Variance of type and lifetime parameters](./rust/core/rustc/variance-of-type-and-lifetime-parameters.md)
 
 
 ## Appendix
-
-- [Terminology](appendix/terms.md)
-- [Abbreviations](appendix/abbr.md)
-- [Links](links/README.md)
-- [README](./README.md)
-- [SECTIONS](./SECTIONS.md)
-
-asd dds
+  * [Glossary](appendix/glossary.md)
+  * [Abbreviations](appendix/abbreviations.md)
+  * Taxonomy
+    - Math Taxonomy
+    - Logic Taxonomy
+    - CS Taxonomy
+  * Links
+    - Index of Links
+    - DM Links
+    - CS Links
+    - Rust Links
+  * Index
+    - Index of topics
+    - Index of terms
+    - Index of figures
+    - Index of symbols
+      - Greek alphabet
+      - Math symbols
+      - Set theory symbols
+      - Logic symbols

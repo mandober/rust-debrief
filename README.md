@@ -30,11 +30,11 @@ Trying to get a better grasp on the huge Rust universe (and beyond, towards CS i
 <details>
 
 <summary>Research</summary>
-    
-- collapsible mind-map of all std items      
-- well-established crates that complement std: list of canonical, de facto standard crates to comprise a mega meta-crate that re-exports paths from containing child crates mimicking and complementing std paths        
-- free publishing platform with Latex support          
-    
+
+- collapsible mind-map of all std items
+- well-established crates that complement std: list of canonical, de facto standard crates to comprise a mega meta-crate that re-exports paths from containing child crates mimicking and complementing std paths
+- free publishing platform with Latex support
+
 </details><br>
 
 
