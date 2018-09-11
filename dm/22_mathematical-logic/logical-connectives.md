@@ -19,3 +19,18 @@ is a shorthand for $$(p\to q) \land (q\to p)$$, **iff**: if and only if.
 - NOT has the highest precedence, followed by AND and OR which have the same precedence, then implication which is right-associative: $$p \to q \to r$$ means $$p \to (q \to r)$$.
 
 A logical connective is similar to but not equivalent to a conditional operator.
+
+
+⊥ ‘absurdity’
+⊢ ‘turnstile’
+⊨ ‘models’
+∀ ‘for all’
+∃ ‘there is’
+tA ‘the interpretation of t in A’
+⊨A φ ‘A is a model of φ’
+≈ ‘has the same cardinality as’
+≺ ‘has smaller cardinality than
+
+The expression ‘x ↦ y’ is read as ‘x maps to y’, and is used for describing
+functions.
+

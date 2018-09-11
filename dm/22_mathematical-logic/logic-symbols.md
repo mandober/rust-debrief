@@ -34,13 +34,6 @@ https://www.wikiwand.com/en/List_of_logic_symbols
   - semantic consequence, closely related to the turnstile, which denotes syntactic consequence.
 
 
-Formulae of Sentential Logic (definition)  
-1. Every atomic formula φ is a formula of sentential logic.
-2. If φ is a formula of sentential logic, then so is ¬φ.
-3. If φ and ψ are formulae of sentential logic, then so are each of the following: (φ & ψ), (φ ∨ ψ), (φ → ψ)
-4. An expression φ of sentential logic is a formula only if it can be constructed by one or more applications of the first three rules.
-
-This is an inductive definition, giving rules for generating or constructing the objects falling under the definition.
 
 
 ## The turnstile

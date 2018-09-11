@@ -133,23 +133,32 @@
 
 
 ## Appendix
-  * [Glossary](appendix/glossary.md)
-  * [Abbreviations](appendix/abbreviations.md)
-  * Taxonomy
-    - Math Taxonomy
-    - Logic Taxonomy
-    - CS Taxonomy
-  * Links
-    - Index of Links
-    - DM Links
-    - CS Links
-    - Rust Links
-  * Index
-    - Index of topics
-    - Index of terms
-    - Index of figures
-    - Index of symbols
-      - Greek alphabet
-      - Math symbols
-      - Set theory symbols
-      - Logic symbols
+
+* [Glossary](appendix/glossary.md)
+* [Abbreviations](appendix/abbreviations.md)
+* Taxonomy
+  - Math Taxonomy
+  - Logic Taxonomy
+  - CS Taxonomy
+- [Links](appendix/links/README.md)
+  - Index of Links
+  - DM Links
+  - CS Links
+  - Rust Links
+* [Index](appendix/index/README.md)
+  - Index of topics
+  - Index of terms
+  - Index of figures
+  - Index of symbols
+    - Greek alphabet
+    - Math symbols
+    - Set theory symbols
+    - Logic symbols
+
+- [Glossary](appendix/glossary.md)
+  - [Logic glossary](appendix/glossary_dm.md)
+- [Abbreviations](appendix/abbreviations.md)
+- [Bibliography](appendix/bibliography.md)
+- [History](appendix/history.md)
+- [People](appendix/people.md)
+- [Links](appendix/links/README.md)

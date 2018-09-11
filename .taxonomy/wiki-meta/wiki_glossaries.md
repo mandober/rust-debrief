@@ -1,3 +1,0 @@
-- [Glossary of artificial intelligence](https://www.wikiwand.com/en/Glossary_of_artificial_intelligence)
-- [Glossary of computer science](https://www.wikiwand.com/en/Glossary_of_computer_science)
-- [Glossary of electrical and electronics engineering](https://www.wikiwand.com/en/Glossary_of_electrical_and_electronics_engineering)

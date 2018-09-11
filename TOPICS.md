@@ -675,8 +675,9 @@
 
 ## 4. Appendix
 - Glossary
-- Links
-- Terms
+- History
+- People
+- Bibliography
 - Index
   - Index of terms
   - Index of figures

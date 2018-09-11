@@ -1,13 +1,19 @@
 # Links
 
+- "Bibliography" is for book citations.
+- "Reference" are links to, mostly Wikipedia, articles.
+- "Links" are links to interesting sites, other then those in "Reference".
 
-- [Articles](articles.md)
-- [Books](books.md)
-- [Community](community.md)
-- [Crates](crates.md)
-- [Dev](dev.md)
-- [Misc](misc.md)
-- [Official](official.md)
-- [Resources](resources.md)
-- [Tools](tools.md)
-- [WebAssembly](wasm.md)
+
+
+## Rust
+- [Articles](./rust/articles.md)
+- [Books](./rust/books.md)
+- [Community](./rust/community.md)
+- [Crates](./rust/crates.md)
+- [Dev](./rust/dev.md)
+- [Misc](./rust/misc.md)
+- [Official](./rust/official.md)
+- [Resources](./rust/resources.md)
+- [Tools](./rust/tools.md)
+- [WebAssembly](./rust/wasm.md)

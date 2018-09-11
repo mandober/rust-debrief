@@ -1,8 +1,4 @@
 
-https://www.wikiwand.com/en/Set_(mathematics)
-https://www.wikiwand.com/en/Portal:Set_theory
-https://www.tutorialspoint.com/discrete_mathematics/discrete_mathematics_quick_guide.htm
-
 
 ## Types of Sets
 - Universal set
