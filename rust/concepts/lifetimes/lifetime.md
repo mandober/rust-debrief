@@ -17,23 +17,8 @@
 
 
 
-<!-- TOC -->
-
-- [Lifetimes](#lifetimes)
-- [Lifetimes as bounds](#lifetimes-as-bounds)
-- [Outlives relation](#outlives-relation)
-- [Lifetime Elision Rules (LER)](#lifetime-elision-rules-ler)
-- [The static lifetime](#the-static-lifetime)
-- [Structs and lifetimes](#structs-and-lifetimes)
-- [Type distinction](#type-distinction)
-- [Syntax](#syntax)
-
-<!-- /TOC -->
-
 
 ## Lifetimes
-
-
 
 
 The word "lifetime" can be used in two distinct, but similar, ways:

@@ -8,18 +8,6 @@
 
 
 
-<!-- TOC -->
-
-- [Contents of the `cell` module](#contents-of-the-cell-module)
-- [Shareable mutable containers](#shareable-mutable-containers)
-- [Cell types](#cell-types)
-- [Interior mutability](#interior-mutability)
-  - [Interior mutability of something immutable](#interior-mutability-of-something-immutable)
-- [Interior mutability and API](#interior-mutability-and-api)
-  - [Mutating implementations of Clone](#mutating-implementations-of-clone)
-
-<!-- /TOC -->
-
 
 ## Contents of the `cell` module
 Structs:

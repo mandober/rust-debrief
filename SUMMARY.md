@@ -2,39 +2,14 @@
 
 [Road to Rust](./README.md)
 
-
 ## DM
 
-* Discrete Mathematics
-  - Set theory
-  - Relations
-  - Order theory
-  - Functions
 * Mathematical Logic
   - Logic
   - Formal logic
   - Types of Logic
   - Propositional logic
   - Predicate logic
-* Proof Theory
-* Type Theory
-* Lambda calculi
-  - Lambda calculus
-  - Lambda cube
-  - Symply Typed Lambda Calculus
-  - System F
-  - System U
-* Theory of Computation
-  * Complexity Computation
-  * Formal Language
-    - Syntax
-    - Semantics
-    - Grammer
-    - BNF
-  * Automata Theory
-    - Finite Automata
-    - DFA
-    - NFA
 
 
 ## CS

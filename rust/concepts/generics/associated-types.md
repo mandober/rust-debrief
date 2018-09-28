@@ -1,14 +1,6 @@
 # Associated Types
 
 
-<!-- TOC -->
-
-- [Associated Types](#associated-types)
-- [Associated Types, another example](#associated-types-another-example)
-
-<!-- /TOC -->
-
-
 
 Generics have both input and output types: type parameters stand in for **input** types and associated types stand in for **output** types. Input types are specified with generic type parameters and output types are specified using associated types.
 

@@ -2,7 +2,7 @@
 
 (replace wikiwand with wikipedia links)
 
-- [List of logic symbols](https://www.wikiwand.com/en/List_of_logic_symbols)
+- [List of logic symbols](https://en.wikipedia.org/wiki/List_of_logic_symbols)
 
 
 

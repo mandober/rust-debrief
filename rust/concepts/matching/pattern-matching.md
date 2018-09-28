@@ -4,20 +4,6 @@
 - refutable patterns can fail to match for some possible value
 
 
-<!-- TOC -->
-
-- [Patterns](#patterns)
-- [Refutability](#refutability)
-- [match](#match)
-- [`if let` expressions](#if-let-expressions)
-- [`while let`](#while-let)
-- [`for` loops](#for-loops)
-- [`let` Statements](#let-statements)
-- [Function parameters](#function-parameters)
-
-<!-- /TOC -->
-
-
 ## Patterns
 
 An expression is matched against a pattern.

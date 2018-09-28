@@ -27,20 +27,6 @@ All (valid) pointers store a memory address, so they all have the same size. Tha
 Pointers contain a number that represents a memory location, and in that regard they are all the same - it is the type system that constrains them to a certain type, classifying them as pointers to integers, to characters, to a user-defined type, etc. The compiler will complain if a pointer to, for example, an integer is assigned the address of a float. Nevertheless, they can easily change their (base) type by casting.
 
 
-<!-- TOC -->
-
-- [Managing Memory](#managing-memory)
-- [Memory protection](#memory-protection)
-- [segmentation fault](#segmentation-fault)
-- [null pointer](#null-pointer)
-- [Bounded pointer](#bounded-pointer)
-- [Tagged pointer](#tagged-pointer)
-- [Function Pointer](#function-pointer)
-- [Smart Pointer](#smart-pointer)
-- [Opaque pointer](#opaque-pointer)
-- [Functors](#functors)
-
-<!-- /TOC -->
 
 A variable is a memory address paired with an associated symbolic name that contains some quantity of information referred to as a value. Using that symbolic name (the name of a variable) is the usual way to reference the stored value. The "value of variable" is given by the corresponding mapping in the symbol table in the environment.
 

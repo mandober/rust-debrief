@@ -3,5 +3,5 @@
 (replace wikiwand with wikipedia links)
 
 
-- [Set](https://www.wikiwand.com/en/Set_(mathematics))
-- [Portal:Set theory](https://www.wikiwand.com/en/Portal:Set_theory)
+- [Set](https://en.wikipedia.org/wiki/Set_(mathematics))
+- [Portal:Set theory](https://en.wikipedia.org/wiki/Portal:Set_theory)
