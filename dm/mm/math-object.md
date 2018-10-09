@@ -1,10 +1,10 @@
 # Mathematical Object
 
-In mathematical practice, an object is anything that can be formally defined and used in deductive reasoning and mathematical proofs.
+A **mathematical object** is anything that can be formally defined and used in deductive reasoning and mathematical proofs.
 
 Commonly encountered mathematical objects include numbers, permutations, combinations, partitions, groups, rings, fields, lattices, sets, functions, relations, categories, proofs, theorems.
 
-In modern formal treatments, most mathematical objects (numbers, relations, functions, etc.) are defined in terms of sets.
+In modern formal treatments, most mathematical objects are defined in terms of sets.
 
 
 ## Cantorian framework
@@ -25,3 +25,8 @@ A variant of this approach replaces relations with operations, the basis of univ
 
 A more abstract variant is category theory, which abstracts sets as objects and the operations thereon as morphisms between those objects. At this level of abstraction mathematical objects reduce to mere vertices of a graph whose edges as the morphisms abstract the ways in which those objects can transform and whose structure is encoded in the composition law for morphisms. Categories may arise as the models of some axiomatic theory and the homomorphisms between them (in which case they are usually concrete, meaning equipped with a faithful forgetful functor to the category Set or more generally to a suitable topos), or they may be constructed from other more primitive categories, or they may be studied as abstract objects in their own right without regard for their provenance.
 
+
+---
+https://www.wikiwand.com/en/Primitive_notion
+https://www.wikiwand.com/en/Mathematical_object
+https://www.wikiwand.com/en/Axiom

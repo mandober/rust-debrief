@@ -1,3 +1,23 @@
+# Relations: Terms
+
+- Relations
+- ordered pair
+- full relation
+- empty relation
+- endorelation relation
+- homogeneous relation
+- Reflexivity (Re), non-reflexivity
+- irreflexivity (iR), non-irreflexivity
+- coreflexivity (cR), non-coreflexivity
+- Symmetry (Sy), non-symmetry
+- antisymmetry (vS), non-antisymmetry
+- asymmetry (aS), non-asymmetry
+- Transitivity (Tr), non-transitivity
+- Equavalence (Eq) relation (Re + Sy + Tr)
+- Partial order (Re + vS + Tr)
+- Total order
+
+
 
 unary
 binary

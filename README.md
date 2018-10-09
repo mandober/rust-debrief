@@ -1,41 +1,25 @@
 # Road to Rust
 
-from CS to Rust
-or: per aspera ad Rust-a
-
-
-**Meta**    
-- lang: [Rust][trl]
-- desc: Rust language reference (with origin story)
-- type: markdown text
+**Tags**
+- title: Road to Rust
+- alt: CS and Rust - digested and excerpted
+- aka: πηρ ασπϵρα αδ ραστα
+- desc: Math, logic, CS and Rust topics.
+- sort: math.cs.prog.lang.rust
+- lang: Markdown, Latex, [Rust][trl]
+- date: 2017-2018
 - repo: https://github.com/mandober/rust-debrief
-- date: 2017 (start)
-
-Rendered
-- [GitBooks legacy][gbl]
-- [GitBooks][gbn] (but no mathJax support)
+- book:
+  - [GitBooks legacy][gbl]
+  - [GitBooks][gbn] (alas, no mathJax support)
 
 
-**Project**    
-Articles, posts, notes, tips, listings, indices, maps, references, cheat-sheets and other products of my Rust accretion. Many concepts are still verbatim copies of the original articles or their excerpts, waiting to be digested, analyzed, summarized, classified, or at least properly linked.
-
-**Material**    
-Mostly gathered by rummaging through official channels (API reference, the Old and the New Book, Rust Reference, The Rustonomicon, The Unstable Book, Rust by Example, The Rust Cookbook, Internals and User Forum, The Grammar, The Style guide, The Cargo Book, Rust official blog, The API Guidelines, The Error Index, RFCs, the FAQ, The Compiler Guide, Rust Edition Guide, etc.) and many other encountered resources.
+**About**    
+Math, logic, CS, prog, lang, Rust. Unstructured aggregation of Rust knowledge grew wide. Structure creeping in. Includes articles, posts, notes, tips, listings, indices, maps, references, cheat-sheets and other products of my Rust accretion. Material is mostly gathered by rummaging through official channels (API reference, the Old and the New Book, Rust Reference, The Rustonomicon, The Unstable Book, Rust by Example, The Rust Cookbook, Internals and User Forum, The Grammar, The Style guide, The Cargo Book, Rust official blog, The API Guidelines, The Error Index, RFCs, the FAQ, The Compiler Guide, Rust Edition Guide, etc.) and many other encountered resources. Some material is still raw (verbatim source copies), waiting to be digested and excerpted.
 
 **Purpose**   
-Trying to get a better grasp on the huge Rust universe (and beyond, towards CS in general), an insight of what is available, where it's located and how it all fits together. An attempt to extract essentials in the form of bullet-point summary, followed by detailed explanation (consolidation through explanation learning principle).
+Trying to get a better grasp on the huge Rust universe (and beyond, towards CS in general), an insight of what is available, where it's located and how it all fits together. An attempt to extract essentials in the form of bullet-point summary, followed by detailed explanation. Applying _consolidation through explanation_ principle.
 
-
-
-<details>
-
-<summary>Research</summary>
-
-- collapsible mind-map of all std items
-- well-established crates that complement std: list of canonical, de facto standard crates to comprise a mega meta-crate that re-exports paths from containing child crates mimicking and complementing std paths
-- free publishing platform with Latex support
-
-</details><br>
 
 
 

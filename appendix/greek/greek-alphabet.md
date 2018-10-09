@@ -15,23 +15,24 @@ I K Λ M
 N Ξ O Π
 ν ξ o π
 
-R Σ T Υ
+P Σ T Υ
 ρ σ τ υ
 
 Φ X Ψ Ω
 ϕ χ ψ ω
 
 
+
 ```
 1   3   5   7   9   11  13  15  17  19  21  23
-A B Γ Δ E Z H Θ I K Λ M N Ξ O Π R Σ T Υ Φ X Ψ Ω
+A B Γ Δ E Z H Θ I K Λ M N Ξ O Π P Σ T Υ Φ X Ψ Ω
 α β γ δ ϵ ζ η θ ι κ λ μ ν ξ o π ρ σ τ υ ϕ χ ψ ω
   2   4   6   8   10  12  14  16  18  20  22  24
 ```
 
 Alternative forms (cursives, variants):
 ```
-A B Γ Δ E Z H Θ I K Λ M N Ξ O Π R Σ T Υ Φ X Ψ Ω
+A B Γ Δ E Z H Θ I K Λ M N Ξ O Π P Σ T Υ Φ X Ψ Ω
 α β γ δ ϵ ζ η θ ι κ λ μ ν ξ o π ρ σ τ υ ϕ χ ψ ω
   ϐ     ε     ϑ   ϰ           ϖ ϱ ς   ϒ φ
                                   ϲ

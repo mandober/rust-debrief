@@ -29,8 +29,6 @@
 φυσικά
 Μεταφυσικά
 
-
-
 ontology
 The compound word ontology combines onto-, from the Greek 
 ὄν, on (gen. ὄντος, ontos) "being, that which is"
@@ -38,3 +36,8 @@ which is the present participle of the verb
 εἰμί, eimí "to be, I am", and 
 -λογία, -logia,"logical discourse"
 
+σ
+
+ρυστ
+πηρ ασπϵρα αδ ραστα
+ρωαδ τω ραστ

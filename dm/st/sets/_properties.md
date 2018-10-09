@@ -1,21 +1,4 @@
-# Properties of a set
-
-- Commutative
-- Associative
-- Distributive
-- Idempotency
-- Identity
-- Transitive
-- Involution
-- De Morgan's Law
-- Closure
-
-
-wrt set operations:
-- `∪`: Union
-- `∩`: Intersection
-- `\`: Difference
-- `C`: Relative complement
+# Set properties
 
 $$A$$ and $$B$$
 A∪(B∪C)=(A∪B)∪C, A∩(B∩C)=(A∩B)∩C
@@ -30,7 +13,7 @@ C(A)={}
 
 op = ∪, ∩ set operartion
 
-Set properties:
+## Set properties
 - **Commutativity**: $$A\cup B \equiv B\cup A$$
 - **Associativity**, e.g. $$(A\cup B)\cup C \equiv A\cup (B\cup C)$$
 - **Distributivity**, e.g. $$A \cup (B \cap C) \equiv (A \cup B) \cap (A\cup C)$$
@@ -40,10 +23,9 @@ Set properties:
 - **Involution**: $$\forall A:A \equiv \lnot \lnot A$$
 - **De Morgan's Law**: supports in proving tautologies and contradiction.
 
----
 
-# Closure
 
+# Closure property
 A set has closure under an operation if performance of that operation on members of the set always produces a member of that, same, set. In this case we also say that the set is closed under that operation.
 
 Similarly, a set is said to be closed under a collection of operations if it is closed under each of the operations individually.

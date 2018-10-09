@@ -97,6 +97,18 @@ For instance, the sequence of positive even integers (2, 4, 6, ...) is a subsequ
 
 Formally, a subsequence of the sequence $$(a_{n})_{n\in \mathbb{N}}$$ is any sequence of the form $$(a_{n_k})_{k \in \mathbb {N}}$$, where $$(n_k)_{k \in \mathbb {N}}$$ is a strictly increasing sequence of positive integers.
 
+---
+
+Generically, an **alternative set theory** (AST) is an alternative mathematical approach to the concept of set. It is a proposed alternative to the standard (axiomatic) set theory.
+
+Some of the alternative set theories are:
+- the theory of semisets
+- the set theory New Foundations
+- Positive set theory
+- Internal set theory
+
+A **semiset** is a proper class that is contained in a set.
+
 
 
 ---

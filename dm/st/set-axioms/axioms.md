@@ -73,3 +73,6 @@ Accordingly, the subclass relation makes the collection of all classes into a Bo
 [specification](https://www.wikiwand.com/en/Axiom_schema_of_specification)
 
 
+https://proofwiki.org/wiki/Axiom:Axiom_of_Extension
+https://proofwiki.org/wiki/Axiom:Zermelo-Fraenkel_Axioms
+

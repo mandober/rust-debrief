@@ -2,7 +2,8 @@
 
 https://en.wikipedia.org/wiki/Natural_deduction
 https://en.wikipedia.org/wiki/Deductive_reasoning
-https://en.wikipedia.org/wiki/Category:Deductive_reasoning?oldformat=true
+https://en.wikipedia.org/wiki/Category:Deductive_reasoning
+https://ncatlab.org/nlab/show/natural+deduction
 
 
 In logic and proof theory, natural deduction is a kind of proof calculus in which logical reasoning is expressed by inference rules closely related to the "natural" way of reasoning.

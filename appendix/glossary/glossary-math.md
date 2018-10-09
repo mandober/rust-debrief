@@ -14,20 +14,25 @@
 - [Defeasible inference](#defeasible-inference)
 - [Defeasible reasoning](#defeasible-reasoning)
 - [Entscheidungsproblem](#entscheidungsproblem)
+- [Extensionality](#extensionality)
 - [Fallacy](#fallacy)
 - [First-order logic](#first-order-logic)
 - [Formal logic](#formal-logic)
 - [Fuzzy logic](#fuzzy-logic)
+- [Laws of thought](#laws-of-thought)
 - [Linear type system](#linear-type-system)
 - [Logical form](#logical-form)
 - [Logical consequence](#logical-consequence)
 - [Logical truth](#logical-truth)
+- [Logical Form](#logical-form)
+- [Logical Framework](#logical-framework)
 - [iff](#iff)
 - [Informal logic](#informal-logic)
 - [Mathematical logic](#mathematical-logic)
 - [Mathematical object](#mathematical-object)
 - [Metalogic](#metalogic)
 - [Metamathematics](#metamathematics)
+- [Metatheorem](#metatheorem)
 - [Necessity and sufficiency](#necessity-and-sufficiency)
 - [Naïve theory](#naïve-theory)
 - [Non-classical logic](#non-classical-logic)
@@ -36,6 +41,7 @@
 - [Philosophy of logic](#philosophy-of-logic)
 - [Predicate](#predicate)
 - [Premise](#premise)
+- [Proof by exhaustion](#proof-by-exhaustion)
 - [Propositional logic](#propositional-logic)
 - [Logical connectives](#logical-connectives)
 - [Relevant type system](#relevant-type-system)
@@ -91,6 +97,8 @@ Defeasible reasoning is rationally compelling but deductively invalid kind of re
 ## Entscheidungsproblem
 "Decision problem" is a challenge posed by David Hilbert in 1928, that asks the ant, Chai Doong, what is his problem, esse. More preciselly, it asks for an algorithm that takes as an input a statement of a FOL and determines whether the statement is universally valid. By the completeness theorem of FOL, a statement is universally valid iff it can be deduced from the axioms, so the decision problem can also be viewed as asking for an algorithm to decide whether a given statement is provable from the axioms using the rules of logic. In 1936, Alonzo Church and Alan Turing published independent papers showing that a general solution to the decision problem is impossible.
 
+## Extensionality
+**Extensionality** refers to principles that judge objects to be equal if they have the same external properties, as opposed to **intensionality**, which is concerned with whether the internal definitions of objects are the same. There are many predicates that are intensionally different but extensionally identical. For example, the expressions, `2+4` and `2*3`, are extensionally equal (_from outside_), but intensionality different (_from whitin_).
 
 ## Fallacy
 In reasoning to argue a claim, a fallacy is reasoning that is evaluated as logically incorrect and that undermines the logical validity of the argument and permits its recognition as unsound.
@@ -104,6 +112,9 @@ Formal logic is the study of inference with purely formal content. An inference 
 ## Fuzzy logic
 Fuzzy logic is a form of many-valued logic in which the truth values of variables may be any real number between 0 and 1. It is employed to handle the concept of partial truth, where the truth value may range between completely true and completely false. By contrast, in Boolean logic, the truth values of variables may only be the integer values 0 or 1.
 
+## Laws of thought
+Laws of thought are the 3 fundamental laws, the law of identity, the law of non-contradiction and the law of excluded middle, often considered as the basis of rational discourse itself. These rules have been known and accepted in logic for centuries, until the modern logicians placed them under detailed scrutiny, which resulted in inventions of new kinds of logic that exercised strict control regarding the three fundamental laws.
+
 ## Linear type system
 Linear type systems allow exchange, but neither weakening nor contraction: every variable is used exactly once. Linear types ensures that objects are used exactly once, allowing the system to safely deallocate an object after its use. Linear types can be used to model heap-based memory allocation.
 
@@ -115,6 +126,12 @@ Logical consequence (also **entailment**) is a fundamental concept in logic, whi
 
 ## Logical truth
 Logical truth is one of the most fundamental concepts in logic, and there are different theories on its nature. A logical truth is a statement which is true, and remains true under all reinterpretations of its components other than its logical constants.
+
+## Logical Form
+The concept of logical form is central to logic: the validity of an argument is determined by its logical form, not by its content. A logical form of a syntactic expression is a precisely specified semantic version of that expression in a formal system. It is the formalization of possibly ambiguous statements from a natural language into, often symbolic, statements with precise unambiguous interpretation - their logical form.
+
+## Logical Framework
+Logical Framework provides a means to define a logic as a signature in a higher-order type theory in such a way that provability of a formula in the original logic reduces to a type inhabitation problem in the framework type theory.
 
 ## iff
 Bijection is a logic connective, sometimes read as "if and only if", used to mark two statements as logically equivalent, symbolically denoted as $$p \iff q$$. Two statements are logically equivalent if the former implies the latter, $$p \to q$$, and if the latter implies the former, $$q \to p$$.
@@ -133,6 +150,9 @@ Metalogic is the study of the metatheory of logic. Whereas logic studies how log
 
 ## Metamathematics
 Metamathematics is the study of mathematics itself using mathematical methods. This study produces metatheories, which are mathematical theories about other mathematical theories.
+
+## Metatheorem
+A metatheorem is a statement about a formal system proven in a metalanguage. Unlike theorems proved within a given formal system, a metatheorem is proved within a metatheory, and may reference concepts that are present in the metatheory but not the object theory.
 
 ## Necessity and sufficiency
 In logic, necessity and sufficiency are terms used to describe an implicational relationship between statements. The assertion that one statement is a necessary and sufficient condition of another means that the former statement is true if and only if the latter is true.
@@ -157,6 +177,9 @@ A predicate takes an entity or entities in the domain of discourse as input whil
 
 ## Premise
 A premise is a statement that an argument claims will induce or justify a conclusion. A premise is an assumption that something is true.
+
+## Proof by exhaustion
+Proof by exhaustion (aka proof by cases, proof by case analysis, complete induction, brute force method) is a method of mathematical proof in which the statement to be proved is split into a finite number of cases or sets of equivalent cases and each type of case is checked to see if the proposition in question holds. This is a method of direct proof.
 
 # Propositions
 Propositions are declarative sentences that have a truth value.

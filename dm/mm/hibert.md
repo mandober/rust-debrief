@@ -53,3 +53,8 @@ Hilbert's problems:
   Status: resolved
 23. [?] Further development of the calculus of variations.    
   Status: Too vague to be stated resolved or not.
+
+`Hilbert’s 24th Problem`
+In 1900 Hilbert asked a question which was not given at the Paris conference but which has been recently found in his notes for the list: "_Find a criterion of simplicity in mathematics_".
+
+

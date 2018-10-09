@@ -93,7 +93,7 @@
         - Antecedent, Consequent
         - Sufficiency, Necessity
       - Deductive Argument (necessity)
-        - Deductive argument forms:
+        - Deductive argument forms
           - argument based on mathematics
           - argument from definition
           - categorical syllogism

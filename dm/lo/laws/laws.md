@@ -1,49 +1,70 @@
-# Logic laws and principles
+# Properties of logic systems
+<!-- TOC -->
 
-1. The law of identity, `ID`
-2. The law of non-contradiction, `NC`
-3. The law of excluded middle, `EM`
+- [Law of identity](#law-of-identity)
+- [Law of non-contradiction](#law-of-non-contradiction)
+- [Law of excluded Middle](#law-of-excluded-middle)
+- [Principle of explosion](#principle-of-explosion)
+- [Negation as failure](#negation-as-failure)
+- [The principles of bivalence](#the-principles-of-bivalence)
+
+<!-- /TOC -->
 
 
-Traditional laws of thought   
-The laws of thought are fundamental axiomatic rules upon which rational discourse itself is often considered to be based. The formulation of these rules have a long tradition in the history of philosophy and logic. They have been known and accepted throughout the centuries, up until the modern times, when advances in logic put them under detailed scrutiny, which resulted in inventions of new kinds of logic that exercised strict control on these laws.
-
-
-**The law of identity**
-- Everything is. Everything is identical to itself.
+## Law of identity
+- The law of identity, `ID`
+- $$\forall x: x = x$$
+- "_Everything is. Everything is identical to itself._"
+- B.Russell in PM, 1912: "_Whatever is, is_"
 - Every proposition implies itself.
-- B.Russell in PM, 1912: "Whatever is, is".
-- $$\forall a: a = a$$
 
-**The law of non-contradiction**
+
+## Law of non-contradiction
+- The law of (non)contradiction, `NC`
+- $$\lnot(p\land \lnot p)$$
 - Also known as the law of contradiction
 - No thing having a given quality also has the negative of that quality.
 - No proposition is both true and false.
 - B.Russell in PM, 1912: "Nothing can both be and not be".
-- $$\lnot(A\land \lnot A)$$
 - Two or more contradictory statements cannot both be true in the same sense at the same time.
 - Aristotle: "one cannot say of something that it is and that it is not in the same respect and at the same time".
 
-**The law of excluded middle**
+
+## Law of excluded Middle
+- The law of excluded middle, `EM`
+- $$p\lor \lnot p$$
 - Every thing either has a given quality or the negative of that quality.
 - Every proposition is true or false (not both and not nether)
 - B.Russell in PM, 1912: "Everything must either be or not be".
-- $$A\lor \lnot A$$
 - for every proposition, either its positive or negative form is true.
 - $$\forall P: P\chi \lor \lnot P\chi$$
 
 
-**The principles of bivalence**      
+## Principle of explosion
+_Ex falso quodlibet_, (`EFQ`) or _Ex contradictione quodlibet_ (ECQ)    
+The principle of explosion states that any statement can be proven from a contradiction. That is, once a contradiction has been asserted, any proposition (including their negations) can be inferred from it. This is known as deductive explosion. It is recognized on classical, intuitionistic and similar logical systems.
+
+
+## Negation as failure
+Negation as failure, `NAF`, is a non-monotonic inference rule in logic programming, used to derive
+{\mathrm  {not))~p 
+(i.e. that ~p is assumed not to hold) from failure to derive ~p. 
+
+Note that {\mathrm  {not))~p can be different from the statement \neg p of the logical negation of ~p, depending on the completeness of the inference algorithm and thus also on the formal logic system.
+
+Negation as failure has been an important feature of logic programming since the earliest days of both Planner and Prolog. In Prolog, it is usually implemented using Prolog's extralogical constructs.
+
+
+
+## The principles of bivalence
 Something is either true or false, not both, not neither.
 
 
 **Independence of premise**      
-- states that if φ and ∃ x θ are sentences in a formal theory and φ → ∃ x θ is provable, then ∃ x (φ → θ) is provable. Here x cannot be a free variable of φ.
-- The principle is valid in classical logic. Its main application is in the study of intuitionistic logic, where the principle is not always valid.
+Independence of premise states that if φ and ∃ x θ are sentences in a formal theory and φ → ∃ x θ is provable, then ∃ x (φ → θ) is provable. Here x cannot be a free variable of φ.
 
+The principle is valid in classical logic. Its main application is in the study of intuitionistic logic, where the principle is not always valid.
 
-**Proof by exhaustion**
-also known as proof by cases, proof by case analysis, complete induction, or the brute force method, is a method of mathematical proof in which the statement to be proved is split into a finite number of cases or sets of equivalent cases and each type of case is checked to see if the proposition in question holds. This is a method of direct proof.
 
 
 **Commutativity of conjunction**

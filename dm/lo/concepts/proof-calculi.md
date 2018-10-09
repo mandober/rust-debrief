@@ -48,10 +48,14 @@ _Natural deduction_ and _sequent calculus_ systems are particular distinct kinds
 
 _Gentzen-style_ systems have significant practical and theoretical advantages compared to Hilbert-style systems.
 
-For example, both natural deduction and sequent calculus systems facilitate the _elimination_ and _introduction_ of _universal_ and _existential quantifiers_ so that unquantified logical expressions can be manipulated according to the much simpler rules of propositional calculus.
 
-In a typical argument, quantifiers are eliminated, then propositional calculus is applied to unquantified expressions (which typically contain free variables), and then the quantifiers are reintroduced, much like the way way in which mathematical proofs are carried out in practice by mathematicians.
+For example, both natural deduction and sequent calculus systems facilitate the elimination and introduction of universal and existential quantifiers so that unquantified logical expressions can be manipulated according to the much simpler rules of propositional calculus.
 
-Predicate calculus proofs are generally much easier to discover with this approach, and are often shorter. Natural deduction systems are more suited to practical theorem-proving. Sequent calculus systems are more suited to theoretical analysis.
+In a typical argument, 
+- quantifiers are eliminated, 
+- then propositional calculus is applied to unquantified expressions (which typically contain free variables), 
+- and then the quantifiers are reintroduced, much like the way in which mathematical proofs are carried out in practice by mathematicians.
 
-
+Predicate calculus proofs are generally much easier to discover with this approach, and are often shorter.
+- Natural deduction systems are more suited to practical theorem-proving.
+- Sequent calculus systems are more suited to theoretical analysis.

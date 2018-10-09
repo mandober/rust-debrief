@@ -7,30 +7,6 @@
 - inclusion relation is transitive, membership relation is not
 
 
-Set                     | Notation
-------------------------|---------
-universe                | $$\mathcal{U}$$
-set                     | $$A$$
-class                   | $$A$$
-element                 | $$a$$
-urelement               | $$a$$ (element that is not a set)
-membership              | $$a\in A$$
-empty set               | $$\varnothing$$
-disjoint union          | $$A\cap B = \varnothing$$
-powerset                | $$\mathcal{P}(A)$$
-Cartesian product       | $$A\times B$$
-set of pairs            | $$A\times B$$
-set of functions        | $$A\to B$$
-relation                | $$R \subseteq A\times B$$
-relation                | $$R \in P(A\times B)$$
-union                   | $$A \cup B$$
-intersection            | $$A \cap B$$
-complement              | $$\bar A=\mathcal{U}\cap A$$
-family of sets          | $$B(x)$$
-family of elements      | $$b(x):B(x)$$
-
-
-
 ## Cardinalities
 
 $$n$$ | $$\mathcal{P}: 2^n$$ | $$\mathcal{C}: n^2$$| $$\mathcal{R}: 2^{(n^2)}$$
@@ -138,10 +114,13 @@ $$=\{\{a\}\}$$
 
 
 **Sets**
+
 - A set is an unordered collection of distinct objects (that share some common property) considered as an object in its own right.
-- defined intensionaly (semantic desc): "A set of odd positive ints"
+- defined intensionaly (semantically): "A set of odd positive ints"
 - defined extensionaly (enumeration): $$\{a,b,c\}$$
+
 - denoted with a capital letter: $$A=\{a,b,c\}$$, elements with lowercase
+
 - If $$a$$ is an element of set $$B$$ then: $$a\in B$$, if not $$a\notin B$$
 - Order or repetition unimportant: $$\{\{a\},b,\varnothing\}=\{b, \{a\},\{\},b,\varnothing,\{\}\}$$
 - A set can contain other sets, $$x \in A, A \in \mathscr{M}$$, so $$x\in A$$ but $$x \notin \mathscr{M}$$.
@@ -172,59 +151,3 @@ Properties of sets: $$\forall A,B,C$$
 - $$\varnothing \subseteq A$$
 - $$A\subseteq \varnothing \rightarrow A=\varnothing$$
 
-
-# Introduction to Sets
-
-- sets
-- set elements
-- infinite and finite sets
-- set equality
-- set notation
-- special sets
-
-
-The theory of sets, initiated by Georg Cantor (1845–1918), constitutes the basis of almost all modern mathematics. A set is often described as a __collection__ (aggregate, class, totality, family) of objects of any specified kind, but the set concept is one of the basics so the term _set_ must be accepted as a primitive notion, without definition. The objects belonging to a set are called its __elements__ or __members__.
-
-__Infinite__ set has infinitely many elements; otherwise it is a __finite__ set. Infinite sets: $$\{1,2,3,\dots\}$$, or $$\{\dots,1,2,3,\dots\}$$. A sets with terminal member: $$\{1,2,3, \dots,100\}$$, or $$\{1,2,\dots,n\}$$
-
-Two sets are __equal__ if they contain exactly the same elements. The order of the elements or their repetition is of no consequence to sets, $$\{a,b,\{\}\}=\{b,\{\},b,\varnothing,a\}$$
-
-Sets are usually denoted with uppercase letters: the set $$\{2,4,6,8\}$$ may be declared as $$A=\{2,4,6,8\}$$ and then use $$A$$ to stand for $$\{2,4,6,8\}$$. To express that $$2$$ is an element of the set $$A$$, we write $$2 \in A$$. Expressions like $$2,4,6 \in A$$ indicate that several things are in a set. If an element is not in a set: $$3 \notin A$$. A set of one element is not the same as that element alone: $$p \neq \{p\}$$.
-
-Once a set has been formed, it is a __new entity__, different from any of its elements. A newly formed set may be an element of some other set. Sets whose elements are other sets are __collections of sets__. If an element $$a$$ is in the set $$A$$ and set $$A$$ is in the set $$\mathscr{M}$$, that doesn't imply the element $$a$$ is in the set $$\mathscr{M}$$: $$x \in A \land A \in \mathscr{M} \not \rightarrow x \in A$$.
-
-We are mainly concerned with sets whose elements are mathematical entities, such as numbers, points, functions, etc., but sets need not have just numbers as elements. Sets can even have other sets as elements.
-
-Some sets are so prevalent they have a __special symbol__ assigned for them:
-- The set of boolean (truth) values: $$\mathbb{B}=\{\bot,\top\}=\{F,T\}=\{0,1\}$$
-- The set of natural numbers, either $$\mathbb{N}=\{1,2,3,\dots\}$$ or $$\mathbb{N}=\{0,1,2,3,\dots\}$$
-- The set of integers, $$\mathbb{Z}=\{-2,-1,0,1,2,\dots\}$$; $$\mathbb{Z^+}=\{1,2,3,\dots\}$$
-- The set of rational numbers: $$\mathbb{Q}=\{p/q : p \in\mathbb{Z}, q\in \mathbb{N}\}$$
-- The set of real numbers, $$\mathbb{R}$$
-- The set of complex numbers: $$\mathbb{C}=\{a,b\,i:a,b\in\mathbb{R}\}$$
-
-$$$$
-\mathbb{N}\subseteq \mathbb{Z}\subseteq \mathbb{Q}\subseteq \mathbb{R}
-$$$$
-
-
-
-
-
-A special notation called set-builder notation is used to describe sets that are too big or complex to list between braces X={exp,exp2,...|rule,rule2,...}
-
-The expression |X| means absolute value if X is a number and cardinality if X is a set
-
-It is an unfortunate notational accident that (a,b) can denote both an interval on the line and a point on the plane. The difference is usually clear from context.
-
-
-## The Cartesian Product
-
-An ordered pair is a list (x, y) of two things x and y,
-enclosed in parentheses and separated by a comma.  The things in an ordered
-pair don’t have to be numbers
-
-The Cartesian product of two sets A and B is another
-set, denoted as A £B and defined as A £B ˘ '(a,b) : a 2 A,b 2 B“
-Thus A £ B is a set of ordered pairs of elements from A and B
-If A and B are finite sets, then |A|x|B| = |A|*|B|

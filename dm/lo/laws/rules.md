@@ -17,7 +17,7 @@ For each connective, there are rules to introduce it and eliminate it
   - disjunction elimination
 - Implication
   - implication introduction
-  - implication elimination (modus ponens, implies-elimination, conditional elimination) 
+  - implication elimination (modus ponens)
   - conditional proof (conditional introduction) 
   - modus tollens
 - Biconditional
@@ -301,3 +301,10 @@ $$(\neg p\to q\lor r) \to ((\neg p\to q) \lor (\neg p\to r))$$
 
 is not an intuitionistic tautology, hence KPR is not derivable in IPC.   
 In particular, IPC is not structurally complete.
+
+
+## Defeasibility
+it refers to the possibility of a particular principle, rule or understanding being overridden in appropriate circumstances.
+
+In modern argumentation theories, arguments are regarded as defeasible passages from premises to a conclusion. Defeasibility means that when additional information (new evidence or contrary arguments) is provided, the premises may be no longer lead to the conclusion (non-monotonic reasoning). This type of reasoning is referred to as defeasible reasoning. For instance we consider the famous Tweedy example:
+
