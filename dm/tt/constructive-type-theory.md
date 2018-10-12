@@ -16,8 +16,8 @@ If the language allows general recursion, then every type contains at least one 
 
 To summarise, we are interested in a language in which correctness is guaranteed just like type-correctness can be guaranteed. Specificaly, we need a type system that can express logical specifications.
 
-## Constructive Logic
 
+## Constructive Logic
 If it is contradictory for no object x to have the property `P(x)`, then there is an object x with the property `P(x)`, `¬∀x.¬P(x) ⇒ ∃x.P(x)`
 
 This is a principle of indirect proof, but the problem with it is that it asserts the existence of an object without giving any indication of what the object is. It is a non-constructive method of proof. It is necessary to reject classical logic and to look for modes of reasoning which permit only constructive derivations.

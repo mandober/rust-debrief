@@ -1,4 +1,22 @@
 # Sets
+math.dm.st.sets
+
+- Set definition
+- Set specification
+- Set membership
+- Set cardinality
+- Set operations
+
+```
+math.dm.st.sets.def
+math.dm.st.sets.spec
+math.dm.st.sets.memb
+math.dm.st.sets.card
+math.dm.st.sets.ops
+```
+
+
+## Terms
 
 https://www.wikiwand.com/en/Countable_set
 https://www.wikiwand.com/en/Uncountable_set
@@ -9,7 +27,6 @@ https://www.wikiwand.com/en/Georg_Cantor%27s_first_set_theory_article
 https://www.wikiwand.com/en/Cantor%27s_diagonal_argument
 
 
-## Terms
 - Mathematical object
 - Set element
 - well-definedness

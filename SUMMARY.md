@@ -2,14 +2,28 @@
 
 [Road to Rust](./README.md)
 
-## DM
 
+## DM
+* [math.dm](./dm/README.md)
+* [math.dm.st](./dm/st/README.md)
+  - [math.dm.st.sets](./dm/st/sets/README.md) 
+    - Set definition [math.dm.st.sets.def](./dm/st/sets/01_set-definition.md)
+    - Set specification [math.dm.st.sets.spec](./dm/st/sets/02_set-specification.md)
+    - Set membership [math.dm.st.sets.memb](./dm/st/sets/03_set-membership.md)
+    - Set cardinality [math.dm.st.sets.card](./dm/st/sets/04_set-cardinality.md)
+    - Set operations [math.dm.st.sets.ops](./dm/st/sets/06_set-operations.md)
+  - Set theory (math.dm.st.theory)
+    - Naive set theory
+    - Axiomatic set theory
+    - ZF and ZFC
+* Relations
+  - Order theory
+* Functions
 * Mathematical Logic
-  - Logic
-  - Formal logic
-  - Types of Logic
+  - Term logic
   - Propositional logic
   - Predicate logic
+
 
 
 ## CS

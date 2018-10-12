@@ -20,7 +20,6 @@ In languages with subtyping, the compatibility relation is more complex. In part
 
 
 ## Nominal type system
-
 https://en.wikipedia.org/wiki/Nominal_type_system
 
 In a nominal (nominative, name-based) type system the language decides whether types are compatible or equivalent based on __explicit declarations or the name of the types__.
@@ -30,9 +29,7 @@ Nominal systems are used to determine if types are equivalent, as well as if a t
 Nominal typing means that two variables are type-compatible iff their declarations name the same type. For example, in C, two struct types with different names in the same translation unit are never considered compatible, even if they have identical field declarations.
 
 
-
 ## Structural type system
-
 https://en.wikipedia.org/wiki/Structural_type_system
 
 A structural type system means that the language decides whether types are compatible or equivalent based on the definition and characteristics of the types.
