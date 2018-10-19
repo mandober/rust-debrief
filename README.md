@@ -11,7 +11,7 @@
 - repo: https://github.com/mandober/rust-debrief
 - book:
   - [GitBooks legacy][gbl]
-  - [GitBooks][gbn] (alas, no mathJax support)
+  - [GitBooks][gbn]
 
 
 **About**    

@@ -1,23 +1,26 @@
-# Errors
+# Error Handling
 
-- Error handling: exceptions don't exist, instead `Result<T, E>` for handling recoverable errors and `panic!` macro for unrecoverable.
+- Use Option, Result for recoverable, `panic!` macros for unrecoverable.
 - Clean exit: `panic!` prints a failure message, unwinds the stack, quits.
-- Unwinding the stack
-- Abrupt exit: immediate quit, leave 
+- Abrupt exit: immediately quit without unwinding the stack
 
+
+
+Error Handling (EH) in Rust is done according to the severity of an error and thus generally divided into recoverable and unrecoverable errors.
 
 
 ## Unrecoverable errors
+Macros (like `panic!`) can perform the exit sequence properly or abruptly. The exit is induced by a "panic".
 
-When called `panic!` macro can start the exit sequence properly or just quit abruptly. The exit sequence stops the execution :
-- prints a failure message
-- unwinds the stack
+Proper exit consists of a sequence of steps:
+- execution is stopped
+- failure message is printed
+- the stack is unwound
 - quit
 
-To quit abruptly
-When unwinding is not wanted (one wants to quit immediately without cleanup)
+Abrupt exit skips the stack unwinding. It can be useful at times when a fast exit is needed without the cleanup.
 
-To abort on panic instead of unwinding, add
+To abruptly abort on panic (instead of allowing stack unwinding), add
 `panic = 'abort'` to the `[profile]` section of `Cargo.toml`
 
 For example, if you want to abort on panic in release mode:

@@ -1,33 +1,48 @@
-# Summary
+# Pages
 
-[Road to Rust](./README.md)
+- [Road to Rust](./README.md)
 
 
-## DM
-* [dm](./dm/README.md)
-* [dm.st](./dm/st/README.md)
-  - [Sets](./dm/st/sets/README.md) 
-    - [Set definition](./dm/st/sets/01_set-definition.md)
-    - [Set specification](./dm/st/sets/02_set-specification.md)
-    - [Set membership](./dm/st/sets/03_set-membership.md)
-    - [Set cardinality](./dm/st/sets/04_set-cardinality.md)
-    - [Set operations](./dm/st/sets/06_set-operations.md)
+## Math
+- [Math](./math/README.md)
+
+## Discrete Mathematics
+- [Discrete Mathematics](./dm/README.md)
+
+
   - Set theory
-    - Naive set theory
-    - Axiomatic set theory
-    - ZFC axioms
-* Relations
+  - Relations
   - Order theory
-* Functions
+  - Functions
 * Mathematical Logic
-  - Term logic
+  - Logic
+  - Formal logic
+  - Types of Logic
   - Propositional logic
   - Predicate logic
-
+* Proof Theory
+* Type Theory
+* Lambda calculi
+  - Lambda calculus
+  - Lambda cube
+  - Symply Typed Lambda Calculus
+  - System F
+  - System U
+* Theory of Computation
+  * Complexity Computation
+  * Formal Language
+    - Syntax
+    - Semantics
+    - Grammer
+    - BNF
+  * Automata Theory
+    - Finite Automata
+    - DFA
+    - NFA
 
 
 ## CS
-- Programming Languages
+- Programming
 - Declaration
 - Definition
 - Assignment
@@ -123,11 +138,13 @@
 
 ## Appendix
 
+* [Glossary](appendix/glossary.md)
+* [Abbreviations](appendix/abbreviations.md)
 * Taxonomy
   - Math Taxonomy
   - Logic Taxonomy
   - CS Taxonomy
-* [Links](appendix/links/README.md)
+- [Links](appendix/links/README.md)
   - Index of Links
   - DM Links
   - CS Links
@@ -141,6 +158,7 @@
     - Math symbols
     - Set theory symbols
     - Logic symbols
+
 - [Glossary](appendix/glossary.md)
   - [Logic glossary](appendix/glossary_dm.md)
 - [Abbreviations](appendix/abbreviations.md)
@@ -148,5 +166,3 @@
 - [History](appendix/history.md)
 - [People](appendix/people.md)
 - [Links](appendix/links/README.md)
-* [Glossary](appendix/glossary.md)
-* [Abbreviations](appendix/abbreviations.md)

@@ -2,20 +2,18 @@
 
 
 Premium features
-- Guaranteed Memory Safety (GMT)
-- Zero cost abstractions ($0a)
-- Choose your guarantees (CYG)
-- Pay only what you obviously use (POWYOU)
-- Maximum control with maximum safety (Control+Safety)
-- Low overhead, extra small runtime (XS-RT)
-- No hidden computing cost (!hCC)
+- Guaranteed (memory) safety
+- Zero Cost Abstractions
+- Choose Your Guarantees
+- Pay only what you really use
+- Maximum control with maximum safety
+- Low overhead, extra small runtime
+- No hidden computing costs
 - Expressiveness, Explicitness, Efficiency (E3)
-- no null no exceptions (!(null^XPTN)
+- no null, no exceptions, no gc, no data races
 
 Featuring
 - move semantics
-- guaranteed memory safety
-- zero-cost abstractions
 - threads without data races
 - trait-based generics
 - pattern matching
@@ -23,9 +21,7 @@ Featuring
 - minimal runtime
 - efficient C bindings
 
-
 Rust is a all-level, general-purposes, multi-paradigm programming language providing safety, speed, concurrency and control without garbage collection.
-
 
 ## Info
 - Rust was started in 2006 by Graydon Hoare working at Mozilla
@@ -43,7 +39,7 @@ Rust is a all-level, general-purposes, multi-paradigm programming language provi
 
 
 ## Specialty
-- Rust = Safety + Performance + Expressiveness + Control + Concurrency (- GC)
+- Rust = Safety + Performance + Expressiveness + Control + Concurrency - GC
 - Rust is the only language that makes concurrent programming memory safe without GC, with performance rivaling that of C, C++
 - Rust is the only language that provides safety with expressiveness without sacrificing control or performance.
 
@@ -51,31 +47,22 @@ Rust is a all-level, general-purposes, multi-paradigm programming language provi
 ## Features
 - Compiled: compiling to multiple targets and formats
 - Self-hosting compiler written in Rust, `rustc`, using LLVM as the back-end
-- Safe
 - Concurrent, parallel, system threads
 - UTF-8 encoded strings
+- Performance in the C range
 - FFI
-- Performance is comparable to C++
-- Zero Cost Abstractions (ZCA)
-- Choose Your Guarantees (CYG)
-- Pay only what you use
-
-## Guarantees
 - guaranteed memory safety
 - no data races
 - no dangling or wild or null pointers
 - safe by default (optional unsafety)
-
-## !Features (absent concepts)
 - no GC
 - no null
 - no exceptions
 - not oo
 - no classes, no fn overloading
 
-
-
-- The standard library, can be avoided
+## More
+- The standard library, can be omitted
 - small runtime code
 - built-in unit and integrated testing, assertions via macros
 - operator overloading
