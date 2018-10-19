@@ -1,14 +1,17 @@
-# Sections and topics
+# Topics
 
-1. DM
+1. Math
 2. CS
 3. Rust
 4. Appendix
 
 
-## 1. Discrete Math: math.DM
+## I Math
 
-- math.ST Set Theory
+- math Mathematics
+  - Foundations of mathematics
+  - Metamathematics
+- math.ST Set theory
   - Set theory
     - Set basics
       - memebership
@@ -304,7 +307,7 @@
 
 
 
-## 2. CS
+## II CS
 
 * cs
   - Hardware
@@ -317,8 +320,6 @@
   - Security and privacy
   - Computing methodologies
   - Applied computing
-
-
 * cs.HW Hardware
   - Transistors
   - CPU
@@ -518,7 +519,7 @@
 
 
 
-## 3. Rust
+## III Rust
 
 * Libraries
   - core
@@ -673,7 +674,8 @@
 - Paradigms
 
 
-## 4. Appendix
+## IV Appendix
+
 - Glossary
 - History
 - People

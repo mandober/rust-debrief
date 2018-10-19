@@ -3,15 +3,21 @@
 [Road to Rust](./README.md)
 
 
-## DM
-* [dm](./dm/README.md)
-* [dm.st](./dm/st/README.md)
-  - [Sets](./dm/st/sets/README.md) 
-    - [Set definition](./dm/st/sets/01_set-definition.md)
-    - [Set specification](./dm/st/sets/02_set-specification.md)
-    - [Set membership](./dm/st/sets/03_set-membership.md)
-    - [Set cardinality](./dm/st/sets/04_set-cardinality.md)
-    - [Set operations](./dm/st/sets/06_set-operations.md)
+## I Math
+
+* [Math](./math/README.md)
+  - History
+  - Foundations of mathematics
+  - Metamathematics
+  - Mathematical objects
+  - Discrete mathematics
+* [Set theory](./math/st/README.md)
+  - [Sets](./math/st/sets/README.md) 
+    - [Set definition](./math/st/sets/01_set-definition.md)
+    - [Set specification](./math/st/sets/02_set-specification.md)
+    - [Set membership](./math/st/sets/03_set-membership.md)
+    - [Set cardinality](./math/st/sets/04_set-cardinality.md)
+    - [Set operations](./math/st/sets/06_set-operations.md)
   - Set theory
     - Naive set theory
     - Axiomatic set theory
@@ -26,7 +32,9 @@
 
 
 
-## CS
+## II CS
+
+* [CS](./cs/README.md)
 - Programming Languages
 - Declaration
 - Definition
@@ -65,7 +73,9 @@
 - [program-memory](cs/memory/program-memory.md)
 
 
-## Rust
+## III Rust
+
+* [rust](./rust/README.md)
   - Rust Syntax
   - [Attributes](./rust/syntax/attributes.md)
   - [Comments](./rust/syntax/comments.md)
@@ -121,8 +131,10 @@
   - [Variance of type and lifetime parameters](./rust/core/rustc/variance-of-type-and-lifetime-parameters.md)
 
 
-## Appendix
 
+## IV Appendix
+
+* [Appendix](./apx/README.md)
 * Taxonomy
   - Math Taxonomy
   - Logic Taxonomy

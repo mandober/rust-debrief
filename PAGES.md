@@ -5,9 +5,14 @@
 
 ## Math
 - [Math](./math/README.md)
+- [dm.st](./math/st/README.md)
+- [Sets](./math/st/sets/README.md) 
+- [Set definition](./math/st/sets/01_set-definition.md)
+- [Set specification](./math/st/sets/02_set-specification.md)
+- [Set membership](./math/st/sets/03_set-membership.md)
+- [Set cardinality](./math/st/sets/04_set-cardinality.md)
+- [Set operations](./math/st/sets/06_set-operations.md)
 
-## Discrete Mathematics
-- [Discrete Mathematics](./dm/README.md)
 
 
   - Set theory
