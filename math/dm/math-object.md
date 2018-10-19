@@ -1,5 +1,13 @@
 
 
+## Primitive notion
+https://www.wikiwand.com/en/Primitive_notion
+
+In mathematics, a primitive notion is a designation for an undefined concept, something that is not defined in terms of previously defined concepts, but is introduced to be taken for granted, usually by appealing to intuition and everyday experience.
+
+In a formal system, the role of a primitive notion is analogous to that of axiom. In axiomatic theories, the primitive notions are sometimes said to be "defined" by one or more axioms, but this can be misleading. Formal theories cannot dispense with primitive notions, under pain of infinite regress.
+
+
 
 # Mathematical objects
 

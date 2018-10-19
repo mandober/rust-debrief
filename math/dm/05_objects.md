@@ -18,11 +18,3 @@ Of special interest are mappings between sets which preserve structures, so that
 **Mathematical space**, or universe, is a set with an additional structure.
 
 
-
----
-https://www.wikiwand.com/en/Primitive_notion
-https://www.wikiwand.com/en/Mathematical_object
-https://www.wikiwand.com/en/Axiom
-https://www.wikiwand.com/en/Mathematical_structure
-https://en.wikipedia.org/wiki/Equivalent_definitions_of_mathematical_structures
-https://www.wikiwand.com/en/Space_(mathematics)
