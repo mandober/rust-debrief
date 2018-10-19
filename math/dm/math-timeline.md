@@ -1,4 +1,4 @@
-# History
+# Timeline
 
 - BCE: **Aristotle**, the roots of formalised logic
 - 1860s **Hermann Grassmann** showed that many facts in arithmetic could be derived from more basic facts about the successor operation and induction.

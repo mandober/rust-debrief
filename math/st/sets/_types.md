@@ -1,22 +1,3 @@
-## Sets
-
-A set is a collection of definite and distinguishable objects, selected by a specific rule or by a desciption of their common property.
-
-A set is an unordered collection of distinct elements.
-
-## Set Builder Notation
-
-The set is defined by specifying a property that elements of the set have in common. The set is described as A={x:p(x)}
-
-Example 1 − The set {a,e,i,o,u} is written as −
-A={x:x is a vowel in English alphabet}
-
-Example 2 − The set {1,3,5,7,9} is written as −
-B={x:1≤x<10 and (x%2)≠0}
-
-If an element x is a member of any set S, it is denoted by x∈S and if an element y is not a member of set S, it is denoted by y∉S.
-
-
 ## Cardinality
 
 Cardinality of a set S, denoted by |S|, is the number of elements of the set. The number is also referred as the cardinal number. If a set has an infinite number of elements, its cardinality is ∞.

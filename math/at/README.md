@@ -1,7 +1,3 @@
-# Automata Theory
+# math.at
 
-* Automata Theory (AT)
-    * Finite Automata (FA)
-    * Context-Free Grammars (CFG)
-    * Turing Machines (TM)
-
+Automata Theory

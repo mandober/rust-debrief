@@ -1,1 +1,3 @@
-# Lambda Calculi
+# math.lc
+
+Lambda Calculi

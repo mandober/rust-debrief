@@ -1,2 +1,3 @@
 # math.dm
 
+Discrete mathematics

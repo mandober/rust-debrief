@@ -1,18 +1,30 @@
 # Pages
 
-- [Road to Rust](./README.md)
+1. [Math](./math/README.md)
+2. [CS](./cs/README.md)
+3. [Rust](./rust/README.md)
+4. [Appendix](./apx/README.md)
 
 
-## Math
-- [Math](./math/README.md)
-- [dm.st](./math/st/README.md)
-- [Sets](./math/st/sets/README.md) 
-- [Set definition](./math/st/sets/01_set-definition.md)
-- [Set specification](./math/st/sets/02_set-specification.md)
-- [Set membership](./math/st/sets/03_set-membership.md)
-- [Set cardinality](./math/st/sets/04_set-cardinality.md)
-- [Set operations](./math/st/sets/06_set-operations.md)
+## I Math
 
+* [Math](./math/README.md)
+  - [math.dm](./math/dm/README.md)
+  - [math.nt](./math/nt/README.md)
+  - [math.st](./math/st/README.md)
+    - [Sets](./math/st/sets/README.md)
+      - [Overview](./math/st/sets/01_overview.md)
+      - [Specification](./math/st/sets/02_specification.md)
+      - [Membership](./math/st/sets/03_membership.md)
+      - [Cardinality](./math/st/sets/04_cardinality.md)
+      - [Set operations](./math/st/sets/06_set-operations.md)
+  - [math.lo](./math/lo/README.md)
+  - [math.pt](./math/pt/README.md)
+  - [math.tc](./math/tc/README.md)
+  - [math.lc](./math/lc/README.md)
+  - [math.at](./math/at/README.md)
+  - [math.tt](./math/tt/README.md)
+  - [math.ct](./math/ct/README.md)
 
 
   - Set theory

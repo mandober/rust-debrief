@@ -1,6 +1,3 @@
-# dm.sets
+# math.st
 
 Set theory
-- Sets
-- Relations
-- Functions

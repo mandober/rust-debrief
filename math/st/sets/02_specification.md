@@ -1,5 +1,5 @@
 # Set specification
-math.dm.st.sets.spec
+math.st.sets.spec
 
 
 - Extensional (roster) definition

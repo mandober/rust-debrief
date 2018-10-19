@@ -1,79 +1,97 @@
-# Sets: Terms
+# Terms
 
-
-- Sets
-- Set comprehensions
-- Set Builder Notation
-- Indexed sets
-- Set membership
+- Set
 - Set cardinality
-- Fundamental sets
-- Subset, inclusion relation
-- superset, proper subset
-- Infinite, finite sets
-- disjoint, overlapping sets
-- Empty set
-- Singleton, unordered pair
-- Power set
-- Cartesian Product
-- ordered pair, n-tuples
-- Set operations
-- union
-- intersection
-- difference
+- set comprehension
 - set coverage
+- Set coverage
+- Set element
+- Set equality
+- Set equivalence
+- Set membership
+- Set operations
 - set partition
-- Russell's paradox
-- set cardinality
-- finite set
-- infinite set
-- countable set
+- Set partition
+- Set theory
+- Set-builder notation
+- absolute difference
+- set associativity
+- Axiomatic set theory
+- Cartesian product
+- set closure
+- set commutativity
+- set complement
+- Comprehension principle
+- Countable set
+- De Morgan's Law
+- Diagonal (diagonalisation) argument
+- difference
+- Disjoint set
+- overlapping sets
+- set Distributivity
+- Empty set
 - enumerable set
-- inenumerable set
-- uncountable set
-- Commutativity (set)
-- Associativity (set)
-- Distributivity (set)
-- Transitivity (set)
+- Equivalent set
+- extensional
+- Extensional (roster) definition
+- Finite set
+- Fundamental sets
 - Idempotency (set)
 - Identity (set)
-- Involution (set)
-- De Morgan's Law (set)
-- Closure (set)
-- Extensional (roster) definition
-- Intensional (semantic) definition
-- Set-builder notation (set comprehension)
+- inclusion relation
+- Indexed sets
+- inenumerable set
 - Infinite set
-- Finite set
-- Terminal set member
-- Set
-- Set element
-- Comprehension principle
+- Intensional (semantic) definition
+- intersection
+- Involution (set)
 - Mathematical object
-- Primitive notion
-- Russell's paradox
-- Set theory
 - Naïve set theory
-- Axiomatic set theory
+- ordered pair
+- n-tuples
+- Overlapping set
+- Power set
+- Powerset
+- Primitive notion
+- Proper subset
+- Russell's paradox
+- Singleton, unordered pair
+- Subset
+- inclusion relation
+- Superset
+- proper subset
+- Terminal set member
+- Transitivity (set)
+- Uncountable set
+- union
+- Universal set
+- unordered pair
+- well-definedness
+
 
 
 ## References
+
+https://www.wikiwand.com/en/Countable_set
+https://www.wikiwand.com/en/Uncountable_set
+https://www.wikiwand.com/en/Finite_set
+https://www.wikiwand.com/en/Infinite_set
+https://www.wikiwand.com/en/Set_theory
+https://www.wikiwand.com/en/Georg_Cantor%27s_first_set_theory_article
+https://www.wikiwand.com/en/Cantor%27s_diagonal_argument
 https://en.wikipedia.org/wiki/Set_(mathematics)
 https://en.wikipedia.org/wiki/Set_notation
 https://en.wikipedia.org/wiki/Subset
-
 https://en.wikipedia.org/wiki/Set_theory
 https://en.wikipedia.org/wiki/Intension
 https://en.wikipedia.org/wiki/Extensionality
 https://en.wikipedia.org/wiki/Axiom_of_extensionality
 https://en.wikipedia.org/wiki/Georg_Cantor
-
 https://en.wikipedia.org/wiki/Inclusion_(Boolean_algebra)
 https://en.wikipedia.org/wiki/Boolean_algebra_(structure)
 https://en.wikipedia.org/wiki/Algebraic_structure
 https://en.wikipedia.org/wiki/Containment_order
 https://en.wikipedia.org/wiki/Element_(mathematics)
-
 https://www.wikiwand.com/en/Cardinality
 https://www.wikiwand.com/en/Universal_set
 https://www.wikiwand.com/en/Partition_of_a_set
@@ -81,10 +99,7 @@ https://www.wikiwand.com/en/Power_set
 https://www.wikiwand.com/en/Countable_set
 https://www.wikiwand.com/en/Uncountable_set
 https://www.wikiwand.com/en/Empty_set
-
-
 https://plato.stanford.edu/entries/logic-intensional/
-
 https://proofwiki.org/wiki/Category:Set_Theory
 https://proofwiki.org/wiki/Axiom:Axiom_of_Extension
 https://proofwiki.org/wiki/Definition:Cardinality

@@ -1,2 +1,3 @@
-# Proof Theory
+# math.pt
 
+Proof Theory
