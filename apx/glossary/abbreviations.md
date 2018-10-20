@@ -3,6 +3,7 @@
 <!-- TOC -->
 
 - [ADT](#adt)
+- [ALU](#alu)
 - [AST](#ast)
 - [COI](#coi)
 - [CL](#cl)
@@ -46,6 +47,9 @@
 ## ADT
 1. Algebraic data type
 2. Abstract data type
+
+## ALU
+Arithmetic-logical unit
 
 ## AST
 Abstract syntax tree
@@ -136,13 +140,13 @@ Second-order logic
 Static single assignment
 
 ## SSO
-Small string optimazition
+Small string optimizations
 
 ## ST
 Set theory
 
 ## SVO
-Small vector optimazition
+Small vector optimizations
 
 ## TM
 Turing machine

@@ -1,4 +1,5 @@
-# Timeline
+# Timeline: logic
+
 
 - BCE: **Aristotle**, the roots of formalised logic
 - 1860s **Hermann Grassmann** showed that many facts in arithmetic could be derived from more basic facts about the successor operation and induction.
@@ -32,9 +33,4 @@
 - 1960: **Jaakko Hintikka**, first systematic treatment of epistemic logic
 - 1970s: **A.R.Anderson**, **N.D.Belnap**, relevance propositional logic
 - 1970-80: **N.C.A.da Costa**, **Graham Priest**, paraconsistent logic
-
-
----
-
-https://en.wikipedia.org/wiki/History_of_logic
 

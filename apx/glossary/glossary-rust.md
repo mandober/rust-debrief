@@ -1,5 +1,26 @@
 # Rust-centric glossary
 
+<!-- TOC -->
+
+- [Bikeshed](#bikeshed)
+- [Blanket implementations](#blanket-implementations)
+- [Bors](#bors)
+- [Dynamically sized type](#dynamically-sized-type)
+- [Fat pointer](#fat-pointer)
+- [ICE](#ice)
+- [Interior mutability](#interior-mutability)
+- [Marker interfaces](#marker-interfaces)
+- [Newtype](#newtype)
+- [Phantom data](#phantom-data)
+- [Phantom types](#phantom-types)
+- [Raw pointer](#raw-pointer)
+- [Rust](#rust)
+- [Slice](#slice)
+- [Trait object](#trait-object)
+- [Zero sized type](#zero-sized-type)
+
+<!-- /TOC -->
+
 
 ## Bikeshed
 A highly engaged discussion about a non-fundamental, even trivial, aspect of the Rust language.
@@ -11,7 +32,7 @@ Conditionally implementing a trait for a type that implements some other specifi
 `bors` is a continuous integration bot on github in service of Rust. It's a script that runs tests on a, previously reviewed, pull request, merging it if all tests pass successfully.
 
 ## Dynamically sized type
-Dynamically Sized Types (DST) are types without statically known size or alignment. Due to this, these types can only exist behind some kind of pointer. A pointer to a DST is a fat (multi-worded) pointer, consisting of a proper pointer and additinal data that _completes_ it. Two frequently used DSTs are **trait objects** and **slices**.
+Dynamically Sized Types (DST) are types without statically known size or alignment. Due to this, these types can only exist behind some kind of pointer. A pointer to a DST is a fat (multi-worded) pointer, consisting of a proper pointer and additional data that _completes_ it. Two frequently used DSTs are **trait objects** and **slices**.
 
 ## Fat pointer
 A pointer with accompanying extra information. It comprises a pointer and one or more associated fields that "complete" the pointer. For example, a string is a fat pointer made up of pointer to some data on the heap, a length (number of characters it points to) and a capacity (additional space for characters reserved).

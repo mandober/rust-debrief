@@ -76,13 +76,13 @@ Any type that does not specify an implementation is an abstract data type. For i
 Algebraic data type (ADT) is a kind of composite type, a type formed by combining other types. Two common classes of algebraic types are product types and sum types, also called tagged or disjoint unions or variant types.
 
 ## Abstract Syntax Tree
-AST is abstract syntactic structure of the source code, representing the structure of the program. This tree data sturture is an intermediate product of compilation, where each node of the tree denotes a construct occurring in the source code. As a ballpark example, an expression `x = 6` would have a subroot node, named "=", with two children, "x" and "6".
+AST is abstract syntactic structure of the source code, representing the structure of the program. This tree data structure is an intermediate product of compilation, where each node of the tree denotes a construct occurring in the source code. As a ballpark example, an expression `x = 6` would have a subroot node, named "=", with two children, "x" and "6".
 
 ## Aliasing
 Aliasing is situation in which a data location in memory can be accessed through different symbolic names in the program; modifying the data through one name implicitly modifies the value associated with all aliased names, which may not be expected. As a result, aliasing makes it particularly difficult to understand, analyze and optimize programs. Rust allows read-only aliasing.
 
 ## Alignment
-Alignment is the way a data structure (value, object) is layed-out and accessed in memory. A memory access is aligned when the address of data is a multiple of its size. It specifies what addresses must be used to store a particular value. It is always a power of two.
+Alignment is the way a data structure (value, object) is laid-out and accessed in memory. A memory access is aligned when the address of data is a multiple of its size. It specifies what addresses must be used to store a particular value. It is always a power of two.
 
 ## Application Binary Interface
 ABI defines how to call a function at the assembly level. Languages define which ABI the external function uses to call its code.
@@ -91,7 +91,7 @@ ABI defines how to call a function at the assembly level. Languages define which
 Arity refers to the number of arguments a function or operator takes. Languages that support automatic partial application, only have unary functions. Such functions are unary (arity is 1); functions that take two arguments are binary; generally all functions are n-ary.
 
 ## Assembly
-An assembler language (asm), is a low-level programming language in which there is a very strong, but often not one-to-one, correspondence between the language and the architecture's machine code instructions. Assembly language may also be called symbolic machine code.
+An assembler language (ASM), is a low-level programming language in which there is a very strong, but often not one-to-one, correspondence between the language and the architecture's machine code instructions. Assembly language may also be called symbolic machine code.
 
 ## Big Endianness
 Big endian architectures order bytes in memory with the most significant byte (MSB) of a multi-byte value in the lowest-numbered memory location.
@@ -177,7 +177,7 @@ Little endian processors order bytes in memory with the least significant byte (
 ## Monomorphization
 Monomorphization, a form of _static dispatch_, is a process of turning generic into concrete code. When generic code is used, concrete types replace generic types (concretization of code). This results in the code that would have been written in the first place if only concrete types were available.
 
-Monomorphization increases code size, which, in some cases (that are avoidable by employing certain strategies) is referred to as the _code (size) bloat_, but the generated machine code is highly efficiant (because concrete types are used) and very fast (which is never referred to as the _speed bloat_). The alternative with inversed trade-offs is _dynamic dispatch_.
+Monomorphization increases code size, which, in some cases (that are avoidable by employing certain strategies) is referred to as the _code (size) bloat_, but the generated machine code is highly efficient (because concrete types are used) and very fast (which is never referred to as the _speed bloat_). The alternative with inversed trade-offs is _dynamic dispatch_.
 
 ## Nominal Types
 Types that can be referred using a path directly. Specifically enum, struct, union and trait object.
@@ -199,7 +199,7 @@ Polymorphism is the provision of a single interface to entities of different typ
 A polymorphic type is one whose operations can also be applied to values of some other type, or types.
 
 ## Prelude
-Prelude defines a set of commonly and frequentlly used language items that is implicitly imported.
+Prelude defines a set of commonly and frequently used language items that is implicitly imported.
 
 ## Reentrant
 A function is reentrant if it can be interrupted in the middle of its execution, and then be safely called again ("re-entered") before its previous invocations complete execution.

@@ -6,13 +6,12 @@
 ## I Math
 
 * [math](./math/README.md)
-* [math.dm](./math/dm/README.md)
-  - Timeline
-  - Foundations of mathematics
-  - Metamathematics
-  - Discrete mathematics
-  - Mathematical objects
-  - Algebraic structures
+* [math.dm](./math/am/README.md)
+  - [Mathematics](./math/am/01_math.md)
+  - [Foundations of mathematics](./math/am/01_math.md)
+  - [Discrete mathematics](./math/am/02_dm.md)
+  - [Logic: Timeline](./math/am/math-timeline.md)
+  - [Mathematical entities](./math/am/entities.md)
 * [math.nt](./math/nt/README.md)
   - Number theory
     - Natural numbers
@@ -23,7 +22,7 @@
     - Fundamental counting rules
     - Complex numbers
     - Combinatorics
-    - Permitations
+    - Permutations
 * [math.st](./math/st/README.md)
   - [Sets](./math/st/sets/README.md)
     - [Overview](./math/st/sets/01_overview.md)
@@ -35,7 +34,7 @@
     - tuples, pairs
     - Fundamental sets
   - Set theory
-    - Naive set theory
+    - Naïve set theory
     - Axiomatic set theory
     - ZFC axioms
   - Relations

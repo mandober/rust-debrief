@@ -1,19 +1,12 @@
 
 
 ## Primitive notion
-https://www.wikiwand.com/en/Primitive_notion
-
 In mathematics, a primitive notion is a designation for an undefined concept, something that is not defined in terms of previously defined concepts, but is introduced to be taken for granted, usually by appealing to intuition and everyday experience.
 
 In a formal system, the role of a primitive notion is analogous to that of axiom. In axiomatic theories, the primitive notions are sometimes said to be "defined" by one or more axioms, but this can be misleading. Formal theories cannot dispense with primitive notions, under pain of infinite regress.
 
-
-
-# Mathematical objects
-
+## Mathematical objects
 A mathematical object is anything that can be formally defined and used in deductive reasoning and mathematical proofs. Commonly encountered mathematical objects include numbers, permutations, combinations, partitions, groups, rings, fields, lattices, sets, functions, relations, categories, proofs, theorems. In modern formal treatments, most mathematical objects are defined in terms of sets.
-
-
 
 ## Cantorian framework
 A view that emerged around the turn of the XX century with the work of Cantor is that all mathematical objects can be defined as sets.
@@ -26,7 +19,6 @@ Sets may include ordered denotation of the particular identities and operations 
 If, however, the goal of mathematical ontology is taken to be the internal consistency of mathematics, it is more important that mathematical objects be definable in some uniform way (for example, as sets) regardless of actual practice, in order to lay bare the essence of its paradoxes. This has been the viewpoint taken by foundations of mathematics, which has traditionally accorded the management of paradox higher priority than the faithful reflection of the details of mathematical practice as a justification for defining mathematical objects to be sets.
 
 Much of the tension created by this foundational identification of mathematical objects with sets can be relieved without unduly compromising the goals of foundations by allowing two kinds of objects into the mathematical universe, sets and relations, without requiring that either be considered merely an instance of the other. These form the basis of model theory as the domain of discourse of predicate logic. From this viewpoint, mathematical objects are entities satisfying the axioms of a formal theory expressed in the language of predicate logic.
-
 
 ## Category theory
 A variant of this approach replaces relations with operations, the basis of universal algebra. In this variant the axioms often take the form of equations, or implications between equations.

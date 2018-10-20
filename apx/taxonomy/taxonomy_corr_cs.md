@@ -1,4 +1,7 @@
-# CS - Computing Research Repository (CoRR)
+# Taxonomy: CS
+
+Computing Research Repository (CoRR) style
+
 
 Advancing Computing as a Science & Profession
 [https://www.acm.org]

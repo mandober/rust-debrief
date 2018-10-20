@@ -1,4 +1,4 @@
-# Elements of mathematics
+# Mathematical entities
 
 - Mathematical objects
 - Mathematical structures

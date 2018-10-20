@@ -81,7 +81,7 @@ Argumentation theory is the interdisciplinary study of how conclusions can be re
 An axiom or **postulate** is a statement that is taken to be true that serves as an initial premise or starting point for further reasoning and arguments. In classical logics, an axiom is an evident and well-established statement that needs no further proof. In modern logics, an axiom is a premise for reasoning.
 
 ## Axiology
-Axiologyis the philosophical study of value. It is either the collective term for ethics and aesthetics, philosophical fields that depend crucially on notions of worth, or the foundation for these fields, and thus similar to value theory and meta-ethics.
+Axiology is the philosophical study of value. It is either the collective term for ethics and aesthetics, philosophical fields that depend crucially on notions of worth, or the foundation for these fields, and thus similar to value theory and meta-ethics.
 
 ## Church–Turing thesis
 In computability theory, the Church–Turing thesis is a hypothesis about the nature of computable functions. It states that a function on the natural numbers is computable by a man following an algorithm, ignoring resource limitations, iff it is computable by a Turing machine.
@@ -96,13 +96,13 @@ Defeasible inferences is a kind of inference in which reasoners draw tentative c
 Defeasible reasoning is rationally compelling but deductively invalid kind of reasoning.
 
 ## Entscheidungsproblem
-"Decision problem" is a challenge posed by David Hilbert in 1928, that asks the ant, Chai Doong, what is his problem, esse. More preciselly, it asks for an algorithm that takes as an input a statement of a FOL and determines whether the statement is universally valid. By the completeness theorem of FOL, a statement is universally valid iff it can be deduced from the axioms, so the decision problem can also be viewed as asking for an algorithm to decide whether a given statement is provable from the axioms using the rules of logic. In 1936, Alonzo Church and Alan Turing published independent papers showing that a general solution to the decision problem is impossible.
+"Decision problem" is a challenge posed by David Hilbert in 1928, that asks the ant, Chai Doong, what is his problem, esse. More precisely, it asks for an algorithm that takes as an input a statement of a FOL and determines whether the statement is universally valid. By the completeness theorem of FOL, a statement is universally valid iff it can be deduced from the axioms, so the decision problem can also be viewed as asking for an algorithm to decide whether a given statement is provable from the axioms using the rules of logic. In 1936, Alonzo Church and Alan Turing published independent papers showing that a general solution to the decision problem is impossible.
 
 ## Equiconsistent
 Two theories are equiconsistent if the consistency of one theory implies the consistency of the other theory, and vice versa.
 
 ## Extensionality
-Extensionality refers to principles that judge objects to be equal if they have the same external properties, as opposed to **intensionality**, which is concerned with whether the internal definitions of objects are the same. There are many predicates that are intensionally different but extensionally identical. For example, the expressions, 2+4 and 2*3, are extensionally equal (from outside), but intensionality different (from whitin).
+Extensionality refers to principles that judge objects to be equal if they have the same external properties, as opposed to **intensionality**, which is concerned with whether the internal definitions of objects are the same. There are many predicates that are intensionaly different but extensionally identical. For example, the expressions, 2+4 and 2*3, are extensionally equal (from outside), but intensionality different (from within).
 
 ## Fallacy
 In reasoning to argue a claim, a fallacy is reasoning that is evaluated as logically incorrect and that undermines the logical validity of the argument and permits its recognition as unsound.

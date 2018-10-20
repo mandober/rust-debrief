@@ -1,4 +1,4 @@
-# Taxonomy
+# Taxonomy: Mathematics
 
 
 * Mathematical logic

@@ -22,5 +22,7 @@ https://en.wikipedia.org/wiki/Equivalent_definitions_of_mathematical_structures
 https://www.wikiwand.com/en/Space_(mathematics)
 https://www.wikiwand.com/en/Foundations_of_mathematics
 https://www.wikiwand.com/en/Philosophy_of_mathematics
+https://en.wikipedia.org/wiki/History_of_logic
+
 
 http://settheory.net/foundations/introduction

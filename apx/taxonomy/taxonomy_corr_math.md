@@ -1,4 +1,7 @@
-# Mathematics: Categories (arxiv)
+# Taxonomy: Mathematics
+
+Computing Research Repository (CoRR) style
+
 
 math.AG - `Algebraic Geometry`
   - Algebraic varieties
