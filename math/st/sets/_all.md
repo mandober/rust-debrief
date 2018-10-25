@@ -1,46 +1,5 @@
-# Set Types
+# Partitioning
 
-Types:
-- Ordered pair or pair
-- Powerset
-- Cartesian product or cross product
-- Partitioning
-- Bell Numbers
-
-wrt cardinality:
-- 0: Empty set
-- 1: Singleton set or unit set
-- 2: Unordered pair
-- Finite set
-- Infinite set
-- Universal set
-
-wrt relations:
-- Equal sets
-- Equivalent sets
-- Overlapping sets
-- Disjoint sets
-
-wrt set operations:
-- Union
-- Intersection
-- Difference
-- Relative complement
-
-Properties:
-- Commutative
-- Associative
-- Distributive
-- Idempotency
-- Identity
-- Transitive
-- Involution
-- De Morgan's Law
-- Closure
-
-
-
-## Partitioning
 Partition of a set, S, is a collection of n disjoint subsets, P1,P2,…Pn, that satisfies the following three conditions:
 
 - Pi does not contain the empty set.

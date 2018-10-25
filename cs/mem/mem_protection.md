@@ -1,2 +1,0 @@
-# Memory: Protection and Speed
-

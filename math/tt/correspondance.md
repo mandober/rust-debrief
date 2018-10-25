@@ -17,6 +17,4 @@ $$\prod_{x:A}B(x)$$ | $$\forall{x:A}B(x)$$  | product                          |
 $$Id_A$$            | equality $$=$$        | $$\{x:x\mid x \in A\}$$          | path space $$A^I$$
 
 
-Table 1: Comparing points of view on type-theoretic operations
-
-
+Comparing points of view on type-theoretic operations

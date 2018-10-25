@@ -1,4 +1,25 @@
-# Counting in mathematics
+# Counting theory
+
+
+
+The mathematical theory of counting is also known as combinatorial analysis.
+
+Counting theory includes:
+- fundamental counting rules
+- permutation rule
+- combination rule
+
+Fundamental counting principles
+- The rule of sum
+- The rule of product
+- Inclusion–exclusion principle 
+- Bijective proofs
+- Pigeonhole principle
+- Method of distinguished element
+- Generating function
+- Recurrence relations
+
+
 
 In mathematics, the essence of counting a set and finding a result n, is that it establishes a one-to-one correspondence (or bijection) of the set with the set of numbers {1, 2, ..., n}. A fundamental fact, which can be proved by mathematical induction, is that no bijection can exist between {1, 2, ..., n} and {1, 2, ..., m} unless n = m; this fact (together with the fact that two bijections can be composed to give another bijection) ensures that counting the same set in different ways can never result in different numbers (unless an error is made). This is the fundamental mathematical theorem that gives counting its purpose; however you count a (finite) set, the answer is the same. In a broader context, the theorem is an example of a theorem in the mathematical field of (finite) combinatorics—hence (finite) combinatorics is sometimes referred to as "the mathematics of counting."
 

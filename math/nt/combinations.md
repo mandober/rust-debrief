@@ -1,8 +1,10 @@
 # Combinations
 
+**Combinatorics** studies the problems concerning counting and ordering, such as partitioning and enumerations.
+
 When we are selecting objects and **the order does not matter**, we are dealing with combinations.
 
-If we have a set of $$n$$ objects and we want to choose $$r$$ objects from the set, and the order doesnot matter, we write $$C(n,r)$$ or $$_nC_r$$.
+If we have a set of $$n$$ objects and we want to choose $$r$$ objects from the set, and the order does not matter, we write $$C(n,r)$$ or $$_nC_r$$.
 ​
 Given $$n$$ distinct objects, the number of ways to select $$r$$ objects from the set:
 

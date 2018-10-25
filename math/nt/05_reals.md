@@ -1,14 +1,17 @@
 # Real number
 
-https://www.wikiwand.com/en/Real_number
-https://www.wikiwand.com/en/Irrational_number
-https://www.wikiwand.com/en/Transcendental_number
-https://www.wikiwand.com/en/Dedekind_cut
 
-
-A real number is a value of a continuous quantity that can represent a distance along a line.
+A real number is a value of a continuous quantity that can represent a distance along a line. 
 
 The set of real numbers is denoted by $$\mathbb{R}$$
+
+
+The natural numbers are the basis from which many other number sets may be built by extension: **reals** by including with the rationals the limits of (converging) Cauchy sequences of rationals
+
+
+
+
+
 
 The adjective real in this context was introduced in the 17th century by René Descartes, who distinguished between real and imaginary roots of polynomials.
 

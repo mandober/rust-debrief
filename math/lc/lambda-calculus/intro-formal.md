@@ -6,9 +6,9 @@ Assume given an infinite set $$\mathcal{V}$$ of variables, denoted by $$x, y, z\
 The set of lambda terms is given by the following Backus-Naur Form    
 ($$M$$ and $$N$$ are lambda terms, $$x$$ is a variable):     
 
-\[
+$$
 M, N ::= x \ |\ (MN)\ |\ (\lambda{x}.M)
-\]
+$$
 
 Traditional definition:
 - Assume given an infinite set $$\mathcal{V}$$ of variables

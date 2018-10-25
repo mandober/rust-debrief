@@ -1,9 +1,22 @@
-# Theorems in propositional logic
+# REferences
+
+
+https://www.wikiwand.com/en/Term_logic
+https://www.wikiwand.com/en/Traditional_logic
+https://www.wikiwand.com/en/Problem_of_multiple_generality
+https://www.wikiwand.com/en/Formal_system
+https://www.wikiwand.com/en/Formal_language
+https://www.wikiwand.com/en/Theory_(mathematical_logic)
+https://www.wikiwand.com/en/Argumentation_theory
+https://www.wikiwand.com/en/Logical_consequence
+https://www.wikiwand.com/en/Material_conditional
+https://www.wikiwand.com/en/Material_inference
+https://www.wikiwand.com/en/Boolean_logic
 
 
 
+https://en.wikipedia.org/wiki/Category:Systems_of_formal_logic?oldformat=true
 
-## Rule of inferences
 
 [Rule of inference](https://en.wikipedia.org/wiki/Rule_of_inference)
 [List of rules of inference](https://en.wikipedia.org/wiki/List_of_rules_of_inference)
@@ -47,11 +60,6 @@
 [Tautology (rule of inference)](https://en.wikipedia.org/wiki/Tautology_(rule_of_inference))
 [Transposition (logic)](https://en.wikipedia.org/wiki/Transposition_(logic))
 [Universal instantiation](https://en.wikipedia.org/wiki/Universal_instantiation)
-
-
-
-## Theorems in propositional logic
-
 [Absorption (logic)](https://en.wikipedia.org/wiki/Absorption_(logic))
 [Absorption law](https://en.wikipedia.org/wiki/Absorption_law)
 [Biconditional elimination](https://en.wikipedia.org/wiki/Biconditional_elimination)

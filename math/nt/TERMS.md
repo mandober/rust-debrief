@@ -1,21 +1,50 @@
+# Number Theory: Terms
+
+- number theory
+- natural numbers
+- cardinal numbers
+- ordinal numbers
+- integers
+- Peano axioms
+- Rational numbers
+- Real numbers
+- Dedekind cut
+- Irrational numbers
+- Transcendental numbers
+- Complex numbers
+- Imagenery numbers
+- Congruence relation
+- Modular arithmetic
 
 
 
-Number Theory
+## References
 
-The mathematical theory of counting is also known as combinatorial analysis.
+https://www.wikiwand.com/en/Numerical_digit
+https://www.wikiwand.com/en/Numeral_system
+https://www.wikiwand.com/en/Number_theory
+https://www.wikiwand.com/en/Numeral_system
+https://www.wikiwand.com/en/Unary_numeral_system
+https://www.wikiwand.com/en/Radix
+https://www.wikiwand.com/en/Positional_notation
 
-Counting theory includes:
-- fundamental counting rules
-- permutation rule
-- combination rule
+https://www.wikiwand.com/en/Natural_number
+https://www.wikiwand.com/en/Peano_axioms
+https://www.wikiwand.com/en/Integer
+https://www.wikiwand.com/en/Rational_number
+https://www.wikiwand.com/en/Real_number
+https://www.wikiwand.com/en/Irrational_number
+https://www.wikiwand.com/en/Transcendental_number
+https://www.wikiwand.com/en/Dedekind_cut
 
-Fundamental counting principles
-- The rule of sum
-- The rule of product
-- Inclusion–exclusion principle 
-- Bijective proofs
-- Pigeonhole principle
-- Method of distinguished element
-- Generating function
-- Recurrence relations
+https://www.wikiwand.com/en/Congruence
+https://www.wikiwand.com/en/Congruence_relation
+https://www.wikiwand.com/en/Equivalence_class
+https://www.wikiwand.com/en/Modular_arithmetic
+https://www.wikiwand.com/en/Modulo_operation
+
+https://www.wikiwand.com/en/Arithmetic
+https://www.wikiwand.com/en/Addition
+https://www.wikiwand.com/en/Remainder
+https://www.wikiwand.com/en/Quotient
+https://www.wikiwand.com/en/Euclidean_division

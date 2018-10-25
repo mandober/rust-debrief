@@ -1,4 +1,5 @@
 ## Argument
+
 An **argument**, in its simplest form, is a group of statements: at least two propositions, known as the **premises**, along with the final proposition, called the **conclusion**. An argument is a claim that the premises will justify its conclusion. A premise is an assumption that something is true.
 
 The purpose of an argument is to provide a reason for accepting the truth of its conclusion, which must be a **statement**.

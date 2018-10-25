@@ -1,0 +1,4 @@
+# Hardware
+
+- CPU
+- Memory

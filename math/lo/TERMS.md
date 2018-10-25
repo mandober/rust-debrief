@@ -1,7 +1,4 @@
-  # Systems of formal logic
-
-https://en.wikipedia.org/wiki/Category:Systems_of_formal_logic?oldformat=true
-
+# Logic: terms
 
 Affine logic
 Algebraic Propositional Logic

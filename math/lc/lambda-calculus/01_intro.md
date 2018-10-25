@@ -1,7 +1,28 @@
 # Lambda Calculus
 
-# Introduction
-Formal introduction:
+The λ-calculus is a prototype programming languages invented by a logician, Alonzo Church, in the 1930's. It is a higher-order language i.e. it gives a systematic notation for operators whose input and output values may be other operators. It is also a functional language with notation for function application and abstraction.
+
+
+## Informal introduction
+Lamda calculus has only 3 kinds of expressions: variables, abstraction (i.e. function definition) and function application.
+
+* **Variables**:   
+  infinite set of vars (with sub/superscript if needed) e.g. $$a,f,x_2\dots$$
+* **Abstraction**:   
+  is (anonymous) function definition, e.g. $$\lambda x.x$$ defines a function that takes a parameter, $$x$$, and returns the evaluated body (the expression after the dot), in this case just $$x$$ (id function).
+* **Application**: applying a function to an expression, e.g. $$(\lambda x.x)(y)$$ applies the id function to $$y$$.
+
+
+$$fx$$, associate to the left: $$fxyz$$ is $$((fx)y)z$$
+
+
+
+associate to the right: $$\lambda f.xyz$$ $$\lambda f.(xyz)$$
+
+
+
+## Formal introduction
+
 - Assume given an infinite set $$\mathcal{V}$$ of variables, denoted by $$x, y, z\dots$$
 - The set of lambda terms is given by the following Backus-Naur Form    
   ($$M$$ and $$N$$ are lambda terms, $$x$$ is a variable)    

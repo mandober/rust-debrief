@@ -1,3 +1,44 @@
+# Set Types
+
+Types:
+- Ordered pair or pair
+- Powerset
+- Cartesian product or cross product
+- Partitioning
+- Bell Numbers
+
+wrt cardinality:
+- 0: Empty set
+- 1: Singleton set or unit set
+- 2: Unordered pair
+- Finite set
+- Infinite set
+- Universal set
+
+wrt relations:
+- Equal sets
+- Equivalent sets
+- Overlapping sets
+- Disjoint sets
+
+wrt set operations:
+- Union
+- Intersection
+- Difference
+- Relative complement
+
+Properties:
+- Commutative
+- Associative
+- Distributive
+- Idempotency
+- Identity
+- Transitive
+- Involution
+- De Morgan's Law
+- Closure
+
+
 ## Cardinality
 
 Cardinality of a set S, denoted by |S|, is the number of elements of the set. The number is also referred as the cardinal number. If a set has an infinite number of elements, its cardinality is ∞.
