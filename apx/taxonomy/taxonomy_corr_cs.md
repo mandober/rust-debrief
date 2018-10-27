@@ -19,49 +19,51 @@ Computing Research Repository (CoRR)
 [https://arxiv.org/corr/home]
 CoRR allows researchers to search and download papers through its online repo.
 
+
 ## By Category
 
-`cs.` 
-`AI` __Artificial Intelligence__ (cs.AI)
-`CL` __Computation and Language__ (cs.CL)
-`CC` __Computational Complexity__ (cs.CC)
+
+`AI` Artificial Intelligence (cs.AI)
+`CC` Computational Complexity (cs.CC)
+`CL` Computation and Language (cs.CL)
 `CE` Computational Engineering, Finance, and Science (cs.CE)
 `CG` Computational Geometry (cs.CG)
 `CG` Computer Science and Game Theory (cs.GT)
 `CV` Computer Vision and Pattern Recognition (cs.CV)
 `CY` Computers and Society (cs.CY)
 `CR` Cryptography and Security (cs.CR)
-`DS` __Data Structures and Algorithms__ (cs.DS)
+`DS` Data Structures and Algorithms (cs.DS)
 `DB` Databases (cs.DB)
 `DL` Digital Libraries (cs.DL)
-`DM` __Discrete Mathematics (cs.DM)__
-`DC` Distributed, Parallel, and Cluster Computing (cs.DC)
+`DM` Discrete Mathematics (cs.DM)
+`DC` Distributed, Parallel, and Cluster Computing (cs.DC)S
 `ET` Emerging Technologies (cs.ET)
-`FL` __Formal Languages and Automata Theory__ (cs.FL)
-`XX` General Literature (cs.GL)
-`XX` Graphics (cs.GR)
-`XX` __Hardware Architecture__ (cs.AR)
-`XX` Human-Computer Interaction (cs.HC)
-`XX` Information Retrieval (cs.IR)
-`IT` __Information Theory__ (cs.IT)
-`LG` __Machine Learning__ (cs.LG)
-`LO` __Logic in Computer Science__ (cs.LO)
-`XX` __Mathematical Software__ (cs.MS)
-`XX` Multiagent Systems (cs.MA)
-`XX` Multimedia (cs.MM)
-`XX` Networking and Internet Architecture (cs.NI)
-`XX` Neural and Evolutionary Computing (cs.NE)
-`XX` Numerical Analysis (cs.NA)
-`OS` __Operating Systems__ (cs.OS)
-`XX` Other (cs.OH)
-`XX` Performance (cs.PF)
-`PL` __Programming Languages__ (cs.PL)
-`XX` Robotics (cs.RO)
-`XX` Social and Information Networks (cs.SI)
-`XX` Software Engineering (cs.SE)
-`XX` Sound (cs.SD)
+`FL` Formal Languages and Automata Theory (cs.FL)
+`GL` General Literature (cs.GL)
+`GR` Graphics (cs.GR)
+`AR` Hardware Architecture (cs.AR)
+`HC` Human-Computer Interaction (cs.HC)
+`IR` Information Retrieval (cs.IR)
+`IT` Information Theory (cs.IT)
+`LG` Machine Learning (cs.LG)
+`LO` Logic in Computer Science__ (cs.LO)
+`MS` Mathematical Software (cs.MS)
+`MA` Multiagent Systems (cs.MA)
+`MM` Multimedia (cs.MM)
+`NI` Networking and Internet Architecture (cs.NI)
+`NE` Neural and Evolutionary Computing (cs.NE)
+`NA` Numerical Analysis (cs.NA)
+`OS` Operating Systems (cs.OS)
+`OH` Other (cs.OH)
+`PF` Performance (cs.PF)
+`PL` Programming Languages (cs.PL)
+`RO` Robotics (cs.RO)
+`SI` Social and Information Networks (cs.SI)
+`SE` Software Engineering (cs.SE)
+`SD` Sound (cs.SD)
 `SC` Symbolic Computation (cs.SC)
 `SY` Systems and Control (cs.SY)
+
 
 
 ## Subject Areas
@@ -70,137 +72,122 @@ Papers in CoRR are classified in two ways: by subject area from a list of subjec
 
 
 `AI` - Artificial Intelligence
-  Giuseppe de Giacomo and Fabio Patrizi
-  Covers all areas of AI except:
-    - Vision
-    - Robotics
-    - Machine Learning
-    - Multiagent Systems
-    - Computation and Language (Natural Language Processing)
-  which have separate subject areas.
-  In particular, includes 
-    - Expert Systems
-    - Theorem Proving (may overlap with Logic in Computer Science)
-    - Knowledge Representation
-    - Planning
-    - Uncertainty in AI
-  Roughly includes material in ACM Subject Classes:
-  I.2.0, I.2.1, I.2.3, I.2.4, I.2.8, and I.2.11.
+  - Expert Systems
+  - Theorem Proving (may overlap with Logic in Computer Science)
+  - Knowledge Representation
+  - Planning
+  - Uncertainty in AI
+  ACM: I.2.0, I.2.1, I.2.3, I.2.4, I.2.8, I.2.11
 
 `CC` - Computational Complexity
-  Christopher Umans
-  Covers:
-    - models of computation, 
-    - complexity classes, 
-    - structural complexity, 
-    - complexity tradeoffs,
-    - upper and lower bounds.
-    Roughly includes material in ACM Subject Classes 
-    F.1 (computation by abstract devices), 
-    F.2.3 (tradeoffs among complexity measures), and 
-    F.4.3 (formal languages), 
-    although some material in formal languages may be more appropriate for Logic in Computer Science. Some material in F.2.1 and F.2.2, may also be appropriate here, but is more likely to have Data Structures and Algorithms as the primary subject area.
+  - models of computation
+  - complexity classes
+  - structural complexity
+  - complexity tradeoffs
+  - upper and lower bounds
+  ACM: F.1, F.2.3, F.4.3
 
 `CG` - Computational Geometry
-  Jeff Erickson
-  Roughly includes material in ACM Subject Classes I.3.5 and F.2.2.
+  ACM: I.3.5, F.2.2
 
 `CE` - Computational Engineering, Finance, and Science
-  Paolo Bientinesi
-  Covers applications of computer science to the mathematical modeling of complex systems in the fields of science, engineering, and finance. Papers here are interdisciplinary and applications-oriented, focusing on techniques and tools that enable challenging computational simulations to be performed, for which the use of supercomputers or distributed computing platforms is often required. Includes material in ACM Subject Classes J.2, J.3, and J.4 (economics).
+  - applications of CS to math modeling of complex systems in science, engineering, and finance.
+  ACM: J.2, J.3, J.4
 
 `CL` - Computation and Language 
   (Computational Linguistics and Natural Language and Speech Processing)
-  (subsumes cmp-lg) - Stuart Shieber
-  Covers natural language processing. Roughly includes material in ACM Subject Class I.2.7. Note that work on artificial languages (programming languages, logics, formal systems) that does not explicitly address natural-language issues broadly construed (natural-language processing, computational linguistics, speech, text retrieval, etc.) is not appropriate for this area.
+  - natural language processing.
+  ACM: I.2.7.
 
 `CV` - Computer Vision and Pattern Recognition
-  David Forsyth
-  Covers image processing, computer vision, pattern recognition, and scene understanding. Roughly includes material in ACM Subject Classes I.2.10, I.4, and I.5.
+  - image processing
+  - computer vision
+  - pattern recognition
+  - scene understanding
+  ACM: I.2.10, I.4, I.5.
 
 `CY` - Computers and Society
-  Vaibhav Garg
-  Covers impact of computers on society, computer ethics, information technology and public policy, legal aspects of computing, computers and education. Roughly includes material in ACM Subject Classes K.0, K.2, K.3, K.4, K.5, and K.7.
+  - impact of computers on society
+  - computer ethics
+  - information technology and public policy
+  - legal aspects of computing
+  - computers and education
+  ACM K.0, K.2, K.3, K.4, K.5, K.7.
 
 `CR` - Cryptography and Security
-  Stanislaw Jarecki
-  Covers all areas of cryptography and security including authentication, public key cryptosytems, proof-carrying code, etc. Roughly includes material in ACM Subject Classes D.4.6 and E.3.
+  - cryptography
+  - security
+  - authentication
+  - public key cryptosytems
+  - proof-carrying code
+  ACM D.4.6 and E.3.
 
 `DB` - Databases
-  H.V. Jagadish
-  Covers database management, datamining, and data processing. Roughly includes material in ACM Subject Classes E.2, E.5, H.0, H.2, and J.1.
+  - database management
+  - datamining
+  - data processing
+  ACM E.2, E.5, H.0, H.2, and J.1.
 
 `DS` - Data Structures and Algorithms
-  David Eppstein
-  Covers data structures and analysis of algorithms. Roughly includes material in ACM Subject Classes E.1, E.2, F.2.1, and F.2.2.
+  - data structures
+  - analysis of algorithms
+  ACM E.1, E.2, F.2.1, and F.2.2.
 
 `DL` - Digital Libraries
-  Michael Lesk
-  Covers all aspects of the digital library design and document and text creation. Note that there will be some overlap with Information Retrieval (which is a separate subject area). Roughly includes material in ACM Subject Classes H.3.5, H.3.6, H.3.7, I.7.
+  - digital library design
+  - document and text creation
+  ACM Subject Classes H.3.5, H.3.6, H.3.7, I.7.
 
 `DM` - Discrete Mathematics
-  Jeff Erickson
-  Covers:
-    - combinatorics,
-    - graph theory, 
-    - applications of probability.
-  Roughly includes material in ACM Subject Classes G.2 and G.3.
+  - combinatorics
+  - graph theory
+  - applications of probability
+  ACM Subject Classes G.2 and G.3.
 
 `DC` - Distributed, Parallel, and Cluster Computing
-  Shlomi Dolev
-  Covers fault-tolerance, distributed algorithms, stabilility, parallel computation, and cluster computing. Roughly includes material in ACM Subject Classes C.1.2, C.1.4, C.2.4, D.1.3, D.4.5, D.4.7, E.1.
+  - fault-tolerance
+  - distributed algorithms
+  - stabilility
+  - parallel computation
+  - cluster computing
+  ACM Subject Classes C.1.2, C.1.4, C.2.4, D.1.3, D.4.5, D.4.7, E.1.
 
 `ET` - Emerging Technologies
-  Igor Markov, Dmitri Maslov
-  Covers approaches to information processing (computing, communication, sensing) and bio-chemical analysis based on alternatives to silicon CMOS-based technologies, such as nanoscale electronic, photonic, spin-based, superconducting, mechanical, bio-chemical and quantum technologies (this list is not exclusive). Topics of interest roughly correspond to the "Hardware/Emerging Technologies" branch of the 2012 ACM Computing Classification and include:
-    (1) building blocks for emerging technologies, their scalability and adoption in larger systems, including integration with traditional technologies, 
-    (2) modeling, design and optimization of novel devices and systems, 
-    (3) models of computation, algorithm design and programming for emerging technologies. 
-  Note: papers on wireless networks should be submitted to cs.NI. 
-  For work on cloud computing, consider cs.DC, cs.AR, cs.NI or cs.CE, depending on the focus. For watermarking, consider cs.MM and cs.CR.
+  - information processing (computing, communication, sensing)
+  - bio-chemical analysis, alternatives to silicon CMOS-based technologies
+  - such as nanoscale electronic, photonic, spin-based, superconducting,
+  - mechanical, bio-chemical and quantum technologies 
+  - Hardware/Emerging Technologies
 
 `FL` - Formal Languages and Automata Theory
-  Michael Domaratzki
-  Covers:
-    - automata theory, 
-    - formal language theory, 
-    - grammars, 
-    - combinatorics on words. 
-  This roughly corresponds to ACM Subject Classes F.1.1, and F.4.3. 
-  Papers dealing with computational complexity should go to cs.CC; 
-  papers dealing with logic should go to cs.LO. 
-  Papers that simply make use of automata, transducers, grammars, and so on, are not appropriate unless the automata, transducers, or grammars are the main subjects of study.
+  - automata theory
+  - formal language theory
+  - grammars
+  - combinatorics on words
+  ACM Subject Classes F.1.1, and F.4.3. 
 
 `GT` - Computer Science and Game Theory
-  Moshe Tennenholtz
   Covers all theoretical and applied aspects at the intersection of computer science and game theory, including work in mechanism design, learning in games (which may overlap with Machine Learning), foundations of agent modeling in games (which may overlap with Multiagent systems), coordination, specification and formal methods for non-cooperative computational environments. The area also deals with applications of game theory to areas such as electronic commerce.
 
 `GL` - General Literature
-  Joe Halpern
   Covers introductory material, survey material, predictions of future trends, biographies, and miscellaneous computer-science related material. Roughly includes all of ACM Subject Class A, except it does not include conference proceedings (which will be listed in the appropriate subject area).
 
 `GR - Graphics`
-  Stephen Spencer and David Salesin
   Covers all aspects of computer graphics. Roughly includes material in all of ACM Subject Class I.3, except that I.3.5 is is likely to have Computational Geometry as the primary subject area.
 
 `AR - Hardware Architecture`
-  William Waite
   Covers systems organization and architecture. Roughly includes material in ACM Subject Classes C.0, C.1, and C.5.
 
 `HC - Human-Computer Interaction` 
-  Terry Winograd
   Covers human factors, user interfaces, and collaborative computing. Roughly includes material in ACM Subject Classes H.1.2 and all of H.5, except for H.5.1, which is more likely to have Multimedia as the primary subject area.
 
 `IR - Information Retrieval`
-  James Allan
   Covers indexing, dictionaries, retrieval, content and analysis. Roughly includes material in ACM Subject Classes H.3.0, H.3.1, H.3.2, H.3.3, and H.3.4.
 
 `IT` - Information Theory
-  Madhu Sudan and Joachim Rosenthal
   Covers theoretical and experimental aspects of information theory and coding. Includes material in ACM Subject Class E.4 and intersects with H.1.1.
 
 `LG` - Machine Learning
-  Tom Dieterrich
   Covers machine learning and computational (PAC) learning. Roughly includes material in ACM Subject Class I.2.6.
 
 `LO` - Logic in Computer Science

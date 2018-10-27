@@ -5,14 +5,19 @@ Lectures in Logic and Set Theory Volume 2: Set Theory
 
 
 ## Mathematical Logic
-Logic is the science of reasoning. Mathematical logic applies to mathematical
-reasoning, that is, deduction. The modern use of the term mathematical logic includes the proof theory, study of the structure, properties and limitations of proofs; model theory, study of the interplay between syntax and semantics, by looking at the algebraic structures where formal languages are interpreted; computability theory, study of the properties and limitations of algorithmic processes; set theory.
+Logic is the science of reasoning.
+
+Mathematical logic applies to mathematical reasoning - deduction.
+
+The modern use of the term mathematical logic includes the proof theory, study of the structure, properties and limitations of proofs; model theory, study of the interplay between syntax and semantics, by looking at the algebraic structures where formal languages are interpreted; computability theory, study of the properties and limitations of algorithmic processes; set theory.
 
 By formalization we understand the faithful representation or simulation of the reasoning processes of mathematics in general (pure logic), or of a particular mathematical theory (applied logic), within an activity that is, in principle, driven exclusively by the form or syntax of mathematical statements, ignoring their meaning.
 
 Formalization turns mathematical theories into mathematical objects that we can study. This is analogous to building a model airplane with intention of studying through it the properties of a real airplane. One can also use the formal theory to generate theorems, i.e. discover truths in the real domain by simply running the simulation that this theory replica is.
 
+
 ## First Order Languages
+
 A formalized **mathematical theory** consists of:
 - a set of primitive symbols, V, used to build symbol sequences (also called strings, or expressions, or words) over V.
 - a set of well-formed formulas (wff), over V, called the formulas of the theory.

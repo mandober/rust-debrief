@@ -46,11 +46,9 @@ The principle of explosion states that any statement can be proven from a contra
 
 
 ## Negation as failure
-Negation as failure, `NAF`, is a non-monotonic inference rule in logic programming, used to derive
-{\mathrm  {not))~p 
-(i.e. that ~p is assumed not to hold) from failure to derive ~p. 
+Negation as failure, `NAF`, is a non-monotonic inference rule in logic programming, used to derive $$\mathrm{not} \sim p$$ (i.e. that $$\sim p$$ is assumed not to hold) from failure to derive $$\sim p$$.
 
-Note that {\mathrm  {not))~p can be different from the statement \neg p of the logical negation of ~p, depending on the completeness of the inference algorithm and thus also on the formal logic system.
+Note that $$\mathrm{not} \sim p$$ can be different from the statement $$\lnot p$$ of the logical negation of $$\sim p$$, depending on the completeness of the inference algorithm and thus also on the formal logic system.
 
 Negation as failure has been an important feature of logic programming since the earliest days of both Planner and Prolog. In Prolog, it is usually implemented using Prolog's extralogical constructs.
 

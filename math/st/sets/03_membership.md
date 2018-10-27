@@ -47,10 +47,10 @@ If set $$Y$$ contains the same elements as set $$X$$, but also additional ones, 
 > $$X$$ is a proper subset of $$Y$$ if and only if $$X$$ is a subset of $$Y$$, but $$X\neq Y$$.
 
 
-## Set membership is not set inclusion
-It is important to note that $$1,2,3$$ are elements of the set $$\{1,2,3\}$$, but not its subsets, i.e. $$1,2,3\in \{1,2,3\}$$.
+Set membership is not set inclusion: note that $$1,2,3$$ are elements of the set $$\{1,2,3\}$$, but not its subsets, i.e. $$1,2,3\in \{1,2,3\}$$.
 
 On the other hand, subsets, such as $$\{1\},\{2\},\{3\}$$, are not elements of the set $$\{1,2,3\}$$, but (some of) its subsets, e.g. $$\{2\} \subseteq \{1,2,3\}$$.
+
 
 
 ## Notations

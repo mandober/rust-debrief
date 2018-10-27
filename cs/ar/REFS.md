@@ -1,4 +1,4 @@
-
+# Refs
 
 https://www.wikiwand.com/en/Computer_architecture
 https://www.wikiwand.com/en/Instruction_set_architecture
@@ -20,5 +20,4 @@ https://www.wikiwand.com/en/Von_Neumann_architecture
 https://www.wikiwand.com/en/Context_switching
 https://www.wikiwand.com/en/Instruction_cycle
 https://www.wikiwand.com/en/Central_processing_unit
-
 https://www.wikiwand.com/en/Binary_multiplier

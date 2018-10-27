@@ -21,23 +21,20 @@ Logic has been studied in philosophy since ancient times, but from the XIX centr
 
 **Abduction** is a form of logical inference which starts with observations, then seeks to find the simplest and most likely explanation. This kind of reasoning can be used to develop a hypothesis, which in turn can be tested by additional reasoning or data. Diagnosticians, detectives and scientists often use this type of reasoning.
 
-**Induction** is a method of reasoning in which the premises contribute some justification for the truth of the conclusion. The truth of the conclusion of an inductive argument is never certain because it is generally based on the previous experience and the likelihood of it repeating. Science is associated with this type of reasoning. **N.B.** Inductive reasoning (inductive logic) and mathematical induction are completelly different things.
+**Induction** is a method of reasoning in which the premises contribute some justification for the truth of the conclusion. The truth of the conclusion of an inductive argument is never certain because it is generally based on the previous experience and the likelihood of it repeating. Science is associated with this type of reasoning. N.B. Inductive reasoning (inductive logic) and mathematical induction are completelly different things.
 
-However, we're mostly interested in deduction because mathematical logic is associated with this type of reasoning. **Deduction** (deductive logic, logical deduction) is the process of reasoning that starts with premises and proceeds to reach, a logically certain, conclusion. If all premises are true and the rules were strictly followed, then the conclusion is necessarily true.
+**Deduction** (deductive logic, logical deduction) is the process of reasoning that starts with premises and proceeds to reach, a logically certain, conclusion. If all premises are true and the rules were strictly followed, then the conclusion is necessarily true. Mathematics is associated with deductive reasoning.
 
 
 ## Mathematical logic
 
-Mathematical logic has emerged as a new field of mathematics in the XIX century. Similarly to other math branches, mathematical logic studies theorems about a system of objects, only here the objects are theorems themselves and the system is the whole of math.
+Mathematical logic studies the application of the techniques of formal logic to mathematics and explores formal systems of deductive reasoning in formal proof systems. It also studies the application of mathematical techniques to the representation and analysis of formal logic.
 
-Mathematical logic studies the applications of logic to mathematics and explores formal systems of deductive reasoning in formal proof systems. ML has become a branch of math in the XIX century with the advent of formalization into mathematics.
+**Logicism**, born during the foundations crises of mathematics, is the attempt to base mathematics in logic, and it was pioneered by logicians such as Gottlob Frege and Bertrand Russell. The plan to prove mathematical theorems as logical tautologies, thus reducing math to logic, graaduately waned until it became impossible due to introduction of **Gödel's incompleteness theorems**.
 
-ML includes mathematical fields that employ framework of formal logic system, such as set theory, model theory, computability theory, proof theory, thereby making ML closely associated to metamathematics, the foundations of mathematics and theoretical CS.
+Despite the negative nature of the incompleteness theorems, **Gödel's completeness theorem**, a result in model theory and another application of mathematics to logic, showed how close logicism came to being true. Namely, every rigorously defined mathematical theory can be captured precisely by a first-order logical theory.
+
+Mathematical logic encompases branches of math that employ a formal logic system: set theory, model theory, computability theory, proof theory. It has initially emerged in the end of XIX century with the advent of formalization in mathematics.
 
 
-## Types of logic
-
-The types of logic of interest to CS are syllogistic, propositional and predicate logic.
-
-The syllogistic logic developed by Aristotle predominated in the West until the mid-XIX century, when interest in the foundations of mathematics stimulated the development of mathematical logic.
-
+The aim of logic in CS is to develop formal languages that can model concepts in programming languages, so we can reason about these models by constructing valid arguments that can be rigorously defended and proved, and preferably, checked mechanically for their correctness.

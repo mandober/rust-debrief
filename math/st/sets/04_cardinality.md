@@ -12,7 +12,9 @@
 
 An **infinite set** has infinitely many elements, thereby an infinite cardinality; a **finite set**, e.g. $$\{1,2,3, \dots,100\}$$ has finite cardinality (here the element after elipses is called terminal set member).
 
+
 ## Set equivalence
+
 Two sets are equal, $$X=Y$$, iff they have identical elements, or formally, if they are subsets of each other. However, two sets are **equivalent** iff they have the same cardinality. **Set equivalence** is denoted as $$X\simeq Y$$ or $$X\sim Y$$. **Set inequivalence** is denoted as $$X\not\simeq{Y}$$ or $$X\not\sim Y$$.
 
 To see if two sets, $$X$$ and $$Y$$, have the same cardinality, you don't need to count their elements - you can just couple their elements: pairing each element $$x$$ of the set $$X$$ with an element $$y$$ of a set $$Y$$ so that every element belongs to exactly one pair, $$(x,y)$$.
@@ -21,12 +23,14 @@ If no unpaired element remains, such pairing of elements from two sets is called
 
 
 ## Bijection
+
 Sets $$X$$ and $$Y$$ are equivalent iff they have the same cardinality, that is, if there exists a **bijection function**, $$f:X\to Y$$, from the elements of $$X$$ to those of $$Y$$.
 
 Bijection is a function (and all functions are relations) that associates each element of $$X$$ to exactly one element of $$Y$$, such that all elements of $$Y$$ are associated.
 
 
 ## Countable set
+
 Georg Cantor introduced the term countable set, contrasting sets that are countable with those that are uncountable. Today, countable sets form the foundation of a branch of mathematics called discrete mathematics.
 
 > A countable set is a set with the same cardinality as some subset of the set of natural numbers.
@@ -41,6 +45,7 @@ If such injective function is also surjective (and thus bijective), then the set
 
 
 ## Cardinality of infinity
+
 In order to figure out the cardinality of some (possibly infinite) set, we try to find a one-to-one correspondance between that set and the set of natural numbers - such a set is enumerable if the correspondance exists.
 
 To count a set $$S$$ is to establish a bijection function between the set $$S$$ and an initial segment $$\mathbb{N_n}$$ of the set of natural numbers, $$\mathbb{N}$$; the initial segment of the set of natural numbers (excluding zero) is denoted by $$N_n$$.
@@ -81,6 +86,7 @@ $$1, 2 ,\frac{1}{2}, \frac{1}{3}, 3, 4, \frac{3}{2}, \frac{2}{3}, \frac{1}{4}, \
 
 
 ## Comparing sets
+
 While the cardinality of a finite set is just the count of its elements, extending this notion to infinite sets starts by defining the notion of comparison between arbitrary, possibly infinite, sets.
 
 $$|A| = |B|$$    
@@ -99,6 +105,7 @@ The axiom of choice is equivalent to the statement that $$|A| \le |B|$$ and $$|B
 
 
 ## Equivalence
+
 The study of cardinality is often called **equinumerosity** (equalness-of-number); the terms equipollence (equalness-of-strength) and equipotence (equalness-of-power) are also used.
 
 The statement that two sets are equinumerous is denoted:
@@ -118,6 +125,7 @@ Given three sets A, B and C with two bijections f : A → B and g : B → C, the
 
 
 ## Cardinal numbers
+
 Apart from the functional definition (given above), another way to define cardinality is to define it as a specific object.
 
 The relation of having the same cardinality is called equinumerosity, and this is an equivalence relation on the class of all sets.
@@ -133,6 +141,7 @@ Assuming axiom of choice (AC), the cardinalities of the infinite sets are denote
 For each ordinal $$\alpha, \aleph_{\alpha+1}$$ is the least cardinal number greater than $$\aleph_{\alpha}$$.
 
 ## Cardinality of the continuum
+
 The cardinality of the natural numbers is denoted aleph-null, $$\aleph_{0}$$, while the cardinality of the real numbers is denoted by $$\mathfrak{c}$$, also referred to as the **cardinality of the continuum**.
 
 Cantor showed, using the **diagonal argument**, that $$\mathfrak{c} > \aleph_{0}$$.
@@ -144,18 +153,3 @@ $$2^{\aleph_0}$$ is the smallest cardinal number bigger than
 $$\aleph_0$$, i.e. there is no set whose cardinality is strictly between that of the integers and that of the real numbers.
 
 The continuum hypothesis is independent of ZFC, that is, it is impossible to prove the continuum hypothesis or its negation from ZFC (provided ZFC is consistent).
-
-
-
-
----
-https://www.wikiwand.com/en/Cardinality
-https://www.wikiwand.com/en/Countable_set
-https://www.wikiwand.com/en/Uncountable_set
-https://www.wikiwand.com/en/Natural_number
-https://www.wikiwand.com/en/Aleph_number
-https://www.wikiwand.com/en/Finite_set
-https://www.wikiwand.com/en/Infinite_set
-https://www.wikiwand.com/en/Bijection
-https://www.wikiwand.com/en/Equinumerosity
-

@@ -1,6 +1,12 @@
 # Logical form
 
 
+**Formalization** is the representation of deductive reasoning of a particular mathematical theory within an activity that is, in principle, driven exclusively by the form of statements disregarding their meaning.
+
+Formalization turns mathematical theories into mathematical objects that we can study. This is analogous to building a model airplane with intention of studying through it the properties of a real airplane. One can also use the formal theory to generate theorems, i.e. discover truths in the real domain by simply running the simulation that this theory replica is.
+
+---
+
 Logic is generally considered formal when it analyzes and represents the form of any valid argument type.
 
 The form of an argument is displayed by representing its sentences in the formal grammar and symbolism of a logical language to make its content usable in formal inference.

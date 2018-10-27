@@ -2,6 +2,7 @@
 
 <!-- TOC -->
 
+- [AC](#ac)
 - [ADT](#adt)
 - [ALU](#alu)
 - [AST](#ast)
@@ -10,6 +11,8 @@
 - [CT](#ct)
 - [DST](#dst)
 - [EH](#eh)
+- [EM](#em)
+- [EFQ](#efq)
 - [FFI](#ffi)
 - [FOL](#fol)
 - [GLB](#glb)
@@ -26,8 +29,11 @@
 - [IR](#ir)
 - [ISA](#isa)
 - [LUB](#lub)
+- [NC](#nc)
 - [NML](#nml)
+- [PER](#per)
 - [PL](#pl)
+- [POSET](#poset)
 - [PLT](#plt)
 - [RAII](#raii)
 - [SL](#sl)
@@ -43,6 +49,9 @@
 
 <!-- /TOC -->
 
+
+## AC
+Axiom of Choice
 
 ## ADT
 1. Algebraic data type
@@ -69,6 +78,12 @@ Dynamically-sized type
 ## EH
 Exception handling
 
+## EM
+The law of excluded middle. _Tertium non datur_.
+
+## EFQ
+_Ex falso quodlibet_. Principle of explosion.
+
 ## FFI
 Foreign-function interface
 
@@ -76,7 +91,7 @@ Foreign-function interface
 First-order logic
 
 ## GLB
-Greatest lower bound
+Greatest lower bound (infimum)
 
 ## GLP
 Generic lifetimes parameter
@@ -115,14 +130,23 @@ Intermediate representation
 Instruction set architectures
 
 ## LUB
-Least upper bound
+Least upper bound (supremum)
+
+## NC
+The law of (non)contradiction
 
 ## NML
 Non-monotonic logic
 
+## PER
+Partial equivalence relation
+
 ## PL
 1. Programming language
 2. Propositional logic
+
+## POSET
+Partially ordered set
 
 ## PLT
 Pointer-like type (e.g. references, raw pointers, smart pointers, etc.)

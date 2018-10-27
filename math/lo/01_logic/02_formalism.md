@@ -1,17 +1,22 @@
-# Formal language
+# Formalism
 
+By formalization we understand the faithful representation or simulation of the reasoning processes of mathematics in general (pure logic), or of a particular mathematical theory (applied logic), within an activity that is, in principle, driven exclusively by the form or syntax of mathematical statements, ignoring their meaning.
+
+
+## Formal logical systems
+At its core, mathematical logic deals with mathematical concepts expressed using formal logical systems. These systems, though they differ in many details, share the common property of considering only expressions in a fixed formal language. The systems of propositional logic and first-order logic are the most widely studied today, because of their applicability to foundations of mathematics and because of their desirable proof-theoretic properties. Stronger classical logics such as second-order logic or infinitary logic are also studied, along with nonclassical logics such as intuitionistic logic.
+
+
+
+## Formal language
 https://www.wikiwand.com/en/Formal_language
-
 
 A **formal language** is a set of strings of symbols together with a set of rules that are specific to it.
 
 
 
-
-
 ---
 
-The aim of logic in CS is to develop formal languages that can model concepts in programming languages, so we can reason about these models by constructing valid arguments that can be rigorously defended and proved, and preferably, checked mechanically for their correctness.
 
 Formal language is needed because, although processing natural language has come a long way, natural languages like English can be verbose and ambiguous. By transforming a natural language into strictly defined formal symbolic language, we can focus more on the logical structure of sentences, disregarding their meaning, in order to emphasize the argumentation.
 

@@ -72,6 +72,18 @@
 
 ## References
 
+https://www.wikiwand.com/en/Cardinality
+https://www.wikiwand.com/en/Countable_set
+https://www.wikiwand.com/en/Uncountable_set
+https://www.wikiwand.com/en/Natural_number
+https://www.wikiwand.com/en/Aleph_number
+https://www.wikiwand.com/en/Finite_set
+https://www.wikiwand.com/en/Infinite_set
+https://www.wikiwand.com/en/Bijection
+https://www.wikiwand.com/en/Equinumerosity
+
+
+
 https://www.wikiwand.com/en/Countable_set
 https://www.wikiwand.com/en/Uncountable_set
 https://www.wikiwand.com/en/Finite_set

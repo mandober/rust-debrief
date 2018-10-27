@@ -11,6 +11,7 @@
 - [Axiology](#axiology)
 - [Church–Turing thesis](#churchturing-thesis)
 - [Conjecture](#conjecture)
+- [Dedekindian](#dedekindian)
 - [Defeasible inference](#defeasible-inference)
 - [Defeasible reasoning](#defeasible-reasoning)
 - [Entscheidungsproblem](#entscheidungsproblem)
@@ -42,6 +43,7 @@
 - [Philosophy of logic](#philosophy-of-logic)
 - [Predicate](#predicate)
 - [Premise](#premise)
+- [Primitive notion](#primitive-notion)
 - [Proof by exhaustion](#proof-by-exhaustion)
 - [Propositional logic](#propositional-logic)
 - [Logical connectives](#logical-connectives)
@@ -89,8 +91,11 @@ In computability theory, the Church–Turing thesis is a hypothesis about the na
 ## Conjecture
 An unproved statement that is believed true is called a conjecture. To be considered a conjecture, a statement must usually be proposed publicly, at which point the name of the proponent may be attached to the conjecture, as with Goldbach's conjecture. Other famous conjectures include the Collatz conjecture and the Riemann hypothesis. On the other hand, Fermat's Last Theorem has always been known by that name, even before it was proved; it was never known as "Fermat's conjecture".
 
+## Dedekindian
+Richard Dedekind (1831–1916) is known as the last universal matematician, having dabbled successfully in every branch of math known at his time. Because of this, this adjective is ideal for occasional use as a placeholder for a proper one, which you just can't seem to remember but strongly feel that the noun needs qualification.
+
 ## Defeasible inference
-Defeasible inferences is a kind of inference in which reasoners draw tentative conclusions, enabling reasoners to retract their conclusions based on further evidence.
+Defeasible inferences is a kind of inference in which reasoners draw tentative conclusions, reserving the right to retract their conclusions based on further evidence.
 
 ## Defeasible reasoning
 Defeasible reasoning is rationally compelling but deductively invalid kind of reasoning.
@@ -181,6 +186,9 @@ A predicate takes an entity or entities in the domain of discourse as input whil
 
 ## Premise
 A premise is a statement that an argument claims will induce or justify a conclusion. A premise is an assumption that something is true.
+
+## Primitive notion
+In mathematics, a primitive notion is an undefined concept, not defined in terms of previously defined concepts, to be taken for granted. It lacks a proof, and in that regard it's analogous to an axiom of a formal system (axioms don't require proof). Sometimes the primitive notions cannot be avoided because we need to start somewhere lest regress into downward spiral of definitions, forever defining concept in terms of previously defined concept, which also need definition in terms of previous ones, and so on, ad nauseum. Sometimes a concept just doesn't have a formal definition (e.g. "set").
 
 ## Proof by exhaustion
 Proof by exhaustion (aka proof by cases, proof by case analysis, complete induction, brute force method) is a method of mathematical proof in which the statement to be proved is split into a finite number of cases or sets of equivalent cases and each type of case is checked to see if the proposition in question holds. This is a method of direct proof.

@@ -1,5 +1,12 @@
 # Formal system
 
+Formalization is the representation of deductive reasoning of a particular mathematical theory within an activity that is, in principle, driven exclusively by the form of statements disregarding their meaning.
+
+Formalization turns mathematical theories into mathematical objects that we can study. This is analogous to building a model airplane with intention of studying through it the properties of a real airplane. One can also use the formal theory to generate theorems, i.e. discover truths in the real domain by simply running the simulation that this theory replica is.
+
+
+---
+
 A formal logical system is an organization of terms used for the analysis of deduction.
 
 Components of formal systems:

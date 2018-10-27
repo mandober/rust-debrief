@@ -1,0 +1,23 @@
+# Terms
+
+- Computer architecture
+- Instruction set architecture (ISA)
+- Minimal instruction set computer (MISC)
+- Reduced instruction set computing (RISC)
+- Complex instruction set computing (CISC)
+- Very long instruction word
+- Instruction level parallelism
+- Out-of-order execution
+- Pipelining
+- Arithmetic logic unit (ALU)
+- SIMD
+- Memory architecture
+- X86
+- Opcode
+- Machine code
+- Harvard architecture
+- Von Neumann architecture
+- Context switching
+- Instruction cycle
+- Central processing unit (CPU)
+- Binary multiplier

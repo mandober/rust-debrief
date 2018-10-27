@@ -3,7 +3,7 @@
 [Road to Rust](./README.md)
 
 
-## I Math
+## Part I Mathematics
 
 * [math](./math/README.md)
 * [math.dm](./math/am/README.md)
@@ -54,7 +54,7 @@
 * [math.ct](./math/ct/README.md)
 
 
-## II CS
+## Part II CS
 
 * [cs](./cs/README.md)
   * Computer architecture
@@ -98,7 +98,7 @@
     - [Program memory](cs/memory/program-memory.md)
 
 
-## III Rust
+## Part III Rust
 
 * [rust](./rust/README.md)
   - Rust Syntax
@@ -156,19 +156,19 @@
   - [Variance of type and lifetime parameters](./rust/core/rustc/variance-of-type-and-lifetime-parameters.md)
 
 
-## IV Appendix
+## Part IV Appendix
 
 * [Appendix](./apx/README.md)
   * Taxonomy
     - Math Taxonomy
     - Logic Taxonomy
     - CS Taxonomy
-  * [Links](appendix/links/README.md)
+  * [Links](./apx/links/README.md)
     - Index of Links
     - DM Links
     - CS Links
     - Rust Links
-  * [Index](appendix/index/README.md)
+  * [Index](./apx/index/README.md)
     - Index of topics
     - Index of terms
     - Index of figures
@@ -177,12 +177,13 @@
       - Math symbols
       - Set theory symbols
       - Logic symbols
-  - [Glossary](appendix/glossary.md)
-    - [Logic glossary](appendix/glossary_dm.md)
-  - [Abbreviations](appendix/abbreviations.md)
-  - [Bibliography](appendix/bibliography.md)
-  - [History](appendix/history.md)
-  - [People](appendix/people.md)
-  - [Links](appendix/links/README.md)
-  * [Glossary](appendix/glossary.md)
-  * [Abbreviations](appendix/abbreviations.md)
+  - [Glossary](./apx/glossary.md)
+    - [Logic glossary](./apx/glossary_dm.md)
+    - [Math glossary](./apx/glossary_dm.md)
+  - [Abbreviations](./apx/abbreviations.md)
+  - [Bibliography](./apx/bibliography.md)
+  - [History](./apx/history.md)
+  - [People](./apx/people.md)
+  - [Links](./apx/links/README.md)
+  * [Glossary](./apx/glossary.md)
+  * [Abbreviations](./apx/abbreviations.md)
