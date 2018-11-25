@@ -1,13 +1,7 @@
-# Category theory
+# Key Terms
 
-
-* Category theory (CT)
-
-
-
-
-## Terms
 - category
+- Category theory (CT)
 - functor
 - morphism
 - Cartesian closed category

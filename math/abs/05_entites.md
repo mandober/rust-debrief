@@ -98,3 +98,51 @@ In mathematics, a Lie group (pronounced "Lee") is a group that is also a differe
 ### Topological group
 In mathematics, a topological group is a group G together with a topology on G such that the group's binary operation and the group's inverse function are continuous functions with respect to the topology. A topological group is a mathematical object with both an algebraic structure and a topological structure.
 
+
+---
+
+## Group-like structures
+
+- **T**otality (closure is equivalent, but differently defined)
+- **A**ssociativity
+- **Id**entity
+- **In**vertibility
+- **C**ommutativity
+
+| structtures       | T | A | Id | In |C|
+|-------------------|---|---|---|---|--|
+| Magma             | ✓  |    |    |    |  |
+| Category          |    | ✓  | ✓  |    |  |
+| Monoid            | ✓  | ✓  | ✓  |    |  |
+| Loop              | ✓  |    | ✓  | ✓  |  |
+| Semigroupoid      |    | ✓  |    |    |  |
+| Groupoid          |    | ✓  | ✓  | ✓  |  |
+| Quasigroup        | ✓  |    |    | ✓  |  |
+| Semigroup         | ✓  | ✓  |    |    |  |
+| Inverse Semigroup | ✓  | ✓  |    | ✓  |  |
+| Group             | ✓  | ✓  | ✓  | ✓  | |
+| Abelian group     | ✓  | ✓  | ✓  | ✓  |✓|
+
+
+## Magma
+Magma is a basic kind of algebraic structure, consisting of a set equipped with a single binary operation which must be closed over the set.
+
+A magma is a set M matched with an operation, •, that sends any two elements a, b ∈ M to another element, a • b.
+
+The symbol, •, is a general placeholder for a properly defined operation. To qualify as a magma, the set and operation (M, •) must satisfy the following requirement (known as the magma or closure axiom):
+
+For all a, b in M, the result of the operation a • b is also in M.
+And in mathematical notation:
+
+{\displaystyle a,b\in M\implies a\cdot b\in M}.
+If • is instead a partial operation, then S is called a partial magma[5] or more often a partial groupoid
+
+
+**Semigroupoid** (semicategory, naked category, precategory) is a partial algebra that satisfies the axioms for a small category, except possibly for the requirement that there be an identity at each object.
+
+Semigroupoids generalise semigroups in the same way that small categories generalise monoids and groupoids generalise groups.
+
+**Groupoid** (Brandt groupoi, virtual group) generalises the notion of group in several equivalent ways. A groupoid can be seen as:
+- Group with a partial function replacing the binary operation
+- Category in which every morphism is invertible.
+

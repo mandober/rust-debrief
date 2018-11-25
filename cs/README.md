@@ -1,35 +1,44 @@
-# cs
+# Computing
 
-* cs.ar Architecture
-* cs.dr Data Representation
-* cs.mh Memory Hierarchy
-* cs.mm Memory Management
-* cs.cp Computer Programming
-* cs.ts Type Systems
-* cs.ds Data Structures and Algorithms
-* cs.pp Programming Paradigms
-* cs.ni Networking and Internet Architecture
-* cs.xs Extras
-* cs.cc Computational Complexity
-* cs.os Operating Systems
+Hardware
+* CPU
+  - ALU
+  - CU
+  - Cache
+* Memory
+  - SRAM
+  - DRAM
+* Motherboard
+* Peripherials
+
+Computer Architecture
+- Microarchitecture
+- ISA
+  - instruction
+
+Memory
+* Memory Hierarchy
+
+
+* Programming
+  * Memory Management
+  * Data Structures (cs.ds)
+    - Data representation
+    - Abstract data structures
+    - Data Structures
+    * Computational Complexity (cs.cc)
+      - Algorithms
+      - Space complexity
+      - Time complexity
+  
+  * Programming Paradigms
+  * Type Systems cs.ts
+
+  * Operating Systems
+  * Networking
 
 
 
-
-
-
-
-* Architecture
-  - Architecture
-  - Microarchitecture
-  - ISA
-  - CPU (hardware related)
-    - ALU
-    - CU
-    - Cache
-  - Memory (hardware related)
-    - SRAM
-    - DRAM
 * Data representation
   - Numbers
     - Integers

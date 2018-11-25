@@ -1,9 +1,7 @@
-# Road to Rust
+# Collection of notes about Math, CS, Rust
 
-**Tags**
-- title: Road to Rust
-- alt: From math accross CS to Rust - digested and excerpted
-- ETA: unknown, WIP
+- title: Math/CS/Rust topics - digested and excerpted
+- eta: WIP
 - desc: math, logic, cs, rust
 - lang: Markdown, Latex, [Rust][trl]
 - date: 2017-2018
@@ -11,7 +9,6 @@
 - rendered book:
   - [GitBooks legacy][gbl]
   - [GitBooks][gbn]
-
 
 
 **About**    

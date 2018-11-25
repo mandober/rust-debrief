@@ -1,9 +1,9 @@
 # Summary
 
-[Road to Rust](./README.md)
+[Math/CS/Rust](./README.md)
 
 
-## Part I Mathematics
+## Math
 
 * [math](./math/README.md)
 * [math.dm](./math/am/README.md)
@@ -54,7 +54,7 @@
 * [math.ct](./math/ct/README.md)
 
 
-## Part II CS
+## CS
 
 * [cs](./cs/README.md)
   * Computer architecture
@@ -98,7 +98,7 @@
     - [Program memory](cs/memory/program-memory.md)
 
 
-## Part III Rust
+## Rust
 
 * [rust](./rust/README.md)
   - Rust Syntax

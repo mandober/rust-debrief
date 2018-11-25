@@ -174,6 +174,12 @@ A literal is an expression consisting of a single token, rather than a sequence 
 ## Little Endianness
 Little endian processors order bytes in memory with the least significant byte (LSB) of a multi-byte value in the lowest-numbered memory location.
 
+## Marshalling
+Marshalling is the process of transforming the memory representation of an object to a data format suitable for storage or transmission.
+
+Marshaling and serialization are loosely synonymous in the context of remote procedure call, but semantically different as a matter of intent. In particular, marshaling is about getting parameters from here to there, while serialization is about copying structured data to or from a primitive form such as a byte stream. In this sense, serialization is one means to perform marshaling, usually implementing pass-by-value semantics. It is also possible for an object to be marshaled by reference, in which case the data "on the wire" is simply location information for the original object. However, such an object may still be amenable to value serialization.
+
+
 ## Monomorphization
 Monomorphization, a form of _static dispatch_, is a process of turning generic into concrete code. When generic code is used, concrete types replace generic types (concretization of code). This results in the code that would have been written in the first place if only concrete types were available.
 
@@ -266,4 +272,9 @@ A value is a sequence of bits together with its interpretation.
 
 ## Variable
 A variable is a storage location paired with an associated symbolic name (an identifier) that contains some quantity of information referred to as a value.
+
+## Software development kit
+Software development kit (SDK) containing docs, headers, libraries, samples, tools, etc. required for developing software for/around some product (for which the SDK has been released). For example, Windows 10 SDK, released by Microsoft, provides the latest headers, libraries, metadata, and tools for building Windows 10 apps.
+
+
 

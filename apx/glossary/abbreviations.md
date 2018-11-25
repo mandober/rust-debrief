@@ -154,6 +154,9 @@ Pointer-like type (e.g. references, raw pointers, smart pointers, etc.)
 ## RAII
 Resource acquisition is initialization
 
+## SDK
+Software development kit
+
 ## SL
 Sentential logic
 
@@ -183,3 +186,4 @@ Universal Turing machine
 
 ## ZST
 Zero-sized type
+

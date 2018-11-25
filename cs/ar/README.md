@@ -1,3 +1,0 @@
-# Hardware Architecture
-
-cs.AR
