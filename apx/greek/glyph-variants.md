@@ -14,7 +14,10 @@
 
 Some letters can occur in variant shapes, mostly inherited from medieval minuscule handwriting. While their use in normal typography of Greek is purely a matter of font styles, some such variants have been given separate encodings in Unicode.
 
-**beta**: the symbol ϐ ("curled beta") is a cursive variant form of β. In the French tradition of Ancient Greek typography, β is used word-initially, and ϐ is used word-internally.
+**beta**: the symbol ϐ ("curled beta") is a cursive variant form of β. 
+In the French tradition of Ancient Greek typography, 
+β is used word-initially, and 
+ϐ is used word-internally.
 
 **delta**: the letter delta has a form resembling a cursive capital letter D; while not encoded as its own form, this form is included as part of the symbol for drachma (`Δρ` digraph) in the Currency Symbols block, `₯` U+20AF.
 

@@ -1,4 +1,4 @@
-# Variables
+# Variable
 
 A variable is a memory location paired with a symbolic name (an identifier) that contains some quantity of information referred to as a value.
 

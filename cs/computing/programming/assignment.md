@@ -1,6 +1,6 @@
 # Assignment
 
-An assignment statement sets the _value_ stored at the _memory address_ denoted by a _variable name_ i.e. an assignment copies a value into the variable.
+An assignment statement sets the _value_ stored at the _memory address_ denoted by a _variable name_ (an assignment copies a value into the variable).
 
 Most commonly used notation is `x = expr`, followed by `x := expr`. In some languages the "equals" symbol is regarded as an _operator_ (so the assignment _expression_ has a value), while others define the assignment as a _statement_ (it cannot be used in an expression context).
 

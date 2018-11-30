@@ -1,4 +1,4 @@
-## Concurrent data structures
+# Concurrent data structures
 
 https://www.wikiwand.com/en/Concurrent_data_structure
 

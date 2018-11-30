@@ -1,19 +1,31 @@
 # Types of code
 
-- [Computer code](https://www.wikiwand.com/en/Computer_code)
-- [Source code](https://www.wikiwand.com/en/Source_code)
-- [Object code](https://www.wikiwand.com/en/Object_code)
-- [Bytecode](https://www.wikiwand.com/en/Bytecode)
-- [Machine code](https://www.wikiwand.com/en/undefined)
-- [Microcode](https://www.wikiwand.com/en/Microcode)
+* Program code
+* Source code
+* Object code
+* Bytecode
+* Machine code
+* Microcode
 
 
-## Computer code
-Computer or program code is the set of instructions forming a computer program which is executed by a computer.
+**Program code** (computer code) is a set of instructions comprising a program which is executed by a computer.
 
-It is one of two components of the software which runs on computer hardware, the other being the data.
+**Machine code** are instructions that a computer can execute directly - a rather lengthy sequence of 1's and 0's, where a group of bits is directly translated into the specific action, selected out of the predefined set of available hardware actions, called the **instruction set**. For example, a certain bit pattern may result in a circuit being closed letting the electric current flow, thus transfering a binary digit from one place to another (e.g. from a register to the ALU).
 
-Computers can only directly execute the *machine code instructions* (sequences of 1's and 0's) which are part of their *instruction set*.
+Every CPU has an instruction set - a built in, predifined set of actions a CPU can perform, which include basic arithmetic operations (add, sub, mul, div), logical operations (and, or, xor, not), loading and storing (mov, ret, )
+
+
+all CPUs have the instruction that brings them to a halt, which programmers might refer to as `HALT` (or `HLT` or similar) when coding in an assembly language, which is translated into an binary number. The binary number an operation code is translated to is arbitrary - it is set by the manufacturer or, more likely, by the implemented standard.
+
+
+
+, e.g. `0x0`.
+
+These instructions take the form of an arbitrary encoded binary numbers.
+
+Machine code is encoding
+binary arbitrary
+
 
 Because these instructions are difficult for humans to read, and writing good programs in machine code or other low-level programming languages is a time-consuming task, most programmers write in the source code of a high-level programming language.
 
@@ -53,3 +65,13 @@ Interpreted programs, on the other hand, are not translated into machine code, b
 
 Internally a CPU may use *microcode* or optimise and transform machine code instructions into sequences of micro operations (but this is not generally considered to be a machine code per se).
 
+
+
+---
+
+- [Computer code](https://www.wikiwand.com/en/Computer_code)
+- [Source code](https://www.wikiwand.com/en/Source_code)
+- [Object code](https://www.wikiwand.com/en/Object_code)
+- [Bytecode](https://www.wikiwand.com/en/Bytecode)
+- [Machine code](https://www.wikiwand.com/en/undefined)
+- [Microcode](https://www.wikiwand.com/en/Microcode)

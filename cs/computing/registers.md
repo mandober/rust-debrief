@@ -1,39 +1,53 @@
 # Registers
 
-The registers usually form the groups:
-- General purpose registers (GPR)
+Registers by group:
+- General Purpose Registers (GPR)
   - Data registers
   - Pointer registers
   - Index registers
 - Control registers
 - Segments (.bss, .data, .text)
 
-There are ten 32-bit and six 16-bit processor registers in IA-32 architecture.
+
+- IA-32 architecture: 10×32b and 6×16b processor registers.
 
 ## Processor register
+
 Processor register is a quickly accessible location available to a computer's central processing unit (CPU). Registers usually consist of a small amount of fast storage. Computers load data from memory into registers where they can manipulate it. Manipulated data is then often stored back to main memory, either by the same instruction or by a subsequent one. Registers are normally at the top of the memory hierarchy, and provide the fastest way to access data. Allocating frequently used variables to registers can be critical to a program's performance; this register allocation is performed either by a compiler in the code generation phase.
 
 
-
 ## Data Registers
-The four 32-bit data registers are used for arithmetic, logical, and other operations.
 
-These 32-bit registers can be used in 3 ways:
-- 4*32b: E{A,B,C,D}X as complete 32-bit regs
-- 4*16b : {A,B,C,D}X lower halves can be used as 16-bit regs
-- 8* 8b : {A,B,C,D}{H,L} lower and higher halves of the 16-bit as 8 8-bit regs
+The 4×32b data registers are used for arithmetic and logical ops.
 
-`A`ccumulator: IO ops, arithmetic  
-`B`ase: indexed addressing  
-`C`ount: loop counter  
-`D`ata: IO ops  
+32-bit registers usage:
+- 4×32b: E{A,B,C,D}X as complete 32b regs
+- 4×16b: {A,B,C,D}X lower halves can be used as 16b regs
+- 8×8b:  {A,B,C,D}{H,L} lower and higher halves of the 16b as 8×8b regs
+
+
+- `A`ccumulator: IO ops, arithmetic
+- `B`ase: indexed addressing
+- `C`ount: loop counter
+- `D`ata: IO ops
+
 
 ```
 RAX───────┬EAX──────┬───AX────┐
-│         │         │ AH │ AL │ x86_64
+│         │         │ AH │ AL │
 └─────────└─────────┴────┴────┘
 FF       1F         F    7    0
 ```
+άλφα βήτα γάμμα δέλτα έψιλον ζήτα ήτα
+θήτα ιώτα κάππα λάμδα μυ νυ ξι όμικρον
+πι ρώ σίγμα ταυ ύψιλον φι χι ψι ωμέγα 
+
+
+A B Γ Δ  E Z H Θ  I K Λ M  N Ξ O Π  P Σ T Υ  Φ X Ψ Ω
+α β γ δ  ϵ ζ η θ  ι κ λ μ  ν ξ o π  ρ σ τ υ  ϕ χ ψ ω
+
+ϕ ϐ β ε ϑ ϰ κ ϖ ϱ ρ ϟ ϡ ϝ Ϙ ϙ Ͳ ϒ 
+
 
 ## Pointer Registers
 
