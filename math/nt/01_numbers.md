@@ -1,5 +1,11 @@
 # Numbers
 
+![nsys][nsys]
+
+[nsys]: https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Positional_notation_glossary-en.svg/800px-Positional_notation_glossary-en.svg.png?1543607123569
+
+
+
 **Number** is a mathematical object used to count, measure and label.
 
 **Number systems** are sets of number classes, such as the natural numbers and the real numbers.
@@ -7,9 +13,6 @@
 **Numeral** is the notational symbol that represents a number. It is important to differentiate between the properties of a number and properties of its numeral. For example, "being even" is a property of a number (regardless of the number system) and "sum of its digits" is a property of denotation (and it depends on the number system).
 
 **Numeral system** (system of numeration) is a mathematical notation for representing numbers of a given set, using digits or other symbols in a consistent manner. The same sequence of symbols may represent different numbers in different numeral systems.
-
-
-
 
 
 **Number theory**, a branch of pure mathematics, studies the properties of the natural numbers, such as divisibility and the distribution of primes.
