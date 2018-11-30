@@ -1,8 +1,5 @@
 # Greek Alphabet
 
-
-Alphabet
-
 A B Γ Δ
 α β γ δ
 
