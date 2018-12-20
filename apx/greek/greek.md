@@ -1,5 +1,76 @@
 # Greek
 
+
+Ὁ βίος βραχὺς, ἡ δὲ τέχνη μακρὴ, ὁ δὲ καιρὸς ὀξύς, ἡ δὲ πεῖρα σφαλερὴ, ἡ δὲ κρίσις χαλεπή -- Ἱπποκράτης
+
+
+Life is short, and Art long; the crisis fleeting; experience perilous, and decision difficult.
+
+Variant translation: Art is long; life is short; opportunity is fleeting; judgement is difficult; experience is deceitful.
+
+
+| Greek         | spoken         | English literal          | English              |
+|---------------|----------------|--------------------------|----------------------|
+| βίος βραχύς   | bíos brakhús   | vita brevis              | life short           |
+| τέχνη μακρή   | tékhnē makrḗ   | ars longa                | art long             |
+| καιρὸς ὀξύς   | kairòs oxús    | occasio praeceps         | opportunity fleeting |
+| πεῖρα σφαλερή | peîra sphalerḗ | experimentum periculosum | experiment perilous  |
+| κρίσις χαλεπή | krísis khalepḗ | iudicium difficile       | judgment difficult   |
+
+
+Greek:
+  Ὁ βίος βραχύς,
+  ἡ δὲ τέχνη μακρή,
+  ὁ δὲ καιρὸς ὀξύς,
+  ἡ δὲ πεῖρα σφαλερή,
+  ἡ δὲ κρίσις χαλεπή.
+
+Pronunciation:
+  Ho bíos brakhús,
+  hē dè tékhnē makrḗ,
+  ho dè kairòs oxús,
+  hē dè peîra sphalerḗ,
+  hē dè krísis khalepḗ.
+
+Latin:
+  Vita brevis,
+  ars longa,
+  occasio praeceps,
+  experimentum periculosum,
+  iudicium difficile.
+
+English:
+  Life is short,
+  and art long,
+  opportunity fleeting,
+  experimentations perilous,
+  and judgment difficult.
+
+
+
+βίος    [bios]    m. s. nom. *life*
+βραχύς  [brakhus] m. s. nom. *short, brief*
+
+τέχνη   [tekhne]  f. s. nom. *art, craft*
+
+μακρός [makros] m. s. nom. 1st/2nd declension *long*
+m. μᾰκρός [makros], f. μᾰκρᾱ́ [makra], n. μᾰκρόν [makron]
+
+μακρή   [makre]   f. s.
+
+
+καιρὸς  [kairòs]    time, weather
+ὀξύς    [oxús]      acute, sharp, piercing
+
+πεῖρα   [peîra]     practice, experience
+σφαλερή [sphalerḗ]  erroneous
+
+κρίσις  [krísis]    crisis, judgment
+χαλεπή  [khalepḗ]   difficult, low
+
+
+
+
 https://en.wikipedia.org/wiki/Greek_alphabet
 https://en.wikipedia.org/wiki/Greek_letters_used_in_mathematics,_science,_and_engineering
 https://en.wikipedia.org/wiki/List_of_medical_roots,_suffixes_and_prefixes

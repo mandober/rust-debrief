@@ -1,3 +1,0 @@
-# math.st
-
-Set theory

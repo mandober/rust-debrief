@@ -8,53 +8,12 @@
 
 ## I Math
 
-- math Mathematics
+* Mathematics
   - Foundations of mathematics
   - Metamathematics
-- math.ST Set theory
-  - Set theory
-    - Set basics
-      - memebership
-      - inclusion
-        - subset
-        - proper subset
-        - superset
-        - powerset
-      - Fundamental sets
-    - Set Operations
-        - union
-        - intersection
-        - difference
-        - complement
-      - Tuples
-        - Cartesian Product
-        - Ordered Pair
-        - n-tuples
-      - Set Paradoxes
-        - Cantor's paradox
-        - Russell's paradox
-      - Set Cardinality
-      - Enumerable sets
-      - Reduction
-      - Equinumerous
-      - Comparing sets
-    - Set Theories
-      - Naive Set Theory
-      - Axiomatic System
-      - Axiomatic Set Theory
-        - ZFC Axioms:
-          1. Axiom of Extensionality
-          2. Axiom of Regularity (Foundation)
-          3. Axiom Schema of Specification
-          4. Axiom of Pairing
-          5. Axiom of Union
-          6. Axiom Schema of Replacement
-          7. Axiom of Infinity
-          8. Axiom of Power Set
-          9. Well-ordering theorem
-        - Axiom of Empty Set
-        - Axiom of Choice
-    - Relations
+    * Sets
+
+    * Relations
       - Binary relations
       - Recurrence relations
       - Relation Properties
@@ -69,10 +28,12 @@
         - Equivalence relation
         - Partial equality
         - Partial equivalence relation
-    - Order theory
+
+    * Order theory
       - Partial order
       - Total order
-    - Functions
+
+    * Functions
       - functions basics
         - kinds of functions
         - inverses
@@ -85,7 +46,9 @@
       - Injective
       - Surjective
       - Bijective
-- math.LO Mathematical Logic
+
+
+- Mathematical Logic
   - Logical System
     - Logical Argument
       - Proposition, Atom, Formula, Hypotesis
@@ -208,7 +171,7 @@
     - Separation Logic
     - Temporal Logic
     - Model Logic
-- math.CO Counting Theory
+- Counting Theory
   - The Rules of Sum and Product
   - Permutations
   - Combinations
@@ -220,7 +183,7 @@
     - Properties of Probability
     - Conditional Probability
     - Bayes' Theorem
-- math.AL Algebraic Structures
+- Algebraic Structures
   - Mathematical induction 
     - Induction
     - Strong Induction
@@ -272,27 +235,27 @@
       - Simplification Using Algebraic Functions
       - Karnaugh Maps
       - Simplification Using K-map
-- math.TC Theory of Computation
-  - math.LC Lambda Calculi
+- Theory of Computation
+  - Lambda Calculi
     - Lambda Calculus
     - Simply Typed Lambda Calculus
     - System F
     - Lambda Pi
     - Lambda Omega
     - Lambda Omega Pi
-  - math.FL Formal Language
+  - Formal Language
     - Syntax
     - Semantics
     - Grammer
     - BNF
-  - math.CX Complexity Theory
-  - math.AT Automata Theory
+  - Complexity Theory
+  - Automata Theory
     - DFA
     - NFA
-- math.PT Proof theory
+- Proof theory
   - Formal verification
   - Automated theorem proving
-- math.TT Type Theory
+- Type Theory
   - Path to Type Theory
     - Halting Problem
     - Lambda Calculus
@@ -300,7 +263,7 @@
     - Sequent Calculus
     - Linear Logic
     - Linear Types
-- math.CT Category theory
+- Category theory
   - Category
   - Morphism
   - Functor

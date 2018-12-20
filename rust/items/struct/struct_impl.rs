@@ -31,3 +31,26 @@ impl HasArea for Circle {
         self.area() > other.area()
     }
 }
+
+
+//
+// Struct with a fn field
+//
+struct FnStruct {
+    f: fn(),
+}
+
+impl FnStruct {
+    fn f(&self) {
+        println!("1");
+    }
+}
+
+fn main() {
+    let print2 = || print!("2");
+
+    let s = FnStruct { f: print2 };
+    s.f();
+    // or just:
+    FnStruct { f: print2 }.f();
+}

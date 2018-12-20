@@ -1,6 +1,6 @@
 # Summary
 
-[Math/CS/Rust](./README.md)
+[CSI](./README.md)
 
 
 ## Math
