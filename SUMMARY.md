@@ -4,58 +4,56 @@
 
 
 ## Math
-
-* [math](./math/README.md)
-* [math.dm](./math/am/README.md)
-  - [Mathematics](./math/am/01_math.md)
-  - [Foundations of mathematics](./math/am/01_math.md)
-  - [Discrete mathematics](./math/am/02_dm.md)
-  - [Logic: Timeline](./math/am/math-timeline.md)
-  - [Mathematical entities](./math/am/entities.md)
-* [math.nt](./math/nt/README.md)
-  - Number theory
-    - Natural numbers
-    - Integers
-    - Rational numbers
-    - Real numbers
-  - Counting theory
-    - Fundamental counting rules
-    - Complex numbers
-    - Combinatorics
-    - Permutations
-* [math.st](./math/st/README.md)
-  - [Sets](./math/st/sets/README.md)
-    - [Overview](./math/st/sets/01_overview.md)
-    - [Specification](./math/st/sets/02_specification.md)
-    - [Membership](./math/st/sets/03_membership.md)
-    - [Cardinality](./math/st/sets/04_cardinality.md)
-    - [Set operations](./math/st/sets/06_set-operations.md)
-    - Subset, powerset, Cartesian product
-    - tuples, pairs
-    - Fundamental sets
-  - Set theory
-    - Naïve set theory
-    - Axiomatic set theory
-    - ZFC axioms
-  - Relations
-    - Order theory
-  - Functions
-    - Types of functions
-* [math.lo](./math/lo/README.md)
-  - Mathematical Logic
-  - Term logic
-  - Propositional logic
-  - Predicate logic
-* [math.pt](./math/pt/README.md)
-* [math.tc](./math/tc/README.md)
-* [math.lc](./math/lc/README.md)
-* [math.at](./math/at/README.md)
-* [math.tt](./math/tt/README.md)
-* [math.ct](./math/ct/README.md)
+  * [math](./math/README.md)
+  * [math.dm](./math/am/README.md)
+    - [Mathematics](./math/am/01_math.md)
+    - [Foundations of mathematics](./math/am/01_math.md)
+    - [Discrete mathematics](./math/am/02_dm.md)
+    - [Logic: Timeline](./math/am/math-timeline.md)
+    - [Mathematical entities](./math/am/entities.md)
+  * [math.nt](./math/nt/README.md)
+    - Number theory
+      - Natural numbers
+      - Integers
+      - Rational numbers
+      - Real numbers
+    - Counting theory
+      - Fundamental counting rules
+      - Complex numbers
+      - Combinatorics
+      - Permutations
+  * [math.st](./math/st/README.md)
+    - [Sets](./math/st/sets/README.md)
+      - [Overview](./math/st/sets/01_overview.md)
+      - [Specification](./math/st/sets/02_specification.md)
+      - [Membership](./math/st/sets/03_membership.md)
+      - [Cardinality](./math/st/sets/04_cardinality.md)
+      - [Set operations](./math/st/sets/06_set-operations.md)
+      - Subset, powerset, Cartesian product
+      - tuples, pairs
+      - Fundamental sets
+    - Set theory
+      - Naïve set theory
+      - Axiomatic set theory
+      - ZFC axioms
+    - Relations
+      - Order theory
+    - Functions
+      - Types of functions
+  * [math.lo](./math/lo/README.md)
+    - Mathematical Logic
+    - Term logic
+    - Propositional logic
+    - Predicate logic
+  * [math.pt](./math/pt/README.md)
+  * [math.tc](./math/tc/README.md)
+  * [math.lc](./math/lc/README.md)
+  * [math.at](./math/at/README.md)
+  * [math.tt](./math/tt/README.md)
+  * [math.ct](./math/ct/README.md)
 
 
 ## CS
-
 * [cs](./cs/README.md)
   * Computer architecture
   * Components
@@ -99,7 +97,6 @@
 
 
 ## Rust
-
 * [rust](./rust/README.md)
   - Rust Syntax
   - [Attributes](./rust/syntax/attributes.md)
@@ -156,34 +153,5 @@
   - [Variance of type and lifetime parameters](./rust/core/rustc/variance-of-type-and-lifetime-parameters.md)
 
 
-## Part IV Appendix
-
+## Appendix
 * [Appendix](./apx/README.md)
-  * Taxonomy
-    - Math Taxonomy
-    - Logic Taxonomy
-    - CS Taxonomy
-  * [Links](./apx/links/README.md)
-    - Index of Links
-    - DM Links
-    - CS Links
-    - Rust Links
-  * [Index](./apx/index/README.md)
-    - Index of topics
-    - Index of terms
-    - Index of figures
-    - Index of symbols
-      - Greek alphabet
-      - Math symbols
-      - Set theory symbols
-      - Logic symbols
-  - [Glossary](./apx/glossary.md)
-    - [Logic glossary](./apx/glossary_dm.md)
-    - [Math glossary](./apx/glossary_dm.md)
-  - [Abbreviations](./apx/abbreviations.md)
-  - [Bibliography](./apx/bibliography.md)
-  - [History](./apx/history.md)
-  - [People](./apx/people.md)
-  - [Links](./apx/links/README.md)
-  * [Glossary](./apx/glossary.md)
-  * [Abbreviations](./apx/abbreviations.md)

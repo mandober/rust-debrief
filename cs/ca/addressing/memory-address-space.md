@@ -1,4 +1,4 @@
-# Memory address space
+## Memory address space
 
 - memory is a byte array of cells that can store some quantity of bits
 - Each cell has a number identify itself, called its address
@@ -29,8 +29,6 @@ So it can point maximum to 11111111111111111111111111111111 in binary format(0xF
 That is same with the 2^n – 1.
 
 
-
-
 A process usually has in its address space chunks of memory of two types:
 - Machine code that includes:
   - program's own code (.text segment)
@@ -43,4 +41,3 @@ A process usually has in its address space chunks of memory of two types:
   - shared memory and memory mapped files.
 
 Some parts of address space may be not mapped at all.
-

@@ -48,7 +48,7 @@
   - Alan Turing
   - Niklaus Wirth
 
-## List: rogramming languages
+## List of Programming languages
   Ada
   ALGOL
   BASIC
@@ -135,13 +135,13 @@
   FLTK
 
 ## List: Standards
-  Standards bodies
+  * Standards bodies
     International Electrotechnical Commission (IEC)
     International Organization for Standardization (ISO)
     Institute of Electrical and Electronics Engineers (IEEE)
     Internet Engineering Task Force (IETF)
     World Wide Web Consortium (W3C)
-  Open standards bodies
+  * Open standards bodies
     Open standard
     Apdex Alliance – Application Performance Index
     Application Response Measurement (ARM)
@@ -191,7 +191,6 @@
   - Data compression
   - Data transmission
   - Data storage
-
 
 
 ## Hardware
@@ -712,4 +711,3 @@
 Formal methods
 Proof of correctness
 Program synthesis
-.

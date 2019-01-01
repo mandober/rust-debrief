@@ -1,15 +1,27 @@
 # Process
 
-A process is an instance of a program that is being executed, containing the program code and its activity.
+**Process** is an instance of the running program, containing the program code and maintaining its state.
+
+**Thread** (of execution) is the smallest sequence of programmed instructions that can be managed independently by a scheduler, which is typically a part of the OS. A process always has the main thread, but it can spawn additional threads.
 
 
+A Linux process can be in one of the following states:
+- R: Running or runnable (on run queue)
+- D: Uninterruptible sleep (waiting for some event)
+- S: Interruptible sleep (waiting for some event or signal)
+- T: Stopped, by signal or debugger
+- Z: Zombie or orphan process; terminated but not yet reaped by its parent.
 
-**Synchronization** refers to one of two distinct but related concepts: synchronization of processes and synchronization of data.
+There are two sleeping states: Interruptible and uninterruptible sleep. The former is the common case and it means that while the process is part of a wait queue and it may be moved to the running state upon receiving a signal.
 
-Process synchronization refers to the idea that multiple processes are to join up or handshake at a certain point, in order to reach an agreement or commit to a certain sequence of action.
+The `ps` utility list processes:
+`s` process is the *session leader*
+`+` process is part of the *foreground process group*
 
-**Race condition** is the behavior of an electronics, software, or other system where the output is dependent on the sequence or timing of other uncontrollable events. It becomes a bug when events do not happen in the order the programmer intended.
+**Job control** is what happens when `^Z` is press to suspend a program, or when the program is run in the background with `&`. A **job** refers to a *process group*.
 
-**Deadlock** is a state in which each member of a group of threads is waiting for another member to take action (such as sending a message or more commonly releasing a lock). Deadlock is a common problem in multiprocessing systems, parallel computing and distributed systems, where software and hardware locks are used to arbitrate shared resources and implement process synchronization.
+Builtin shell commands such as `jobs`, `fg`, `bg` are used to manage jobs within a session. Each session is managed by a *session leader*, commonly the shell itself, that colaborates with the kernel through signals and system calls.
 
-In an operating system, a deadlock occurs when a process or thread enters a waiting state because a requested system resource is held by another waiting process, which in turn is waiting for another resource held by another waiting process.
+Only the foreground job is allowed to write to and to read from the TTY device. If a background process attempts to write to the TTY, the kernel would suspend it by issuing a signal.
+
+In Unix, the kernel communicates with processes asynchronously by issuing signals. Processes may intercept, then even ignore, a subset of signals, but there is also a subset of enforcing signals whose effect is unavoidable.

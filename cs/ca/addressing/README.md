@@ -1,22 +1,24 @@
-# Addressing
-
-
-- Address Space
 
 
 
-## Addressing: Terms
+* Memory Protection
+  - Memory layers
+  - violation/fault
+  - Paging system
+  - Address space layout randomization (ASLR)
 
-address space
-addressing
-address constant
-memory address
-virtual address space
-physical address
-canonical address
-storage violation
-Address space layout randomization ASLR
+* Addressing
+  * Memory address space
+    - virtual address space
+    - physical address space
+  * memory address
+    - virtual address
+    - physical address
+    - canonical address
+    - mapping
+    - translation
+  * memory bus
 
-
-
-## Addressing: Refs
+  * memory address types:
+    - immediate
+    - indirect

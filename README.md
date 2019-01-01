@@ -3,10 +3,9 @@
 Collection of CS notes.
 
 - name: CS Investigation: Digested and Excerpted
-- abbr: CSI
 - stat: WIP
 - desc: δὲ τέχνη μακρή: Math, Logic, CS, PLT, [Rust][trl]
-- date: 2017-19
+- date: 2017-2019
 - repo: https://github.com/mandober/rust-debrief
 - book:
   - [GitBooks legacy][gbl]

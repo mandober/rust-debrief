@@ -3,7 +3,6 @@
 
 **Memory address** is a reference to a specific memory location.
 
-
 **Main memory** (sometimes just RAM) is the memory backed-up by the DRAM memory modules that may be inserted into the motherboard's DIMM slots.
 
 supporting various 
@@ -27,29 +26,21 @@ A byte (8 bits) has 2^8 = 256 different states (values); other single-byte-sized
 
 Data types bigger then 1 byte use as many bytes (in a contiguous sequence) as they need, but their address refers only to the initial byte in that sequence; and their type reveals how many bytes total they consist of. 
 
-
 The memory address of the initial byte of a datum is considered the memory address (or base memory address) of the entire datum.
-
 
 Each memory location has a physical address which is an index in the (memory) array.
 
 CPU uses the index to access the corresponding memory location.
 
-
 Generally, only BIOS, OS and some specialized utilities have need to address physical memory directly.
 
 The memory controllers' bus consists of a number of parallel lines, each represented by a binary digit. The width of the bus, and thus the number of addressable storage units, and the number of bits in each unit, varies among computers.
 
-
-
-
 ## Physical Address
-
 In computing, a physical address (also real address, or binary address), is a memory address that is represented in the form of a binary number on the address bus circuitry in order to enable the data bus to access a particular storage cell of main memory, or a register of memory mapped I/O device.
 
 ### Use by CPU
 In a computer supporting virtual memory, the term physical address is used mostly to differentiate from a virtual address. In particular, in computers utilizing a memory management unit (MMU) to translate memory addresses, the virtual and physical addresses refer to an address before and after translation performed by the MMU, respectively.
-
 
 ### Unaligned addressing
 Depending upon its underlying computer architecture, the performance of a computer may be hindered by unaligned access to memory. For example, a 16-bit computer with a 16-bit memory data bus, such as Intel 8086, generally has less overhead if the access is aligned to an even address. In that case fetching one 16-bit value requires a single memory read operation, a single transfer over a data bus.
@@ -66,9 +57,7 @@ An __address bus__ is a computer bus (a series of lines connecting two or more d
 For example, a system with a 32-bit address bus can address 2^32 (4,294,967,296) memory locations. If each memory location holds one byte, the **addressable memory space** is 4 GB.
 
 
-
 ## Implementation
-
 Early processors used a wire for each bit of the address width. For example, a 16-bit address bus had 16 physical wires making up the bus. As the buses became wider and lengthier, this approach became expensive in terms of the number of chip pins and board traces. Beginning with the Mostek 4096 DRAM, address multiplexing implemented with multiplexers became common. In a multiplexed address scheme, the address is sent in two equal parts on alternate bus cycles. This halves the number of address bus signals required to connect to the memory. For example, a 32-bit address bus can be implemented by using 16 lines and sending the first half of the memory address, immediately followed by the second half memory address
 
 Examples
@@ -76,9 +65,7 @@ Accessing an individual byte frequently requires reading or writing the full bus
 
 Historically, there were also some examples of computers which were only able to address words.
 
-
 The __memory bus__ is the computer bus which connects the main memory to the memory controller in computer systems. modern memory buses are designed to connect directly to DRAM chips.
-
 
 a __control bus__ is part of the system bus, used by CPUs for communicating with other devices within the computer. While the address bus carries the information about the device with which the CPU is communicating and the data bus carries the actual data being processed, the control bus carries commands from the CPU and returns status signals from the devices. For example, if the data is being read or written to the device the appropriate line (read or write) will be active (logic one).
 
@@ -103,12 +90,6 @@ Systems that have more than one bus master have additional control bus signals t
 
 
 ---
----
-
-
-In the early days of computing, programs would have direct, sole, unrestricted access to the entire physical memory and could write data anywhere just by specifying the physical memory address.
-
-Today, programs have illusion they have direct, sole, unrestricted access to memory, when, not only is the OS solely in charge of it, but the medium itself is not even real.
 
 Virtual memory system abstracts the memory management by mapping memory addresses, used by a program, called virtual addresses, into physical addresses in computer memory, thereby increasing security by isolating the processes and providing extended space, beyond the physically available RAM, through paging and swapping.
 
@@ -117,8 +98,6 @@ The OS manages virtual address spaces and the assignment of real memory to virtu
 An address space defines a range of discrete addresses, each of which corresponds to a memory location.
 
 ---
-
-
 
 For software programs to save and retrieve stored data, each unit of data must have an address where it can be individually located or else the program will be unable to find and manipulate the data.
 
