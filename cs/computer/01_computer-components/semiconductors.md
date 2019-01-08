@@ -34,11 +34,11 @@ As of 2018, 14 nanometer process chips are common in mass production, with 10 na
  65 nm – 2006
  45 nm – 2008
  32 nm – 2010
- 22 nm – 2012
+ 22 nm – 2012   50 Si atoms fit in 22nm
  14 nm – 2014
- 10 nm – 2017
-  7 nm – 2018
-  5 nm – ~2020
+ 10 nm – 2017   25 Si atoms
+  7 nm – 2018   18 Si atoms
+  5 nm  ~2020 
 
 
 
