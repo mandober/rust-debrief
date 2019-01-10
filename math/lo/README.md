@@ -1,3 +1,0 @@
-# math.lo
-
-Mathematical logic

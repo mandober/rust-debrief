@@ -1,3 +1,0 @@
-# math.lc
-
-Lambda Calculi

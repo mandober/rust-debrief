@@ -1,2 +1,0 @@
-# Syllogistic Logic
-

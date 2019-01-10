@@ -1,3 +1,0 @@
-# math.at
-
-Automata Theory

@@ -1,3 +1,0 @@
-# math.pt
-
-Proof Theory

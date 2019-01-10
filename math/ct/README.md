@@ -1,3 +1,0 @@
-# math.ct
-
-Category theory
